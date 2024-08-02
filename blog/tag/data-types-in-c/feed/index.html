@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Data Types in C</title>
+	<atom:link href="https://www.skillvertex.com/tag/data-types-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 06:51:04 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Data Types in C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Data Types in C</title>
+		<link>https://www.skillvertex.com/blog/data-types-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/data-types-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 06:51:04 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Data Types in C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=1842</guid>
+
+					<description><![CDATA[Data Types in C Data types are like the different kinds of building blocks in C programming. They determine what kind of information a variable can hold, what you can do with it, and how much space it takes up. Whether you&#8217;re new to programming or you&#8217;ve been doing it for a while, understanding these ... <a title="Data Types in C" class="read-more" href="https://www.skillvertex.com/blog/data-types-in-c/" aria-label="More on Data Types in C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#data-types-in-c">Data Types in C</a></li><li ><a href="#what-is-the-data-type-in-c">What is the Data type in C</a></li><li ><a href="#integer-data-type">Integer Data Type</a></li><li ><a href="#character-datatype">Character datatype </a></li><li ><a href="#float-data-type">Float Data Type</a></li><li ><a href="#double-data-type">Double Data Type</a></li><li ><a href="#void-data-type">Void Data Type</a></li><li ><a href="#faq-data-types-in-c">FAQ- Data Types in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="data-types-in-c">Data Types in C</h2>
+
+
+
+<p>Data types are like the different kinds of building blocks in C programming. They determine what kind of information a variable can hold, what you can do with it, and how much space it takes up. Whether you&#8217;re new to programming or you&#8217;ve been doing it for a while, understanding these data types in C is really important. In this explanation, we&#8217;ll look at the different types and see when to use each one. So, let&#8217;s dive into the world of C data types!</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-data-type-in-c">What is the Data type in C</h2>
+
+
+
+<p>In C, every variable is linked to a specific data type. This data type defines what kind of information the variable can hold, such as integers, characters, floating-point numbers, or doubles. Each data type uses varying amounts of memory and supports specific operations. Think of a data type as a set of data with predefined values and characteristics.</p>
+
+
+
+<p>The data types can  be classified as:</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Types </strong></td><td><strong><em>Description </em></strong></td></tr><tr><td>Primitive Data Types<br></td><td>Primitive data types in programming are the simplest and most fundamental types used to represent basic values like integers, floating-point numbers, characters, and so on. They serve as the foundational building blocks for working with data in a program.</td></tr><tr><td>User Defined Data Types</td><td>User-defined data types in programming are created and defined by the programmer or user themselves. These data types are not part of the language&#8217;s built-in types but are designed and customized by the user to suit specific requirements or to structure data in a particular way that fits the needs of their program.</td></tr><tr><td>Derived Types<br></td><td>Derived data types in programming are types that are created by combining or deriving from the primitive or built-in data types. These types are constructed to meet specific programming needs and are often built upon the foundation of existing data types. They can include arrays, pointers, structures, and more, all customized based on the requirements of the program.</td></tr></tbody></table></figure>
+
+
+
+<p>Derived data types in programming are types that are created by combining or deriving from the primitive or built-in data types. These types are constructed to meet specific programming needs and are often built upon the foundation of existing data types. They can include arrays, pointers, structures, and more, all customized based on the requirements of the program.</p>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th>Data Type&nbsp;<br>&nbsp;</th><th>Size (bytes)&nbsp;<br>&nbsp;</th><th>Range<br>&nbsp;</th><th>Format Specifier&nbsp;<br>&nbsp;</th></tr></thead><tbody><tr><td><strong>short int&nbsp;</strong><br><strong>&nbsp;</strong></td><td>2&nbsp;<br>&nbsp;</td><td>-32,768 to 32,767&nbsp;<br>&nbsp;</td><td>%hd&nbsp;<br>&nbsp;</td></tr><tr><td><strong>unsigned short int&nbsp;</strong><br><strong>&nbsp;</strong></td><td>2&nbsp;<br>&nbsp;</td><td>0 to 65,535&nbsp;<br>&nbsp;</td><td>%hu&nbsp;<br>&nbsp;</td></tr><tr><td><strong>unsigned int&nbsp;</strong><br><strong>&nbsp;</strong></td><td>4&nbsp;<br>&nbsp;</td><td>0 to 4,294,967,295&nbsp;<br>&nbsp;</td><td>%u&nbsp;<br>&nbsp;</td></tr><tr><td><strong>int&nbsp;</strong><br><strong>&nbsp;</strong></td><td>4&nbsp;<br>&nbsp;</td><td>-2,147,483,648 to 2,147,483,647&nbsp;<br>&nbsp;</td><td>%d&nbsp;<br>&nbsp;</td></tr><tr><td><strong>long int&nbsp;</strong><br><strong>&nbsp;</strong></td><td>4&nbsp;<br>&nbsp;</td><td>-2,147,483,648 to 2,147,483,647&nbsp;<br>&nbsp;</td><td>%ld&nbsp;<br>&nbsp;</td></tr><tr><td><strong>unsigned long int&nbsp;</strong><br><strong>&nbsp;</strong></td><td>4&nbsp;<br>&nbsp;</td><td>0 to 4,294,967,295&nbsp;<br>&nbsp;</td><td>%lu&nbsp;<br>&nbsp;</td></tr><tr><td><strong>long long int&nbsp;</strong><br><strong>&nbsp;</strong></td><td>8&nbsp;<br>&nbsp;</td><td>-(2^63) to (2^63)-1&nbsp;<br>&nbsp;</td><td>%lld&nbsp;<br>&nbsp;</td></tr><tr><td><strong>unsigned long long int&nbsp;</strong><br><strong>&nbsp;</strong></td><td>8&nbsp;<br>&nbsp;</td><td>0 to 18,446,744,073,709,551,615&nbsp;<br>&nbsp;</td><td>%llu&nbsp;<br>&nbsp;</td></tr><tr><td><strong>signed char&nbsp;</strong><br><strong>&nbsp;</strong></td><td>1&nbsp;<br>&nbsp;</td><td>-128 to 127&nbsp;<br>&nbsp;</td><td>%c&nbsp;<br>&nbsp;</td></tr><tr><td><strong>unsigned char&nbsp;</strong><br><strong>&nbsp;</strong></td><td>1&nbsp;<br>&nbsp;</td><td>0 to 255&nbsp;<br>&nbsp;</td><td>%c&nbsp;<br>&nbsp;</td></tr><tr><td><strong>float&nbsp;</strong><br><strong>&nbsp;</strong></td><td>4&nbsp;<br>&nbsp;</td><td>1.2E-38 to 3.4E+38</td><td>%f&nbsp;<br>&nbsp;</td></tr><tr><td><strong>double&nbsp;</strong><br><strong>&nbsp;</strong></td><td>8&nbsp;<br>&nbsp;</td><td>1.7E-308 to 1.7E+308</td><td>%lf&nbsp;<br>&nbsp;</td></tr><tr><td><strong>long double&nbsp;</strong><br><strong>&nbsp;</strong></td><td>16&nbsp;<br>&nbsp;</td><td>3.4E-4932 to 1.1E+4932</td><td>%Lf&nbsp;<br>&nbsp;</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="integer-data-type">Integer Data Type</h2>
+
+
+
+<p>In C, the integer data type is employed to store whole numbers without decimal points. It can accommodate octal values, hexadecimal values, and standard decimal values.</p>
+
+
+
+<p>Key characteristics of the <code>int</code> data type in C:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Range</strong>: It can hold values ranging from -2,147,483,648 to 2,147,483,647.</li>
+
+
+
+<li><strong>Size</strong>: Typically, it occupies 4 bytes in memory.</li>
+
+
+
+<li><strong>Format Specifier</strong>: When displaying or reading <code>int</code> values, you use the format specifier <code>%d</code>.</li>
+</ul>
+
+
+
+<p><strong>Syntax of Integer</strong></p>
+
+
+
+<p>We use&nbsp;int keyword&nbsp;to declare the integer variable:</p>
+
+
+
+<pre class="wp-block-code"><code>int var_name;
+</code></pre>
+
+
+
+<p>The integer data type can also be used as</p>
+
+
+
+<p>Here are brief explanations of different integer data types in C:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>unsigned int</strong>: The <code>unsigned int</code> data type in C is used to store values ranging from zero to positive numbers. It cannot store negative values like the <code>signed int</code>.</li>
+
+
+
+<li><strong>short int</strong>: The <code>short int</code> data type is smaller in size than the regular <code>int</code>, typically using 2 bytes. This means it can store values from -32,768 to 32,767.</li>
+
+
+
+<li><strong>long int</strong>: The <code>long int</code> data type is a larger version of the regular <code>int</code> and can store values greater than what an <code>int</code> can hold.</li>
+
+
+
+<li><strong>unsigned short int</strong>: Similar to the relationship between <code>unsigned int</code> and <code>int</code>, <code>unsigned short int</code> can only store non-negative values and is smaller in size than <code>short int</code>.</li>
+</ol>
+
+
+
+<h4 class="wp-block-heading" id="example-of-int">Example of int</h4>
+
+
+
+<pre class="wp-block-code"><code>// C program to print Integer data types.
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    // Integer value with positive data.
+    int a = 9;
+ 
+    // integer value with negative data.
+    int b = -9;
+ 
+    // U or u is Used for Unsigned int in C.
+    int c = 89U;
+ 
+    // L or l is used for long int in C.
+    long int d = 99998L;
+ 
+    printf("Integer value with positive data: %d\n", a);
+    printf("Integer value with negative data: %d\n", b);
+    printf("Integer value with an unsigned int data: %u\n",
+           c);
+    printf("Integer value with an long int data: %ld", d);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>Integer value with positive data: 9
+Integer value with negative data: -9
+Integer value with an unsigned int data: 89
+Integer value with an long int data: 99998</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="character-datatype">Character datatype </h2>
+
+
+
+<p>In C, the character data type is designed to store a single character. It occupies 1 byte of memory and is the most fundamental data type in the language.</p>
+
+
+
+<p>Here are some key characteristics of the <code>char</code> data type in C:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Range</strong>: It can represent values from (-128 to 127) or (0 to 255), depending on whether it&#8217;s signed or unsigned.</li>
+
+
+
+<li><strong>Size</strong>: It typically uses 1 byte of memory in most compilers.</li>
+
+
+
+<li><strong>Format Specifier</strong>: When working with <code>char</code> values in input/output operations, you use the format specifier <code>%c</code>.</li>
+</ul>
+
+
+
+<p><strong>Syntax of char </strong></p>
+
+
+
+<p>The&nbsp;<strong>char keyword</strong>&nbsp;is used to declare the variable of character type:</p>
+
+
+
+<pre class="wp-block-code"><code>char var_name;
+</code></pre>
+
+
+
+<p><em><strong>Examples of char</strong></em></p>
+
+
+
+<pre class="wp-block-code"><code>// C program to print Integer data types.
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    char a = 'a';
+    char c;
+ 
+    printf("Value of a: %c\n", a);
+ 
+    a++;
+    printf("Value of a after increment is: %c\n", a);
+ 
+    // c is assigned ASCII values
+    // which corresponds to the
+    // character 'c'
+    // a--&gt;97 b--&gt;98 c--&gt;99
+    // here c will be printed
+    c = 99;
+ 
+    printf("Value of c: %c", c);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Value of a: a
+Value of a after increment is: b
+Value of c: c</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="float-data-type">Float Data Type</h2>
+
+
+
+<p>In C programming, the <code>float</code> data type is employed to store floating-point values, which include both decimal and exponential numbers. It is used for representing decimal numbers with single-precision accuracy.</p>
+
+
+
+<p>Here are some key characteristics of the <code>float</code> data type in C:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Range</strong>: It can store values within the range of 1.2E-38 to 3.4E+38.</li>
+
+
+
+<li><strong>Size</strong>: Typically, it uses 4 bytes of memory.</li>
+
+
+
+<li><strong>Format Specifier</strong>: When displaying <code>float</code> values in input/output operations, you use the format specifier <code>%f</code>.</li>
+</ul>
+
+
+
+<p><strong>Syntax of float </strong></p>
+
+
+
+<p>The&nbsp;<strong>float keyword&nbsp;</strong>is used to declare the variable as a floating point:</p>
+
+
+
+<pre class="wp-block-code"><code>float var_name;
+</code></pre>
+
+
+
+<h4 class="wp-block-heading">Example of Float</h4>
+
+
+
+<pre class="wp-block-code"><code>// C Program to demonstrate use
+// of Floating types
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    float a = 9.0f;
+    float b = 2.5f;
+ 
+    // 2x10^-4
+    float c = 2E-4f;
+    printf("%f\n", a);
+    printf("%f\n", b);
+    printf("%f", c);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>9.000000
+2.500000
+0.000200</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="double-data-type">Double Data Type</h2>
+
+
+
+<p>In C programming, the <code>double</code> data type is used to store decimal numbers with double precision. It allows you to define numeric values that hold decimal numbers with high precision.</p>
+
+
+
+<p>Here are some key characteristics of the <code>double</code> data type in C:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Range</strong>: It can store values within the extensive range of 1.7E-308 to 1.7E+308.</li>
+
+
+
+<li><strong>Size</strong>: Typically, it occupies 8 bytes of memory, which is double the size of the <code>float</code> data type.</li>
+
+
+
+<li><strong>Format Specifier</strong>: When displaying <code>double</code> values in input/output operations, you use the format specifier <code>%lf</code>.</li>
+</ul>
+
+
+
+<p>Syntax Of Double</p>
+
+
+
+<p>The variable can be declared as double precision floating point using the&nbsp;<strong>double keyword:</strong></p>
+
+
+
+<pre class="wp-block-code"><code>double var_name;
+</code></pre>
+
+
+
+<h4 class="wp-block-heading" id="example-of-double">Example of Double</h4>
+
+
+
+<pre class="wp-block-code"><code>// C Program to demonstrate
+// use of double data type
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    double a = 123123123.00;
+    double b = 12.293123;
+    double c = 2312312312.123123;
+ 
+    printf("%lf\n", a);
+ 
+    printf("%lf\n", b);
+ 
+    printf("%lf", c);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>123123123.000000
+12.293123
+2312312312.123123</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="void-data-type">Void Data Type</h2>
+
+
+
+<p>In C, &#8220;void&#8221; means nothing specific. It&#8217;s used when a function doesn&#8217;t return anything, doesn&#8217;t take special input, or when we want a pointer to work with different types of data. It&#8217;s a way of saying &#8220;nothing specific here.&#8221;</p>
+
+
+
+<h4 class="wp-block-heading">Syntax:</h4>
+
+
+
+<pre class="wp-block-code"><code>// function return type void
+
+void exit(int check);
+
+// Function without any parameter can accept void.
+
+int print(void);
+
+// memory allocation function which
+// returns a pointer to void.
+void *malloc (size_t size);</code></pre>
+
+
+
+<p>Examples of void</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to demonstrate
+// use of void pointers
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    int val = 30;
+    void* ptr = &amp;val;
+    printf("%d", *(int*)ptr);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>30</code></pre>
+
+
+
+<h4 class="wp-block-heading" id="size-of-data-types-in-c">Size of Data Types in C</h4>
+
+
+
+<p>In C, the size of data types depends on the architecture of the system, so there&#8217;s no universal size for them. To find out the size of data types, you can use the <code>sizeof()</code> operator.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C Program to print size of
+// different data type in C
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    int size_of_int = sizeof(int);
+    int size_of_char = sizeof(char);
+    int size_of_float = sizeof(float);
+    int size_of_double = sizeof(double);
+ 
+    printf("The size of int data type : %d\n", size_of_int);
+    printf("The size of char data type : %d\n",
+           size_of_char);
+    printf("The size of float data type : %d\n",
+           size_of_float);
+    printf("The size of double data type : %d",
+           size_of_double);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>The size of int data type : 4
+The size of char data type : 1
+The size of float data type : 4
+The size of double data type : 8</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-data-types-in-c">FAQ- Data Types in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1694601640096" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is data type and its types?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In software programming, a data type specifies the kind of value that a variable can hold and determines which mathematical, relational, or logical operations can be performed on that value without resulting in an error.</p>
+
+</div>
+</div>
+<div id="faq-question-1694601651775" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is void data type in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The void data type in programming always signifies an empty set of values. You can only use the void type specifier when declaring a pointer. You cannot create a variable with the void type, but you can explicitly convert any expression into the void type.</p>
+
+</div>
+</div>
+<div id="faq-question-1694601659657" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. How many data types are?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In modern computer programming languages, there are typically five fundamental categories of data types: Integral, Floating Point, Character, Character String, and Composite types. Each of these categories may include specific subtypes that serve various purposes within their respective broad category.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/data-types-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

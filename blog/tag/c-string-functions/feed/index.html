@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>C String Functions</title>
+	<atom:link href="https://www.skillvertex.com/tag/c-string-functions/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:20:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>C String Functions</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>C String Functions</title>
+		<link>https://www.skillvertex.com/blog/c-string-functions/</link>
+					<comments>https://www.skillvertex.com/blog/c-string-functions/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:20:13 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[C String Functions]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2675</guid>
+
+					<description><![CDATA[C String Functions The C string functions are built-in functions in the C programming language that are used for various operations and manipulations on strings. These functions enable you to work with strings in C and perform tasks such as copying, concatenating, comparing, and finding the length of strings. The &#60;string.h&#62; header file in C ... <a title="C String Functions" class="read-more" href="https://www.skillvertex.com/blog/c-string-functions/" aria-label="More on C String Functions">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#c-string-functions">C String Functions</a></li><li ><a href="#commonly-used-string-functions-in-c">Commonly Used String Functions In C</a></li><li ><a href="#1-strcat-function">1. strcat() Function</a></li><li ><a href="#2-strlen-function">2. strlen() Function</a></li><li ><a href="#3-strcmp-function">3. strcmp() Function</a></li><li ><a href="#4-strcpy">4. strcpy</a></li><li ><a href="#5-strchr">5. strchr()</a></li><li ><a href="#6-strstr">6. strstr()</a></li><li ><a href="#7-strtok">7. strtok()</a></li><li ><a href="#faq-c-string-functions">FAQ- C String Functions</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="c-string-functions">C String Functions</h2>
+
+
+
+<p>The C string functions are built-in functions in the C programming language that are used for various operations and manipulations on strings. These functions enable you to work with strings in C and perform tasks such as copying, concatenating, comparing, and finding the length of strings. The <code>&lt;string.h&gt;</code> header file in C contains the declarations and implementations of these string functions, making them readily available for use in your C programs.</p>
+
+
+
+<h2 class="wp-block-heading" id="commonly-used-string-functions-in-c">Commonly Used String Functions In C</h2>
+
+
+
+<h2 class="wp-block-heading" id="1-strcat-function">1. strcat() Function</h2>
+
+
+
+<p>The <code>strcat()</code> function in C is used for string concatenation. It takes two arguments: a destination string and a source string. It appends (concatenates) the characters from the source string to the end of the destination string. The source string is modified, and the destination string is the resulting concatenated string.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>char* strcat(char* dest, const char* src);
+</code></pre>
+
+
+
+<p>The terminating character at the end of&nbsp;<strong>dest</strong>&nbsp; will be replaced by the first character of&nbsp;<strong>src.</strong></p>
+
+
+
+<p><strong>Parameters</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>dest</strong>: Destination string</li>
+
+
+
+<li><strong>src</strong>: Source string</li>
+</ul>
+
+
+
+<p><strong>Return value</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>The strcat() function returns a pointer to the dest string.</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading" id="example">Example</h4>
+
+
+
+<pre class="wp-block-code"><code>
+// C Program to illustrate the strcat function 
+#include &lt;stdio.h&gt; 
+  
+int main() 
+{ 
+    char dest&#91;50] = "This is an"; 
+    char src&#91;50] = " example"; 
+  
+    printf("dest Before: %s\n", dest); 
+  
+    // concatenating src at the end of dest 
+    strcat(dest, src); 
+  
+    printf("dest After: %s", dest); 
+  
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>dest Before: This is an
+dest After: This is an example</code></pre>
+
+
+
+<p>Whereas, In C programming, strncat()&nbsp;will be similar to strcat().</p>
+
+
+
+<p><strong>strncat()</strong></p>
+
+
+
+<p>The <code>strncat()</code> function is used for string handling and concatenation. It appends, at most, <code>n</code> characters from the source string (<code>src</code>) to the end of the destination string (<code>dest</code>) along with a terminating null-character. This function is a variant of <code>strcat()</code> but allows you to specify the maximum number of characters to append from the source string.</p>
+
+
+
+<p><strong>Syntax of strncat()</strong></p>
+
+
+
+<pre class="wp-block-code"><code>char* strncat(char* dest, const char* src, size_t n);
+</code></pre>
+
+
+
+<p>N indicates the number of characters to be appended. size_t is an unsigned integral type.</p>
+
+
+
+<h2 class="wp-block-heading" id="2-strlen-function">2. strlen() Function</h2>
+
+
+
+<p>The <code>strlen()</code> function is used to calculate the length of a given string in C. It counts all the characters in the string, including the null character <code>'\0'</code> at the end of the string. The function returns the number of characters in the string up to, but not including, the null character.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>int strlen(const char *str);
+</code></pre>
+
+
+
+<p><strong>Parameters</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>str</strong>&#8211; it will indicate the string variable whose length to be estimated.</li>
+</ul>
+
+
+
+<p><strong>Return Value</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>strlen() function in C returns the length of the string.</li>
+</ul>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to demonstrate the strlen() function 
+#include &lt;stdio.h&gt; 
+#include &lt;string.h&gt; 
+  
+int main() 
+{ 
+    // Declare and initialize a character array 'str' with 
+    // the string " A Skills  Vertex" 
+    char str&#91;] = "A Skills Vertex"; 
+  
+    // Calculate the length of the string using the strlen() 
+    // function and store it in the variable 'length' 
+    size_t length = strlen(str); 
+  
+    // Print the length of the string 
+    printf("String: %s\n", str); 
+  
+    printf("Length: %zu\n", length); 
+  
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>String: A Skills Vertex
+Length: 13</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="3-strcmp-function">3. strcmp() Function</h2>
+
+
+
+<p>The <code>strcmp()</code> function is a built-in library function in C that is used for comparing two strings lexicographically (based on their characters&#8217; ASCII values). It takes two strings as arguments and returns an integer value, which indicates the result of the comparison.</p>
+
+
+
+<p><strong>Syntax</strong></p>
+
+
+
+<pre class="wp-block-code"><code>int strcmp(const char *str1, const char *str2);
+
+</code></pre>
+
+
+
+<p><strong>Parameters</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>str1</strong>: first string to be compared.</li>
+
+
+
+<li><strong>str2</strong>:  second string to be compared.</li>
+</ul>
+
+
+
+<p><strong>Return Value</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>If str1 is less than str2, the return value is less than 0.</li>
+
+
+
+<li>If str1 is greater than str2, the return value is greater than 0.</li>
+
+
+
+<li>If str1 will be equal to str2, the return value is 0.</li>
+</ul>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to demonstrate the strcmp() function 
+#include &lt;stdio.h&gt; 
+#include &lt;string.h&gt; 
+  
+int main() 
+{ 
+    // Define a string 'str1' and initialize it with "  Skills" 
+    char str1&#91;] = '' Skills "; 
+    // Define a string 'str2' and initialize it with "Ver" 
+    char str2&#91;] = ""; 
+    // Define a string 'str3' and initialize it with "Skills" 
+    char str3&#91;] = "Skills"; 
+  
+    // Compare 'str1' and 'str2' using strcmp() function and 
+    // store the result in 'result1' 
+    int result1 = strcmp(str1, str2); 
+    // Compare 'str2' and 'str3' using strcmp() function and 
+    // store the result in 'result2' 
+    int result2 = strcmp(str2, str3); 
+    // Compare 'str1' and 'str1' using strcmp() function and 
+    // store the result in 'result3' 
+    int result3 = strcmp(str1, str1); 
+  
+    // Print the result of the comparison between 'str1' and 
+    // 'str2' 
+printf("Comparison of str1 and str2: %d\n", result1); 
+    // Print the result of the comparison between 'str2' and 
+    // 'str3' 
+    printf("Comparison of str2 and str3: %d\n", result2); 
+    // Print the result of the comparison between 'str1' and 
+    // 'str1' 
+    printf("Comparison of str1 and str1: %d\n", result3); 
+  
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Comparison of str1 and str2: 1
+Comparison of str2 and str3: -1
+Comparison of str1 and str1: 0</code></pre>
+
+
+
+<p>&nbsp;<strong>strncmp()</strong> function will be &nbsp;similar to strcmp().</p>
+
+
+
+<p><strong>strncmp()</strong></p>
+
+
+
+<p>The <code>strncmp()</code> function in C performs a lexicographic comparison between the first <code>n</code> characters of two null-terminated strings. It returns an integer value based on the outcome of the comparison:</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>int strncmp(const char* str1, const char* str2, size_t num);
+</code></pre>
+
+
+
+<p>Whereas,&nbsp;<strong>num</strong>&nbsp;is the number of characters to be compared.</p>
+
+
+
+<h2 class="wp-block-heading" id="4-strcpy">4. strcpy</h2>
+
+
+
+<p>The <code>strcpy()</code> function in C is used to copy the characters from one string to another. It is a standard library function and is included in the <code>&lt;string.h&gt;</code> header file. This function takes two arguments: the destination string (where the characters will be copied) and the source string (from which the characters will be copied). It copies the characters from the source string to the destination string, replacing the contents of the destination string.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>char* strcpy(char* dest, const char* src);
+</code></pre>
+
+
+
+<p><strong>Parameters</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>dest</strong>: Pointer to the destination array ie,content is to be copied.&nbsp;</li>
+
+
+
+<li><strong>src:&nbsp;</strong>string has to be copied.</li>
+</ul>
+
+
+
+<p><strong>Return Value</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>strcpy() function will return a pointer pointing to the output string.</li>
+</ul>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C program to illustrate the use of strcpy() 
+#include &lt;stdio.h&gt; 
+#include &lt;string.h&gt; 
+  
+int main() 
+{ 
+    // defining strings 
+  
+    char source&#91;] = "A Skills vertex"; 
+    char dest&#91;20]; 
+  
+    // Copying the source string to dest 
+    strcpy(dest, source); 
+  
+    // printing result 
+    printf("Source: %s\n", source); 
+    printf("Destination: %s\n", dest); 
+  
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Source:  A Skills vertex
+Destination: A Skills vertex</code></pre>
+
+
+
+<p><strong>strncpy()</strong></p>
+
+
+
+<p>The <code>strncpy()</code> function is similar to the <code>strcpy()</code> function, but with a specified limit (<code>n</code>) on the number of characters to copy from the source string. The function ensures that at most <code>n</code> bytes of the source are copied to the destination. The important points to note about <code>strncpy()</code> are as follows:</p>
+
+
+
+<ul class="wp-block-list">
+<li><code>strncpy()</code> copies at most <code>n</code> characters from the source string to the destination string.</li>
+
+
+
+<li>If there is no null character (<code>'\0'</code>) among the first <code>n</code> characters of the source string, the resulting destination string will not be null-terminated.</li>
+
+
+
+<li>If the length of the source string is less than <code>n</code>, <code>strncpy()</code> writes additional null characters to the destination to ensure that a total of <code>n</code> characters are written.</li>
+</ul>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>char* strncpy( char* dest, const char* src, size_t n );
+</code></pre>
+
+
+
+<p>&nbsp;n is the first n characters to be copied from src to dest.</p>
+
+
+
+<h2 class="wp-block-heading" id="5-strchr">5. strchr()</h2>
+
+
+
+<p>The <code>strchr()</code> function is a predefined function used for string handling in C. It is used to find the first occurrence of a specified character in a given string. Here&#8217;s a correct description:</p>
+
+
+
+<p>The <code>strchr()</code> function in C is used to locate the first occurrence of a specified character within a given string. It returns a pointer to the first occurrence of the character or a null pointer if the character is not found in the string.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>char *strchr(const char *str, int c);
+</code></pre>
+
+
+
+<ul class="wp-block-list">
+<li><code>str</code>: This parameter specifies the pointer to the null-terminated string in which the search for the character will be performed. It is the string that is examined.</li>
+
+
+
+<li><code>ch</code>: This parameter specifies the character to be searched for within the string specified by <code>str</code>. It is passed as its int promotion, which means it is treated as an <code>int</code>, but the function internally converts it back to <code>char</code> when performing the search.</li>
+</ul>
+
+
+
+<p><strong>Return Value</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>It returns a pointer to the first occurrence of the character in the string.</li>
+</ul>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+
+#include &lt;stdio.h&gt; 
+#include &lt;string.h&gt; 
+  
+int main() 
+{ 
+    char str&#91;] = "GeeksforGeeks"; 
+    char ch = 'e'; 
+  
+    // Search for the character 'e' in the string 
+    // Use the strchr function to find the first occurrence 
+    // of 'e' in the string 
+    char* result = strchr(str, ch); 
+  
+    // Character 'e' is found, calculate the index by 
+    // subtracting the result pointer from the str pointer 
+    if (result != NULL) { 
+        printf("The character '%c' is found at index %ld\n", 
+               ch, result - str); 
+    } 
+    else { 
+        printf("The character '%c' is not found in the "
+               "string\n", 
+               ch); 
+    } 
+   return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The character 'e' is found at index 1
+</code></pre>
+
+
+
+<p><strong>strrchr() Function</strong></p>
+
+
+
+<p>The <code>strrchr()</code> function in C is used to locate the last occurrence of a specified character within a given string. It returns a pointer to the last occurrence of the character or a null pointer if the character is not found in the string.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>char* strchr(const char *str, int ch);
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="6-strstr">6. strstr()</h2>
+
+
+
+<p>The <code>strstr()</code> function in C is used to search for the first occurrence of a specified substring within a given string. It returns a pointer to the first character of the first occurrence of the substring in the string, or a null pointer if the substring is not found.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>char *strstr (const char *s1, const char *s2);
+</code></pre>
+
+
+
+<p>Parameters</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>s1</strong>-main string to be examined.</li>
+
+
+
+<li><strong>s2</strong>&#8211; sub-string to be searched in the s1 string.</li>
+</ul>
+
+
+
+<p><strong>Return Value</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>If the s2 will be found in s1, this function will be returned to a pointer, and then to the first character of the s2 in s1, else, it will be returned as a null pointer.</li>
+
+
+
+<li>It will return s1 when the if s2 points to an empty string.</li>
+</ul>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to demonstrate the strstr() function 
+#include &lt;stdio.h&gt; 
+#include &lt;string.h&gt; 
+  
+int main() 
+{ 
+    // Define a string 's1' and initialize it with 
+    // "Skill Vertex" 
+    char s1&#91;] = "Skill vertex"; 
+    // Define a string 's2' and initialize it with "for" 
+    char s2&#91;] = "for"; 
+    // Declare a pointer 'result' to store the result of 
+    // strstr() 
+    char* result; 
+  
+    // Find the first occurrence of 's2' within 's1' using 
+    // strstr() function and assign the result to 'result' 
+    result = strstr(s1, s2); 
+  
+    if (result != NULL) { 
+        // If 'result' is not NULL, it means the substring 
+        // was found, so print it 
+        printf("Substring found: %s\n", result); 
+    } 
+else { 
+        // If 'result' is NULL, it means the substring was 
+        // not found, so print appropriate message 
+        printf("Substring not found.\n"); 
+    } 
+  
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Substring found: Vertex
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="7-strtok">7. strtok()</h2>
+
+
+
+<p>The&nbsp;strtok() function&nbsp;will be used to split the string into small tokens based on a set of delimiter characters.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>char * strtok(char* str, const char *delims);
+</code></pre>
+
+
+
+<p><strong>Parameters</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>str:</strong>&nbsp;The string will be tokenized.</li>
+
+
+
+<li><strong>delims:</strong>&nbsp;A set of delimiters</li>
+</ul>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to demonstrate the strtok() function 
+#include &lt;stdio.h&gt; 
+#include &lt;string.h&gt; 
+  
+int main() 
+{ 
+    char str&#91;] = "A,Skill.Vertex"; 
+    // Delimiters: space, comma, dot, 
+    // exclamation mark 
+    const char delimiters&#91;] = ",."; 
+  
+    // Tokenize the string 
+    char* token = strtok(str, delimiters); 
+    while (token != NULL) { 
+        printf("Token: %s\n", token); 
+        token = strtok(NULL, delimiters); 
+    } 
+  
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Token: A 
+Token: Skill
+Token: Vertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-c-string-functions">FAQ- C String Functions</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697182990285" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How many strings function in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. There are 9 strings in c <br /> <code>strcat()</code>: Concatenate two strings.<br /><code>strchr()</code>: Find a character in a string.<br /><code>strcmp()</code>: Compare two strings.<br /><code>strlen()</code>: Get the length of a string.<br /><code>strcpy()</code>: Copy one string to another.<br /><code>strncpy()</code>: Copy a specified number of characters.<br /><code>strncat()</code>: Concatenate a specified number of characters.<br /><code>strncmp()</code>: Compare the first N characters.<br /><code>strstr()</code>: Find a substring in a string.</p>
+
+</div>
+</div>
+<div id="faq-question-1697183002870" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. Can we use string function in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. C provides several useful string functions for performing operations on strings.</p>
+
+</div>
+</div>
+<div id="faq-question-1697183010517" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.What is the syntax of string in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.The basic syntax for declaring a string in C is: <strong>char str_name[size];</strong></p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/c-string-functions/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python &#8211; Sets</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-sets/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 20 Mar 2024 06:27:43 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Python &#8211; Sets</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python &#8211; Sets</title>
+		<link>https://www.skillvertex.com/blog/python-sets/</link>
+					<comments>https://www.skillvertex.com/blog/python-sets/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 20 Mar 2024 06:27:43 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[Python - Sets]]></category>
+		<category><![CDATA[Python Functions]]></category>
+		<category><![CDATA[python programming]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=8332</guid>
+
+					<description><![CDATA[Python &#8211; Sets The set is one of the built-in data types in Python. Read this article to learn more about the Python Sets. However, in mathematics, a set is the collection of data types including a list or tuple. A set object consists of a collection of one or more immutable objects that will ... <a title="Python &#8211; Sets" class="read-more" href="https://www.skillvertex.com/blog/python-sets/" aria-label="More on Python &#8211; Sets">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#python-sets">Python &#8211; Sets</a></li><li ><a href="#what-is-set-in-python">What is Set in Python?</a></li><li ><a href="#what-are-the-examples-of-python-sets">What are the examples of Python sets?</a></li><li ><a href="#example-2-to-illustrate-that-the-duplicates-are-not-allowed-in-python-sets">Example 2 &#8211; to illustrate that the duplicates are not allowed in Python sets</a></li><li ><a href="#example-3-to-determine-the-length-of-python-sets">Example 3-  to determine the length of Python sets</a></li><li ><a href="#example-4-to-create-the-python-set-with-items-of-different-data-types">Example 4- to create the Python set with items of different data types</a></li><li ><a href="#what-is-the-set-constructor">What is the Set() Constructor?</a></li><li ><a href="#what-is-the-example-for-a-set-constructor">What is the example for a set constructor?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-sets-fa-qs">Python &#8211; Sets &#8211; FAQs</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="python-sets">Python &#8211; Sets</h2>
+
+
+
+<p>The set is one of the<a href="https://www.skillvertex.com/blog/python-built-in-functions/" data-type="post" data-id="7464"> built-in data </a>types in Python. Read this article to learn more about the <strong>Python Sets</strong>.</p>
+
+
+
+<p>However, in mathematics, a set is the collection of data types including a <a href="https://www.skillvertex.com/blog/python-list-comprehension/" data-type="post" data-id="8090">list </a>or tuple. A set object consists of a collection of one or more immutable objects that will be enclosed by the curly brackets{}.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-set-in-python">What is Set in Python?</h2>
+
+
+
+<p>The<strong> Python set </strong>will allow you to store multiple items in a single <a href="https://www.skillvertex.com/blog/initialization-of-static-variables-in-c/" data-type="post" data-id="3034">variable</a>. Thus, the set is among the 4 built-in data types in <a href="https://www.skillvertex.com/blog/python-tuple-methods/" data-type="post" data-id="8306">Python </a>that will store the collection of data.</p>
+
+
+
+<p>Furthermore, the Python set will indicate an unordered, unchangeable, and unindexed collection. It won&#8217;t allow any duplicate values. In simple terms, unordered will refer to the items with no defined order in the Python sets. So, it will show in a different order each time you need to use them and won&#8217;t be referred by the <a href="https://www.skillvertex.com/blog/which-of-the-following-is-valid-sql-for-an-index/" data-type="post" data-id="1479">index </a>or <a href="https://www.skillvertex.com/blog/python-keyword-arguments/" data-type="post" data-id="7283">key</a>. The set items are unchangeable.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-examples-of-python-sets">What are the examples of Python sets?</h2>
+
+
+
+<p>Let us look into examples of <a href="https://www.skillvertex.com/blog/python-loop-tuples/" data-type="post" data-id="8198">Python </a>sets provided below:</p>
+
+
+
+<pre class="wp-block-code"><code># Creating two sets
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+# Output: Elements of set1
+print("Set 1:", set1)
+
+# Output: Elements of set2
+print("Set 2:", set2)
+
+# Adding an element to set1
+set1.add(6)
+# Output: Updated set1
+print("After adding 6 to set 1:", set1)
+
+# Removing an element from set2
+set2.remove(8)
+# Output: Updated set2
+print("After removing 8 from set 2:", set2)
+
+# Union of set1 and set2
+union_set = set1.union(set2)
+# Output: Union of set1 and set2
+print("Union of set1 and set2:", union_set)
+
+# Intersection of set1 and set2
+intersection_set = set1.intersection(set2)
+# Output: Intersection of set1 and set2
+print("Intersection of set1 and set2:", intersection_set)
+
+# Difference between set1 and set2
+difference_set = set1.difference(set2)
+# Output: Difference between set1 and set2
+print("Difference of set1 and set2:", difference_set)
+
+# Checking if set1 is a subset of set2
+is_subset = set1.issubset(set2)
+# Output: Whether set1 is a subset of set2
+print("Is set1 a subset of set2:", is_subset)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Set 1: {1, 2, 3, 4, 5}
+Set 2: {4, 5, 6, 7, 8}
+After adding 6 to set 1: {1, 2, 3, 4, 5, 6}
+After removing 8 from set 2: {4, 5, 6, 7}
+Union of set1 and set2: {1, 2, 3, 4, 5, 6, 7}
+Intersection of set1 and set2: {4, 5, 6}
+Difference of set1 and set2: {1, 2, 3}
+Is set1 a subset of set2: False
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-2-to-illustrate-that-the-duplicates-are-not-allowed-in-python-sets">Example 2 &#8211; to illustrate that the duplicates are not allowed in Python sets</h2>
+
+
+
+<pre class="wp-block-code"><code># Creating a set with duplicate elements
+my_set = {1, 2, 3, 3, 4, 4, 5}
+
+# Output: The set with duplicates
+print("Set with duplicates:", my_set)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Set with duplicates: {1, 2, 3, 4, 5}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-3-to-determine-the-length-of-python-sets">Example 3-  to determine the length of Python sets</h2>
+
+
+
+<p>Check out the example below to determine the length of Python sets</p>
+
+
+
+<pre class="wp-block-code"><code># Creating a set
+my_set = {1, 2, 3, 4, 5}
+
+# Getting the length of the set
+set_length = len(my_set)
+
+# Output: Length of the set
+print("Length of the set:", set_length)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Length of the set: 5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-4-to-create-the-python-set-with-items-of-different-data-types">Example 4- to create the Python set with items of different data types</h2>
+
+
+
+<pre class="wp-block-code"><code># Creating a set with items of different data types
+mixed_set = {1, 2.5, 'apple', (3, 4)}
+
+# Output: The set with different data types
+print("Set with different data types:", mixed_set)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Set with different data types: {1, 2.5, 'apple', (3, 4)}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-set-constructor">What is the Set() Constructor?</h2>
+
+
+
+<p>The Set()  constructor will help you to create the Python sets.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-example-for-a-set-constructor">What is the example for a set constructor?</h2>
+
+
+
+<pre class="wp-block-code"><code># Creating a set using the set constructor
+my_set = set(&#91;1, 2, 3, 4, 5])
+
+# Output: The created set
+print("Created set using set constructor:", my_set)
+
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Created set using set constructor: {1, 2, 3, 4, 5}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>In Python, sets are a powerful data structure that stores unique elements. They&#8217;re like lists, but they don&#8217;t allow duplicates. Sets are defined using curly braces {}, and you can create a set using either curly braces directly or the set() constructor. </p>
+
+
+
+<p>Hence, a set will allow you to perform various operations with sets like adding elements, removing elements, finding intersections, unions, and differences, and checking for subsets.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-sets-fa-qs">Python &#8211; Sets &#8211; FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1710914545970" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.What is set and subset in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A subset indicates the collection of elements that will belong to another set. In contrast, the set is the collection of data types.</p>
+
+</div>
+</div>
+<div id="faq-question-1710914553461" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.Are Python sets unique?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Yes, set elements are unique</p>
+
+</div>
+</div>
+<div id="faq-question-1710914560883" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.Is set a class in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Yes, in Python, a set is a built-in data type and is an unordered collection of unique elements. It is implemented as a class in Python.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-sets/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

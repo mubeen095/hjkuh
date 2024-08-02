@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python-Virtual Environment</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-virtual-environment/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Thu, 11 Apr 2024 11:58:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Python-Virtual Environment</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>What is a Python-Virtual Environment?</title>
+		<link>https://www.skillvertex.com/blog/python-virtual-environment/</link>
+					<comments>https://www.skillvertex.com/blog/python-virtual-environment/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 11:58:32 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python-Virtual Environment]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6920</guid>
+
+					<description><![CDATA[Python virtual environment will make a virtual installation of Python inside the Python directory. Then, users will install and monitor Python Packages from several other projects. This article will tell you about the virtual environment in Python. Moreover, it will help the users install packages and change the Python environment without breaking off the packages ... <a title="What is a Python-Virtual Environment?" class="read-more" href="https://www.skillvertex.com/blog/python-virtual-environment/" aria-label="More on What is a Python-Virtual Environment?">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-python-virtual-environment">What is Python Virtual Environment?</a></li><li ><a href="#how-to-use-a-virtual-environment-for-python-application">How to Use a Virtual Environment for Python Application?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-virtual-environment-fa-qs"> Python-Virtual Environment- FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python virtual environment will make a virtual installation of Python inside the <a href="https://www.skillvertex.com/blog/directory-submission-sites/" data-type="post" data-id="763">Python directory</a>. Then, users will install and monitor Python Packages from several other projects.  This article will tell you about the virtual environment in Python.</p>
+
+
+
+<p>Moreover, it will help the users install packages and change the Python environment without breaking off the packages that are installed in the other environment.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-virtual-environment">What is Python Virtual Environment?</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/features-of-python/" data-type="post" data-id="6868">Python</a> virtual environments are :</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Disposable Nature:</strong> Virtual environments are like temporary workspaces for your<a href="https://www.skillvertex.com/blog/data-science-project-ideas/" data-type="post" data-id="5596"> Python projects</a>. Once you&#8217;re done with a project, you can remove this workspace without affecting others.</li>
+
+
+
+<li><strong>Purpose:</strong> Each virtual environment is a self-contained package that holds a specific <a href="https://www.skillvertex.com/blog/python-history/" data-type="post" data-id="6864">Python version</a> and the exact tools your project needs. This avoids conflicts between different projects using different tools.</li>
+
+
+
+<li><strong>Directory Convention:</strong> Virtual environments are typically stored in a folder named &#8220;venv&#8221; or &#8220;.venv&#8221; within your project directory. This keeps things organized and helps Python recognize these special environments.</li>
+
+
+
+<li><strong>Immovable/Copyable:</strong> While virtual environments are portable, it&#8217;s not recommended to directly copy them or move them between projects. It&#8217;s better to recreate the environment based on the project&#8217;s requirements.</li>
+</ol>
+
+
+
+<p>Creating a virtual environment is like setting up a controlled environment for your project, ensuring that the project has all the necessary tools without interfering with other projects. It&#8217;s a way of maintaining order in the Python ecosystem.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-to-use-a-virtual-environment-for-python-application">How to Use a Virtual Environment for Python Application?</h2>
+
+
+
+<p>After installing Python<a href="https://www.skillvertex.com/blog/software-engineer-salary/" data-type="post" data-id="445"> software </a>on your computer and will be accessible from anywhere in the system. It is a system-wide installation.</p>
+
+
+
+<p>During the creation of the application in Python, more libraries are needed to be installed with the pip utility. Further, the application must need a particular version of the <a href="https://www.skillvertex.com/blog/c-library-math-h-functions/" data-type="post" data-id="2596">library</a>.  Similarly,  another Python <a href="https://www.skillvertex.com/blog/which-of-the-following-is-the-central-application-in-the-aws-portfolio/" data-type="post" data-id="2719">application </a>( example: App2) needs a newer version of the same library so, let&#8217;s suppose some lib 2.0. Therefore, installing this new version can allow the functionality to be compromised due to the conflict between two different versions of the same library.</p>
+
+
+
+<p>Further, this conflict will be neglected by allowing the two isolated environments of Python on the same machine. It is referred as a virtual machine.  A <a href="https://www.skillvertex.com/blog/setting-up-virtual-environment-in-python/" data-type="post" data-id="6906">virtual environment</a> is considered a separate directory structure and has an isolated installation with a local copy of Python Interpreter, a standard library, and several other modules.</p>
+
+
+
+<p>With the global Python installation, it is possible to make more than one virtual environment.  Each virtual environment has a different version of the same library. Thus, this can help to avoid the conflict.</p>
+
+
+
+<p>This functionality will be supported by the venv module in the standard <a href="https://www.skillvertex.com/blog/python-tutorial/" data-type="post" data-id="6852">Python</a> distribution. To create a new virtual environment, use the command given below:</p>
+
+
+
+<pre class="wp-block-code"><code>C:\Users\Acer&gt;md\pythonapp
+C:\Users\Acer&gt;cd\pythonapp
+C:\pythonapp&gt;python -m venv myvenv</code></pre>
+
+
+
+<p>myvenv is considered as the folder that has a new Python Virtual environment  and can make  the directory structure given below</p>
+
+
+
+<pre class="wp-block-code"><code>Directory of C:\pythonapp\myvenv
+22-02-2023 09:53 &lt;DIR&gt; .
+22-02-2023 09:53 &lt;DIR&gt; ..
+22-02-2023 09:53 &lt;DIR&gt; Include
+22-02-2023 09:53 &lt;DIR&gt; Lib
+22-02-2023 09:53 77 pyvenv.cfg
+22-02-2023 09:53 &lt;DIR&gt; Scripts</code></pre>
+
+
+
+<p>Therefore, the utilities that are used for activating and deactivating the virtual environment and the local copy of the Python interpreter will be stored in the scripts folder.</p>
+
+
+
+<pre class="wp-block-code"><code>Directory of C:\pythonapp\myvenv\scripts
+22-02-2023 09:53 &lt;DIR&gt; .
+22-02-2023 09:53 &lt;DIR&gt; ..
+22-02-2023 09:53 2,063 activate
+22-02-2023 09:53 992 activate.bat
+22-02-2023 09:53 19,611 Activate.ps1
+22-02-2023 09:53 393 deactivate.bat
+22-02-2023 09:53 106,349 pip.exe
+22-02-2023 09:53 106,349 pip3.10.exe
+22-02-2023 09:53 106,349 pip3.exe
+22-02-2023 09:53 242,408 python.exe
+22-02-2023 09:53 232,688 pythonw.exe</code></pre>
+
+
+
+<p>Execute the <strong>activate.bat</strong> in the Scripts folder to allow the new virtual environment.</p>
+
+
+
+<pre class="wp-block-code"><code>C:\pythonapp&gt;myvenv\scripts\activate
+(myvenv) C:\pythonapp&gt;</code></pre>
+
+
+
+<p>Remember to note the name of the virtual environment in the parenthesis. Whereas, the script folder has a local copy of Python Interpreter. Then, start a Python Session in the virtual environment. Check the sys. path to confirm if the Python session is in the virtual environment.</p>
+
+
+
+<pre class="wp-block-code"><code>(myvenv) C:\pythonapp&gt;python
+Python 3.10.1 (tags/v3.10.1:2cd268a, Dec 6 2021, 19:10:37) &#91;MSC v.1929
+64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; import sys
+&gt;&gt;&gt; sys.path
+&#91;'', 'C:\\Python310\\python310.zip', 'C:\\Python310\\DLLs',
+'C:\\Python310\\lib', 'C:\\Python310', 'C:\\pythonapp\\myvenv',
+'C:\\pythonapp\\myvenv\\lib\\site-packages']
+&gt;&gt;&gt;</code></pre>
+
+
+
+<p>Hence, the script folder of the virtual environment has pip utilities. Therefore, after installing a package from PyPI, the package will be seen as active only in the virtual environment. Run <strong>deactivate.bat</strong> to deactivate the environment.</p>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, a Python virtual environment is like a special workspace or toolbox for each of your projects. It helps keep everything tidy and separate, so tools from one project don&#8217;t mix up with tools from another. It&#8217;s like having individual backpacks for different school subjects. </p>
+
+
+
+<p>Furthermore, it creates a new one whenever you start a project, and when you&#8217;re done, you can easily toss it away. This way, your projects stay organized, and you always have the right tools for the job without any confusion.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-virtual-environment-fa-qs"> Python-Virtual Environment- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1706790702588" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. Which virtual environment is best for Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <strong>Python venv </strong>is the virtual environment that is best for Python.</p>
+
+</div>
+</div>
+<div id="faq-question-1706790711551" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.What are the two advantages of Python virtual environments?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Python virtual environments will allow developers to monitor software dependencies in Python code. </p>
+
+</div>
+</div>
+<div id="faq-question-1706790720473" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.  Should I use Anaconda or venv?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <strong>Venv might be the best choice</strong> as it is very simple and easy to use.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-virtual-environment/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

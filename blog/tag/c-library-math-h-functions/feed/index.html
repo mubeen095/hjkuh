@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>C Library Math.h Functions</title>
+	<atom:link href="https://www.skillvertex.com/tag/c-library-math-h-functions/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:30:06 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>C Library Math.h Functions</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>C Library Math.h Functions</title>
+		<link>https://www.skillvertex.com/blog/c-library-math-h-functions/</link>
+					<comments>https://www.skillvertex.com/blog/c-library-math-h-functions/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:30:06 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[C Library Math.h Functions]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2596</guid>
+
+					<description><![CDATA[C Library Math.h Functions The math.h library in C is like a toolbox full of tools for doing math in computer programs. It helps C programmers perform various calculations, like adding, subtracting, finding square roots, and more. These tools work with numbers that can have decimal points. Whether you&#8217;re building a game, a financial application, ... <a title="C Library Math.h Functions" class="read-more" href="https://www.skillvertex.com/blog/c-library-math-h-functions/" aria-label="More on C Library Math.h Functions">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#c-library-math-h-functions">C Library Math.h Functions</a></li><li ><a href="#c-math-functions">C Math Functions</a></li><li ><a href="#1-double-ceil-double-x">1. double ceil (double x)</a></li><li ><a href="#2-double-floor-double-x">2. double floor(double x)</a></li><li ><a href="#3-double-fabs-double-x">3. double fabs(double x)</a></li><li ><a href="#4-double-log-double-x">4. double log(double x)</a></li><li ><a href="#5-double-log-10-double-x">5. double log10(double x)</a></li><li ><a href="#6-double-fmod-double-x-double-y">6. double fmod(double x, double y)</a></li><li ><a href="#7-double-sqrt-double-x">7. double sqrt(double x)</a></li><li ><a href="#8-double-pow-double-x-double-y">8. double pow(double x, double y)</a></li><li ><a href="#9-double-modf-double-x-double-integer">9. Double Modf(double x, double *integer)</a></li><li ><a href="#10-double-exp-double-x">10. double exp(double x)</a></li><li ><a href="#11-double-cos-double-x">11. double cos(double x)</a></li><li ><a href="#12-double-acos-double-x">12. double acos(double x)</a></li><li ><a href="#13-double-tanh-double-x">13. double tanh(double x)</a></li><li ><a href="#faq-c-library-math-h-functions">FAQ- C Library Math.h Functions</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="c-library-math-h-functions">C Library Math.h Functions</h2>
+
+
+
+<p>The <code>math.h</code> library in C is like a toolbox full of tools for doing math in computer programs. It helps C programmers perform various calculations, like adding, subtracting, finding square roots, and more. These tools work with numbers that can have decimal points. Whether you&#8217;re building a game, a financial application, or anything that involves math, <code>math.h</code> has the functions you need. So, it&#8217;s like having a math helper in your C program to make complex math tasks easier. In this introduction, we&#8217;ll look at some of the essential <code>math.h</code> functions and how they can be used in C programming.</p>
+
+
+
+<h2 class="wp-block-heading" id="c-math-functions">C Math Functions</h2>
+
+
+
+<h2 class="wp-block-heading" id="1-double-ceil-double-x">1. double ceil (double x)</h2>
+
+
+
+<p>The C library function <code>double ceil(double x)</code> is used to round a given floating-point number <code>x</code> up to the smallest integer value that is greater than or equal to <code>x</code>. In other words, it takes a decimal number and &#8220;rounds up&#8221; to the nearest whole number that is greater than or equal to the original value.</p>
+
+
+
+<p>For example, if you call <code>ceil(4.3)</code>, it will return <code>5.0</code> because 4.3 rounded up is 5. Similarly, if you call <code>ceil(4.0)</code>, it will also return <code>4.0</code> because 4.0 is already a whole number and doesn&#8217;t need to be rounded up.</p>
+
+
+
+<p>This function is useful when you need to ensure that a value is rounded up to the next integer, which can be important in various mathematical and programming scenarios.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>double ceil(double x);
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C code to illustrate 
+// the use of ceil function. 
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+int main() 
+{ 
+    float val1, val2, val3, val4; 
+  
+    val1 = 1.6; 
+    val2 = 1.2; 
+    val3 = -2.8; 
+    val4 = -2.3; 
+  
+    printf("value1 = %.1lf\n", ceil(val1)); 
+    printf("value2 = %.1lf\n", ceil(val2)); 
+    printf("value3 = %.1lf\n", ceil(val3)); 
+    printf("value4 = %.1lf\n", ceil(val4)); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>value1 = 2.0
+value2 = 2.0
+value3 = -2.0
+value4 = -2.0</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="2-double-floor-double-x">2. double floor(double x)</h2>
+
+
+
+<p>The C library function <code>double floor(double x)</code> is used to round a given floating-point number <code>x</code> down to the largest integer value that is less than or equal to <code>x</code>. In other words, it takes a decimal number and &#8220;rounds down&#8221; to the nearest whole number that is less than or equal to the original value.</p>
+
+
+
+<p>For example, if you call <code>floor(4.7)</code>, it will return <code>4.0</code> because 4.7 rounded down is 4. Similarly, if you call <code>floor(4.0)</code>, it will return <code>4.0</code> because 4.0 is already a whole number and doesn&#8217;t need to be rounded down.</p>
+
+
+
+<p>This function is useful when you need to ensure that a value is rounded down to the nearest integer, which can be important in various mathematical and programming scenarios.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>double floor(double x);
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C code to illustrate 
+// the use of floor function 
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+int main() 
+{ 
+    float val1, val2, val3, val4; 
+  
+    val1 = 1.6; 
+    val2 = 1.2; 
+    val3 = -2.8; 
+    val4 = -2.3; 
+  
+    printf("Value1 = %.1lf\n", floor(val1)); 
+    printf("Value2 = %.1lf\n", floor(val2)); 
+    printf("Value3 = %.1lf\n", floor(val3)); 
+    printf("Value4 = %.1lf\n", floor(val4)); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Value1 = 1.0
+Value2 = 1.0
+Value3 = -3.0
+Value4 = -3.0</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="3-double-fabs-double-x">3. double fabs(double x)</h2>
+
+
+
+<p>The C library function <code>double fabs(double x)</code> is used to calculate and return the absolute value of a given floating-point number <code>x</code>. The absolute value of a number is its distance from zero on the number line, and it is always positive or zero.</p>
+
+
+
+<p>For example:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If you call <code>fabs(5.5)</code>, it will return <code>5.5</code> because the absolute value of 5.5 is 5.5.</li>
+
+
+
+<li>If you call <code>fabs(-3.8)</code>, it will return <code>3.8</code> because the absolute value of -3.8 is 3.8.</li>
+
+
+
+<li>If you call <code>fabs(0.0)</code>, it will return <code>0.0</code> because the absolute value of 0.0 is 0.0.</li>
+</ul>
+
+
+
+<p>This function is useful when you want to ignore the sign of a number and work with its magnitude. It&#8217;s commonly used in various mathematical and programming applications.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>syntax : double fabs(double x)
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C code to illustrate 
+// the use of fabs function 
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+int main() 
+{ 
+    int a, b; 
+    a = 1234; 
+    b = -344; 
+  
+    printf("The absolute value of %d is %lf\n", a, fabs(a)); 
+    printf("The absolute value of %d is %lf\n", b, fabs(b)); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The absolute value of 1234 is 1234.000000
+The absolute value of -344 is 344.000000</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="4-double-log-double-x">4. double log(double x)</h2>
+
+
+
+<p>The C library function <code>double log(double x)</code> is used to calculate and return the natural logarithm (base-e logarithm) of a given positive floating-point number <code>x</code>. The natural logarithm is the logarithm to the base &#8216;e,&#8217; where &#8216;e&#8217; is approximately equal to 2.71828.</p>
+
+
+
+<p>In mathematical notation, the natural logarithm of <code>x</code> is represented as &#8220;ln(x).&#8221; It is the inverse of the exponential function, and it helps solve exponential growth and decay problems.</p>
+
+
+
+<p>For example:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If you call <code>log(2.0)</code>, it will return approximately <code>0.693147</code> because ln(2) is approximately 0.693147.</li>
+
+
+
+<li>If you call <code>log(10.0)</code>, it will return approximately <code>2.302585</code> because ln(10) is approximately 2.302585.</li>
+</ul>
+
+
+
+<p>This function is useful in various scientific, engineering, and mathematical computations where the natural logarithm is required to model or analyze data and functions.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>double log(double x)
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C code to illustrate 
+// the use of log function 
+  
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+int main() 
+{ 
+    double x, ret; 
+    x = 2.7; 
+  
+    /* finding log(2.7) */
+    ret = log(x); 
+    printf("log(%lf) = %lf", x, ret); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>log(2.700000) = 0.993252
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="5-double-log-10-double-x">5. double log10(double x)</h2>
+
+
+
+<p>The C library function <code>double log10(double x)</code> is used to calculate and return the common logarithm (base-10 logarithm) of a given positive floating-point number <code>x</code>. The common logarithm is the logarithm to the base 10.</p>
+
+
+
+<p>In mathematical notation, the common logarithm of <code>x</code> is typically written as &#8220;log(x)&#8221; without a base, which implies the base 10 logarithm.</p>
+
+
+
+<p>For example:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If you call <code>log10(100.0)</code>, it will return <code>2.0</code> because log(100) with base 10 is 2.</li>
+
+
+
+<li>If you call <code>log10(1000.0)</code>, it will return <code>3.0</code> because log(1000) with base 10 is 3.</li>
+</ul>
+
+
+
+<p>This function is useful in various scientific, engineering, and mathematical computations, especially when working with quantities that are naturally expressed in base-10 logarithmic scales, such as orders of magnitude, decibels, or other logarithmic measurements.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>double log10(double x);
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C code to illustrate 
+// the use of log10 function 
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+int main() 
+{ 
+    double x, ret; 
+    x = 10000; 
+  
+    /* finding value of log1010000 */
+    ret = log10(x); 
+    printf("log10(%lf) = %lf\n", x, ret); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>log10(10000.000000) = 4.000000
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="6-double-fmod-double-x-double-y">6. double fmod(double x, double y)</h2>
+
+
+
+<p>The C library function <code>double fmod(double x, double y)</code> is used to calculate and return the remainder when a floating-point number <code>x</code> is divided by another floating-point number <code>y</code>. It returns the fractional part of the quotient.</p>
+
+
+
+<p>For example:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If you call <code>fmod(10.5, 3.0)</code>, it will return <code>1.5</code> because the remainder when 10.5 is divided by 3.0 is 1.5.</li>
+
+
+
+<li>If you call <code>fmod(8.0, 2.5)</code>, it will return <code>0.5</code> because the remainder when 8.0 is divided by 2.5 is 0.5.</li>
+
+
+
+<li>If you call <code>fmod(7.0, 2.0)</code>, it will return <code>1.0</code> because the remainder when 7.0 is divided by 2.0 is 1.0.</li>
+</ul>
+
+
+
+<p>This function is particularly useful when you need to perform modulo or remainder operations on floating-point numbers, which can occur in various mathematical and programming scenarios, such as signal processing, physics simulations, and financial calculations.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>double fmod(double x, double y) 
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C code to illustrate 
+// the use of fmod function 
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+int main() 
+{ 
+    float a, b; 
+    int c; 
+    a = 8.2; 
+    b = 5.7; 
+    c = 3; 
+    printf("Remainder of %f / %d is %lf\n", a, c, 
+           fmod(a, c)); 
+    printf("Remainder of %f / %f is %lf\n", a, b, 
+           fmod(a, b)); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Remainder of 8.200000 / 3 is 2.200000
+Remainder of 8.200000 / 5.700000 is 2.500000</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="7-double-sqrt-double-x">7. double sqrt(double x)</h2>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C code to illustrate 
+// the use of sqrt function 
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+int main() 
+{ 
+  
+    printf("Square root of %lf is %lf\n", 225.0, 
+           sqrt(225.0)); 
+    printf("Square root of %lf is %lf\n", 300.0, 
+           sqrt(300.0)); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Square root of 225.000000 is 15.000000
+Square root of 300.000000 is 17.32050</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="8-double-pow-double-x-double-y">8. double pow(double x, double y)</h2>
+
+
+
+<p>The C library function <code>double pow(double x, double y)</code> is used to calculate and return the result of raising a given floating-point number <code>x</code> to the power of another floating-point number <code>y</code>. In other words, it computes the value of <code>x</code> raised to the <code>y</code> power, which is denoted as <code>x^y</code>.</p>
+
+
+
+<p>For example:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If you call <code>pow(2.0, 3.0)</code>, it will return <code>8.0</code> because 2^3 equals 8.</li>
+
+
+
+<li>If you call <code>pow(5.0, 0.5)</code>, it will return <code>2.236068</code> because 5^0.5 is approximately equal to 2.236068.</li>
+</ul>
+
+
+
+<p>This function is commonly used for various mathematical calculations, such as exponentiation, exponential growth, and complex mathematical modeling. It allows you to calculate the result of raising a number to a specific power, even when that power is not an integer.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>double pow(double x, double y);
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C code to illustrate 
+// the use of pow function 
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+int main() 
+{ 
+    printf("Value 8.0 ^ 3 = %lf\n", pow(8.0, 3)); 
+  
+    printf("Value 3.05 ^ 1.98 = %lf", pow(3.05, 1.98)); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Value 8.0 ^ 3 = 512.000000
+Value 3.05 ^ 1.98 = 9.097324</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="9-double-modf-double-x-double-integer">9. Double Modf(double x, double *integer)</h2>
+
+
+
+<p>The C library function <code>double modf(double x, double *integer)</code> is used to separate a given floating-point number <code>x</code> into its integer and fractional components. It returns the fractional part of <code>x</code> as a <code>double</code> value and sets the integer part of <code>x</code> to the address pointed to by the <code>integer</code> pointer.</p>
+
+
+
+<p>Here&#8217;s how it works:</p>
+
+
+
+<ul class="wp-block-list">
+<li>The function takes two arguments: <code>x</code>, the input floating-point number, and <code>integer</code>, a pointer to a <code>double</code> where the integer part of <code>x</code> will be stored.</li>
+
+
+
+<li>It returns the fractional part of <code>x</code> as a <code>double</code> value.</li>
+</ul>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>double modf(double x, double *integer)
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C code to illustrate 
+// the use of modf function 
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+int main() 
+{ 
+    double x, fractpart, intpart; 
+  
+    x = 8.123456; 
+    fractpart = modf(x, &amp;intpart); 
+  
+    printf("Integral part = %lf\n", intpart); 
+    printf("Fraction Part = %lf \n", fractpart); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Integral part = 8.000000
+Fraction Part = 0.123456</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="10-double-exp-double-x">10. double exp(double x)</h2>
+
+
+
+<p> The C library function <code>double exp(double x)</code> returns the value of the mathematical constant &#8216;e&#8217; (approximately equal to 2.71828) raised to the power of a given floating-point number <code>x</code>. In mathematical notation, this is represented as &#8220;e^x,&#8221; and it calculates the exponential function.</p>
+
+
+
+<p>For example:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If you call <code>exp(1.0)</code>, it will return approximately <code>2.71828</code> because e^1 is approximately equal to 2.71828.</li>
+
+
+
+<li>If you call <code>exp(2.0)</code>, it will return approximately <code>7.38906</code> because e^2 is approximately equal to 7.38906.</li>
+</ul>
+
+
+
+<p>This function is commonly used in various scientific, engineering, and mathematical calculations where exponential growth or decay is involved. It&#8217;s a fundamental function for working with exponential functions in C programs.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>double exp(double x);
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C code to illustrate 
+// the use of exp function 
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+int main() 
+{ 
+    double x = 0; 
+  
+    printf("The exponential value of %lf is %lf\n", x, 
+           exp(x)); 
+    printf("The exponential value of %lf is %lf\n", x + 1, 
+           exp(x + 1)); 
+    printf("The exponential value of %lf is %lf\n", x + 2, 
+           exp(x + 2)); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The exponential value of 0.000000 is 1.000000
+The exponential value of 1.000000 is 2.718282
+The exponential value of 2.000000 is 7.389056</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="11-double-cos-double-x">11. double cos(double x)</h2>
+
+
+
+<p> The C library function <code>double cos(double x)</code> is used to calculate and return the cosine of a radian angle <code>x</code>. It takes an angle in radians as input and computes the cosine of that angle.</p>
+
+
+
+<p>In mathematical notation, the cosine function is denoted as <code>cos(x)</code>, where <code>x</code> represents the angle in radians.</p>
+
+
+
+<p>For example:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If you call <code>cos(0.0)</code>, it will return <code>1.0</code> because the cosine of 0 radians is 1.</li>
+
+
+
+<li>If you call <code>cos(π)</code> (pi radians), it will return <code>-1.0</code> because the cosine of pi radians is -1.</li>
+
+
+
+<li>If you call <code>cos(π/2)</code> (pi/2 radians), it will return <code>0.0</code> because the cosine of pi/2 radians is 0.</li>
+</ul>
+
+
+
+<p>This function is essential in trigonometry and is commonly used in mathematical and scientific computations, especially when dealing with angles and waveforms.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>double cos(double x);
+</code></pre>
+
+
+
+<p>The same syntax can be used for other trigonometric functions like sin, tan, etc.&nbsp;</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C code to illustrate 
+// the use of cos function 
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+#define PI 3.14159265 
+  
+int main() 
+{ 
+    double x, ret, val; 
+  
+    x = 60.0; 
+    val = PI / 180.0; 
+    ret = cos(x * val); 
+    printf("The cosine of %lf is %lf degrees\n", x, ret); 
+  
+    x = 90.0; 
+    val = PI / 180.0; 
+    ret = cos(x * val); 
+    printf("The cosine of %lf is %lf degrees\n", x, ret); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The cosine of 60.000000 is 0.500000 degrees
+The cosine of 90.000000 is 0.000000 degrees</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="12-double-acos-double-x">12. double acos(double x)</h2>
+
+
+
+<p> The C library function <code>double acos(double x)</code> is used to calculate and return the arc cosine (inverse cosine) of a given value <code>x</code>. It takes a value between -1 and 1 (inclusive) as input and returns the corresponding angle in radians.</p>
+
+
+
+<p>In mathematical notation, the arc cosine function is denoted as <code>acos(x)</code>, and it represents the angle whose cosine is <code>x</code>.</p>
+
+
+
+<p>For example:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If you call <code>acos(1.0)</code>, it will return <code>0.0</code> radians because the cosine of 0 radians is 1.</li>
+
+
+
+<li>If you call <code>acos(0.0)</code>, it will return <code>1.570796</code> radians (approximately π/2) because the cosine of π/2 radians is 0.</li>
+</ul>
+
+
+
+<p>This function is often used when you need to find an angle given its cosine value or when dealing with trigonometric calculations involving angles and side lengths of triangles.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>double acos(double x);
+</code></pre>
+
+
+
+<p>The same syntax can also  be used for other arc trigonometric functions like asin, atan etc.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C code to illustrate 
+// the use of acos function 
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+#define PI 3.14159265 
+  
+int main() 
+{ 
+    double x, ret, val; 
+  
+    x = 0.9; 
+    val = 180.0 / PI; 
+  
+    ret = acos(x) * val; 
+    printf("The arc cosine of %lf is %lf degrees", x, ret); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The arc cosine of 0.900000 is 25.841933 degrees
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="13-double-tanh-double-x">13. double tanh(double x)</h2>
+
+
+
+<p>The C library function <code>double tanh(double x)</code> is used to calculate and return the hyperbolic tangent (tanh) of a given value <code>x</code>. The hyperbolic tangent is a trigonometric function, similar to the regular tangent function but with some differences in behavior.</p>
+
+
+
+<p>In mathematical notation, the hyperbolic tangent function is denoted as <code>tanh(x)</code> and is defined as <code>(e^x - e^(-x)) / (e^x + e^(-x))</code>, where <code>e</code> is Euler&#8217;s number, approximately equal to 2.71828.</p>
+
+
+
+<p>For example:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If you call <code>tanh(0.0)</code>, it will return <code>0.0</code> because the hyperbolic tangent of 0 is 0.</li>
+
+
+
+<li>If you call <code>tanh(1.0)</code>, it will return approximately <code>0.761594</code> because that&#8217;s the hyperbolic tangent of 1.</li>
+</ul>
+
+
+
+<p>The hyperbolic tangent is used in various mathematical and scientific applications, especially in areas like statistics, signal processing, and neural networks. It describes the relationship between exponential growth and exponential decay in a way similar to how the regular tangent function describes oscillations in trigonometry.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>double tanh(double x);
+</code></pre>
+
+
+
+<p>The same syntax can be used for other hyperbolic trigonometric functions like sinh, cosh etc.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C code to illustrate 
+// the use of tanh function 
+#include &lt;math.h&gt; 
+#include &lt;stdio.h&gt; 
+  
+int main() 
+{ 
+    double x, ret; 
+    x = 0.5; 
+  
+    ret = tanh(x); 
+    printf("The hyperbolic tangent of %lf is %lf degrees", 
+           x, ret); 
+  
+    return (0); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The hyperbolic tangent of 0.500000 is 0.462117 degrees
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-c-library-math-h-functions">FAQ- C Library Math.h Functions</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696922568305" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.Is there a math library for C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The C standard library provides a set of functions and tools that expand the capabilities of the C programming language. The <code>math.h</code> header file, in particular, offers a collection of mathematical functions, making it easier to perform complex math calculations in C programs. These functions cover arithmetic, exponentiation, logarithms, trigonometry, and more, allowing programmers to work with numbers and mathematical concepts efficiently. It&#8217;s a valuable resource for solving mathematical and scientific problems in C.</p>
+
+</div>
+</div>
+<div id="faq-question-1696922577111" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.Why do we use #include math h in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>#include &lt;math.h></code> directive is used to include the <code>math.h</code> header file in a C program. This header file provides access to a variety of mathematical functions, including sine, cosine, square root, and exponentiation (pow), among others. By including <code>math.h</code>, you can use these mathematical functions in your C program to perform a wide range of mathematical calculations and operations.</p>
+
+</div>
+</div>
+<div id="faq-question-1696922586916" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. How to install a math library in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In some situations, especially when using certain math functions, you may need to link the math library explicitly by adding the <code>-lm</code> flag to the <code>gcc</code> compiler command when compiling your C code. However, it&#8217;s not always necessary for every math function.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/c-library-math-h-functions/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>_Noreturn function specifier in C</title>
+	<atom:link href="https://www.skillvertex.com/tag/_noreturn-function-specifier-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:23:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>_Noreturn function specifier in C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>_Noreturn Function Specifier In C</title>
+		<link>https://www.skillvertex.com/blog/_noreturn-function-specifier-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/_noreturn-function-specifier-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:23:40 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[_Noreturn function specifier in C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2566</guid>
+
+					<description><![CDATA[_Noreturn Function Specifier In C The _Noreturn keyword in a function declaration tells the compiler that the function will not return by executing a return statement or reaching the end of the function body. If a function is marked with _Noreturn does return, the behavior is undefined, and it&#8217;s a good practice for the compiler ... <a title="_Noreturn Function Specifier In C" class="read-more" href="https://www.skillvertex.com/blog/_noreturn-function-specifier-in-c/" aria-label="More on _Noreturn Function Specifier In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#noreturn-function-specifier-in-c">_Noreturn Function Specifier In C</a></li><li ><a href="#example-1-to-illustrate-how-noreturntype">Example 1: To illustrate  how_Noreturntype</a></li><li ><a href="#example-2-to-illustrate-the-working-of-a-no-return-statement">Example 2: To illustrate the working of a No-return statement</a></li><li ><a href="#faq-noreturn-function-specifier-in-c">FAQ- _Noreturn function specifier in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="noreturn-function-specifier-in-c">_Noreturn Function Specifier In C</h2>
+
+
+
+<p>The <code>_Noreturn</code> keyword in a function declaration tells the compiler that the function will not return by executing a <code>return</code> statement or reaching the end of the function body. If a function is marked with <code>_Noreturn</code> does return, the behavior is undefined, and it&#8217;s a good practice for the compiler to provide a diagnostic message if it detects this situation.</p>
+
+
+
+<p>You can use the <code>_Noreturn</code> specifier multiple times in the same function declaration, and it has the same effect as if it appeared only once.</p>
+
+
+
+<p>Typically, you use this specifier through the convenience macro <code>noreturn</code>, which is available in the <code>stdnoreturn.h</code> header. It helps improve code readability and maintainability when specifying that a function does not return.</p>
+
+
+
+<p><strong>Note </strong></p>
+
+
+
+<pre class="wp-block-code"><code>_Noreturn function specifier is deprecated. &#91;&#91;noreturn]] attribute should be used instead.
+The macro noreturn is also deprecated.</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-1-to-illustrate-how-noreturntype">Example 1: To illustrate  how_Noreturntype</h2>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to show how _Noreturn type 
+// function behave if it has return statement.
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+ 
+// With return value
+_Noreturn void view()
+{
+    return 10;
+}
+int main(void)
+{
+    printf("Ready to begin...\n");
+    view();
+ 
+    printf("NOT over till now\n");
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Ready to begin...
+After that abnormal termination of program.
+compiler error:&#91;Warning] function declared 'noreturn' has a 'return' statement</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-2-to-illustrate-the-working-of-a-no-return-statement">Example 2: To illustrate the working of a No-return statement</h2>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C program to illustrate the working 
+// of _Noreturn type function.
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+ 
+// Nothing to return
+_Noreturn void show()
+{
+    printf("BYE BYE");
+}
+int main(void)
+{
+    printf("Ready to begin...\n");
+    show();
+ 
+    printf("NOT over till now\n");
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Ready to begin...
+BYE BYE</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-noreturn-function-specifier-in-c">FAQ- _Noreturn function specifier in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696848383533" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the Noreturn function specifier in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, a function specifier is like a label that tells the compiler how a function should behave. When you use the <code>inline</code> function specifier, you&#8217;re suggesting to the compiler that it should replace each call to that function with the actual code inside the function. This can help improve performance by reducing the overhead of function calls.</p>
+
+</div>
+</div>
+<div id="faq-question-1696848394873" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What are non-returning functions C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A non-value returning function, or void function in C, doesn&#8217;t provide a result. It automatically returns to the caller at the end of the function, and you don&#8217;t need a return statement.</p>
+
+</div>
+</div>
+<div id="faq-question-1696848918621" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Does the Noreturn function return?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, the <code>_Noreturn</code> keyword in a function declaration means that the function doesn&#8217;t return via a <code>return</code> statement or by reaching the end of its body (though it can return via <code>longjmp</code>). If a function is marked as <code>_Noreturn</code> does return under normal circumstances, the behavior is undefined.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/_noreturn-function-specifier-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

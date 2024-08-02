@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>_Generics Keyword In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/_generics-keyword-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 06 Mar 2024 11:42:43 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>_Generics Keyword In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>_Generics Keyword In C</title>
+		<link>https://www.skillvertex.com/blog/generics-keyword-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/generics-keyword-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 11:42:43 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[_Generics Keyword In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3708</guid>
+
+					<description><![CDATA[_Generics Keyword In C The drawbacks of _Generic include: The _Generic keyword in C allows the implementation of generic code that can execute statements based on the type of provided arguments. It is commonly used with C macros to simulate function overloading. This keyword was introduced in the C11 Standard. Syntax of _Generic in C ... <a title="_Generics Keyword In C" class="read-more" href="https://www.skillvertex.com/blog/generics-keyword-in-c/" aria-label="More on _Generics Keyword In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#generics-keyword-in-c">_Generics Keyword In C</a></li><li ><a href="#syntax-of-generic-in-c">Syntax of _Generic in C</a></li><li ><a href="#how-to-use-generic-in-c">How to use _Generic in C? </a></li><li ><a href="#generic-in-macros">_Generic in Macros </a></li><li ><a href="#advantages-of-generic">Advantages of _Generic</a></li><li ><a href="#disadvantages-of-generic">Disadvantages of _Generic</a></li><li ><a href="#faq-generics-keyword-in-c">FAQ- _Generics Keyword in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="generics-keyword-in-c">_Generics Keyword In C</h2>
+
+
+
+<p>The drawbacks of <code>_Generic</code> include:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Macro Usage Vulnerability:</strong></li>
+</ol>
+
+
+
+<ul class="wp-block-list">
+<li><code>_Generic</code> used in macros can be error-prone.</li>
+</ul>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Complex Syntax and Debugging Challenges:</strong></li>
+</ol>
+
+
+
+<ul class="wp-block-list">
+<li>The syntax is intricate, making it challenging to understand and debug errors in the expanded code.</li>
+</ul>
+
+
+
+<p>The <code>_Generic</code> keyword in C allows the implementation of generic code that can execute statements based on the type of provided arguments. It is commonly used with C macros to simulate function overloading. This keyword was introduced in the C11 Standard.</p>
+
+
+
+<h2 class="wp-block-heading" id="syntax-of-generic-in-c">Syntax of _Generic in C</h2>
+
+
+
+<pre class="wp-block-code"><code>_Generic( (expression),
+    type_1: statements,
+    type_2: statements,
+    .
+    .
+    default: statements
+)</code></pre>
+
+
+
+<p>In C, the <code>_Generic</code> keyword helps execute statements based on the type of a given expression. If the type matches one we&#8217;ve defined, the corresponding statements run. If there&#8217;s no match, the statements under &#8220;default&#8221; are executed. It&#8217;s similar to the <code>switch</code> statement where different actions happen for different case values.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-to-use-generic-in-c">How to use _Generic in C?<br></h2>
+
+
+
+<p>_Generic keyword is used in any place inside the code but, the generic code is required for that. The example provided below will illustrate the use of the _Generic keyword.</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate macro function. 
+#include &lt;stdio.h&gt; 
+int main(void) 
+{ 
+    // _Generic keyword acts as a switch that chooses 
+    // operation based on data type of argument. 
+    printf("%d\n", _Generic(1.0L, float : 1, double : 2, 
+                            long double : 3, default : 0)); 
+    
+    printf("%d\n", _Generic(1L, float : 1, double : 2, 
+                            long double : 3, default : 0)); 
+    
+    printf("%d\n", _Generic(1.0L, float : 1, double : 2, 
+                            long double : 3)); 
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>3
+0
+3</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="generic-in-macros">_Generic in Macros<br></h2>
+
+
+
+<p>A major disadvantage of&nbsp;<a href="https://www.geeksforgeeks.org/interesting-facts-preprocessors-c/" rel="nofollow noopener" target="_blank">Macro in C</a>&nbsp;is arguments lack type checking, i.e. a macro can operate on different types of variables(like char, int, double,..) without type checking. Hence, We can use _Generic to the statements for different argument types in such macros.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate macro function. 
+#include &lt;stdio.h&gt; 
+  
+// Defining the macro with generic code for 
+//different argument types 
+#define skill vertex(T) _Generic((T), \ 
+        char* : "String", \ 
+        int : "Integer", \ 
+        long : "Long Integer", \ 
+        default : "Others") 
+  
+int main(void) 
+{ 
+  
+    // Here A is a string. 
+    printf("%s\n", skillvertex("A")); 
+  
+    // floating point value 
+    printf("%s\n", skillvertex(5)); 
+    
+      // float type which is not defined in the macro 
+      printf("%s", skillvertex(5.12)); 
+  
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>String
+Integer
+Others</code></pre>
+
+
+
+<p>In C, the behavior of <code>_Generic</code> resembles C++ function overloading, where different expressions are returned for different data types. This allows us to bring some aspects of function overloading into our C programs.</p>
+
+
+
+<h2 class="wp-block-heading" id="advantages-of-generic">Advantages of _Generic</h2>
+
+
+
+<ul class="wp-block-list">
+<li>It works to stimulate function overloading when used with macros.</li>
+
+
+
+<li>_Generic will help the functionality to execute the code based on the type of parameters.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="disadvantages-of-generic">Disadvantages of _Generic</h2>
+
+
+
+<p>The major disadvantages of _Generic are as follows</p>
+
+
+
+<p>The drawbacks of <code>_Generic</code> include:</p>
+
+
+
+<p>a.<strong>Macro Usage Vulnerability:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><code>_Generic</code> used in macros can be error-prone.</li>
+</ul>
+
+
+
+<p>b.<strong>Syntax and Debugging Challenges:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>The syntax is intricate, making it challenging to understand and debug errors in the expanded code.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="faq-generics-keyword-in-c">FAQ- _Generics Keyword in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1700724408052" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.What is the _generic keyword in C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The  _Generic keyword is basically functions to write code that can choose an expression at compile time based on the type of the argument. It works similarly to overloading in C++ where the type of the argument selects which function to call. Whereas,this type of the argument selects which expression to evaluate.</p>
+
+</div>
+</div>
+<div id="faq-question-1700724412567" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the advantage of using generic language model?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Generics in programming help create versatile algorithms that can handle different types of collections. This makes the code customizable, easy to understand, and ensures safety with types, making it simpler for programmers to work with.</p>
+
+</div>
+</div>
+<div id="faq-question-1700724416615" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is generic in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Generics in programming mean allowing types (like Integer, String, and user-defined types) to be parameters for methods, classes, and interfaces. For instance, classes such as arrays and maps can be efficiently used with generics, making them adaptable for any type.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/generics-keyword-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

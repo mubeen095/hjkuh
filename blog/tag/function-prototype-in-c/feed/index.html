@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Function Prototype In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/function-prototype-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:21:04 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Function Prototype In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Function Prototype In C</title>
+		<link>https://www.skillvertex.com/blog/function-prototype-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/function-prototype-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:21:04 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Function Prototype In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2329</guid>
+
+					<description><![CDATA[Function Prototype In C A C function prototype is a statement that informs the compiler about a function&#8217;s name, return type, and the number and data types of its parameters. This information allows the compiler to verify that function calls and definitions match in terms of parameters and their data types. Function prototypes are necessary ... <a title="Function Prototype In C" class="read-more" href="https://www.skillvertex.com/blog/function-prototype-in-c/" aria-label="More on Function Prototype In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#function-prototype-in-c">Function Prototype In C</a></li><li ><a href="#example">Example</a><ul><li ><a href="#program-to-demonstrate-the-function-prototype">Program to demonstrate the function prototype</a></li></ul></li><li ><a href="#what-if-the-function-prototype-is-not-specified">What if the function prototype is not specified?</a></li><li ><a href="#reason-for-the-program-to-crash">Reason For the Program to Crash</a></li><li ><a href="#faq-function-prototype-in-c">FAQ- Function Prototype In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="function-prototype-in-c">Function Prototype In C</h2>
+
+
+
+<p>A C function prototype is a statement that informs the compiler about a function&#8217;s name, return type, and the number and data types of its parameters. This information allows the compiler to verify that function calls and definitions match in terms of parameters and their data types. Function prototypes are necessary when the function is called before it&#8217;s defined in the program but are optional if the function definition comes before the function call.</p>
+
+
+
+<p><strong>Syntax</strong></p>
+
+
+
+<pre class="wp-block-code"><code>return_type function_name(parameter_list);
+</code></pre>
+
+
+
+<ol class="wp-block-list">
+<li><strong>return_type</strong>: This specifies the data type of the value that the function returns. It can be any data type, such as int, float, or void (for no return value).</li>
+
+
+
+<li><strong>function_name</strong>: This is the name of the function, and it serves as its identifier. It should be chosen to reflect the purpose or functionality of the function.</li>
+
+
+
+<li><strong>parameter_list</strong>: This is the list of parameters that the function expects, enclosed in parentheses. Each parameter consists of its data type and name. You can leave the parentheses empty if the function doesn&#8217;t take any parameters.</li>
+</ol>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>int func(int, char, char *, float);
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example">Example</h2>
+
+
+
+<h3 class="wp-block-heading" id="program-to-demonstrate-the-function-prototype">Program to demonstrate the function prototype</h3>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate the function prototye
+#include &lt;stdio.h&gt;
+ 
+// Function prototype
+float calculateRectangleArea(float length, float width);
+ 
+int main()
+{
+    float length = 5.0;
+    float width = 3.0;
+ 
+    // Function call
+    float area = calculateRectangleArea(length, width);
+ 
+    printf("The area of the rectangle is: %.2f\n", area);
+ 
+    return 0;
+}
+ 
+// Function definition
+float calculateRectangleArea(float length, float width)
+{
+    return length * width;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The area of the rectangle is: 15.00
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-if-the-function-prototype-is-not-specified">What if the function prototype is not specified?</h2>
+
+
+
+<p>Ignoring function prototypes in C can lead to different outcomes: warnings, errors, or even strange program behavior. These issues can be hard to detect and fix, making function prototypes essential for robust and maintainable code.</p>
+
+
+
+<pre class="wp-block-code"><code>// C code to check if a file exists or not.
+// Prototype of strerror function is not included in the
+// code.
+ 
+#include &lt;errno.h&gt;
+#include &lt;stdio.h&gt;
+ 
+int main(int argc, char* argv&#91;])
+{
+    FILE* fp;
+ 
+    fp = fopen(argv&#91;1], "r");
+    if (fp == NULL) {
+        fprintf(stderr, "%s\n", strerror(errno));
+        return errno;
+    }
+ 
+    printf("file exist\n");
+ 
+    fclose(fp);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Here, we provide a filename, which won&#8217;t exist in a file system, and check the output of the program on x86_64 architecture.</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;narendra@/media/partition/GFG]$ ./file_existence hello.c
+Segmentation fault (core dumped)</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="reason-for-the-program-to-crash">Reason For the Program to Crash</h2>
+
+
+
+<p>The code opens a file, checks its existence, and closes it. However, it fails to include the prototype for the <code>strerror</code> function, which returns a pointer to a character. On x86 architecture, this program works because integers and pointers are both 32-bit wide. But on x86_64 architecture, which uses a 64-bit model, it crashes because the compiler assumes <code>strerror</code> returns an integer, leading to issues with the pointer&#8217;s size. This underlines the importance of including proper function prototypes and considering data size differences across architectures.</p>
+
+
+
+<p>We have to include the “string. h” header file and then, check the output, in order to know whether the program will work correctly and give the following output.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-function-prototype-in-c">FAQ- Function Prototype In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696503641973" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the function of the prototype?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A C function prototype is a statement that informs the compiler about a function&#8217;s name, its return type, and the number and data types of its parameters. This information allows the compiler to verify that function calls and definitions match in terms of parameters and their data types, ensuring type safety and correctness in the program.</p>
+
+</div>
+</div>
+<div id="faq-question-1696503675127" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What are the three prototypes of main?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The main has only two prototypes: <strong>int main (void);</strong> <strong>int main (int argc, char ** argv);</strong></p>
+
+</div>
+</div>
+<div id="faq-question-1696503685855" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is prototype examples?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Examples of prototypes can include wireframes, slides, landing pages, working models, interactive frontends, and videos. These prototypes serve as visual or functional representations used to convey or test ideas, designs, or concepts before final implementation. Each type of prototype serves a specific purpose in its respective field.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/function-prototype-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

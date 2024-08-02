@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Multithreading In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/multithreading-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 06 Mar 2024 11:42:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Multithreading In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Multithreading In C</title>
+		<link>https://www.skillvertex.com/blog/multithreading-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/multithreading-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 11:42:57 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Multithreading In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3711</guid>
+
+					<description><![CDATA[Multithreading In C What is a Thread?&#160; A thread is like a mini-sequence of actions inside a bigger task. Threads are sometimes called lightweight processes because they share some similarities with processes. What are the differences between process and thread?&#160; Threads aren&#8217;t independent like processes; they share code, data, and OS resources. However, each thread ... <a title="Multithreading In C" class="read-more" href="https://www.skillvertex.com/blog/multithreading-in-c/" aria-label="More on Multithreading In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#multithreading-in-c">Multithreading In C</a></li><li ><a href="#what-is-a-thread">What is a Thread? </a></li><li ><a href="#what-are-the-differences-between-process-and-thread">What are the differences between process and thread? </a></li><li ><a href="#why-multithreading">Why Multithreading?</a></li><li ><a href="#can-we-write-multithreading-muprograms-in-c">Can we write multithreading Muprograms in C?</a></li><li ><a href="#c-program-to-illustrate-the-use-of-pthread-basic-functions">C Program to illustrate the use of pthread basic functions</a></li><li ><a href="#a-c-program-to-show-multiple-threads-with-the-global-and-static-variable">A C Program to show multiple threads with the global and static  variable</a></li><li ><a href="#faq-multithreading-in-c">FAQ- Multithreading In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="multithreading-in-c">Multithreading In C</h2>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-thread"><strong>What is a Thread?&nbsp;</strong></h2>
+
+
+
+<p>A thread is like a mini-sequence of actions inside a bigger task. Threads are sometimes called lightweight processes because they share some similarities with processes.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-differences-between-process-and-thread"><strong>What are the differences between process and thread?</strong>&nbsp;</h2>
+
+
+
+<p>Threads aren&#8217;t independent like processes; they share code, data, and OS resources. However, each thread has its own program counter, registers, and stack space, much like processes.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-multithreading"><strong>Why Multithreading?</strong></h2>
+
+
+
+<p>Threads are a helpful way to make applications work better together. Think of them like different tasks happening at the same time. For example, in a web browser, each open tab can be a separate task or thread. Programs like Microsoft Word also use threads to do different jobs, like formatting text or handling inputs.</p>
+
+
+
+<p>Threads are faster than processes for a few reasons:</p>
+
+
+
+<p>1) Creating threads is quick.</p>
+
+
+
+<p>2) Switching between threads is fast.</p>
+
+
+
+<p>3) Stopping threads is easy.</p>
+
+
+
+<p>4) Threads can talk to each other quickly.</p>
+
+
+
+<h2 class="wp-block-heading" id="can-we-write-multithreading-muprograms-in-c">Can we write multithreading Muprograms in C?</h2>
+
+
+
+<p>Multithreading won&#8217;t be supported by the language standard. POSIX Threads (or Pthreads) is considered as a POSIX standard for threads. Moreover, the execution of pthread will be available with gcc compiler.</p>
+
+
+
+<h2 class="wp-block-heading" id="c-program-to-illustrate-the-use-of-pthread-basic-functions">C Program to illustrate the use of pthread basic functions</h2>
+
+
+
+<p>The program given below can only compile with the C compilers along with the pthread library.</p>
+
+
+
+<pre class="wp-block-code"><code>C
+#include &lt;stdio.h&gt; 
+#include &lt;stdlib.h&gt; 
+#include &lt;unistd.h&gt;  //Header file for sleep(). man 3 sleep for details. 
+#include &lt;pthread.h&gt; 
+  
+// A normal C function that is executed as a thread  
+// when its name is specified in pthread_create() 
+void *myThreadFun(void *vargp) 
+{ 
+    sleep(1); 
+    printf("Printing Skillvertex from Thread \n"); 
+    return NULL; 
+} 
+   
+int main() 
+{ 
+    pthread_t thread_id; 
+    printf("Before Thread\n"); 
+    pthread_create(&amp;thread_id, NULL, myThreadFun, NULL); 
+    pthread_join(thread_id, NULL); 
+    printf("After Thread\n"); 
+    exit(0); 
+}</code></pre>
+
+
+
+<p>In the main() function, we create a variable called thread_id, which is of type pthread_t—an integer used to identify the thread. After declaring thread_id, we use the pthread_create() function to make a new thread.</p>
+
+
+
+<p>The pthread_create() function takes 4 arguments:</p>
+
+
+
+<ol class="wp-block-list">
+<li>The first argument is a pointer to thread_id, and this function sets its value.</li>
+
+
+
+<li>The second argument specifies attributes. If it&#8217;s NULL, default attributes will be used.</li>
+
+
+
+<li>The third argument is the name of the function to be executed for the new thread.</li>
+
+
+
+<li>The fourth argument is used to pass arguments to the function, in this case, myThreadFun.</li>
+</ol>
+
+
+
+<p>The pthread_join() function is like wait() for processes. It makes the calling thread wait until the specified thread, identified by the first argument, finishes its work.</p>
+
+
+
+<p><strong>How to compile above program?</strong>&nbsp;</p>
+
+
+
+<p>Inorder to compile a multithreaded program with the help of gcc, we have to connect with the threads library. The command given below is used to compile the program.</p>
+
+
+
+<pre class="wp-block-code"><code>gfg@ubuntu:~/$ gcc multithread.c -lpthread
+gfg@ubuntu:~/$ ./a.out
+Before Thread
+Printing GeeksQuiz from Thread 
+After Thread
+gfg@ubuntu:~/$ </code></pre>
+
+
+
+<h2 class="wp-block-heading" id="a-c-program-to-show-multiple-threads-with-the-global-and-static-variable">A C Program to show multiple threads with the global and static  variable</h2>
+
+
+
+<p>We know that the global and static variables can share data segments. Global and static variables will be stored in the data segment.The example given below will illustrate the same.</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt; 
+#include &lt;stdlib.h&gt; 
+#include &lt;unistd.h&gt; 
+#include &lt;pthread.h&gt; 
+  
+// Let us create a global variable to change it in threads 
+int g = 0; 
+  
+// The function to be executed by all threads 
+void *myThreadFun(void *vargp) 
+{ 
+    // Store the value argument passed to this thread 
+    int *myid = (int *)vargp; 
+  
+    // Let us create a static variable to observe its changes 
+    static int s = 0; 
+  
+    // Change static and global variables 
+    ++s; ++g; 
+  
+    // Print the argument, static and global variables 
+    printf("Thread ID: %d, Static: %d, Global: %d\n", *myid, ++s, ++g); 
+} 
+int main() 
+{ 
+    int i; 
+    pthread_t tid; 
+  
+    // Let us create three threads 
+    for (i = 0; i &lt; 3; i++) 
+        pthread_create(&amp;tid, NULL, myThreadFun, (void *)&amp;tid); 
+  
+    pthread_exit(NULL); 
+    return 0; 
+}
+  </code></pre>
+
+
+
+<pre class="wp-block-code"><code>gfg@ubuntu:~/$ gcc multithread.c -lpthread
+gfg@ubuntu:~/$ ./a.out
+Thread ID: 3, Static: 2, Global: 2
+Thread ID: 3, Static: 4, Global: 4
+Thread ID: 3, Static: 6, Global: 6
+gfg@ubuntu:~/$ </code></pre>
+
+
+
+<p>Please note that the above example is simple and used to illustrate how threads work. Accessing a global variable in a thread is usually not recommended. What if thread 2 has priority over thread 1 and thread 1 needs to change the variable? In real-world scenarios, if multiple threads need to access a global variable, it&#8217;s better to use a mutex for safe access.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-multithreading-in-c">FAQ- Multithreading In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1700732287181" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is multithreading in C language?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Multithreading in C means using multiple threads within a single process, where each thread serves a distinct function. It allows concurrent operation, enabling multiple tasks to be executed simultaneously. Additionally, multithreading helps minimize CPU resource consumption.</p>
+
+</div>
+</div>
+<div id="faq-question-1700732295928" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. Does C allow multithreading?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The Microsoft C/C++ compiler (MSVC) offers support for building multithreaded applications. It&#8217;s beneficial to use more than one thread when your application has to execute resource-intensive operations that might otherwise make the user interface unresponsive.</p>
+
+</div>
+</div>
+<div id="faq-question-1700732302098" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is multithreading also called?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.Concurrency is frequently used interchangeably with multithreading. Multitasking enables multiple threads to run simultaneously.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/multithreading-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

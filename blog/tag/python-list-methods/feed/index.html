@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python List Methods</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-list-methods/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Thu, 11 Apr 2024 12:03:23 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Python List Methods</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python List Methods</title>
+		<link>https://www.skillvertex.com/blog/python-list-methods/</link>
+					<comments>https://www.skillvertex.com/blog/python-list-methods/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 12:03:23 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python function]]></category>
+		<category><![CDATA[Python List Methods]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=8139</guid>
+
+					<description><![CDATA[The Python List Method will allow you to built-in methods and will do operations on the Python list/ arrays. Read this article to learn more about Python list Methods. What is Python List Methods? Python consists of a set of built-in methods that will be used on lists. S.no Method Description 1 append() append() will ... <a title="Python List Methods" class="read-more" href="https://www.skillvertex.com/blog/python-list-methods/" aria-label="More on Python List Methods">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><div><div ><a href="#what-is-python-list-methods">What is Python List Methods?</a></div><div ><a href="#how-to-add-elements-to-the-list">How to add Elements to the List?</a></div><div ><a href="#1-python-append-method">1. Python append() method</a></div><div ><a href="#2-python-insert-method">2. Python insert() method</a></div><div ><a href="#3-python-extend-method">3. Python extend() method</a></div><div ><a href="#what-are-the-important-functions-of-the-python-list">What are the important functions of the Python List?</a><div><div ><a href="#1-python-sum-method">1. Python sum() method</a></div><div ><a href="#2-python-count-method">2. Python count() method</a></div><div ><a href="#3-python-index-method">3.Python index() method</a></div><div ><a href="#4-python-min-method">4. Python min() method</a></div><div ><a href="#5-python-max-method">5. Python max() method</a></div><div ><a href="#6-python-sort-method">6. Python sort() method </a></div><div ><a href="#7-python-reverse-method">7. Python reverse() method</a></div></div></div><div ><a href="#conclusion">Conclusion</a></div><div ><a href="#python-list-methods-fa-qs">Python List Methods-FAQs</a></div></div></nav></div>
+
+
+
+<p>The <a href="https://www.skillvertex.com/blog/python-access-list-items/" data-type="post" data-id="8035">Python </a>List Method will allow you to built-in methods and will do operations on the Python list/ arrays. Read this article to learn more about Python list Methods.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-list-methods">What is Python List Methods?</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-list-comprehension/" data-type="post" data-id="8090">Python </a>consists of a set of <a href="https://www.skillvertex.com/blog/python-built-in-functions/" data-type="post" data-id="7464">built-in method</a>s that will be used on lists.</p>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th>S.no</th><th>Method</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td><em>append</em>()</td><td>append() will work to add elements to the end of the List.&nbsp;</td></tr><tr><td>2</td><td><em><a href="https://www.skillvertex.com/blog/python-copy-list/" data-type="post" data-id="8109">copy</a></em>()</td><td>Copy() will return a shallow copy of a list</td></tr><tr><td>3</td><td><em>clear</em>()</td><td>clear() method is used for removing all items from the list.&nbsp;</td></tr><tr><td>4</td><td><em>count</em>()</td><td>count() method will count the elements.</td></tr><tr><td>5</td><td><em>extend</em>()</td><td>extend() is used to add each element of an iterable to the end of the List.</td></tr><tr><td>6</td><td><em>index</em>()</td><td>index() will return the lowest index where the element appears.&nbsp;</td></tr><tr><td>7</td><td><em><a href="https://www.skillvertex.com/blog/python-add-list-items/" data-type="post" data-id="8058">insert</a></em>()</td><td>This method will insert a given element at a given index in a list.&nbsp;</td></tr><tr><td>8</td><td><em>pop</em>()</td><td>This will remove and return the last value from the List or the given index value.</td></tr><tr><td>9</td><td><em>remove</em>()</td><td>It will remove the given object from the List.&nbsp;</td></tr><tr><td>10</td><td><em>reverse</em>()</td><td>It will reverse objects of the List in place.</td></tr><tr><td>11</td><td><em>sort</em>()</td><td>Sort() will sort the  List in ascending, descending, or user-defined order.</td></tr><tr><td>12</td><td><em>min</em>()</td><td>min() will calculate the minimum of all the elements of the List</td></tr><tr><td>13</td><td><em>max</em>()</td><td>max will calculates the maximum of all the elements of the List</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="how-to-add-elements-to-the-list">How to add Elements to the List?</h2>
+
+
+
+<p> The built-in  Python methods are used to add the <a href="https://www.skillvertex.com/blog/which-one-is-not-an-element-of-iot/" data-type="post" data-id="3089">element </a>to the list.</p>
+
+
+
+<h2 class="wp-block-heading" id="1-python-append-method">1. Python append() method</h2>
+
+
+
+<p>This method is used to add the element to the end of the <a href="https://www.skillvertex.com/blog/python-list-sort-method/" data-type="post" data-id="8100">list</a>.</p>
+
+
+
+<pre class="wp-block-code"><code>Syntax: list.append (element)</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>class CustomList:
+    def __init__(self):
+        self.data = &#91;]
+
+    def append(self, value):
+        self.data += &#91;value]
+
+    def __str__(self):
+        return str(self.data)
+
+
+# Example usage
+custom_list = CustomList()
+custom_list.append(1)
+custom_list.append(2)
+custom_list.append(3)
+
+print("Custom list after appending elements:", custom_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Custom list after appending elements: &#91;1, 2, 3]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="2-python-insert-method">2. Python insert() method</h2>
+
+
+
+<p>The Python insert() method will allow you to insert the element at the specified position.</p>
+
+
+
+<pre class="wp-block-code"><code>Syntax:
+
+list.insert(&lt;position, element)</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>class CustomList:
+    def __init__(self):
+        self.data = &#91;]
+
+    def insert(self, index, value):
+        self.data = self.data&#91;:index] + &#91;value] + self.data&#91;index:]
+
+    def __str__(self):
+        return str(self.data)
+
+
+# Example usage
+custom_list = CustomList()
+custom_list.insert(0, 1)
+custom_list.insert(1, 2)
+custom_list.insert(1, 3)
+
+print("Custom list after inserting elements:", custom_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Custom list after inserting elements: &#91;1, 3, 2]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="3-python-extend-method">3. Python extend() method</h2>
+
+
+
+<p>The Python extend method will add the items of the iterable to the end of the list.</p>
+
+
+
+<pre class="wp-block-code"><code>Syntax: List1.extend(List2)</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>class CustomList:
+    def __init__(self):
+        self.data = &#91;]
+
+    def extend(self, iterable):
+        self.data += iterable
+
+    def __str__(self):
+        return str(self.data)
+
+
+# Example usage
+custom_list = CustomList()
+custom_list.extend(&#91;1, 2, 3])
+custom_list.extend(&#91;4, 5, 6])
+
+print("Custom list after extending elements:", custom_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Custom list after extending elements: &#91;1, 2, 3, 4, 5, 6]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-important-functions-of-the-python-list">What are the important functions of the Python List?</h2>
+
+
+
+<p>Some of the important functions of the Python list are given below:</p>
+
+
+
+<h3 class="wp-block-heading" id="1-python-sum-method">1. Python sum() method</h3>
+
+
+
+<p>The Python sum method will allow you to calculate the sum of the elements of the list.</p>
+
+
+
+<pre class="wp-block-code"><code>Syntax: sum(List)
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>class CustomList:
+    def __init__(self):
+        self.data = &#91;]
+
+    def append(self, value):
+        self.data += &#91;value]
+
+    def sum(self):
+        return sum(self.data)
+
+    def __str__(self):
+        return str(self.data)
+
+
+# Example usage
+custom_list = CustomList()
+custom_list.append(1)
+custom_list.append(2)
+custom_list.append(3)
+
+print("Custom list:", custom_list)
+print("Sum of elements in custom list:", custom_list.sum())
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Custom list: &#91;1, 2, 3]
+Sum of elements in custom list: 6
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="2-python-count-method">2. Python count() method</h3>
+
+
+
+<p>This method will sum the total occurrence of the given element of the <a href="https://www.skillvertex.com/blog/python-list-sort-method/" data-type="post" data-id="8100">list</a>.</p>
+
+
+
+<pre class="wp-block-code"><code>Syntax: List.count(element)</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>class CustomList:
+    def __init__(self):
+        self.data = &#91;]
+
+    def append(self, value):
+        self.data.append(value)
+
+    def count(self, value):
+        return self.data.count(value)
+
+    def __str__(self):
+        return str(self.data)
+
+
+# Example usage
+custom_list = CustomList()
+custom_list.append(1)
+custom_list.append(2)
+custom_list.append(3)
+custom_list.append(1)  # Adding one more 1
+
+print("Custom list:", custom_list)
+print("Number of occurrences of '1' in custom list:", custom_list.count(1))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Custom list: &#91;1, 2, 3, 1]
+Number of occurrences of '1' in custom list: 2
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="3-python-index-method">3.Python index() method</h3>
+
+
+
+<p>This method will return the index of the first occurrence. So, the start and end indexes are not the required parameters.</p>
+
+
+
+<pre class="wp-block-code"><code>Syntax: List.index(element&#91;,start&#91;,end]])</code></pre>
+
+
+
+<p><strong>Example</strong></p>
+
+
+
+<pre class="wp-block-code"><code>class CustomList:
+    def __init__(self):
+        self.data = &#91;]
+
+    def append(self, value):
+        self.data.append(value)
+
+    def index(self, value):
+        return self.data.index(value)
+
+    def __str__(self):
+        return str(self.data)
+
+
+# Example usage
+custom_list = CustomList()
+custom_list.append(1)
+custom_list.append(2)
+custom_list.append(3)
+
+print("Custom list:", custom_list)
+print("Index of '2' in custom list:", custom_list.index(2))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Custom list: &#91;1, 2, 3]
+Index of '2' in custom list: 1
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="4-python-min-method">4. Python min() method</h3>
+
+
+
+<p>This method will find the minimum of all the elements of the list.</p>
+
+
+
+<pre class="wp-block-code"><code>Syntax: min(iterable, *iterables&#91;, key])</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>class CustomList:
+    def __init__(self):
+        self.data = &#91;]
+
+    def append(self, value):
+        self.data.append(value)
+
+    def min(self):
+        return min(self.data)
+
+    def __str__(self):
+        return str(self.data)
+
+
+# Example usage
+custom_list = CustomList()
+custom_list.append(3)
+custom_list.append(1)
+custom_list.append(5)
+custom_list.append(2)
+
+print("Custom list:", custom_list)
+print("Minimum value in custom list:", custom_list.min())
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Custom list: &#91;3, 1, 5, 2]
+Minimum value in custom list: 1
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="5-python-max-method">5. Python max() method</h3>
+
+
+
+<p>The Python will calculate the maximum of all the elements of the list.</p>
+
+
+
+<pre class="wp-block-code"><code>Syntax: max(iterable, *iterables&#91;, key])
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>class CustomList:
+    def __init__(self):
+        self.data = &#91;]
+
+    def append(self, value):
+        self.data.append(value)
+
+    def max(self):
+        return max(self.data)
+
+    def __str__(self):
+        return str(self.data)
+
+
+# Example usage
+custom_list = CustomList()
+custom_list.append(3)
+custom_list.append(1)
+custom_list.append(5)
+custom_list.append(2)
+
+print("Custom list:", custom_list)
+print("Maximum value in custom list:", custom_list.max())
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Custom list: &#91;3, 1, 5, 2]
+Maximum value in custom list: 5
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="6-python-sort-method">6. Python sort() method </h3>
+
+
+
+<p>This <a href="https://www.skillvertex.com/blog/which-of-the-following-are-methods-traffic-manager-uses-to-pick-endpoints-in-azure/" data-type="post" data-id="3218">method </a>will allow us to sort the given <a href="https://www.skillvertex.com/blog/mern-stack-vs-data-science/" data-type="post" data-id="4251">data </a>structure in ascending order. Whereas, the key and reverse flag won&#8217;t be considered as the necessary <a href="https://www.skillvertex.com/blog/what-are-the-limitations-of-parameters-in-tableau/" data-type="post" data-id="3022">parameter </a>and the reverse_ flag will be set to false when nothing is passed through the sorted().</p>
+
+
+
+<pre class="wp-block-code"><code>Syntax: list.sort(&#91;key,&#91;Reverse_flag]])</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>class CustomList:
+    def __init__(self):
+        self.data = &#91;]
+
+    def append(self, value):
+        self.data.append(value)
+
+    def sort(self):
+        self.data.sort()
+
+    def __str__(self):
+        return str(self.data)
+
+
+# Example usage
+custom_list = CustomList()
+custom_list.append(3)
+custom_list.append(1)
+custom_list.append(5)
+custom_list.append(2)
+
+print("Custom list before sorting:", custom_list)
+custom_list.sort()
+print("Custom list after sorting:", custom_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Custom list before sorting: &#91;3, 1, 5, 2]
+Custom list after sorting: &#91;1, 2, 3, 5]
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="7-python-reverse-method">7. Python reverse() method</h3>
+
+
+
+<p>The <a href="https://www.skillvertex.com/blog/how-to-reverse-a-string-in-java/" data-type="post" data-id="728">reverse </a>method will reverse the order of the list.</p>
+
+
+
+<pre class="wp-block-code"><code>Syntax: list. reverse()</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>class CustomList:
+    def __init__(self):
+        self.data = &#91;]
+
+    def append(self, value):
+        self.data.append(value)
+
+    def reverse(self):
+        self.data = self.data&#91;::-1]
+
+    def __str__(self):
+        return str(self.data)
+
+
+# Example usage
+custom_list = CustomList()
+custom_list.append(1)
+custom_list.append(2)
+custom_list.append(3)
+
+print("Custom list before reversing:", custom_list)
+custom_list.reverse()
+print("Custom list after reversing:", custom_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Custom list before reversing: &#91;1, 2, 3]
+Custom list after reversing: &#91;3, 2, 1]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>Python lists are fundamental data structures that enable the storage and manipulation of collections of elements. For beginners learning Python, grasping basic list methods is crucial. These methods offer essential functionalities for managing lists effectively. </p>
+
+
+
+<p>However, the append() method will allow adding elements to the end of a list, while extend() allows adding multiple elements from another iterable. insert() permits inserting elements at specific positions. For removing elements, students can utilize remove() to delete the first occurrence of a value or pop() to remove and return an element at a given index. </p>
+
+
+
+<h2 class="wp-block-heading" id="python-list-methods-fa-qs">Python List Methods-FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1710419388858" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.How do I list available methods in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. using the dir() in Python is used to list all the methods of the class.</p>
+
+</div>
+</div>
+<div id="faq-question-1710419396152" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.What are the Python methods?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The three methods of Python include the Instance Method, Class Method, and Static Method.</p>
+
+</div>
+</div>
+<div id="faq-question-1710419406397" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.What is the use of list () method?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.The list() function will convert the iterable such as a string, tuple, or dictionary into the list.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-list-methods/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

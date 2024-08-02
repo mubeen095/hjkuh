@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>python boolean</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-boolean/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 Mar 2024 06:42:38 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>python boolean</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python Booleans</title>
+		<link>https://www.skillvertex.com/blog/python-booleans/</link>
+					<comments>https://www.skillvertex.com/blog/python-booleans/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:42:38 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[python boolean]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<category><![CDATA[Python value]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7030</guid>
+
+					<description><![CDATA[Python boolean data type is considered as the one among the built-in data types which are given by Python and will denote two values such as True or False. Read this article to learn more about Python Booleans. What is Boolean Value? In Python Programming, an expression will get a result either as True or ... <a title="Python Booleans" class="read-more" href="https://www.skillvertex.com/blog/python-booleans/" aria-label="More on Python Booleans">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-boolean-value">What is Boolean Value?</a></li><li ><a href="#how-to-evaluate-values-and-variables-in-python">How to Evaluate Values and Variables in Python?</a></li><li ><a href="#most-values-are-true-in-python">Most Values are True in Python</a></li><li ><a href="#some-values-are-false-in-python">Some Values are False in Python</a></li><li ><a href="#functions-can-return-a-boolean-in-python">Functions can return a Boolean in Python</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-booleans-fa-qs">Python Booleans- FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python boolean <a href="https://www.skillvertex.com/blog/data-types-in-c/" data-type="post" data-id="1842">data type </a>is considered as the one among the built-in data types which are given by Python and will denote two values such as True or False. Read this article to learn more about <a href="https://www.skillvertex.com/blog/bool-in-c/" data-type="post" data-id="1813">Python Booleans</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-boolean-value">What is Boolean Value?</h2>
+
+
+
+<p>In Python <a href="https://www.skillvertex.com/blog/c-programming-language-tutorial/" data-type="post" data-id="1719">Programming</a>, an expression will get a result either as True or False. Expression will be checked in Python and True or False will be produced. </p>
+
+
+
+<p>Look at the example given below to know the comparison of two boolean values and how the expression is evaluated in <a href="https://www.skillvertex.com/blog/how-to-take-input-in-python/" data-type="post" data-id="7014">Python</a>.</p>
+
+
+
+<pre class="wp-block-code"><code>print(8 &gt; 7)
+print(8== 7)
+print(8&lt; 7)</code></pre>
+
+
+
+<p>Hence, after execution of this condition in a statement, Pythin will either return with the True or False.</p>
+
+
+
+<pre class="wp-block-code"><code># Two numbers for comparison
+number_1 = 10
+number_2 = 5
+
+# Checking the condition
+if number_1 &gt; number_2:
+    message = f"{number_1} is greater than {number_2}."
+else:
+    message = f"{number_1} is not greater than {number_2}."
+
+# Output
+print("Number 1:", number_1)
+print("Number 2:", number_2)
+print(message)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Number 1: 10
+Number 2: 5
+10 is greater than 5.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="how-to-evaluate-values-and-variables-in-python">How to Evaluate Values and Variables in Python?</h2>
+
+
+
+<p>The bool () <a href="https://www.skillvertex.com/blog/variadic-functions-in-c/" data-type="post" data-id="2561">function</a> will perform to evaluate any<a href="https://www.skillvertex.com/blog/how-can-i-return-multiple-values-from-a-function/" data-type="post" data-id="2071"> value</a> and provide results either as True or False.</p>
+
+
+
+<p> Example 1-  to evaluate a <a href="https://www.skillvertex.com/blog/what-does-0-mean-in-this-python-string/" data-type="post" data-id="3237">string </a>and  number in Python</p>
+
+
+
+<pre class="wp-block-code"><code># Value to be checked
+my_value = "Hello"
+
+# Checking the type of the value
+if type(my_value) == str:
+    message = f"{my_value} is a string."
+elif type(my_value) in (int, float):
+    message = f"{my_value} is a number."
+else:
+    message = f"{my_value} is neither a string nor a number."
+
+# Output
+print("Value:", my_value)
+print(message)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Value: Hello
+Hello is a string.
+</code></pre>
+
+
+
+<p>Example 2- to evaluate two <a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932">variables </a>in Python</p>
+
+
+
+<pre class="wp-block-code"><code># Two variables for evaluation
+variable_1 = 10
+variable_2 = 20
+
+# Checking the condition
+if variable_1 == variable_2:
+    message = f"The variables are equal: {variable_1} == {variable_2}"
+else:
+    message = f"The variables are not equal: {variable_1} != {variable_2}"
+
+# Output
+print("Variable 1:", variable_1)
+print("Variable 2:", variable_2)
+print(message)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Variable 1: 10
+Variable 2: 20
+The variables are not equal: 10 != 20
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="most-values-are-true-in-python">Most Values are True in Python</h2>
+
+
+
+<p>It is understood that any <a href="https://www.skillvertex.com/blog/how-to-pass-an-array-by-value-in-c/" data-type="post" data-id="2638">value</a> can be evaluated to come as True if it has some content. Any <a href="https://www.skillvertex.com/blog/how-to-find-length-of-string-in-java-python-cpp-javascript-sql-shell-script-mysql-oracle-and-perl/" data-type="post" data-id="452">string</a> will have the result as True, where the empty strings are exceptional.  In Python, other than zero, any number can get the result value as True. So, any list, set, or<a href="https://www.skillvertex.com/blog/dictionary-is-mutable-or-immutable/" data-type="post" data-id="1615"> dictionary</a> will get the result value as True, excluding the empty ones.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>bool("abc")
+bool(123)
+bool(&#91;"apple", "cherry", "banana"])</code></pre>
+
+
+
+<p>Output&#8217;</p>
+
+
+
+<pre class="wp-block-code"><code>bool('abc'): True
+bool(123): True
+bool(&#91;'apple', 'cherry', 'banana']): True</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="some-values-are-false-in-python">Some Values are False in Python</h2>
+
+
+
+<p>The values that will get the result value as False are (),&nbsp;[],&nbsp;{},&nbsp;&#8220;, the number 0, and the value None. The value False will be returned with a false value</p>
+
+
+
+<p>Look at the example provided below that will return a False Value.</p>
+
+
+
+<pre class="wp-block-code"><code>bool(False)
+bool(None)
+bool(0)
+bool("")
+bool(())
+bool(&#91;])
+bool({})</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>bool(False): False
+bool(None): False
+bool(0): False
+bool(''): False
+bool(()): False
+bool(&#91;]): False
+bool({}): False
+</code></pre>
+
+
+
+<p>Check out the example provided below to know how the <a href="https://www.skillvertex.com/blog/which-is-not-an-ado-net-dataadapter-object/" data-type="post" data-id="2225">object</a> that is made from a class with the v function will be returned with the 0 or false value.</p>
+
+
+
+<pre class="wp-block-code"><code>class myclass():
+  def __len__(self):
+    return 0
+
+myobj = myclass()
+print(bool(myobj))</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>false</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="functions-can-return-a-boolean-in-python">Functions can return a Boolean in Python</h2>
+
+
+
+<p>It is possible to make a function that will return with a Boolean value.</p>
+
+
+
+<pre class="wp-block-code"><code>def myFunction() :
+  return True
+
+print(myFunction())</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>True</code></pre>
+
+
+
+<p>Example- to print  &#8221;Yes!&#8221;  only if the function is returned with <a href="https://www.skillvertex.com/blog/which-is-not-true-in-the-case-of-globs-in-selenium/" data-type="post" data-id="3308">True value </a>or else print &#8221;NO&#8221;</p>
+
+
+
+<pre class="wp-block-code"><code>def myFunction() :
+  return True
+
+if myFunction():
+  print("YES!")
+else:
+  print("NO!")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>''YES''!</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, boolean values in Python represent true or false. They are primarily used in conditions and decision-making statements. The bool() function is commonly used to assess the true values, whereas, True represents a truthy condition and False represents a falsy condition.</p>
+
+
+
+<p>However,  Boolean values are fundamental for controlling the flow of a program through if statements, loops, and other control structures, making Python code concise and expressive in handling logical operations.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-booleans-fa-qs">Python Booleans- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707821640122" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the bool 0 in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The bool function will come as false if 0 is passed as a parameter.</p>
+
+</div>
+</div>
+<div id="faq-question-1707821650888" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. Is 1 false in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. True is equal to 1 and false is equal to 0. Hence, adding a boolean together is the easiest way to count the number of true values.</p>
+
+</div>
+</div>
+<div id="faq-question-1707821658067" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is double in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Python doesn&#8217;t have a specific double data type.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-booleans/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

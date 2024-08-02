@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>What Is The Difference Between Single Quoted And Double Quoted Declaration Of Char Array?</title>
+	<atom:link href="https://www.skillvertex.com/tag/what-is-the-difference-between-single-quoted-and-double-quoted-declaration-of-char-array/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:09:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>What Is The Difference Between Single Quoted And Double Quoted Declaration Of Char Array?</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>What Is The Difference Between Single Quoted And Double Quoted Declaration Of Char Array?</title>
+		<link>https://www.skillvertex.com/blog/single-quoted-and-double-quoted-declaration-of-char-array/</link>
+					<comments>https://www.skillvertex.com/blog/single-quoted-and-double-quoted-declaration-of-char-array/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 05 Mar 2024 12:19:56 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[What Is The Difference Between Single Quoted And Double Quoted Declaration Of Char Array?]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2661</guid>
+
+					<description><![CDATA[Example 1- Double Quoted Declaration of Char Array In C and C++, when a character array is initialized with a double-quoted string and the array size is not specified, the compiler automatically allocates one extra space for the string terminator '\0'. This is essential for correctly representing and manipulating strings in C and C++. This ... <a title="What Is The Difference Between Single Quoted And Double Quoted Declaration Of Char Array?" class="read-more" href="https://www.skillvertex.com/blog/single-quoted-and-double-quoted-declaration-of-char-array/" aria-label="More on What Is The Difference Between Single Quoted And Double Quoted Declaration Of Char Array?">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#example-1-double-quoted-declaration-of-char-array">Example 1- Double Quoted Declaration of Char Array</a></li><li ><a href="#example-2-double-quoted-declaration-of-char-array">Example 2-Double Quoted Declaration of Char Array</a></li><li ><a href="#example-3-single-quoted-declaration-of-char-array">Example 3- Single Quoted Declaration of char Array</a></li><li ><a href="#faq-what-is-the-difference-between-single-quoted-and-double-quoted-declaration-of-char-array">FAQ- What Is The Difference Between Single Quoted And Double Quoted Declaration Of Char Array?</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="example-1-double-quoted-declaration-of-char-array">Example 1- Double Quoted Declaration of Char Array</h2>
+
+
+
+<p>In C and C++, when a character array is initialized with a double-quoted string and the array size is not specified, the compiler automatically allocates one extra space for the string terminator <code>'\0'</code>. This is essential for correctly representing and manipulating strings in C and C++. This program will print 6 as output.</p>
+
+
+
+<pre class="wp-block-code"><code>
+#include&lt;stdio.h&gt; 
+int main() 
+{ 
+  // size of arr&#91;] is 6 as it is '\0' terminated  
+  char arr&#91;] = "Hello"; 
+  
+  printf("%lu", sizeof(arr)); 
+  
+  return 0; 
+} </code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>6</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-2-double-quoted-declaration-of-char-array">Example 2-Double Quoted Declaration of Char Array</h2>
+
+
+
+<p>In C, specifying an array size of 5 in the above program is valid, and the program will work without any warning or error. The compiler will allocate exactly 5 characters for the array to hold &#8216;H&#8217;, &#8216;e&#8217;, &#8216;l&#8217;, &#8216;l&#8217;, &#8216;o&#8217; without the null terminator. The <code>sizeof</code> operator will correctly return 5 in this case.</p>
+
+
+
+<pre class="wp-block-code"><code>
+
+// Works in C, but compilation error in C++ 
+#include&lt;stdio.h&gt; 
+int main() 
+{ 
+  // arr&#91;] is not terminated with '\0' 
+  // and its size is 5 
+  char arr&#91;5] = "Hello";  
+    
+  printf("%lu", sizeof(arr)); 
+    
+  return 0; 
+} </code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>5</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-3-single-quoted-declaration-of-char-array">Example 3- Single Quoted Declaration of char Array</h2>
+
+
+
+<p>When a character array is initialized with a comma-separated list of characters, and the array size is not specified, the compiler does not automatically create extra space for the string terminator <code>'\0'</code>. Instead, the compiler allocates only enough space for the characters provided in the initialization list.</p>
+
+
+
+<pre class="wp-block-code"><code>#include&lt;stdio.h&gt; 
+int main() 
+{ 
+  // arr&#91;] is not terminated with '\0'  
+  // and its size is 5  
+  char arr&#91;]= {'h', 'e', 'l', 'l', 'o'};  
+  
+  printf("%lu", sizeof(arr)); 
+  
+  return 0; 
+} </code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>5</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-what-is-the-difference-between-single-quoted-and-double-quoted-declaration-of-char-array">FAQ- What Is The Difference Between Single Quoted And Double Quoted Declaration Of Char Array?</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697092482539" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the difference between single-quoted and double-quoted declarations of char array in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C and C++, single quotes (<code>'</code>) represent single characters and double quotes (&#8220;) represent string literals. When you use a string literal &#8216;x&#8217;, it&#8217;s a two-character array containing the character <code>'x'</code> and a null terminator <code>'\0'</code>.</p>
+
+</div>
+</div>
+<div id="faq-question-1697092727708" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the difference between single and double quotes in programming?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C and C++, you can include single quotes in double-quoted strings and double quotes in single-quoted strings without escaping them. If you want to include the same type of quotation marks within a string, you need to escape them with a backslash.</p>
+
+</div>
+</div>
+<div id="faq-question-1697092736202" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the difference between char * array and char array in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C and C++:<br /><code>char[]</code> is a fixed-size character array with direct indexing.<br /><code>char*</code> is a character pointer that references a memory location, providing flexibility in size and data access.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/single-quoted-and-double-quoted-declaration-of-char-array/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

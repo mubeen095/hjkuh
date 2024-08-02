@@ -1,0 +1,2632 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>python built in functions</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-built-in-functions/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 Mar 2024 06:50:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>python built in functions</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python Slice String</title>
+		<link>https://www.skillvertex.com/blog/python-slice-string/</link>
+					<comments>https://www.skillvertex.com/blog/python-slice-string/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:50:09 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python built in functions]]></category>
+		<category><![CDATA[python slicing string]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<category><![CDATA[slice operator]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7568</guid>
+
+					<description><![CDATA[Python Slicing will consist of getting a sub-string from the provided string by slicing it accordingly. Let us check out this article to learn more about Python Slice. What is a Slicing String? The slicing string will allow us to return the range of characters with the slice syntax. The slicing of the string will ... <a title="Python Slice String" class="read-more" href="https://www.skillvertex.com/blog/python-slice-string/" aria-label="More on Python Slice String">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-a-slicing-string">What is a Slicing String?</a></li><li ><a href="#how-string-slicing-in-python-works">How String Slicing in Python Works?</a></li><li ><a href="#what-are-the-methods-for-python-slicing">What are the methods for Python Slicing?</a><ul><li ><a href="#method-1-using-the-slice-method">Method 1- Using the Slice Method</a></li><li ><a href="#method-2-using-the-list-array-with-the-slicing-method">Method 2: Using the List/array with the  slicing[::] method</a></li></ul></li><li ><a href="#what-is-isslice-in-python">What is isslice() in Python</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-slice-string-fa-qs">Python Slice String-FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python Slicing will consist of getting a sub-string from the provided string by slicing it accordingly. Let us check out this article to learn more about<a href="https://www.skillvertex.com/blog/how-to-learn-python-for-beginners/" data-type="post" data-id="1482"> Python </a>Slice.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-slicing-string">What is a Slicing String?</h2>
+
+
+
+<p>The slicing string will allow us to return the range of characters with the slice syntax. The slicing of the string will be done using the <a href="https://www.skillvertex.com/blog/python-identity-operator/" data-type="post" data-id="6997">slice operator</a>. Thus, this operator will enable us to mention where to start and end the string. </p>
+
+
+
+<h2 class="wp-block-heading" id="how-string-slicing-in-python-works">How String Slicing in Python Works?</h2>
+
+
+
+<p>To learn to slice in Python,  Mostly,   2 methods are used for string slicing. The first method is the in-build <strong>slice()</strong> method. Another method is referred to as the array <strong>(:) slice</strong>.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-methods-for-python-slicing">What are the methods for Python Slicing?</h2>
+
+
+
+<p>Python slicing is done in two ways:</p>
+
+
+
+<ol class="wp-block-list">
+<li>Using the slice() method.</li>
+
+
+
+<li>Using the array slicing [::] method</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading" id="method-1-using-the-slice-method">Method 1- Using the Slice Method</h3>
+
+
+
+<p>The slice constructor will help us to make the slice <a href="https://www.skillvertex.com/blog/which-is-not-an-ado-net-dataadapter-object/" data-type="post" data-id="2225">object </a>that will represent the set of indices that is specified by range.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>slice(stop)
+slice(start, stop, step)</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># String slicing in Python
+text = "Hello, World!"
+
+# Slice from index 0 to 5 (exclusive)
+slice1 = text&#91;0:5]
+print("Slice 1:", slice1)
+
+# Slice from index 7 to the end
+slice2 = text&#91;7:]
+print("Slice 2:", slice2)
+
+# Slice every second character
+slice3 = text&#91;::2]
+print("Slice 3:", slice3)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Slice 1: Hello
+Slice 2: World!
+Slice 3: Hlo ol!
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="method-2-using-the-list-array-with-the-slicing-method">Method 2: Using the List/array with the  slicing[::] method</h3>
+
+
+
+<p>Indexing syntax in Python will allow us to use the substitute for the slice object. Hence, this refers to an easy and convenient way to slice the string with the list slicing and the array slicing using syntax and execution.</p>
+
+
+
+<p>The start, end, and step are the same mechanism using the slice()  constructor.</p>
+
+
+
+<p>Syntax of this method</p>
+
+
+
+<pre class="wp-block-code"><code>arr&#91;start:stop]         # items start through stop-1
+arr&#91;start:]             # items start through the rest of the array
+arr&#91;:stop]              # items from the beginning through stop-1
+arr&#91;:]                  # a copy of the whole array
+arr&#91;start:stop:step]    # start through not past stop, by step</code></pre>
+
+
+
+<p>Example 1:</p>
+
+
+
+<p>The list slicing in Python is given below:</p>
+
+
+
+<pre class="wp-block-code"><code># List slicing in Python
+my_list = &#91;1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Slice from index 2 to 7 (exclusive)
+slice1 = my_list&#91;2:7]
+print("Slice 1:", slice1)
+
+# Slice from index 3 to the end
+slice2 = my_list&#91;3:]
+print("Slice 2:", slice2)
+
+# Slice every second element
+slice3 = my_list&#91;::2]
+print("Slice 3:", slice3)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Slice 1: &#91;3, 4, 5, 6, 7]
+Slice 2: &#91;4, 5, 6, 7, 8, 9, 10]
+Slice 3: &#91;1, 3, 5, 7, 9]
+</code></pre>
+
+
+
+<p>Example 2:</p>
+
+
+
+<p>The example below shows the Python slicing string by character:</p>
+
+
+
+<pre class="wp-block-code"><code># Python program to demonstrate string slicing
+
+# String slicing
+string_value = 'skillvertex'
+
+# Using different slicing
+# Start from index 2, end at index 10 (exclusive), and take every 3rd character.
+new_slice = string_value&#91;2:10:3]
+
+# Output the result
+print(new_slice)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>itle
+</code></pre>
+
+
+
+<p>Example 3: </p>
+
+
+
+<p>The slicing starts from the last character (&#8216;x&#8217;) using the index -1, goes up to the third<a href="https://www.skillvertex.com/blog/character-arithmetic-in-c-and-c/" data-type="post" data-id="1876"> character</a> (exclusive) at index -12 (stops at 3-1=2), and takes every second character with a step of -2.</p>
+
+
+
+<pre class="wp-block-code"><code># Python program to demonstrate string slicing
+
+# String slicing
+string_value = 'skillvertex'
+
+# Using different slicing with negative indices
+# Start from the last character (-1 index), end at the third character (-12 index, stops at 3-1=2), and take every second character with a step of -2.
+new_slice = string_value&#91;-1:-12:-2]
+
+# Output the result
+print(new_slice)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>xtcvi
+</code></pre>
+
+
+
+<p>Example 4:</p>
+
+
+
+<p>The example illustrates that the whole <a href="https://www.skillvertex.com/blog/python-string/" data-type="post" data-id="7475">string </a>is printed in the reverse order.</p>
+
+
+
+<pre class="wp-block-code"><code># Python program to print the whole string in reverse order
+
+# String to be reversed
+string_value = 'skillvertex'
+
+# Using string slicing to reverse the string
+reversed_string = string_value&#91;::-1]
+
+# Output the reversed string
+print(reversed_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>xetreversylliks
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-isslice-in-python">What is isslice() in Python</h2>
+
+
+
+<p>The<strong> isslice () </strong>is referred to as the <a href="https://www.skillvertex.com/blog/python-built-in-functions/" data-type="post" data-id="7464">built-in function</a> which has been defined in the <a href="https://www.skillvertex.com/blog/draggan-ai-editing-tool/" data-type="post" data-id="1190">itertools</a> module. This will allow us to get the iterator that is an index-based slicing of an iterable. This works similarly to the standard slice and thus returns the iterator.</p>
+
+
+
+<p>Syntax:</p>
+
+
+
+<pre class="wp-block-code"><code>itertools.islice(iterable, start, stop&#91;, step])
+Parameters: iterable: Any iterable sequence like list, string, tuple etc. start:
+
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>from itertools import islice
+
+# Original iterable
+original_iterable = range(10)
+
+# Using islice to get elements from index 2 to 7 (exclusive)
+sliced_iterable = islice(original_iterable, 2, 7)
+
+# Output the result
+print(list(sliced_iterable))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;2, 3, 4, 5, 6]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, Slicing the string will allow us to access the range of characters. This has also included several articles for a better understanding.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-slice-string-fa-qs">Python Slice String-FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1709276756999" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the syntax of slice in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. slice syntax is: <strong>start:stop: step</strong>.</p>
+
+</div>
+</div>
+<div id="faq-question-1709276794567" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.What is list slicing in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. List slicing is like cutting out a part of a list to use it separately without changing the original list.</p>
+
+</div>
+</div>
+<div id="faq-question-1709276802717" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.What is slicing in programming?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Program slicing is like looking at a big computer program and picking out only the parts of the code that directly influence the values we&#8217;re interested in. It&#8217;s a way to focus on just the lines that matter for a specific outcome.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-slice-string/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python Built-in Functions</title>
+		<link>https://www.skillvertex.com/blog/python-built-in-functions/</link>
+					<comments>https://www.skillvertex.com/blog/python-built-in-functions/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:49:12 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[functions]]></category>
+		<category><![CDATA[programming language]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[python built in functions]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7464</guid>
+
+					<description><![CDATA[The Python built-in -functions are referred to as the functions where the functionality is pre-defined in Python. Whereas, the Python interpreter consists of several functions that will be available for use. So, these functions are known as Python Built-in Functions. Let us check out this article to learn more about Python Built-in Functions. What is ... <a title="Python Built-in Functions" class="read-more" href="https://www.skillvertex.com/blog/python-built-in-functions/" aria-label="More on Python Built-in Functions">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-python-abs-function">What is Python abs() Function?</a></li><li ><a href="#what-is-python-all-function">What is Python all() Function?</a></li><li ><a href="#what-is-the-python-bin-function">What is the Python bin() Function?</a></li><li ><a href="#what-is-python-bool">What is Python Bool()</a></li><li ><a href="#what-is-python-bytes">What is Python bytes()?</a></li><li ><a href="#what-is-the-python-callable-function">What is the Python callable () Function?</a></li><li ><a href="#what-is-the-python-compile-function">What is the Python compile() Function?</a></li><li ><a href="#what-is-the-python-exec-function">What is the Python exec() Function?</a></li><li ><a href="#what-is-the-python-sum-function">What is the Python sum() Function?</a></li><li ><a href="#what-is-python-any-function">What is Python any() Function?</a></li><li ><a href="#what-is-python-ascii-function">What is  Python ASCII () Function?</a></li><li ><a href="#what-is-python-byte-array">What is Python byte array()?</a></li><li ><a href="#what-is-python-eval-function">What is Python eval() Function?</a></li><li ><a href="#what-is-python-float">What is Python float()?</a></li><li ><a href="#what-is-python-format-function">What is Python Format() Function?</a></li><li ><a href="#what-is-python-frozenset">What is Python Frozenset()?</a></li><li ><a href="#what-is-the-python-getattr-function">What is the Python getattr() Function?</a></li><li ><a href="#what-is-the-python-global-function">What is the Python global() Function?</a></li><li ><a href="#what-is-python-hasattr-function">What is Python hasattr() Function?</a></li><li ><a href="#python-iter-function">Python iter() Function?</a></li><li ><a href="#what-is-the-python-len-function">What is the Python len() Function?</a></li><li ><a href="#what-is-python-list">What is Python list() ?</a></li><li ><a href="#what-is-python-local-function">What is Python local() Function?</a></li><li ><a href="#what-is-a-python-map-function">What is a Python map() Function?</a></li><li ><a href="#what-is-the-python-memory-view-function">What is the Python memory view() Function?</a></li><li ><a href="#what-is-a-python-object">What is a Python object()?</a></li><li ><a href="#what-is-the-python-open-function">What is the Python open() Function?</a></li><li ><a href="#what-is-python-chr-function">What is Python chr() Function?</a></li><li ><a href="#what-is-the-python-complex-function">What is the Python complex () function?</a></li><li ><a href="#what-is-the-python-delattr-function">What is the Python delattr () Function?</a></li><li ><a href="#what-is-the-python-dir-function">What is the Python dir() Function?</a></li><li ><a href="#what-is-the-python-divmod-function">What is the Python divmod () Function?</a></li><li ><a href="#what-is-the-python-enumerate-function">What is the Python enumerate () Function?</a></li><li ><a href="#what-is-python-dict">What is Python dict?</a></li><li ><a href="#what-is-the-python-filter-function">What is the Python filter() Function?</a></li><li ><a href="#what-is-a-python-hash-function">What is a Python hash() Function?</a></li><li ><a href="#what-is-the-python-help-function">What is the Python help() Function?</a></li><li ><a href="#what-is-python-min-function">What is Python min() Function?</a></li><li ><a href="#what-is-the-python-set-function">What is the Python set () Function?</a></li><li ><a href="#what-is-a-python-hex-function">What is a Python hex() Function?</a></li><li ><a href="#what-is-python-id-function">What is Python id() Function?</a></li><li ><a href="#what-is-the-python-setattr-function">What is the Python setattr () Function?</a></li><li ><a href="#what-is-pythons-next-function">What is Python&#8217;s next() Function?</a></li><li ><a href="#what-is-the-python-input-function">What is the Python input() Function?</a></li><li ><a href="#what-is-python-int-function">What is Python int() Function?</a></li><li ><a href="#what-is-a-python-isinstance-function">What is a Python isinstance () Function?</a></li><li ><a href="#what-is-python-oct-function">What is Python oct() Function?</a></li><li ><a href="#what-is-the-python-ord-function">What is the Python ord() Function?</a></li><li ><a href="#what-is-the-python-pow-function">What is the Python Pow () Function?</a></li><li ><a href="#what-is-the-python-print-function">What is the Python  Print () Function?</a></li><li ><a href="#what-is-the-python-range-function">What is the Python range () Function?</a></li><li ><a href="#what-is-the-python-reversed-function">What is the Python reversed() Function?</a></li><li ><a href="#what-is-a-python-round-function">What is a Python round Function?</a></li><li ><a href="#what-is-python-issubclass-function">What is Python issubclass () Function?</a></li><li ><a href="#what-is-python-str">What is Python str?</a></li><li ><a href="#what-is-the-python-tuple-function">What is the Python tuple() Function?</a></li><li ><a href="#what-is-python-type-function">What is Python type() Function?</a></li><li ><a href="#what-is-the-python-vars-function">What is the  Python vars() Function?</a></li><li ><a href="#what-is-the-python-zip-function">What is the Python zip() Function?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-built-in-functions-faq">Python Built-in Functions -FAQ</a></li></ul></nav></div>
+
+
+
+<p>The Python built-in -functions are referred to as the functions where the functionality is pre-defined in<a href="https://www.skillvertex.com/blog/which-of-the-following-is-a-bad-python-variable-name/" data-type="post" data-id="2650"> Python. </a>Whereas, the <a href="https://www.skillvertex.com/blog/how-does-a-python-interpreter-works/" data-type="post" data-id="6895">Python interpreter </a>consists of several functions that will be available for use.  So, these functions are known as Python Built-in Functions. Let us check out this article to learn more about Python Built-in Functions.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-abs-function">What is Python abs() Function?</h2>
+
+
+
+<p>The Python <strong>abs() </strong> function will return the value of a number. Thus, it will take only one argument,  a number where the <a href="https://www.skillvertex.com/blog/how-to-pass-an-array-by-value-in-c/" data-type="post" data-id="2638">value </a>will be returned. This<a href="https://www.skillvertex.com/blog/python-positional-arguments/" data-type="post" data-id="7296"> argument</a> can either be an <a href="https://www.skillvertex.com/blog/integer-promotions-in-c/" data-type="post" data-id="1968">integer</a> or a<a href="https://www.skillvertex.com/blog/python-numbers/" data-type="post" data-id="7023"> floating-point number.</a>  Suppose, if the argument is a complex number, thus, abs() will return their magnitude.</p>
+
+
+
+<h4 class="wp-block-heading"> Example</h4>
+
+
+
+<pre class="wp-block-code"><code># Example using abs() function
+number = -10
+absolute_value = abs(number)
+
+# Output
+print(f"The absolute value of {number} is: {absolute_value}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The absolute value of -10 is: 10
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-all-function">What is Python all() Function?</h2>
+
+
+
+<p>The Python <strong>all() </strong>function will accept the iterable object that includes list, and dictionary. Hence, it will return all items when the iterable is<a href="https://www.skillvertex.com/blog/python-booleans/" data-type="post" data-id="7030"> true</a>. But, if it comes false. So, the iterable <a href="https://www.skillvertex.com/blog/which-is-not-an-ado-net-dataadapter-object/" data-type="post" data-id="2225">object w</a>ill become empty and all()  <a href="https://www.skillvertex.com/blog/python-functions/" data-type="post" data-id="7272">functions</a> will be true.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using all() function
+numbers = &#91;2, 4, 6, 8, 10]
+
+# Check if all numbers are even
+are_all_even = all(num % 2 == 0 for num in numbers)
+
+# Output
+print(f"Are all numbers even? {are_all_even}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>
+Are all numbers even? True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-bin-function">What is the Python bin() Function?</h2>
+
+
+
+<p>The Python <strong>bin()</strong> function will operate to return the<a href="https://www.skillvertex.com/blog/difference-between-binary-search-and-linear-search/" data-type="post" data-id="520"> binary</a> representation of a specified integer. So, the<a href="https://www.skillvertex.com/blog/what-will-be-the-output-of-the-following-program/" data-type="post" data-id="3081"> output</a> will begin with the prefix Ob.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using bin() function
+decimal_number = 10
+
+# Convert decimal_number to binary
+binary_representation = bin(decimal_number)
+
+# Output
+print(f"The binary representation of {decimal_number} is: {binary_representation}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The binary representation of 10 is: 0b1010
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-bool">What is Python Bool()</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-booleans/" data-type="post" data-id="7030">Python</a> <strong>bool() </strong> will function to convert the value into a boolean such as True or False with the standard truth testing procedure.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using bool() function
+value_1 = 42
+value_2 = 0
+
+# Convert values to boolean
+bool_value_1 = bool(value_1)
+bool_value_2 = bool(value_2)
+
+# Output
+print(f"Boolean value of {value_1}: {bool_value_1}")
+print(f"Boolean value of {value_2}: {bool_value_2}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Boolean value of 42: True
+Boolean value of 0: False
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-bytes">What is Python bytes()?</h2>
+
+
+
+<p>The Python <strong>bytes()</strong> work to return the bytes object. It is considered an immutable version of the <a href="https://www.skillvertex.com/blog/pointer-vs-array-in-c/" data-type="post" data-id="2733">byte array()</a> function.  Thus, it can make the empty bytes object in the required size.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using bytes() function
+byte_values = &#91;65, 66, 67, 68]  # ASCII values for 'A', 'B', 'C', 'D'
+
+# Create a bytes object from list of integers
+byte_sequence = bytes(byte_values)
+
+# Output
+print(f"Bytes object: {byte_sequence}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Bytes object: b'ABCD'
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-callable-function">What is the Python callable () Function?</h2>
+
+
+
+<p>This Python <strong>callable ()</strong> method will take only one argument, an object, and then return one of the two values. Whereas, if the output is true then the object will become callable.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using callable() function with x = 4
+def example_function():
+    print("Hello, from the example function!")
+
+class ExampleClass:
+    def __call__(self):
+        print("Hello, from the __call__ method of ExampleClass!")
+
+# Create an instance of ExampleClass
+example_instance = ExampleClass()
+
+# Check if objects are callable
+x = 4  # Setting x to 4
+is_function_callable = callable(example_function)
+is_instance_callable = callable(example_instance)
+
+# Output
+print(f"Is example_function callable with x = {x}? {is_function_callable}")
+print(f"Is example_instance callable with x = {x}? {is_instance_callable}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Is example_function callable with x = 4? True
+Is example_instance callable with x = 4? True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-compile-function">What is the Python compile() Function?</h2>
+
+
+
+<p>The Python<strong> compile () </strong> function will use the <a href="https://www.skillvertex.com/blog/which-is-not-part-of-code-technical-review-in-sonarqube/" data-type="post" data-id="2815">source code </a>as the input and then return the code object. Then, it will be run by the exec() function.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+# Example using compile() function with x = 4
+x = 4
+source_code = f"result = x * 2; print('Result:', result)"
+
+# Compile the source code
+compiled_code = compile(source_code, filename="&lt;string&gt;", mode="exec")
+
+# Execute the compiled code
+exec(compiled_code)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Result: 8</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-exec-function">What is the Python exec() Function?</h2>
+
+
+
+<p>The Python <strong>exec () </strong>will work for the dynamic execution of the Python program and will be either a <a href="https://www.skillvertex.com/blog/array-of-strings-in-c/" data-type="post" data-id="2641">string o</a>r an object. Thus, it will accept large blocks of code .</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using exec() function
+python_code = """
+x = 4
+result = x * 3
+print(f"The result of x * 3 is: {result}")
+"""
+
+# Execute the Python code
+exec(python_code)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The result of x * 3 is: 12
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-sum-function">What is the Python sum() Function?</h2>
+
+
+
+<p>In Python <strong>sum()</strong> function will enable us to <a href="https://www.skillvertex.com/blog/python-arithmetic-operators/" data-type="post" data-id="6958">add</a> all the numbers in the list.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using sum() function
+numbers = &#91;1, 2, 3, 4, 5]
+
+# Calculate the sum of numbers in the list
+result_sum = sum(numbers)
+
+# Output
+print(f"The sum of numbers in the list is: {result_sum}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The sum of numbers in the list is: 15
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-any-function">What is Python any() Function?</h2>
+
+
+
+<p>The Python<strong> any() </strong>Function will give the output as true if either the iterable comes true. In other cases, it will come False.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using any() function with I as 2, 4, 8
+I = &#91;2, 4, 8]
+
+# Check if any value in the list is true
+is_any_true = any(I)
+
+# Output
+print(f"Is there any true value in the list? {is_any_true}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Is there any true value in the list? True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-ascii-function">What is  Python ASCII () Function?</h2>
+
+
+
+<p>The Python<strong> ASCII </strong>() function will return the string and has the printable representation of the object. However, it will ignore the <a href="https://www.skillvertex.com/blog/character-arithmetic-in-c-and-c/" data-type="post" data-id="1876">non-ASCII characters</a> in the string with the \x, \u, or \U escapes.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using ascii() function
+character = '€'
+
+# Get the ASCII representation of the character
+ascii_representation = ascii(character)
+
+# Output
+print(f"The ASCII representation of '{character}' is: {ascii_representation}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The ASCII representation of '€' is: '\u20ac'
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-byte-array">What is Python byte array()?</h2>
+
+
+
+<p>The Python <strong>byte array(</strong>) will return the <a href="https://www.skillvertex.com/blog/how-arrays-are-passed-to-functions-in-c-c/" data-type="post" data-id="2612">byte array </a>output and then turn the objects into the byte array objects.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using bytearray() function
+string_data = "Hello, Bytearray!"
+
+# Convert a string to a bytearray
+byte_array_data = bytearray(string_data, 'utf-8')
+
+# Output
+print(f"The original string: {string_data}")
+print(f"The bytearray representation: {byte_array_data}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The original string: Hello, Bytearray!
+The bytearray representation: bytearray(b'Hello, Bytearray!')
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-eval-function">What is Python eval() Function?</h2>
+
+
+
+<p>The Python<strong> eval()</strong>  function will rephrase the <a href="https://www.skillvertex.com/blog/which-of-the-following-is-a-legal-expression-in-sql/" data-type="post" data-id="1856">expression</a> that is passed on to it and then it will execute the Python code in the Program</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using eval() function
+expression = "2 + 3 * 4"
+
+# Evaluate the expression using eval()
+result = eval(expression)
+
+# Output
+print(f"The result of the expression '{expression}' is: {result}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The result of the expression '2 + 3 * 4' is: 14</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-float">What is Python float()?</h2>
+
+
+
+<p>The Python <strong>float()</strong> function will return the floating-point number from a number or string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using float() function
+number_str = "7.5"
+
+# Convert the string to a float
+float_value = float(number_str)
+
+# Output
+print(f"The float representation of '{number_str}' is: {float_value}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The float representation of '7.5' is: 7.5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-format-function">What is Python Format() Function?</h2>
+
+
+
+<p>The Python F<strong>ormat () </strong>function will help us to return the formatted representation of the provided value.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using format() function
+name = "Alice"
+age = 25
+
+# Format a string with variables
+formatted_string = "My name is {} and I am {} years old.".format(name, age)
+
+# Output
+print(formatted_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>My name is Alice and I am 25 years old.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-frozenset">What is Python Frozenset()?</h2>
+
+
+
+<p>The Python<strong> frozenset() </strong>function will allow us to return the immutable frozen set object that will be initialized with the elements from the given iterable.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using frozenset() function
+set_values = {1, 2, 3, 4, 5}
+
+# Create a frozenset from a set
+frozen_set = frozenset(set_values)
+
+# Output
+print(f"The original set: {set_values}")
+print(f"The frozenset representation: {frozen_set}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The original set: {1, 2, 3, 4, 5}
+The frozenset representation: frozenset({1, 2, 3, 4, 5})
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-getattr-function">What is the Python getattr() Function?</h2>
+
+
+
+<p>The Python <strong>getattr()  </strong>will return the value of the named attribute of an object. Hence, if it is not found, then it will return with the default value.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using getattr() function
+class MyClass:
+    age = 25
+
+# Create an instance of MyClass
+obj = MyClass()
+
+# Use getattr() to get the value of the 'age' attribute
+attribute_value = getattr(obj, 'age', 'default_value')
+
+# Output
+print(f"The value of 'age' attribute is: {attribute_value}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The value of 'age' attribute is: 25
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-global-function">What is the Python global() Function?</h2>
+
+
+
+<p>The Python <strong>globals()</strong> function will operate to return the dictionary of the current global symbol table. The symbol table will be defined as the data structure, and have the required information regarding the program. Thus, it will have the variable names, methods, and classes. </p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using globals() function
+global_variable = "I am a global variable"
+
+def print_global_variable():
+    # Access global variable using globals()
+    global_variable_value = globals()&#91;'global_variable']
+    print(f"Inside the function: {global_variable_value}")
+
+# Call the function
+print_global_variable()
+
+# Access global variable directly
+direct_global_variable = globals()&#91;'global_variable']
+print(f"Outside the function: {direct_global_variable}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Inside the function: I am a global variable
+Outside the function: I am a global variable
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-hasattr-function">What is Python hasattr() Function?</h2>
+
+
+
+<p>This function will return the true value only if any of the items is true, otherwise it will be false.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using hasattr() function
+class MyClass:
+    name = "John"
+    age = 25
+
+# Create an instance of MyClass
+obj = MyClass()
+
+# Check if the attribute 'name' exists in the object
+has_name_attribute = hasattr(obj, 'name')
+has_height_attribute = hasattr(obj, 'height')
+
+# Output
+print(f"Does the object have 'name' attribute? {has_name_attribute}")
+print(f"Does the object have 'height' attribute? {has_height_attribute}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Does the object have 'name' attribute? True
+Does the object have 'height' attribute? False
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="python-iter-function">Python iter() Function?</h2>
+
+
+
+<p>The Python<strong> iter()</strong> Function will work to return the iterator object. Thus, it will make the object to /iterate one element at a time.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using iter() function
+numbers = &#91;1, 2, 3, 4, 5]
+
+# Create an iterator object from the list
+iterator = iter(numbers)
+
+# Output
+print("Using iterator to iterate through the list:")
+for num in iterator:
+    print(num)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Using iterator to iterate through the list:
+1
+2
+3
+4
+5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-len-function">What is the Python len() Function?</h2>
+
+
+
+<p>The Python<strong> len()</strong> function will work to return the length of the object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using len() function
+string_example = "Hello, Python!"
+list_example = &#91;1, 2, 3, 4, 5]
+
+# Get the length of the string
+string_length = len(string_example)
+
+# Get the length of the list
+list_length = len(list_example)
+
+# Output
+print(f"The length of the string is: {string_length}")
+print(f"The length of the list is: {list_length}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The length of the string is: 13
+The length of the list is: 5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-list">What is Python list() ?</h2>
+
+
+
+<p>The Python <strong>list() </strong>will make a list in Python.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using list() function
+string_example = "Python"
+tuple_example = (1, 2, 3, 4, 5)
+
+# Convert a string to a list
+string_as_list = list(string_example)
+
+# Convert a tuple to a list
+tuple_as_list = list(tuple_example)
+
+# Output
+print(f"Original string: {string_example}")
+print(f"String as a list: {string_as_list}")
+
+print(f"\nOriginal tuple: {tuple_example}")
+print(f"Tuple as a list: {tuple_as_list}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original string: Python
+String as a list: &#91;'P', 'y', 't', 'h', 'o', 'n']
+
+Original tuple: (1, 2, 3, 4, 5)
+Tuple as a list: &#91;1, 2, 3, 4, 5]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-local-function">What is Python local() Function?</h2>
+
+
+
+<p>The Python <strong>local() </strong>method will contain the update and then will return with the dictionary of the current local symbol table. </p>
+
+
+
+<p>The symbol table is referred to as a data structure with the necessary information about the program. Additionally, it has variable names, methods, and classes.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example demonstrating local variables and functions
+def outer_function():
+    outer_variable = "I am a local variable"
+
+    def inner_function():
+        inner_variable = "I am also a local variable"
+        print(f"Inside inner_function: {inner_variable}")
+        print(f"Inside inner_function accessing outer_variable: {outer_variable}")
+
+    inner_function()
+
+    # Uncommenting the line below will result in an error, as inner_variable is local to inner_function
+    # print(f"Outside inner_function accessing inner_variable: {inner_variable}")
+
+    print(f"Outside inner_function: {outer_variable}")
+
+# Uncommenting the line below will result in an error, as outer_variable is local to outer_function
+# print(f"Outside outer_function: {outer_variable}")
+
+outer_function()
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Inside inner_function: I am also a local variable
+Inside inner_function accessing outer_variable: I am a local variable
+Outside inner_function: I am a local variable
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-map-function">What is a Python map() Function?</h2>
+
+
+
+<p>The Python <strong>map() </strong>function will return the list of results after providing the given function to every item of the iterable.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using map() function
+numbers = &#91;1, 2, 3, 4, 5]
+
+# Define a function to square a number
+def square(x):
+    return x ** 2
+
+# Use map() to apply the square function to each element in the list
+squared_numbers = map(square, numbers)
+
+# Output
+print(f"Original numbers: {numbers}")
+print(f"Squared numbers: {list(squared_numbers)}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original numbers: &#91;1, 2, 3, 4, 5]
+Squared numbers: &#91;1, 4, 9, 16, 25]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-memory-view-function">What is the Python memory view() Function?</h2>
+
+
+
+<p>The Python <strong>memory view()</strong> function will return the memory view of the given argument.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using memoryview() function
+byte_array = bytearray(b"Hello, Memory View!")
+
+# Create a memory view object
+memory_view = memoryview(byte_array)
+
+# Output
+print(f"Original byte array: {byte_array}")
+print(f"Memory view object: {memory_view}")
+print(f"Characters in memory view: {list(memory_view)}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original byte array: bytearray(b'Hello, Memory View!')
+Memory view object: &lt;memory at ...&gt;
+Characters in memory view: &#91;72, 101, 108, 108, 111, 44, 32, 77, 101, 109, 111, 114, 121, 32, 86, 105, 101, 119, 33]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-object">What is a Python object()?</h2>
+
+
+
+<p>The Python <strong>object() </strong>will return the empty object. Hence, it will act as a base for the classes and carry the built-in properties and the methods that have a default for all the classes.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using object() function
+new_object = object()
+
+# Output
+print(f"Type of new_object: {type(new_object)}")
+print(f"String representation of new_object: {new_object}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Type of new_object: &lt;class 'object'&gt;
+String representation of new_object: &lt;object object at 0x...&gt;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-open-function">What is the Python open() Function?</h2>
+
+
+
+<p>The Python <strong>open() </strong>Function will function to open the file and will return the corresponding file object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using open() function
+file_path = "example.txt"
+
+# Writing to a file
+with open(file_path, "w") as file:
+    file.write("Hello, Python!")
+
+# Reading from the file
+with open(file_path, "r") as file:
+    content = file.read()
+
+# Output
+print(f"Content of the file '{file_path}': {content}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Content of the file 'example.txt': Hello, Python!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-chr-function">What is Python chr() Function?</h2>
+
+
+
+<p>The Python <strong>chr() </strong>Function will operate to get the string that will indicate a character and that contains the Unicode code integer. The function will include the integer argument and will show the error if it goes beyond the specified range.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using chr() function with multiple ASCII codes
+ascii_codes = &#91;65, 97, 49, 120]  # ASCII codes for 'A', 'a', '1', 'x'
+
+# Convert ASCII codes to characters
+characters = &#91;chr(code) for code in ascii_codes]
+
+# Output
+for code, char in zip(ascii_codes, characters):
+    print(f"The character corresponding to ASCII code {code} is: {char}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The character corresponding to ASCII code 65 is: A
+The character corresponding to ASCII code 97 is: a
+The character corresponding to ASCII code 49 is: 1
+The character corresponding to ASCII code 120 is: x
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-complex-function">What is the Python complex () function?</h2>
+
+
+
+<p>The Python <strong>complex() </strong>function will convert the numbers or strings into the complex number. Hence, this method will have two optional parameters and will return with the complex numbers</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using complex() function
+real_part = 2.5
+imaginary_part = -1
+
+# Create a complex number
+complex_number = complex(real_part, imaginary_part)
+
+# Output
+print(f"The complex number is: {complex_number}")
+print(f"Real part: {complex_number.real}")
+print(f"Imaginary part: {complex_number.imag}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The complex number is: (2.5-1j)
+Real part: 2.5
+Imaginary part: -1.0
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-delattr-function">What is the Python delattr () Function?</h2>
+
+
+
+<p>The Python <strong>delattr() </strong>function will delete the attribute from the class. Thus, it will take the two parameters. Initially, it will have an object of the class and secondly, it will have the attribute which is needed to be deleted. Thus, after deleting the attribute, it won&#8217;t be part of the class and will show an error if it has a class object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using delattr() function
+class Person:
+    name = "Alice"
+    age = 25
+
+# Create an instance of the Person class
+person = Person()
+
+# Output before using delattr()
+print(f"Before using delattr(): {person.__dict__}")
+
+# Delete the 'age' attribute using delattr()
+delattr(person, 'age')
+
+# Output after using delattr()
+print(f"After using delattr(): {person.__dict__}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Before using delattr(): {'name': 'Alice', 'age': 25}
+After using delattr(): {'name': 'Alice'}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-dir-function">What is the Python dir() Function?</h2>
+
+
+
+<p>The<strong> dir() </strong>function in Python gives you a list of attributes (like variables or methods) that an object has. If an object has a special method called __dir__(), Python will use it to get the list of attributes.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>class CustomObject:
+    def __dir__(self):
+        # Custom method to specify attributes
+        return &#91;'custom_attr1', 'custom_attr2']
+
+# Create an instance of CustomObject
+custom_obj = CustomObject()
+
+# Use dir() to get the list of attributes
+attributes = dir(custom_obj)
+
+# Output
+print(f"List of attributes using dir(): {attributes}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>List of attributes using dir(): &#91;'__class__', '__delattr__', '__dict__', '__dir__', '__doc__',
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-divmod-function">What is the Python divmod () Function?</h2>
+
+
+
+<p>The Python <strong>divmod()</strong> function will return with the remainder and the quotient of the two numbers. So, the function will have the two numeric arguments and will get the output as a tuple.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using divmod() function
+dividend = 20
+divisor = 3
+
+# Get the quotient and remainder using divmod()
+quotient, remainder = divmod(dividend, divisor)
+
+# Output
+print(f"Dividend: {dividend}")
+print(f"Divisor: {divisor}")
+print(f"Quotient and remainder: {quotient}, {remainder}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Dividend: 20
+Divisor: 3
+Quotient and remainder: 6, 2
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-enumerate-function">What is the Python enumerate () Function?</h2>
+
+
+
+<p>The Python<strong> enumerate()</strong> function will return with the enumerated object. Hence, it has two parameters initially, the sequence of elements, and the second consists of the start index of the sequence. So, the elements in the sequence will either be through the loop or the next() method. </p>
+
+
+
+<pre class="wp-block-code"><code># Example using enumerate() function
+fruits = &#91;'apple', 'banana', 'orange', 'grape']
+
+# Enumerate the list of fruits starting from index 1
+enumerated_fruits = enumerate(fruits, start=1)
+
+# Output using a loop
+print("Enumerated fruits using a loop:")
+for index, fruit in enumerated_fruits:
+    print(f"Index {index}: {fruit}")
+
+# Output using list comprehension
+enumerated_fruits = enumerate(fruits, start=1)  # Resetting for list comprehension
+list_output = &#91;(index, fruit) for index, fruit in enumerated_fruits]
+print("\nEnumerated fruits using list comprehension:")
+print(list_output)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enumerated fruits using a loop:
+Index 1: apple
+Index 2: banana
+Index 3: orange
+Index 4: grape
+
+Enumerated fruits using list comprehension:
+&#91;(1, 'apple'), (2, 'banana'), (3, 'orange'), (4, 'grape')]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-dict">What is Python dict?</h2>
+
+
+
+<p>Python<strong> dict ()</strong>acts as a constructor and will make the dictionary.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using dict
+student = {
+    'name': 'Alice',
+    'age': 18,
+    'grade': 'A',
+    'subjects': &#91;'Math', 'Science', 'English']
+}
+
+# Output
+print("Student Information:")
+print(f"Name: {student&#91;'name']}")
+print(f"Age: {student&#91;'age']}")
+print(f"Grade: {student&#91;'grade']}")
+print(f"Subjects: {', '.join(student&#91;'subjects'])}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Student Information:
+Name: Alice
+Age: 18
+Grade: A
+Subjects: Math, Science, English
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-filter-function">What is the Python filter() Function?</h2>
+
+
+
+<p>The <strong>filter()</strong> function in Python helps us pick specific elements from a group of items. It needs two things to work: a rule (function) and a bunch of things to filter (iterable, like a list). The function checks each item and keeps only the ones that follow the rule.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using filter() function
+def is_even(num):
+    return num % 2 == 0
+
+numbers = &#91;1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Use filter() to get even numbers
+even_numbers = filter(is_even, numbers)
+
+# Output
+print("Original numbers:", numbers)
+print("Filtered even numbers:", list(even_numbers))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original numbers: &#91;1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Filtered even numbers: &#91;2, 4, 6, 8, 10]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-hash-function">What is a Python hash() Function?</h2>
+
+
+
+<p>The Python <strong>hash()</strong> function will return the value of an object. Hence, this Python will evaluate the hash value with the hash algorithm. So, the hash values are the integers and will function to compare the dictionary keys during the dictionary lookup. </p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using hash() function
+string_value = "Hello, Python!"
+integer_value = 42
+float_value = 3.14
+
+# Get the hash values
+hash_string = hash(string_value)
+hash_integer = hash(integer_value)
+hash_float = hash(float_value)
+
+# Output
+print(f"The original string: {string_value}")
+print(f"The hash value for the string: {hash_string}")
+
+print(f"\nThe original integer: {integer_value}")
+print(f"The hash value for the integer: {hash_integer}")
+
+print(f"\nThe original float: {float_value}")
+print(f"The hash value for the float: {hash_float}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The original string: Hello, Python!
+The hash value for the string: -9077442383218711455
+
+The original integer: 42
+The hash value for the integer: 42
+
+The original float: 3.14
+The hash value for the float: 1152921504606846979
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-help-function">What is the Python help() Function?</h2>
+
+
+
+<p>The Python <strong>help() </strong>function will work to get help from the related object and will be passed on during the call. However, it will need an optional parameter for returning the help information. Whereas, if there is no help provided, then the  Python help console will be displayed. </p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example function
+def greet(name):
+    """
+    This function greets the person with the given name.
+
+    Parameters:
+    name (str): The name of the person to greet.
+
+    Returns:
+    str: A greeting message.
+    """
+    return f"Hello, {name}! Welcome!"
+
+# Using the help function to get information about the greet function
+help(greet)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Help on function greet in module __main__:
+
+greet(name)
+    This function greets the person with the given name.
+
+    Parameters:
+    name (str): The name of the person to greet.
+
+    Returns:
+    str: A greeting message.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-min-function">What is Python min() Function?</h2>
+
+
+
+<p>The Python<strong> min()  </strong>will function to receive the smallest element from the elements. Hence, it takes two arguments. Thus, the first consists of the elements that are grouped and the second has a key in it.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using min() function
+numbers = &#91;5, 3, 8, 2, 7]
+
+# Using min() to find the minimum value in the list
+minimum_value = min(numbers)
+
+# Displaying the result
+print("List of numbers:", numbers)
+print("Minimum value:", minimum_value)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>List of numbers: &#91;5, 3, 8, 2, 7]
+Minimum value: 2
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-set-function">What is the Python set () Function?</h2>
+
+
+
+<p>The<strong> set ()</strong> function is referred to as the built-in class and hence, this function consists of the constructor of this class. So, it will make a new set with the elements that are passed during the call. Hence, it will take an iterable object which will act as an argument and then return as a new set object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using set() function
+fruits_list = &#91;'apple', 'orange', 'banana', 'apple', 'kiwi']
+
+# Using set() to create a set from the list
+fruits_set = set(fruits_list)
+
+# Displaying the result
+print("List of fruits:", fruits_list)
+print("Set of fruits:", fruits_set)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>List of fruits: &#91;'apple', 'orange', 'banana', 'apple', 'kiwi']
+Set of fruits: {'orange', 'kiwi', 'apple', 'banana'}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-hex-function">What is a Python hex() Function?</h2>
+
+
+
+<p>The Python <strong>hex()</strong> function will function to create the hex value of the integer argument. So, it will take an integer argument and then return with the integer that will be turned into the hexadecimal string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using hex() function
+decimal_number = 255
+
+# Using hex() to convert the decimal number to hexadecimal
+hexadecimal_string = hex(decimal_number)
+
+# Displaying the result
+print("Decimal number:", decimal_number)
+print("Hexadecimal representation:", hexadecimal_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Decimal number: 255
+Hexadecimal representation: 0xff
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-id-function">What is Python id() Function?</h2>
+
+
+
+<p>The Python<strong> id()</strong> function will return with the identity of the object. This is referred to as a unique integer.  This function will take an argument as an object and will return the unique integer number that will stand for the identity. </p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using id() function
+value1 = 42
+value2 = "Hello, World!"
+
+# Displaying the identity of the objects
+print("Identity of value1:", id(value1))
+print("Identity of value2:", id(value2))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Identity of value1: 140710617731840
+Identity of value2: 140710603225904
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-setattr-function">What is the Python setattr () Function?</h2>
+
+
+
+<p>This Python <strong>set attr () </strong>will function to put a value to the object attribute. So, it will take three arguments such as object, string, and arbitrary value, and won&#8217;t return any.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using setattr() function
+class Person:
+    pass
+
+# Creating an instance of the Person class
+person_obj = Person()
+
+# Using setattr() to set attributes on the object
+setattr(person_obj, 'name', 'John Doe')
+setattr(person_obj, 'age', 30)
+
+# Displaying the attributes
+print("Person's name:", getattr(person_obj, 'name'))
+print("Person's age:", getattr(person_obj, 'age'))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Person's name: John Doe
+Person's age: 30
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-pythons-next-function">What is Python&#8217;s next() Function?</h2>
+
+
+
+<p>The Python <strong>next() </strong>function will get the next item from the collection. So, it has two arguments such as iterator and the default value . Thus, it will return the element.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using next() function
+numbers = iter(&#91;1, 2, 3, 4, 5])
+
+# Using next() to get the next item from the iterator
+next_number = next(numbers)
+
+# Displaying the result
+print("Next number:", next_number)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Next number: 1
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-input-function">What is the Python input() Function?</h2>
+
+
+
+<p>The Python<strong> input()</strong> function will get the input from the user. Hence, it will ask for the user&#8217;s input and then read the line. Hence, after reading the data, it will turn the string and will return it. It will detect <strong>EOFError </strong>when the EOF is read.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using input() function
+user_name = input("Enter your name: ")
+
+# Displaying the user input
+print("Hello, " + user_name + "! Welcome!")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter your name: John
+Hello, John! Welcome!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-int-function">What is Python int() Function?</h2>
+
+
+
+<p>Python <strong>int()</strong> function will receive an integer value. Thus, it will return with the expression which will be turned into the integer number. So, if the argument has a floating point and will be turned the number into the long type.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using int() function
+numeric_string = "42"
+
+# Using int() to convert the string to an integer
+numeric_value = int(numeric_string)
+
+# Displaying the result
+print("Original string:", numeric_string)
+print("Converted integer:", numeric_value)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original string: 42
+Converted integer: 42
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-isinstance-function">What is a Python isinstance () Function?</h2>
+
+
+
+<p>The Python <strong>isinstance()</strong> function will monitor if the object is an instance of the class. But, if the object is from the class and thus it will come true. Or else, it will come false. Additionally, it will return true when the class is a subclass.</p>
+
+
+
+<p>Whereas,  the isinstance will have two arguments such as object and class info.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using isinstance() function
+value = 42
+
+# Checking if the value is an instance of the int class
+is_int_instance = isinstance(value, int)
+
+# Displaying the result
+print("Value:", value)
+print("Is an instance of int:", is_int_instance)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Value: 42
+Is an instance of int: True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-oct-function">What is Python oct() Function?</h2>
+
+
+
+<p>The Python <strong>oct()  </strong>function will help to convert the octal value of the integer number. So, this method will take an argument and then return with the integer.  It will be turned into the octal string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using oct() function
+decimal_number = 42
+
+# Using oct() to convert the decimal number to octal
+octal_representation = oct(decimal_number)
+
+# Displaying the result
+print("Decimal number:", decimal_number)
+print("Octal representation:", octal_representation)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Decimal number: 42
+Octal representation: 0o52
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-ord-function">What is the Python ord() Function?</h2>
+
+
+
+<p>The <strong>ord()</strong> function in Python helps to return the integer which will stand for the Unicode character.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using ord() function
+character = 'A'
+
+# Using ord() to get the Unicode code point of the character
+unicode_code_point = ord(character)
+
+# Displaying the result
+print("Character:", character)
+print("Unicode code point:", unicode_code_point)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Character: A
+Unicode code point: 65</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-pow-function">What is the Python Pow () Function?</h2>
+
+
+
+<p>The<strong> pow<code>()</code> </strong>function in Python helps us find the result when a number is raised to a power.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using pow() function
+base = 2
+exponent = 3
+
+# Using pow() to find the result of 2 raised to the power of 3
+result = pow(base, exponent)
+
+# Displaying the result
+print(f"{base} to the power of {exponent} is: {result}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>
+2 to the power of 3 is: 8
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-print-function">What is the Python  Print () Function?</h2>
+
+
+
+<p>The Python<strong> print() </strong>will help to print the given object to the screen.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using print() function
+name = "John"
+age = 25
+
+# Using print() to display information
+print("Name:", name)
+print("Age:", age)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Name: John
+Age: 25
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-range-function">What is the Python range () Function?</h2>
+
+
+
+<p>The Python<strong> range()</strong> function will help to return the immutable sequence of the numbers which begin from 0 by default, that will added by 1 and terminated at the specified number.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using range() function
+# Generate a sequence of numbers from 0 to 4 (excluding 5)
+numbers_sequence = range(5)
+
+# Displaying the result
+print("Generated sequence:", list(numbers_sequence))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Generated sequence: &#91;0, 1, 2, 3, 4]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-reversed-function">What is the Python reversed() Function?</h2>
+
+
+
+<p>The <strong>reversed() </strong>function will help to return the reversed iterator of the given sequence.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using reversed() directly in a loop
+for num in reversed(&#91;1, 2, 3, 4, 5]):
+    print(num, end=' ')
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>5 4 3 2 1
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-round-function">What is a Python round Function?</h2>
+
+
+
+<p>The Python<strong> round()</strong> function will allow us to round off the digits of the number and will return the floating point number.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using round() function
+original_number = 3.14159
+
+# Using round() to round the number to 2 decimal places
+rounded_number = round(original_number, 2)
+
+# Displaying the result
+print("Original number:", original_number)
+print("Rounded number:", rounded_number)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original number: 3.14159
+Rounded number: 3.14
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-issubclass-function">What is Python issubclass () Function?</h2>
+
+
+
+<p>The Python<strong> issubclass () </strong>function will allow us to return true if the<a href="https://www.skillvertex.com/blog/keyword-only-argument-in-python/" data-type="post" data-id="7290"> object argument</a> is referred to as the subclass of the second class.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example with multiple inheritance
+class Mammal:
+    pass
+
+class Canine(Animal, Mammal):
+    pass
+
+# Checking if Canine is a subclass of both Animal and Mammal
+is_canine_subclass = issubclass(Canine, (Animal, Mammal))
+
+# Displaying the result
+print("Is Canine a subclass of Animal and Mammal?", is_canine_subclass)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Is Canine a subclass of Animal and Mammal? True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-str">What is Python str?</h2>
+
+
+
+<p>The Python <strong>str ()</strong> function will enable us to turn the specified value into the string.</p>
+
+
+
+<pre class="wp-block-code"><code># Example with a list
+my_list = &#91;1, 2, 3]
+
+# Using str() to convert the list to a string
+list_representation = str(my_list)
+
+# Displaying the result
+print("Original list:", my_list)
+print("String representation of the list:", list_representation)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original list: &#91;1, 2, 3]
+String representation of the list: &#91;1, 2, 3]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-tuple-function">What is the Python tuple() Function?</h2>
+
+
+
+<p>The Python<strong> tuple()</strong> function will allow us to make the tuple object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example of creating and using a tuple
+my_tuple = (1, 'apple', 3.14, True)
+
+# Displaying the tuple
+print("Tuple:", my_tuple)
+
+# Accessing elements in a tuple
+print("First element:", my_tuple&#91;0])
+print("Second element:", my_tuple&#91;1])
+
+# Slicing a tuple
+subset_tuple = my_tuple&#91;1:3]
+print("Subset of the tuple:", subset_tuple)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Tuple: (1, 'apple', 3.14, True)
+First element: 1
+Second element: apple
+Subset of the tuple: ('apple', 3.14)
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-type-function">What is Python type() Function?</h2>
+
+
+
+<p>The Python <strong>type ()</strong>  function will allow us to return the type of the specified object when the single argument is passed to the type () built-in function.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using type() function
+value1 = 42
+value2 = 'Hello, World!'
+value3 = &#91;1, 2, 3]
+value4 = {'a': 1, 'b': 2}
+
+# Using type() to get the type of each object
+type_of_value1 = type(value1)
+type_of_value2 = type(value2)
+type_of_value3 = type(value3)
+type_of_value4 = type(value4)
+
+# Displaying the result
+print("Type of value1:", type_of_value1)
+print("Type of value2:", type_of_value2)
+print("Type of value3:", type_of_value3)
+print("Type of value4:", type_of_value4)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Type of value1: &lt;class 'int'&gt;
+Type of value2: &lt;class 'str'&gt;
+Type of value3: &lt;class 'list'&gt;
+Type of value4: &lt;class 'dict'&gt;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-vars-function">What is the  Python vars() Function?</h2>
+
+
+
+<p>The Python<strong> vars() </strong> function will allow us to return the __dict__ attribute of the particular object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using vars() function
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Creating an instance of the Person class
+person_object = Person(name="John", age=25)
+
+# Using vars() to get the attributes and their values
+attributes_dict = vars(person_object)
+
+# Displaying the result
+print("Attributes and values:", attributes_dict)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Attributes and values: {'name': 'John', 'age': 25}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-zip-function">What is the Python zip() Function?</h2>
+
+
+
+<p>The Python <strong>zip() </strong>function will help to return the zip object and thus will analyze the similar index of the multiple containers, Hence, it will take the iterable that can create an iterator depending on the iterable passed.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using zip() function
+names = &#91;'Alice', 'Bob', 'Charlie']
+ages = &#91;25, 30, 22]
+
+# Using zip() to combine two lists
+zipped_data = zip(names, ages)
+
+# Converting the result to a list for better visualization
+result_list = list(zipped_data)
+
+# Displaying the result
+print("Original lists:")
+print("Names:", names)
+print("Ages:", ages)
+print("\nZipped result:")
+print(result_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original lists:
+Names: &#91;'Alice', 'Bob', 'Charlie']
+Ages: &#91;25, 30, 22]
+
+Zipped result:
+&#91;('Alice', 25), ('Bob', 30), ('Charlie', 22)]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>Python&#8217;s built-in functions are fundamental tools that simplify coding tasks and are crucial for any programmer. This article will improve your skills and knowledge of the built-in functions.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-built-in-functions-faq">Python Built-in Functions -FAQ</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1709189329717" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are the most used Python inbuilt functions?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The Python inbuilt function  include print(), abs(), round(), min(), max(), sorted(), sum(), and len().</p>
+
+</div>
+</div>
+<div id="faq-question-1709189337022" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.How many structures are there in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The basic Python data structures in Python are list, set, tuples, and dictionary.</p>
+
+</div>
+</div>
+<div id="faq-question-1709189345861" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.What are the 4 types of functions in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Those 4  types of functions are built-in Functions, User-defined Functions, Recursive Functions, and Lambda Functions.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-built-in-functions/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>How To Pass A 2D Array As A Parameter In C?How To Pass A 2D Array As A Parameter In C?</title>
+	<atom:link href="https://www.skillvertex.com/tag/how-to-pass-a-2d-array-as-a-parameter-in-chow-to-pass-a-2d-array-as-a-parameter-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:05:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>How To Pass A 2D Array As A Parameter In C?How To Pass A 2D Array As A Parameter In C?</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>How To Pass A 2D Array As A Parameter In C?</title>
+		<link>https://www.skillvertex.com/blog/how-to-pass-a-2d-array-as-a-parameter-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/how-to-pass-a-2d-array-as-a-parameter-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:05:51 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[How To Pass A 2D Array As A Parameter In C?How To Pass A 2D Array As A Parameter In C?]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2627</guid>
+
+					<description><![CDATA[How To Pass A 2D Array As A Parameter In C? Passing multidimensional arrays, such as 2D arrays, to functions in C and C++ can indeed be a bit more complex than passing one-dimensional arrays or pointers. The reason for this is that in C and C++, the size of the second (and subsequent) dimensions ... <a title="How To Pass A 2D Array As A Parameter In C?" class="read-more" href="https://www.skillvertex.com/blog/how-to-pass-a-2d-array-as-a-parameter-in-c/" aria-label="More on How To Pass A 2D Array As A Parameter In C?">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#how-to-pass-a-2-d-array-as-a-parameter-in-c">How To Pass A 2D Array As A Parameter In C?</a></li><li ><a href="#1-when-both-dimensions-are-available-globally-either-as-a-macro-or-as-a-global-constant">1) When both dimensions are available globally (either as a macro or as a global constant). </a></li><li ><a href="#2-when-only-the-second-dimension-is-available-globally-either-as-a-macro-or-as-a-global-constant">2) When only the second dimension is available globally (either as a macro or as a global constant)</a></li><li ><a href="#3-if-the-compiler-is-c-99-compatible">3) If the compiler is C99 compatible </a></li><li ><a href="#4-using-a-single-pointer">4) Using a single pointer </a></li><li ><a href="#5-using-the-concept-of-a-pointer-to-an-array">5) Using the concept of a pointer to an array</a></li><li ><a href="#faq-how-to-pass-a-2-d-array-as-a-parameter-in-c">FAQ- How To Pass A 2D Array As A Parameter In C?</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="how-to-pass-a-2-d-array-as-a-parameter-in-c">How To Pass A 2D Array As A Parameter In C?</h2>
+
+
+
+<p>Passing multidimensional arrays, such as 2D arrays, to functions in C and C++ can indeed be a bit more complex than passing one-dimensional arrays or pointers. The reason for this is that in C and C++, the size of the second (and subsequent) dimensions must be specified, while the size of the first dimension can be left unspecified.</p>
+
+
+
+<h2 class="wp-block-heading" id="1-when-both-dimensions-are-available-globally-either-as-a-macro-or-as-a-global-constant">1) When both dimensions are available globally (either as a macro or as a global constant).&nbsp;</h2>
+
+
+
+<pre class="wp-block-code"><code>
+#include &lt;stdio.h&gt;
+const int M = 3;
+const int N = 3;
+ 
+void print(int arr&#91;M]&#91;N])
+{
+    int i, j;
+    for (i = 0; i &lt; M; i++)
+      for (j = 0; j &lt; N; j++)
+        printf("%d ", arr&#91;i]&#91;j]);
+}
+ 
+int main()
+{
+    int arr&#91;]&#91;3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    print(arr);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 2 3 4 5 6 7 8 9 
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="2-when-only-the-second-dimension-is-available-globally-either-as-a-macro-or-as-a-global-constant">2) When only the second dimension is available globally (either as a macro or as a global constant)</h2>
+
+
+
+<pre class="wp-block-code"><code>
+#include &lt;stdio.h&gt;
+const int N = 3;
+ 
+void print(int arr&#91;]&#91;N], int m)
+{
+    int i, j;
+    for (i = 0; i &lt; m; i++)
+      for (j = 0; j &lt; N; j++)
+        printf("%d ", arr&#91;i]&#91;j]);
+}
+ 
+int main()
+{
+    int arr&#91;]&#91;3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    print(arr, 3);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 2 3 4 5 6 7 8 9 </code></pre>
+
+
+
+<h2 class="wp-block-heading" id="3-if-the-compiler-is-c-99-compatible">3) If the compiler is C99 compatible&nbsp;</h2>
+
+
+
+<pre class="wp-block-code"><code>
+
+// The following program works only if your compiler is C99 compatible.
+#include &lt;stdio.h&gt;
+ 
+// n must be passed before the 2D array
+void print(int m, int n, int arr&#91;]&#91;n])
+{
+    int i, j;
+    for (i = 0; i &lt; m; i++)
+      for (j = 0; j &lt; n; j++)
+        printf("%d ", arr&#91;i]&#91;j]);
+}
+ 
+int main()
+{
+    int arr&#91;]&#91;3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int m = 3, n = 3;
+    print(m, n, arr);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 2 3 4 5 6 7 8 9 
+</code></pre>
+
+
+
+<p>Note: if the compiler is not C99 compatible, hence, we can use any of the listed methods to pass the variable-sized 2d array.</p>
+
+
+
+<h2 class="wp-block-heading" id="4-using-a-single-pointer">4) Using a single pointer&nbsp;</h2>
+
+
+
+<p>We need to typecast the 2D  array while passing to function.</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt;
+void print(int *arr, int m, int n)
+{
+    int i, j;
+    for (i = 0; i &lt; m; i++)
+      for (j = 0; j &lt; n; j++)
+        printf("%d ", *((arr+i*n) + j));
+}
+ 
+int main()
+{
+    int arr&#91;]&#91;3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int m = 3, n = 3;
+ 
+    // We can also use "print(&amp;arr&#91;0]&#91;0], m, n);"
+    print((int *)arr, m, n);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 2 3 4 5 6 7 8 9 
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="5-using-the-concept-of-a-pointer-to-an-array">5) Using the concept of a pointer to an array</h2>
+
+
+
+<pre class="wp-block-code"><code>
+#include &lt;stdio.h&gt;
+const int M = 3;
+ 
+ 
+void print(int (*arr)&#91;M])
+{
+    int i, j;
+    for (i = 0; i &lt; M; i++)
+    for (j = 0; j &lt; M; j++)
+        printf("%d ", arr&#91;i]&#91;j]);
+}
+ 
+int main()
+{
+    int arr&#91;]&#91;3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    print(arr);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 2 3 4 5 6 7 8 9 
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-how-to-pass-a-2-d-array-as-a-parameter-in-c">FAQ- How To Pass A 2D Array As A Parameter In C?</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697006530919" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. Can you pass a 2D array as a parameter in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, you can pass a 2D array to a function in two ways: by passing the entire array as an argument or by passing the array as a dynamic pointer to the function. The first method involves specifying the size of the second dimension while leaving the first dimension unspecified. The second method uses a dynamic pointer and is suitable for dynamically allocated 2D arrays.</p>
+
+</div>
+</div>
+<div id="faq-question-1697006538178" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. How to go through a 2D array in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. To access an element of a two-dimensional array, you need to provide both the row and column indices. In the given statement, it accesses the value of the element located in the first row (index 0) and the third column (index 2) of the &#8220;matrix&#8221; array.</p>
+
+</div>
+</div>
+<div id="faq-question-1697006544856" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the syntax for 2d array?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.  The syntax Of 2d Array is <strong>data_type[][] array_name;</strong> . In Java, to create a two-dimensional array, you specify the data type of the elements to be stored in the array, followed by two pairs of square brackets, and then provide the name of the array.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/how-to-pass-a-2d-array-as-a-parameter-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Dot (.) Operator In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/dot-operator-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:24:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Dot (.) Operator In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Dot (.) Operator In C</title>
+		<link>https://www.skillvertex.com/blog/dot-operator-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/dot-operator-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:24:52 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Dot (.) Operator In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2775</guid>
+
+					<description><![CDATA[Dot (.) Operator In C The dot (.) operator, also known as the direct member access operator, is used for direct member selection when working with variables of type struct and union. It&#8217;s a binary operator that allows you to access and extract the values of the members within structures and union Syntax Example of ... <a title="Dot (.) Operator In C" class="read-more" href="https://www.skillvertex.com/blog/dot-operator-in-c/" aria-label="More on Dot (.) Operator In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#dot-operator-in-c">Dot (.) Operator In C</a></li><li ><a href="#dot-operator-with-nested-structures-and-unions">Dot(.) operator with Nested Structures and Unions</a></li><li ><a href="#operator-precedence-of-dot-operator">Operator Precedence of dot (.) Operator</a></li><li ><a href="#faq-dot-operator-in-c">FAQ- Dot (.) Operator In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="dot-operator-in-c">Dot (.) Operator In C</h2>
+
+
+
+<p>The dot (.) operator, also known as the direct member access operator, is used for direct member selection when working with variables of type <code>struct</code> and <code>union</code>. It&#8217;s a binary operator that allows you to access and extract the values of the members within structures and union</p>
+
+
+
+<p><strong>Syntax</strong></p>
+
+
+
+<pre class="wp-block-code"><code>variable_name.member;
+</code></pre>
+
+
+
+<ul class="wp-block-list">
+<li><strong>variable_name</strong>: This refers to an instance of a structure or a union. It&#8217;s a specific variable that represents the entire structure or union.</li>
+
+
+
+<li><strong>member</strong>: This refers to an individual component or field associated with the created structure or union. It&#8217;s one of the parts that make up the structure or union and can be accessed using the dot (.) operator.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="example-of-dot-operator">Example of dot(.) Operator</h3>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C program to demonstrate the use of dot operator 
+#include &lt;stdio.h&gt; 
+  
+struct str { 
+    int mem; 
+}; 
+  
+union un { 
+    int mem1; 
+    char mem2; 
+}; 
+  
+int main() 
+{ 
+    struct str str_name = { 12}; 
+    union un un_name; 
+  
+    // accessing union member 
+    un_name.mem1 = 9; 
+    printf("Union Member 1: %d\n", un_name.mem1); 
+  
+    // accessing structure member 
+    printf("Structure Member: %d", str_name.mem); 
+  
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Union Member 1: 9
+Structure Member: 12</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="dot-operator-with-nested-structures-and-unions">Dot(.) operator with Nested Structures and Unions</h2>
+
+
+
+<p>The Dot operator is also used to get the members of nested structure.</p>
+
+
+
+<p><strong>Syntax with Nested Struct</strong></p>
+
+
+
+<pre class="wp-block-code"><code>variable_name.member1.member2;
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C program to illustrate the use of dot operator for 
+// nested structure 
+#include &lt;stdio.h&gt; 
+  
+struct base { 
+    struct child { 
+        int i; 
+    } child; 
+}; 
+  
+int main() 
+{ 
+    struct base s_name = { 12 }; 
+      
+      // accessing nested structure member using dot operator 
+    printf("Nested Structure Variable: %d", s_name.child.i); 
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Nested Structure Variable: 12
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="operator-precedence-of-dot-operator">Operator Precedence of dot (.) Operator</h2>
+
+
+
+<p> In the C language, the dot (.) operator has the highest operator precedence, which means it is evaluated before other operators. Additionally, its associativity is from left to right, meaning that if you have a sequence of dot operators in an expression, they are evaluated from left to right. This ensures that member access is performed in the expected order.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-dot-operator-in-c">FAQ- Dot (.) Operator In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697629584751" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is a dot operator?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. (dot) operator is <strong>used to access class, structure, or union members</strong>. The member is specified by a postfix expression, followed by a . (dot) operator, followed by a possibly qualified identifier or a pseudo-destructor name. (A pseudo-destructor is a destructor of a nonclass type.)</p>
+
+</div>
+</div>
+<div id="faq-question-1697629594093" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the example of dot operator?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The member access (dot) operator (&#8220;.&#8221;) is indeed commonly used to access fields or call methods on an object in programming languages like C#. In the code you provided, you create an instance of an object, then use the dot operator to call the <code>ToString()</code> method on that object. This is a fundamental part of object-oriented programming and allows you to interact with objects by accessing their members and invoking their methods.</p>
+
+</div>
+</div>
+<div id="faq-question-1697629602338" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.Is Dot a character in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Dot is member access operator</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/dot-operator-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

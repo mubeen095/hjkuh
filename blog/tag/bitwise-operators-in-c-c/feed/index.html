@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Bitwise Operators In C/C++</title>
+	<atom:link href="https://www.skillvertex.com/tag/bitwise-operators-in-c-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 24 Jan 2024 10:23:39 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Bitwise Operators In C/C++</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Bitwise Operators In C/C++</title>
+		<link>https://www.skillvertex.com/blog/bitwise-operators-in-c-c/</link>
+					<comments>https://www.skillvertex.com/blog/bitwise-operators-in-c-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 24 Jan 2024 10:23:39 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Bitwise Operators In C/C++]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2037</guid>
+
+					<description><![CDATA[Bitwise Operators In C/C++ Bitwise operators in C/C++ are tools for working with individual bits in data. They might not be as famous as other operators, but they&#8217;re essential for tasks like making code more efficient or controlling hardware. In this guide, we&#8217;ll explain the basics of bitwise operators, show you how they&#8217;re used in ... <a title="Bitwise Operators In C/C++" class="read-more" href="https://www.skillvertex.com/blog/bitwise-operators-in-c-c/" aria-label="More on Bitwise Operators In C/C++">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#bitwise-operators-in-c-c">Bitwise Operators In C/C++</a></li><li ><a href="#what-is-bitwise-operators">What is Bitwise Operators</a></li><li ><a href="#example-of-bitwise-operators-in-c">Example of Bitwise Operators in C</a></li><li ><a href="#faq-bitwise-operators-in-c-c">FAQ &#8211; Bitwise Operators In C/C++</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="bitwise-operators-in-c-c">Bitwise Operators In C/C++</h2>
+
+
+
+<p>Bitwise operators in C/C++ are tools for working with individual bits in data. They might not be as famous as other operators, but they&#8217;re essential for tasks like making code more efficient or controlling hardware. In this guide, we&#8217;ll explain the basics of bitwise operators, show you how they&#8217;re used in practical situations, and teach you how to use them to solve coding problems. Whether you&#8217;re a beginner or an experienced programmer, this guide will help you understand how to use these operators effectively in C/C++.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-bitwise-operators">What is Bitwise Operators</h2>
+
+
+
+<p>In C, there are six operators known as bitwise operators, or bit operators because they operate at the bit-level. These operators are used to carry out operations on individual bits in C programming.</p>
+
+
+
+<p>In C and C++, there are six bitwise operators that work at the bit level:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>&amp; (Bitwise AND):</strong> This operator takes two numbers as operands and performs the AND operation on each bit. The result is 1 only if both corresponding bits are 1.</li>
+
+
+
+<li><strong>| (Bitwise OR):</strong> It also takes two numbers and performs the OR operation on each bit. The result is 1 if either of the two corresponding bits is 1.</li>
+
+
+
+<li><strong>^ (Bitwise XOR):</strong> This operator, taking two numbers, performs the XOR operation on each bit. The result is 1 if the two corresponding bits are different (one is 0 and the other is 1).</li>
+
+
+
+<li><strong>&lt;&lt; (Left Shift):</strong> It takes two numbers: the first operand has its bits left-shifted by the number of positions specified by the second operand.</li>
+
+
+
+<li><strong>&gt;&gt; (Right Shift):</strong> Similarly, it takes two numbers, right-shifting the bits of the first operand by the number of positions indicated by the second operand.</li>
+
+
+
+<li><strong>~ (Bitwise NOT):</strong> This operator takes a single number and inverts (flips) all its bits. All 0s become 1s, and vice versa.</li>
+</ol>
+
+
+
+<p>These bitwise operators are powerful tools for working at the binary level, which can be especially useful in tasks involving low-level programming, optimization, and manipulating individual bits within data.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-of-bitwise-operators-in-c">Example of Bitwise Operators in C</h2>
+
+
+
+<pre class="wp-block-code"><code>// C Program to demonstrate use of bitwise operators
+#include &lt;stdio.h&gt;
+int main()
+{
+    // a = 5(00000101), b = 9(00001001)
+    unsigned char a = 5, b = 9;
+ 
+    // The result is 00000001
+    printf("a = %d, b = %d\n", a, b);
+    printf("a&amp;b = %d\n", a &amp; b);
+ 
+    // The result is 00001101
+    printf("a|b = %d\n", a | b);
+ 
+    // The result is 00001100
+    printf("a^b = %d\n", a ^ b);
+ 
+    // The result is 11111010
+    printf("~a = %d\n", a = ~a);
+ 
+    // The result is 00010010
+    printf("b&lt;&lt;1 = %d\n", b &lt;&lt; 1);
+ 
+    // The result is 00000100
+    printf("b&gt;&gt;1 = %d\n", b &gt;&gt; 1);
+ 
+    return 0;
+   
+}</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>a = 5, b = 9
+a &amp; b = 1
+a | b = 13
+a ^ b = 12
+~a = -6
+b &lt;&lt; 1 = 18
+b &gt;&gt; 1 = 4</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-bitwise-operators-in-c-c">FAQ &#8211; Bitwise Operators In C/C++</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1695288761709" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. Why is bitwise &amp; operator used in C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. It compares each bit of the first operand to the corresponding bit of the second operand, and if both bits are 1, the resulting bit is set to 1. If either or both of the corresponding bits are 0, the resulting bit is set to 0. This operation effectively checks whether both bits are &#8220;on&#8221; or equal to 1, and if they are, it produces a 1 in the corresponding result bit; otherwise, it produces a 0.</p>
+
+</div>
+</div>
+<div id="faq-question-1695289023119" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. Can you do bitwise operations in C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <br />C++ offers a set of bitwise operators for performing operations on integers at the bit level. These operators include &amp; (Bitwise AND), | (Bitwise OR), ^ (Bitwise XOR), &lt;&lt; (Left Shift), >> (Right Shift), and ~ (Bitwise NOT). They are valuable for tasks involving bit manipulation, bitmasking, and binary arithmetic in low-level programming.</p>
+
+</div>
+</div>
+<div id="faq-question-1695289164392" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. How to write bitwise operator in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. It is denoted by a single ampersand sign (&amp;), and when used with two integer operands, it results in an output where the corresponding bits in both operands are checked. If both bits are 1, the output is 1; otherwise, it&#8217;s 0. This operator effectively checks if two bits are both &#8220;on&#8221; or equal to 1.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/bitwise-operators-in-c-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

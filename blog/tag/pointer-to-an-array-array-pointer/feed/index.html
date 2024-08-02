@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Pointer to an Array | Array Pointer</title>
+	<atom:link href="https://www.skillvertex.com/tag/pointer-to-an-array-array-pointer/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:21:42 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Pointer to an Array | Array Pointer</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Pointer to an Array &#124; Array Pointer</title>
+		<link>https://www.skillvertex.com/blog/pointer-to-an-array-array-pointer/</link>
+					<comments>https://www.skillvertex.com/blog/pointer-to-an-array-array-pointer/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:21:42 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Pointer to an Array | Array Pointer]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2716</guid>
+
+					<description><![CDATA[Pointer to an Array &#124; Array Pointer This type of pointer is typically referred to as a &#8220;pointer to an array.&#8221; It allows you to work with entire arrays, which can be particularly useful for managing multidimensional data structures and passing arrays as function arguments. Syntax Example To declare a pointer that can point to ... <a title="Pointer to an Array &#124; Array Pointer" class="read-more" href="https://www.skillvertex.com/blog/pointer-to-an-array-array-pointer/" aria-label="More on Pointer to an Array &#124; Array Pointer">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#pointer-to-an-array-array-pointer">Pointer to an Array | Array Pointer</a></li><li ><a href="#program-1-difference-between-pointer-to-an-integer-and-pointer-to-array-of-integers">Program 1 &#8211; Difference Between Pointer to an Integer and Pointer to Array of integers</a></li><li ><a href="#program-2-to-illustrate-the-size-of-an-array">Program 2 &#8211; To illustrate the size of an Array</a></li><li ><a href="#faq-pointer-to-an-array-array-pointer">FAQ- Pointer to an Array | Array Pointer</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="pointer-to-an-array-array-pointer">Pointer to an Array | Array Pointer</h2>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;iostream&gt;
+using namespace std;
+ 
+int main()
+{
+int arr&#91;5] = { 1, 2, 3, 4, 5 };
+int *ptr = arr;
+ 
+cout &lt;&lt;"\n"&lt;&lt; ptr;
+return 0;
+}
+ </code></pre>
+
+
+
+<p>This type of pointer is typically referred to as a &#8220;pointer to an array.&#8221; It allows you to work with entire arrays, which can be particularly useful for managing multidimensional data structures and passing arrays as function arguments.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code><strong>data_type (*var_name)&#91;size_of_array];
+</strong></code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>int (*ptr)&#91;10];
+</code></pre>
+
+
+
+<p>To declare a pointer that can point to an array of 10 integers, you should use parentheses to ensure the proper order of operations. In this case, the type of <code>ptr</code> is indeed a &#8220;pointer to an array of 10 integers,&#8221; and it&#8217;s essential to define it correctly for proper memory manipulation and data access.</p>
+
+
+
+<h2 class="wp-block-heading" id="program-1-difference-between-pointer-to-an-integer-and-pointer-to-array-of-integers">Program 1 &#8211; Difference Between Pointer to an Integer and Pointer to Array of integers</h2>
+
+
+
+<p>Whereas, the pointer points to the Oth element of the array and the pointer that pointer that points to the whole array are both different. The program below illustrates that:</p>
+
+
+
+<pre class="wp-block-code"><code>// C++ program to understand difference between 
+// pointer to an integer and pointer to an
+// array of integers. 
+#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    // Pointer to an integer
+    int *p; 
+     
+    // Pointer to an array of 5 integers
+    int (*ptr)&#91;5]; 
+    int arr&#91;5];
+     
+    // Points to 0th element of the arr.
+    p = arr;
+     
+    // Points to the whole array arr.
+    ptr = &amp;arr; 
+     
+    cout &lt;&lt; "p =" &lt;&lt; p &lt;&lt;", ptr = "&lt;&lt; ptr&lt;&lt; endl;
+    p++; 
+    ptr++;
+    cout &lt;&lt; "p =" &lt;&lt; p &lt;&lt;", ptr = "&lt;&lt; ptr&lt;&lt; endl;
+     
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>p = 0x7fff4f32fd50, ptr = 0x7fff4f32fd50
+p = 0x7fff4f32fd54, ptr = 0x7fff4f32fd64</code></pre>
+
+
+
+<p>We can analyze that p is the integer and, ptr is the pointer, to an array of 5 integers.</p>
+
+
+
+<h2 class="wp-block-heading" id="program-2-to-illustrate-the-size-of-an-array">Program 2 &#8211; To illustrate the size of an Array</h2>
+
+
+
+<p>When you dereference a pointer to an array in C, you get the base address (i.e., the address of the first element) of the array to which the pointer points. This is because the name of an array in C represents its base address. So, dereferencing a pointer to an array effectively gives you the base address of that array, allowing you to work with the array&#8217;s elements.</p>
+
+
+
+<pre class="wp-block-code"><code>// C++ program to illustrate sizes of
+// pointer of array
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+ 
+int main()
+{
+    int arr&#91;] = { 3, 5, 6, 7, 9 };
+    int *p = arr;
+    int (*ptr)&#91;5] = &amp;arr;
+     
+    cout &lt;&lt; "p = "&lt;&lt; p &lt;&lt;", ptr = " &lt;&lt; ptr &lt;&lt; endl;
+    cout &lt;&lt; "*p = "&lt;&lt; *p &lt;&lt;", *ptr = " &lt;&lt; *ptr &lt;&lt; endl;
+     
+    cout &lt;&lt; "sizeof(p) = "&lt;&lt; sizeof(p) &lt;&lt;
+            ", sizeof(*p) = " &lt;&lt; sizeof(*p) &lt;&lt; endl;
+    cout &lt;&lt; "sizeof(ptr) = "&lt;&lt; sizeof(ptr) &lt;&lt;
+        ", sizeof(*ptr) = " &lt;&lt; sizeof(*ptr) &lt;&lt; endl;
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>p = 0x7ffde1ee5010, ptr = 0x7ffde1ee5010
+*p = 3, *ptr = 0x7ffde1ee5010
+sizeof(p) = 8, sizeof(*p) = 4
+sizeof(ptr) = 8, sizeof(*ptr) = 20</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-pointer-to-an-array-array-pointer">FAQ- Pointer to an Array | Array Pointer</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697457913042" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How do you assign a pointer to an array of pointers?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The statement <code>int *pa = &amp;a[0];</code> assigns the memory address of the first element, <code>a[0]</code>, in the array <code>a</code> to the pointer, which is of type <code>int</code>. This is a common way to initialize a pointer to point to the first element of an array. It allows you to work with the array&#8217;s elements using the pointer.</p>
+
+</div>
+</div>
+<div id="faq-question-1697457921312" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. How to use pointer to pointer in an array in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. #include&lt;stdio.h><br />void main ()<br />{<br />int a = 10;<br />int *p;<br />int **pp;<br />p = &amp;a; // pointer p is pointing to the address of a.<br />pp = &amp;p; // pointer pp is a double pointer pointing to the address of pointer p</p>
+
+</div>
+</div>
+<div id="faq-question-1697457928938" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Is the ptr a pointer to an array?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <code>ptr</code> is a pointer to an entire array. When you increment it by 1, it moves to the next block of 5 elements if it&#8217;s an array of 5 elements.<br /><code>*ptr</code> is a pointer to the first element of the array. When you increment it by 1, it moves to point to the second element within the array. This is because <code>*ptr</code> is equivalent to <code>ptr[0]</code>, and incrementing it essentially accesses the next element in the array.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/pointer-to-an-array-array-pointer/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Basic Input And Output In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/basic-input-and-output-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 06:52:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Basic Input And Output In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Basic Input And Output In C</title>
+		<link>https://www.skillvertex.com/blog/basic-input-and-output-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/basic-input-and-output-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 06:52:37 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Basic Input And Output In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=1886</guid>
+
+					<description><![CDATA[Basic Input And Output In C Basic Input and Output (I/O) in the C programming language is fundamental to interacting with the user and the external world. It provides the means to receive data from the user, display information to the user, and read from or write to files. C&#8217;s I/O functions are concise yet ... <a title="Basic Input And Output In C" class="read-more" href="https://www.skillvertex.com/blog/basic-input-and-output-in-c/" aria-label="More on Basic Input And Output In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#basic-input-and-output-in-c">Basic Input And Output In C</a></li><li ><a href="#how-to-take-the-input-and-output-of-basic-types-in-c">How to take the input and output of basic types in C?</a></li><li ><a href="#how-to-take-input-and-output-of-advanced-type-in-c">How to take input and output of advanced type in C?</a></li><li ><a href="#faq-basic-input-and-output-in-c">FAQ- Basic Input And Output In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="basic-input-and-output-in-c">Basic Input And Output In C</h2>
+
+
+
+<p>Basic Input and Output (I/O) in the C programming language is fundamental to interacting with the user and the external world. It provides the means to receive data from the user, display information to the user, and read from or write to files. C&#8217;s I/O functions are concise yet powerful, making it possible to create robust command-line programs and handle file operations efficiently.</p>
+
+
+
+<p> In this exploration of Basic Input and Output in C, we will delve into the foundational concepts and functions that allow developers to handle input from the keyboard, output to the screen, and manage data in files. Understanding these principles is essential for building interactive and data-driven applications using the C language.</p>
+
+
+
+<p><strong>scanf()</strong></p>
+
+
+
+<p>In C, the <code>scanf()</code> function is used to read values from the console based on the specified data type.</p>
+
+
+
+<p>In <code>scanf("%X", &amp;variableOfXType);</code>, <code>%X</code> is indeed the format specifier in C. It&#8217;s used to specify that you are expecting hexadecimal input. However, it&#8217;s not necessarily about telling the compiler the data type of the variable; it&#8217;s more about indicating how the data should be interpreted when it&#8217;s read.</p>
+
+
+
+<ul class="wp-block-list">
+<li><code>%X</code> expects hexadecimal input, and it tells <code>scanf</code> us to convert the input to an integer using base 16 (hexadecimal).</li>
+
+
+
+<li><code>&amp;</code> is indeed the address operator in C, but it&#8217;s not changing the real value of the variable; rather, it&#8217;s providing the memory location (address) where <code>scanf</code> should store the input value.</li>
+</ul>
+
+
+
+<p>So, in your example, <code>scanf</code> reads a hexadecimal value from the user and stores it in the memory location pointed to by <code>&amp;variableOfXType</code>. It&#8217;s about converting the input data to the specified format and storing it at the given memory address.</p>
+
+
+
+<p><strong>printf()</strong></p>
+
+
+
+<p>In C, the <code>printf()</code> function is used to display (or print) values on the console screen. It takes one or more parameters, known as format specifiers, and prints them according to the format specified in the function&#8217;s argument. For example:</p>
+
+
+
+<pre class="wp-block-code"><code>int num = 42;
+printf("The value of num is: %d\n", num);</code></pre>
+
+
+
+<p>In this example, <code>%d</code> is a format specifier that indicates the integer value <code>num</code> should be inserted into the string at that position. When you run this program, it will display &#8220;The value of num is: 42&#8221; on the console screen.</p>
+
+
+
+<p><code>printf()</code> is a versatile and powerful function used for formatted output in C, allowing you to control how data is displayed and formatted.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-to-take-the-input-and-output-of-basic-types-in-c">How to take the input and output of basic types in C?</h2>
+
+
+
+<p> In C, the basic data types like int, float, and char each has specific format specifiers that should be used with functions like <code>scanf()</code> and <code>printf()</code> for input and output. </p>
+
+
+
+<ul class="wp-block-list">
+<li><code>%d</code> is used for integers (e.g., <code>int</code>).</li>
+
+
+
+<li><code>%f</code> is used for floating-point numbers (e.g., <code>float</code> or <code>double</code>).</li>
+
+
+
+<li><code>%c</code> is used for characters (e.g., <code>char</code>).</li>
+
+
+
+<li><code>%s</code> is used for strings (arrays of characters).</li>
+</ul>
+
+
+
+<p>For example, to read an integer using <code>scanf()</code>, you would use <code>%d</code>:</p>
+
+
+
+<pre class="wp-block-code"><code>int num;
+scanf("%d", &amp;num);</code></pre>
+
+
+
+<p>To print a floating-point number using <code>printf()</code>, you would use <code>%f</code>:</p>
+
+
+
+<pre class="wp-block-code"><code>float price = 19.99;
+printf("The price is: %f\n", price);</code></pre>
+
+
+
+<p>These format specifiers ensure that the data is interpreted and displayed correctly, and they are an essential part of input and output operations in C.</p>
+
+
+
+<p><strong>Integer</strong></p>
+
+
+
+<pre class="wp-block-code"><code>Input: scanf("%d", &amp;intVariable);
+Output: printf("%d", intVariable);</code></pre>
+
+
+
+<p> <strong>Float </strong></p>
+
+
+
+<pre class="wp-block-code"><code>Input: scanf("%f", &amp;floatVariable);
+Output: printf("%f", floatVariable);</code></pre>
+
+
+
+<p><strong>Character</strong></p>
+
+
+
+<pre class="wp-block-code"><code>Input: scanf("%c", &amp;charVariable);
+Output: printf("%c", charVariable);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>// C program to show input and output
+ 
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // Declare the variables
+    int num;
+    char ch;
+    float f;
+ 
+    // --- Integer ---
+ 
+    // Input the integer
+    printf("Enter the integer: ");
+    scanf("%d", &amp;num);
+ 
+    // Output the integer
+    printf("\nEntered integer is: %d", num);
+ 
+    // --- Float ---
+   
+    //For input Clearing buffer
+      while((getchar()) != '\n');
+ 
+    // Input the float
+    printf("\n\nEnter the float: ");
+    scanf("%f", &amp;f);
+ 
+    // Output the float
+printf("\nEntered float is: %f", f);
+ 
+    // --- Character ---
+ 
+    // Input the Character
+    printf("\n\nEnter the Character: ");
+    scanf("%c", &amp;ch);
+ 
+    // Output the Character
+    printf("\nEntered character is: %c", ch);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Refer to the example given above </p>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>Enter the integer: 10
+Entered integer is: 10
+
+Enter the float: 2.5
+Entered float is: 2.500000
+
+Enter the Character: A
+Entered Character is: A</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="how-to-take-input-and-output-of-advanced-type-in-c">How to take input and output of advanced type in C?</h2>
+
+
+
+<p> In C, strings are typically represented as arrays of characters, and when working with strings, you indeed use the <code>%s</code> format specifier for input and output.</p>
+
+
+
+<pre class="wp-block-code"><code>Input: scanf("%s", stringVariable);
+Output: printf("%s", stringVariable);</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to show input and output
+  
+#include &lt;stdio.h&gt;
+  
+int main()
+{
+  
+    // Declare string variable
+    // as character array
+    char str&#91;50];
+  
+    // --- String ---
+    // To read a word
+  
+    // Input the Word
+    printf("Enter the Word: ");
+    scanf("%s\n", str);
+  
+    // Output the Word
+    printf("\nEntered Word is: %s", str);
+  
+    // --- String ---
+    // To read a Sentence
+  
+    // Input the Sentence
+    printf("\n\nEnter the Sentence: ");
+    scanf("%&#91;^\n]\ns", str);
+  
+    // Output the String
+    printf("\nEntered Sentence is: %s", str);
+  
+    return 0;
+}</code></pre>
+
+
+
+<p><strong>Output </strong></p>
+
+
+
+<pre class="wp-block-code"><code>Enter the Word:  Skill Vertex
+Entered Word is: Skill Vertex
+
+Enter the Sentence: Skill Vertex
+Entered Sentence is: Skill Vertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-basic-input-and-output-in-c">FAQ- Basic Input And Output In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1694692050524" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are the inputs and outputs of C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, input involves providing data to a program, and output means displaying or sending data from the program. The <code>stdio.h</code> header file contains essential input and output functions, such as <code>scanf()</code> for reading data and <code>printf()</code> for displaying it. These functions are crucial for handling data in C programs.</p>
+
+</div>
+</div>
+<div id="faq-question-1694692062060" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the basic input and output statement?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. An input/output (IO) statement in a program tells the computer how to handle data. It can involve collecting data from an input device or sending data to an output device.</p>
+
+</div>
+</div>
+<div id="faq-question-1694692068846" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is output function in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Output operations in C are used to show data on the user&#8217;s screen, a printer, or in a file. The C programming language offers built-in output functions, including <code>printf()</code> and <code>putchar()</code>, to accomplish these tasks.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<h2 class="wp-block-heading"><br></h2>
+<div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/basic-input-and-output-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

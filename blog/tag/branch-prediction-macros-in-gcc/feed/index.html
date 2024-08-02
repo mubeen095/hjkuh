@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Branch Prediction Macros In GCC</title>
+	<atom:link href="https://www.skillvertex.com/tag/branch-prediction-macros-in-gcc/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 05 Mar 2024 12:55:53 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Branch Prediction Macros In GCC</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Branch Prediction Macros In GCC</title>
+		<link>https://www.skillvertex.com/blog/branch-prediction-macros-in-gcc/</link>
+					<comments>https://www.skillvertex.com/blog/branch-prediction-macros-in-gcc/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 05 Mar 2024 12:55:53 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Branch Prediction Macros In GCC]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3331</guid>
+
+					<description><![CDATA[Branch Prediction Macros In GCC One commonly used optimization technique in the Linux kernel is &#8220;__builtin_expect.&#8221; When dealing with conditional code, such as if-else statements, there is often prior knowledge about which branch is more likely to be true and which is less likely. When the compiler is aware of this information, it can generate ... <a title="Branch Prediction Macros In GCC" class="read-more" href="https://www.skillvertex.com/blog/branch-prediction-macros-in-gcc/" aria-label="More on Branch Prediction Macros In GCC">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#branch-prediction-macros-in-gcc">Branch Prediction Macros In GCC</a></li><li ><a href="#faq-branch-prediction-macros-in-gcc">FAQ- Branch Prediction Macros In GCC</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="branch-prediction-macros-in-gcc">Branch Prediction Macros In GCC</h2>
+
+
+
+<p>One commonly used optimization technique in the Linux kernel is &#8220;__builtin_expect.&#8221; When dealing with conditional code, such as if-else statements, there is often prior knowledge about which branch is more likely to be true and which is less likely. When the compiler is aware of this information, it can generate highly optimized code to improve performance. This technique is particularly valuable for enhancing the efficiency of code execution.</p>
+
+
+
+<p>Refer the macro definition of “likely()” and “unlikely()” macros from Linux kernel code “http://lxr.linux.no/linux+v3.6.5/include/linux/compiler.h” .</p>
+
+
+
+<pre class="wp-block-code"><code>Let us see macro definition of “likely()” and “unlikely()” macros from linux kernel code “http://lxr.linux.no/linux+v3.6.5/include/linux/compiler.h” &#91;line no 146 and 147].
+
+</code></pre>
+
+
+
+<p>We are marking branches in the example given below:</p>
+
+
+
+<pre class="wp-block-code"><code>const char *home_dir ; 
+  
+home_dir = getenv("HOME"); 
+if (likely(home_dir))  
+    printf("home directory: %s\n", home_dir); 
+else
+    perror("getenv");</code></pre>
+
+
+
+<p>In the example above, we&#8217;ve used the &#8220;likely()&#8221; macro to indicate that the &#8220;if&#8221; condition is more likely to be true. This allows the compiler to optimize the code by placing the true branch immediately after the branch instruction and the false branch within the branch instruction. This can result in significant performance improvements. However, it&#8217;s essential not to use &#8220;likely()&#8221; and &#8220;unlikely()&#8221; macros blindly. If the prediction is correct, there is no penalty in terms of jump instructions, but if the prediction is wrong, it can lead to a performance hit as the processor needs to flush its pipeline, which is worse than having no prediction.</p>
+
+
+
+<p>Memory access is one of the slowest CPU operations compared to other operations. To address this limitation, CPUs use CPU caches, such as L1-cache and L2-cache, to store a portion of memory directly within the CPU. Accessing cache memory is much faster than accessing other types of memory. However, cache memory has a limited size, so the CPU has to make educated guesses about which memory will be needed in the near future and load that memory into the CPU cache. The &#8220;likely()&#8221; and &#8220;unlikely()&#8221; macros serve as hints to the CPU to help it load the appropriate memory into the cache, optimizing memory access and improving overall performance.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-branch-prediction-macros-in-gcc">FAQ- Branch Prediction Macros In GCC</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1699444437395" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the use of unlikely in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Using the &#8220;unlikely&#8221; macro guides the compiler to optimize by removing instructions from the likely code path. In the comparison mentioned, the compiler eliminates the instruction &#8220;xor eax, eax&#8221; from the likely path. This optimization streamlines execution, enhancing performance, particularly when the less likely code path is taken.</p>
+
+</div>
+</div>
+<div id="faq-question-1699444448604" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.How to define macro in gcc command line?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. When defining a function-like macro on the command line, enclose the argument list in parentheses before the equals sign. To ensure proper interpretation by shells like <code>sh</code> and <code>csh</code>, quote the entire macro definition in the format <code>-D'name (args...) = definition'</code>.</p>
+
+</div>
+</div>
+<div id="faq-question-1699444460510" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is branch prediction C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Branch prediction is a technique used to predict whether a conditional jump will be taken or not. On the other hand, branch target prediction aims to predict the target of a jump, whether conditional or unconditional, before it is determined through the instruction&#8217;s decoding and execution.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/branch-prediction-macros-in-gcc/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

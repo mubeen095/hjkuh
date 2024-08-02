@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python string</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-string/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Thu, 11 Apr 2024 12:02:41 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Python string</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python String Exercise</title>
+		<link>https://www.skillvertex.com/blog/python-string-exercise/</link>
+					<comments>https://www.skillvertex.com/blog/python-string-exercise/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 12:02:41 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[Introduction To Python Tutorial]]></category>
+		<category><![CDATA[python programming]]></category>
+		<category><![CDATA[Python string]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7933</guid>
+
+					<description><![CDATA[Python string exercises are necessary for a beginner to understand the program and to have regular practice. Check out the article to know more about Python String Excercise. What is the Python String? In Python, you can make words or sentences by using either single quotes (&#8216;) or double quotes (&#8220;). So, &#8216;hello&#8217; and &#8220;hello&#8221; ... <a title="Python String Exercise" class="read-more" href="https://www.skillvertex.com/blog/python-string-exercise/" aria-label="More on Python String Exercise">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-the-python-string">What is the Python String?</a></li><li ><a href="#what-are-the-examples-of-python-strings">What are the examples of Python Strings?</a><ul><li ><a href="#example-1">Example 1</a></li><li ><a href="#example-2">Example 2:</a></li><li ><a href="#example-3">Example 3:</a></li></ul></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-string-exercise-fa-qs">Python String Exercise-FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python string exercises are necessary for a beginner to understand the program and to have regular practice. Check out the article to know more about Python String Excercise.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-string">What is the Python String?</h2>
+
+
+
+<p>In Python, you can make words or sentences by using either single quotes (&#8216;) or double quotes (&#8220;). So, &#8216;hello&#8217; and &#8220;hello&#8221; mean the same thing. It&#8217;s like choosing between two different types of containers for your words in <a href="https://www.skillvertex.com/blog/python-interview-questions/" data-type="post" data-id="3614">Python</a>. </p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-examples-of-python-strings">What are the examples of Python Strings?</h2>
+
+
+
+<p>Let us look into the Python  program provided below:</p>
+
+
+
+<h3 class="wp-block-heading" id="example-1">Example 1</h3>
+
+
+
+<p>Python Program to find the number of vowels in the given string.</p>
+
+
+
+<pre class="wp-block-code"><code>def count_vowels(input_string):
+    vowels = "aeiouAEIOU"
+    count = 0
+
+    for char in input_string:
+        if char in vowels:
+            count += 1
+
+    return count
+
+# Example usage:
+input_string = "Hello, World!"
+result = count_vowels(input_string)
+print(f'The number of vowels in "{input_string}" is: {result}')
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The number of vowels in "Hello, World!" is: 3
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="example-2">Example 2:</h3>
+
+
+
+<p>Check this example to illustrate how the <a href="https://www.skillvertex.com/blog/c-program-to-merge-contents-of-two-files-into-a-third-file/" data-type="post" data-id="3634">Python Program</a> will convert the string with the binary digits to an integer.</p>
+
+
+
+<pre class="wp-block-code"><code>def binary_to_decimal(binary_string):
+    decimal_value = int(binary_string, 2)
+    return decimal_value
+
+# Example usage:
+binary_string = "1101"
+decimal_result = binary_to_decimal(binary_string)
+print(f'The decimal equivalent of binary "{binary_string}" is: {decimal_result}')
+</code></pre>
+
+
+
+<p> Output</p>
+
+
+
+<pre class="wp-block-code"><code>The decimal equivalent of binary "1101" is: 13
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="example-3"><strong>Example 3</strong>:</h3>
+
+
+
+<p>The example below has provided the Python Program to drop all digits from the <a href="https://www.skillvertex.com/blog/python-string-methods/" data-type="post" data-id="7928">string</a>.</p>
+
+
+
+<pre class="wp-block-code"><code>def remove_digits(input_string):
+    result_string = ''.join(char for char in input_string if not char.isdigit())
+    return result_string
+
+# Example usage:
+input_string = "Hello123World456"
+result = remove_digits(input_string)
+print(f'The string without digits: "{result}"')
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The string without digits: "HelloWorld"
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, navigating through the Python String Exercise will equip you with valuable skills in handling text effortlessly. From understanding the basics of string manipulation to mastering various methods, you&#8217;ve laid a strong foundation for your coding journey. </p>
+
+
+
+<h2 class="wp-block-heading" id="python-string-exercise-fa-qs">Python String Exercise-FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1709718718433" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How to write a string in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Some of the common ways to work with strings in Python are by Creating strings and String Formatting. Strings can be made using the &#8221; character and formatting will done with the + method or format () method.</p>
+
+</div>
+</div>
+<div id="faq-question-1709718726356" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.What is the string manipulation task in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Altering case, concatenating, slicing, searching and formatting are the string manipulation tasks in  Python.</p>
+
+</div>
+</div>
+<div id="faq-question-1709718735709" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.In which language is Python written?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. C Programming language</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-string-exercise/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python String Concatenation</title>
+		<link>https://www.skillvertex.com/blog/python-string-concatenation/</link>
+					<comments>https://www.skillvertex.com/blog/python-string-concatenation/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:50:25 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[Python operator]]></category>
+		<category><![CDATA[Python string]]></category>
+		<category><![CDATA[Python String Concatenation]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7584</guid>
+
+					<description><![CDATA[In Python, it is possible to concatenate two different strings, even with the same string to itself multiple times using the + and the * operator. Read this article to learn more about Python String Concatenation. What is Python String Concatenation? The + operator is an addition operator and will return the sum of two ... <a title="Python String Concatenation" class="read-more" href="https://www.skillvertex.com/blog/python-string-concatenation/" aria-label="More on Python String Concatenation">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-python-string-concatenation">What is Python String Concatenation?</a></li><li ><a href="#what-are-the-different-ways-to-concatenate-strings">What are the different ways to concatenate strings?</a></li><li ><a href="#1-string-concatenation-using-operator">1. String Concatenation using &#8216;+&#8217; Operator</a></li><li ><a href="#2-string-concatenation-using-join-method">2. String Concatenation using join() Method</a></li><li ><a href="#3-string-concatenation-using-operator">3. String Concatenation using &#8216;%&#8217; Operator</a></li><li ><a href="#4-string-concatenation-using-the-format-function">4. String Concatenation using the  format() function</a></li><li ><a href="#5-string-concatenation-using-comma">5. String Concatenation using “, ” comma</a></li><li ><a href="#6-string-concatenation-using-f-string">6. String Concatenation using f-string</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-string-concatenation-fa-qs">Python String Concatenation- FAQs</a></li></ul></nav></div>
+
+
+
+<p>In Python, it is possible to concatenate two different strings, even with the same string to itself multiple times using the + and the * operator. Read this article to learn more about Python String Concatenation.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-string-concatenation">What is Python String Concatenation?</h2>
+
+
+
+<p>The + operator is an addition operator and will return the sum of two numbers. Hence, the + symbol will act as a string concatenation operator in <a href="https://www.skillvertex.com/blog/python-tutorial/" data-type="post" data-id="6852">Python</a>. Thus, it will function with two <a href="https://www.skillvertex.com/blog/how-to-reverse-a-string-in-java/" data-type="post" data-id="728">string </a>operands and get the end output as the concatenation of the two. </p>
+
+
+
+<p>Hence, the characters of the string on the right of the plus symbol will appear at the left of its string. The result of the concatenation will be considered as the new string.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-different-ways-to-concatenate-strings">What are the different ways to concatenate strings?</h2>
+
+
+
+<p>Python String Concatenation will be considered as the method of adding two strings. Check out the different methods to concatenate strings below:</p>
+
+
+
+<ol class="wp-block-list">
+<li>Using + operator</li>
+
+
+
+<li>Using join() method</li>
+
+
+
+<li>Using % operator</li>
+
+
+
+<li>Using format() function</li>
+
+
+
+<li>Using &#8220;,&#8221; (comma)</li>
+
+
+
+<li>Using f-string (Literal String Interpolation)</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="1-string-concatenation-using-operator">1. String Concatenation using &#8216;+&#8217; Operator</h2>
+
+
+
+<p>In Python, when you join two strings using the <code>+</code> sign, it&#8217;s called string concatenation. It&#8217;s like combining two pieces of text. However, you need to remember that strings, which are sequences of characters, cannot be changed directly. Whereas, if this operator is used on integers, then it will perform the mathematical addition.</p>
+
+
+
+<p>Example 1</p>
+
+
+
+<p>In this example, var1 and var2 will be stored in another variable such as var3</p>
+
+
+
+<pre class="wp-block-code"><code># Defining strings
+var1 = "Hello "
+var2 = "Skillvertex"
+ 
+# + Operator is used to combine strings
+var3 = var1 + var2
+print(var3)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Hello Skillvertex
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="2-string-concatenation-using-join-method">2. String Concatenation using join() Method</h2>
+
+
+
+<p>The join() Method will be considered a String Method. Thus,  will return the string where the elements of the sequence will be joined by the string operator. </p>
+
+
+
+<p>Therefore, it will accept only the list as its <a href="https://www.skillvertex.com/blog/python-keyword-arguments/" data-type="post" data-id="7283">argument</a>, and the list size will be anything. The example below illustrates the Python concatenate string with the join() operator.</p>
+
+
+
+<pre class="wp-block-code"><code>var1 = "Skill"
+var2 = "vertex"
+ 
+# join() method is used to combine the strings
+print("".join(&#91;var1, var2]))
+ 
+# join() method is used here to combine 
+# the string with a separator Space(" ")
+var3 = " ".join(&#91;var1, var2])
+ 
+print(var3)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Skillvertex
+Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="3-string-concatenation-using-operator">3. String Concatenation using &#8216;%&#8217; Operator</h2>
+
+
+
+<p>The % Operator will work for <a href="https://www.skillvertex.com/blog/python-string-formatting/" data-type="post" data-id="7587">string formatting</a>. Additionally, it will be used as a string concatenation.  This operator is beneficial when you need to concatenate strings and will do simple formatting.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>var1 = "Welcome"
+var2 = "Skillvertex"
+ 
+# % Operator is used here to combine the string
+print("% s % s" % (var1, var2))</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Welcome Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="4-string-concatenation-using-the-format-function">4. String Concatenation using the  format() function</h2>
+
+
+
+<p>The str, format will be considered as the string formatting method where they provide multiple substitutions and value formatting. Hence, it can concatenate the elements within the string through positional formatting.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>var1 = "Hello"
+var2 = "Skillvertex"
+ 
+# format function is used here to 
+# combine the string
+print("{} {}".format(var1, var2))
+ 
+# store the result in another variable 
+var3 = "{} {}".format(var1, var2)
+ 
+print(var3)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Hello Skillvertex
+Hello Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="5-string-concatenation-using-comma">5. String Concatenation using “, ” comma</h2>
+
+
+
+<p>A comma will be considered as a great alternative to the string concatenation with the + operator. Thus, it is required to use the comma for combining the data types with the single whitespace in between.</p>
+
+
+
+<pre class="wp-block-code"><code>var1 = "Skill"
+var2 = "Vertex"
+var3 = ".com"
+ 
+# using comma to combine data types
+# with a single whitespace.
+print(var1, var2, var3)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Skillvertex.com</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="6-string-concatenation-using-f-string">6. String Concatenation using f-string</h2>
+
+
+
+<p>Using the F-string for the string concatenation will be operated on the Python versions above 3.6 and will be introduced in the PEP 498- Literal String Interpolation.</p>
+
+
+
+<pre class="wp-block-code"><code># Variables
+var1 = "Skill"
+var2 = "Vertex"
+var3 = ".com"
+
+# String concatenation using f-string
+result = f"{var1} {var2} {var3}"
+
+# Printing the result
+print(result)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Skill Vertex .com
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>In Python, string concatenation is the process of combining multiple strings into a single string. The <code>+</code> operator is commonly used for this purpose. When concatenating strings, it&#8217;s important to remember that strings are immutable, meaning the original strings are not modified; instead, a new string is created. </p>
+
+
+
+<p>Additionally, Python offers convenient f-strings (formatted string literals) for concise and readable string concatenation, allowing variables to be easily inserted into strings. This straightforward process of joining strings provides flexibility in constructing meaningful and dynamic text outputs in Python programs.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-string-concatenation-fa-qs">Python String Concatenation- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1709535862572" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.What symbol is used to concatenate 2 strings in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The + operator will combine the 2 strings.</p>
+
+</div>
+</div>
+<div id="faq-question-1709535870808" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What functions concatenate two strings?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, the <strong>strcat()</strong> function will operate to concatenate on the two strings.</p>
+
+</div>
+</div>
+<div id="faq-question-1709535877844" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.How do I concatenate two string columns in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.df[&#8220;full_name&#8221;] = df[&#8220;first_name&#8221;] + &#8220;+df[&#8220;last_name&#8221;]<br />df[&#8220;full_name&#8221;] = df[[&#8220;first_name&#8221;,&#8221;last_name&#8221;]].agg(&#8221; &#8220;.join, axis=1)<br />df = df.withColumn( &#8220;full_name&#8221;, F.concat(&#8220;first_name&#8221;, F.lit(&#8221; &#8220;), &#8220;last_name&#8221;) )</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-string-concatenation/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python String</title>
+		<link>https://www.skillvertex.com/blog/python-string/</link>
+					<comments>https://www.skillvertex.com/blog/python-string/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:49:23 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming language]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python string]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7475</guid>
+
+					<description><![CDATA[Python consists of a built-in string function and will be referred to as &#8221;str&#8221; with handy features. Either single or double quotation marks enclose strings in Python. Read this article to learn more about Python String. What is Python String? The double or single quotes enclose this String literal. However, single quotes will be mostly ... <a title="Python String" class="read-more" href="https://www.skillvertex.com/blog/python-string/" aria-label="More on Python String">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-python-string">What is Python String?</a></li><li ><a href="#assign-string-to-a-variable">Assign String to a Variable</a></li><li ><a href="#what-is-multiline-strings">What is Multiline Strings?</a></li><li ><a href="#strings-are-array">Strings are Array</a></li><li ><a href="#looping-through-a-string">Looping Through a String</a></li><li ><a href="#what-is-string-length-in-python">What is String Length in Python?</a></li><li ><a href="#check-string">Check String</a></li><li ><a href="#what-is-check-if-not-in-python">What is Check if NOT in Python?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-string-fa-qs">Python String- FAQs</a></li></ul></nav></div>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-modules/" data-type="post" data-id="7453">Python</a> consists of a built-in string function and will be referred to as &#8221;str&#8221;  with handy features. Either single or double quotation marks enclose <a href="https://www.skillvertex.com/blog/array-of-strings-in-c/" data-type="post" data-id="2641">strings</a> in Python. Read this article to learn more about <a href="https://www.skillvertex.com/blog/which-of-the-following-precedence-order-is-correct-in-python/" data-type="post" data-id="2702">Python</a> String.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-string">What is Python String?</h2>
+
+
+
+<p>The double or single quotes enclose this String literal. However, single quotes will be mostly used. Whereas, the double-quoted string has single quotes without any doubt. Single quoted string has double quotes. </p>
+
+
+
+<p>Thus, <a href="https://www.skillvertex.com/blog/how-to-reverse-a-string-in-java/" data-type="post" data-id="728">string literals</a> have multiple lines and require a backlash at the end of each line to escape the new line. String literal has triple quotes,&#8221;&#8221;&#8221; or&#8221; that has multiple lines of text.</p>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/pointer-arithmetics-in-c-with-examples/" data-type="post" data-id="2706">Example</a></p>
+
+
+
+<pre class="wp-block-code"><code># Python string example
+my_string = "Hello, World!"
+
+# Output the original string
+print("Original String:", my_string)
+
+# Get the length of the string
+length_of_string = len(my_string)
+print("Length of String:", length_of_string)
+
+# Convert the string to uppercase
+uppercase_string = my_string.upper()
+print("Uppercase String:", uppercase_string)
+
+# Check if the string contains a specific substring
+contains_substring = "World" in my_string
+print("Contains 'World':", contains_substring)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original String: Hello, World!
+Length of String: 13
+Uppercase String: HELLO, WORLD!
+Contains 'World': True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="assign-string-to-a-variable">Assign String to a Variable</h2>
+
+
+
+<p>Assigning the string to the <a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932">variable </a>with the equal sign and the <a href="https://www.skillvertex.com/blog/array-of-strings-in-c/" data-type="post" data-id="2641">string</a>. Let us look into the example given below:</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Assigning a string to a variable
+my_string = "Hello, Python!"
+
+# Output the variable value
+print("My String:", my_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>My String: Hello, Python!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-multiline-strings">What is Multiline Strings?</h2>
+
+
+
+<p>The <a href="https://www.skillvertex.com/blog/multiline-macros-in-c/" data-type="post" data-id="3318">multiline </a>string will allow you to assign the multiline string to the <a href="https://www.skillvertex.com/blog/variable-length-arguments-for-macros/" data-type="post" data-id="3327">variable </a>with the three quotes.</p>
+
+
+
+<pre class="wp-block-code"><code># Multiline string example
+multiline_string = '''
+This is a multiline
+string in Python.
+It can span multiple lines.
+'''
+
+# Output the multiline string
+print("Multiline String:")
+print(multiline_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Multiline String:
+This is a multiline
+string in Python.
+It can span multiple lines.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="strings-are-array">Strings are Array</h2>
+
+
+
+<p>Strings in Python are considered as an <a href="https://www.skillvertex.com/blog/what-is-the-difference-between-single-quoted-and-double-quoted-declaration-of-char-array/" data-type="post" data-id="2661">array of bytes</a> that will represent the Unicode characters. Hence, python won&#8217;t have a character data type. A single character has a string with a length of 1. </p>
+
+
+
+<p>So, square brackets have the <a href="https://www.skillvertex.com/blog/which-one-is-not-an-element-of-iot/" data-type="post" data-id="3089">elements </a>of the string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># String as an array example
+my_string = "Hello, Python!"
+
+# Accessing individual characters using indexing
+first_char = my_string&#91;0]
+second_char = my_string&#91;1]
+
+# Output the characters
+print("First Character:", first_char)
+print("Second Character:", second_char)
+
+# Iterating through the string as if it's an array
+print("Iterating through the string:")
+for char in my_string:
+    print(char)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>First Character: H
+Second Character: e
+Iterating through the string:
+H
+e
+l
+l
+o
+,
+ 
+P
+y
+t
+h
+o
+n
+!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="looping-through-a-string">Looping Through a String</h2>
+
+
+
+<p>Strings are arrays that will help to loop through the<a href="https://www.skillvertex.com/blog/character-arithmetic-in-c-and-c/" data-type="post" data-id="1876"> characters </a>in the string and with a for <a href="https://www.skillvertex.com/blog/python-while-loop/" data-type="post" data-id="7236">loop</a>.</p>
+
+
+
+<pre class="wp-block-code"><code># Looping through a string example
+my_string = "Hello, Python!"
+
+# Iterating through the string using a for loop
+print("Iterating through the string:")
+for char in my_string:
+    print(char)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Iterating through the string:
+H
+e
+l
+l
+o
+,
+ 
+P
+y
+t
+h
+o
+n
+!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-string-length-in-python">What is String Length in Python?</h2>
+
+
+
+<p>In Python, the <a href="https://www.skillvertex.com/blog/how-to-find-length-of-string-in-java-python-cpp-javascript-sql-shell-script-mysql-oracle-and-perl/" data-type="post" data-id="452">length of the string</a> can be evaluated using the <strong>len()</strong> function.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># String length example
+my_string = "Hello, Python!"
+
+# Get the length of the string
+length_of_string = len(my_string)
+
+# Output the length of the string
+print("Length of the String:", length_of_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Length of the String: 14
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="check-string">Check String</h2>
+
+
+
+<p>Python allows you to check a certain phase or character in the string. Hence, it uses the<a href="https://www.skillvertex.com/blog/python-keyword-arguments/" data-type="post" data-id="7283"> keyword</a> &#8216;<strong>in</strong>&#8216;</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># String checking example
+my_string = "Hello, Python!"
+
+# Check if the string contains a specific substring
+substring_to_check = "Python"
+if substring_to_check in my_string:
+    print(f"The string '{my_string}' contains the substring '{substring_to_check}'.")
+else:
+    print(f"The string '{my_string}' does not contain the substring '{substring_to_check}'.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The string 'Hello, Python!' contains the substring 'Python'.
+</code></pre>
+
+
+
+<p>Using the if statement in the above code.</p>
+
+
+
+<pre class="wp-block-code"><code># String checking with if statement example
+my_string = "Hello, Python!"
+
+# Check if the string contains a specific substring using if statement
+substring_to_check = "Python"
+if substring_to_check in my_string:
+    print(f"The string '{my_string}' contains the substring '{substring_to_check}'.")
+else:
+    print(f"The string '{my_string}' does not contain the substring '{substring_to_check}'.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The string 'Hello, Python!' contains the substring 'Python'.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-check-if-not-in-python">What is Check if NOT in Python?</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/data-science-libraries-in-python/" data-type="post" data-id="4685">Python </a>allows you to find if a certain phrase or character doesn&#8217;t exist in the string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># String checking with 'not in' example
+my_string = "Hello, Python!"
+
+# Check if the string does not contain a specific substring using 'not in'
+substring_to_check = "Java"
+if substring_to_check not in my_string:
+    print(f"The string '{my_string}' does not contain the substring '{substring_to_check}'.")
+else:
+    print(f"The string '{my_string}' contains the substring '{substring_to_check}'.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The string 'Hello, Python!' does not contain the substring 'Java'.
+</code></pre>
+
+
+
+<p>Let us look at this example using the<a href="https://www.skillvertex.com/blog/python-if-statement/" data-type="post" data-id="7145"> if statement.</a></p>
+
+
+
+<pre class="wp-block-code"><code># String checking with if statement example
+my_string = "Hello, Python!"
+
+# Check if the string does not contain a specific substring using if statement
+substring_to_check = "Java"
+if substring_to_check not in my_string:
+    print(f"The string '{my_string}' does not contain the substring '{substring_to_check}'.")
+else:
+    print(f"The string '{my_string}' contains the substring '{substring_to_check}'.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The string 'Hello, Python!' does not contain the substring 'Java'.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, string operations are crucial for effective text manipulation in Python. These skills serve as a foundation for more advanced programming concepts and are valuable for several <a href="https://www.skillvertex.com/blog/data-science-applications/" data-type="post" data-id="6199">applications</a>. </p>
+
+
+
+<h2 class="wp-block-heading" id="python-string-fa-qs">Python String- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1709205461489" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.What is a string in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A string in Python consists of a sequence of characters.</p>
+
+</div>
+</div>
+<div id="faq-question-1709205470139" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is to string in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The tostring() refers to a method that will turn other data types into the string.</p>
+
+</div>
+</div>
+<div id="faq-question-1709205477301" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What does __ str __ do in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The __str__() method will return the human-readable or informal string representation of an object.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-string/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Do…While Loop In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/dowhile-loop-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:19:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Do…While Loop In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Do…While Loop In C</title>
+		<link>https://www.skillvertex.com/blog/do-while-loop-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/do-while-loop-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:19:25 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Do…While Loop In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2291</guid>
+
+					<description><![CDATA[Do…While Loop In C Loops in C are control flow constructs that enable the repetition of a specific block of code until a particular condition is met. The do-while loop, along with the while loop and for loop, is one of the three primary loop constructs in C. The do-while loop is particularly useful when ... <a title="Do…While Loop In C" class="read-more" href="https://www.skillvertex.com/blog/do-while-loop-in-c/" aria-label="More on Do…While Loop In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#do-while-loop-in-c">Do…While Loop In C</a></li><li ><a href="#what-is-do-while-loop-in-c">What is do…while Loop in C?</a></li><li ><a href="#syntax-of-do-while-loop-in-c">Syntax of do…while Loop in C</a></li><li ><a href="#how-to-use-do-while-loop-in-c">How to Use do…while Loop in C</a></li><li ><a href="#nested-do-while-loop-in-c">Nested do…while Loop in C</a></li><li ><a href="#examples-of-do-while-loop-in-c">Examples of Do…While Loop in C</a></li><li ><a href="#key-difference-between-while-and-do-while-loop-in-c">Key Difference between while and do…while Loop in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="do-while-loop-in-c">Do…While Loop In C</h2>
+
+
+
+<p>Loops in C are control flow constructs that enable the repetition of a specific block of code until a particular condition is met. The do-while loop, along with the while loop and for loop, is one of the three primary loop constructs in C.</p>
+
+
+
+<p>The do-while loop is particularly useful when you need to execute a block of code at least once, even if the condition is not initially met. It is commonly used for tasks like traversing arrays, vectors, and other data structures where you want to ensure that the loop body runs at least once before checking the loop condition.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-do-while-loop-in-c">What is do…while Loop in C?</h2>
+
+
+
+<p>The&nbsp;do…while in C&nbsp;is a loop statement used to repeat some part of the code till the given condition is fulfilled. It is a form of an&nbsp;exit-controlled or post-tested loop&nbsp;where the test condition is checked after executing the body of the loop. Due to this, the statements in the do…while loop will always be executed at least once no matter what the condition is.</p>
+
+
+
+<h2 class="wp-block-heading" id="syntax-of-do-while-loop-in-c">Syntax of do…while Loop in C</h2>
+
+
+
+<pre class="wp-block-code"><code>do {
+ 
+    // body of do-while loop    
+    
+} while (condition);</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="how-to-use-do-while-loop-in-c">How to Use do…while Loop in C</h2>
+
+
+
+<p>The example below shows  the do-while Loop in C Program</p>
+
+
+
+<pre class="wp-block-code"><code>// C Program to demonstrate the use of do...while loop
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // loop variable declaration and initialization
+    int i = 0;
+    // do while loop
+    do {
+        printf("Skill Vertex\n");
+        i++;
+    } while (i &lt; 3);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Skill Vertex 
+Skill Vertex 
+Skill Vertex</code></pre>
+
+
+
+<p>The do-while loop in C is unique because it always runs its code block at least once. Here&#8217;s how it works:</p>
+
+
+
+<ol class="wp-block-list">
+<li>First, it executes the code inside the loop.</li>
+
+
+
+<li>Then, it checks a condition.</li>
+
+
+
+<li>If the condition is true, it repeats the process.</li>
+
+
+
+<li>If the condition is false, it moves on to the next part of the program.</li>
+</ol>
+
+
+
+<p>This loop is sometimes called an &#8220;exit-controlled&#8221; loop because it checks the exit condition after running the code block. It&#8217;s handy when you want to ensure that certain code runs at least once before checking if it should repeat.</p>
+
+
+
+<h2 class="wp-block-heading" id="nested-do-while-loop-in-c">Nested do…while Loop in C</h2>
+
+
+
+<pre class="wp-block-code"><code>// C Program to demonstrate the nesting of do...while loop
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // declaring loop variables
+    int i = 0, j;
+    int count = 0;
+ 
+    // outer loop starts
+    do {
+        j = 0;
+ 
+        // inner loop starts
+        do {
+            printf("%d  ", count++);
+            j++;
+        } while (j &lt; 3);
+        // inner loop ends
+ 
+        printf("\n");
+        i++;
+    } while (i &lt; 3);
+    // outer loop ends
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>0  1  2  
+3  4  5  
+6  7  8  </code></pre>
+
+
+
+<h2 class="wp-block-heading" id="examples-of-do-while-loop-in-c">Examples of Do…While Loop in C</h2>
+
+
+
+<h4 class="wp-block-heading">Example 1. C Program to check the behavior of do…while loop if the condition is false from the start.</h4>
+
+
+
+<pre class="wp-block-code"><code>// C Program to demonstrate the do...while loop behaviour
+// when the condition is false from the start
+#include &lt;stdbool.h&gt;
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // declaring a false variable
+    bool condition = false;
+ 
+    do {
+        printf("This is loop body.");
+    } while (condition); // false condition
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>This is loop body.</code></pre>
+
+
+
+<p>The do…while loop operates in C, states the fact that the loop body is executed at least once, even when the condition is initially false. This is due to the specific behavior of the do…while loop, where the condition is checked after the first execution of the loop body.</p>
+
+
+
+<h4 class="wp-block-heading">Example 2. C Program to print Multiplication Table of N using do…while loop</h4>
+
+
+
+<pre class="wp-block-code"><code>// C Program to print multiplication table using do...while
+// loop
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    int N = 5, i = 1;
+ 
+    do {
+        printf("%d\tx\t%d\t=\t%d\n", N, i, N * i);
+    } while (i++ &lt; 10);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>5    x    1    =    5
+5    x    2    =    10
+5    x    3    =    15
+5    x    4    =    20
+5    x    5    =    25
+5    x    6    =    30
+5    x    7    =    35
+5    x    8    =    40
+5    x    9    =    45
+5    x    10    =    50</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="key-difference-between-while-and-do-while-loop-in-c">Key Difference between while and do…while Loop in C</h2>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th>while Loop</th><th>do…while Loop</th></tr></thead><tbody><tr><td>The test condition will be checked&nbsp;before the loop body is executed.</td><td>The test condition will be checked&nbsp;after executing the body.</td></tr><tr><td>When the condition is false, the&nbsp;body won&#8217;t be executed not even once.</td><td>The body of the&nbsp;<strong>Do…while loop</strong> will be executed at least once&nbsp;even though the condition turns out to be false.</td></tr><tr><td><strong>Do &#8230; While Loop</strong> is a pre-tested or entry-controlled loop </td><td><strong>Do &#8230; While Loop</strong> is a pre-tested or entry-controlled loop </td></tr><tr><td>Semicolon is not required.</td><td>A semicolon is not necessary.</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="faq-do-while-loop-in-c">FAQ- Do…While Loop In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696413457823" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What does a do-while loop do in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The do-while statement allows you to repeatedly execute a statement or a block of statements until a specified expression evaluates to false.</p>
+
+</div>
+</div>
+<div id="faq-question-1696413463615" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the do while looping statement?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A do-while loop is indeed a control flow statement that guarantees the execution of a block of code at least once. After the initial execution, it repeatedly re-executes the block based on a specified boolean condition at the end of the block.</p>
+
+</div>
+</div>
+<div id="faq-question-1696413473527" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. When to use while and do-while loop in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In a &#8220;while&#8221; loop, the condition is checked first, and if it is true, the statement(s) are executed. If the condition is false initially, the statement(s) may not execute at all.<br />In a &#8220;do-while&#8221; loop, the statement(s) are executed at least once, regardless of the initial condition. After the first execution, the condition is checked, and if it is true, the loop continues to execute.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<h2 class="wp-block-heading"><br></h2>
+<div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/do-while-loop-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

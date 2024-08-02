@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Sizeof operator in C</title>
+	<atom:link href="https://www.skillvertex.com/tag/sizeof-operator-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:15:58 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Sizeof operator in C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Sizeof Operator In C</title>
+		<link>https://www.skillvertex.com/blog/sizeof-operator-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/sizeof-operator-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:15:58 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Sizeof operator in C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2234</guid>
+
+					<description><![CDATA[Sizeof Operator In C Sizeof is a common operator in C. It&#8217;s used to determine the size, in bytes, of a particular data type or variable. This operator provides information about the memory storage required for its operand. The result of sizeof is typically an unsigned integral value represented by the type size_t. You can ... <a title="Sizeof Operator In C" class="read-more" href="https://www.skillvertex.com/blog/sizeof-operator-in-c/" aria-label="More on Sizeof Operator In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#sizeof-operator-in-c">Sizeof Operator In C</a></li><li ><a href="#usage-of-sizeof-operator">Usage of sizeof() operator </a></li><li ><a href="#type-of-operator">Type Of Operator</a></li><li ><a href="#need-of-sizeof">Need of Sizeof </a></li><li ><a href="#faq-sizeof-operator-in-c">FAQ- Sizeof Operator In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="sizeof-operator-in-c">Sizeof Operator In C</h2>
+
+
+
+<p><strong>Sizeof</strong> is a common operator in C. It&#8217;s used to determine the size, in bytes, of a particular data type or variable. This operator provides information about the memory storage required for its operand. The result of <strong>sizeof</strong> is typically an unsigned integral value represented by the type <strong>size_t</strong>.</p>
+
+
+
+<p>You can use <strong>sizeof</strong> with various data types, including basic types like integers and floats, pointer types, as well as more complex types like structures and unions. This operator helps you understand how much memory a specific data type or variable occupies in your computer&#8217;s memory.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>sizeof(Expression);
+</code></pre>
+
+
+
+<p>where ‘<em>Expression</em>‘ can be a data type or a variable of any type.</p>
+
+
+
+<p><strong>Return:</strong>&nbsp;It returns the size size of the given expression.</p>
+
+
+
+<p><strong>Time Complexity:&nbsp;</strong>O(1)<br><strong>Auxiliary Space:</strong>&nbsp;O(1)</p>
+
+
+
+<h2 class="wp-block-heading" id="usage-of-sizeof-operator">Usage of sizeof() operator&nbsp;</h2>
+
+
+
+<p>When the <code>sizeof</code> operator is used with a data type as its operand, it returns the size, in bytes, of that data type. </p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Data Type Operand:</strong> When you use <code>sizeof</code> a data type, like <code>sizeof(int)</code> or <code>sizeof(char)</code>, it tells you how much memory is allocated for that specific data type in bytes. For example, <code>sizeof(int)</code> might return 4, indicating that an <code>int</code> takes up 4 bytes of memory on your system. This information is essential for memory management and understanding the storage requirements of your variables.</li>
+</ol>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C Program To demonstrate
+// sizeof operator
+#include &lt;stdio.h&gt;
+int main()
+{
+    printf("%lu\n", sizeof(char));
+    printf("%lu\n", sizeof(int));
+    printf("%lu\n", sizeof(float));
+    printf("%lu", sizeof(double));
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1
+4
+4
+8</code></pre>
+
+
+
+<p>2. <strong>Expression Operand:</strong> When you use <code>sizeof</code> with an expression, like <code>sizeof(variable)</code>, it calculates and returns the size of the evaluated expression in bytes. For instance, <code>sizeof(array)</code> would give you the size in bytes of the entire array, and <code>sizeof(structure)</code> would provide the size of the entire structure in memory. This is helpful for determining the memory footprint of more complex data structures and expressions in your code.</p>
+
+
+
+<pre class="wp-block-code"><code>// C Program To demonstrate
+// operand as expression
+#include &lt;stdio.h&gt;
+int main()
+{
+    int a = 0;
+    double d = 10.21;
+    printf("%lu", sizeof(a + d));
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>8</code></pre>
+
+
+
+<p>the <code>sizeof</code> operator returns the size of a data type in bytes. Typically, the size of an <code>int</code> is 4 bytes, and the size of a <code>double</code> is 8 bytes on many systems. So, if you have an <code>int</code> variable <code>a</code> and a <code>double</code> variable <code>d</code>, the size of <code>int</code> is 4 bytes, the size of <code>double</code> is 8 bytes, and the <code>sizeof</code> operator returns the size in bytes.</p>
+
+
+
+<p>However, it&#8217;s important to note that the <code>sizeof</code> operator always returns a result of type <code>size_t</code>, which is an unsigned integral type used for sizes. The actual size of <code>size_t</code> may vary depending on the system (typically 4 or 8 bytes). So, the result of <code>sizeof</code> is not of the <code>double</code> type but rather of type <code>size_t</code>.</p>
+
+
+
+<h2 class="wp-block-heading" id="type-of-operator">Type Of Operator</h2>
+
+
+
+<p><code>Sizeof()</code> is indeed a compile-time operator in C and C++. It is evaluated by the compiler, not at runtime. When the compiler encounters <code>sizeof()</code>, it calculates the size of the operand (either a data type or an expression) and replaces <code>sizeof()</code> with the computed size during the compilation process.</p>
+
+
+
+<pre class="wp-block-code"><code>// C Program to illustrate
+// that the 'sizeof' operator
+// is a 'compile time operator'
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+    int y;
+    int x = 11;
+ 
+    // value of x doesn't change
+    y = sizeof(x++);
+ 
+    // prints 4 and 11
+    printf("%i %i", y, x);
+ 
+    return (0);
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>4 11
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="need-of-sizeof">Need of Sizeof&nbsp;</h2>
+
+
+
+<p>One common use of the <code>sizeof</code> operator is to determine the number of elements in an array automatically.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C Program
+// demonstrate the method
+// to find the number of elements
+// in an array
+#include &lt;stdio.h&gt;
+int main()
+{
+    int arr&#91;] = { 1, 2, 3, 4, 7, 98, 0, 12, 35, 99, 14 };
+    printf("Number of elements:%lu ",
+           sizeof(arr) / sizeof(arr&#91;0]));
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Number of elements:11 
+</code></pre>
+
+
+
+<p>The <code>sizeof</code> operator is extensively used in dynamic memory allocation, especially when you want to allocate memory for a specific number of elements of a particular data type without hardcoding the size of that data type</p>
+
+
+
+<p><strong>Syntax</strong></p>
+
+
+
+<pre class="wp-block-code"><code>int* ptr = (int*)malloc(10 * sizeof(int));
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-sizeof-operator-in-c">FAQ- Sizeof Operator In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1695987875069" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the sizeof () operator in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <strong>sizeof</strong> is a widely used operator in C. It&#8217;s a compile-time unary operator used to calculate the size, in bytes, of its operand. The result of <strong>sizeof</strong> is typically of the unsigned integral type, often represented by <strong>size_t</strong>. This operator is essential for determining memory requirements and is valuable in various aspects of C programming.</p>
+
+</div>
+</div>
+<div id="faq-question-1695987881917" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. Is size of () a function or operator?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In the C language, <code>sizeof()</code> is an operator, not a function, even though it resembles a function call. It is a unary operator used to determine the size, in bytes, of its operand, which can be a data type or an expression. The result of <code>sizeof</code> is of the unsigned integral type, often represented by <code>size_t</code>. It is essential for compile-time memory allocation and is a fundamental tool in C programming.</p>
+
+</div>
+</div>
+<div id="faq-question-1695987888736" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the use of size () operator?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. It helps programmers avoid specifying machine-dependent data sizes in their programs, which promotes portability and flexibility. By using <code>sizeof()</code>, you can determine the total size of a data type or expression in terms of storage units that are the size of <code>char</code>, regardless of the specific machine&#8217;s architecture. This feature is valuable for writing code that can run on different platforms without modification, making it an essential tool for writing portable C programs.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/sizeof-operator-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

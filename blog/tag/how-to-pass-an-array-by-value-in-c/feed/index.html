@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>How To Pass An Array By Value In C ?</title>
+	<atom:link href="https://www.skillvertex.com/tag/how-to-pass-an-array-by-value-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:06:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>How To Pass An Array By Value In C ?</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>How To Pass An Array By Value In C ?</title>
+		<link>https://www.skillvertex.com/blog/how-to-pass-an-array-by-value-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/how-to-pass-an-array-by-value-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:06:24 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[How To Pass An Array By Value In C ?]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2638</guid>
+
+					<description><![CDATA[How To Pass An Array By Value In C ? In C, when you pass an array as a function argument, you&#8217;re actually passing a pointer to the first element of the array. The array name itself represents the address of the first element. The receiving function accepts this argument as a pointer, not as ... <a title="How To Pass An Array By Value In C ?" class="read-more" href="https://www.skillvertex.com/blog/how-to-pass-an-array-by-value-in-c/" aria-label="More on How To Pass An Array By Value In C ?">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#how-to-pass-an-array-by-value-in-c">How To Pass An Array By Value In C ?</a></li><li ><a href="#how-to-make-sure-that-we-have-a-new-copy-of-the-array-when-we-pass-it-to-function">How to make sure that we have a new copy of the Array when we pass it to function?</a></li><li ><a href="#example">Example</a></li><li ><a href="#faq-how-to-pass-an-array-by-value-in-c">FAQ- How To Pass An Array By Value In C ?</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="how-to-pass-an-array-by-value-in-c">How To Pass An Array By Value In C ?</h2>
+
+
+
+<p>In C, when you pass an array as a function argument, you&#8217;re actually passing a pointer to the first element of the array. The array name itself represents the address of the first element. The receiving function accepts this argument as a pointer, not as a whole array. This is because arrays decay into pointers in most contexts when passed as arguments to functions.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-to-make-sure-that-we-have-a-new-copy-of-the-array-when-we-pass-it-to-function">How to make sure that we have a new copy of the Array when we pass it to function?</h2>
+
+
+
+<p>You can put an array inside a structure, make a variable of that structure type, and then pass it to functions. This way, you can control and manage the array within a structured context, making it easier to modify the array as required while keeping related information together.</p>
+
+
+
+<h2 class="wp-block-heading" id="example">Example</h2>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C program to demonstrate passing an array 
+// by value using structures. 
+#include&lt;stdio.h&gt; 
+#include&lt;stdlib.h&gt; 
+  
+# define SIZE 5 
+  
+// A wrapper for array to make sure that array 
+// is passed by value. 
+struct ArrayWrapper 
+{ 
+    int arr&#91;SIZE]; 
+}; 
+  
+// An array is passed by value wrapped in temp 
+void modify(struct ArrayWrapper temp) 
+{ 
+    int *ptr = temp.arr; 
+    int i; 
+  
+    // Display array contents 
+    printf("In 'modify()', before modification\n"); 
+    for (i = 0; i &lt; SIZE; ++i) 
+        printf("%d ", ptr&#91;i])
+ printf("\n"); 
+  
+    // Modify the array 
+    for (i = 0; i &lt; SIZE; ++i) 
+        ptr&#91;i] = 100; // OR *(ptr + i) 
+  
+    printf("\nIn 'modify()', after modification\n"); 
+    for (i = 0; i &lt; SIZE; ++i) 
+        printf("%d ", ptr&#91;i]); // OR *(ptr + i) 
+} 
+  
+// Driver code 
+int main() 
+{ 
+    int i; 
+    struct ArrayWrapper obj; 
+    for (i=0; i&lt;SIZE; i++) 
+        obj.arr&#91;i] = 10; 
+  
+    modify(obj); 
+  
+    // Display array contents 
+    printf("\n\nIn 'Main', after calling modify() \n"); 
+    for (i = 0; i &lt; SIZE; ++i) 
+        printf("%d ", obj.arr&#91;i]); // Not changed 
+  
+    printf("\n"); 
+  
+    return 0; 
+} </code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>In 'modify()', before modification
+10 10 10 10 10 
+
+In 'modify()', after modification
+100 100 100 100 100 
+
+In 'Main', after calling modify() 
+10 10 10 10 10 </code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-how-to-pass-an-array-by-value-in-c">FAQ- How To Pass An Array By Value In C ?</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697019695257" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How to pass the array variable in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. To pass an entire array to a function in C, you only need to provide the array&#8217;s name as an argument. For instance, you can use <code>result = calculateSum(num);</code>. However, it&#8217;s important to use square brackets <code>[]</code> in the function definition to indicate to the compiler that you are passing a one-dimensional array to the function. This informs the compiler about the array&#8217;s structure.</p>
+
+</div>
+</div>
+<div id="faq-question-1697019707766" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. How to access a value in an array C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. To access a specific element in an array, use the array name followed by the element&#8217;s index enclosed in square brackets. It&#8217;s important to note that array indices begin at 0 and go up to size-1. For example, <code>array_name[index]</code> accesses the element at the specified <code>index</code>, with the first element at index 0.</p>
+
+</div>
+</div>
+<div id="faq-question-1697019715813" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. How do you pass an array value to a method?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. When passing an array as an argument to a method, you should provide only the array name without square brackets. The method&#8217;s prototype should be designed to accept an argument of the array type. In your example, the method prototype is as follows: <code>void method_name(int[] array);</code>. This indicates that the method accepts an array of integers as an argument.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/how-to-pass-an-array-by-value-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

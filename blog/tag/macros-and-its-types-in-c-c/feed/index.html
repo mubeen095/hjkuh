@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Macros And Its Types In C/C++</title>
+	<atom:link href="https://www.skillvertex.com/tag/macros-and-its-types-in-c-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 05 Mar 2024 12:48:01 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Macros And Its Types In C/C++</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Macros And Its Types In C/C++</title>
+		<link>https://www.skillvertex.com/blog/macros-and-its-types-in-c-c/</link>
+					<comments>https://www.skillvertex.com/blog/macros-and-its-types-in-c-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 05 Mar 2024 12:48:01 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Macros And Its Types In C/C++]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3274</guid>
+
+					<description><![CDATA[Macros And Its Types In C/C++ A macro in a program is a piece of code that is replaced by its defined value. It is defined using the #define directive in C and C++. When the compiler encounters the name of a macro, it replaces that name with the macro&#8217;s defined value. Unlike regular C ... <a title="Macros And Its Types In C/C++" class="read-more" href="https://www.skillvertex.com/blog/macros-and-its-types-in-c-c/" aria-label="More on Macros And Its Types In C/C++">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#macros-and-its-types-in-c-c">Macros And Its Types In C/C++</a></li><li ><a href="#programs-to-illustrate-the-use-of-macros-in-c-c">Programs &#8211; To illustrate the use of macros in C/C++</a></li><li ><a href="#program-2">Program 2</a></li><li ><a href="#faq-macros-and-its-types-in-c-c">FAQ- Macros And Its Types In C/C++</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="macros-and-its-types-in-c-c">Macros And Its Types In C/C++</h2>
+
+
+
+<p>A macro in a program is a piece of code that is replaced by its defined value. It is defined using the #define directive in C and C++. When the compiler encounters the name of a macro, it replaces that name with the macro&#8217;s defined value. Unlike regular C statements, macro definitions do not need to be terminated by a semicolon (<code>;</code>). Macros are used for code replacement and are often employed for defining constants, inline functions, and conditional compilation directives in C and C++ programs.</p>
+
+
+
+<h2 class="wp-block-heading" id="programs-to-illustrate-the-use-of-macros-in-c-c">Programs &#8211; To illustrate the use of macros in C/C++</h2>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C program to illustrate macros
+#include &lt;stdio.h&gt;
+ 
+// Macro definition
+#define LIMIT 5
+ 
+// Driver Code
+int main()
+{
+    // Print the value of macro defined
+    printf("The value of LIMIT"
+           " is %d",
+           LIMIT);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The value of LIMIT is 5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="program-2">Program 2</h2>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C program to illustrate macros
+#include &lt;stdio.h&gt;
+ 
+// Macro definition
+#define AREA(l, b) (l * b)
+ 
+// Driver Code
+int main()
+{
+    // Given lengths l1 and l2
+    int l1 = 10, l2 = 5, area;
+ 
+    // Find the area using macros
+    area = AREA(l1, l2);
+ 
+    // Print the area
+    printf("Area of rectangle"
+           " is: %d",
+           area);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Area of rectangle is: 50
+</code></pre>
+
+
+
+<p>Explanation</p>
+
+
+
+<p> In this case, when the compiler encounters <code>AREA(l, b)</code> in the program, it replaces it with the macro&#8217;s definition, which is <code>(l*b)</code>. So, if you use <code>AREA(10, 5)</code> in your code, it will be equal to <code>10*5</code>. Macros provide a way to perform simple text replacement in your code, which can be helpful for defining constants or creating code templates for repetitive tasks.</p>
+
+
+
+<p><strong>Type Of Macros</strong></p>
+
+
+
+<p> Object-like macros are simple identifiers that are replaced with code fragments. They are called &#8220;object-like&#8221; because they resemble objects in the code where they are used. These macros are commonly used to replace symbolic names with constant values or variables, providing a convenient way to make code more readable and maintainable.</p>
+
+
+
+<p><strong>Illustration of Simple Macro</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate macros
+#include &lt;stdio.h&gt;
+ 
+// Macro definition
+#define DATE 31
+ 
+// Driver Code
+int main()
+{
+    // Print the message
+    printf("Lockdown will be extended"
+           " upto %d-MAY-2020",
+           DATE);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Lockdown will be extended upto 31-MAY-2020
+</code></pre>
+
+
+
+<p>2. Chain Macros: Macros inside macros are referred to as  Chain Macros. Initially, the Parent Macro is being expanded and then the child macro is expanded.</p>
+
+
+
+<p><strong>The illustration of child macro is given below</strong></p>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C program to illustrate macros
+#include &lt;stdio.h&gt;
+  
+// Macro definition
+#define INSTAGRAM FOLLOWERS
+#define FOLLOWERS 138
+  
+// Driver Code
+int main()
+{
+    // Print the message
+    printf("Skill Vertex  have %dK"
+           " followers on Instagram",
+           INSTAGRAM);
+  
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Skill Vertex have 138K followers on Instagram
+</code></pre>
+
+
+
+<p>This is called &#8220;chaining of macros.&#8221; For example, &#8220;INSTAGRAM&#8221; expands to &#8220;FOLLOWERS,&#8221; and then &#8220;FOLLOWERS&#8221; further expands to &#8220;138K.&#8221;</p>
+
+
+
+<p>3. Multi-line Macros</p>
+
+
+
+<p>An object-like macro will contain multi-line. Hence, you need to require a backslash-newline for creating a multi-line macro.</p>
+
+
+
+<p>The illustration of multiline macros are given below</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate macros
+#include &lt;stdio.h&gt;
+ 
+// Multi-line Macro definition
+#define ELE 1, \
+            2, \
+            3
+ 
+// Driver Code
+int main()
+{
+ 
+    // Array arr&#91;] with elements
+    // defined in macros
+    int arr&#91;] = { ELE };
+ 
+    // Print elements
+    printf("Elements of Array are:\n");
+ 
+    for (int i = 0; i &lt; 3; i++) {
+        printf("%d  ", arr&#91;i]);
+    }
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Elements of Array are:
+1  2  3</code></pre>
+
+
+
+<p><strong>4. Function-like Macro: </strong></p>
+
+
+
+<p>Function-like macros in C are similar to function calls and replace code with a set of instructions. To use them, you need to include a pair of parentheses immediately after the macro name. If you add a space between the macro name and the parentheses in the definition, the macro won&#8217;t work.</p>
+
+
+
+<p>Function-like macros are expanded only when their name is followed by a pair of parentheses. If you omit the parentheses, it can lead to a syntax error because the compiler may interpret it as a function pointer getting the address of the real function.</p>
+
+
+
+<p>The illustration of function-like macros is given below:</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate macros
+#include &lt;stdio.h&gt;
+ 
+// Function-like Macro definition
+#define min(a, b) (((a) &lt; (b)) ? (a) : (b))
+ 
+// Driver Code
+int main()
+{
+ 
+    // Given two number a and b
+    int a = 18;
+    int b = 76;
+ 
+    printf("Minimum value between"
+           " %d and %d is %d\n",
+           a, b, min(a, b));
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Minimum value between 18 and 76 is 18
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-macros-and-its-types-in-c-c">FAQ- Macros And Its Types In C/C++</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1699271285278" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is macro and its types?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. There are two types of macros:<br /><strong>Executive Macros:</strong> These macros generate code or data that becomes part of the assembled program. They typically produce executable instructions.<br /><strong>Declarative Macros:</strong> These macros produce information that aids the assembly process in generating code. They provide data or directives that guide the assembly process.<br />These two types of macros serve different purposes in the context of macro processing and code generation during assembly.</p>
+
+</div>
+</div>
+<div id="faq-question-1699271294124" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is a macro type in C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C++, macros are code snippets that can be replaced by specific values. There are different types: object-like (simple identifiers), function-like (similar to functions), multi-line (span multiple lines), and chain macros (macros within macros, allowing nesting). They simplify code in C++ programming.</p>
+
+</div>
+</div>
+<div id="faq-question-1699271303104" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Why use macros in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.In C programming, macros are used to reuse values or code throughout a program. They are defined once and can be employed repeatedly. Additionally, C offers predefined macros.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/macros-and-its-types-in-c-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

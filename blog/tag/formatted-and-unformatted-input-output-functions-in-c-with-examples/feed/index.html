@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Formatted and Unformatted Input/Output functions in C with Examples</title>
+	<atom:link href="https://www.skillvertex.com/tag/formatted-and-unformatted-input-output-functions-in-c-with-examples/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:16:10 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Formatted and Unformatted Input/Output functions in C with Examples</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Formatted And Unformatted Input/Output Functions In C With Examples</title>
+		<link>https://www.skillvertex.com/blog/formatted-and-unformatted-input-output-functions-in-c-with-examples/</link>
+					<comments>https://www.skillvertex.com/blog/formatted-and-unformatted-input-output-functions-in-c-with-examples/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:16:10 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Formatted and Unformatted Input/Output functions in C with Examples]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2239</guid>
+
+					<description><![CDATA[Formatted And Unformatted Input/Output Functions In C With Examples Formatted IO Functions Formatted I/O functions are essential for handling user inputs and displaying outputs in a user-friendly way. They enable programmers to: Why they are called Formatted I/0 Functions These functions are called formatted I/O functions as they can use format specifiers in these functions. ... <a title="Formatted And Unformatted Input/Output Functions In C With Examples" class="read-more" href="https://www.skillvertex.com/blog/formatted-and-unformatted-input-output-functions-in-c-with-examples/" aria-label="More on Formatted And Unformatted Input/Output Functions In C With Examples">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#formatted-and-unformatted-input-output-functions-in-c-with-examples">Formatted And Unformatted Input/Output Functions In C With Examples</a></li><li ><a href="#formatted-io-functions">Formatted IO Functions</a></li><li ><a href="#why-they-are-called-formatted-i-0-functions">Why they are called Formatted I/0 Functions</a></li><li ><a href="#unformatted-input-output-functions">Unformatted Input/Output functions</a></li><li ><a href="#formatted-i-o-vs-unformatted-i-o">Formatted I/O vs Unformatted I/O</a></li><li ><a href="#faq-formatted-and-unformatted-input-output-functions-in-c-with-examples">FAQ- Formatted and Unformatted Input/Output functions in C with Examples</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="formatted-and-unformatted-input-output-functions-in-c-with-examples">Formatted And Unformatted Input/Output Functions In C With Examples</h2>
+
+
+
+<h2 class="wp-block-heading" id="formatted-io-functions">Formatted IO Functions</h2>
+
+
+
+<p>Formatted I/O functions are essential for handling user inputs and displaying outputs in a user-friendly way. They enable programmers to:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Receive User Inputs:</strong> Formatted input functions help programs collect user input in a structured manner. They use format specifiers to interpret and extract specific data types from user input.</li>
+
+
+
+<li><strong>Present Data to Users:</strong> Formatted output functions allow programs to present data to users in various formats. Format specifiers are used to control how data is displayed, making it more readable and visually appealing.</li>
+
+
+
+<li><strong>Support Multiple Data Types:</strong> These I/O functions are versatile and support a wide range of data types, including integers, floating-point numbers, characters, and more. Each data type has corresponding format specifiers for precise formatting.</li>
+
+
+
+<li><strong>Formatting Control:</strong> Programmers can use format specifiers to control the alignment, width, precision, and other formatting aspects of displayed data, ensuring it&#8217;s presented as intended.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="why-they-are-called-formatted-i-0-functions">Why they are called Formatted I/0 Functions</h2>
+
+
+
+<p>These functions are called formatted I/O functions as they can use format specifiers in these functions. Moreover,  we can format these functions according to our needs.</p>
+
+
+
+<p>Here are the list of some specifiers</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>NO.</strong></td><td><strong>Format Specifier &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></td><td><strong>Type &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></td><td><strong>Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></td></tr><tr><td>1</td><td>%d</td><td>int/signed int</td><td>used for I/O signed integer value</td></tr><tr><td>2</td><td>%c</td><td>char</td><td>Used for I/O character value</td></tr><tr><td>3</td><td>%f</td><td>float</td><td>Used for I/O decimal floating-point value &nbsp; &nbsp; &nbsp; &nbsp;</td></tr><tr><td>4</td><td>%s</td><td>string</td><td>Used for I/O string/group of characters &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</td></tr><tr><td>5</td><td>%ld</td><td>long int</td><td>Used for I/O long signed integer value</td></tr><tr><td>6</td><td>%u</td><td>unsigned int &nbsp;&nbsp;</td><td>Used for I/O unsigned integer value</td></tr><tr><td>7</td><td>%i</td><td>unsigned int</td><td>used for the I/O integer value</td></tr><tr><td>8</td><td>%lf</td><td>double</td><td>Used for I/O fractional or floating data&nbsp;</td></tr><tr><td>9</td><td>%n</td><td>prints</td><td>prints nothing&nbsp;</td></tr></tbody></table></figure>
+
+
+
+<p>The following formatted I/O functions will be discussed in this section-</p>
+
+
+
+<ol class="wp-block-list">
+<li>printf()</li>
+
+
+
+<li>scanf()</li>
+
+
+
+<li>sprintf()</li>
+
+
+
+<li>sscanf()</li>
+</ol>
+
+
+
+<ol class="wp-block-list">
+<li><strong>printf():</strong></li>
+</ol>
+
+
+
+<p>In C, <code>printf()</code> is a built-in function used to display values like numbers, characters, and strings on the console screen. It&#8217;s pre-defined in the <code>stdio.h</code> header, allowing easy output formatting in C programs.</p>
+
+
+
+<p>Syntax 1</p>
+
+
+
+<pre class="wp-block-code"><code>printf(“Format Specifier”, var1, var2, …., varn);  
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to implement
+// printf() function
+#include &lt;stdio.h&gt;
+  
+// Driver code
+int main()
+{
+    // Declaring an int type variable
+    int a;
+  
+    // Assigning a value in a variable
+    a = 20;
+  
+    // Printing the value of a variable
+    printf("%d", a);
+  
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>20
+</code></pre>
+
+
+
+<p>Syntax 2: &nbsp;</p>
+
+
+
+<pre class="wp-block-code"><code>printf(“Enter the text which you want to display”);
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to implement
+// printf() function
+#include &lt;stdio.h&gt;
+  
+// Driver code
+int main()
+{
+    // Displays the string written
+    // inside the double quotes
+    printf("This is a string");
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>This is a string
+</code></pre>
+
+
+
+<p>2. <strong>scanf():</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>scanf():</strong> In C, <code>scanf()</code> is a built-in function for reading user input from the keyboard. It can read values of various data types like integers, floats, characters, and strings. <code>scanf()</code> is a pre-defined function declared in the <code>stdio.h</code> header file. It uses the <code>&amp;</code> (address-of operator) to store user input in the memory location of a variable.</li>
+</ul>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>scanf(“Format Specifier”, &amp;var1, &amp;var2, …., &amp;varn);  
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to implement
+// scanf() function
+#include &lt;stdio.h&gt;
+  
+// Driver code
+int main()
+{
+    int num1;
+  
+    // Printing a message on
+    // the output screen
+    printf("Enter a integer number: ");
+  
+    // Taking an integer value
+    // from keyboard
+    scanf("%d", &amp;num1);
+  
+    // Displaying the entered value
+    printf("You have entered %d", num1);
+  
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter a integer number: You have entered 0
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter a integer number: 56
+You have entered 56</code></pre>
+
+
+
+<p>3. <strong>sprintf():</strong></p>
+
+
+
+<p><strong>sprintf():</strong> Short for &#8220;string print,&#8221; <code>sprintf()</code> is similar to <code>printf()</code> but it stores the formatted string into a character array instead of displaying it on the console screen.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to implement
+// the sprintf() function
+#include &lt;stdio.h&gt;
+  
+// Driver code
+int main()
+{
+    char str&#91;50];
+    int a = 2, b = 8;
+  
+    // The string "2 and 8 are even number"
+    // is now stored into str
+    sprintf(str, "%d and %d are even number",
+            a, b);
+  
+    // Displays the string
+    printf("%s", str);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>2 and 8 are even number
+</code></pre>
+
+
+
+<p>4. <strong>sscanf():</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>sscanf():</strong> Abbreviated for &#8220;string scanf,&#8221; <code>sscanf()</code> resembles <code>scanf()</code> but reads data from a string or character array rather than from the console screen.</li>
+</ul>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>sscanf(array_name, “format specifier”, &amp;variable_name);
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to implement
+// sscanf() function
+#include &lt;stdio.h&gt;
+  
+// Driver code
+int main()
+{
+    char str&#91;50];
+    int a = 2, b = 8, c, d;
+  
+    // The string "a = 2 and b = 8"
+    // is now stored into str
+    // character array
+    sprintf(str, "a = %d and b = %d",
+            a, b);
+  
+    // The value of a and b is now in
+    // c and d
+    sscanf(str, "a = %d and b = %d",
+           &amp;c, &amp;d);
+  
+    // Displays the value of c and d
+    printf("c = %d and d = %d", c, d);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>c = 2 and d = 8
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="unformatted-input-output-functions">Unformatted Input/Output functions</h2>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Unformatted I/O Functions:</strong> These functions are used exclusively for character data types or character arrays/strings. They are designed for reading single inputs from the user at the console and for displaying values on the console.</li>
+
+
+
+<li><strong>Why &#8220;Unformatted&#8221;?:</strong> They are referred to as &#8220;unformatted&#8221; I/O functions because they do not support format specifiers. Unlike formatted I/O functions like <code>printf()</code> and <code>scanf()</code>, you cannot use format specifiers to control the formatting of the data. They display or read data as-is without formatting options.</li>
+</ul>
+
+
+
+<p>The following are unformatted I/O functions</p>
+
+
+
+<ol class="wp-block-list">
+<li>getch()</li>
+
+
+
+<li>getche()</li>
+
+
+
+<li>getchar()</li>
+
+
+
+<li>putchar()</li>
+
+
+
+<li>gets()</li>
+
+
+
+<li>puts()</li>
+
+
+
+<li>putch()</li>
+</ol>
+
+
+
+<ol class="wp-block-list">
+<li><strong>getch():</strong></li>
+</ol>
+
+
+
+<p><strong>getch():</strong> In C, <code>getch()</code> reads a single character from the keyboard without displaying it on the console screen. It immediately returns without requiring the user to press the Enter key. This function is declared in the <code>conio.h</code> header file and is often used for controlling screen display.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>getch(); 
+
+or 
+
+variable-name = getch();</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to implement
+// getch() function
+#include &lt;conio.h&gt;
+#include &lt;stdio.h&gt;
+  
+// Driver code
+int main()
+{
+    printf("Enter any character: ");
+  
+    // Reads a character but
+    // not displays
+    getch();
+  
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter any character: 
+
+</code></pre>
+
+
+
+<p>2. <strong>getche():</strong></p>
+
+
+
+<p>In C, <code>getche()</code> reads a single character from the keyboard, displays it on the console screen, and immediately returns without requiring the user to press the Enter key. This function is declared in the <code>conio.h</code> header file.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>getche(); 
+
+or 
+
+variable_name = getche();</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to implement
+// the getche() function
+#include &lt;conio.h&gt;
+#include &lt;stdio.h&gt;
+  
+// Driver code
+int main()
+{
+    printf("Enter any character: ");
+  
+    // Reads a character and
+    // displays immediately
+    getche();
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter any character: g
+
+</code></pre>
+
+
+
+<p>3. <strong>getchar():&nbsp;</strong></p>
+
+
+
+<p>In C, <code>getchar()</code> reads a single character from the keyboard and waits until the Enter key is pressed. It processes one character at a time. This function is declared in the <code>stdio.h</code> header file</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>Variable-name = getchar();
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to implement
+// the getchar() function
+#include &lt;conio.h&gt;
+#include &lt;stdio.h&gt;
+  
+// Driver code
+int main()
+{
+    // Declaring a char type variable
+    char ch;
+  
+    printf("Enter the character: ");
+  
+    // Taking a character from keyboard
+    ch = getchar();
+  
+    // Displays the value of ch
+    printf("%c", ch);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter the character: a
+
+a</code></pre>
+
+
+
+<p>4. <strong>putchar():</strong></p>
+
+
+
+<p>In C, <code>putchar()</code> is used to display a single character at a time, either by passing the character directly or by using a variable that stores the character. This function is declared in the <code>stdio.h</code> header file.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>putchar(variable_name);  
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to implement
+// the putchar() function
+#include &lt;conio.h&gt;
+#include &lt;stdio.h&gt;
+  
+// Driver code
+int main()
+{
+    char ch;
+    printf("Enter any character: ");
+  
+    // Reads a character
+    ch = getchar();
+  
+    // Displays that character
+    putchar(ch);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter any character: Z
+
+Z</code></pre>
+
+
+
+<p>5. <strong>gets():</strong></p>
+
+
+
+<p>In C, <code>gets()</code> reads a group of characters or strings from the keyboard, and these characters are stored in a character array. It allows you to input space-separated texts or strings. This function is declared in the <code>stdio.h</code> header file. However, please note that <code>gets()</code> is considered unsafe due to the risk of buffer overflow and is generally discouraged in favor of safer alternatives like <code>fgets()</code>.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>char str&#91;length of string in number]; //Declare a char type variable of any length 
+
+gets(str); </code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to implement
+// the gets() function
+#include &lt;conio.h&gt;
+#include &lt;stdio.h&gt;
+  
+// Driver code
+int main()
+{
+    // Declaring a char type array
+    // of length 50 characters
+    char name&#91;50];
+  
+    printf("Please enter some texts: ");
+  
+    // Reading a line of character or
+    // a string
+    gets(name);
+  
+    // Displaying this line of character
+    // or a string
+    printf("You have entered: %s",
+           name);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Please enter some texts: Skill Vertex
+
+You have entered: Skill Vertex</code></pre>
+
+
+
+<p>6. <strong>puts():</strong></p>
+
+
+
+<p>In C programming, <code>puts()</code> is used to display a group of characters or strings that are already stored in a character array. This function is declared in the <code>stdio.h</code> header file.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code> puts(identifier_name );
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to implement
+// the puts() function
+#include &lt;stdio.h&gt;
+  
+// Driver code
+int main()
+{
+    char name&#91;50];
+    printf("Enter your text: ");
+  
+    // Reads string from user
+    gets(name);
+  
+    printf("Your text is: ");
+  
+    // Displays string
+    puts(name);
+  
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter your text: Skill Vertex
+
+Your text is: Skill Vertex</code></pre>
+
+
+
+<p>7. <strong>putch():</strong></p>
+
+
+
+<p>In C, <code>putch()</code> is used to display a single character provided by the user, and it prints the character at the current cursor location. This function is declared in the <code>conio.h</code> header file</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>putch(variable_name);  
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to implement
+// the putch() functions
+#include &lt;conio.h&gt;
+#include &lt;stdio.h&gt;
+  
+// Driver code
+int main()
+{
+    char ch;
+    printf("Enter any character:\n ");
+  
+    // Reads a character from the keyboard
+    ch = getch();
+  
+    printf("\nEntered character is: ");
+  
+    // Displays that character on the console
+    putch(ch);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter any character:
+
+Entered character is: d</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="formatted-i-o-vs-unformatted-i-o">Formatted I/O vs Unformatted I/O</h2>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>S No.</strong></td><td><strong>Formatted I/O functions &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></td><td><strong>Unformatted I/O functions &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></td></tr><tr><td>1</td><td>These Formatted I/O functions will provide input or display output in the user’s desired format.</td><td>Whereas, Unformatted I/O functions won&#8217;t allow to take input or display output in user desired format.</td></tr><tr><td>2</td><td>They will  support format specifiers.</td><td>They will support format specifiers.</td></tr><tr><td>3</td><td>These will store  data more user-friendly</td><td>These functions are notuser-friendly.</td></tr><tr><td>4</td><td>In Formatted I/0 Functions, we can use all data types.</td><td>These functions are not user-friendly.</td></tr><tr><td>5</td><td>Examples -printf(), scanf, sprintf() and sscanf()</td><td>Example-getch(), getche(), gets() and puts()</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="faq-formatted-and-unformatted-input-output-functions-in-c-with-examples">FAQ- Formatted and Unformatted Input/Output functions in C with Examples</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1695990928737" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is an example of formatted input output statement?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Interactive Input</p>
+<p>Example: int age; double gpa; char answer; printf(&#8220;Please enter your age: &#8220;); scanf(&#8220;%d&#8221;, &amp;age); printf(&#8220;Please enter your gpa: &#8220;); scanf(&#8220;%lf&#8221;, %gpa); printf(&#8220;Do you like pie (Y/N)? &#8220;); scanf(&#8220;%c&#8221;, %answer);</p>
+
+</div>
+</div>
+<div id="faq-question-1695990937570" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. Which are the types of formatted input and output?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. %d. Integer: int/ signed int. Used to read and print integer values.<br />%c. Character: char. Used to read and print Character values.<br />%f. Floating point: float. Used to read and print decimal values.<br />%s. String.<br />%ld. long int.<br />% you. Unsigned int. <br />%i. Unsigned int.<br />%lf. double.</p>
+
+</div>
+</div>
+<div id="faq-question-1695990947353" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is formatted input output functions in C with example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Formatted I/O functions are used in programming to handle input from users and display information in different formats. These functions support various data types like integers, floating-point numbers, and characters, and they use format specifiers to control how data is presented to users.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/formatted-and-unformatted-input-output-functions-in-c-with-examples/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

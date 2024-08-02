@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Dynamically Growing Array in C</title>
+	<atom:link href="https://www.skillvertex.com/tag/dynamically-growing-array-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 05 Mar 2024 12:40:05 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Dynamically Growing Array in C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Dynamically Growing Array In C</title>
+		<link>https://www.skillvertex.com/blog/dynamically-growing-array-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/dynamically-growing-array-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 05 Mar 2024 12:40:05 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Dynamically Growing Array in C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3208</guid>
+
+					<description><![CDATA[Dynamically Growing Array In C A Dynamically Growing Array is a type of dynamic array that can expand in size to store data as required. In the C language, static arrays have fixed sizes known at compile time, which can lead to space issues. Programming languages like C++, Python, and Java have built-in data structures ... <a title="Dynamically Growing Array In C" class="read-more" href="https://www.skillvertex.com/blog/dynamically-growing-array-in-c/" aria-label="More on Dynamically Growing Array In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#dynamically-growing-array-in-c">Dynamically Growing Array In C</a></li><li ><a href="#basic-principle">Basic Principle</a></li><li ><a href="#working">Working</a></li><li ><a href="#c-program-for-dynamically-growing-array">C Program for Dynamically Growing Array</a></li><li ><a href="#components-of-dynamically-growing-array">Components of Dynamically Growing Array</a><ul><li ><a href="#1-dynamic-array">1. dynamic_array</a></li><li ><a href="#2-array-init">2. arrayInit()</a></li><li ><a href="#3-free-array">3. freeArray()</a></li></ul></li><li ><a href="#basic-operations">Basic Operations</a><ul><li ><a href="#1-insert-item">1. insertItem()</a></li><li ><a href="#2-get-item">2. getItem()</a></li><li ><a href="#3-update-item">3. updateItem()</a></li><li ><a href="#4-print-item">4. printItem()</a></li><li ><a href="#5-delete-item">5. deleteItem()</a></li></ul></li><li ><a href="#faq-dynamically-growing-array-in-c">FAQ- Dynamically Growing Array in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="dynamically-growing-array-in-c">Dynamically Growing Array In C</h2>
+
+
+
+<p>A Dynamically Growing Array is a type of dynamic array that can expand in size to store data as required. In the C language, static arrays have fixed sizes known at compile time, which can lead to space issues. </p>
+
+
+
+<p>Programming languages like C++, Python, and Java have built-in data structures that manage size automatically. The goal is to create a dynamic array in C that can adjust its size dynamically to meet the program&#8217;s requirements, thus avoiding issues with wasted memory or running out of space.</p>
+
+
+
+<h2 class="wp-block-heading" id="basic-principle">Basic Principle</h2>
+
+
+
+<p>The fundamental principle of the Dynamically Growing Array is based on the dynamic memory allocation concept in C. This concept enables users to allocate memory during program execution and adjust the allocated size as needed.</p>
+
+
+
+<h2 class="wp-block-heading" id="working">Working</h2>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Start with a Small Initial Size</strong>: The newly created dynamic array begins with a small initial size to save memory.</li>
+
+
+
+<li><strong>Provide Standard Array Operations</strong>: Functions are available to perform typical array operations, like adding, accessing, or removing elements, just as you would with a regular array.</li>
+
+
+
+<li><strong>Double the Capacity When Needed</strong>: When the array runs out of space, its capacity is doubled by using the <code>realloc()</code> function to reallocate memory. Doubling the size is preferred over increasing it one by one because multiple <code>realloc()</code> calls can be costly and may impact the efficiency of insertion operations.</li>
+
+
+
+<li><strong>Amortized Constant Time Complexity</strong>: Doubling the array&#8217;s size has amortized constant time complexity for insertion operations, making it efficient in practice.</li>
+
+
+
+<li>**Clear Memory with <code>free()**: After the array is no longer needed, the memory is released using the</code>free()` function to prevent memory leaks.</li>
+</ol>
+
+
+
+<p>This approach ensures that the Dynamically Growing Array is both memory-efficient and time-efficient for various operations.</p>
+
+
+
+<h2 class="wp-block-heading" id="c-program-for-dynamically-growing-array">C Program for Dynamically Growing Array</h2>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C program to demonstrate the  
+// dynamically growing array 
+#include &lt;stdio.h&gt; 
+#include &lt;stdlib.h&gt; 
+  
+#define INITIAL_SIZE 8 
+  
+// base structure 
+typedef struct { 
+    size_t size; 
+    size_t capacity; 
+    int* array; 
+}dynamic_array; 
+  
+// function prototypes 
+//  array container functions 
+void arrayInit(dynamic_array** arr_ptr); 
+void freeArray(dynamic_array* container); 
+  
+// Basic Operation functions 
+void insertItem(dynamic_array* container, int item); 
+void updateItem(dynamic_array* container, int i, int item); 
+int getItem(dynamic_array* container, int i); 
+void deleteItem(dynamic_array* container, int item); 
+void printArray(dynamic_array* container); 
+  
+// driver code 
+int main() 
+{ 
+    dynamic_array* arr; 
+    arrayInit(&amp;arr); 
+      
+    for (int i = 0; i &lt; 6; i++) { 
+        insertItem(arr, i + 11); 
+    } 
+    printArray(arr); 
+    printf("%d\n", getItem(arr, 3)); 
+    deleteItem(arr, 3); 
+    printArray(arr); 
+  
+    for (int i = 0; i &lt; 5; i++) { 
+        insertItem(arr, i + 17); 
+    } 
+  
+    printArray(arr); 
+  
+    freeArray(arr); 
+    int var; 
+    return 0; 
+} 
+//------Function Definitions------ 
+// Array initialization 
+void arrayInit(dynamic_array** arr_ptr) 
+{ 
+    dynamic_array *container; 
+    container = (dynamic_array*)malloc(sizeof(dynamic_array)); 
+    if(!container) { 
+        printf("Memory Allocation Failed\n"); 
+        exit(0); 
+    } 
+  
+    container-&gt;size = 0; 
+    container-&gt;capacity = INITIAL_SIZE; 
+    container-&gt;array = (int *)malloc(INITIAL_SIZE * sizeof(int)); 
+    if (!container-&gt;array){ 
+        printf("Memory Allocation Failed\n"); 
+        exit(0); 
+    } 
+  
+    *arr_ptr = container; 
+} 
+  
+//  Insertion Operation 
+void insertItem(dynamic_array* container, int item) 
+{ 
+if (container-&gt;size == container-&gt;capacity) { 
+        int *temp = container-&gt;array; 
+        container-&gt;capacity &lt;&lt;= 1; 
+        container-&gt;array = realloc(container-&gt;array, container-&gt;capacity * sizeof(int)); 
+        if(!container-&gt;array) { 
+            printf("Out of Memory\n"); 
+            container-&gt;array = temp; 
+            return; 
+        } 
+    } 
+    container-&gt;array&#91;container-&gt;size++] = item; 
+} 
+  
+// Retrieve Item at Particular Index 
+int getItem(dynamic_array* container, int index) 
+{ 
+    if(index &gt;= container-&gt;size) { 
+        printf("Index Out of Bounds\n"); 
+        return -1; 
+    } 
+    return container-&gt;array&#91;index]; 
+} 
+  
+// Update Operation 
+void updateItem(dynamic_array* container, int index, int item) 
+{ 
+    if (index &gt;= container-&gt;size) { 
+        printf("Index Out of Bounds\n"); 
+        return; 
+    } 
+    container-&gt;array&#91;index] = item; 
+} 
+  
+// Delete Item from Particular Index 
+void deleteItem(dynamic_array* container, int index) 
+{ 
+    if(index &gt;= container-&gt;size) { 
+        printf("Index Out of Bounds\n"); 
+        return; 
+    } 
+  
+    for (int i = index; i &lt; container-&gt;size; i++) { 
+        container-&gt;array&#91;i] = container-&gt;array&#91;i + 1]; 
+    } 
+    container-&gt;size--; 
+} 
+  
+// Array Traversal 
+void printArray(dynamic_array* container) 
+{ 
+    printf("Array elements: "); 
+    for (int i = 0; i &lt; container-&gt;size; i++) { 
+        printf("%d ", container-&gt;array&#91;i]); 
+    } 
+    printf("\nSize: "); 
+    printf("%lu", container-&gt;size); 
+    printf("\nCapacity: "); 
+    printf("%lu\n", container-&gt;capacity); 
+} 
+  
+// Freeing the memory allocated to the array 
+void freeArray(dynamic_array* container) 
+{ 
+    free(container-&gt;array); 
+    free(container); 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Array elements: 11 12 13 14 15 16 
+Size: 6
+Capacity: 8
+14
+Array elements: 11 12 13 15 16 
+Size: 5
+Capacity: 8
+Array elements: 11 12 13 15 16 17 18 19 20 21 
+Size: 10
+Capacity: 16</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="components-of-dynamically-growing-array">Components of Dynamically Growing Array</h2>
+
+
+
+<ol class="wp-block-list">
+<li><strong>dynamic_array</strong>: The core structure for the dynamic array.</li>
+
+
+
+<li><strong>arrayInit()</strong>: Function to set up and initialize the array.</li>
+
+
+
+<li><strong>deleteArr()</strong>: Function for freeing up memory when done with the array.</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading" id="1-dynamic-array">1. dynamic_array</h3>
+
+
+
+<ol class="wp-block-list">
+<li><strong>size</strong>: Keeps track of how much memory is being used.</li>
+
+
+
+<li><strong>capacity</strong>: Keeps track of the maximum capacity of the array.</li>
+
+
+
+<li><strong>array</strong>: A pointer to the actual storage location, typically an array of integers (int).</li>
+</ol>
+
+
+
+<p>Code</p>
+
+
+
+<pre class="wp-block-code"><code>typedef struct {
+    size_t size;
+    size_t capacity;
+    int* array;
+} dynamic_array;</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="2-array-init">2. arrayInit()</h3>
+
+
+
+<p>This function initializes the dynamic array with a default size of 8. It accepts the address of a double-pointer to the <code>dynamic_array</code> as an argument.</p>
+
+
+
+<p>Code:</p>
+
+
+
+<pre class="wp-block-code"><code>void arrayInit(dynamic_array** arr_ptr)
+{
+    dynamic_array *container;
+    container = (dynamic_array*)malloc(sizeof(dynamic_array));
+    if(!container) {
+        printf("Memory Allocation Failed\n");
+        exit(0);
+    }
+
+    container-&gt;size = 0;
+    container-&gt;capacity = INITIAL_SIZE;
+    container-&gt;array = (int *)malloc(INITIAL_SIZE * sizeof(int));
+    if (!container-&gt;array){
+        printf("Memory Allocation Failed\n");
+        exit(0);
+    }
+
+    *arr_ptr = container;
+}</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="3-free-array">3. freeArray()</h3>
+
+
+
+<p>This function is responsible for releasing the memory allocated to the dynamically growing array. It should be called when you&#8217;re finished using the array to ensure proper memory management.</p>
+
+
+
+<p>Code:</p>
+
+
+
+<pre class="wp-block-code"><code>void freeArray(dynamic_array* container)
+{
+    free(container-&gt;array);
+    free(container);
+}</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="basic-operations">Basic Operations</h2>
+
+
+
+<p>5 basic operations can provide basic operations of an array.</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>insertItem():&nbsp;</strong>Used for  adding  an element at the end of the array</li>
+
+
+
+<li><strong>getItem():</strong>&nbsp;This operation is used to recover  the element at the given index</li>
+
+
+
+<li><strong>updateItem():&nbsp;</strong>Used to  update an element at that given index of the array</li>
+
+
+
+<li><strong>printItem():&nbsp;</strong>functions for printing all the elements of the array</li>
+
+
+
+<li><strong>deleteItem():&nbsp;</strong> Used to  delete an element of the array at the given index</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading" id="1-insert-item">1.&nbsp;<strong>insertItem()</strong></h3>
+
+
+
+<p>The <code>insertItem()</code> function allows you to add elements to an array. When there&#8217;s available space, it inserts elements without changing the array&#8217;s size. However, when the array is full, it uses the <code>realloc()</code> function to double the array&#8217;s capacity and then perform the insertion. This strategy optimizes the efficiency of insertions by minimizing the need for frequent resizing.</p>
+
+
+
+<p>Code:</p>
+
+
+
+<pre class="wp-block-code"><code>void insertItem(dynamic_array* container, int item)
+{
+    if (container-&gt;size == container-&gt;capacity) {
+        int *temp = container-&gt;array;
+        container-&gt;capacity &lt;&lt;= 1;
+        container-&gt;array = realloc(container-&gt;array, container-&gt;capacity * sizeof(int));
+        if(!container-&gt;array) {
+            printf("Out of Memory\n");
+            container-&gt;array = temp;
+            return;
+        }
+    }
+    container-&gt;array&#91;container-&gt;size++] = item;
+}</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="2-get-item">2. getItem()</h3>
+
+
+
+<p>This function returns the integer value located at a specified index. It requires two arguments: the container&#8217;s address and the index.</p>
+
+
+
+<pre class="wp-block-code"><code>int getItem(dynamic_array* container, int index)
+{
+    if(index &gt; container-&gt;size) {
+        printf("Index Out of Bounds\n");
+        return -1;
+    }
+    return container-&gt;array&#91;index];
+}</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="3-update-item">3.&nbsp;<strong>updateItem()</strong></h3>
+
+
+
+<p>The <code>updateItem()</code> function allows you to update an element at a specific index in a container. It accepts three arguments: the container&#8217;s address, the index, and the new updated item.</p>
+
+
+
+<p>Code:</p>
+
+
+
+<pre class="wp-block-code"><code>void updateItem(dynamic_array* container, int index, int item)
+{
+    if (index &gt; container-&gt;size) {
+        printf("Index Out of Bounds\n");
+        return;
+    }
+    container-&gt;array&#91;index] = item;
+}</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="4-print-item"><strong>4. printItem()</strong></h3>
+
+
+
+<p>This function will pass over the array and then print all elements. Despite of that, it will also print the current size and capacity of the array.</p>
+
+
+
+<p>Code:</p>
+
+
+
+<pre class="wp-block-code"><code>void printArray(dynamic_array* container)
+{
+    printf("Array elements: ");
+    for (int i = 0; i &lt; container-&gt;size; i++) {
+        printf("%d ", container-&gt;array&#91;i]);
+    }
+    printf("\nSize: ");
+    printf("%ld", container-&gt;size);
+    printf("\nCapacity: ");
+    printf("%ld\n", container-&gt;capacity);
+}</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="5-delete-item"><strong>5. deleteItem()</strong></h3>
+
+
+
+<p>This function will allow to delete of the delete operation using the remove element at the purticular index.</p>
+
+
+
+<p>Code:</p>
+
+
+
+<pre class="wp-block-code"><code>void deleteItem(dynamic_array* container, int index)
+{
+    if(index &gt; container-&gt;size) {
+        printf("Index Out of Bounds\n");
+        return;
+    }
+
+    for (int i = index; i &lt; container-&gt;size; i++) {
+        container-&gt;array&#91;i] = container-&gt;array&#91;i + 1];
+    }
+    container-&gt;size--;
+}</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-dynamically-growing-array-in-c">FAQ- Dynamically Growing Array in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1698904350236" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How to dynamically grow an array in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The &#8220;realloc&#8221; or &#8220;re-allocation&#8221; function in C is used to dynamically adjust the memory allocation of a previously allocated memory block. This function can be used to either create a new array or change the size of an existing array. Syntax- <code>ptr = realloc(ptr, newSize);</code></p>
+
+</div>
+</div>
+<div id="faq-question-1698904355362" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. Can we increase array size dynamically?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. We cannot increase the array size dynamically, instead, we can copy it into a new array. </p>
+
+</div>
+</div>
+<div id="faq-question-1698904360591" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the meaning of a dynamic array?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A dynamic array is like a flexible list that can grow or shrink as you add or remove elements. It&#8217;s available in modern programming languages and is more versatile than fixed-size arrays because it can change in size as needed, making it easy to work with varying amounts of data. </p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/dynamically-growing-array-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

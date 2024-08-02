@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>C Program To Print Contents Of File</title>
+	<atom:link href="https://www.skillvertex.com/tag/c-program-to-print-contents-of-file/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 06 Mar 2024 11:38:03 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>C Program To Print Contents Of File</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>C Program To Print Contents Of File</title>
+		<link>https://www.skillvertex.com/blog/c-program-to-print-contents-of-file/</link>
+					<comments>https://www.skillvertex.com/blog/c-program-to-print-contents-of-file/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 11:38:03 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[C Program To Print Contents Of File]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3619</guid>
+
+					<description><![CDATA[C Program To Print Contents Of File In this C program, we&#8217;re going to learn how to open a file and print out what&#8217;s inside it. It&#8217;s like peeking into a document using C! The program will demonstrate how C can easily handle files, making it a handy skill for dealing with information stored outside ... <a title="C Program To Print Contents Of File" class="read-more" href="https://www.skillvertex.com/blog/c-program-to-print-contents-of-file/" aria-label="More on C Program To Print Contents Of File">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#c-program-to-print-contents-of-file">C Program To Print Contents Of File</a></li><li ><a href="#faq-c-program-to-print-contents-of-file">FAQ- C Program To Print Contents Of File</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="c-program-to-print-contents-of-file">C Program To Print Contents Of File</h2>
+
+
+
+<p>In this C program, we&#8217;re going to learn how to open a file and print out what&#8217;s inside it. It&#8217;s like peeking into a document using C! The program will demonstrate how C can easily handle files, making it a handy skill for dealing with information stored outside the program itself. By keeping things straightforward, this program is a great starting point for grasping the basics of working with files in C. Let&#8217;s look further and explore the contents of a file using the simplicity of C programming!</p>
+
+
+
+<p><a href="http://www.cplusplus.com/reference/cstdio/fopen/" target="_blank" rel="noreferrer noopener nofollow">fopen()</a>&nbsp;is basically functions  to open the file , whereas <a href="http://www.cplusplus.com/reference/cstdio/fclose/" target="_blank" rel="noreferrer noopener nofollow">fclose()</a>&nbsp;is used to close a file in C.</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt; 
+#include &lt;stdlib.h&gt; // For exit() 
+  
+int main() 
+{ 
+    FILE *fptr; 
+  
+    char filename&#91;100], c; 
+  
+    printf("Enter the filename to open \n"); 
+    scanf("%s", filename); 
+  
+    // Open file 
+    fptr = fopen(filename, "r"); 
+    if (fptr == NULL) 
+    { 
+        printf("Cannot open file \n"); 
+        exit(0); 
+    } 
+  
+    // Read contents from file 
+    c = fgetc(fptr); 
+    while (c != EOF) 
+    { 
+        printf ("%c", c); 
+c = fgetc(fptr); 
+    } 
+  
+    fclose(fptr); 
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter the filename to open
+a.txt
+/*Contents of a.txt*/</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-c-program-to-print-contents-of-file">FAQ- C Program To Print Contents Of File</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1700463581631" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How to display the contents of a file in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. We have to Open a file using the function fopen() and then store the reference of the file in a FILE pointer.<strong> </strong>Hence, its possible to Read contents of the file using any of these functions such as  fgetc(), fgets(), fscanf(), or fread(). Later, close the file using the function fclose().</p>
+
+</div>
+</div>
+<div id="faq-question-1700463599333" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. How to print something from a file in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. We create a <code>FILE</code> pointer variable named <code>file</code>.<br />Open the file &#8220;example.txt&#8221; in write mode (&#8220;w&#8221;) to write content using <code>fprintf</code>.<br />Close the file after writing.<br />Open the same file in read mode (&#8220;r&#8221;) to read content using <code>fscanf</code>.<br />Close the file after reading.</p>
+
+</div>
+</div>
+<div id="faq-question-1700463603948" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. How to use Fputs in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. fputs() is referred to as the standard C library which will write a string of characters to the file at the location indicated by the file pointer. Given below is the declaration of the fputs() function: int fputs (const char * str, FILE * stream); The fputs() function returns 0 if the string is written to the file successfully.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/c-program-to-print-contents-of-file/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

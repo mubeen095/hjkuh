@@ -1,0 +1,2719 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
+<title>Python Built-in Functions</title>
+<meta name="description" content="Explore the power of Python with its comprehensive set of built-in functions! From mathematical operations to string manipulations, discover the versatility of Python&#039;s standard library functions. This guide provides insights into essential Python built-in functions, empowering developers to streamline coding tasks and enhance productivity. Learn how to leverage these functions to optimize your code and unlock the full potential of Python programming."/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Python Built-in Functions" />
+<meta property="og:description" content="Explore the power of Python with its comprehensive set of built-in functions! From mathematical operations to string manipulations, discover the versatility of Python&#039;s standard library functions. This guide provides insights into essential Python built-in functions, empowering developers to streamline coding tasks and enhance productivity. Learn how to leverage these functions to optimize your code and unlock the full potential of Python programming." />
+<meta property="og:url" content="https://www.skillvertex.com/blog/python-built-in-functions/" />
+<meta property="og:site_name" content="Skillvertex Blog" />
+<meta property="article:tag" content="functions" />
+<meta property="article:tag" content="programming language" />
+<meta property="article:tag" content="python" />
+<meta property="article:tag" content="python built in functions" />
+<meta property="article:section" content="Python Tutorial" />
+<meta property="og:image" content="https://www.skillvertex.com/blog/wp-content/uploads/2024/02/Data-Science-2024-02-29T123602.966-1.png" />
+<meta property="og:image:secure_url" content="https://www.skillvertex.com/blog/wp-content/uploads/2024/02/Data-Science-2024-02-29T123602.966-1.png" />
+<meta property="og:image:width" content="730" />
+<meta property="og:image:height" content="480" />
+<meta property="og:image:alt" content="Python Built-in Functions" />
+<meta property="og:image:type" content="image/png" />
+<meta property="article:published_time" content="2024-03-19T06:49:12+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Python Built-in Functions" />
+<meta name="twitter:description" content="Explore the power of Python with its comprehensive set of built-in functions! From mathematical operations to string manipulations, discover the versatility of Python&#039;s standard library functions. This guide provides insights into essential Python built-in functions, empowering developers to streamline coding tasks and enhance productivity. Learn how to leverage these functions to optimize your code and unlock the full potential of Python programming." />
+<meta name="twitter:image" content="https://www.skillvertex.com/blog/wp-content/uploads/2024/02/Data-Science-2024-02-29T123602.966-1.png" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="Hridhya Manoj" />
+<meta name="twitter:label2" content="Time to read" />
+<meta name="twitter:data2" content="28 minutes" />
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='../../index.html' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link href='https://fonts.googleapis.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Python Built-in Functions Comments Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Stories Feed" href="../web-stories/feed/index.html"><script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.skillvertex.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<!-- skillvertex.com/blog is managing ads with Advanced Ads 1.48.1 --><script id="skill-ready">
+			window.advanced_ads_ready=function(e,a){a=a||"complete";var d=function(e){return"interactive"===a?"loading"!==e:"complete"===e};d(document.readyState)?e():document.addEventListener("readystatechange",(function(a){d(a.target.readyState)&&e()}),{once:"interactive"===a})},window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[];		</script>
+		<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='../wp-includes/css/dist/block-library/style.min.css?ver=6.6.1' media='all' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--contrast: var(--contrast);--wp--preset--color--contrast-2: var(--contrast-2);--wp--preset--color--contrast-3: var(--contrast-3);--wp--preset--color--base: var(--base);--wp--preset--color--base-2: var(--base-2);--wp--preset--color--base-3: var(--base-3);--wp--preset--color--accent: var(--accent);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='generate-comments-css' href='../wp-content/themes/generatepress/assets/css/components/comments.min.css?ver=3.3.0' media='all' />
+<link rel='stylesheet' id='generate-widget-areas-css' href='../wp-content/themes/generatepress/assets/css/components/widget-areas.min.css?ver=3.3.0' media='all' />
+<link rel='stylesheet' id='generate-style-css' href='../wp-content/themes/generatepress/assets/css/main.min.css?ver=3.3.0' media='all' />
+<style id='generate-style-inline-css'>
+.is-right-sidebar{width:30%;}.is-left-sidebar{width:30%;}.site-content .content-area{width:100%;}@media (max-width: 768px){.main-navigation .menu-toggle,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav,.main-navigation:not(.slideout-navigation):not(.toggled) .main-nav > ul,.has-inline-mobile-toggle #site-navigation .inside-navigation > *:not(.navigation-search):not(.main-nav){display:none;}.nav-align-right .inside-navigation,.nav-align-center .inside-navigation{justify-content:space-between;}.has-inline-mobile-toggle .mobile-menu-control-wrapper{display:flex;flex-wrap:wrap;}.has-inline-mobile-toggle .inside-header{flex-direction:row;text-align:left;flex-wrap:wrap;}.has-inline-mobile-toggle .header-widget,.has-inline-mobile-toggle #site-navigation{flex-basis:100%;}.nav-float-left .has-inline-mobile-toggle #site-navigation{order:10;}}
+#content {max-width: 800px;margin-left: auto;margin-right: auto;}
+.dynamic-author-image-rounded{border-radius:100%;}.dynamic-featured-image, .dynamic-author-image{vertical-align:middle;}.one-container.blog .dynamic-content-template:not(:last-child), .one-container.archive .dynamic-content-template:not(:last-child){padding-bottom:0px;}.dynamic-entry-excerpt > p:last-child{margin-bottom:0px;}
+</style>
+<link rel='stylesheet' id='generate-google-fonts-css' href='https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre%3A300%2Cregular%2C500%2C700%2C900%7CInter%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900&#038;display=swap&#038;ver=3.3.0' media='all' />
+<link rel='stylesheet' id='generatepress-dynamic-css' href='../wp-content/uploads/generatepress/style.min.css?ver=1713522250' media='all' />
+<style id='generateblocks-inline-css'>
+.gb-icon svg{fill:currentColor;}.gb-highlight{background:none;color:unset;}h2.gb-headline-63d5de93{display:flex;align-items:center;justify-content:flex-end;z-index:1;position:relative;text-align:right;padding-top:30px;padding-right:30px;padding-bottom:0px;margin-bottom:0px;}h2.gb-headline-63d5de93 .gb-icon{line-height:0;color:var(--accent);}h2.gb-headline-63d5de93 .gb-icon svg{width:120px;height:120px;}h4.gb-headline-6c041734{font-weight:bold;margin-bottom:20px;color:var(--base-3);}p.gb-headline-29bd7637{font-size:17px;color:var(--base-3);}p.gb-headline-a6f36397{font-size:18px;padding-top:2px;margin-bottom:0px;}p.gb-headline-643cf12f{font-size:18px;text-align:right;padding-top:2px;margin-bottom:0px;}.gb-container .wp-block-image img{vertical-align:middle;}.gb-container .gb-shape{position:absolute;overflow:hidden;pointer-events:none;line-height:0;}.gb-container .gb-shape svg{fill:currentColor;}.gb-container-85529cf0{margin-top:-60px;background-color:var(--contrast);color:var(--base-3);}.gb-container-595963c6{max-width:1200px;display:flex;flex-wrap:wrap;align-items:center;row-gap:60px;padding:120px 30px 100px;margin-right:auto;margin-left:auto;}.gb-container-4effdea4{width:40%;padding:0;}.gb-container-5b6e61a7{width:60%;display:flex;justify-content:flex-end;column-gap:20px;padding:0;}.gb-container-c6dbdadd{display:flex;justify-content:space-between;flex-basis:100%;padding:60px 0 0;border-top:1px solid rgba(255, 255, 255, 0.3);}.gb-container-1cc69e8f{padding:0;}.gb-container-d1dd99b1{display:flex;align-items:flex-start;column-gap:40px;padding:60px 0 0;}.gb-container-9c89f761{width:50%;height:100%;display:flex;flex-wrap:nowrap;align-items:flex-start;column-gap:10px;padding:0;}.gb-container-5d70717c{width:50%;height:100%;display:flex;align-items:flex-start;justify-content:flex-end;column-gap:10px;text-align:right;padding:0;}.gb-button{text-decoration:none;}.gb-icon svg{fill:currentColor;}a.gb-button-84c9a956{display:inline-flex;align-items:center;justify-content:center;text-align:center;}a.gb-button-b358abea{display:inline-flex;align-items:center;justify-content:center;text-align:center;color:var(--base-3);}a.gb-button-b358abea:hover, a.gb-button-b358abea:active, a.gb-button-b358abea:focus{color:var(--base-2);}a.gb-button-b358abea .gb-icon{line-height:0;}a.gb-button-b358abea .gb-icon svg{width:1em;height:1em;}a.gb-button-18e01320{display:inline-flex;align-items:center;justify-content:center;text-align:center;color:var(--base-3);}a.gb-button-18e01320:hover, a.gb-button-18e01320:active, a.gb-button-18e01320:focus{color:var(--base-2);}a.gb-button-18e01320 .gb-icon{line-height:0;}a.gb-button-18e01320 .gb-icon svg{width:1em;height:1em;}a.gb-button-b3eff93c{display:inline-flex;align-items:center;justify-content:center;text-align:center;color:var(--base-3);}a.gb-button-b3eff93c:hover, a.gb-button-b3eff93c:active, a.gb-button-b3eff93c:focus{color:var(--base-2);}a.gb-button-b3eff93c .gb-icon{line-height:0;}a.gb-button-b3eff93c .gb-icon svg{width:1em;height:1em;}a.gb-button-67824a07{display:inline-flex;align-items:center;justify-content:center;font-size:17px;text-align:center;padding:0;margin-right:20px;color:var(--base-3);}a.gb-button-67824a07:hover, a.gb-button-67824a07:active, a.gb-button-67824a07:focus{color:var(--base-2);}a.gb-button-3a21bace{display:inline-flex;align-items:center;justify-content:center;font-size:17px;text-align:center;padding:0;color:var(--base-3);}a.gb-button-3a21bace:hover, a.gb-button-3a21bace:active, a.gb-button-3a21bace:focus{color:var(--base-2);}a.gb-button-bec8d56e{display:inline-flex;align-items:center;justify-content:center;text-align:center;margin-top:5px;color:var(--accent);}a.gb-button-bec8d56e:hover, a.gb-button-bec8d56e:active, a.gb-button-bec8d56e:focus{color:#674dbc;}a.gb-button-bec8d56e .gb-icon{font-size:1.4em;line-height:0;}a.gb-button-bec8d56e .gb-icon svg{height:1em;width:1em;}a.gb-button-122d9fa4{display:inline-flex;align-items:center;justify-content:center;text-align:center;margin-top:5px;color:var(--accent);}a.gb-button-122d9fa4:hover, a.gb-button-122d9fa4:active, a.gb-button-122d9fa4:focus{color:#674dbc;}a.gb-button-122d9fa4 .gb-icon{font-size:1.4em;line-height:0;}a.gb-button-122d9fa4 .gb-icon svg{height:1em;width:1em;}@media (max-width: 1024px) {.gb-container-595963c6{padding:120px 60px;}.gb-container-4effdea4{width:100%;flex-basis:100%;}.gb-grid-wrapper > .gb-grid-column-4effdea4{width:100%;flex-basis:100%;}.gb-container-5b6e61a7{width:50%;justify-content:flex-start;}.gb-grid-wrapper > .gb-grid-column-5b6e61a7{width:50%;}.gb-container-9c89f761{flex-wrap:nowrap;flex-basis:100%;}.gb-grid-wrapper > .gb-grid-column-9c89f761{flex-basis:100%;}.gb-container-5d70717c{flex-basis:100%;}.gb-grid-wrapper > .gb-grid-column-5d70717c{flex-basis:100%;}}@media (max-width: 1024px) and (min-width: 768px) {.gb-grid-wrapper > div.gb-grid-column-5b6e61a7{padding-bottom:0;}}@media (max-width: 767px) {.gb-container-595963c6{padding:100px 40px;}.gb-container-4effdea4{width:100%;}.gb-grid-wrapper > .gb-grid-column-4effdea4{width:100%;}.gb-container-5b6e61a7{width:100%;}.gb-grid-wrapper > .gb-grid-column-5b6e61a7{width:100%;}.gb-grid-wrapper > div.gb-grid-column-5b6e61a7{padding-bottom:0;}.gb-container-c6dbdadd{flex-direction:column;}.gb-container-1cc69e8f{width:100%;}.gb-grid-wrapper > .gb-grid-column-1cc69e8f{width:100%;}.gb-grid-wrapper > div.gb-grid-column-1cc69e8f{padding-bottom:0;}.gb-container-d1dd99b1{flex-direction:column;}.gb-container-9c89f761{width:100%;display:flex;flex-wrap:nowrap;align-items:center;column-gap:10px;margin-bottom:10px;}.gb-grid-wrapper > .gb-grid-column-9c89f761{width:100%;}.gb-container-5d70717c{width:100%;display:flex;flex-wrap:nowrap;align-items:center;column-gap:10px;text-align:left;}.gb-grid-wrapper > .gb-grid-column-5d70717c{width:100%;}a.gb-button-bec8d56e{margin-top:0px;}a.gb-button-122d9fa4{margin-top:0px;}}
+</style>
+<link rel='stylesheet' id='generate-blog-images-css' href='../wp-content/plugins/gp-premium/blog/functions/css/featured-images.min.css?ver=2.3.2' media='all' />
+<link rel='stylesheet' id='generate-offside-css' href='../wp-content/plugins/gp-premium/menu-plus/functions/css/offside.min.css?ver=2.3.2' media='all' />
+<style id='generate-offside-inline-css'>
+:root{--gp-slideout-width:265px;}.slideout-navigation.main-navigation{background-color:var(--base-3);}.slideout-navigation.main-navigation .main-nav ul li a{color:var(--contrast);}.slideout-navigation.main-navigation .main-nav ul li:not([class*="current-menu-"]):hover > a, .slideout-navigation.main-navigation .main-nav ul li:not([class*="current-menu-"]):focus > a, .slideout-navigation.main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"]) > a{color:var(--contrast-2);background-color:var(--base-2);}.slideout-navigation.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:var(--contrast);background-color:var(--base-3);}.slideout-navigation, .slideout-navigation a{color:var(--contrast);}.slideout-navigation button.slideout-exit{color:var(--contrast);padding-left:16px;padding-right:16px;}.slide-opened nav.toggled .menu-toggle:before{display:none;}@media (max-width: 768px){.menu-bar-item.slideout-toggle{display:none;}}
+</style>
+<script src="../wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="../wp-json/index.html" /><link rel="alternate" title="JSON" type="application/json" href="../wp-json/wp/v2/posts/7464" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.1" />
+<link rel='shortlink' href='../index.html?p=7464' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="../wp-json/oembed/1.0/embed?url=https:%252F%252Fwww.skillvertex.com%252Fblog%252Fpython-built-in-functions%252F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed?url=https:%252F%252Fwww.skillvertex.com%252Fblog%252Fpython-built-in-functions%252F&amp;format=xml" />
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			if ( document.querySelector(".main-title a") ) {
+				const links = document.querySelectorAll(".main-title a");
+				links.forEach(link => link.setAttribute("href", "https://www.skillvertex.com/"));
+			}
+			if ( document.querySelector(".site-logo a") ) {
+				const links = document.querySelectorAll(".site-logo a");
+				links.forEach(link => link.setAttribute("href", "https://www.skillvertex.com/"));
+			}
+		});
+	</script>
+			<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				if ( document.querySelector(".main-title a") ) {
+					const links = document.querySelectorAll(".main-title a");
+					links.forEach( link => link.setAttribute("target", "_blank"));
+				}
+				if ( document.querySelector(".site-logo a") ) {
+					const links = document.querySelectorAll(".site-logo a");
+					links.forEach( link => link.setAttribute("target", "_blank"));
+				}
+			});
+		</script>
+		<link rel="pingback" href="https://www.skillvertex.com/blog/xmlrpc.php">
+<style type="text/css">.saboxplugin-wrap{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;border:1px solid #eee;width:100%;clear:both;display:block;overflow:hidden;word-wrap:break-word;position:relative}.saboxplugin-wrap .saboxplugin-gravatar{float:left;padding:0 20px 20px 20px}.saboxplugin-wrap .saboxplugin-gravatar img{max-width:100px;height:auto;border-radius:0;}.saboxplugin-wrap .saboxplugin-authorname{font-size:18px;line-height:1;margin:20px 0 0 20px;display:block}.saboxplugin-wrap .saboxplugin-authorname a{text-decoration:none}.saboxplugin-wrap .saboxplugin-authorname a:focus{outline:0}.saboxplugin-wrap .saboxplugin-desc{display:block;margin:5px 20px}.saboxplugin-wrap .saboxplugin-desc a{text-decoration:underline}.saboxplugin-wrap .saboxplugin-desc p{margin:5px 0 12px}.saboxplugin-wrap .saboxplugin-web{margin:0 20px 15px;text-align:left}.saboxplugin-wrap .sab-web-position{text-align:right}.saboxplugin-wrap .saboxplugin-web a{color:#ccc;text-decoration:none}.saboxplugin-wrap .saboxplugin-socials{position:relative;display:block;background:#fcfcfc;padding:5px;border-top:1px solid #eee}.saboxplugin-wrap .saboxplugin-socials a svg{width:20px;height:20px}.saboxplugin-wrap .saboxplugin-socials a svg .st2{fill:#fff; transform-origin:center center;}.saboxplugin-wrap .saboxplugin-socials a svg .st1{fill:rgba(0,0,0,.3)}.saboxplugin-wrap .saboxplugin-socials a:hover{opacity:.8;-webkit-transition:opacity .4s;-moz-transition:opacity .4s;-o-transition:opacity .4s;transition:opacity .4s;box-shadow:none!important;-webkit-box-shadow:none!important}.saboxplugin-wrap .saboxplugin-socials .saboxplugin-icon-color{box-shadow:none;padding:0;border:0;-webkit-transition:opacity .4s;-moz-transition:opacity .4s;-o-transition:opacity .4s;transition:opacity .4s;display:inline-block;color:#fff;font-size:0;text-decoration:inherit;margin:5px;-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;-o-border-radius:0;border-radius:0;overflow:hidden}.saboxplugin-wrap .saboxplugin-socials .saboxplugin-icon-grey{text-decoration:inherit;box-shadow:none;position:relative;display:-moz-inline-stack;display:inline-block;vertical-align:middle;zoom:1;margin:10px 5px;color:#444;fill:#444}.clearfix:after,.clearfix:before{content:' ';display:table;line-height:0;clear:both}.ie7 .clearfix{zoom:1}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-twitch{border-color:#38245c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-addthis{border-color:#e91c00}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-behance{border-color:#003eb0}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-delicious{border-color:#06c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-deviantart{border-color:#036824}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-digg{border-color:#00327c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-dribbble{border-color:#ba1655}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-facebook{border-color:#1e2e4f}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-flickr{border-color:#003576}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-github{border-color:#264874}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-google{border-color:#0b51c5}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-googleplus{border-color:#96271a}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-html5{border-color:#902e13}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-instagram{border-color:#1630aa}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-linkedin{border-color:#00344f}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-pinterest{border-color:#5b040e}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-reddit{border-color:#992900}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-rss{border-color:#a43b0a}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-sharethis{border-color:#5d8420}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-skype{border-color:#00658a}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-soundcloud{border-color:#995200}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-spotify{border-color:#0f612c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-stackoverflow{border-color:#a95009}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-steam{border-color:#006388}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-user_email{border-color:#b84e05}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-stumbleUpon{border-color:#9b280e}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-tumblr{border-color:#10151b}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-twitter{border-color:#0967a0}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-vimeo{border-color:#0d7091}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-windows{border-color:#003f71}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-whatsapp{border-color:#003f71}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-wordpress{border-color:#0f3647}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-yahoo{border-color:#14002d}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-youtube{border-color:#900}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-xing{border-color:#000202}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-mixcloud{border-color:#2475a0}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-vk{border-color:#243549}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-medium{border-color:#00452c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-quora{border-color:#420e00}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-meetup{border-color:#9b181c}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-goodreads{border-color:#000}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-snapchat{border-color:#999700}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-500px{border-color:#00557f}.saboxplugin-socials.sabox-colored .saboxplugin-icon-color .sab-mastodont{border-color:#185886}.sabox-plus-item{margin-bottom:20px}@media screen and (max-width:480px){.saboxplugin-wrap{text-align:center}.saboxplugin-wrap .saboxplugin-gravatar{float:none;padding:20px 0;text-align:center;margin:0 auto;display:block}.saboxplugin-wrap .saboxplugin-gravatar img{float:none;display:inline-block;display:-moz-inline-stack;vertical-align:middle;zoom:1}.saboxplugin-wrap .saboxplugin-desc{margin:0 10px 20px;text-align:center}.saboxplugin-wrap .saboxplugin-authorname{text-align:center;margin:10px 0 20px}}body .saboxplugin-authorname a,body .saboxplugin-authorname a:hover{box-shadow:none;-webkit-box-shadow:none}a.sab-profile-edit{font-size:16px!important;line-height:1!important}.sab-edit-settings a,a.sab-profile-edit{color:#0073aa!important;box-shadow:none!important;-webkit-box-shadow:none!important}.sab-edit-settings{margin-right:15px;position:absolute;right:0;z-index:2;bottom:10px;line-height:20px}.sab-edit-settings i{margin-left:5px}.saboxplugin-socials{line-height:1!important}.rtl .saboxplugin-wrap .saboxplugin-gravatar{float:right}.rtl .saboxplugin-wrap .saboxplugin-authorname{display:flex;align-items:center}.rtl .saboxplugin-wrap .saboxplugin-authorname .sab-profile-edit{margin-right:10px}.rtl .sab-edit-settings{right:auto;left:0}img.sab-custom-avatar{max-width:75px;}.saboxplugin-wrap {margin-top:0px; margin-bottom:0px; padding: 0px 0px }.saboxplugin-wrap .saboxplugin-authorname {font-size:18px; line-height:25px;}.saboxplugin-wrap .saboxplugin-desc p, .saboxplugin-wrap .saboxplugin-desc {font-size:14px !important; line-height:21px !important;}.saboxplugin-wrap .saboxplugin-web {font-size:14px;}.saboxplugin-wrap .saboxplugin-socials a svg {width:18px;height:18px;}</style><link rel="icon" href="../wp-content/uploads/2024/01/favicon.png" sizes="32x32" />
+<link rel="icon" href="../wp-content/uploads/2024/01/favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../wp-content/uploads/2024/01/favicon.png" />
+<meta name="msapplication-TileImage" content="https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png" />
+		<style id="wp-custom-css">
+			.home .entry-title {
+  display: none;
+}
+element.style {
+}
+.rank-math-list-item {
+    background: #fff;
+    padding: 15px 15px 20px;
+    box-shadow: 0px 0px 10px #d1d8dd, 0px 0px 40px #ffffff;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+
+/* GeneratePress Site CSS */ /* grey line under navigation */
+.site-header {
+	border-bottom: 1px solid #dddddd;
+}
+
+/* makes featured article section full width */
+.generate-columns-container .featured-column {
+	width: 100%;
+} /* End GeneratePress Site CSS */
+
+table {
+  border-collapse: collapse;
+}
+table tbody tr:first-child {
+  background-color: #3C8A4D;
+  color: white;
+}
+table tbody tr:not(:first-child) {
+  background-color: #D9EAD3;
+}
+
+
+.wp-block-search.wp-block-search__button-only .wp-block-search__button {
+    flex-shrink: 0;
+    margin-left: 0;
+    margin-right: 20px; !important
+    max-width: 100%;
+}		</style>
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-75YXC7208Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-75YXC7208Y');
+</script>
+</head>
+
+<body class="post-template-default single single-post postid-7464 single-format-standard wp-custom-logo wp-embed-responsive post-image-above-header post-image-aligned-center slideout-enabled slideout-mobile sticky-menu-slide no-sidebar nav-float-right separate-containers header-aligned-left dropdown-hover featured-image-active aa-prefix-skill-"  >
+	<a class="screen-reader-text skip-link" href="index.html#content" title="Skip to content">Skip to content</a>		<header class="site-header has-inline-mobile-toggle" id="masthead" aria-label="Site"   >
+			<div class="inside-header">
+				<div class="site-logo">
+					<a href="../author/hridhya-manoj/index.html" rel="home">
+						<img  class="header-image is-logo-image" alt="" src="../wp-content/uploads/2024/01/skill-vertex-logo.png" width="250" height="84" />
+					</a>
+				</div>	<nav class="main-navigation mobile-menu-control-wrapper" id="mobile-menu-control-wrapper" aria-label="Mobile Toggle">
+		<div class="menu-bar-items"><form role="search" method="get" action="../author/hridhya-manoj/index.html" class="wp-block-search__button-only wp-block-search__searchfield-hidden wp-block-search__icon-button wp-block-search" 
+		 data-wp-interactive="core/search"data-wp-context='{"isSearchInputVisible":false,"inputId":"wp-block-search__input-1","ariaLabelExpanded":"Submit Search","ariaLabelCollapsed":"Expand search field"}'data-wp-class--wp-block-search__searchfield-hidden="!context.isSearchInputVisible"
+		 data-wp-on-async--keydown="actions.handleSearchKeydown"
+		 data-wp-on-async--focusout="actions.handleSearchFocusout"
+		><label class="wp-block-search__label screen-reader-text" for="wp-block-search__input-1" >Search</label><div class="wp-block-search__inside-wrapper "  style="width: 100%"><input aria-hidden="true" class="wp-block-search__input" data-wp-bind--aria-hidden="!context.isSearchInputVisible" data-wp-bind--tabindex="state.tabindex" id="wp-block-search__input-1" placeholder=""  value="" type="search" name="s" required /><button  aria-expanded="false"  class="wp-block-search__button has-icon wp-element-button" data-wp-bind--aria-controls="state.ariaControls" data-wp-bind--aria-expanded="context.isSearchInputVisible" data-wp-bind--aria-label="state.ariaLabel" data-wp-bind--type="state.type" data-wp-on--click="actions.openSearchInput"  ><svg class="search-icon" viewBox="0 0 24 24" width="24" height="24">
+					<path d="M13 5c-3.3 0-6 2.7-6 6 0 1.4.5 2.7 1.3 3.7l-3.8 3.8 1.1 1.1 3.8-3.8c1 .8 2.3 1.3 3.7 1.3 3.3 0 6-2.7 6-6S16.3 5 13 5zm0 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z"></path>
+				</svg></button></div></form></div>		<button data-nav="site-navigation" class="menu-toggle" aria-controls="generate-slideout-menu" aria-expanded="false">
+			<span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span><span class="screen-reader-text">Menu</span>		</button>
+	</nav>
+			<nav class="main-navigation has-menu-bar-items sub-menu-right" id="site-navigation" aria-label="Primary"   >
+			<div class="inside-navigation grid-container">
+								<button class="menu-toggle" aria-controls="generate-slideout-menu" aria-expanded="false">
+					<span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span><span class="screen-reader-text">Menu</span>				</button>
+				<div id="primary-menu" class="main-nav"><ul id="menu-primary" class=" menu sf-menu"><li id="menu-item-38" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-38"><a href="../category/computer-science/index.html">Computer Science<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-44" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-44"><a href="../category/computer-science/artificial-intelligence/index.html">AI</a></li>
+	<li id="menu-item-45" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45"><a href="../category/computer-science/app-development/index.html">App development</a></li>
+	<li id="menu-item-46" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a href="../category/computer-science/c-programming/index.html">C Programming</a></li>
+	<li id="menu-item-47" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47"><a href="../category/computer-science/cpp-programming/index.html">C++ Programming</a></li>
+	<li id="menu-item-54" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-54"><a href="../category/computer-science/web-development/index.html">Web Development</a></li>
+	<li id="menu-item-48" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-48"><a href="../category/computer-science/cloud-computing/index.html">Cloud Computing</a></li>
+	<li id="menu-item-49" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-49"><a href="../category/computer-science/cyber-security/index.html">Cyber Security</a></li>
+	<li id="menu-item-50" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50"><a href="../category/computer-science/data-science/index.html">Data Science</a></li>
+	<li id="menu-item-51" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-51"><a href="../category/computer-science/java/index.html">Java</a></li>
+	<li id="menu-item-52" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-52"><a href="../category/computer-science/machine-learning/index.html">Machine Learning</a></li>
+	<li id="menu-item-53" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-53"><a href="../category/computer-science/python/index.html">Python</a></li>
+</ul>
+</li>
+<li id="menu-item-41" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-41"><a href="../category/management/index.html">Management<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-55" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55"><a href="../category/management/digital-marketing/index.html">Digital Marketing</a></li>
+	<li id="menu-item-56" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-56"><a href="../category/management/finance/index.html">Finance</a></li>
+	<li id="menu-item-57" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-57"><a href="../category/management/human-resources/index.html">HR</a></li>
+	<li id="menu-item-58" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58"><a href="../category/management/marketing-and-sales/index.html">Marketing and Sales</a></li>
+	<li id="menu-item-59" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><a href="../category/management/stock-market/index.html">Stock Market</a></li>
+</ul>
+</li>
+<li id="menu-item-9525" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9525"><a href="index.html#">Placement Exams<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-9526" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9526"><a href="../tcs-bps/index.html">TCS NQT 2024<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-9529" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9529"><a href="../tcs-nqt-apply-online/index.html">TCS NQT Apply Online</a></li>
+		<li id="menu-item-9527" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9527"><a href="../tcs-nqt-registration-process/index.html">TCS NQT Registration Process</a></li>
+		<li id="menu-item-9531" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9531"><a href="../tcs-nqt-hiring-process/index.html">TCS NQT Hiring Process</a></li>
+		<li id="menu-item-9528" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9528"><a href="../tcs-nqt-eligibility-criteria/index.html">TCS NQT Eligibility Criteria</a></li>
+		<li id="menu-item-9530" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9530"><a href="../tcs-nqt-syllabus/index.html">TCS NQT Syllabus</a></li>
+		<li id="menu-item-9533" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9533"><a href="../tcs-nqt-previous-year-paper/index.html">TCS NQT Previous Year Paper</a></li>
+		<li id="menu-item-9534" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9534"><a href="../tcs-nqt-salary/index.html">TCS NQT Salary</a></li>
+		<li id="menu-item-9532" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9532"><a href="../tcs-nqt-preparation-strategy/index.html">TCS NQT Preparation</a></li>
+		<li id="menu-item-9535" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9535"><a href="../tcs-nqt-coding-question/index.html">TCS NQT Coding Question</a></li>
+		<li id="menu-item-9537" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9537"><a href="../tcs-nqt-interview-questions-and-answers/index.html">TCS NQT Interview Questions</a></li>
+		<li id="menu-item-9536" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9536"><a href="../tcs-nqt-companies/index.html">TCS NQT Companies List</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-42" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-42"><a href="../category/other-courses/index.html">Other Courses<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-60" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-60"><a href="../category/other-courses/civil-mechanical/index.html">Civil &amp; Mechanical<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-61" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-61"><a href="../category/other-courses/civil-mechanical/autocad/index.html">AutoCad</a></li>
+		<li id="menu-item-62" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62"><a href="../category/other-courses/civil-mechanical/catia-and-ansys/index.html">Catia and Ansys</a></li>
+		<li id="menu-item-63" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63"><a href="../category/other-courses/civil-mechanical/construction-planning/index.html">Construction Planning</a></li>
+		<li id="menu-item-64" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64"><a href="../category/other-courses/civil-mechanical/ic-engine/index.html">IC Engine</a></li>
+	</ul>
+</li>
+	<li id="menu-item-65" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-65"><a href="../category/other-courses/electrical/index.html">Electrical<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-66" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66"><a href="../category/other-courses/electrical/embedded-system/index.html">Embedded System</a></li>
+		<li id="menu-item-67" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67"><a href="../category/other-courses/electrical/hybrid-electric-vehicles/index.html">Hybrid Electric Vehicles</a></li>
+		<li id="menu-item-68" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-68"><a href="../category/other-courses/electrical/internet-of-things/index.html">Internet Of Things</a></li>
+	</ul>
+</li>
+	<li id="menu-item-69" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-69"><a href="../category/other-courses/placement-assurance-program/index.html">Placement Assurance Program</a></li>
+</ul>
+</li>
+</ul></div><div class="menu-bar-items"><form role="search" method="get" action="../author/hridhya-manoj/index.html" class="wp-block-search__button-only wp-block-search__searchfield-hidden wp-block-search__icon-button wp-block-search" 
+		 data-wp-interactive="core/search"data-wp-context='{"isSearchInputVisible":false,"inputId":"wp-block-search__input-2","ariaLabelExpanded":"Submit Search","ariaLabelCollapsed":"Expand search field"}'data-wp-class--wp-block-search__searchfield-hidden="!context.isSearchInputVisible"
+		 data-wp-on-async--keydown="actions.handleSearchKeydown"
+		 data-wp-on-async--focusout="actions.handleSearchFocusout"
+		><label class="wp-block-search__label screen-reader-text" for="wp-block-search__input-2" >Search</label><div class="wp-block-search__inside-wrapper "  style="width: 100%"><input aria-hidden="true" class="wp-block-search__input" data-wp-bind--aria-hidden="!context.isSearchInputVisible" data-wp-bind--tabindex="state.tabindex" id="wp-block-search__input-2" placeholder=""  value="" type="search" name="s" required /><button  aria-expanded="false"  class="wp-block-search__button has-icon wp-element-button" data-wp-bind--aria-controls="state.ariaControls" data-wp-bind--aria-expanded="context.isSearchInputVisible" data-wp-bind--aria-label="state.ariaLabel" data-wp-bind--type="state.type" data-wp-on--click="actions.openSearchInput"  ><svg class="search-icon" viewBox="0 0 24 24" width="24" height="24">
+					<path d="M13 5c-3.3 0-6 2.7-6 6 0 1.4.5 2.7 1.3 3.7l-3.8 3.8 1.1 1.1 3.8-3.8c1 .8 2.3 1.3 3.7 1.3 3.3 0 6-2.7 6-6S16.3 5 13 5zm0 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z"></path>
+				</svg></button></div></form></div>			</div>
+		</nav>
+					</div>
+		</header>
+		
+<div style="height:44px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+<h1 style="text-transform:capitalize;" class="has-text-align-center alignfull wp-block-post-title">Python Built-in Functions</h1>
+
+<div class="gb-container gb-container-3835a09b">
+<div class="has-text-align-center wp-block-post-date"><time datetime="2024-03-19T06:49:12+00:00">March 19, 2024</time></div>
+</div>
+	<div class="site grid-container container hfeed" id="page">
+				<div class="site-content" id="content">
+			
+	<div class="content-area" id="primary">
+		<main class="site-main" id="main">
+			
+<article id="post-7464" class="post-7464 post type-post status-publish format-standard has-post-thumbnail hentry category-python-tutorial tag-functions tag-programming-language tag-python tag-python-built-in-functions"  >
+	<div class="inside-article">
+		<div class="featured-image  page-header-image-single ">
+				<img width="730" height="480" src="../wp-content/uploads/2024/02/Data-Science-2024-02-29T123602.966-1.png" class="attachment-full size-full" alt="Python Built-in Functions"  decoding="async" fetchpriority="high" />
+			</div>
+		<div class="entry-content" >
+			
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="index.html#what-is-python-abs-function">What is Python abs() Function?</a></li><li ><a href="index.html#what-is-python-all-function">What is Python all() Function?</a></li><li ><a href="index.html#what-is-the-python-bin-function">What is the Python bin() Function?</a></li><li ><a href="index.html#what-is-python-bool">What is Python Bool()</a></li><li ><a href="index.html#what-is-python-bytes">What is Python bytes()?</a></li><li ><a href="index.html#what-is-the-python-callable-function">What is the Python callable () Function?</a></li><li ><a href="index.html#what-is-the-python-compile-function">What is the Python compile() Function?</a></li><li ><a href="index.html#what-is-the-python-exec-function">What is the Python exec() Function?</a></li><li ><a href="index.html#what-is-the-python-sum-function">What is the Python sum() Function?</a></li><li ><a href="index.html#what-is-python-any-function">What is Python any() Function?</a></li><li ><a href="index.html#what-is-python-ascii-function">What is  Python ASCII () Function?</a></li><li ><a href="index.html#what-is-python-byte-array">What is Python byte array()?</a></li><li ><a href="index.html#what-is-python-eval-function">What is Python eval() Function?</a></li><li ><a href="index.html#what-is-python-float">What is Python float()?</a></li><li ><a href="index.html#what-is-python-format-function">What is Python Format() Function?</a></li><li ><a href="index.html#what-is-python-frozenset">What is Python Frozenset()?</a></li><li ><a href="index.html#what-is-the-python-getattr-function">What is the Python getattr() Function?</a></li><li ><a href="index.html#what-is-the-python-global-function">What is the Python global() Function?</a></li><li ><a href="index.html#what-is-python-hasattr-function">What is Python hasattr() Function?</a></li><li ><a href="index.html#python-iter-function">Python iter() Function?</a></li><li ><a href="index.html#what-is-the-python-len-function">What is the Python len() Function?</a></li><li ><a href="index.html#what-is-python-list">What is Python list() ?</a></li><li ><a href="index.html#what-is-python-local-function">What is Python local() Function?</a></li><li ><a href="index.html#what-is-a-python-map-function">What is a Python map() Function?</a></li><li ><a href="index.html#what-is-the-python-memory-view-function">What is the Python memory view() Function?</a></li><li ><a href="index.html#what-is-a-python-object">What is a Python object()?</a></li><li ><a href="index.html#what-is-the-python-open-function">What is the Python open() Function?</a></li><li ><a href="index.html#what-is-python-chr-function">What is Python chr() Function?</a></li><li ><a href="index.html#what-is-the-python-complex-function">What is the Python complex () function?</a></li><li ><a href="index.html#what-is-the-python-delattr-function">What is the Python delattr () Function?</a></li><li ><a href="index.html#what-is-the-python-dir-function">What is the Python dir() Function?</a></li><li ><a href="index.html#what-is-the-python-divmod-function">What is the Python divmod () Function?</a></li><li ><a href="index.html#what-is-the-python-enumerate-function">What is the Python enumerate () Function?</a></li><li ><a href="index.html#what-is-python-dict">What is Python dict?</a></li><li ><a href="index.html#what-is-the-python-filter-function">What is the Python filter() Function?</a></li><li ><a href="index.html#what-is-a-python-hash-function">What is a Python hash() Function?</a></li><li ><a href="index.html#what-is-the-python-help-function">What is the Python help() Function?</a></li><li ><a href="index.html#what-is-python-min-function">What is Python min() Function?</a></li><li ><a href="index.html#what-is-the-python-set-function">What is the Python set () Function?</a></li><li ><a href="index.html#what-is-a-python-hex-function">What is a Python hex() Function?</a></li><li ><a href="index.html#what-is-python-id-function">What is Python id() Function?</a></li><li ><a href="index.html#what-is-the-python-setattr-function">What is the Python setattr () Function?</a></li><li ><a href="index.html#what-is-pythons-next-function">What is Python&#8217;s next() Function?</a></li><li ><a href="index.html#what-is-the-python-input-function">What is the Python input() Function?</a></li><li ><a href="index.html#what-is-python-int-function">What is Python int() Function?</a></li><li ><a href="index.html#what-is-a-python-isinstance-function">What is a Python isinstance () Function?</a></li><li ><a href="index.html#what-is-python-oct-function">What is Python oct() Function?</a></li><li ><a href="index.html#what-is-the-python-ord-function">What is the Python ord() Function?</a></li><li ><a href="index.html#what-is-the-python-pow-function">What is the Python Pow () Function?</a></li><li ><a href="index.html#what-is-the-python-print-function">What is the Python  Print () Function?</a></li><li ><a href="index.html#what-is-the-python-range-function">What is the Python range () Function?</a></li><li ><a href="index.html#what-is-the-python-reversed-function">What is the Python reversed() Function?</a></li><li ><a href="index.html#what-is-a-python-round-function">What is a Python round Function?</a></li><li ><a href="index.html#what-is-python-issubclass-function">What is Python issubclass () Function?</a></li><li ><a href="index.html#what-is-python-str">What is Python str?</a></li><li ><a href="index.html#what-is-the-python-tuple-function">What is the Python tuple() Function?</a></li><li ><a href="index.html#what-is-python-type-function">What is Python type() Function?</a></li><li ><a href="index.html#what-is-the-python-vars-function">What is the  Python vars() Function?</a></li><li ><a href="index.html#what-is-the-python-zip-function">What is the Python zip() Function?</a></li><li ><a href="index.html#conclusion">Conclusion</a></li><li ><a href="index.html#python-built-in-functions-faq">Python Built-in Functions -FAQ</a></li></ul></nav></div>
+
+
+
+<p>The Python built-in -functions are referred to as the functions where the functionality is pre-defined in<a href="../which-of-the-following-is-a-bad-python-variable-name/index.html" data-type="post" data-id="2650"> Python. </a>Whereas, the <a href="../how-does-a-python-interpreter-works/index.html" data-type="post" data-id="6895">Python interpreter </a>consists of several functions that will be available for use.  So, these functions are known as Python Built-in Functions. Let us check out this article to learn more about Python Built-in Functions.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-abs-function">What is Python abs() Function?</h2>
+
+
+
+<p>The Python <strong>abs() </strong> function will return the value of a number. Thus, it will take only one argument,  a number where the <a href="../how-to-pass-an-array-by-value-in-c/index.html" data-type="post" data-id="2638">value </a>will be returned. This<a href="../python-positional-arguments/index.html" data-type="post" data-id="7296"> argument</a> can either be an <a href="../integer-promotions-in-c/index.html" data-type="post" data-id="1968">integer</a> or a<a href="../python-numbers/index.html" data-type="post" data-id="7023"> floating-point number.</a>  Suppose, if the argument is a complex number, thus, abs() will return their magnitude.</p>
+
+
+
+<h4 class="wp-block-heading"> Example</h4>
+
+
+
+<pre class="wp-block-code"><code># Example using abs() function
+number = -10
+absolute_value = abs(number)
+
+# Output
+print(f"The absolute value of {number} is: {absolute_value}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The absolute value of -10 is: 10
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-all-function">What is Python all() Function?</h2>
+
+
+
+<p>The Python <strong>all() </strong>function will accept the iterable object that includes list, and dictionary. Hence, it will return all items when the iterable is<a href="../python-booleans/index.html" data-type="post" data-id="7030"> true</a>. But, if it comes false. So, the iterable <a href="../which-is-not-an-ado-net-dataadapter-object/index.html" data-type="post" data-id="2225">object w</a>ill become empty and all()  <a href="../python-functions/index.html" data-type="post" data-id="7272">functions</a> will be true.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using all() function
+numbers = &#91;2, 4, 6, 8, 10]
+
+# Check if all numbers are even
+are_all_even = all(num % 2 == 0 for num in numbers)
+
+# Output
+print(f"Are all numbers even? {are_all_even}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>
+Are all numbers even? True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-bin-function">What is the Python bin() Function?</h2>
+
+
+
+<p>The Python <strong>bin()</strong> function will operate to return the<a href="../difference-between-binary-search-and-linear-search/index.html" data-type="post" data-id="520"> binary</a> representation of a specified integer. So, the<a href="../what-will-be-the-output-of-the-following-program/index.html" data-type="post" data-id="3081"> output</a> will begin with the prefix Ob.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using bin() function
+decimal_number = 10
+
+# Convert decimal_number to binary
+binary_representation = bin(decimal_number)
+
+# Output
+print(f"The binary representation of {decimal_number} is: {binary_representation}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The binary representation of 10 is: 0b1010
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-bool">What is Python Bool()</h2>
+
+
+
+<p><a href="../python-booleans/index.html" data-type="post" data-id="7030">Python</a> <strong>bool() </strong> will function to convert the value into a boolean such as True or False with the standard truth testing procedure.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using bool() function
+value_1 = 42
+value_2 = 0
+
+# Convert values to boolean
+bool_value_1 = bool(value_1)
+bool_value_2 = bool(value_2)
+
+# Output
+print(f"Boolean value of {value_1}: {bool_value_1}")
+print(f"Boolean value of {value_2}: {bool_value_2}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Boolean value of 42: True
+Boolean value of 0: False
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-bytes">What is Python bytes()?</h2>
+
+
+
+<p>The Python <strong>bytes()</strong> work to return the bytes object. It is considered an immutable version of the <a href="../pointer-vs-array-in-c/index.html" data-type="post" data-id="2733">byte array()</a> function.  Thus, it can make the empty bytes object in the required size.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using bytes() function
+byte_values = &#91;65, 66, 67, 68]  # ASCII values for 'A', 'B', 'C', 'D'
+
+# Create a bytes object from list of integers
+byte_sequence = bytes(byte_values)
+
+# Output
+print(f"Bytes object: {byte_sequence}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Bytes object: b'ABCD'
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-callable-function">What is the Python callable () Function?</h2>
+
+
+
+<p>This Python <strong>callable ()</strong> method will take only one argument, an object, and then return one of the two values. Whereas, if the output is true then the object will become callable.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using callable() function with x = 4
+def example_function():
+    print("Hello, from the example function!")
+
+class ExampleClass:
+    def __call__(self):
+        print("Hello, from the __call__ method of ExampleClass!")
+
+# Create an instance of ExampleClass
+example_instance = ExampleClass()
+
+# Check if objects are callable
+x = 4  # Setting x to 4
+is_function_callable = callable(example_function)
+is_instance_callable = callable(example_instance)
+
+# Output
+print(f"Is example_function callable with x = {x}? {is_function_callable}")
+print(f"Is example_instance callable with x = {x}? {is_instance_callable}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Is example_function callable with x = 4? True
+Is example_instance callable with x = 4? True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-compile-function">What is the Python compile() Function?</h2>
+
+
+
+<p>The Python<strong> compile () </strong> function will use the <a href="../which-is-not-part-of-code-technical-review-in-sonarqube/index.html" data-type="post" data-id="2815">source code </a>as the input and then return the code object. Then, it will be run by the exec() function.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+# Example using compile() function with x = 4
+x = 4
+source_code = f"result = x * 2; print('Result:', result)"
+
+# Compile the source code
+compiled_code = compile(source_code, filename="&lt;string&gt;", mode="exec")
+
+# Execute the compiled code
+exec(compiled_code)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Result: 8</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-exec-function">What is the Python exec() Function?</h2>
+
+
+
+<p>The Python <strong>exec () </strong>will work for the dynamic execution of the Python program and will be either a <a href="../array-of-strings-in-c/index.html" data-type="post" data-id="2641">string o</a>r an object. Thus, it will accept large blocks of code .</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using exec() function
+python_code = """
+x = 4
+result = x * 3
+print(f"The result of x * 3 is: {result}")
+"""
+
+# Execute the Python code
+exec(python_code)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The result of x * 3 is: 12
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-sum-function">What is the Python sum() Function?</h2>
+
+
+
+<p>In Python <strong>sum()</strong> function will enable us to <a href="../python-arithmetic-operators/index.html" data-type="post" data-id="6958">add</a> all the numbers in the list.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using sum() function
+numbers = &#91;1, 2, 3, 4, 5]
+
+# Calculate the sum of numbers in the list
+result_sum = sum(numbers)
+
+# Output
+print(f"The sum of numbers in the list is: {result_sum}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The sum of numbers in the list is: 15
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-any-function">What is Python any() Function?</h2>
+
+
+
+<p>The Python<strong> any() </strong>Function will give the output as true if either the iterable comes true. In other cases, it will come False.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using any() function with I as 2, 4, 8
+I = &#91;2, 4, 8]
+
+# Check if any value in the list is true
+is_any_true = any(I)
+
+# Output
+print(f"Is there any true value in the list? {is_any_true}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Is there any true value in the list? True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-ascii-function">What is  Python ASCII () Function?</h2>
+
+
+
+<p>The Python<strong> ASCII </strong>() function will return the string and has the printable representation of the object. However, it will ignore the <a href="../character-arithmetic-in-c-and-c/index.html" data-type="post" data-id="1876">non-ASCII characters</a> in the string with the \x, \u, or \U escapes.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using ascii() function
+character = '€'
+
+# Get the ASCII representation of the character
+ascii_representation = ascii(character)
+
+# Output
+print(f"The ASCII representation of '{character}' is: {ascii_representation}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The ASCII representation of '€' is: '\u20ac'
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-byte-array">What is Python byte array()?</h2>
+
+
+
+<p>The Python <strong>byte array(</strong>) will return the <a href="../how-arrays-are-passed-to-functions-in-c-c/index.html" data-type="post" data-id="2612">byte array </a>output and then turn the objects into the byte array objects.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using bytearray() function
+string_data = "Hello, Bytearray!"
+
+# Convert a string to a bytearray
+byte_array_data = bytearray(string_data, 'utf-8')
+
+# Output
+print(f"The original string: {string_data}")
+print(f"The bytearray representation: {byte_array_data}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The original string: Hello, Bytearray!
+The bytearray representation: bytearray(b'Hello, Bytearray!')
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-eval-function">What is Python eval() Function?</h2>
+
+
+
+<p>The Python<strong> eval()</strong>  function will rephrase the <a href="../which-of-the-following-is-a-legal-expression-in-sql/index.html" data-type="post" data-id="1856">expression</a> that is passed on to it and then it will execute the Python code in the Program</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using eval() function
+expression = "2 + 3 * 4"
+
+# Evaluate the expression using eval()
+result = eval(expression)
+
+# Output
+print(f"The result of the expression '{expression}' is: {result}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The result of the expression '2 + 3 * 4' is: 14</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-float">What is Python float()?</h2>
+
+
+
+<p>The Python <strong>float()</strong> function will return the floating-point number from a number or string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using float() function
+number_str = "7.5"
+
+# Convert the string to a float
+float_value = float(number_str)
+
+# Output
+print(f"The float representation of '{number_str}' is: {float_value}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The float representation of '7.5' is: 7.5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-format-function">What is Python Format() Function?</h2>
+
+
+
+<p>The Python F<strong>ormat () </strong>function will help us to return the formatted representation of the provided value.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using format() function
+name = "Alice"
+age = 25
+
+# Format a string with variables
+formatted_string = "My name is {} and I am {} years old.".format(name, age)
+
+# Output
+print(formatted_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>My name is Alice and I am 25 years old.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-frozenset">What is Python Frozenset()?</h2>
+
+
+
+<p>The Python<strong> frozenset() </strong>function will allow us to return the immutable frozen set object that will be initialized with the elements from the given iterable.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using frozenset() function
+set_values = {1, 2, 3, 4, 5}
+
+# Create a frozenset from a set
+frozen_set = frozenset(set_values)
+
+# Output
+print(f"The original set: {set_values}")
+print(f"The frozenset representation: {frozen_set}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The original set: {1, 2, 3, 4, 5}
+The frozenset representation: frozenset({1, 2, 3, 4, 5})
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-getattr-function">What is the Python getattr() Function?</h2>
+
+
+
+<p>The Python <strong>getattr()  </strong>will return the value of the named attribute of an object. Hence, if it is not found, then it will return with the default value.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using getattr() function
+class MyClass:
+    age = 25
+
+# Create an instance of MyClass
+obj = MyClass()
+
+# Use getattr() to get the value of the 'age' attribute
+attribute_value = getattr(obj, 'age', 'default_value')
+
+# Output
+print(f"The value of 'age' attribute is: {attribute_value}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The value of 'age' attribute is: 25
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-global-function">What is the Python global() Function?</h2>
+
+
+
+<p>The Python <strong>globals()</strong> function will operate to return the dictionary of the current global symbol table. The symbol table will be defined as the data structure, and have the required information regarding the program. Thus, it will have the variable names, methods, and classes. </p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using globals() function
+global_variable = "I am a global variable"
+
+def print_global_variable():
+    # Access global variable using globals()
+    global_variable_value = globals()&#91;'global_variable']
+    print(f"Inside the function: {global_variable_value}")
+
+# Call the function
+print_global_variable()
+
+# Access global variable directly
+direct_global_variable = globals()&#91;'global_variable']
+print(f"Outside the function: {direct_global_variable}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Inside the function: I am a global variable
+Outside the function: I am a global variable
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-hasattr-function">What is Python hasattr() Function?</h2>
+
+
+
+<p>This function will return the true value only if any of the items is true, otherwise it will be false.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using hasattr() function
+class MyClass:
+    name = "John"
+    age = 25
+
+# Create an instance of MyClass
+obj = MyClass()
+
+# Check if the attribute 'name' exists in the object
+has_name_attribute = hasattr(obj, 'name')
+has_height_attribute = hasattr(obj, 'height')
+
+# Output
+print(f"Does the object have 'name' attribute? {has_name_attribute}")
+print(f"Does the object have 'height' attribute? {has_height_attribute}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Does the object have 'name' attribute? True
+Does the object have 'height' attribute? False
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="python-iter-function">Python iter() Function?</h2>
+
+
+
+<p>The Python<strong> iter()</strong> Function will work to return the iterator object. Thus, it will make the object to /iterate one element at a time.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using iter() function
+numbers = &#91;1, 2, 3, 4, 5]
+
+# Create an iterator object from the list
+iterator = iter(numbers)
+
+# Output
+print("Using iterator to iterate through the list:")
+for num in iterator:
+    print(num)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Using iterator to iterate through the list:
+1
+2
+3
+4
+5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-len-function">What is the Python len() Function?</h2>
+
+
+
+<p>The Python<strong> len()</strong> function will work to return the length of the object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using len() function
+string_example = "Hello, Python!"
+list_example = &#91;1, 2, 3, 4, 5]
+
+# Get the length of the string
+string_length = len(string_example)
+
+# Get the length of the list
+list_length = len(list_example)
+
+# Output
+print(f"The length of the string is: {string_length}")
+print(f"The length of the list is: {list_length}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The length of the string is: 13
+The length of the list is: 5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-list">What is Python list() ?</h2>
+
+
+
+<p>The Python <strong>list() </strong>will make a list in Python.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using list() function
+string_example = "Python"
+tuple_example = (1, 2, 3, 4, 5)
+
+# Convert a string to a list
+string_as_list = list(string_example)
+
+# Convert a tuple to a list
+tuple_as_list = list(tuple_example)
+
+# Output
+print(f"Original string: {string_example}")
+print(f"String as a list: {string_as_list}")
+
+print(f"\nOriginal tuple: {tuple_example}")
+print(f"Tuple as a list: {tuple_as_list}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original string: Python
+String as a list: &#91;'P', 'y', 't', 'h', 'o', 'n']
+
+Original tuple: (1, 2, 3, 4, 5)
+Tuple as a list: &#91;1, 2, 3, 4, 5]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-local-function">What is Python local() Function?</h2>
+
+
+
+<p>The Python <strong>local() </strong>method will contain the update and then will return with the dictionary of the current local symbol table. </p>
+
+
+
+<p>The symbol table is referred to as a data structure with the necessary information about the program. Additionally, it has variable names, methods, and classes.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example demonstrating local variables and functions
+def outer_function():
+    outer_variable = "I am a local variable"
+
+    def inner_function():
+        inner_variable = "I am also a local variable"
+        print(f"Inside inner_function: {inner_variable}")
+        print(f"Inside inner_function accessing outer_variable: {outer_variable}")
+
+    inner_function()
+
+    # Uncommenting the line below will result in an error, as inner_variable is local to inner_function
+    # print(f"Outside inner_function accessing inner_variable: {inner_variable}")
+
+    print(f"Outside inner_function: {outer_variable}")
+
+# Uncommenting the line below will result in an error, as outer_variable is local to outer_function
+# print(f"Outside outer_function: {outer_variable}")
+
+outer_function()
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Inside inner_function: I am also a local variable
+Inside inner_function accessing outer_variable: I am a local variable
+Outside inner_function: I am a local variable
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-map-function">What is a Python map() Function?</h2>
+
+
+
+<p>The Python <strong>map() </strong>function will return the list of results after providing the given function to every item of the iterable.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using map() function
+numbers = &#91;1, 2, 3, 4, 5]
+
+# Define a function to square a number
+def square(x):
+    return x ** 2
+
+# Use map() to apply the square function to each element in the list
+squared_numbers = map(square, numbers)
+
+# Output
+print(f"Original numbers: {numbers}")
+print(f"Squared numbers: {list(squared_numbers)}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original numbers: &#91;1, 2, 3, 4, 5]
+Squared numbers: &#91;1, 4, 9, 16, 25]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-memory-view-function">What is the Python memory view() Function?</h2>
+
+
+
+<p>The Python <strong>memory view()</strong> function will return the memory view of the given argument.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using memoryview() function
+byte_array = bytearray(b"Hello, Memory View!")
+
+# Create a memory view object
+memory_view = memoryview(byte_array)
+
+# Output
+print(f"Original byte array: {byte_array}")
+print(f"Memory view object: {memory_view}")
+print(f"Characters in memory view: {list(memory_view)}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original byte array: bytearray(b'Hello, Memory View!')
+Memory view object: &lt;memory at ...&gt;
+Characters in memory view: &#91;72, 101, 108, 108, 111, 44, 32, 77, 101, 109, 111, 114, 121, 32, 86, 105, 101, 119, 33]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-object">What is a Python object()?</h2>
+
+
+
+<p>The Python <strong>object() </strong>will return the empty object. Hence, it will act as a base for the classes and carry the built-in properties and the methods that have a default for all the classes.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using object() function
+new_object = object()
+
+# Output
+print(f"Type of new_object: {type(new_object)}")
+print(f"String representation of new_object: {new_object}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Type of new_object: &lt;class 'object'&gt;
+String representation of new_object: &lt;object object at 0x...&gt;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-open-function">What is the Python open() Function?</h2>
+
+
+
+<p>The Python <strong>open() </strong>Function will function to open the file and will return the corresponding file object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using open() function
+file_path = "example.txt"
+
+# Writing to a file
+with open(file_path, "w") as file:
+    file.write("Hello, Python!")
+
+# Reading from the file
+with open(file_path, "r") as file:
+    content = file.read()
+
+# Output
+print(f"Content of the file '{file_path}': {content}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Content of the file 'example.txt': Hello, Python!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-chr-function">What is Python chr() Function?</h2>
+
+
+
+<p>The Python <strong>chr() </strong>Function will operate to get the string that will indicate a character and that contains the Unicode code integer. The function will include the integer argument and will show the error if it goes beyond the specified range.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using chr() function with multiple ASCII codes
+ascii_codes = &#91;65, 97, 49, 120]  # ASCII codes for 'A', 'a', '1', 'x'
+
+# Convert ASCII codes to characters
+characters = &#91;chr(code) for code in ascii_codes]
+
+# Output
+for code, char in zip(ascii_codes, characters):
+    print(f"The character corresponding to ASCII code {code} is: {char}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The character corresponding to ASCII code 65 is: A
+The character corresponding to ASCII code 97 is: a
+The character corresponding to ASCII code 49 is: 1
+The character corresponding to ASCII code 120 is: x
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-complex-function">What is the Python complex () function?</h2>
+
+
+
+<p>The Python <strong>complex() </strong>function will convert the numbers or strings into the complex number. Hence, this method will have two optional parameters and will return with the complex numbers</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using complex() function
+real_part = 2.5
+imaginary_part = -1
+
+# Create a complex number
+complex_number = complex(real_part, imaginary_part)
+
+# Output
+print(f"The complex number is: {complex_number}")
+print(f"Real part: {complex_number.real}")
+print(f"Imaginary part: {complex_number.imag}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The complex number is: (2.5-1j)
+Real part: 2.5
+Imaginary part: -1.0
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-delattr-function">What is the Python delattr () Function?</h2>
+
+
+
+<p>The Python <strong>delattr() </strong>function will delete the attribute from the class. Thus, it will take the two parameters. Initially, it will have an object of the class and secondly, it will have the attribute which is needed to be deleted. Thus, after deleting the attribute, it won&#8217;t be part of the class and will show an error if it has a class object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using delattr() function
+class Person:
+    name = "Alice"
+    age = 25
+
+# Create an instance of the Person class
+person = Person()
+
+# Output before using delattr()
+print(f"Before using delattr(): {person.__dict__}")
+
+# Delete the 'age' attribute using delattr()
+delattr(person, 'age')
+
+# Output after using delattr()
+print(f"After using delattr(): {person.__dict__}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Before using delattr(): {'name': 'Alice', 'age': 25}
+After using delattr(): {'name': 'Alice'}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-dir-function">What is the Python dir() Function?</h2>
+
+
+
+<p>The<strong> dir() </strong>function in Python gives you a list of attributes (like variables or methods) that an object has. If an object has a special method called __dir__(), Python will use it to get the list of attributes.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>class CustomObject:
+    def __dir__(self):
+        # Custom method to specify attributes
+        return &#91;'custom_attr1', 'custom_attr2']
+
+# Create an instance of CustomObject
+custom_obj = CustomObject()
+
+# Use dir() to get the list of attributes
+attributes = dir(custom_obj)
+
+# Output
+print(f"List of attributes using dir(): {attributes}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>List of attributes using dir(): &#91;'__class__', '__delattr__', '__dict__', '__dir__', '__doc__',
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-divmod-function">What is the Python divmod () Function?</h2>
+
+
+
+<p>The Python <strong>divmod()</strong> function will return with the remainder and the quotient of the two numbers. So, the function will have the two numeric arguments and will get the output as a tuple.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using divmod() function
+dividend = 20
+divisor = 3
+
+# Get the quotient and remainder using divmod()
+quotient, remainder = divmod(dividend, divisor)
+
+# Output
+print(f"Dividend: {dividend}")
+print(f"Divisor: {divisor}")
+print(f"Quotient and remainder: {quotient}, {remainder}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Dividend: 20
+Divisor: 3
+Quotient and remainder: 6, 2
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-enumerate-function">What is the Python enumerate () Function?</h2>
+
+
+
+<p>The Python<strong> enumerate()</strong> function will return with the enumerated object. Hence, it has two parameters initially, the sequence of elements, and the second consists of the start index of the sequence. So, the elements in the sequence will either be through the loop or the next() method. </p>
+
+
+
+<pre class="wp-block-code"><code># Example using enumerate() function
+fruits = &#91;'apple', 'banana', 'orange', 'grape']
+
+# Enumerate the list of fruits starting from index 1
+enumerated_fruits = enumerate(fruits, start=1)
+
+# Output using a loop
+print("Enumerated fruits using a loop:")
+for index, fruit in enumerated_fruits:
+    print(f"Index {index}: {fruit}")
+
+# Output using list comprehension
+enumerated_fruits = enumerate(fruits, start=1)  # Resetting for list comprehension
+list_output = &#91;(index, fruit) for index, fruit in enumerated_fruits]
+print("\nEnumerated fruits using list comprehension:")
+print(list_output)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enumerated fruits using a loop:
+Index 1: apple
+Index 2: banana
+Index 3: orange
+Index 4: grape
+
+Enumerated fruits using list comprehension:
+&#91;(1, 'apple'), (2, 'banana'), (3, 'orange'), (4, 'grape')]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-dict">What is Python dict?</h2>
+
+
+
+<p>Python<strong> dict ()</strong>acts as a constructor and will make the dictionary.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using dict
+student = {
+    'name': 'Alice',
+    'age': 18,
+    'grade': 'A',
+    'subjects': &#91;'Math', 'Science', 'English']
+}
+
+# Output
+print("Student Information:")
+print(f"Name: {student&#91;'name']}")
+print(f"Age: {student&#91;'age']}")
+print(f"Grade: {student&#91;'grade']}")
+print(f"Subjects: {', '.join(student&#91;'subjects'])}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Student Information:
+Name: Alice
+Age: 18
+Grade: A
+Subjects: Math, Science, English
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-filter-function">What is the Python filter() Function?</h2>
+
+
+
+<p>The <strong>filter()</strong> function in Python helps us pick specific elements from a group of items. It needs two things to work: a rule (function) and a bunch of things to filter (iterable, like a list). The function checks each item and keeps only the ones that follow the rule.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using filter() function
+def is_even(num):
+    return num % 2 == 0
+
+numbers = &#91;1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Use filter() to get even numbers
+even_numbers = filter(is_even, numbers)
+
+# Output
+print("Original numbers:", numbers)
+print("Filtered even numbers:", list(even_numbers))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original numbers: &#91;1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Filtered even numbers: &#91;2, 4, 6, 8, 10]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-hash-function">What is a Python hash() Function?</h2>
+
+
+
+<p>The Python <strong>hash()</strong> function will return the value of an object. Hence, this Python will evaluate the hash value with the hash algorithm. So, the hash values are the integers and will function to compare the dictionary keys during the dictionary lookup. </p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using hash() function
+string_value = "Hello, Python!"
+integer_value = 42
+float_value = 3.14
+
+# Get the hash values
+hash_string = hash(string_value)
+hash_integer = hash(integer_value)
+hash_float = hash(float_value)
+
+# Output
+print(f"The original string: {string_value}")
+print(f"The hash value for the string: {hash_string}")
+
+print(f"\nThe original integer: {integer_value}")
+print(f"The hash value for the integer: {hash_integer}")
+
+print(f"\nThe original float: {float_value}")
+print(f"The hash value for the float: {hash_float}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The original string: Hello, Python!
+The hash value for the string: -9077442383218711455
+
+The original integer: 42
+The hash value for the integer: 42
+
+The original float: 3.14
+The hash value for the float: 1152921504606846979
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-help-function">What is the Python help() Function?</h2>
+
+
+
+<p>The Python <strong>help() </strong>function will work to get help from the related object and will be passed on during the call. However, it will need an optional parameter for returning the help information. Whereas, if there is no help provided, then the  Python help console will be displayed. </p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example function
+def greet(name):
+    """
+    This function greets the person with the given name.
+
+    Parameters:
+    name (str): The name of the person to greet.
+
+    Returns:
+    str: A greeting message.
+    """
+    return f"Hello, {name}! Welcome!"
+
+# Using the help function to get information about the greet function
+help(greet)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Help on function greet in module __main__:
+
+greet(name)
+    This function greets the person with the given name.
+
+    Parameters:
+    name (str): The name of the person to greet.
+
+    Returns:
+    str: A greeting message.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-min-function">What is Python min() Function?</h2>
+
+
+
+<p>The Python<strong> min()  </strong>will function to receive the smallest element from the elements. Hence, it takes two arguments. Thus, the first consists of the elements that are grouped and the second has a key in it.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using min() function
+numbers = &#91;5, 3, 8, 2, 7]
+
+# Using min() to find the minimum value in the list
+minimum_value = min(numbers)
+
+# Displaying the result
+print("List of numbers:", numbers)
+print("Minimum value:", minimum_value)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>List of numbers: &#91;5, 3, 8, 2, 7]
+Minimum value: 2
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-set-function">What is the Python set () Function?</h2>
+
+
+
+<p>The<strong> set ()</strong> function is referred to as the built-in class and hence, this function consists of the constructor of this class. So, it will make a new set with the elements that are passed during the call. Hence, it will take an iterable object which will act as an argument and then return as a new set object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using set() function
+fruits_list = &#91;'apple', 'orange', 'banana', 'apple', 'kiwi']
+
+# Using set() to create a set from the list
+fruits_set = set(fruits_list)
+
+# Displaying the result
+print("List of fruits:", fruits_list)
+print("Set of fruits:", fruits_set)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>List of fruits: &#91;'apple', 'orange', 'banana', 'apple', 'kiwi']
+Set of fruits: {'orange', 'kiwi', 'apple', 'banana'}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-hex-function">What is a Python hex() Function?</h2>
+
+
+
+<p>The Python <strong>hex()</strong> function will function to create the hex value of the integer argument. So, it will take an integer argument and then return with the integer that will be turned into the hexadecimal string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using hex() function
+decimal_number = 255
+
+# Using hex() to convert the decimal number to hexadecimal
+hexadecimal_string = hex(decimal_number)
+
+# Displaying the result
+print("Decimal number:", decimal_number)
+print("Hexadecimal representation:", hexadecimal_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Decimal number: 255
+Hexadecimal representation: 0xff
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-id-function">What is Python id() Function?</h2>
+
+
+
+<p>The Python<strong> id()</strong> function will return with the identity of the object. This is referred to as a unique integer.  This function will take an argument as an object and will return the unique integer number that will stand for the identity. </p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using id() function
+value1 = 42
+value2 = "Hello, World!"
+
+# Displaying the identity of the objects
+print("Identity of value1:", id(value1))
+print("Identity of value2:", id(value2))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Identity of value1: 140710617731840
+Identity of value2: 140710603225904
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-setattr-function">What is the Python setattr () Function?</h2>
+
+
+
+<p>This Python <strong>set attr () </strong>will function to put a value to the object attribute. So, it will take three arguments such as object, string, and arbitrary value, and won&#8217;t return any.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using setattr() function
+class Person:
+    pass
+
+# Creating an instance of the Person class
+person_obj = Person()
+
+# Using setattr() to set attributes on the object
+setattr(person_obj, 'name', 'John Doe')
+setattr(person_obj, 'age', 30)
+
+# Displaying the attributes
+print("Person's name:", getattr(person_obj, 'name'))
+print("Person's age:", getattr(person_obj, 'age'))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Person's name: John Doe
+Person's age: 30
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-pythons-next-function">What is Python&#8217;s next() Function?</h2>
+
+
+
+<p>The Python <strong>next() </strong>function will get the next item from the collection. So, it has two arguments such as iterator and the default value . Thus, it will return the element.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using next() function
+numbers = iter(&#91;1, 2, 3, 4, 5])
+
+# Using next() to get the next item from the iterator
+next_number = next(numbers)
+
+# Displaying the result
+print("Next number:", next_number)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Next number: 1
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-input-function">What is the Python input() Function?</h2>
+
+
+
+<p>The Python<strong> input()</strong> function will get the input from the user. Hence, it will ask for the user&#8217;s input and then read the line. Hence, after reading the data, it will turn the string and will return it. It will detect <strong>EOFError </strong>when the EOF is read.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using input() function
+user_name = input("Enter your name: ")
+
+# Displaying the user input
+print("Hello, " + user_name + "! Welcome!")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter your name: John
+Hello, John! Welcome!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-int-function">What is Python int() Function?</h2>
+
+
+
+<p>Python <strong>int()</strong> function will receive an integer value. Thus, it will return with the expression which will be turned into the integer number. So, if the argument has a floating point and will be turned the number into the long type.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using int() function
+numeric_string = "42"
+
+# Using int() to convert the string to an integer
+numeric_value = int(numeric_string)
+
+# Displaying the result
+print("Original string:", numeric_string)
+print("Converted integer:", numeric_value)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original string: 42
+Converted integer: 42
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-isinstance-function">What is a Python isinstance () Function?</h2>
+
+
+
+<p>The Python <strong>isinstance()</strong> function will monitor if the object is an instance of the class. But, if the object is from the class and thus it will come true. Or else, it will come false. Additionally, it will return true when the class is a subclass.</p>
+
+
+
+<p>Whereas,  the isinstance will have two arguments such as object and class info.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using isinstance() function
+value = 42
+
+# Checking if the value is an instance of the int class
+is_int_instance = isinstance(value, int)
+
+# Displaying the result
+print("Value:", value)
+print("Is an instance of int:", is_int_instance)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Value: 42
+Is an instance of int: True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-oct-function">What is Python oct() Function?</h2>
+
+
+
+<p>The Python <strong>oct()  </strong>function will help to convert the octal value of the integer number. So, this method will take an argument and then return with the integer.  It will be turned into the octal string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using oct() function
+decimal_number = 42
+
+# Using oct() to convert the decimal number to octal
+octal_representation = oct(decimal_number)
+
+# Displaying the result
+print("Decimal number:", decimal_number)
+print("Octal representation:", octal_representation)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Decimal number: 42
+Octal representation: 0o52
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-ord-function">What is the Python ord() Function?</h2>
+
+
+
+<p>The <strong>ord()</strong> function in Python helps to return the integer which will stand for the Unicode character.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using ord() function
+character = 'A'
+
+# Using ord() to get the Unicode code point of the character
+unicode_code_point = ord(character)
+
+# Displaying the result
+print("Character:", character)
+print("Unicode code point:", unicode_code_point)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Character: A
+Unicode code point: 65</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-pow-function">What is the Python Pow () Function?</h2>
+
+
+
+<p>The<strong> pow<code>()</code> </strong>function in Python helps us find the result when a number is raised to a power.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using pow() function
+base = 2
+exponent = 3
+
+# Using pow() to find the result of 2 raised to the power of 3
+result = pow(base, exponent)
+
+# Displaying the result
+print(f"{base} to the power of {exponent} is: {result}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>
+2 to the power of 3 is: 8
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-print-function">What is the Python  Print () Function?</h2>
+
+
+
+<p>The Python<strong> print() </strong>will help to print the given object to the screen.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using print() function
+name = "John"
+age = 25
+
+# Using print() to display information
+print("Name:", name)
+print("Age:", age)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Name: John
+Age: 25
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-range-function">What is the Python range () Function?</h2>
+
+
+
+<p>The Python<strong> range()</strong> function will help to return the immutable sequence of the numbers which begin from 0 by default, that will added by 1 and terminated at the specified number.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using range() function
+# Generate a sequence of numbers from 0 to 4 (excluding 5)
+numbers_sequence = range(5)
+
+# Displaying the result
+print("Generated sequence:", list(numbers_sequence))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Generated sequence: &#91;0, 1, 2, 3, 4]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-reversed-function">What is the Python reversed() Function?</h2>
+
+
+
+<p>The <strong>reversed() </strong>function will help to return the reversed iterator of the given sequence.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using reversed() directly in a loop
+for num in reversed(&#91;1, 2, 3, 4, 5]):
+    print(num, end=' ')
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>5 4 3 2 1
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-round-function">What is a Python round Function?</h2>
+
+
+
+<p>The Python<strong> round()</strong> function will allow us to round off the digits of the number and will return the floating point number.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using round() function
+original_number = 3.14159
+
+# Using round() to round the number to 2 decimal places
+rounded_number = round(original_number, 2)
+
+# Displaying the result
+print("Original number:", original_number)
+print("Rounded number:", rounded_number)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original number: 3.14159
+Rounded number: 3.14
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-issubclass-function">What is Python issubclass () Function?</h2>
+
+
+
+<p>The Python<strong> issubclass () </strong>function will allow us to return true if the<a href="../keyword-only-argument-in-python/index.html" data-type="post" data-id="7290"> object argument</a> is referred to as the subclass of the second class.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example with multiple inheritance
+class Mammal:
+    pass
+
+class Canine(Animal, Mammal):
+    pass
+
+# Checking if Canine is a subclass of both Animal and Mammal
+is_canine_subclass = issubclass(Canine, (Animal, Mammal))
+
+# Displaying the result
+print("Is Canine a subclass of Animal and Mammal?", is_canine_subclass)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Is Canine a subclass of Animal and Mammal? True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-str">What is Python str?</h2>
+
+
+
+<p>The Python <strong>str ()</strong> function will enable us to turn the specified value into the string.</p>
+
+
+
+<pre class="wp-block-code"><code># Example with a list
+my_list = &#91;1, 2, 3]
+
+# Using str() to convert the list to a string
+list_representation = str(my_list)
+
+# Displaying the result
+print("Original list:", my_list)
+print("String representation of the list:", list_representation)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original list: &#91;1, 2, 3]
+String representation of the list: &#91;1, 2, 3]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-tuple-function">What is the Python tuple() Function?</h2>
+
+
+
+<p>The Python<strong> tuple()</strong> function will allow us to make the tuple object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example of creating and using a tuple
+my_tuple = (1, 'apple', 3.14, True)
+
+# Displaying the tuple
+print("Tuple:", my_tuple)
+
+# Accessing elements in a tuple
+print("First element:", my_tuple&#91;0])
+print("Second element:", my_tuple&#91;1])
+
+# Slicing a tuple
+subset_tuple = my_tuple&#91;1:3]
+print("Subset of the tuple:", subset_tuple)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Tuple: (1, 'apple', 3.14, True)
+First element: 1
+Second element: apple
+Subset of the tuple: ('apple', 3.14)
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-type-function">What is Python type() Function?</h2>
+
+
+
+<p>The Python <strong>type ()</strong>  function will allow us to return the type of the specified object when the single argument is passed to the type () built-in function.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using type() function
+value1 = 42
+value2 = 'Hello, World!'
+value3 = &#91;1, 2, 3]
+value4 = {'a': 1, 'b': 2}
+
+# Using type() to get the type of each object
+type_of_value1 = type(value1)
+type_of_value2 = type(value2)
+type_of_value3 = type(value3)
+type_of_value4 = type(value4)
+
+# Displaying the result
+print("Type of value1:", type_of_value1)
+print("Type of value2:", type_of_value2)
+print("Type of value3:", type_of_value3)
+print("Type of value4:", type_of_value4)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Type of value1: &lt;class 'int'&gt;
+Type of value2: &lt;class 'str'&gt;
+Type of value3: &lt;class 'list'&gt;
+Type of value4: &lt;class 'dict'&gt;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-vars-function">What is the  Python vars() Function?</h2>
+
+
+
+<p>The Python<strong> vars() </strong> function will allow us to return the __dict__ attribute of the particular object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using vars() function
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Creating an instance of the Person class
+person_object = Person(name="John", age=25)
+
+# Using vars() to get the attributes and their values
+attributes_dict = vars(person_object)
+
+# Displaying the result
+print("Attributes and values:", attributes_dict)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Attributes and values: {'name': 'John', 'age': 25}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-zip-function">What is the Python zip() Function?</h2>
+
+
+
+<p>The Python <strong>zip() </strong>function will help to return the zip object and thus will analyze the similar index of the multiple containers, Hence, it will take the iterable that can create an iterator depending on the iterable passed.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using zip() function
+names = &#91;'Alice', 'Bob', 'Charlie']
+ages = &#91;25, 30, 22]
+
+# Using zip() to combine two lists
+zipped_data = zip(names, ages)
+
+# Converting the result to a list for better visualization
+result_list = list(zipped_data)
+
+# Displaying the result
+print("Original lists:")
+print("Names:", names)
+print("Ages:", ages)
+print("\nZipped result:")
+print(result_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original lists:
+Names: &#91;'Alice', 'Bob', 'Charlie']
+Ages: &#91;25, 30, 22]
+
+Zipped result:
+&#91;('Alice', 25), ('Bob', 30), ('Charlie', 22)]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>Python&#8217;s built-in functions are fundamental tools that simplify coding tasks and are crucial for any programmer. This article will improve your skills and knowledge of the built-in functions.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-built-in-functions-faq">Python Built-in Functions -FAQ</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1709189329717" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are the most used Python inbuilt functions?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The Python inbuilt function  include print(), abs(), round(), min(), max(), sorted(), sum(), and len().</p>
+
+</div>
+</div>
+<div id="faq-question-1709189337022" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.How many structures are there in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The basic Python data structures in Python are list, set, tuples, and dictionary.</p>
+
+</div>
+</div>
+<div id="faq-question-1709189345861" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.What are the 4 types of functions in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Those 4  types of functions are built-in Functions, User-defined Functions, Recursive Functions, and Lambda Functions.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="../author/hridhya-manoj/index.html" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>		</div>
+
+				<footer class="entry-meta" aria-label="Entry meta">
+			<span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z" /></svg></span><span class="screen-reader-text">Categories </span><a href="../category/python-tutorial/index.html" rel="category tag">Python Tutorial</a></span> <span class="tags-links"><span class="gp-icon icon-tags"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M20 39.5c-8.836 0-16 7.163-16 16v176c0 4.243 1.686 8.313 4.687 11.314l224 224c6.248 6.248 16.378 6.248 22.626 0l176-176c6.244-6.244 6.25-16.364.013-22.615l-223.5-224A15.999 15.999 0 00196.5 39.5H20zm56 96c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24z"/><path d="M259.515 43.015c4.686-4.687 12.284-4.687 16.97 0l228 228c4.686 4.686 4.686 12.284 0 16.97l-180 180c-4.686 4.687-12.284 4.687-16.97 0-4.686-4.686-4.686-12.284 0-16.97L479.029 279.5 259.515 59.985c-4.686-4.686-4.686-12.284 0-16.97z" /></svg></span><span class="screen-reader-text">Tags </span><a href="../tag/functions/index.html" rel="tag">functions</a>, <a href="../tag/programming-language/index.html" rel="tag">programming language</a>, <a href="../tag/python/index.html" rel="tag">python</a>, <a href="../tag/python-built-in-functions/index.html" rel="tag">python built in functions</a></span> 		</footer>
+		<div class="gb-container gb-container-d1dd99b1">
+<div class="gb-container gb-container-9c89f761">
+
+<a class="gb-button gb-button-bec8d56e" href="../python-modules/index.html"><span class="gb-icon"><svg viewBox="0 0 16 16" class="bi bi-arrow-left-square" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">   <path d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" fill-rule="evenodd"></path> </svg></span></a>
+
+
+
+<p class="gb-headline gb-headline-a6f36397 gb-headline-text"><a href="../python-modules/index.html">Python Modules</a></p>
+
+</div>
+
+<div class="gb-container gb-container-5d70717c">
+
+<p class="gb-headline gb-headline-643cf12f gb-headline-text"><a href="../python-string/index.html">Python String</a></p>
+
+
+
+<a class="gb-button gb-button-122d9fa4" href="../python-string/index.html"><span class="gb-icon"><svg viewBox="0 0 16 16" class="bi bi-arrow-right-square" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">   <path d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" fill-rule="evenodd"></path> </svg></span></a>
+
+</div>
+</div>	</div>
+</article>
+
+			<div class="comments-area">
+				<div id="comments">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.skillvertex.com/python-built-in-functions/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.skillvertex.com/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-form-comment"><label for="comment" class="screen-reader-text">Comment</label><textarea id="comment" name="comment" cols="45" rows="8" required></textarea></p><label for="author" class="screen-reader-text">Name</label><input placeholder="Name *" id="author" name="author" type="text" value="" size="30" required />
+<label for="email" class="screen-reader-text">Email</label><input placeholder="Email *" id="email" name="email" type="email" value="" size="30" required />
+<label for="url" class="screen-reader-text">Website</label><input placeholder="Website" id="url" name="url" type="url" value="" size="30" />
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='7464' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+			</div>
+
+					</main>
+	</div>
+
+	
+	</div>
+</div>
+
+
+<div class="site-footer">
+	
+<h2 class="gb-headline gb-headline-63d5de93"><span class="gb-icon"><svg xml:space="preserve" style="enable-background:new 0 0 80 47" viewBox="0 0 80 47" xmlns="http://www.w3.org/2000/svg">   <path d="M18.7 23.5 42.2 0H23.5L0 23.5 23.5 47h18.7L18.7 23.5z"></path>   <path d="M56.5 23.5 80 0H61.3L37.8 23.5 61.3 47H80L56.5 23.5z"></path> </svg></span></h2>
+
+
+<div class="gb-container gb-container-85529cf0">
+<div class="gb-container gb-container-595963c6">
+<div class="gb-container gb-container-4effdea4">
+
+<h4 class="gb-headline gb-headline-6c041734 gb-headline-text">Reach Out to Us for Any Query</h4>
+
+
+
+<p class="gb-headline gb-headline-7833da12 gb-headline-text">SkillVertex is an edtech organization that aims to provide upskilling and training to students as well as working professionals by delivering a diverse range of programs in accordance with their needs and future aspirations.</p>
+
+
+
+<a class="gb-button gb-button-84c9a956 gb-button-text button" href="../../contact-us/index.html" target="_blank" rel="noopener noreferrer">Contact Us</a>
+
+</div>
+
+<div class="gb-container gb-container-5b6e61a7">
+
+<a class="gb-button gb-button-b358abea" href="https://twitter.com/skillvertex_" target="_blank" rel="nofollow noopener noreferrer"><span class="gb-icon"><svg aria-hidden="true" height="1em" width="1em" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></span></a>
+
+
+
+<a class="gb-button gb-button-18e01320" href="https://www.instagram.com/skillvertex.in/?hl=en" target="_blank" rel="nofollow noopener noreferrer"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></span></a>
+
+
+
+<a class="gb-button gb-button-b3eff93c" href="https://in.linkedin.com/company/skillvertexedutech" target="_blank" rel="nofollow noopener noreferrer"><span class="gb-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" fill="currentColor"></path></svg></span></a>
+
+</div>
+
+<div class="gb-container gb-container-c6dbdadd">
+
+<p class="gb-headline gb-headline-29bd7637 gb-headline-text">© 2024 Skill Vertex</p>
+
+
+<div class="gb-container gb-container-1cc69e8f">
+
+<a class="gb-button gb-button-67824a07 gb-button-text" href="../../privacy-policy/index.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+
+
+
+<a class="gb-button gb-button-3a21bace gb-button-text" href="../../terms/index.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+
+</div>
+</div>
+</div>
+</div></div>
+
+		<nav id="generate-slideout-menu" class="main-navigation slideout-navigation do-overlay"  >
+			<div class="inside-navigation grid-container grid-parent">
+				<button class="slideout-exit has-svg-icon"><span class="gp-icon pro-close">
+				<svg viewBox="0 0 512 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+					<path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+				</svg>
+			</span> <span class="screen-reader-text">Close</span></button><div class="main-nav"><ul id="menu-primary-1" class=" slideout-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-38"><a href="../category/computer-science/index.html">Computer Science<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-44"><a href="../category/computer-science/artificial-intelligence/index.html">AI</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45"><a href="../category/computer-science/app-development/index.html">App development</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a href="../category/computer-science/c-programming/index.html">C Programming</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47"><a href="../category/computer-science/cpp-programming/index.html">C++ Programming</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-54"><a href="../category/computer-science/web-development/index.html">Web Development</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-48"><a href="../category/computer-science/cloud-computing/index.html">Cloud Computing</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-49"><a href="../category/computer-science/cyber-security/index.html">Cyber Security</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50"><a href="../category/computer-science/data-science/index.html">Data Science</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-51"><a href="../category/computer-science/java/index.html">Java</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-52"><a href="../category/computer-science/machine-learning/index.html">Machine Learning</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-53"><a href="../category/computer-science/python/index.html">Python</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-41"><a href="../category/management/index.html">Management<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55"><a href="../category/management/digital-marketing/index.html">Digital Marketing</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-56"><a href="../category/management/finance/index.html">Finance</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-57"><a href="../category/management/human-resources/index.html">HR</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-58"><a href="../category/management/marketing-and-sales/index.html">Marketing and Sales</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><a href="../category/management/stock-market/index.html">Stock Market</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9525"><a href="index.html#">Placement Exams<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9526"><a href="../tcs-bps/index.html">TCS NQT 2024<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9529"><a href="../tcs-nqt-apply-online/index.html">TCS NQT Apply Online</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9527"><a href="../tcs-nqt-registration-process/index.html">TCS NQT Registration Process</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9531"><a href="../tcs-nqt-hiring-process/index.html">TCS NQT Hiring Process</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9528"><a href="../tcs-nqt-eligibility-criteria/index.html">TCS NQT Eligibility Criteria</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9530"><a href="../tcs-nqt-syllabus/index.html">TCS NQT Syllabus</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9533"><a href="../tcs-nqt-previous-year-paper/index.html">TCS NQT Previous Year Paper</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9534"><a href="../tcs-nqt-salary/index.html">TCS NQT Salary</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9532"><a href="../tcs-nqt-preparation-strategy/index.html">TCS NQT Preparation</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9535"><a href="../tcs-nqt-coding-question/index.html">TCS NQT Coding Question</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9537"><a href="../tcs-nqt-interview-questions-and-answers/index.html">TCS NQT Interview Questions</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9536"><a href="../tcs-nqt-companies/index.html">TCS NQT Companies List</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-42"><a href="../category/other-courses/index.html">Other Courses<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-60"><a href="../category/other-courses/civil-mechanical/index.html">Civil &amp; Mechanical<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-61"><a href="../category/other-courses/civil-mechanical/autocad/index.html">AutoCad</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-62"><a href="../category/other-courses/civil-mechanical/catia-and-ansys/index.html">Catia and Ansys</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63"><a href="../category/other-courses/civil-mechanical/construction-planning/index.html">Construction Planning</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64"><a href="../category/other-courses/civil-mechanical/ic-engine/index.html">IC Engine</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-65"><a href="../category/other-courses/electrical/index.html">Electrical<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66"><a href="../category/other-courses/electrical/embedded-system/index.html">Embedded System</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67"><a href="../category/other-courses/electrical/hybrid-electric-vehicles/index.html">Hybrid Electric Vehicles</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-68"><a href="../category/other-courses/electrical/internet-of-things/index.html">Internet Of Things</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-69"><a href="../category/other-courses/placement-assurance-program/index.html">Placement Assurance Program</a></li>
+</ul>
+</li>
+</ul></div>			</div><!-- .inside-navigation -->
+		</nav><!-- #site-navigation -->
+
+		<script id="generate-a11y">!function(){"use strict";if("querySelector"in document&&"addEventListener"in window){var e=document.body;e.addEventListener("mousedown",function(){e.classList.add("using-mouse")}),e.addEventListener("keydown",function(){e.classList.remove("using-mouse")})}}();</script><script id="wp-load-polyfill-importmap">
+( HTMLScriptElement.supports && HTMLScriptElement.supports("importmap") ) || document.write( '<script src="../wp-includes/js/dist/vendor/wp-polyfill-importmap.min.js?ver=1.8.2"></scr' + 'ipt>' );
+</script>
+<script type="importmap" id="wp-importmap">
+{"imports":{"@wordpress\/interactivity":"https:\/\/www.skillvertex.com\/blog\/wp-includes\/js\/dist\/interactivity.min.js?ver=6.6.1"}}
+</script>
+<script type="module" src="../wp-includes/blocks/search/view.min.js?ver=6.6.1" id="@wordpress/block-library/search-js-module"></script>
+<link rel="modulepreload" href="../wp-includes/js/dist/interactivity.min.js?ver=6.6.1" id="@wordpress/interactivity-js-modulepreload"><script id="generate-offside-js-extra">
+var offSide = {"side":"left"};
+</script>
+<script src="../wp-content/plugins/gp-premium/menu-plus/functions/js/offside.min.js?ver=2.3.2" id="generate-offside-js"></script>
+<!--[if lte IE 11]>
+<script src="https://www.skillvertex.com/blog/wp-content/themes/generatepress/assets/js/classList.min.js?ver=3.3.0" id="generate-classlist-js"></script>
+<![endif]-->
+<script id="generate-menu-js-extra">
+var generatepressMenu = {"toggleOpenedSubMenus":"1","openSubMenuLabel":"Open Sub-Menu","closeSubMenuLabel":"Close Sub-Menu"};
+</script>
+<script src="../wp-content/themes/generatepress/assets/js/menu.min.js?ver=3.3.0" id="generate-menu-js"></script>
+<script src="../wp-includes/js/comment-reply.min.js?ver=6.6.1" id="comment-reply-js" async data-wp-strategy="async"></script>
+<script>!function(){window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[],advanced_ads_ready_queue.push=window.advanced_ads_ready;for(var d=0,a=advanced_ads_ready_queue.length;d<a;d++)advanced_ads_ready(advanced_ads_ready_queue[d])}();</script>
+</body>
+</html>

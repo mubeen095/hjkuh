@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python Membership Operator</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-membership-operator/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Thu, 11 Apr 2024 12:01:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Python Membership Operator</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python Membership Operator</title>
+		<link>https://www.skillvertex.com/blog/python-membership-operator/</link>
+					<comments>https://www.skillvertex.com/blog/python-membership-operator/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 12:01:13 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[Python Membership Operator]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6992</guid>
+
+					<description><![CDATA[The membership operators in Python will allow us to know if an item is available in the given container-type object. Let us look at this article to learn more about Python Membership Operator What is a Python Membership Operator? Python will provide two membership operators for checking the membership value. It will check for membership ... <a title="Python Membership Operator" class="read-more" href="https://www.skillvertex.com/blog/python-membership-operator/" aria-label="More on Python Membership Operator">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-a-python-membership-operator">What is a Python Membership Operator?</a></li><li ><a href="#what-is-in-operator">What is In operator?</a></li><li ><a href="#what-is-not-in-the-operator">What is NOT in the operator?</a></li><li ><a href="#what-is-an-identity-operator">What is an Identity Operator?</a></li><li ><a href="#what-is-operator">What &#8216;is&#8217; operator</a></li><li ><a href="#what-is-is-not-operator">What is &#8216;Is not&#8217; operator</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-membership-operator-fa-qs">Python Membership Operator- FAQs</a></li></ul></nav></div>
+
+
+
+<p>The membership operators in<a href="https://www.skillvertex.com/blog/python-type-casting/" data-type="post" data-id="6943"> Python</a> will allow us to know if an item is available in the given container-type object. Let us look at this article to learn more about Python Membership Operator</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-membership-operator">What is a Python Membership Operator?</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/assignment-operators-in-python/" data-type="post" data-id="6970">Python</a> will provide two <strong>membership operators</strong> for checking the membership value. It will check for membership in a <a href="https://www.skillvertex.com/blog/what-does-0-mean-in-this-python-string/" data-type="post" data-id="3237">string</a>, list, or tuples sequence.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-in-operator">What is <strong>In operato</strong>r?</h2>
+
+
+
+<p>The in-operator will monitor whether a <a href="https://www.skillvertex.com/blog/character-arithmetic-in-c-and-c/" data-type="post" data-id="1876">character</a> or substring will be present in the sequence.  So, this operator will be considered true only if it can find the specified element, or else it will be false.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>'S' in 'Skillvertex'   # Checking 'S' in String
+True
+'s' in 'Skillvertex'   #Checking 's' in string since Python is case-sensitive,returns False
+False
+'Skill' in &#91;'Skill','Vertex']   #Checking 'Skill' in list of strings
+True
+10 in &#91;10000,1000,100,10]        #Checking 10 in list of integers
+True
+dict1={1:'Skill,2:'For',3:'Skill'}     # Checking 3 in keys of dictionary
+3 in dict1
+True</code></pre>
+
+
+
+<p><strong>Python Program to  find the common member is provided below</strong></p>
+
+
+
+<pre class="wp-block-code"><code># Membership operator example
+fruits = &#91;'apple', 'banana', 'orange', 'grape']
+
+# Using 'in' operator
+search_fruit = 'banana'
+if search_fruit in fruits:
+    print(f"{search_fruit} is present in the list.")
+else:
+    print(f"{search_fruit} is not present in the list.")
+
+# Using 'not in' operator
+search_fruit = 'kiwi'
+if search_fruit not in fruits:
+    print(f"{search_fruit} is not present in the list.")
+else:
+    print(f"{search_fruit} is present in the list.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>banana is present in the list.
+kiwi is not present in the list.</code></pre>
+
+
+
+<p>Now, the Python<a href="https://www.skillvertex.com/blog/python-program-to-print-hello-world/" data-type="post" data-id="6880"> Program </a>below will use the same example without an operator.</p>
+
+
+
+<pre class="wp-block-code"><code># Membership operator example without using <a href="https://www.skillvertex.com/blog/python-comparison-operators/" data-type="post" data-id="6966">operators</a>
+fruits = &#91;'apple', 'banana', 'orange', 'grape']
+
+# Without using 'in' operator
+search_fruit = 'banana'
+found = False
+for fruit in fruits:
+    if fruit == search_fruit:
+        found = True
+        break
+if found:
+    print(f"{search_fruit} is present in the list.")
+else:
+    print(f"{search_fruit} is not present in the list.")
+
+# Without using 'not in' operator
+search_fruit = 'kiwi'
+not_found = True
+for fruit in fruits:
+    if fruit == search_fruit:
+    not_found = False
+        break
+if not_found:
+    print(f"{search_fruit} is not present in the list.")
+else:
+    print(f"{search_fruit} is present in the list.")</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>banana is present in the list.
+kiwi is not present in the list.
+</code></pre>
+
+
+
+<p>The execution speed of the in-operator will mainly depend on the target object type. The average time complexity of the in operator for the list is 0(n). Hence, it will get slow due to the number of elements increasing.</p>
+
+
+
+<p>Moreover, the average time complexity of the in-operator for sets is  0(1). Hence, it won&#8217;t rely on the number of elements.</p>
+
+
+
+<p>Whereas in dictionaries, the keys in the dictionary are unique values such as set. It is possible to repeat the value as similar to the list. So, the   &#8216;in&#8217; for values () will be executed as similar to the lists.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-not-in-the-operator">What is <strong><strong>NOT in the operator</strong></strong>?</h2>
+
+
+
+<p>This <strong>NOT in operator </strong>can run the program to get the true value if it can&#8217;t find the variable in the specified sequence or else, it will be declared as false.</p>
+
+
+
+<p>Take a look at the Python Program to illustrate the not-in operator.</p>
+
+
+
+<pre class="wp-block-code"><code># Membership operator 'not in' example with output
+fruits = &#91;'apple', 'banana', 'orange', 'grape']
+
+# Using 'not in' operator
+search_fruit = 'kiwi'
+if search_fruit not in fruits:
+    print(f"{search_fruit} is not present in the list.")
+else:
+    print(f"{search_fruit} is present in the list.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>kiwi is not present in the list.
+</code></pre>
+
+
+
+<p>This example mentions that the not-in operator will be used to evaluate the value such as kiwi is not present in the list of fruits.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-an-identity-operator">What is an Identity Operator?</h2>
+
+
+
+<p>The<strong> identity operator</strong> functions to compare the objects as both the objects are the same data type and will share the same memory location.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-operator">What <strong>&#8216;is&#8217; operator</strong></h2>
+
+
+
+<p>This <strong>&#8216;is&#8217; operator </strong>will be used to check if the value can come true, only if the <a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932">variable</a> on either side of the operator points to the same object or else it will be false.</p>
+
+
+
+<pre class="wp-block-code"><code># Using 'is' operator for membership-like testing
+fruits = &#91;'apple', 'banana', 'orange', 'grape']
+
+# Object to test for membership
+search_fruit = 'banana'
+
+# Check using 'is' operator
+is_member = any(fruit is search_fruit for fruit in fruits)
+
+if is_member:
+    print(f"{search_fruit} is in the list.")
+else:
+    print(f"{search_fruit} is not in the list.")</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>banana is in the list.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-is-not-operator">What is &#8216;Is not&#8217; operator</h2>
+
+
+
+<p>This &#8216;<strong>Is not&#8217; operator </strong>will check if the values come true,  only if both variables are not in the same <a href="https://www.skillvertex.com/blog/which-is-not-an-ado-net-dataadapter-object/" data-type="post" data-id="2225">object</a>.</p>
+
+
+
+<pre class="wp-block-code"><code># Using 'is not' operator for membership-like testing
+fruits = &#91;'apple', 'banana', 'orange', 'grape']
+
+# Object to test for non-membership
+search_fruit = 'kiwi'
+
+# Check using 'is not' operator
+is_not_member = all(fruit is not search_fruit for fruit in fruits)
+
+if is_not_member:
+    print(f"{search_fruit} is not in the list.")
+else:
+    print(f"{search_fruit} is in the list.")</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>kiwi is not in the list.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, in Python membership operators (in and not in)  will allow us to check if something is part of a group,  such as looking if a specific word is in a list.</p>
+
+
+
+<p> If it&#8217;s on the list, it will give us True, otherwise False. On the other hand,<code> </code>not in does the opposite; it gives us True if the thing is not in the group, and False.  This article has also discussed the different operators of the membership operator. Those operators include &#8216;<strong>In&#8217; </strong>operator, <strong>&#8216;not in&#8217;</strong> operator, and several other identity operators.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-membership-operator-fa-qs">Python Membership Operator- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707478574822" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is membership testing in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.  Membership testing is used to check if the collection of list  has a specific item such as list , set or dictionary.</p>
+
+</div>
+</div>
+<div id="faq-question-1707478586088" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. <strong> How many operators are in Python?</strong></h4>
+<div class="rank-math-answer ">
+
+<p>Ans. There are seven different operators in Python. Those operators are arithmetic, assignment, comparison, logical, identity, membership, and boolean operators. </p>
+
+</div>
+</div>
+<div id="faq-question-1707478601486" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is a tuple example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The Tuplr is referred to as an ordered as the uniqueness in order will define the tuple. Examples of Tuple  are  a<sub>1</sub> equals b<sub>1</sub>, a<sub>2</sub> equals b<sub>2</sub>, a<sub>3</sub> equals b<sub>3</sub> </p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-membership-operator/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

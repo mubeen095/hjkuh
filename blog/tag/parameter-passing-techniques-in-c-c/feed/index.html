@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Parameter Passing Techniques In C/C++</title>
+	<atom:link href="https://www.skillvertex.com/tag/parameter-passing-techniques-in-c-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:20:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Parameter Passing Techniques In C/C++</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Parameter Passing Techniques In C/C++</title>
+		<link>https://www.skillvertex.com/blog/parameter-passing-techniques-in-c-c/</link>
+					<comments>https://www.skillvertex.com/blog/parameter-passing-techniques-in-c-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:20:48 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Parameter Passing Techniques In C/C++]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2324</guid>
+
+					<description><![CDATA[Parameter Passing Techniques In C/C++ Caller Function (A): The caller function, also known as the calling function or the client function, is the function that initiates the call to another function. Function A is the caller function because it is calling function B.Called Function or Callee Function (B): The called function, also known as the ... <a title="Parameter Passing Techniques In C/C++" class="read-more" href="https://www.skillvertex.com/blog/parameter-passing-techniques-in-c-c/" aria-label="More on Parameter Passing Techniques In C/C++">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#parameter-passing-techniques-in-c-c">Parameter Passing Techniques In C/C++</a></li><li ><a href="#terminology">Terminology</a></li><li ><a href="#important-methods-of-parameter-passing">Important Methods of Parameter Passing </a><ul><li ><a href="#1-pass-by-value">1. Pass By Value</a></li><li ><a href="#2-pass-by-reference-aliasing">2. Pass by reference(aliasing)</a></li></ul></li><li ><a href="#other-methods-of-parameter-passing">Other Methods of Parameter Passing</a></li><li ><a href="#faq-parameter-passing-techniques-in-c-c">FAQ- Parameter Passing Techniques In C/C++</a></li><li ><a href="#-1"> </a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="parameter-passing-techniques-in-c-c">Parameter Passing Techniques In C/C++</h2>
+
+
+
+<p>Caller Function (A): The caller function, also known as the calling function or the client function, is the function that initiates the call to another function.  Function A is the caller function because it is calling function B.Called Function or Callee Function (B): The called function, also known as the callee function or the target function, is the function that is invoked or executed when called by another function. Function B is called a function because it is invoked by function A. Actual Arguments: Actual arguments, also referred to as arguments or parameters, are the values or expressions that are passed to a function when it is called. These values are specific to the particular function call and are used as input for the function&#8217;s computation. In your example, the arguments sent from function A to function B are the actual arguments.</p>
+
+
+
+<h2 class="wp-block-heading" id="terminology">Terminology</h2>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Formal Parameter</strong>: A formal parameter is like a variable declaration within the function or method&#8217;s prototype or definition. It specifies the name of the parameter and its data type. It serves as a placeholder for the actual value that will be passed when the function or method is called.</li>
+
+
+
+<li><strong>Actual Parameter</strong>: An actual parameter, on the other hand, is the real value or expression provided in the function or method call, which corresponds to a formal parameter. It is the concrete data that gets passed into the function or method when it is invoked.</li>
+
+
+
+<li><strong>Modes</strong>:
+<ul class="wp-block-list">
+<li><strong>IN Mode</strong>: When a parameter is passed as IN, it means the caller is providing information to the callee. The callee can use this information but cannot modify the original value in the caller.</li>
+
+
+
+<li><strong>OUT Mode</strong>: When a parameter is passed as OUT, it means the callee can write or modify the value of this parameter, and those modifications will be reflected in the caller&#8217;s environment.</li>
+
+
+
+<li><strong>IN/OUT Mode</strong>: This combines both IN and OUT modes. The caller provides an initial value to the callee, and the callee can both use and modify the value, which will then be visible to the caller after the function or method call.</li>
+</ul>
+</li>
+</ol>
+
+
+
+<p>These concepts are often used in programming to control how data is passed between functions or methods, whether data is read-only, write-only, or both.</p>
+
+
+
+<h2 class="wp-block-heading" id="important-methods-of-parameter-passing">Important Methods of Parameter Passing </h2>
+
+
+
+<h3 class="wp-block-heading" id="1-pass-by-value">1. Pass By Value</h3>
+
+
+
+<p>In this method, when you pass a parameter to a function or method, it&#8217;s like making a photocopy of a document. The function works with the photocopy (the formal parameter), not the original document (the actual parameter) from the caller. Any changes made to the photocopy don&#8217;t affect the original document. So, modifications to the formal parameter inside the function only affect its own copy and don&#8217;t impact the original value in the caller&#8217;s environment. This is why it&#8217;s called &#8220;call by value&#8221; because you&#8217;re passing the value, not the original variable itself.</p>
+
+
+
+<h4 class="wp-block-heading" id="example-of-pass-by-value">Example of Pass by Value</h4>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to illustrate
+// call by value
+#include &lt;stdio.h&gt;
+ 
+void func(int a, int b)
+{
+    a += b;
+    printf("In func, a = %d b = %d\n", a, b);
+}
+int main(void)
+{
+    int x = 5, y = 7;
+ 
+    // Passing parameters
+    func(x, y);
+    printf("In main, x = %d y = %d\n", x, y);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>In func, a = 12 b = 7
+In main, x = 5 y = 7</code></pre>
+
+
+
+<p><strong>Disadvantages Of Pass By Value</strong></p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Inefficiency in Storage Allocation</strong>: When you pass data by value, a copy of that data is created. This can be problematic for objects or arrays because making copies of large data structures consumes a significant amount of memory and can slow down your program. Imagine copying a large dataset every time you pass it to a function – it&#8217;s not efficient in terms of memory usage.</li>
+
+
+
+<li><strong>Costly Copy Semantics</strong>: Copying objects or arrays can be costly in terms of time and memory. It takes time to duplicate the data, and if the data is large, it can lead to performance issues. Additionally, if you have multiple functions or methods that need to work on the same data, making copies every time can lead to redundancy and waste of resources.</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading" id="2-pass-by-reference-aliasing">2. Pass by reference(aliasing)</h3>
+
+
+
+<p>In this method, when you pass a parameter, it&#8217;s like giving the function a direct map to the original data. Any changes made to the map (the formal parameter) affect the actual data (the actual parameter) in the caller&#8217;s environment. It&#8217;s like multiple people looking at the same map and drawing on it together. This approach is called &#8220;call by reference&#8221; because you&#8217;re passing a reference to the original data, making it efficient in both time and space since you&#8217;re not creating unnecessary copies.</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to illustrate
+// call by reference
+#include &lt;stdio.h&gt;
+ 
+void swapnum(int* i, int* j)
+{
+    int temp = *i;
+    *i = *j;
+    *j = temp;
+}
+ 
+int main(void)
+{
+    int a = 10, b = 20;
+ 
+    // passing parameters
+    swapnum(&amp;a, &amp;b);
+ 
+    printf("a is %d and b is %d\n", a, b);
+    return 0;
+}</code></pre>
+
+
+
+<h2 class="wp-block-heading"></h2>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>a is 20 and b is 10
+</code></pre>
+
+
+
+<p><strong>Disadvantages of Pass by reference </strong></p>
+
+
+
+<p>Programming involves numerous scenarios and can be challenging due to their complexity. Code can be intricate, debugging isn&#8217;t always easy, and maintaining projects can be tricky. Clear documentation and teamwork help mitigate these issues.</p>
+
+
+
+<h2 class="wp-block-heading" id="other-methods-of-parameter-passing">Other Methods of Parameter Passing</h2>
+
+
+
+<p>These techniques are older and were used in earlier programming languages like Pascal, Algol, and Fortran. These techniques won&#8217;t be applicable in high-level languages.</p>
+
+
+
+<p><strong>1. Pass by Result</strong></p>
+
+
+
+<p>In this method, known as &#8220;out-mode semantics&#8221; or &#8220;call by the result,&#8221; the formal parameter&#8217;s value is sent back to the actual parameter just before the control returns to the caller. This is often implemented by making a copy of the value.</p>
+
+
+
+<p><strong>2. Pass by Value-Result</strong></p>
+
+
+
+<p>This method uses &#8220;in/out-mode semantics,&#8221; which is a mix of pass-by-value and pass-by-result. Just before the control returns to the caller, the formal parameter&#8217;s value is sent back to the actual parameter. It&#8217;s also known as &#8220;call by value-result.&#8221;</p>
+
+
+
+<p><strong>3. Pass by Name</strong></p>
+
+
+
+<p>This method is commonly used in programming languages like Algol. In this technique, the variable&#8217;s symbolic &#8220;name&#8221; is passed as a parameter, allowing it to be both accessed and updated within a function or method. This method enables direct manipulation of the original variable using its name.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>procedure double(x);
+  real x;
+begin 
+  x:=x*2
+end;</code></pre>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Re-evaluation of Argument</strong>: With pass-by-name, the argument expression is re-evaluated each time the formal parameter is passed. This means that the value of the argument is recalculated whenever it&#8217;s accessed within the procedure.</li>
+
+
+
+<li><strong>Variable Value Changes</strong>: Since the argument expression is re-evaluated, the procedure can modify the values of variables used in that expression. Consequently, this can alter the overall value of the expression. It allows the procedure to change the variables used in the argument expression and, as a result, modify the expression&#8217;s final value.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="faq-parameter-passing-techniques-in-c-c">FAQ- Parameter Passing Techniques In C/C++</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696498633404" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are the parameter-passing techniques in C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <br />In C++, when a parameter is passed &#8220;by value,&#8221; a copy of the actual argument&#8217;s value is created for use within the function. Any changes made to this copy inside the function do not affect the original value of the actual argument that was used in the function call. In other words, modifications to the parameter inside the function are local and do not impact the value outside the function.</p>
+
+</div>
+</div>
+<div id="faq-question-1696498665345" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What are the default parameters in C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Default arguments in C++ allow you to assign default values to function parameters. These default values are specified at the trailing end (right side) of the parameter list. When calling the function, if an argument for a parameter with a default value is not provided, the default value is used. Default arguments enhance code reusability, simplify function calls, and make programs more effective by providing sensible default behavior when needed.</p>
+
+</div>
+</div>
+<div id="faq-question-1696498682772" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What does &amp; mean in C++ parameters?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The ampersand symbol &amp; is referred to as a reference declarator in addition to being the address operator in C ++.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<h2 class="wp-block-heading" id="-1"><br></h2>
+<div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/parameter-passing-techniques-in-c-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

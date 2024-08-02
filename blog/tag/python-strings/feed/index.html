@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>python strings</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-strings/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 Mar 2024 06:51:02 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>python strings</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python String Formatting</title>
+		<link>https://www.skillvertex.com/blog/python-string-formatting/</link>
+					<comments>https://www.skillvertex.com/blog/python-string-formatting/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:51:02 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[python strings]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7587</guid>
+
+					<description><![CDATA[The String formatting will help you to produce dynamic strings that contain variables and values. Check out this article to learn more about Python String Formatting How to Format Strings in Python? The format () will help you to format the selected parts of the string. However, some parts couldn&#8217;t be controlled. Thus, to control ... <a title="Python String Formatting" class="read-more" href="https://www.skillvertex.com/blog/python-string-formatting/" aria-label="More on Python String Formatting">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#how-to-format-strings-in-python">How to Format Strings in Python?</a></li><li ><a href="#what-are-the-different-ways-for-string-formatting-in-python">What are the different ways for String Formatting in Python?</a></li><li ><a href="#a-how-to-format-string-using-the-operator-in-python">a.How to Format String using the % Operator in Python?</a><ul><li ><a href="#how-to-inject-multiple-strings-using-the-modulo-operator-in-python">How to Inject Multiple Strings Using the Modulo Operator in Python?</a></li><li ><a href="#how-to-precision-handling-in-python-using-operator">How to Precision Handling in  Python using % Operator?</a></li><li ><a href="#what-are-multiple-format-conversion-types-in-python">What are Multiple Format Conversion Types in Python?</a></li></ul></li><li ><a href="#b-how-to-format-string-using-format-method">b.How to Format String using format() Method?</a><ul><li ><a href="#formatting-with-the-string-pythod-using-the-format-method">Formatting with the String Pythod using the format() Method</a></li><li ><a href="#index-based-insertion">Index-based Insertion</a></li><li ><a href="#insert-objects-by-assigning-keywords">Insert Objects by Assigning Keywords</a></li><li ><a href="#reuse-the-inserted-objects">Reuse the  inserted objects</a></li><li ><a href="#float-precision-with-the-format-method">Float Precision with the format() Method</a></li></ul></li><li ><a href="#c-understanding-python-f-string">c. Understanding Python f-String </a><ul><li ><a href="#string-formatting-with-f-strings">String Formatting  with F-Strings</a></li><li ><a href="#how-to-do-arithmetic-operations-using-the-f">How to do Arithmetic Operations using the F?</a></li><li ><a href="#how-to-do-lambda-expressions-using-f-strings">How to do Lambda Expressions using F-strings</a></li><li ><a href="#float-precision-in-the-f-string-method"> Float Precision in the f-String Method</a></li></ul></li><li ><a href="#d-python-string-template-class">d. Python String Template Class</a></li><li ><a href="#e-format-string-using-center-method">e. Format String Using Center () Method</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-string-formatting-fa-qs">Python String Formatting- FAQs</a></li></ul></nav></div>
+
+
+
+<p>The  String formatting will help you to produce dynamic strings that contain variables and values. Check out this article to learn more about Python String Formatting</p>
+
+
+
+<h2 class="wp-block-heading" id="how-to-format-strings-in-python">How to Format Strings in Python?</h2>
+
+
+
+<p>The <strong>format ()</strong> will help you to format the selected parts of the string. However, some parts couldn&#8217;t be controlled. </p>
+
+
+
+<p>Thus, to control such <a href="https://www.skillvertex.com/blog/which-of-the-following-is-a-value-of-devops/" data-type="post" data-id="2809">values</a>, you have to add placeholders (curly brackets{} ) in the text and run the values with the format() method.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-different-ways-for-string-formatting-in-python">What are the different ways for String Formatting in Python?</h2>
+
+
+
+<p>The five different ways to operate the <em><a href="https://www.skillvertex.com/blog/python-modify-string/" data-type="post" data-id="7578">string</a></em> formatting in Python. These methods are listed below:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Formatting with % <a href="https://www.skillvertex.com/blog/precedence-and-associativity-of-operators-in-python/" data-type="post" data-id="7005">Operator</a>.</li>
+
+
+
+<li>Formatting with format() string method.</li>
+
+
+
+<li>Formatting with string literals, called f-strings.</li>
+
+
+
+<li>Formatting with String Template Class</li>
+
+
+
+<li>Formatting with center() row<a href="https://www.skillvertex.com/blog/python-string/" data-type="post" data-id="7475">Python String</a>method.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="a-how-to-format-string-using-the-operator-in-python">a.How to Format String using the % Operator in Python?</h2>
+
+
+
+<p>This is considered the oldest method of string formatting. We use the <strong>modulo % operator.</strong> The modulo % is referred to as the <a href="https://www.skillvertex.com/blog/compare-string-in-c/" data-type="post" data-id="961">string</a>-formatting operator.</p>
+
+
+
+<p>Python Format String Using the % Operator</p>
+
+
+
+<p>Let us look into the example of Python Format String using the % Format.</p>
+
+
+
+<pre class="wp-block-code"><code>name = "John"
+age = 25
+height = 5.8
+
+# Using the % operator for string formatting
+formatted_string = "My name is %s, I am %d years old, and my height is %.2f feet." % (name, age, height)
+
+# Print the formatted string
+print(formatted_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>My name is John, I am 25 years old, and my height is 5.80 feet.
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="how-to-inject-multiple-strings-using-the-modulo-operator-in-python">How to Inject Multiple Strings Using the Modulo Operator in Python?</h3>
+
+
+
+<p>Let us check out the example to inject with the % <a href="https://www.skillvertex.com/blog/and-operators-in-c/" data-type="post" data-id="3294">operator</a>.</p>
+
+
+
+<pre class="wp-block-code"><code># Define multiple values
+name = "Alice"
+age = 30
+city = "Wonderland"
+
+# Use the % operator to inject multiple strings
+formatted_string = "Hello, my name is %s, I am %d years old, and I live in %s." % (name, age, city)
+
+# Print the formatted string
+print(formatted_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Hello, my name is Alice, I am 30 years old, and I live in Wonderland.
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="how-to-precision-handling-in-python-using-operator">How to Precision Handling in  Python using % Operator?</h3>
+
+
+
+<p>The Floating Point numbers will use the format  %abf. Thus,  a   would be considered as the minimum number of digits that is available in the string. But, it will have padded space when the whole number doesn&#8217;t have many digits.</p>
+
+
+
+<p>Moreover, bf will display how many digits will be shown after the decimal point.</p>
+
+
+
+<p>Example</p>
+
+
+
+<p>%.2f is considered a placeholder for a floating-point number (number), and %.2f  will indicate the number that should be formatted with two decimal places.</p>
+
+
+
+<pre class="wp-block-code"><code># Define a floating-point number
+number = 3.141592653589793
+
+# Use the % operator for precision handling
+formatted_string = "The value of pi with 2 decimal places: %.2f" % number
+
+# Print the formatted string
+print(formatted_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The value of pi with 2 decimal places: 3.14
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="what-are-multiple-format-conversion-types-in-python">What are Multiple Format Conversion Types in Python?</h3>
+
+
+
+<pre class="wp-block-code"><code># Define variables with different types
+name = "Alice"
+age = 25
+height = 5.8
+
+# Use the % operator for multiple format conversion types
+formatted_string = "Name: %s, Age: %d, Height: %.2f" % (name, age, height)
+
+# Print the formatted string
+print(formatted_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Name: Alice, Age: 25, Height: 5.80
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="b-how-to-format-string-using-format-method">b.How to Format String using format() Method?</h2>
+
+
+
+<p>The <strong>Format () method </strong>was developed with Python 3 for monitoring the complex string formatting more smoothly.</p>
+
+
+
+<p>Formatters will perform by putting in one or more replacement fields and placeholders that are defined by the pair of curly braces{} into the string and referred to as the str. format{}.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>Syntax: ‘String here {} then also {}’.format(‘something1′,’something2’)
+
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="formatting-with-the-string-pythod-using-the-format-method">Formatting with the String Pythod using the format() Method</h3>
+
+
+
+<p>{} is using this curly braces as the placeholder. Hence, this formatting is done through the format() method that is placed on the equal to the placeholder.</p>
+
+
+
+<p>Example</p>
+
+
+
+<p>In the example illustrated below, this<strong> {}</strong> is referred to as a placeholder for the variable and the values will be given as arguments to the<strong> format () </strong>method. Whereas,  the<strong> {:2f}</strong> is the placeholder for the floating-point number(height)  with two decimal places</p>
+
+
+
+<pre class="wp-block-code"><code># Define variables with different types
+name = "Alice"
+age = 25
+height = 5.8
+
+# Use the format() method for string formatting
+formatted_string = "Name: {}, Age: {}, Height: {:.2f}".format(name, age, height)
+
+# Print the formatted string
+print(formatted_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Name: Alice, Age: 25, Height: 5.80
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="index-based-insertion">Index-based Insertion</h3>
+
+
+
+<p>The code below will tell us how to perform the index-based insertion into the list in Python</p>
+
+
+
+<pre class="wp-block-code"><code># Initial list
+my_list = &#91;1, 2, 3, 5]
+
+# Index at which to insert the new element
+index_to_insert = 3
+
+# Element to insert
+new_element = 4
+
+# Perform index-based insertion
+my_list.insert(index_to_insert, new_element)
+
+# Print the updated list
+print("Updated list:", my_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Updated list: &#91;1, 2, 3, 4, 5]
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="insert-objects-by-assigning-keywords">Insert Objects by Assigning Keywords</h3>
+
+
+
+<p>In the example provided below, each object will be represented with keywords such as &#8216;name&#8217;, &#8216;age&#8217;, and &#8216;height&#8217;. So, these dictionaries will be appended to the &#8216;objects_list&#8217;.</p>
+
+
+
+<pre class="wp-block-code"><code># Initialize an empty list to store objects
+objects_list = &#91;]
+
+# Object 1
+object1 = {'name': 'Alice', 'age': 25, 'height': 5.6}
+objects_list.append(object1)
+
+# Object 2
+object2 = {'name': 'Bob', 'age': 30, 'height': 6.1}
+objects_list.append(object2)
+
+# Print the list of objects
+print("List of Objects:", objects_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>List of Objects: &#91;{'name': 'Alice', 'age': 25, 'height': 5.6}, {'name': 'Bob', 'age': 30, 'height': 6.1}]
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="reuse-the-inserted-objects">Reuse the  inserted objects</h3>
+
+
+
+<p>Let us look into the example below:</p>
+
+
+
+<pre class="wp-block-code"><code># Initialize an empty list to store objects
+objects_list = &#91;]
+
+# Object 1
+object1 = {'name': 'Alice', 'age': 25, 'height': 5.6}
+objects_list.append(object1)
+
+# Object 2
+object2 = {'name': 'Bob', 'age': 30, 'height': 6.1}
+objects_list.append(object2)
+
+# Print the original list of objects
+print("Original List of Objects:", objects_list)
+
+# Access and modify the inserted objects
+objects_list&#91;0]&#91;'age'] = 26
+objects_list&#91;1]&#91;'height'] = 6.2
+
+# Print the modified list of objects
+print("Modified List of Objects:", objects_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original List of Objects: &#91;{'name': 'Alice', 'age': 25, 'height': 5.6}, {'name': 'Bob', 'age': 30, 'height': 6.1}]
+Modified List of Objects: &#91;{'name': 'Alice', 'age': 26, 'height': 5.6}, {'name': 'Bob', 'age': 30, 'height': 6.2}]
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="float-precision-with-the-format-method">Float Precision with the format() Method</h3>
+
+
+
+<p>The syntax is given below</p>
+
+
+
+<pre class="wp-block-code"><code>{&#91;index]:&#91;width]&#91;.precision]&#91;type]}
+
+The type can be used with format codes:
+
+‘d’ for integers
+‘f’ for floating-point numbers
+‘b’ for binary numbers
+‘o’ for octal numbers
+‘x’ for octal hexadecimal numbers
+‘s’ for string
+‘e’ for floating-point in an exponent format</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<p>Check out the example given below for more understanding:</p>
+
+
+
+<pre class="wp-block-code"><code># Define a floating-point number
+pi_value = 3.141592653589793
+
+# Format the float with specific precision using the format() method
+formatted_float = "The value of pi with 2 decimal places: {:.2f}".format(pi_value)
+
+# Print the formatted string
+print(formatted_float)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The value of pi with 2 decimal places: 3.14
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="c-understanding-python-f-string">c. Understanding Python f-String </h2>
+
+
+
+<p>PEP 498 has developed a new string that has a formatting mechanism known as  Literal String Interpolation. Hence, it is most commonly known as F-Strings. The concept behind the f-string in Python is to make the string Interpolation simpler.</p>
+
+
+
+<p>Moreover, to create the f-string in Python, it is required to prefix the string with the letter &#8221;f&#8221;. So, the string itself will be formatted similarly to the str. <strong>format()</strong>. F-strings will offer a proper way to embed the Python expression inside the string literals for formatting.</p>
+
+
+
+<h3 class="wp-block-heading" id="string-formatting-with-f-strings">String Formatting  with F-Strings</h3>
+
+
+
+<p>Check out the example given below to learn how to format the string with the F-strings.</p>
+
+
+
+<pre class="wp-block-code"><code># Define variables
+name = "Alice"
+age = 25
+height = 5.8
+
+# Format the string using f-string
+formatted_string = f"Name: {name}, Age: {age}, Height: {height:.2f}"
+
+# Print the formatted string
+print(formatted_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Name: Alice, Age: 25, Height: 5.80
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="how-to-do-arithmetic-operations-using-the-f">How to do Arithmetic Operations using the F?</h3>
+
+
+
+<p>Let us look into the example  given below:</p>
+
+
+
+<pre class="wp-block-code"><code># Define variables
+a = 10
+b = 5
+
+# Perform arithmetic operations
+sum_result = a + b
+difference_result = a - b
+product_result = a * b
+division_result = a / b
+
+# Format the string using f-string with arithmetic operations
+formatted_string = f"Sum: {sum_result}, Difference: {difference_result}, Product: {product_result}, Division: {division_result:.2f}"
+
+# Print the formatted string
+print(formatted_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Sum: 15, Difference: 5, Product: 50, Division: 2.00
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="how-to-do-lambda-expressions-using-f-strings">How to do Lambda Expressions using F-strings</h3>
+
+
+
+<p>Check out the example below to learn more about the Lambda Expressions using the F-strings.</p>
+
+
+
+<pre class="wp-block-code"><code># Define a lambda function
+square = lambda x: x**2
+double = lambda x: x*2
+
+# Define a variable
+number = 5
+
+# Use f-strings with lambda expressions
+formatted_string = f"Square of {number} is {square(number)}, Double of {number} is {double(number)}"
+
+# Print the formatted string
+print(formatted_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Square of 5 is 25, Double of 5 is 10
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="float-precision-in-the-f-string-method"> Float Precision  in the f-String Method</h3>
+
+
+
+<p>F-string Formatting will be used to interpolate the value of the num variable into the string.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>{value:{width}.{precision}}
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>num = 3.14159
+ 
+print(f"The valueof pi is: {num:{1}.{5}}")</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The valueof pi is: 3.1416
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="d-python-string-template-class">d. Python String Template Class</h2>
+
+
+
+<p>In Python, there&#8217;s a tool called the <a href="https://www.skillvertex.com/blog/what-is-the-largest-size-for-a-resource-manager-template-in-azure/" data-type="post" data-id="3054">Template </a>class in the &#8216;string&#8217; module. It helps us create sentences with blanks that we can fill in later.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>from string import Template
+
+# Create a sentence template
+template_sentence = Template("My name is $name, I am $age years old, and my height is $height feet.")
+
+# Fill in the blanks with actual information
+info = {'name': 'Alice', 'age': 25, 'height': 5.8}
+
+# Put the information into the sentence
+final_sentence = template_sentence.substitute(info)
+
+# Show the complete sentence
+print(final_sentence)
+</code></pre>
+
+
+
+<p>We have blank spaces represented by $name, $age, and $height. The Template class helps us replace these blanks with real information.</p>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>"My name is Alice, I am 25 years old, and my height is 5.8 feet."
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="e-format-string-using-center-method">e. Format String Using Center () Method</h2>
+
+
+
+<p>The center() method is referred to as a build-in method in the <a href="https://www.skillvertex.com/blog/python-functions/" data-type="post" data-id="7272">Python </a>str class and will return the new string which is centered within the string of the specified width.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Define a string
+text = "Hello, Python!"
+
+# Use the center() method to center-align the string within a width of 20 characters
+centered_text = text.center(20)
+
+# Print the centered string
+print("Original String:", text)
+print("Centered String:", centered_text)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original String: Hello, Python!
+Centered String:   Hello, Python!  
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>In summary, Python offers multiple ways to format strings, and the choice depends on your preferences, project needs, and the version of Python you&#8217;re using. Focusing on readability ensures that your code is clear and easy to work with.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-string-formatting-fa-qs">Python String Formatting- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1709556319126" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.What is string formatting in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. It is the process of inserting a custom string or variable in predefined text</p>
+
+</div>
+</div>
+<div id="faq-question-1709556327349" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is %s and %d in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. %s &#8211; String is referred to as  any object with a string representation, like numbers) %d  is known as Integers. %f  is called the Floating point number.</p>
+
+</div>
+</div>
+<div id="faq-question-1709556333957" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.Why is R used in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The &#8216;r&#8217; prefix when defining a string is particularly helpful when you want to use a backslash as an actual backslash.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-string-formatting/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

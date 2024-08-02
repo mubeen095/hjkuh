@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Properties of Array in C</title>
+	<atom:link href="https://www.skillvertex.com/tag/properties-of-array-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:11:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Properties of Array in C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Properties of Array in C</title>
+		<link>https://www.skillvertex.com/blog/properties-of-array-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/properties-of-array-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:11:49 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Properties of Array in C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2133</guid>
+
+					<description><![CDATA[Properties of Array in C In C, an array is a fixed-size collection of elements stored in a continuous block of memory. Arrays are a fundamental data type in C, capable of storing elements of various data types like integers, characters, or even custom structures. They are widely used by programmers to address various challenges ... <a title="Properties of Array in C" class="read-more" href="https://www.skillvertex.com/blog/properties-of-array-in-c/" aria-label="More on Properties of Array in C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#properties-of-array-in-c">Properties of Array in C</a></li><li ><a href="#c-array-properties">C Array Properties</a><ul><li ><a href="#1-fixed-size-of-an-array">1. Fixed Size of an Array</a></li><li ><a href="#2-homogeneous-collection">2. Homogeneous Collection</a></li><li ><a href="#3-indexing-in-an-array">3. Indexing in an Array</a></li><li ><a href="#4-dimensions-of-the-array">4. Dimensions of the Array</a></li><li ><a href="#5-contiguous-storage">5. Contiguous Storage</a></li><li ><a href="#6-random-access-to-the-elements">6. Random Access to the Elements</a></li><li ><a href="#7-relationship-between-array-and-pointers">7. Relationship between Array and Pointers</a></li><li ><a href="#8-bound-checking">8. Bound Checking</a></li><li ><a href="#9-array-decay">9. Array Decay</a></li></ul></li><li ><a href="#faq-properties-of-array-in-c">FAQ- Properties of Array in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="properties-of-array-in-c">Properties of Array in C</h2>
+
+
+
+<p>In C, an array is a fixed-size collection of elements stored in a continuous block of memory. Arrays are a fundamental data type in C, capable of storing elements of various data types like integers, characters, or even custom structures. They are widely used by programmers to address various challenges not only in C but also in other programming languages.</p>
+
+
+
+<p>The characteristics and behaviours of arrays can vary depending on the programming language. In this article, we will explore the specific properties and features of arrays in the C programming language.</p>
+
+
+
+<ol class="wp-block-list">
+<li>Fixed Size Collection</li>
+
+
+
+<li>Homogeneous Elements</li>
+
+
+
+<li>Indexing in Array</li>
+
+
+
+<li>Dimensions of Array</li>
+
+
+
+<li>Contiguous Storage</li>
+
+
+
+<li>Random Access</li>
+
+
+
+<li>Array name relation with pointer</li>
+
+
+
+<li>Bound Checking</li>
+
+
+
+<li>Array Decay</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="c-array-properties">C Array Properties</h2>
+
+
+
+<h3 class="wp-block-heading" id="1-fixed-size-of-an-array">1. Fixed Size of an Array</h3>
+
+
+
+<p>In C, the size of an array is set when it&#8217;s declared and cannot be changed during program execution. This size must be determined at compile-time and remains constant.</p>
+
+
+
+<pre class="wp-block-code"><code>// C Program to Illustrate the Fixed Size Properties of the
+// Array
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // creating a new array of size 5
+    int array&#91;5] = { 1, 2, 3, 4, 5 };
+ 
+    printf("Size of Array Before: %d\n",
+           sizeof(array) / sizeof(int));
+ 
+    // trying to increase the size of the array
+    array&#91;6];
+    // not checking the size
+    printf("Size of Array After: %d",
+           sizeof(array) / sizeof(int));
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Size of Array Before: 5
+Size of Array After: 5</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="2-homogeneous-collection">2. Homogeneous Collection</h3>
+
+
+
+<p>An array in C doesn&#8217;t have elements of different data types, instead they  are of the same type.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to Demonstrate the Homogeneous Property of the
+// C Array
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // declaring integer array
+    int arr&#91;3] = { 1, 2 };
+ 
+    // trying to store string in the third element
+    arr&#91;2] = "skill vertex";
+ 
+  // printing elements
+    printf("Array&#91;1]: %d\n", arr&#91;0]);
+    printf("Array&#91;2]: %d\n", arr&#91;1]);
+    printf("Array&#91;3]: %s", arr&#91;2]);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>main.c: In function ‘main’:
+main.c:12:16: warning: assignment to ‘int’ from ‘char *’ makes integer from pointer without a cast &#91;-Wint-conversion]
+   12 |         arr&#91;2] = "skillvertex";
+      |                ^
+main.c:17:28: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ &#91;-Wformat=]
+   17 |         printf("Array&#91;3]: %s", arr&#91;2]);
+      |                           ~^   ~~~~~~
+      |                            |      |
+      |                            char * int
+      |                           %d
+Array&#91;1]: 1
+Array&#91;2]: 2</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="3-indexing-in-an-array">3. Indexing in an Array</h3>
+
+
+
+<p>In C, indexing of elements in an array starts with 0, not 1. This means that the first element in the array has an index of 0, and the index of the last element is equal to the size of the array minus 1. So, if you have an array of size <code>n</code>, the valid indices for that array range from 0 to <code>n - 1</code>.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C Program to Illustrate Array Indexing in C
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // creating integer array with 2 elements
+    int arr&#91;2] = { 10, 20 };
+ 
+    // printing element at index 1
+    printf("Array&#91;1]: %d\n", arr&#91;1]);
+ 
+    // printing element at index 0
+    printf("Array&#91;0]: %d", arr&#91;0]);
+   
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Array&#91;1]: 20
+Array&#91;0]: 10</code></pre>
+
+
+
+<p>&nbsp;In the above example, at index 1, the second element is present while at index 0, the first element is present.</p>
+
+
+
+<h3 class="wp-block-heading" id="4-dimensions-of-the-array">4. Dimensions of the Array</h3>
+
+
+
+<p>In C, arrays can come in various forms. They can be single-dimensional, like 1-D arrays, or multidimensional, like 2-D, 3-D arrays, and beyond. These multidimensional arrays can have any number of dimensions, allowing you to represent complex data structures.</p>
+
+
+
+<p>The number of elements in a multidimensional array is calculated by multiplying the size of all its dimensions. For example, in a 2-D array with dimensions <code>m</code> and <code>n</code>, the total number of elements is <code>m * n</code>. In a 3-D array with dimensions <code>x</code>, <code>y</code>, and <code>z</code>, the total number of elements is <code>x * y * z</code>, and so on for higher dimensions.</p>
+
+
+
+<p>This flexibility in array dimensions allows C programmers to work with a wide range of data structures and efficiently manage multi-dimensional data.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C Program to create multidimensional array
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // creating 2d array
+    int arr2d&#91;2]&#91;2] = { 1, 2, 3, 4 };
+ 
+    // creating 3d array
+    int arr3d&#91;2]&#91;2]&#91;2] = { 1, 2, 3, 4, 5, 6, 7, 8 };
+ 
+    printf("2D Array: ");
+    // printing 2d array
+    for (int i = 0; i &lt; 2; i++) {
+        for (int j = 0; j &lt; 2; j++) {
+            printf("%d ", arr2d&#91;i]&#91;j]);
+        }
+    }
+ 
+    printf("\n3D Array: ");
+    // printing 3d array
+    for (int i = 0; i &lt; 2; i++) {
+        for (int j = 0; j &lt; 2; j++) {
+            for (int k = 0; k &lt; 2; k++) {
+                printf("%d ", arr3d&#91;i]&#91;j]&#91;k]);
+            }
+        }
+    }
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>2D Array: 1 2 3 4 
+3D Array: 1 2 3 4 5 6 7 8 </code></pre>
+
+
+
+<h3 class="wp-block-heading" id="5-contiguous-storage">5. Contiguous Storage</h3>
+
+
+
+<p>In C, all the elements in an array are stored in contiguous or consecutive memory locations. This concept is easy to visualize in the case of a 1-D array, where elements are simply placed one after the other in memory. However, it&#8217;s important to note that even multidimensional arrays are stored contiguously in memory.</p>
+
+
+
+<p>The contiguous storage of multidimensional arrays is achieved by using row-major or column-major order. In row-major order, the elements of each row are stored one after another in memory, followed by the next row, and so on. In column-major order, the elements of each column are stored consecutively.</p>
+
+
+
+<p>You can verify this contiguous storage property of arrays in C by using pointers to access and iterate through the elements in memory. By incrementing a pointer to an array element, you can observe that it points to the next consecutive element in memory, confirming the contiguous storage arrangement.</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C Program to Verify the Contiguous Storage of Elements in
+// an Array
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // creating an array of 5 elements
+    int arr&#91;5] = { 1, 2, 3, 4, 5 };
+ 
+    // defining pointers to 2 consecutive elements
+    int* ptr1 = &amp;arr&#91;1];
+    int* ptr2 = &amp;arr&#91;2];
+ 
+    // printing the address of arr&#91;1] and arr&#91;2]
+    printf("Address of arr&#91;1] : %p\n", ptr1);
+    printf("Address of arr&#91;2] : %p", ptr2);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>
+Address of arr&#91;1] : 0x7fffb8cc1ef4
+Address of arr&#91;2] : 0x7fffb8cc1ef8</code></pre>
+
+
+
+<p>In the example you provided, where the difference between the addresses of <code>arr[1]</code> and <code>arr[2]</code> is 4 bytes, it indeed indicates that each element in the array occupies 4 bytes of memory. This aligns with the memory requirement for storing a single integer in many C implementations.</p>
+
+
+
+<p>So, in memory addresses ranging from <code>0x7ffebc02e054</code> to <code>0x7ffebc02e057</code>, the element <code>arr[1]</code> is stored, and in the subsequent 4 bytes of memory (<code>0x7ffebc02e058</code> to <code>0x7ffebc02e05B</code>), the element <code>arr[2]</code> is stored. This pattern continues for all the elements in the array, with each element occupying 4 bytes of memory, assuming it&#8217;s an integer array.</p>
+
+
+
+<p>This alignment and contiguous storage of elements in memory are crucial for efficient array access and manipulation in C.</p>
+
+
+
+<h3 class="wp-block-heading" id="6-random-access-to-the-elements">6. Random Access to the Elements</h3>
+
+
+
+<p>One of the defining and powerful properties of an array in C is the ability to access any element ra                                                                                                                         ndomly using its index. This capability is a direct consequence of contiguous storage, where all elements are stored consecutively in memory.</p>
+
+
+
+<p>The compiler can determine the address of an element at a given index by utilizing the address of the first element and the index number. This calculation allows for efficient and direct access to any array element without needing to traverse through other elements. This random access property is fundamental for various algorithms and data structures that rely on quick and direct element retrieval.</p>
+
+
+
+<pre class="wp-block-code"><code>Address of ith = Address of 1st Element + (Index * Size of Each Element)
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C Program to check the random access property of the
+// array
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // creating an array of 5 elements
+    int arr&#91;5] = { 1, 2, 3, 4, 5 };
+ 
+    // address of first element
+    int* ptr = &amp;arr&#91;0];
+ 
+    // printing arr&#91;3]
+    printf("Array&#91;3]: %d\n", arr&#91;3]);
+ 
+    // printing element at index 3 using ptr
+    printf("Array&#91;3] using pointer to first element = %d",
+           *(ptr + 3));
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Array&#91;3]: 4
+Array&#91;3] using pointer to first element = 4</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="7-relationship-between-array-and-pointers">7. Relationship between Array and Pointers</h3>
+
+
+
+<p>Arrays in C are closely related to pointers, and it&#8217;s true that many operations that can be performed on an array can also be accomplished using pointers. The name of an array is, in fact, a pointer to its first element. This relationship allows you to use pointer arithmetic to navigate and manipulate array elements.</p>
+
+
+
+<pre class="wp-block-code"><code>// C Program to Illustrate the Relationship Between Array
+// and Pointers
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // creating an array with 3 elements
+    int arr&#91;3] = { 1, 2, 3 };
+ 
+    int* ptr = &amp;arr&#91;0];
+ 
+    // Pointer to first element
+    printf("Pointer to First Element: %p\n", ptr);
+ 
+    // Array name as pointer
+    printf("Arran Name: %p", arr);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Pointer to First Element: 0x7ffec5059660
+Arran Name: 0x7ffec5059660</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="8-bound-checking">8. Bound Checking</h3>
+
+
+
+<p>In C, bound checking, which involves verifying whether the element being accessed falls within the declared range of the array, is not automatically performed by the language itself. This means that C allows you to access elements outside the specified range of the array without raising any runtime errors or exceptions.</p>
+
+
+
+<p>While this flexibility can be useful in certain situations, it also comes with risks. Accessing elements outside the bounds of an array can lead to unexpected behavior and errors in your program, including memory corruption and security vulnerabilities. It&#8217;s the responsibility of the C programmer to ensure that array bounds are not violated and to perform manual bound checking when necessary to prevent these issues.</p>
+
+
+
+<pre class="wp-block-code"><code>// C Program to Illustrate the Out of Bound access in arrays
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // creating new array with 3 elements
+    int arr&#91;3] = { 1, 2, 3 };
+ 
+    // trying to access out of bound element
+    printf("Some Garbage Value: %d", arr&#91;5]);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Some Garbage Value: 0
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="9-array-decay">9. Array Decay</h3>
+
+
+
+<p>Array decay is the phenomenon where an array loses its dimension and turns into a pointer under certain circumstances. One common situation where array decay occurs is when an array is passed as an argument to a function. When an array decays into a pointer, you can no longer determine its size using the <code>sizeof()</code> operator because the size information is lost.</p>
+
+
+
+<pre class="wp-block-code"><code>// C Program to Demonstrate the Array Decay
+#include &lt;stdio.h&gt;
+ 
+// function
+void func(int* arr)
+{
+    printf("Sizeof Value in Function: %d", sizeof(arr));
+}
+ 
+int main()
+{
+ 
+    // creating array with 3 elements
+    char arr&#91;3];
+ 
+    printf("Sizeof Value in Main: %d\n", sizeof(arr));
+ 
+    // passing array
+    func(arr);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Sizeof Value in Main: 3
+Sizeof Value in Function: 8</code></pre>
+
+
+
+<p>The size of the array in the main() is 3 bytes which will be theb actual size of the array but when we check the size of the array in func(), the size comes out to be 8 bytes .So,  instead of being the size of the array, it is the size of the pointer to the first element of the array.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-properties-of-array-in-c">FAQ- Properties of Array in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1695721705042" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is array and its types in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Arrays store multiple values in a single variable. To create an array, specify the data type (e.g., int) and give it a name followed by square brackets [].</p>
+
+</div>
+</div>
+<div id="faq-question-1695721716575" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What are types of arrays?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Arrays are categorized into two types: single-dimensional and multi-dimensional. A single-dimensional array represents linear data, while a two-dimensional array represents a matrix. Multidimensional arrays have multiple dimensions.</p>
+
+</div>
+</div>
+<div id="faq-question-1695721723230" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the syntax of array?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Arrays are defined using square brackets with the size specified:<br />1D Arrays: <code>int arr[n];</code><br />2D Arrays: <code>int arr[m][n];</code></p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/properties-of-array-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

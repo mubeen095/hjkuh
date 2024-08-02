@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>positional argument</title>
+	<atom:link href="https://www.skillvertex.com/tag/positional-argument/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 Mar 2024 06:48:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>positional argument</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Keyword only Argument in Python</title>
+		<link>https://www.skillvertex.com/blog/keyword-only-argument-in-python/</link>
+					<comments>https://www.skillvertex.com/blog/keyword-only-argument-in-python/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:48:00 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[argument]]></category>
+		<category><![CDATA[Keyword only argument]]></category>
+		<category><![CDATA[positional argument]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7290</guid>
+
+					<description><![CDATA[Two unique argument handling mechanisms exist in the positional-only and the keyword-only argument in Python. These arguments will offer a way for the arguments to pass a function with the help of a function and this will be passed with the keyword. Read this article to learn more about Keyword-only Argument in Python. What is ... <a title="Keyword only Argument in Python" class="read-more" href="https://www.skillvertex.com/blog/keyword-only-argument-in-python/" aria-label="More on Keyword only Argument in Python">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-keyword-only-argument">What is Keyword Only Argument?</a></li><li ><a href="#what-is-the-difference-between-a-keyword-only-argument-and-a-positional-argument">What is the difference between a Keyword-only Argument and a Positional Argument?</a></li><li ><a href="#what-is-keyword-only-argument-1">What is Keyword &#8211; Only Argument?</a></li><li ><a href="#what-is-an-example-of-keyword-only-argument">What is an example of Keyword Only Argument?</a></li><li ><a href="#what-are-the-positional-arguments">What are the Positional Arguments?</a></li><li ><a href="#what-is-the-example-of-the-positional-argument">What is the example of the Positional Argument?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#keyword-only-argument-in-python-fa-qs">Keyword-only Argument in Python- FAQs</a></li></ul></nav></div>
+
+
+
+<p>Two unique argument handling mechanisms exist in the positional-only and the <a href="https://www.skillvertex.com/blog/python-keyword-arguments/" data-type="post" data-id="7283">keyword-only argument</a> in<a href="https://www.skillvertex.com/blog/python-functions/" data-type="post" data-id="7272"> Python</a>. These arguments will offer a way for the arguments to pass a function with the help of a function and this will be passed with the keyword. Read this article to learn more about Keyword-only Argument in Python.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-keyword-only-argument">What is Keyword Only Argument?</h2>
+
+
+
+<p>Keyword Arguments refers to a value that will be passed into a function while running the <a href="https://www.skillvertex.com/blog/c-functions/" data-type="post" data-id="2009">function calls</a>.  The two kinds of keyword Arguments are given below:</p>
+
+
+
+<ol class="wp-block-list">
+<li>Keyword Argument</li>
+</ol>
+
+
+
+<p>A Keyword Argument is an argument that will be preceded by the <a href="https://www.skillvertex.com/blog/predefined-identifier-func-in-c/" data-type="post" data-id="2572">identifier. </a>So, this value will be passed through the function call and not through the default value while defining the function parameters.</p>
+
+
+
+<p>   2. Positional Argument</p>
+
+
+
+<p>A Positional argument is referred to as the all <a href="https://www.skillvertex.com/blog/variable-length-arguments-for-macros/" data-type="post" data-id="3327">argument</a> but is not a keyword argument.</p>
+
+
+
+<p><strong>Note:</strong></p>
+
+
+
+<p>It is known that function calls will pass arguments either as the  Positional or Keyword Arguments. However, this function call will be done according to the needs. If the arguments are necessary for the function call and are a must to be passed on. Therefore, the <a href="https://www.skillvertex.com/blog/how-can-i-return-multiple-values-from-a-function/" data-type="post" data-id="2071">value </a>will be passed as the Positional Argument.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-difference-between-a-keyword-only-argument-and-a-positional-argument">What is the difference between a Keyword-only Argument and a Positional Argument?</h2>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th><em>Keyword-Only Argument</em></th><th><em>Positional only argument</em></th></tr></thead><tbody><tr><td>Arguments are passed in the order of parameters. The order is defined in the order function declaration.</td><td>The order of parameter Names can be changed to&nbsp;pass the argument(or values).</td></tr><tr><td>The order of values cannot be changed to avoid&nbsp;the unexpected output.</td><td>The order of values cannot be changed to avoid&nbsp;unexpected output.</td></tr><tr><td>Syntax of Keyword Only argument is<img decoding="async" height="27" width="483" src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-e1cb3e3abe747f0132ed81cd3c481623_l3.svg" alt="FunctionName(paramName = value, ...)"></td><td>Syntax of Positional only argument is<img decoding="async" height="27" width="495" src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-c19e74282e70034e3e1d0340f368d6d4_l3.svg" alt="FunctionName(value1, value2, value3,....)"></td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="what-is-keyword-only-argument-1">What is Keyword &#8211; Only Argument?</h2>
+
+
+
+<p>The asterisks that are used while defining the function are referred to as the Keyword argument. This argument works similarly to the vanilla Keyword Argument. It will compel the users to force the pass keyword arguments other than the positional or direct arguments.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-an-example-of-keyword-only-argument">What is an example of Keyword Only Argument?</h2>
+
+
+
+<p>Let&#8217;s look into the example of Keyword only Argument</p>
+
+
+
+<pre class="wp-block-code"><code>def greet(name, greeting="Hello", punctuation="!"):
+    """
+    Function to greet a person with a customizable message.
+
+    Parameters:
+    - name (str): The name of the person to greet.
+    - greeting (str): The greeting message (default is "Hello").
+    - punctuation (str): The punctuation to use at the end of the greeting (default is "!").
+
+    Returns:
+    str: The complete greeting message.
+    """
+    return f"{greeting}, {name}{punctuation}"
+
+# Example usage with keyword arguments
+result1 = greet(name="Alice")
+result2 = greet(name="Bob", greeting="Hi")
+result3 = greet(name="Charlie", punctuation=".")
+
+print(result1)  # Output: Hello, Alice!
+print(result2)  # Output: Hi, Bob!
+print(result3)  # Output: Hello, Charlie.
+</code></pre>
+
+
+
+<p>Therefore, use the function provided above as an example. Therefore, this function will make the username with the help of the user&#8217;s custom separator. Additionally, it will use the packing arguments.</p>
+
+
+
+<pre class="wp-block-code"><code>&gt;&gt;&gt; generate_username("Hello, Alice!", "Hi, Bob!", "Hello, Charlie", separator="_")</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Hello, Alice!
+Hi, Bob!
+Hello, Charlie.
+</code></pre>
+
+
+
+<p>This example has mentioned the &#8216;<strong>greet</strong>&#8216; as a function and it has three parameters. Such as (<strong>name, greeting, and punctuation</strong>). The &#8216;greeting &#8216; and &#8216;punctuation&#8217; have a default value that will make them optional. During the function call, it has a value for any parameters with the help of a keyword argument.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-positional-arguments">What are the Positional Arguments?</h2>
+
+
+
+<p>Positional Arguments are referred to as the default way of passing arguments into the function.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-example-of-the-positional-argument">What is the example of the Positional Argument?</h2>
+
+
+
+<pre class="wp-block-code"><code>def greet_positional(name, greeting, punctuation):
+    """
+    Function to greet a person with positional arguments.
+
+    Parameters:
+    - name (str): The name of the person to greet.
+    - greeting (str): The greeting message.
+    - punctuation (str): The punctuation to use at the end of the greeting.
+
+    Returns:
+    str: The complete greeting message.
+    """
+    return f"{greeting}, {name}{punctuation}"
+
+# Example usage with positional arguments
+result1 = greet_positional("Alice", "Hello", "!")
+result2 = greet_positional("Bob", "Hi", "...")
+result3 = greet_positional("Charlie", "Greetings", "?")
+
+print(result1)  # Output: Hello, Alice!
+print(result2)  # Output: Hi, Bob...
+print(result3)  # Output: Greetings, Charlie?
+</code></pre>
+
+
+
+<p>In the example given above, the greet_positional function has three parameters (<strong>name, greeting, and punctuation) </strong>as positional arguments. Therefore during the function call,  it is possible to provide values in the same order as the parameters, and the function uses them accordingly to generate the greeting message.</p>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Hello, Alice!
+Hi, Bob...
+Greetings, Charlie?
+</code></pre>
+
+
+
+<p>Hence, each line that corresponds to the result of the calling &#8216;<strong>greet_positional </strong>&#8216; will function with different sets of positional arguments.</p>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>In Python, keyword-only arguments provide a way to make our functions more flexible and readable, especially for beginners. With keyword-only arguments, we can assign values to specific parameters by explicitly mentioning their names when calling a function. </p>
+
+
+
+<p>However, this will make the code clearer, as it&#8217;s easy to understand which argument corresponds to which parameter. It also allows for a more intuitive and expressive way of passing arguments, enabling students to create functions with a higher level of customization while maintaining simplicity. </p>
+
+
+
+<p>Overall, keyword-only arguments in Python offer a user-friendly approach to function design, enhancing code readability and making programming more accessible for students.</p>
+
+
+
+<h2 class="wp-block-heading" id="keyword-only-argument-in-python-fa-qs">Keyword-only Argument in Python- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1708930428009" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How do you force an argument to be a keyword in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The asterisk *  in the function will force the behavior. Hence, any argument that is given to the parameters after the asterisk will be passed with the keyword arguments only.</p>
+
+</div>
+</div>
+<div id="faq-question-1708930437658" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the difference between keyword arguments and default arguments in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The Keyword argument will employ the order, whereas, the default arguments will help us to work with the absence of values.</p>
+
+</div>
+</div>
+<div id="faq-question-1708930606731" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the use of keyword arguments __ init __ in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In Python, the <code>__init__</code> method is part of a class and is like a special function that gets called when we create an object from that class. It will set up the initial values for the object&#8217;s attributes. When we define the <code>__init__</code> method, we always include a default parameter called &#8216;self,&#8217; which represents the object being created.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/keyword-only-argument-in-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

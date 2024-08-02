@@ -1,0 +1,3941 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>programming language</title>
+	<atom:link href="https://www.skillvertex.com/tag/programming-language/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 20 Mar 2024 12:27:30 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>programming language</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python &#8211; Access Set Items</title>
+		<link>https://www.skillvertex.com/blog/python-access-set-items/</link>
+					<comments>https://www.skillvertex.com/blog/python-access-set-items/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 20 Mar 2024 12:27:30 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming language]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python - Access Set Items]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=8345</guid>
+
+					<description><![CDATA[Python &#8211; Access Set Items In Python, a set is a collection of unique elements, meaning each element appears only once within the set. Accessing elements within a set is a common task when working with data. Furthermore, Python has two methods to access items within the set. Let us look into the article to learn ... <a title="Python &#8211; Access Set Items" class="read-more" href="https://www.skillvertex.com/blog/python-access-set-items/" aria-label="More on Python &#8211; Access Set Items">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#python-access-set-items">Python &#8211; Access Set Items</a></li><li ><a href="#what-are-access-set-items-in-python">What are Access Set Items in Python?</a></li><li ><a href="#what-is-the-example-of-looping-and-operator-through-a-set-in-python">What is the example of looping and operator through a set in Python?</a></li><li ><a href="#example-2-to-access-python-set-with-the-help-of-an-operator">Example 2 &#8211; to Access Python set with the help of an Operator</a></li><li ><a href="#example-3-access-python-sets-with-the-help-of-iter-and-next-keyword">Example 3 &#8211; Access Python sets with the help of iter and next keyword</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-access-set-items-fa-qs">Python &#8211; Access Set Items &#8211; FAQs</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="python-access-set-items">Python &#8211; Access Set Items</h2>
+
+
+
+<p>In Python, a set is a collection of unique elements, meaning each element appears only once within the set. Accessing elements within a set is a common task when working with data.</p>
+
+
+
+<p>Furthermore, Python has two <a href="https://www.skillvertex.com/blog/python-tuple-methods/" data-type="post" data-id="8306">methods </a>to access items within the set. Let us look into the article to learn more about Python Access Set items.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-access-set-items-in-python">What are Access Set Items in Python?</h2>
+
+
+
+<p>In <a href="https://www.skillvertex.com/blog/python-sets/" data-type="post" data-id="8332">Python</a>, set items cannot be accessed by referring to the <a href="https://www.skillvertex.com/blog/which-of-the-following-is-valid-sql-for-an-index/" data-type="post" data-id="1479">index </a>as the set is mostly unordered and items have no index. Whereas, it is possible to loop through the set items with the help of a loop and use in keyword when the <a href="https://www.skillvertex.com/blog/which-of-the-following-is-a-value-of-devops/" data-type="post" data-id="2809">value </a>is present in the set.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-example-of-looping-and-operator-through-a-set-in-python">What is the example of looping and operator through a set in Python?</h2>
+
+
+
+<p>This example below illustrates about the <a href="https://www.skillvertex.com/blog/python-loop-tuples/" data-type="post" data-id="8198">loop </a>that will iterate over the elements of the set and monitor the <a href="https://www.skillvertex.com/blog/which-one-is-not-an-element-of-iot/" data-type="post" data-id="3089">element </a>using the <a href="https://www.skillvertex.com/blog/python-identity-operator/" data-type="post" data-id="6997">in operator</a>. Since the set doesn&#8217;t have indexes, it is required to access the elements with the help of a <a href="https://www.skillvertex.com/blog/python-loop-lists/" data-type="post" data-id="8077">loop </a>and run the <a href="https://www.skillvertex.com/blog/which-part-interprets-program-instructions-and-initiate-control-operations/" data-type="post" data-id="1998">operations</a>.</p>
+
+
+
+<pre class="wp-block-code"><code># Define a set
+my_set = {1, 2, 3, 4, 5}
+
+# Accessing set items using a loop
+print("Accessing set items using a loop:")
+for item in my_set:
+    print(item)
+
+# Using the 'in' operator to check if an element exists in the set
+print("\nUsing the 'in' operator to check if an element exists in the set:")
+print("Is 3 in the set?", 3 in my_set)  # Output: True
+print("Is 6 in the set?", 6 in my_set)  # Output: False
+
+</code></pre>
+
+
+
+<p> Output</p>
+
+
+
+<pre class="wp-block-code"><code>Accessing set items using a loop:
+1
+2
+3
+4
+5
+
+Using the 'in' operator to check if an element exists in the set:
+Is 3 in the set? True
+Is 6 in the set? False
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-2-to-access-python-set-with-the-help-of-an-operator">Example 2 &#8211; to Access Python set with the help of an Operator</h2>
+
+
+
+<p>The below example shows how to check if the specified value is present in the <a href="https://www.skillvertex.com/blog/python-sets/" data-type="post" data-id="8332">Python set</a></p>
+
+
+
+<pre class="wp-block-code"><code># Define a set
+my_set = {1, 2, 3, 4, 5}
+
+# Using the 'in' operator to check if elements exist in the set
+print("Is 3 in the set?", 3 in my_set)  # Output: True
+print("Is 6 in the set?", 6 in my_set)  # Output: False
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Is 3 in the set? True
+Is 6 in the set? False
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-3-access-python-sets-with-the-help-of-iter-and-next-keyword">Example 3 &#8211; Access Python sets with the help of iter and next keyword</h2>
+
+
+
+<pre class="wp-block-code"><code># Define a set
+my_set = {1, 2, 3, 4, 5}
+
+# Obtain an iterator object for the set
+set_iterator = iter(my_set)
+
+# Iterate through the set using the iterator and the next keyword
+print("Accessing set items using iter() and next():")
+try:
+    while True:
+        item = next(set_iterator)
+        print(item)
+except StopIteration:
+    pass
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Accessing set items using iter() and next():
+1
+2
+3
+4
+5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>In conclusion, accessing set items in Python is a straightforward process with various methods at our disposal. We can iterate through sets using loops, such as the for loop, to access each element individually. </p>
+
+
+
+<p>Additionally, Python offers set operations like the in operator for checking element existence, add() for adding elements, and remove() for removing elements. </p>
+
+
+
+<p>However, These methods provide flexibility and efficiency in managing set data, allowing us to perform tasks like checking, adding, or removing elements with ease. By leveraging these techniques, we can efficiently work with sets in Python, ensuring smooth and effective handling of our data.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-access-set-items-fa-qs">Python &#8211;&nbsp;Access Set Items &#8211; FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1710930219239" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How do you access items in a set in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. It will access the items in the set by referring to an index.</p>
+
+</div>
+</div>
+<div id="faq-question-1710930226252" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. How do you get a value from a set in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. It will get the value from the set using the pop method.</p>
+
+</div>
+</div>
+<div id="faq-question-1710930236085" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.How do you find items in two sets in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Python set interaction will help you to find the common elements between two or more sets. You can operate with the help of the intersection method and the &amp; operator.</p>
+
+</div>
+</div>
+<div id="faq-question-1710930248844" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q4.What is the set () in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Python set() function will make the set object.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-access-set-items/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python Tuple Exercise</title>
+		<link>https://www.skillvertex.com/blog/python-tuple-exercise/</link>
+					<comments>https://www.skillvertex.com/blog/python-tuple-exercise/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 12:29:29 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming language]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python Tuple Exercise]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=8314</guid>
+
+					<description><![CDATA[Python Tuple Exercise Welcome to the Python Tuple Exercise! Tuples are a fundamental data structure in Python that allows you to store collections of items. In this exercise, we&#8217;ll explore various operations you can perform with tuples, such as accessing elements, finding unique numbers, and the sum of all the numbers in the tuple. Python ... <a title="Python Tuple Exercise" class="read-more" href="https://www.skillvertex.com/blog/python-tuple-exercise/" aria-label="More on Python Tuple Exercise">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#python-tuple-exercise">Python Tuple Exercise</a></li><li ><a href="#what-is-a-python-tuple">What is a Python tuple?</a></li><li ><a href="#what-is-an-example-of-finding-unique-numbers-in-a-python-tuple">What is an example of finding unique numbers in a Python tuple?</a></li><li ><a href="#example-2-to-find-the-sum-of-all-numbers-in-the-python-tuple">Example 2- to find the sum of all numbers in the Python tuple</a></li><li ><a href="#example-3-to-create-the-tuple-of-5-random-integers-in-python">Example 3- to create the tuple of 5 random integers in Python</a></li><li ><a href="#conclusion">Conclusion</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="python-tuple-exercise">Python Tuple Exercise</h2>
+
+
+
+<p>Welcome to the Python Tuple Exercise! <a href="https://www.skillvertex.com/blog/python-unpack-tuple/" data-type="post" data-id="8189">Tuples </a>are a fundamental <a href="https://www.skillvertex.com/blog/data-structures-interview-questions-and-answers/" data-type="post" data-id="3670">data structure</a> in Python that allows you to store collections of items. In this exercise, we&#8217;ll explore various <a href="https://www.skillvertex.com/blog/python-identity-operator/" data-type="post" data-id="6997">operations </a>you can perform with tuples, such as accessing <a href="https://www.skillvertex.com/blog/which-one-is-not-an-element-of-iot/" data-type="post" data-id="3089">elements</a>, finding unique numbers, and the sum of all the <a href="https://www.skillvertex.com/blog/python-numbers/" data-type="post" data-id="7023">numbers</a> in the tuple.</p>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-update-tuples/" data-type="post" data-id="8179">Python </a>tuples are referred to as the type of data structure and will work similarly to the list.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-tuple">What is a Python tuple?</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-tuple-methods/" data-type="post" data-id="8306">Tuples </a>are similar to <a href="https://www.skillvertex.com/blog/python-list-methods/" data-type="post" data-id="8139">lists</a>, but with one crucial difference: they are <a href="https://www.skillvertex.com/blog/dictionary-is-mutable-or-immutable/" data-type="post" data-id="1615">immutable</a>, meaning once it is created, you cannot change the elements inside them. This makes tuples ideal for storing data that shouldn&#8217;t be modified, such as coordinates, <a href="https://www.skillvertex.com/blog/network-configuration-files-are-defined-in-what-format-in-azure/" data-type="post" data-id="3305">configuration </a>settings, or fixed sets of <a href="https://www.skillvertex.com/blog/how-can-i-return-multiple-values-from-a-function/" data-type="post" data-id="2071">values</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-an-example-of-finding-unique-numbers-in-a-python-tuple">What is an example of finding unique numbers in a Python tuple?</h2>
+
+
+
+<p><strong>Example</strong></p>
+
+
+
+<pre class="wp-block-code"><code># Define a tuple with numbers (including duplicates)
+my_tuple = (1, 2, 3, 4, 5, 2, 3, 4, 6, 7, 8, 9, 9)
+
+# Convert the tuple to a set to get unique elements
+unique_numbers_set = set(my_tuple)
+
+# Convert the set back to a tuple if needed
+unique_numbers_tuple = tuple(unique_numbers_set)
+
+# Print the unique numbers
+print("Unique numbers:", unique_numbers_tuple)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Unique numbers: (1, 2, 3, 4, 5, 6, 7, 8, 9)
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-2-to-find-the-sum-of-all-numbers-in-the-python-tuple">Example 2- to find the sum of all numbers in the Python tuple</h2>
+
+
+
+<pre class="wp-block-code"><code># Define a tuple with numbers
+my_tuple = (1, 2, 3, 4, 5)
+
+# Calculate the sum of the numbers in the tuple
+total_sum = sum(my_tuple)
+
+# Print the sum
+print("Sum of numbers in the tuple:", total_sum)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Sum of numbers in the tuple: 15
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-3-to-create-the-tuple-of-5-random-integers-in-python">Example 3- to create the tuple of 5 random integers in Python</h2>
+
+
+
+<pre class="wp-block-code"><code>import random
+
+# Generate a tuple of 5 random integers between 1 and 100
+random_integers = tuple(random.randint(1, 100) for _ in range(5))
+
+# Print the tuple
+print("Tuple of 5 random integers:", random_integers)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Tuple of 5 random integers: (42, 15, 76, 33, 90)
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>Summing up,  this exercise will allow you to gain a solid understanding of how to work with tuples, a fundamental data structure in Python. Tuples are immutable, ordered collections, making them useful for scenarios where data should not be modified. Remember, tuples provide efficient and effective ways to store and manage data in Python programs.</p>
+
+
+
+<p> Keep practicing and experimenting with tuples to reinforce your understanding and enhance your Python programming skills.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-tuple-exercises-fa-qs">Python Tuple Exercises- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1710849514668" class="rank-math-list-item">
+<h3 class="rank-math-question ">Q1.Can we pop a tuple in Python?</h3>
+<div class="rank-math-answer ">
+
+<p>Ans.No, it is not possible to remove the items in the tuple.</p>
+
+</div>
+</div>
+<div id="faq-question-1710849529496" class="rank-math-list-item">
+<h3 class="rank-math-question ">Q2. What are the data types in Python tuple?</h3>
+<div class="rank-math-answer ">
+
+<p>Ans. List, Set, and Dictionary are the data types in the Python tuple</p>
+
+</div>
+</div>
+<div id="faq-question-1710849539704" class="rank-math-list-item">
+<h3 class="rank-math-question ">Q3. What are the rules of a tuple?</h3>
+<div class="rank-math-answer ">
+
+<p>Ans. A tuple can have repeated elements, but a set cannot. Tuples maintain the order of elements, while sets do not. Tuples have a fixed number of elements, while sets can have an unlimited number.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<h2 class="wp-block-heading"><br></h2>
+<div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-tuple-exercise/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python Tuple Methods</title>
+		<link>https://www.skillvertex.com/blog/python-tuple-methods/</link>
+					<comments>https://www.skillvertex.com/blog/python-tuple-methods/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 10:19:48 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming language]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[python tuple method]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=8306</guid>
+
+					<description><![CDATA[Python Tuple Methods Python Tuples is an immutable collection that works similarly to the list. It will give a couple of methods required to work with tuples. This article has provided two methods along with their examples. What is the Python Tuple Method? The Tuple method consists of built-in functions that will run the operations ... <a title="Python Tuple Methods" class="read-more" href="https://www.skillvertex.com/blog/python-tuple-methods/" aria-label="More on Python Tuple Methods">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#python-tuple-methods">Python Tuple Methods</a></li><li ><a href="#what-is-the-python-tuple-method">What is the Python Tuple Method?</a></li><li ><a href="#what-is-the-count-method-in-python">What is the Count() Method in Python?</a><ul><li ><a href="#syntax-of-count-method">Syntax of Count Method</a></li></ul></li><li ><a href="#example-1-use-the-tuple-count-method-in-python">Example 1- Use the Tuple count() method in Python</a></li><li ><a href="#example-2-counting-tuples-lists-as-elements-in-python-tuples">Example 2- Counting Tuples &amp; lists as elements in Python Tuples</a></li><li ><a href="#what-is-the-index-method-in-python-tuples">What is the Index() Method in Python Tuples?</a></li><li ><a href="#syntax-of-index-method">Syntax of Index() Method</a></li><li ><a href="#what-is-the-example-for-the-tuple-index-method">What is the example for the Tuple Index() Method?</a></li><li ><a href="#what-is-the-example-for-the-tuple-method-when-the-element-is-not-found">What is the example for the Tuple method when the element is not found?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-tuple-method-fa-qs">Python Tuple Method &#8211; FAQs</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="python-tuple-methods">Python Tuple Methods</h2>
+
+
+
+<p>Python <a href="https://www.skillvertex.com/blog/python-update-tuples/" data-type="post" data-id="8179">Tuples </a>is an immutable collection that works similarly to the list. It will give a couple of methods required to work with tuples. This article has provided two methods along with their examples.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-tuple-method">What is the Python Tuple Method?</h2>
+
+
+
+<p>The Tuple method consists of <a href="https://www.skillvertex.com/blog/python-built-in-functions/" data-type="post" data-id="7464">built-in functions</a> that will run the operations on tuples. <a href="https://www.skillvertex.com/blog/python-access-tuple-items/" data-type="post" data-id="8169">Python</a> has several Tuple methods. Some of the Tuple methods are <a href="https://www.skillvertex.com/blog/python-list-sort-method/" data-type="post" data-id="8100"><strong>sorted</strong></a>(), <strong>min</strong>(), c<strong>ount(), index(),max()</strong>, and <a href="https://www.skillvertex.com/blog/python-loop-tuples/" data-type="post" data-id="8198">tuple</a>().Among these, only 2 methods will be discussed in detail below.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-count-method-in-python">What is the Count() Method in Python?</h2>
+
+
+
+<p>The<strong> count()</strong> method for tuples tells you how many times a particular item shows up in the tuple.</p>
+
+
+
+<h3 class="wp-block-heading" id="syntax-of-count-method">Syntax of Count Method</h3>
+
+
+
+<pre class="wp-block-code"><code>tuple.count(element)
+</code></pre>
+
+
+
+<p>Element is the element that is required to be counted.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-1-use-the-tuple-count-method-in-python">Example 1- Use the Tuple count() method in Python</h2>
+
+
+
+<pre class="wp-block-code"><code># Define a tuple
+my_tuple = (1, 2, 3, 4, 2, 2, 5)
+
+# Count how many times the number 2 appears in the tuple
+count_of_2 = my_tuple.count(2)
+
+# Print the output
+print("The number 2 appears", count_of_2, "times in the tuple.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The number 2 appears 3 times in the tuple.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-2-counting-tuples-lists-as-elements-in-python-tuples">Example 2- Counting Tuples &amp; lists as elements in Python Tuples</h2>
+
+
+
+<pre class="wp-block-code"><code># Define a tuple with various types of elements
+my_tuple = (1, 'hello', &#91;1, 2, 3], (4, 5), &#91;1, 'hello'], 'hello', (1, 'hello'))
+
+# Define a function to count tuples and lists within the tuple
+def count_tuples_and_lists(input_tuple):
+    tuple_count = 0
+    list_count = 0
+    for item in input_tuple:
+        if isinstance(item, tuple):
+            tuple_count += 1
+        elif isinstance(item, list):
+            list_count += 1
+    return tuple_count, list_count
+
+# Call the function and get the counts
+tuple_count, list_count = count_tuples_and_lists(my_tuple)
+
+# Print the output
+print("Number of tuples:", tuple_count)
+print("Number of lists:", list_count)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Number of tuples: 2
+Number of lists: 2
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-index-method-in-python-tuples">What is the Index() Method in Python Tuples?</h2>
+
+
+
+<p>The<strong> index()</strong> method will allow you to return the first occurrence of the given element from the tuple.</p>
+
+
+
+<h2 class="wp-block-heading" id="syntax-of-index-method">Syntax of Index() Method</h2>
+
+
+
+<pre class="wp-block-code"><code>tuple.index(element, start, end)
+</code></pre>
+
+
+
+<p><strong>Parameters</strong></p>
+
+
+
+<p>a. element- The element will be used to search.</p>
+
+
+
+<p>b. start- It refers to the starting index from where the search will begin.</p>
+
+
+
+<p>c.end &#8211; This will work as the ending index until searching is over.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-example-for-the-tuple-index-method">What is the example for the Tuple Index() Method?</h2>
+
+
+
+<pre class="wp-block-code"><code># Define a tuple
+my_tuple = ('a', 'b', 'c', 'd', 'e', 'a')
+
+# Find the index of the first occurrence of 'a'
+index_of_a = my_tuple.index('a')
+
+# Print the output
+print("Index of 'a':", index_of_a)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Index of 'a': 0
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-example-for-the-tuple-method-when-the-element-is-not-found">What is the example for the Tuple method when the element is not found?</h2>
+
+
+
+<pre class="wp-block-code"><code># Define a tuple
+my_tuple = ('a', 'b', 'c', 'd', 'e')
+
+try:
+    # Find the index of 'f'
+    index_of_f = my_tuple.index('f')
+    print("Index of 'f':", index_of_f)
+except ValueError:
+    print("'f' is not found in the tuple.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>'f' is not found in the tuple.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>These methods provide convenient ways to work with tuples, allowing you to efficiently find occurrences of elements and their positions within the tuple. They are handy tools for data manipulation and analysis in Python.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-tuple-method-fa-qs">Python Tuple Method &#8211; FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1710842529519" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What does the tuple () function do in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The tuple function will form the tuple from the list, set, or an iterable object.</p>
+
+</div>
+</div>
+<div id="faq-question-1710842539127" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.Which three methods would be used with tuple in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.Max(),reverse() and sorted() methods.</p>
+
+</div>
+</div>
+<div id="faq-question-1710842548019" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Can a tuple have a single element?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Yes, To make a tuple with only one item in Python, just add a comma after the item. This lets Python know it&#8217;s a tuple, not just a value in parentheses.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-tuple-methods/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python &#8211; Loop Tuples</title>
+		<link>https://www.skillvertex.com/blog/python-loop-tuples/</link>
+					<comments>https://www.skillvertex.com/blog/python-loop-tuples/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:56:00 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming language]]></category>
+		<category><![CDATA[Python - Loop Tuples]]></category>
+		<category><![CDATA[Python function]]></category>
+		<category><![CDATA[pythontutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=8198</guid>
+
+					<description><![CDATA[Python &#8211; Loop Tuples In the world of computer science, loops serve as iterative constructs, enabling the repetition of actions, while tuples act as immutable collections, securely storing our data. Read this article to learn more about Python-Loop Tuples In Python, it is possible to traverse the items in the tuple with the help of ... <a title="Python &#8211; Loop Tuples" class="read-more" href="https://www.skillvertex.com/blog/python-loop-tuples/" aria-label="More on Python &#8211; Loop Tuples">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#python-loop-tuples">Python &#8211; Loop Tuples</a></li><li ><a href="#what-is-loop-tuples-in-python">What is Loop Tuples in Python?</a></li><li ><a href="#example-to-loop-through-the-tuple">Example -To loop through the Tuple</a></li><li ><a href="#what-is-loop-through-the-index-numbers-in-python">What is Loop through the Index Numbers in Python?</a></li><li ><a href="#how-to-use-the-while-loop-for-the-tuple-items-in-python">How to use the While Loop for the tuple items in Python?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-loop-tuples-fa-qs">Python &#8211; Loop Tuples- FAQs</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="python-loop-tuples">Python &#8211; Loop Tuples</h2>
+
+
+
+<p>In the world of computer science, <a href="https://www.skillvertex.com/blog/do-while-loop-in-c/" data-type="post" data-id="2291">loops</a> serve as iterative constructs, enabling the repetition of actions, while tuples act as immutable collections, securely storing our data. Read this article to learn more about Python-<a href="https://www.skillvertex.com/blog/python-nested-loops/" data-type="post" data-id="7259">Loop </a>Tuples</p>
+
+
+
+<p>In <a href="https://www.skillvertex.com/blog/python-copy-list/" data-type="post" data-id="8109">Python</a>, it is possible to traverse the items in the <a href="https://www.skillvertex.com/blog/python-tuples/" data-type="post" data-id="8162">tuple </a>with the help of a <a href="https://www.skillvertex.com/blog/python-loop-lists/" data-type="post" data-id="8077">loop </a>construct. So, traversal will be done with the help of an iterator or with the help of an index. </p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-loop-tuples-in-python">What is Loop Tuples in Python?</h2>
+
+
+
+<p>In Python, the <a href="https://www.skillvertex.com/blog/c-loops/" data-type="post" data-id="2286">loop </a>through the tuple items will be operated with the help of a <strong>for loop.</strong> The<strong> for loop</strong> in <a href="https://www.skillvertex.com/blog/merge-two-lists-in-python/" data-type="post" data-id="8127">Python </a>will function to iterate over the <a href="https://www.skillvertex.com/blog/escape-sequence-in-c/" data-type="post" data-id="1912">sequence </a>such as a <a href="https://www.skillvertex.com/blog/python-lists/" data-type="post" data-id="7938">list</a>, <a href="https://www.skillvertex.com/blog/python-tuples/" data-type="post" data-id="8162">tuple</a>, <a href="https://www.skillvertex.com/blog/dynamically-growing-array-in-c/" data-type="post" data-id="3208">array</a>, or <a href="https://www.skillvertex.com/blog/python-string-methods/" data-type="post" data-id="7928">string</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-to-loop-through-the-tuple">Example -To loop through the Tuple</h2>
+
+
+
+<pre class="wp-block-code"><code># Define a tuple
+my_tuple = (1, 2, 3, 4, 5)
+
+# Loop through the tuple
+print("Elements of the tuple:")
+for element in my_tuple:
+    print(element)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Elements of the tuple:
+1
+2
+3
+4
+5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-loop-through-the-index-numbers-in-python">What is Loop through the Index Numbers in Python?</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/do-while-loop-in-c/" data-type="post" data-id="2291">Looping</a> through the index <a href="https://www.skillvertex.com/blog/python-numbers/" data-type="post" data-id="7023">numbers </a>of the <a href="https://www.skillvertex.com/blog/python-add-list-items/" data-type="post" data-id="8058">tuple items </a>can be done by referring to their <a href="https://www.skillvertex.com/blog/which-of-the-following-is-valid-sql-for-an-index/" data-type="post" data-id="1479">index </a>numbers. Further, the <a href="https://www.skillvertex.com/blog/using-range-in-switch-case-in-c-c/" data-type="post" data-id="2064">range() </a>and <a href="https://www.skillvertex.com/blog/python-built-in-functions/" data-type="post" data-id="7464">len() functions </a>will be used to make the suitable iterable.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Define a tuple
+my_tuple = (1, 2, 3, 4, 5)
+
+# Loop through the tuple with index numbers
+print("Index Numbers and Corresponding Elements:")
+for index, element in enumerate(my_tuple):
+    print("Index:", index, "Element:", element)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Index Numbers and Corresponding Elements:
+Index: 0 Element: 1
+Index: 1 Element: 2
+Index: 2 Element: 3
+Index: 3 Element: 4
+Index: 4 Element: 5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="how-to-use-the-while-loop-for-the-tuple-items-in-python">How to use the While Loop for the tuple items in Python?</h2>
+
+
+
+<p><strong>While loop</strong> will function to loop through the tuple items. With the help of the <a href="https://www.skillvertex.com/blog/tag/python-fucntions/" data-type="post_tag" data-id="959">len() function, </a>you can evaluate the length of the tuple. It works in a way that it will begin at 0 and loop its way through the tuple items by referring to their indexes.</p>
+
+
+
+<p>Note: It is recommended to increase the index by 1 after each of their iterations.</p>
+
+
+
+<pre class="wp-block-code"><code># Define a tuple
+my_tuple = (1, 2, 3, 4, 5)
+
+# Initialize index
+index = 0
+
+# Loop through the tuple using a while loop
+print("Elements of the tuple using while loop:")
+while index &lt; len(my_tuple):
+    print(my_tuple&#91;index])
+    index += 1
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Elements of the tuple using while loop:
+1
+2
+3
+4
+5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>In conclusion, mastering the art of looping through tuples in Python opens up a world of possibilities for efficiently handling data. Tuples, with their immutability, provide stability to your <a href="https://www.skillvertex.com/blog/which-is-not-part-of-code-technical-review-in-sonarqube/" data-type="post" data-id="2815">code</a>, and by employing loops, you can effortlessly navigate through their elements. </p>
+
+
+
+<p>Whether you&#8217;re accessing individual items or processing the entire tuple, loops offer a versatile toolset for your <a href="https://www.skillvertex.com/blog/python-program-to-print-hello-world/" data-type="post" data-id="6880">Python programming </a>needs.</p>
+
+
+
+<p> Moreover, the knowledge gained from this guide will allow you to upskill on tuples and loops in Python, empowering you to write cleaner, more effective code. Keep exploring and experimenting to uncover even more ways to leverage these fundamental concepts in your Python projects. </p>
+
+
+
+<h2 class="wp-block-heading" id="python-loop-tuples-fa-qs">Python &#8211; Loop Tuples- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1710761357837" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.How do you create a list of tuples for loop?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The list can be created using a loop by initializing the empty list and assigning tuples in each of their iterations.</p>
+
+</div>
+</div>
+<div id="faq-question-1710761365550" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.What does tuple () do in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A tuple will function to store multiple items in a single variable.</p>
+
+</div>
+</div>
+<div id="faq-question-1710761373305" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.How to create a tuple Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The Python tuple will be created by putting commas to separate the values inside the parentheses. </p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-loop-tuples/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python &#8211; List Exercises</title>
+		<link>https://www.skillvertex.com/blog/python-list-exercises/</link>
+					<comments>https://www.skillvertex.com/blog/python-list-exercises/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:54:40 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming language]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[python excercise]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=8147</guid>
+
+					<description><![CDATA[Python is the commonly used data structure and So, this Python list exercise will allow developers and beginners to learn and practice those list operations. This article has listed Python List Excercise. What is Python? Python is a beginner-friendly language. It is an interpreted, object-oriented, high-level programming language with dynamic semantics. Python is a high-level ... <a title="Python &#8211; List Exercises" class="read-more" href="https://www.skillvertex.com/blog/python-list-exercises/" aria-label="More on Python &#8211; List Exercises">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-python">What is Python?</a></li><li ><a href="#what-are-the-examples-of-python">What are the examples of Python?</a></li><li ><a href="#example-1">Example 1</a></li><li ><a href="#example-2">Example 2</a></li><li ><a href="#example-3">Example 3</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-list-exercises-fa-qs">Python &#8211; List Exercises- FAQs</a></li></ul></nav></div>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-copy-list/" data-type="post" data-id="8109">Python </a>is the commonly used data structure and So, this Python list exercise will allow <a href="https://www.skillvertex.com/blog/mern-stack-developer-job-description/" data-type="post" data-id="4214">developers </a>and beginners to learn and practice those list <a href="https://www.skillvertex.com/blog/which-part-interprets-program-instructions-and-initiate-control-operations/" data-type="post" data-id="1998">operations</a>. This article has listed Python List Excercise.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python">What is Python?</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-list-methods/" data-type="post" data-id="8139">Python </a>is a beginner-friendly <a href="https://www.skillvertex.com/blog/which-of-the-given-languages-is-not-commonly-used-for-ai/" data-type="post" data-id="2778">language</a>. It is an interpreted, object-oriented, high-level programming language with dynamic semantics. Python is a high-level and has built-in <a href="https://www.skillvertex.com/blog/mern-stack-vs-data-science/" data-type="post" data-id="4251">data </a>structures combined with dynamic typing and dynamic binding. Thus, will be more suitable for the Rapid <a href="https://www.skillvertex.com/blog/which-of-the-following-is-not-an-application-of-data-science/" data-type="post" data-id="1660">Application</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-examples-of-python">What are the examples of Python?</h2>
+
+
+
+<p>Check out the <a href="https://www.skillvertex.com/blog/time-h-header-file-in-c-with-examples/" data-type="post" data-id="3679">examples </a>provided below :</p>
+
+
+
+<h2 class="wp-block-heading" id="example-1">Example 1</h2>
+
+
+
+<p>The Python <a href="https://www.skillvertex.com/blog/program-error-signals/" data-type="post" data-id="3693">program </a>below will  find the unique <a href="https://www.skillvertex.com/blog/python-numbers/" data-type="post" data-id="7023">number </a>in the given list:</p>
+
+
+
+<pre class="wp-block-code"><code>def find_unique_numbers(nums):
+    unique_numbers = &#91;]
+    for num in nums:
+        if nums.count(num) == 1:
+            unique_numbers.append(num)
+    return unique_numbers
+
+# Input list of numbers
+numbers = input("Enter numbers separated by spaces: ").split()
+numbers = &#91;int(num) for num in numbers]  # Convert input strings to integers
+
+unique_numbers = find_unique_numbers(numbers)
+print("Unique numbers in the list:", unique_numbers)
+</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>Enter numbers separated by spaces: 1 2 2 3 4 4 5
+Unique numbers in the list: &#91;1, 3, 5]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-2">Example 2</h2>
+
+
+
+<p>The Python Program below will find the <a href="https://www.skillvertex.com/blog/pointer-arithmetics-in-c-with-examples/" data-type="post" data-id="2706">sum </a>of all the <a href="https://www.skillvertex.com/blog/python-numbers/" data-type="post" data-id="7023">numbers </a>in the list.</p>
+
+
+
+<pre class="wp-block-code"><code>def sum_of_numbers(nums):
+    total_sum = sum(nums)
+    return total_sum
+
+# Input list of numbers
+numbers = input("Enter numbers separated by spaces: ").split()
+numbers = &#91;int(num) for num in numbers]  # Convert input strings to integers
+
+result = sum_of_numbers(numbers)
+print("Sum of all numbers in the list:", result)
+</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>Enter numbers separated by spaces: 1 2 3 4 5
+Sum of all numbers in the list: 15
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-3">Example 3</h2>
+
+
+
+<p>The Python Program below will create the list of 5 random <a href="https://www.skillvertex.com/blog/integer-promotions-in-c/" data-type="post" data-id="1968">integers</a>.</p>
+
+
+
+<pre class="wp-block-code"><code>import random
+
+def generate_random_integers(n, lower_limit, upper_limit):
+    random_integers = &#91;random.randint(lower_limit, upper_limit) for _ in range(n)]
+    return random_integers
+
+# Generate 5 random integers between 1 and 100
+random_numbers = generate_random_integers(5, 1, 100)
+print("List of 5 random integers:", random_numbers)
+</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>List of 5 random integers: &#91;42, 17, 73, 5, 89]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To sum up, in Python list exercises, we encountered several common tasks and strategies for working with lists efficiently. First, when tasked with identifying unique numbers within a list, we followed a straightforward approach: iterating through each number and tallying its occurrences. By recognizing numbers that appeared only once, we were able to compile a separate list containing these unique values.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-list-exercises-fa-qs">Python &#8211; List Exercises- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1710481167609" class="rank-math-list-item">
+<p class="rank-math-question ">Q1.What can go in a Python list?</p>
+<div class="rank-math-answer ">
+
+<p>Ans. Python&#8217;s list will allow you to make variable-length and mutable sequences of objects.</p>
+
+</div>
+</div>
+<div id="faq-question-1710481175941" class="rank-math-list-item">
+<p class="rank-math-question ">Q2. How do you solve a list in Python?</p>
+<div class="rank-math-answer ">
+
+<p>Ans. Several ways to modify the list in Python are the Index, Count, Sort, Append, Remove, Pop, Extend, and Insert methods.</p>
+
+</div>
+</div>
+<div id="faq-question-1710481185485" class="rank-math-list-item">
+<p class="rank-math-question ">Q3.Why use lists in Python?</p>
+<div class="rank-math-answer ">
+
+<p>Ans. A list will allow us to store multiple items in a single variable.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-list-exercises/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python String</title>
+		<link>https://www.skillvertex.com/blog/python-string/</link>
+					<comments>https://www.skillvertex.com/blog/python-string/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:49:23 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming language]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python string]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7475</guid>
+
+					<description><![CDATA[Python consists of a built-in string function and will be referred to as &#8221;str&#8221; with handy features. Either single or double quotation marks enclose strings in Python. Read this article to learn more about Python String. What is Python String? The double or single quotes enclose this String literal. However, single quotes will be mostly ... <a title="Python String" class="read-more" href="https://www.skillvertex.com/blog/python-string/" aria-label="More on Python String">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-python-string">What is Python String?</a></li><li ><a href="#assign-string-to-a-variable">Assign String to a Variable</a></li><li ><a href="#what-is-multiline-strings">What is Multiline Strings?</a></li><li ><a href="#strings-are-array">Strings are Array</a></li><li ><a href="#looping-through-a-string">Looping Through a String</a></li><li ><a href="#what-is-string-length-in-python">What is String Length in Python?</a></li><li ><a href="#check-string">Check String</a></li><li ><a href="#what-is-check-if-not-in-python">What is Check if NOT in Python?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-string-fa-qs">Python String- FAQs</a></li></ul></nav></div>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-modules/" data-type="post" data-id="7453">Python</a> consists of a built-in string function and will be referred to as &#8221;str&#8221;  with handy features. Either single or double quotation marks enclose <a href="https://www.skillvertex.com/blog/array-of-strings-in-c/" data-type="post" data-id="2641">strings</a> in Python. Read this article to learn more about <a href="https://www.skillvertex.com/blog/which-of-the-following-precedence-order-is-correct-in-python/" data-type="post" data-id="2702">Python</a> String.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-string">What is Python String?</h2>
+
+
+
+<p>The double or single quotes enclose this String literal. However, single quotes will be mostly used. Whereas, the double-quoted string has single quotes without any doubt. Single quoted string has double quotes. </p>
+
+
+
+<p>Thus, <a href="https://www.skillvertex.com/blog/how-to-reverse-a-string-in-java/" data-type="post" data-id="728">string literals</a> have multiple lines and require a backlash at the end of each line to escape the new line. String literal has triple quotes,&#8221;&#8221;&#8221; or&#8221; that has multiple lines of text.</p>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/pointer-arithmetics-in-c-with-examples/" data-type="post" data-id="2706">Example</a></p>
+
+
+
+<pre class="wp-block-code"><code># Python string example
+my_string = "Hello, World!"
+
+# Output the original string
+print("Original String:", my_string)
+
+# Get the length of the string
+length_of_string = len(my_string)
+print("Length of String:", length_of_string)
+
+# Convert the string to uppercase
+uppercase_string = my_string.upper()
+print("Uppercase String:", uppercase_string)
+
+# Check if the string contains a specific substring
+contains_substring = "World" in my_string
+print("Contains 'World':", contains_substring)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original String: Hello, World!
+Length of String: 13
+Uppercase String: HELLO, WORLD!
+Contains 'World': True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="assign-string-to-a-variable">Assign String to a Variable</h2>
+
+
+
+<p>Assigning the string to the <a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932">variable </a>with the equal sign and the <a href="https://www.skillvertex.com/blog/array-of-strings-in-c/" data-type="post" data-id="2641">string</a>. Let us look into the example given below:</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Assigning a string to a variable
+my_string = "Hello, Python!"
+
+# Output the variable value
+print("My String:", my_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>My String: Hello, Python!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-multiline-strings">What is Multiline Strings?</h2>
+
+
+
+<p>The <a href="https://www.skillvertex.com/blog/multiline-macros-in-c/" data-type="post" data-id="3318">multiline </a>string will allow you to assign the multiline string to the <a href="https://www.skillvertex.com/blog/variable-length-arguments-for-macros/" data-type="post" data-id="3327">variable </a>with the three quotes.</p>
+
+
+
+<pre class="wp-block-code"><code># Multiline string example
+multiline_string = '''
+This is a multiline
+string in Python.
+It can span multiple lines.
+'''
+
+# Output the multiline string
+print("Multiline String:")
+print(multiline_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Multiline String:
+This is a multiline
+string in Python.
+It can span multiple lines.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="strings-are-array">Strings are Array</h2>
+
+
+
+<p>Strings in Python are considered as an <a href="https://www.skillvertex.com/blog/what-is-the-difference-between-single-quoted-and-double-quoted-declaration-of-char-array/" data-type="post" data-id="2661">array of bytes</a> that will represent the Unicode characters. Hence, python won&#8217;t have a character data type. A single character has a string with a length of 1. </p>
+
+
+
+<p>So, square brackets have the <a href="https://www.skillvertex.com/blog/which-one-is-not-an-element-of-iot/" data-type="post" data-id="3089">elements </a>of the string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># String as an array example
+my_string = "Hello, Python!"
+
+# Accessing individual characters using indexing
+first_char = my_string&#91;0]
+second_char = my_string&#91;1]
+
+# Output the characters
+print("First Character:", first_char)
+print("Second Character:", second_char)
+
+# Iterating through the string as if it's an array
+print("Iterating through the string:")
+for char in my_string:
+    print(char)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>First Character: H
+Second Character: e
+Iterating through the string:
+H
+e
+l
+l
+o
+,
+ 
+P
+y
+t
+h
+o
+n
+!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="looping-through-a-string">Looping Through a String</h2>
+
+
+
+<p>Strings are arrays that will help to loop through the<a href="https://www.skillvertex.com/blog/character-arithmetic-in-c-and-c/" data-type="post" data-id="1876"> characters </a>in the string and with a for <a href="https://www.skillvertex.com/blog/python-while-loop/" data-type="post" data-id="7236">loop</a>.</p>
+
+
+
+<pre class="wp-block-code"><code># Looping through a string example
+my_string = "Hello, Python!"
+
+# Iterating through the string using a for loop
+print("Iterating through the string:")
+for char in my_string:
+    print(char)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Iterating through the string:
+H
+e
+l
+l
+o
+,
+ 
+P
+y
+t
+h
+o
+n
+!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-string-length-in-python">What is String Length in Python?</h2>
+
+
+
+<p>In Python, the <a href="https://www.skillvertex.com/blog/how-to-find-length-of-string-in-java-python-cpp-javascript-sql-shell-script-mysql-oracle-and-perl/" data-type="post" data-id="452">length of the string</a> can be evaluated using the <strong>len()</strong> function.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># String length example
+my_string = "Hello, Python!"
+
+# Get the length of the string
+length_of_string = len(my_string)
+
+# Output the length of the string
+print("Length of the String:", length_of_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Length of the String: 14
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="check-string">Check String</h2>
+
+
+
+<p>Python allows you to check a certain phase or character in the string. Hence, it uses the<a href="https://www.skillvertex.com/blog/python-keyword-arguments/" data-type="post" data-id="7283"> keyword</a> &#8216;<strong>in</strong>&#8216;</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># String checking example
+my_string = "Hello, Python!"
+
+# Check if the string contains a specific substring
+substring_to_check = "Python"
+if substring_to_check in my_string:
+    print(f"The string '{my_string}' contains the substring '{substring_to_check}'.")
+else:
+    print(f"The string '{my_string}' does not contain the substring '{substring_to_check}'.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The string 'Hello, Python!' contains the substring 'Python'.
+</code></pre>
+
+
+
+<p>Using the if statement in the above code.</p>
+
+
+
+<pre class="wp-block-code"><code># String checking with if statement example
+my_string = "Hello, Python!"
+
+# Check if the string contains a specific substring using if statement
+substring_to_check = "Python"
+if substring_to_check in my_string:
+    print(f"The string '{my_string}' contains the substring '{substring_to_check}'.")
+else:
+    print(f"The string '{my_string}' does not contain the substring '{substring_to_check}'.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The string 'Hello, Python!' contains the substring 'Python'.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-check-if-not-in-python">What is Check if NOT in Python?</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/data-science-libraries-in-python/" data-type="post" data-id="4685">Python </a>allows you to find if a certain phrase or character doesn&#8217;t exist in the string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># String checking with 'not in' example
+my_string = "Hello, Python!"
+
+# Check if the string does not contain a specific substring using 'not in'
+substring_to_check = "Java"
+if substring_to_check not in my_string:
+    print(f"The string '{my_string}' does not contain the substring '{substring_to_check}'.")
+else:
+    print(f"The string '{my_string}' contains the substring '{substring_to_check}'.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The string 'Hello, Python!' does not contain the substring 'Java'.
+</code></pre>
+
+
+
+<p>Let us look at this example using the<a href="https://www.skillvertex.com/blog/python-if-statement/" data-type="post" data-id="7145"> if statement.</a></p>
+
+
+
+<pre class="wp-block-code"><code># String checking with if statement example
+my_string = "Hello, Python!"
+
+# Check if the string does not contain a specific substring using if statement
+substring_to_check = "Java"
+if substring_to_check not in my_string:
+    print(f"The string '{my_string}' does not contain the substring '{substring_to_check}'.")
+else:
+    print(f"The string '{my_string}' contains the substring '{substring_to_check}'.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The string 'Hello, Python!' does not contain the substring 'Java'.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, string operations are crucial for effective text manipulation in Python. These skills serve as a foundation for more advanced programming concepts and are valuable for several <a href="https://www.skillvertex.com/blog/data-science-applications/" data-type="post" data-id="6199">applications</a>. </p>
+
+
+
+<h2 class="wp-block-heading" id="python-string-fa-qs">Python String- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1709205461489" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.What is a string in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A string in Python consists of a sequence of characters.</p>
+
+</div>
+</div>
+<div id="faq-question-1709205470139" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is to string in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The tostring() refers to a method that will turn other data types into the string.</p>
+
+</div>
+</div>
+<div id="faq-question-1709205477301" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What does __ str __ do in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The __str__() method will return the human-readable or informal string representation of an object.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-string/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python Built-in Functions</title>
+		<link>https://www.skillvertex.com/blog/python-built-in-functions/</link>
+					<comments>https://www.skillvertex.com/blog/python-built-in-functions/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:49:12 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[functions]]></category>
+		<category><![CDATA[programming language]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[python built in functions]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7464</guid>
+
+					<description><![CDATA[The Python built-in -functions are referred to as the functions where the functionality is pre-defined in Python. Whereas, the Python interpreter consists of several functions that will be available for use. So, these functions are known as Python Built-in Functions. Let us check out this article to learn more about Python Built-in Functions. What is ... <a title="Python Built-in Functions" class="read-more" href="https://www.skillvertex.com/blog/python-built-in-functions/" aria-label="More on Python Built-in Functions">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-python-abs-function">What is Python abs() Function?</a></li><li ><a href="#what-is-python-all-function">What is Python all() Function?</a></li><li ><a href="#what-is-the-python-bin-function">What is the Python bin() Function?</a></li><li ><a href="#what-is-python-bool">What is Python Bool()</a></li><li ><a href="#what-is-python-bytes">What is Python bytes()?</a></li><li ><a href="#what-is-the-python-callable-function">What is the Python callable () Function?</a></li><li ><a href="#what-is-the-python-compile-function">What is the Python compile() Function?</a></li><li ><a href="#what-is-the-python-exec-function">What is the Python exec() Function?</a></li><li ><a href="#what-is-the-python-sum-function">What is the Python sum() Function?</a></li><li ><a href="#what-is-python-any-function">What is Python any() Function?</a></li><li ><a href="#what-is-python-ascii-function">What is  Python ASCII () Function?</a></li><li ><a href="#what-is-python-byte-array">What is Python byte array()?</a></li><li ><a href="#what-is-python-eval-function">What is Python eval() Function?</a></li><li ><a href="#what-is-python-float">What is Python float()?</a></li><li ><a href="#what-is-python-format-function">What is Python Format() Function?</a></li><li ><a href="#what-is-python-frozenset">What is Python Frozenset()?</a></li><li ><a href="#what-is-the-python-getattr-function">What is the Python getattr() Function?</a></li><li ><a href="#what-is-the-python-global-function">What is the Python global() Function?</a></li><li ><a href="#what-is-python-hasattr-function">What is Python hasattr() Function?</a></li><li ><a href="#python-iter-function">Python iter() Function?</a></li><li ><a href="#what-is-the-python-len-function">What is the Python len() Function?</a></li><li ><a href="#what-is-python-list">What is Python list() ?</a></li><li ><a href="#what-is-python-local-function">What is Python local() Function?</a></li><li ><a href="#what-is-a-python-map-function">What is a Python map() Function?</a></li><li ><a href="#what-is-the-python-memory-view-function">What is the Python memory view() Function?</a></li><li ><a href="#what-is-a-python-object">What is a Python object()?</a></li><li ><a href="#what-is-the-python-open-function">What is the Python open() Function?</a></li><li ><a href="#what-is-python-chr-function">What is Python chr() Function?</a></li><li ><a href="#what-is-the-python-complex-function">What is the Python complex () function?</a></li><li ><a href="#what-is-the-python-delattr-function">What is the Python delattr () Function?</a></li><li ><a href="#what-is-the-python-dir-function">What is the Python dir() Function?</a></li><li ><a href="#what-is-the-python-divmod-function">What is the Python divmod () Function?</a></li><li ><a href="#what-is-the-python-enumerate-function">What is the Python enumerate () Function?</a></li><li ><a href="#what-is-python-dict">What is Python dict?</a></li><li ><a href="#what-is-the-python-filter-function">What is the Python filter() Function?</a></li><li ><a href="#what-is-a-python-hash-function">What is a Python hash() Function?</a></li><li ><a href="#what-is-the-python-help-function">What is the Python help() Function?</a></li><li ><a href="#what-is-python-min-function">What is Python min() Function?</a></li><li ><a href="#what-is-the-python-set-function">What is the Python set () Function?</a></li><li ><a href="#what-is-a-python-hex-function">What is a Python hex() Function?</a></li><li ><a href="#what-is-python-id-function">What is Python id() Function?</a></li><li ><a href="#what-is-the-python-setattr-function">What is the Python setattr () Function?</a></li><li ><a href="#what-is-pythons-next-function">What is Python&#8217;s next() Function?</a></li><li ><a href="#what-is-the-python-input-function">What is the Python input() Function?</a></li><li ><a href="#what-is-python-int-function">What is Python int() Function?</a></li><li ><a href="#what-is-a-python-isinstance-function">What is a Python isinstance () Function?</a></li><li ><a href="#what-is-python-oct-function">What is Python oct() Function?</a></li><li ><a href="#what-is-the-python-ord-function">What is the Python ord() Function?</a></li><li ><a href="#what-is-the-python-pow-function">What is the Python Pow () Function?</a></li><li ><a href="#what-is-the-python-print-function">What is the Python  Print () Function?</a></li><li ><a href="#what-is-the-python-range-function">What is the Python range () Function?</a></li><li ><a href="#what-is-the-python-reversed-function">What is the Python reversed() Function?</a></li><li ><a href="#what-is-a-python-round-function">What is a Python round Function?</a></li><li ><a href="#what-is-python-issubclass-function">What is Python issubclass () Function?</a></li><li ><a href="#what-is-python-str">What is Python str?</a></li><li ><a href="#what-is-the-python-tuple-function">What is the Python tuple() Function?</a></li><li ><a href="#what-is-python-type-function">What is Python type() Function?</a></li><li ><a href="#what-is-the-python-vars-function">What is the  Python vars() Function?</a></li><li ><a href="#what-is-the-python-zip-function">What is the Python zip() Function?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-built-in-functions-faq">Python Built-in Functions -FAQ</a></li></ul></nav></div>
+
+
+
+<p>The Python built-in -functions are referred to as the functions where the functionality is pre-defined in<a href="https://www.skillvertex.com/blog/which-of-the-following-is-a-bad-python-variable-name/" data-type="post" data-id="2650"> Python. </a>Whereas, the <a href="https://www.skillvertex.com/blog/how-does-a-python-interpreter-works/" data-type="post" data-id="6895">Python interpreter </a>consists of several functions that will be available for use.  So, these functions are known as Python Built-in Functions. Let us check out this article to learn more about Python Built-in Functions.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-abs-function">What is Python abs() Function?</h2>
+
+
+
+<p>The Python <strong>abs() </strong> function will return the value of a number. Thus, it will take only one argument,  a number where the <a href="https://www.skillvertex.com/blog/how-to-pass-an-array-by-value-in-c/" data-type="post" data-id="2638">value </a>will be returned. This<a href="https://www.skillvertex.com/blog/python-positional-arguments/" data-type="post" data-id="7296"> argument</a> can either be an <a href="https://www.skillvertex.com/blog/integer-promotions-in-c/" data-type="post" data-id="1968">integer</a> or a<a href="https://www.skillvertex.com/blog/python-numbers/" data-type="post" data-id="7023"> floating-point number.</a>  Suppose, if the argument is a complex number, thus, abs() will return their magnitude.</p>
+
+
+
+<h4 class="wp-block-heading"> Example</h4>
+
+
+
+<pre class="wp-block-code"><code># Example using abs() function
+number = -10
+absolute_value = abs(number)
+
+# Output
+print(f"The absolute value of {number} is: {absolute_value}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The absolute value of -10 is: 10
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-all-function">What is Python all() Function?</h2>
+
+
+
+<p>The Python <strong>all() </strong>function will accept the iterable object that includes list, and dictionary. Hence, it will return all items when the iterable is<a href="https://www.skillvertex.com/blog/python-booleans/" data-type="post" data-id="7030"> true</a>. But, if it comes false. So, the iterable <a href="https://www.skillvertex.com/blog/which-is-not-an-ado-net-dataadapter-object/" data-type="post" data-id="2225">object w</a>ill become empty and all()  <a href="https://www.skillvertex.com/blog/python-functions/" data-type="post" data-id="7272">functions</a> will be true.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using all() function
+numbers = &#91;2, 4, 6, 8, 10]
+
+# Check if all numbers are even
+are_all_even = all(num % 2 == 0 for num in numbers)
+
+# Output
+print(f"Are all numbers even? {are_all_even}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>
+Are all numbers even? True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-bin-function">What is the Python bin() Function?</h2>
+
+
+
+<p>The Python <strong>bin()</strong> function will operate to return the<a href="https://www.skillvertex.com/blog/difference-between-binary-search-and-linear-search/" data-type="post" data-id="520"> binary</a> representation of a specified integer. So, the<a href="https://www.skillvertex.com/blog/what-will-be-the-output-of-the-following-program/" data-type="post" data-id="3081"> output</a> will begin with the prefix Ob.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using bin() function
+decimal_number = 10
+
+# Convert decimal_number to binary
+binary_representation = bin(decimal_number)
+
+# Output
+print(f"The binary representation of {decimal_number} is: {binary_representation}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The binary representation of 10 is: 0b1010
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-bool">What is Python Bool()</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-booleans/" data-type="post" data-id="7030">Python</a> <strong>bool() </strong> will function to convert the value into a boolean such as True or False with the standard truth testing procedure.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using bool() function
+value_1 = 42
+value_2 = 0
+
+# Convert values to boolean
+bool_value_1 = bool(value_1)
+bool_value_2 = bool(value_2)
+
+# Output
+print(f"Boolean value of {value_1}: {bool_value_1}")
+print(f"Boolean value of {value_2}: {bool_value_2}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Boolean value of 42: True
+Boolean value of 0: False
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-bytes">What is Python bytes()?</h2>
+
+
+
+<p>The Python <strong>bytes()</strong> work to return the bytes object. It is considered an immutable version of the <a href="https://www.skillvertex.com/blog/pointer-vs-array-in-c/" data-type="post" data-id="2733">byte array()</a> function.  Thus, it can make the empty bytes object in the required size.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using bytes() function
+byte_values = &#91;65, 66, 67, 68]  # ASCII values for 'A', 'B', 'C', 'D'
+
+# Create a bytes object from list of integers
+byte_sequence = bytes(byte_values)
+
+# Output
+print(f"Bytes object: {byte_sequence}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Bytes object: b'ABCD'
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-callable-function">What is the Python callable () Function?</h2>
+
+
+
+<p>This Python <strong>callable ()</strong> method will take only one argument, an object, and then return one of the two values. Whereas, if the output is true then the object will become callable.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using callable() function with x = 4
+def example_function():
+    print("Hello, from the example function!")
+
+class ExampleClass:
+    def __call__(self):
+        print("Hello, from the __call__ method of ExampleClass!")
+
+# Create an instance of ExampleClass
+example_instance = ExampleClass()
+
+# Check if objects are callable
+x = 4  # Setting x to 4
+is_function_callable = callable(example_function)
+is_instance_callable = callable(example_instance)
+
+# Output
+print(f"Is example_function callable with x = {x}? {is_function_callable}")
+print(f"Is example_instance callable with x = {x}? {is_instance_callable}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Is example_function callable with x = 4? True
+Is example_instance callable with x = 4? True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-compile-function">What is the Python compile() Function?</h2>
+
+
+
+<p>The Python<strong> compile () </strong> function will use the <a href="https://www.skillvertex.com/blog/which-is-not-part-of-code-technical-review-in-sonarqube/" data-type="post" data-id="2815">source code </a>as the input and then return the code object. Then, it will be run by the exec() function.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+# Example using compile() function with x = 4
+x = 4
+source_code = f"result = x * 2; print('Result:', result)"
+
+# Compile the source code
+compiled_code = compile(source_code, filename="&lt;string&gt;", mode="exec")
+
+# Execute the compiled code
+exec(compiled_code)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Result: 8</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-exec-function">What is the Python exec() Function?</h2>
+
+
+
+<p>The Python <strong>exec () </strong>will work for the dynamic execution of the Python program and will be either a <a href="https://www.skillvertex.com/blog/array-of-strings-in-c/" data-type="post" data-id="2641">string o</a>r an object. Thus, it will accept large blocks of code .</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using exec() function
+python_code = """
+x = 4
+result = x * 3
+print(f"The result of x * 3 is: {result}")
+"""
+
+# Execute the Python code
+exec(python_code)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The result of x * 3 is: 12
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-sum-function">What is the Python sum() Function?</h2>
+
+
+
+<p>In Python <strong>sum()</strong> function will enable us to <a href="https://www.skillvertex.com/blog/python-arithmetic-operators/" data-type="post" data-id="6958">add</a> all the numbers in the list.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using sum() function
+numbers = &#91;1, 2, 3, 4, 5]
+
+# Calculate the sum of numbers in the list
+result_sum = sum(numbers)
+
+# Output
+print(f"The sum of numbers in the list is: {result_sum}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The sum of numbers in the list is: 15
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-any-function">What is Python any() Function?</h2>
+
+
+
+<p>The Python<strong> any() </strong>Function will give the output as true if either the iterable comes true. In other cases, it will come False.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using any() function with I as 2, 4, 8
+I = &#91;2, 4, 8]
+
+# Check if any value in the list is true
+is_any_true = any(I)
+
+# Output
+print(f"Is there any true value in the list? {is_any_true}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Is there any true value in the list? True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-ascii-function">What is  Python ASCII () Function?</h2>
+
+
+
+<p>The Python<strong> ASCII </strong>() function will return the string and has the printable representation of the object. However, it will ignore the <a href="https://www.skillvertex.com/blog/character-arithmetic-in-c-and-c/" data-type="post" data-id="1876">non-ASCII characters</a> in the string with the \x, \u, or \U escapes.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using ascii() function
+character = '€'
+
+# Get the ASCII representation of the character
+ascii_representation = ascii(character)
+
+# Output
+print(f"The ASCII representation of '{character}' is: {ascii_representation}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The ASCII representation of '€' is: '\u20ac'
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-byte-array">What is Python byte array()?</h2>
+
+
+
+<p>The Python <strong>byte array(</strong>) will return the <a href="https://www.skillvertex.com/blog/how-arrays-are-passed-to-functions-in-c-c/" data-type="post" data-id="2612">byte array </a>output and then turn the objects into the byte array objects.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using bytearray() function
+string_data = "Hello, Bytearray!"
+
+# Convert a string to a bytearray
+byte_array_data = bytearray(string_data, 'utf-8')
+
+# Output
+print(f"The original string: {string_data}")
+print(f"The bytearray representation: {byte_array_data}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The original string: Hello, Bytearray!
+The bytearray representation: bytearray(b'Hello, Bytearray!')
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-eval-function">What is Python eval() Function?</h2>
+
+
+
+<p>The Python<strong> eval()</strong>  function will rephrase the <a href="https://www.skillvertex.com/blog/which-of-the-following-is-a-legal-expression-in-sql/" data-type="post" data-id="1856">expression</a> that is passed on to it and then it will execute the Python code in the Program</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using eval() function
+expression = "2 + 3 * 4"
+
+# Evaluate the expression using eval()
+result = eval(expression)
+
+# Output
+print(f"The result of the expression '{expression}' is: {result}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The result of the expression '2 + 3 * 4' is: 14</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-float">What is Python float()?</h2>
+
+
+
+<p>The Python <strong>float()</strong> function will return the floating-point number from a number or string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using float() function
+number_str = "7.5"
+
+# Convert the string to a float
+float_value = float(number_str)
+
+# Output
+print(f"The float representation of '{number_str}' is: {float_value}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The float representation of '7.5' is: 7.5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-format-function">What is Python Format() Function?</h2>
+
+
+
+<p>The Python F<strong>ormat () </strong>function will help us to return the formatted representation of the provided value.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using format() function
+name = "Alice"
+age = 25
+
+# Format a string with variables
+formatted_string = "My name is {} and I am {} years old.".format(name, age)
+
+# Output
+print(formatted_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>My name is Alice and I am 25 years old.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-frozenset">What is Python Frozenset()?</h2>
+
+
+
+<p>The Python<strong> frozenset() </strong>function will allow us to return the immutable frozen set object that will be initialized with the elements from the given iterable.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using frozenset() function
+set_values = {1, 2, 3, 4, 5}
+
+# Create a frozenset from a set
+frozen_set = frozenset(set_values)
+
+# Output
+print(f"The original set: {set_values}")
+print(f"The frozenset representation: {frozen_set}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The original set: {1, 2, 3, 4, 5}
+The frozenset representation: frozenset({1, 2, 3, 4, 5})
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-getattr-function">What is the Python getattr() Function?</h2>
+
+
+
+<p>The Python <strong>getattr()  </strong>will return the value of the named attribute of an object. Hence, if it is not found, then it will return with the default value.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using getattr() function
+class MyClass:
+    age = 25
+
+# Create an instance of MyClass
+obj = MyClass()
+
+# Use getattr() to get the value of the 'age' attribute
+attribute_value = getattr(obj, 'age', 'default_value')
+
+# Output
+print(f"The value of 'age' attribute is: {attribute_value}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The value of 'age' attribute is: 25
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-global-function">What is the Python global() Function?</h2>
+
+
+
+<p>The Python <strong>globals()</strong> function will operate to return the dictionary of the current global symbol table. The symbol table will be defined as the data structure, and have the required information regarding the program. Thus, it will have the variable names, methods, and classes. </p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using globals() function
+global_variable = "I am a global variable"
+
+def print_global_variable():
+    # Access global variable using globals()
+    global_variable_value = globals()&#91;'global_variable']
+    print(f"Inside the function: {global_variable_value}")
+
+# Call the function
+print_global_variable()
+
+# Access global variable directly
+direct_global_variable = globals()&#91;'global_variable']
+print(f"Outside the function: {direct_global_variable}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Inside the function: I am a global variable
+Outside the function: I am a global variable
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-hasattr-function">What is Python hasattr() Function?</h2>
+
+
+
+<p>This function will return the true value only if any of the items is true, otherwise it will be false.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using hasattr() function
+class MyClass:
+    name = "John"
+    age = 25
+
+# Create an instance of MyClass
+obj = MyClass()
+
+# Check if the attribute 'name' exists in the object
+has_name_attribute = hasattr(obj, 'name')
+has_height_attribute = hasattr(obj, 'height')
+
+# Output
+print(f"Does the object have 'name' attribute? {has_name_attribute}")
+print(f"Does the object have 'height' attribute? {has_height_attribute}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Does the object have 'name' attribute? True
+Does the object have 'height' attribute? False
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="python-iter-function">Python iter() Function?</h2>
+
+
+
+<p>The Python<strong> iter()</strong> Function will work to return the iterator object. Thus, it will make the object to /iterate one element at a time.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using iter() function
+numbers = &#91;1, 2, 3, 4, 5]
+
+# Create an iterator object from the list
+iterator = iter(numbers)
+
+# Output
+print("Using iterator to iterate through the list:")
+for num in iterator:
+    print(num)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Using iterator to iterate through the list:
+1
+2
+3
+4
+5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-len-function">What is the Python len() Function?</h2>
+
+
+
+<p>The Python<strong> len()</strong> function will work to return the length of the object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using len() function
+string_example = "Hello, Python!"
+list_example = &#91;1, 2, 3, 4, 5]
+
+# Get the length of the string
+string_length = len(string_example)
+
+# Get the length of the list
+list_length = len(list_example)
+
+# Output
+print(f"The length of the string is: {string_length}")
+print(f"The length of the list is: {list_length}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The length of the string is: 13
+The length of the list is: 5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-list">What is Python list() ?</h2>
+
+
+
+<p>The Python <strong>list() </strong>will make a list in Python.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using list() function
+string_example = "Python"
+tuple_example = (1, 2, 3, 4, 5)
+
+# Convert a string to a list
+string_as_list = list(string_example)
+
+# Convert a tuple to a list
+tuple_as_list = list(tuple_example)
+
+# Output
+print(f"Original string: {string_example}")
+print(f"String as a list: {string_as_list}")
+
+print(f"\nOriginal tuple: {tuple_example}")
+print(f"Tuple as a list: {tuple_as_list}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original string: Python
+String as a list: &#91;'P', 'y', 't', 'h', 'o', 'n']
+
+Original tuple: (1, 2, 3, 4, 5)
+Tuple as a list: &#91;1, 2, 3, 4, 5]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-local-function">What is Python local() Function?</h2>
+
+
+
+<p>The Python <strong>local() </strong>method will contain the update and then will return with the dictionary of the current local symbol table. </p>
+
+
+
+<p>The symbol table is referred to as a data structure with the necessary information about the program. Additionally, it has variable names, methods, and classes.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example demonstrating local variables and functions
+def outer_function():
+    outer_variable = "I am a local variable"
+
+    def inner_function():
+        inner_variable = "I am also a local variable"
+        print(f"Inside inner_function: {inner_variable}")
+        print(f"Inside inner_function accessing outer_variable: {outer_variable}")
+
+    inner_function()
+
+    # Uncommenting the line below will result in an error, as inner_variable is local to inner_function
+    # print(f"Outside inner_function accessing inner_variable: {inner_variable}")
+
+    print(f"Outside inner_function: {outer_variable}")
+
+# Uncommenting the line below will result in an error, as outer_variable is local to outer_function
+# print(f"Outside outer_function: {outer_variable}")
+
+outer_function()
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Inside inner_function: I am also a local variable
+Inside inner_function accessing outer_variable: I am a local variable
+Outside inner_function: I am a local variable
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-map-function">What is a Python map() Function?</h2>
+
+
+
+<p>The Python <strong>map() </strong>function will return the list of results after providing the given function to every item of the iterable.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using map() function
+numbers = &#91;1, 2, 3, 4, 5]
+
+# Define a function to square a number
+def square(x):
+    return x ** 2
+
+# Use map() to apply the square function to each element in the list
+squared_numbers = map(square, numbers)
+
+# Output
+print(f"Original numbers: {numbers}")
+print(f"Squared numbers: {list(squared_numbers)}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original numbers: &#91;1, 2, 3, 4, 5]
+Squared numbers: &#91;1, 4, 9, 16, 25]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-memory-view-function">What is the Python memory view() Function?</h2>
+
+
+
+<p>The Python <strong>memory view()</strong> function will return the memory view of the given argument.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using memoryview() function
+byte_array = bytearray(b"Hello, Memory View!")
+
+# Create a memory view object
+memory_view = memoryview(byte_array)
+
+# Output
+print(f"Original byte array: {byte_array}")
+print(f"Memory view object: {memory_view}")
+print(f"Characters in memory view: {list(memory_view)}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original byte array: bytearray(b'Hello, Memory View!')
+Memory view object: &lt;memory at ...&gt;
+Characters in memory view: &#91;72, 101, 108, 108, 111, 44, 32, 77, 101, 109, 111, 114, 121, 32, 86, 105, 101, 119, 33]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-object">What is a Python object()?</h2>
+
+
+
+<p>The Python <strong>object() </strong>will return the empty object. Hence, it will act as a base for the classes and carry the built-in properties and the methods that have a default for all the classes.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using object() function
+new_object = object()
+
+# Output
+print(f"Type of new_object: {type(new_object)}")
+print(f"String representation of new_object: {new_object}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Type of new_object: &lt;class 'object'&gt;
+String representation of new_object: &lt;object object at 0x...&gt;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-open-function">What is the Python open() Function?</h2>
+
+
+
+<p>The Python <strong>open() </strong>Function will function to open the file and will return the corresponding file object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using open() function
+file_path = "example.txt"
+
+# Writing to a file
+with open(file_path, "w") as file:
+    file.write("Hello, Python!")
+
+# Reading from the file
+with open(file_path, "r") as file:
+    content = file.read()
+
+# Output
+print(f"Content of the file '{file_path}': {content}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Content of the file 'example.txt': Hello, Python!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-chr-function">What is Python chr() Function?</h2>
+
+
+
+<p>The Python <strong>chr() </strong>Function will operate to get the string that will indicate a character and that contains the Unicode code integer. The function will include the integer argument and will show the error if it goes beyond the specified range.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using chr() function with multiple ASCII codes
+ascii_codes = &#91;65, 97, 49, 120]  # ASCII codes for 'A', 'a', '1', 'x'
+
+# Convert ASCII codes to characters
+characters = &#91;chr(code) for code in ascii_codes]
+
+# Output
+for code, char in zip(ascii_codes, characters):
+    print(f"The character corresponding to ASCII code {code} is: {char}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The character corresponding to ASCII code 65 is: A
+The character corresponding to ASCII code 97 is: a
+The character corresponding to ASCII code 49 is: 1
+The character corresponding to ASCII code 120 is: x
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-complex-function">What is the Python complex () function?</h2>
+
+
+
+<p>The Python <strong>complex() </strong>function will convert the numbers or strings into the complex number. Hence, this method will have two optional parameters and will return with the complex numbers</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using complex() function
+real_part = 2.5
+imaginary_part = -1
+
+# Create a complex number
+complex_number = complex(real_part, imaginary_part)
+
+# Output
+print(f"The complex number is: {complex_number}")
+print(f"Real part: {complex_number.real}")
+print(f"Imaginary part: {complex_number.imag}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The complex number is: (2.5-1j)
+Real part: 2.5
+Imaginary part: -1.0
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-delattr-function">What is the Python delattr () Function?</h2>
+
+
+
+<p>The Python <strong>delattr() </strong>function will delete the attribute from the class. Thus, it will take the two parameters. Initially, it will have an object of the class and secondly, it will have the attribute which is needed to be deleted. Thus, after deleting the attribute, it won&#8217;t be part of the class and will show an error if it has a class object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using delattr() function
+class Person:
+    name = "Alice"
+    age = 25
+
+# Create an instance of the Person class
+person = Person()
+
+# Output before using delattr()
+print(f"Before using delattr(): {person.__dict__}")
+
+# Delete the 'age' attribute using delattr()
+delattr(person, 'age')
+
+# Output after using delattr()
+print(f"After using delattr(): {person.__dict__}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Before using delattr(): {'name': 'Alice', 'age': 25}
+After using delattr(): {'name': 'Alice'}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-dir-function">What is the Python dir() Function?</h2>
+
+
+
+<p>The<strong> dir() </strong>function in Python gives you a list of attributes (like variables or methods) that an object has. If an object has a special method called __dir__(), Python will use it to get the list of attributes.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>class CustomObject:
+    def __dir__(self):
+        # Custom method to specify attributes
+        return &#91;'custom_attr1', 'custom_attr2']
+
+# Create an instance of CustomObject
+custom_obj = CustomObject()
+
+# Use dir() to get the list of attributes
+attributes = dir(custom_obj)
+
+# Output
+print(f"List of attributes using dir(): {attributes}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>List of attributes using dir(): &#91;'__class__', '__delattr__', '__dict__', '__dir__', '__doc__',
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-divmod-function">What is the Python divmod () Function?</h2>
+
+
+
+<p>The Python <strong>divmod()</strong> function will return with the remainder and the quotient of the two numbers. So, the function will have the two numeric arguments and will get the output as a tuple.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using divmod() function
+dividend = 20
+divisor = 3
+
+# Get the quotient and remainder using divmod()
+quotient, remainder = divmod(dividend, divisor)
+
+# Output
+print(f"Dividend: {dividend}")
+print(f"Divisor: {divisor}")
+print(f"Quotient and remainder: {quotient}, {remainder}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Dividend: 20
+Divisor: 3
+Quotient and remainder: 6, 2
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-enumerate-function">What is the Python enumerate () Function?</h2>
+
+
+
+<p>The Python<strong> enumerate()</strong> function will return with the enumerated object. Hence, it has two parameters initially, the sequence of elements, and the second consists of the start index of the sequence. So, the elements in the sequence will either be through the loop or the next() method. </p>
+
+
+
+<pre class="wp-block-code"><code># Example using enumerate() function
+fruits = &#91;'apple', 'banana', 'orange', 'grape']
+
+# Enumerate the list of fruits starting from index 1
+enumerated_fruits = enumerate(fruits, start=1)
+
+# Output using a loop
+print("Enumerated fruits using a loop:")
+for index, fruit in enumerated_fruits:
+    print(f"Index {index}: {fruit}")
+
+# Output using list comprehension
+enumerated_fruits = enumerate(fruits, start=1)  # Resetting for list comprehension
+list_output = &#91;(index, fruit) for index, fruit in enumerated_fruits]
+print("\nEnumerated fruits using list comprehension:")
+print(list_output)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enumerated fruits using a loop:
+Index 1: apple
+Index 2: banana
+Index 3: orange
+Index 4: grape
+
+Enumerated fruits using list comprehension:
+&#91;(1, 'apple'), (2, 'banana'), (3, 'orange'), (4, 'grape')]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-dict">What is Python dict?</h2>
+
+
+
+<p>Python<strong> dict ()</strong>acts as a constructor and will make the dictionary.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using dict
+student = {
+    'name': 'Alice',
+    'age': 18,
+    'grade': 'A',
+    'subjects': &#91;'Math', 'Science', 'English']
+}
+
+# Output
+print("Student Information:")
+print(f"Name: {student&#91;'name']}")
+print(f"Age: {student&#91;'age']}")
+print(f"Grade: {student&#91;'grade']}")
+print(f"Subjects: {', '.join(student&#91;'subjects'])}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Student Information:
+Name: Alice
+Age: 18
+Grade: A
+Subjects: Math, Science, English
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-filter-function">What is the Python filter() Function?</h2>
+
+
+
+<p>The <strong>filter()</strong> function in Python helps us pick specific elements from a group of items. It needs two things to work: a rule (function) and a bunch of things to filter (iterable, like a list). The function checks each item and keeps only the ones that follow the rule.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using filter() function
+def is_even(num):
+    return num % 2 == 0
+
+numbers = &#91;1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Use filter() to get even numbers
+even_numbers = filter(is_even, numbers)
+
+# Output
+print("Original numbers:", numbers)
+print("Filtered even numbers:", list(even_numbers))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original numbers: &#91;1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Filtered even numbers: &#91;2, 4, 6, 8, 10]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-hash-function">What is a Python hash() Function?</h2>
+
+
+
+<p>The Python <strong>hash()</strong> function will return the value of an object. Hence, this Python will evaluate the hash value with the hash algorithm. So, the hash values are the integers and will function to compare the dictionary keys during the dictionary lookup. </p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using hash() function
+string_value = "Hello, Python!"
+integer_value = 42
+float_value = 3.14
+
+# Get the hash values
+hash_string = hash(string_value)
+hash_integer = hash(integer_value)
+hash_float = hash(float_value)
+
+# Output
+print(f"The original string: {string_value}")
+print(f"The hash value for the string: {hash_string}")
+
+print(f"\nThe original integer: {integer_value}")
+print(f"The hash value for the integer: {hash_integer}")
+
+print(f"\nThe original float: {float_value}")
+print(f"The hash value for the float: {hash_float}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The original string: Hello, Python!
+The hash value for the string: -9077442383218711455
+
+The original integer: 42
+The hash value for the integer: 42
+
+The original float: 3.14
+The hash value for the float: 1152921504606846979
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-help-function">What is the Python help() Function?</h2>
+
+
+
+<p>The Python <strong>help() </strong>function will work to get help from the related object and will be passed on during the call. However, it will need an optional parameter for returning the help information. Whereas, if there is no help provided, then the  Python help console will be displayed. </p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example function
+def greet(name):
+    """
+    This function greets the person with the given name.
+
+    Parameters:
+    name (str): The name of the person to greet.
+
+    Returns:
+    str: A greeting message.
+    """
+    return f"Hello, {name}! Welcome!"
+
+# Using the help function to get information about the greet function
+help(greet)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Help on function greet in module __main__:
+
+greet(name)
+    This function greets the person with the given name.
+
+    Parameters:
+    name (str): The name of the person to greet.
+
+    Returns:
+    str: A greeting message.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-min-function">What is Python min() Function?</h2>
+
+
+
+<p>The Python<strong> min()  </strong>will function to receive the smallest element from the elements. Hence, it takes two arguments. Thus, the first consists of the elements that are grouped and the second has a key in it.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using min() function
+numbers = &#91;5, 3, 8, 2, 7]
+
+# Using min() to find the minimum value in the list
+minimum_value = min(numbers)
+
+# Displaying the result
+print("List of numbers:", numbers)
+print("Minimum value:", minimum_value)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>List of numbers: &#91;5, 3, 8, 2, 7]
+Minimum value: 2
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-set-function">What is the Python set () Function?</h2>
+
+
+
+<p>The<strong> set ()</strong> function is referred to as the built-in class and hence, this function consists of the constructor of this class. So, it will make a new set with the elements that are passed during the call. Hence, it will take an iterable object which will act as an argument and then return as a new set object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using set() function
+fruits_list = &#91;'apple', 'orange', 'banana', 'apple', 'kiwi']
+
+# Using set() to create a set from the list
+fruits_set = set(fruits_list)
+
+# Displaying the result
+print("List of fruits:", fruits_list)
+print("Set of fruits:", fruits_set)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>List of fruits: &#91;'apple', 'orange', 'banana', 'apple', 'kiwi']
+Set of fruits: {'orange', 'kiwi', 'apple', 'banana'}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-hex-function">What is a Python hex() Function?</h2>
+
+
+
+<p>The Python <strong>hex()</strong> function will function to create the hex value of the integer argument. So, it will take an integer argument and then return with the integer that will be turned into the hexadecimal string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using hex() function
+decimal_number = 255
+
+# Using hex() to convert the decimal number to hexadecimal
+hexadecimal_string = hex(decimal_number)
+
+# Displaying the result
+print("Decimal number:", decimal_number)
+print("Hexadecimal representation:", hexadecimal_string)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Decimal number: 255
+Hexadecimal representation: 0xff
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-id-function">What is Python id() Function?</h2>
+
+
+
+<p>The Python<strong> id()</strong> function will return with the identity of the object. This is referred to as a unique integer.  This function will take an argument as an object and will return the unique integer number that will stand for the identity. </p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using id() function
+value1 = 42
+value2 = "Hello, World!"
+
+# Displaying the identity of the objects
+print("Identity of value1:", id(value1))
+print("Identity of value2:", id(value2))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Identity of value1: 140710617731840
+Identity of value2: 140710603225904
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-setattr-function">What is the Python setattr () Function?</h2>
+
+
+
+<p>This Python <strong>set attr () </strong>will function to put a value to the object attribute. So, it will take three arguments such as object, string, and arbitrary value, and won&#8217;t return any.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using setattr() function
+class Person:
+    pass
+
+# Creating an instance of the Person class
+person_obj = Person()
+
+# Using setattr() to set attributes on the object
+setattr(person_obj, 'name', 'John Doe')
+setattr(person_obj, 'age', 30)
+
+# Displaying the attributes
+print("Person's name:", getattr(person_obj, 'name'))
+print("Person's age:", getattr(person_obj, 'age'))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Person's name: John Doe
+Person's age: 30
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-pythons-next-function">What is Python&#8217;s next() Function?</h2>
+
+
+
+<p>The Python <strong>next() </strong>function will get the next item from the collection. So, it has two arguments such as iterator and the default value . Thus, it will return the element.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using next() function
+numbers = iter(&#91;1, 2, 3, 4, 5])
+
+# Using next() to get the next item from the iterator
+next_number = next(numbers)
+
+# Displaying the result
+print("Next number:", next_number)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Next number: 1
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-input-function">What is the Python input() Function?</h2>
+
+
+
+<p>The Python<strong> input()</strong> function will get the input from the user. Hence, it will ask for the user&#8217;s input and then read the line. Hence, after reading the data, it will turn the string and will return it. It will detect <strong>EOFError </strong>when the EOF is read.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using input() function
+user_name = input("Enter your name: ")
+
+# Displaying the user input
+print("Hello, " + user_name + "! Welcome!")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter your name: John
+Hello, John! Welcome!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-int-function">What is Python int() Function?</h2>
+
+
+
+<p>Python <strong>int()</strong> function will receive an integer value. Thus, it will return with the expression which will be turned into the integer number. So, if the argument has a floating point and will be turned the number into the long type.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using int() function
+numeric_string = "42"
+
+# Using int() to convert the string to an integer
+numeric_value = int(numeric_string)
+
+# Displaying the result
+print("Original string:", numeric_string)
+print("Converted integer:", numeric_value)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original string: 42
+Converted integer: 42
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-isinstance-function">What is a Python isinstance () Function?</h2>
+
+
+
+<p>The Python <strong>isinstance()</strong> function will monitor if the object is an instance of the class. But, if the object is from the class and thus it will come true. Or else, it will come false. Additionally, it will return true when the class is a subclass.</p>
+
+
+
+<p>Whereas,  the isinstance will have two arguments such as object and class info.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using isinstance() function
+value = 42
+
+# Checking if the value is an instance of the int class
+is_int_instance = isinstance(value, int)
+
+# Displaying the result
+print("Value:", value)
+print("Is an instance of int:", is_int_instance)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Value: 42
+Is an instance of int: True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-oct-function">What is Python oct() Function?</h2>
+
+
+
+<p>The Python <strong>oct()  </strong>function will help to convert the octal value of the integer number. So, this method will take an argument and then return with the integer.  It will be turned into the octal string.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using oct() function
+decimal_number = 42
+
+# Using oct() to convert the decimal number to octal
+octal_representation = oct(decimal_number)
+
+# Displaying the result
+print("Decimal number:", decimal_number)
+print("Octal representation:", octal_representation)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Decimal number: 42
+Octal representation: 0o52
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-ord-function">What is the Python ord() Function?</h2>
+
+
+
+<p>The <strong>ord()</strong> function in Python helps to return the integer which will stand for the Unicode character.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using ord() function
+character = 'A'
+
+# Using ord() to get the Unicode code point of the character
+unicode_code_point = ord(character)
+
+# Displaying the result
+print("Character:", character)
+print("Unicode code point:", unicode_code_point)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Character: A
+Unicode code point: 65</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-pow-function">What is the Python Pow () Function?</h2>
+
+
+
+<p>The<strong> pow<code>()</code> </strong>function in Python helps us find the result when a number is raised to a power.</p>
+
+
+
+<pre class="wp-block-code"><code># Example using pow() function
+base = 2
+exponent = 3
+
+# Using pow() to find the result of 2 raised to the power of 3
+result = pow(base, exponent)
+
+# Displaying the result
+print(f"{base} to the power of {exponent} is: {result}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>
+2 to the power of 3 is: 8
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-print-function">What is the Python  Print () Function?</h2>
+
+
+
+<p>The Python<strong> print() </strong>will help to print the given object to the screen.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using print() function
+name = "John"
+age = 25
+
+# Using print() to display information
+print("Name:", name)
+print("Age:", age)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Name: John
+Age: 25
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-range-function">What is the Python range () Function?</h2>
+
+
+
+<p>The Python<strong> range()</strong> function will help to return the immutable sequence of the numbers which begin from 0 by default, that will added by 1 and terminated at the specified number.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using range() function
+# Generate a sequence of numbers from 0 to 4 (excluding 5)
+numbers_sequence = range(5)
+
+# Displaying the result
+print("Generated sequence:", list(numbers_sequence))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Generated sequence: &#91;0, 1, 2, 3, 4]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-reversed-function">What is the Python reversed() Function?</h2>
+
+
+
+<p>The <strong>reversed() </strong>function will help to return the reversed iterator of the given sequence.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using reversed() directly in a loop
+for num in reversed(&#91;1, 2, 3, 4, 5]):
+    print(num, end=' ')
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>5 4 3 2 1
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-round-function">What is a Python round Function?</h2>
+
+
+
+<p>The Python<strong> round()</strong> function will allow us to round off the digits of the number and will return the floating point number.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using round() function
+original_number = 3.14159
+
+# Using round() to round the number to 2 decimal places
+rounded_number = round(original_number, 2)
+
+# Displaying the result
+print("Original number:", original_number)
+print("Rounded number:", rounded_number)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original number: 3.14159
+Rounded number: 3.14
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-issubclass-function">What is Python issubclass () Function?</h2>
+
+
+
+<p>The Python<strong> issubclass () </strong>function will allow us to return true if the<a href="https://www.skillvertex.com/blog/keyword-only-argument-in-python/" data-type="post" data-id="7290"> object argument</a> is referred to as the subclass of the second class.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example with multiple inheritance
+class Mammal:
+    pass
+
+class Canine(Animal, Mammal):
+    pass
+
+# Checking if Canine is a subclass of both Animal and Mammal
+is_canine_subclass = issubclass(Canine, (Animal, Mammal))
+
+# Displaying the result
+print("Is Canine a subclass of Animal and Mammal?", is_canine_subclass)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Is Canine a subclass of Animal and Mammal? True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-str">What is Python str?</h2>
+
+
+
+<p>The Python <strong>str ()</strong> function will enable us to turn the specified value into the string.</p>
+
+
+
+<pre class="wp-block-code"><code># Example with a list
+my_list = &#91;1, 2, 3]
+
+# Using str() to convert the list to a string
+list_representation = str(my_list)
+
+# Displaying the result
+print("Original list:", my_list)
+print("String representation of the list:", list_representation)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original list: &#91;1, 2, 3]
+String representation of the list: &#91;1, 2, 3]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-tuple-function">What is the Python tuple() Function?</h2>
+
+
+
+<p>The Python<strong> tuple()</strong> function will allow us to make the tuple object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example of creating and using a tuple
+my_tuple = (1, 'apple', 3.14, True)
+
+# Displaying the tuple
+print("Tuple:", my_tuple)
+
+# Accessing elements in a tuple
+print("First element:", my_tuple&#91;0])
+print("Second element:", my_tuple&#91;1])
+
+# Slicing a tuple
+subset_tuple = my_tuple&#91;1:3]
+print("Subset of the tuple:", subset_tuple)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Tuple: (1, 'apple', 3.14, True)
+First element: 1
+Second element: apple
+Subset of the tuple: ('apple', 3.14)
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-type-function">What is Python type() Function?</h2>
+
+
+
+<p>The Python <strong>type ()</strong>  function will allow us to return the type of the specified object when the single argument is passed to the type () built-in function.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using type() function
+value1 = 42
+value2 = 'Hello, World!'
+value3 = &#91;1, 2, 3]
+value4 = {'a': 1, 'b': 2}
+
+# Using type() to get the type of each object
+type_of_value1 = type(value1)
+type_of_value2 = type(value2)
+type_of_value3 = type(value3)
+type_of_value4 = type(value4)
+
+# Displaying the result
+print("Type of value1:", type_of_value1)
+print("Type of value2:", type_of_value2)
+print("Type of value3:", type_of_value3)
+print("Type of value4:", type_of_value4)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Type of value1: &lt;class 'int'&gt;
+Type of value2: &lt;class 'str'&gt;
+Type of value3: &lt;class 'list'&gt;
+Type of value4: &lt;class 'dict'&gt;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-vars-function">What is the  Python vars() Function?</h2>
+
+
+
+<p>The Python<strong> vars() </strong> function will allow us to return the __dict__ attribute of the particular object.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using vars() function
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Creating an instance of the Person class
+person_object = Person(name="John", age=25)
+
+# Using vars() to get the attributes and their values
+attributes_dict = vars(person_object)
+
+# Displaying the result
+print("Attributes and values:", attributes_dict)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Attributes and values: {'name': 'John', 'age': 25}
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-python-zip-function">What is the Python zip() Function?</h2>
+
+
+
+<p>The Python <strong>zip() </strong>function will help to return the zip object and thus will analyze the similar index of the multiple containers, Hence, it will take the iterable that can create an iterator depending on the iterable passed.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using zip() function
+names = &#91;'Alice', 'Bob', 'Charlie']
+ages = &#91;25, 30, 22]
+
+# Using zip() to combine two lists
+zipped_data = zip(names, ages)
+
+# Converting the result to a list for better visualization
+result_list = list(zipped_data)
+
+# Displaying the result
+print("Original lists:")
+print("Names:", names)
+print("Ages:", ages)
+print("\nZipped result:")
+print(result_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original lists:
+Names: &#91;'Alice', 'Bob', 'Charlie']
+Ages: &#91;25, 30, 22]
+
+Zipped result:
+&#91;('Alice', 25), ('Bob', 30), ('Charlie', 22)]
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>Python&#8217;s built-in functions are fundamental tools that simplify coding tasks and are crucial for any programmer. This article will improve your skills and knowledge of the built-in functions.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-built-in-functions-faq">Python Built-in Functions -FAQ</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1709189329717" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are the most used Python inbuilt functions?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The Python inbuilt function  include print(), abs(), round(), min(), max(), sorted(), sum(), and len().</p>
+
+</div>
+</div>
+<div id="faq-question-1709189337022" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.How many structures are there in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The basic Python data structures in Python are list, set, tuples, and dictionary.</p>
+
+</div>
+</div>
+<div id="faq-question-1709189345861" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.What are the 4 types of functions in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Those 4  types of functions are built-in Functions, User-defined Functions, Recursive Functions, and Lambda Functions.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-built-in-functions/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python &#8211; Join Tuples</title>
+		<link>https://www.skillvertex.com/blog/python-join-tuples/</link>
+					<comments>https://www.skillvertex.com/blog/python-join-tuples/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:29:36 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming language]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python - Join Tuples]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=8212</guid>
+
+					<description><![CDATA[Python &#8211; Join Tuples In Python, the tuple will be divided into the sequence type object. It consists of a collection of items with several data types. Whereas, each item will begin from the index of 0. Look into the article to learn more about Python- Join Tuples. What is Tuple in Python? A tuple ... <a title="Python &#8211; Join Tuples" class="read-more" href="https://www.skillvertex.com/blog/python-join-tuples/" aria-label="More on Python &#8211; Join Tuples">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#python-join-tuples">Python &#8211; Join Tuples</a></li><li ><a href="#what-is-tuple-in-python">What is Tuple in Python?</a></li><li ><a href="#what-are-the-different-ways-to-join-python-tuples">What are the different ways to join Python Tuples? </a></li><li ><a href="#method-1-using-the-join-list-comprehension-in-python">Method 1- Using the join() +list Comprehension in Python</a></li><li ><a href="#method-2-using-map-join-in-python">Method 2- Using map() +join() in Python</a></li><li ><a href="#method-3-using-for-loop-and-strip-in-python">Method 3 &#8211; Using for loop and strip() in Python</a></li><li ><a href="#method-4-using-reduce-in-python">Method 4 &#8211; Using reduce() in Python</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-join-tuples-fa-qs">Python &#8211; Join Tuples- FAQs</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="python-join-tuples">Python &#8211; Join Tuples</h2>
+
+
+
+<p>In <a href="https://www.skillvertex.com/blog/python-list-exercises/" data-type="post" data-id="8147">Python</a>, the <a href="https://www.skillvertex.com/blog/python-unpack-tuple/" data-type="post" data-id="8189">tuple </a>will be divided into the <a href="https://www.skillvertex.com/blog/escape-sequence-in-c/" data-type="post" data-id="1912">sequence </a>type object. It consists of a collection of items with several <a href="https://www.skillvertex.com/blog/python-update-tuples/" data-type="post" data-id="8179">data </a>types. Whereas, each item will begin from the index of 0. Look into the article to learn more about Python- Join Tuples.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-tuple-in-python">What is Tuple in Python?</h2>
+
+
+
+<p>A tuple in <a href="https://www.skillvertex.com/blog/python-unpack-tuple/" data-type="post" data-id="8189">Python </a>is referred to as an immutable object. So, it can&#8217;t modify the contents of Tuple once it is created in the <a href="https://www.skillvertex.com/blog/what-is-a-memory-leak-how-can-we-avoid-it/" data-type="post" data-id="3174">memory</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-different-ways-to-join-python-tuples">What are the different ways to join Python Tuples? </h2>
+
+
+
+<p>There are several ways to <a href="https://www.skillvertex.com/blog/merge-two-lists-in-python/" data-type="post" data-id="8127">join </a>Two Python tuples. Those <a href="https://www.skillvertex.com/blog/python-list-methods/" data-type="post" data-id="8139">methods </a>are provided below:</p>
+
+
+
+<h2 class="wp-block-heading" id="method-1-using-the-join-list-comprehension-in-python">Method 1- Using the join() +list Comprehension in Python</h2>
+
+
+
+<p>The <strong>join </strong><a href="https://www.skillvertex.com/blog/python-built-in-functions/" data-type="post" data-id="7464">function </a>will join each tuple <a href="https://www.skillvertex.com/blog/which-one-is-not-an-element-of-iot/" data-type="post" data-id="3089">element </a>with each other and the list comprehension will monitor the task of iterating through the tuples. Check out the example below:</p>
+
+
+
+<pre class="wp-block-code"><code># List of strings
+words = &#91;"Hello", "world", "how", "are", "you"]
+
+# Using list comprehension to convert each word to uppercase
+uppercase_words = &#91;word.upper() for word in words]
+
+# Joining the uppercase words with a space separator
+result = ' '.join(uppercase_words)
+
+# Output
+print(result)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>HELLO WORLD HOW ARE YOU
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="method-2-using-map-join-in-python">Method 2- Using map() +join() in Python</h2>
+
+
+
+<p>The functionality of the list comprehension in the above method will be operated with the help of the <strong>map function</strong>.</p>
+
+
+
+<pre class="wp-block-code"><code># List of strings
+words = &#91;"Hello", "world", "how", "are", "you"]
+
+# Using map() to convert each word to uppercase
+uppercase_words = map(str.upper, words)
+
+# Joining the uppercase words with a space separator
+result = ' '.join(uppercase_words)
+
+# Output
+print(result)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>HELLO WORLD HOW ARE YOU
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="method-3-using-for-loop-and-strip-in-python">Method 3 &#8211; Using for loop and strip() in Python</h2>
+
+
+
+<pre class="wp-block-code"><code># List of strings
+words = &#91;"Hello ", "world ", "how ", "are ", "you"]
+
+# Stripping whitespace from the right side of each word and printing
+for word in words:
+    print(word.rstrip(), end=' ')
+
+# Output
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Hello world how are you
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="method-4-using-reduce-in-python">Method 4 &#8211; Using reduce() in Python</h2>
+
+
+
+<p>First, we have a list of tuples called test_list. Each tuple contains some elements (like words or numbers). We use a loop called a list comprehension to go through each tuple in the list.</p>
+
+
+
+<p>Inside this loop, we use a function called reduce(). This function takes two things: a function (here, it&#8217;s called a lambda function) and the elements of a tuple.</p>
+
+
+
+<pre class="wp-block-code"><code>from functools import reduce
+
+# List of numbers
+numbers = &#91;1, 2, 3, 4, 5]
+
+# Using reduce() to find the sum of numbers
+sum_of_numbers = reduce(lambda x, y: x + y, numbers)
+
+# Output
+print("Sum of numbers:", sum_of_numbers)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Sum of numbers: 15
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>In Python, joining tuples involves combining the elements of multiple tuples into a single tuple or a string. This process is useful for consolidating data or formatting output. This article has provided several examples of the Python join tuples for beginners to understand the coding more efficiently.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-join-tuples-fa-qs">Python &#8211; Join Tuples- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1710828731312" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. Can you join tuples in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The join function in tuple will allow you to join the tuples in Python.</p>
+
+</div>
+</div>
+<div id="faq-question-1710828741184" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.How do you join a list of tuples into a string in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. List comprehension will be used to iterate over each tuple in the list and then converted into the str()  function. Further, the list will be joined with the help of the join method().</p>
+
+</div>
+</div>
+<div id="faq-question-1710828750916" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.Why use tuples in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Tuples are immutable and will store data that can&#8217;t be modified.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-join-tuples/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

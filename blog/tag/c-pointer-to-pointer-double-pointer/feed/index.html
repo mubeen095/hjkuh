@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>C – Pointer To Pointer (Double Pointer)</title>
+	<atom:link href="https://www.skillvertex.com/tag/c-pointer-to-pointer-double-pointer/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:21:33 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>C – Pointer To Pointer (Double Pointer)</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>C – Pointer To Pointer (Double Pointer)</title>
+		<link>https://www.skillvertex.com/blog/c-pointer-to-pointer-double-pointer/</link>
+					<comments>https://www.skillvertex.com/blog/c-pointer-to-pointer-double-pointer/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:21:33 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[C – Pointer To Pointer (Double Pointer)]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2711</guid>
+
+					<description><![CDATA[C – Pointer To Pointer (Double Pointer) A pointer-to-pointer (double pointer) is used to store the address of another pointer. The first pointer stores the address of a variable, and the second pointer stores the address of the first pointer. This makes them useful for changing the values of normal pointers or creating variable-sized 2-D ... <a title="C – Pointer To Pointer (Double Pointer)" class="read-more" href="https://www.skillvertex.com/blog/c-pointer-to-pointer-double-pointer/" aria-label="More on C – Pointer To Pointer (Double Pointer)">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#c-pointer-to-pointer-double-pointer">C – Pointer To Pointer (Double Pointer)</a></li><li ><a href="#declaration-of-pointer-to-a-pointer-in-c">Declaration of Pointer to a Pointer in C</a></li><li ><a href="#example-of-double-pointer-in-c">Example of Double Pointer in C</a></li><li ><a href="#how-double-pointer-works">How Double Pointer Works?</a></li><li ><a href="#size-of-pointer-to-pointer-in-c">Size of Pointer to Pointer in C</a></li><li ><a href="#application-of-double-pointers-in-c">Application of Double Pointers in C</a></li><li ><a href="#multilevel-pointers-in-c">Multilevel Pointers in C</a><ul><li ><a href="#syntax-of-triple-pointer">Syntax of Triple Pointer</a></li></ul></li><li ><a href="#faq-c-pointer-to-pointer-double-pointer">FAQ- C – Pointer To Pointer (Double Pointer)</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="c-pointer-to-pointer-double-pointer">C – Pointer To Pointer (Double Pointer)</h2>
+
+
+
+<p>A pointer-to-pointer (double pointer) is used to store the address of another pointer. The first pointer stores the address of a variable, and the second pointer stores the address of the first pointer. This makes them useful for changing the values of normal pointers or creating variable-sized 2-D arrays. Importantly, a double pointer occupies the same amount of memory as a regular pointer on the stack.</p>
+
+
+
+<h2 class="wp-block-heading" id="declaration-of-pointer-to-a-pointer-in-c">Declaration of Pointer to a Pointer in C</h2>
+
+
+
+<p>We know that declaring a pointer will be similar to declaring a double pointer in C. The only difference, we can notice is the adding of * just before the pointer name.</p>
+
+
+
+<pre class="wp-block-code"><code>data_type_of_pointer **name_of_variable = &amp; normal_pointer_variable;
+int val = 5;
+int *ptr = &amp;val;    // storing address of val to pointer ptr.
+int **d_ptr = &amp;ptr; // pointer to a pointer declared
+                    // which is pointing to an integer. </code></pre>
+
+
+
+<p>Therefore, this diagram illustrates the first pointer ptr 1 will store the address of the variable and the second pointer ptr 2 can store the address of the first pointer.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-of-double-pointer-in-c">Example of Double Pointer in C</h2>
+
+
+
+<pre class="wp-block-code"><code>// C program to demonstrate pointer to pointer
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    int var = 789;
+ 
+    // pointer for var
+    int* ptr2;
+ 
+    // double pointer for ptr2
+    int** ptr1;
+ 
+    // storing address of var in ptr2
+    ptr2 = &amp;var;
+ 
+    // Storing address of ptr2 in ptr1
+    ptr1 = &amp;ptr2;
+ 
+    // Displaying value of var using
+    // both single and double pointers
+    printf("Value of var = %d\n", var);
+    printf("Value of var using single pointer = %d\n", *ptr2);
+    printf("Value of var using double pointer = %d\n", **ptr1);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Value of var = 789
+Value of var using single pointer = 789
+Value of var using double pointer = 789</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="how-double-pointer-works">How Double Pointer Works?</h2>
+
+
+
+<p>Int var =10;</p>
+
+
+
+<p>int*ptr =&amp;var;</p>
+
+
+
+<p>*ptr=20;</p>
+
+
+
+<p>Int**ptr=&amp;ptr;</p>
+
+
+
+<p>**ptr=30;</p>
+
+
+
+<ul class="wp-block-list">
+<li>Declare a double-pointer with the appropriate syntax.</li>
+
+
+
+<li>Store the address of another pointer as the value of the double-pointer.</li>
+
+
+
+<li>To manipulate or dereference to any of its levels, use the asterisk (<code>*</code>) operator the number of times needed to reach the desired level.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="size-of-pointer-to-pointer-in-c">Size of Pointer to Pointer in C</h2>
+
+
+
+<p>A double-pointer acts similarly to a normal pointer in C. Also, the size of the pointer is equal to a double pointer.</p>
+
+
+
+<h4 class="wp-block-heading">Example 1: C Program to find the size of a pointer to a pointer</h4>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to find the size of pointer to pointer
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    // defining single and double pointers
+    int a = 5;
+    int* ptr = &amp;a;
+    int** d_ptr = &amp;ptr;
+ 
+    // size of single pointer
+    printf(" Size of normal Pointer: %d \n", sizeof(ptr));
+ 
+    // size of double pointer
+    printf(" Size of Double Pointer: %d \n", sizeof(d_ptr));
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code> Size of normal Pointer: 8 
+ Size of Double Pointer: 8 </code></pre>
+
+
+
+<p>The size of a pointer in C is not fixed and can vary based on factors like CPU architecture and the operating system. Typically, for a 64-bit operating system, pointer sizes are 8 bytes, while for a 32-bit operating system, they are 4 bytes. This size variation is important to consider when working with pointers, especially when dealing with memory allocation and ensuring your code is compatible across different platforms and systems.</p>
+
+
+
+<h2 class="wp-block-heading" id="application-of-double-pointers-in-c">Application of Double Pointers in C</h2>
+
+
+
+<ol class="wp-block-list">
+<li>Dynamic Memory Allocation: Double-pointers are used to allocate and manage memory for multidimensional arrays, enabling flexible data structures.</li>
+
+
+
+<li>Multilevel Data: They are used to store and manage complex hierarchical data structures, like text documents with paragraphs, sentences, and words.</li>
+
+
+
+<li>Data Structures: In data structures, double-pointers allow direct manipulation of node addresses without copying data, improving efficiency.</li>
+
+
+
+<li>Function Arguments: Double-pointers can be used as function arguments to modify the addresses stored in local pointers, facilitating efficient data manipulation.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="multilevel-pointers-in-c">Multilevel Pointers in C</h2>
+
+
+
+<ul class="wp-block-list">
+<li>In C, we have multilevel pointers beyond double pointers.</li>
+
+
+
+<li>For changing the value of a double pointer, we can use a triple pointer, such as <code>int ***t_ptr</code>.</li>
+
+
+
+<li>Syntax: <code>pointer_type ***pointer_name;</code></li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="syntax-of-triple-pointer">Syntax of Triple Pointer</h3>
+
+
+
+<pre class="wp-block-code"><code>pointer_type *** pointer_name;  
+</code></pre>
+
+
+
+<ul class="wp-block-list">
+<li>This concept extends further, allowing us to use &#8220;level &#8211; x + 1&#8221; pointers to change the value of a &#8220;level &#8211; x&#8221; variable, and this can be carried to higher levels as needed.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="faq-c-pointer-to-pointer-double-pointer">FAQ- C – Pointer To Pointer (Double Pointer)</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697451639177" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How to return a double pointer array in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Declaring a 2D array like <code>int input[][c_in]</code> doesn&#8217;t make the computer interpret these as pointers. <code>input[x][y]</code> represents integers directly, not memory addresses. If you&#8217;re getting addresses when printing, check your code for any issues. Use <code>printf("%d", input[x][y]);</code> to print integer values.</p>
+
+</div>
+</div>
+<div id="faq-question-1697451674862" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the advantage of a double-pointer?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Double pointers in C are powerful tools for efficiently managing data in memory. They allow you to access and manipulate memory addresses, making them versatile for tasks like data reorganization. A pointer, as the name suggests, points to a specific location in memory, enabling you to work with data effectively.</p>
+
+</div>
+</div>
+<div id="faq-question-1697451686715" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What are the two types of pointers in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Those are four types of pointers. Those are :<br />Null Pointer.<br />Void Pointer.<br />Wild Pointer.<br />Dangling Pointer.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/c-pointer-to-pointer-double-pointer/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

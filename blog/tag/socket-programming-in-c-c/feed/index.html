@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Socket Programming in C/C++</title>
+	<atom:link href="https://www.skillvertex.com/tag/socket-programming-in-c-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 06 Mar 2024 11:43:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Socket Programming in C/C++</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Socket Programming In C/C++</title>
+		<link>https://www.skillvertex.com/blog/socket-programming-in-cpp/</link>
+					<comments>https://www.skillvertex.com/blog/socket-programming-in-cpp/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 11:43:31 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Socket Programming in C/C++]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3721</guid>
+
+					<description><![CDATA[Socket Programming in C/C++ Socket programming is a method for enabling communication between two nodes on a network. One node, acting as a server, listens on a specific port at an IP address. The other node, functioning as a client, initiates a connection to the server. In this communication setup, the server establishes a listener ... <a title="Socket Programming In C/C++" class="read-more" href="https://www.skillvertex.com/blog/socket-programming-in-cpp/" aria-label="More on Socket Programming In C/C++">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#socket-programming-in-c-c">Socket Programming in C/C++</a></li><li ><a href="#1-socket-creation">1. Socket creation:</a></li><li ><a href="#2-setsockopt">2. Setsockopt:</a></li><li ><a href="#3-bind">3. Bind:</a></li><li ><a href="#4-listen">4. Listen:</a></li><li ><a href="#5-accept">5. Accept:</a></li><li ><a href="#stages-for-client">Stages For Client </a></li><li ><a href="#implementation">Implementation</a></li><li ><a href="#faq-socket-programming-in-c-c">FAQ- Socket Programming in C/C++</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="socket-programming-in-c-c">Socket Programming in C/C++</h2>
+
+
+
+<p>Socket programming is a method for enabling communication between two nodes on a network. One node, acting as a server, listens on a specific port at an IP address. The other node, functioning as a client, initiates a connection to the server. In this communication setup, the server establishes a listener socket, and the client initiates contact with the server.</p>
+
+
+
+<h2 class="wp-block-heading" id="1-socket-creation"><strong>1. Socket creation:</strong></h2>
+
+
+
+<p>In socket programming, the <code>socket</code> function is used with the following parameters:</p>
+
+
+
+<ul class="wp-block-list">
+<li><code>sockfd</code>: Socket descriptor, represented as an integer, similar to a file handle.</li>
+
+
+
+<li><code>domain</code>: An integer specifying the communication domain. Examples include AF_LOCAL for communication between processes on the same host, AF_INET for processes connected by IPV4, and AF_INET6 for processes connected by IPV6.</li>
+
+
+
+<li><code>type</code>: Communication type, where <code>SOCK_STREAM</code> is used for TCP (reliable and connection-oriented) and <code>SOCK_DGRAM</code> is used for UDP (unreliable and connectionless).</li>
+
+
+
+<li><code>protocol</code>: The protocol value for Internet Protocol (IP), typically set to 0. This value corresponds to the protocol field in the IP header of a packet.</li>
+</ul>
+
+
+
+<p>For instance, when creating a TCP socket for communication between processes on different hosts connected by IPV4, the <code>socket</code> function might be called with parameters like this:</p>
+
+
+
+<pre class="wp-block-code"><code>int sockfd = socket(AF_INET, SOCK_STREAM, 0);</code></pre>
+
+
+
+<p>This line creates a socket descriptor (<code>sockfd</code>) for a TCP socket using the Internet Protocol version 4 (AF_INET) and the reliable, connection-oriented communication type (SOCK_STREAM). The protocol field is set to 0, indicating that the default protocol for the specified domain and type should be used.</p>
+
+
+
+<h2 class="wp-block-heading" id="2-setsockopt"><strong>2. Setsockopt:</strong></h2>
+
+
+
+<p>manipulating socket options for the file descriptor <code>sockfd</code> is an optional yet valuable practice in socket programming. It allows for the customization of socket behavior, particularly aiding in the reuse of addresses and ports. This is particularly useful in preventing errors such as &#8220;address already in use,&#8221; ensuring smoother execution and better handling of network resources.</p>
+
+
+
+<pre class="wp-block-code"><code>int setsockopt(int sockfd, int level, int optname,  const void *optval, socklen_t optlen);
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="3-bind"><strong>3. Bind:</strong></h2>
+
+
+
+<pre class="wp-block-code"><code>int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
+
+</code></pre>
+
+
+
+<p>After making the socket, the &#8220;bind&#8221; function links it to a specific address and port number provided in the &#8220;addr&#8221; (custom data structure). In the example code, we connect the server to the localhost, so we use INADDR_ANY to indicate the IP address.</p>
+
+
+
+<h2 class="wp-block-heading" id="4-listen"><strong>4. Listen:</strong></h2>
+
+
+
+<pre class="wp-block-code"><code>int listen(int sockfd, int backlog);
+
+</code></pre>
+
+
+
+<p>a.<strong>passive Mode:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Putting the server socket in passive mode means that the socket is ready to accept incoming connection requests from clients.</li>
+
+
+
+<li>This is typically done using the <code>listen</code> function in the Berkeley Sockets API.</li>
+</ul>
+
+
+
+<p>b.<strong>Backlog:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>The <code>listen</code> function takes a second parameter, which is the backlog. This parameter defines the maximum length of the queue of pending connections for the specified socket (<code>sockfd</code>).</li>
+
+
+
+<li>The backlog essentially represents the maximum number of clients that can wait to be served by the server.</li>
+</ul>
+
+
+
+<p>c.<strong>Handling Connection Requests:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>When a client attempts to connect to the server, the server accepts the connection request and establishes a connection.</li>
+
+
+
+<li>If the number of pending connection requests in the queue exceeds the backlog value, additional connection requests may be refused.</li>
+
+
+
+<li>The client may receive an error with the indication <code>ECONNREFUSED</code> if the queue is full.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="5-accept"><strong>5. Accept:</strong></h2>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<pre class="wp-block-code"><code>int new_socket= accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);</code></pre>
+</blockquote>
+
+
+
+<p>This process involves accepting the first connection request in the queue for the listening socket (<code>sockfd</code>). It creates a new connected socket and returns a file descriptor for that socket. This marks the establishment of a connection between the client and server, ready for data transfer.</p>
+
+
+
+<h2 class="wp-block-heading" id="stages-for-client">Stages For Client </h2>
+
+
+
+<p>a.<strong>Socket Connection:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>The process of creating a socket connection is identical to that of the server&#8217;s socket creation.</li>
+
+
+
+<li>It involves using a system call (e.g., <code>socket()</code>) to create a socket, specifying the address family, socket type, and protocol.</li>
+</ul>
+
+
+
+<p>b.<strong>Connect System Call:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>The <code>connect()</code> system call is used to establish a connection for a socket.</li>
+
+
+
+<li>It takes the socket file descriptor (<code>sockfd</code>) and the address (<code>addr</code>) to which the connection should be made.</li>
+
+
+
+<li>In the context of a client connecting to a server, the server&#8217;s address and port are typically specified in <code>addr</code>.</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="implementation"><strong>Implementation</strong></h2>
+
+
+
+<p>One hello message is being exchanged between server and client and this could enable to illustrate the client/server model.</p>
+
+
+
+<p><strong>Server.c</strong></p>
+
+
+
+<pre class="wp-block-code"><code>/ Server side C/C++ program to demonstrate Socket
+// programming
+#include &lt;netinet/in.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;unistd.h&gt;
+#define PORT 8080
+int main(int argc, char const* argv&#91;])
+{
+    int server_fd, new_socket;
+    ssize_t valread;
+    struct sockaddr_in address;
+    int opt = 1;
+    socklen_t addrlen = sizeof(address);
+    char buffer&#91;1024] = { 0 };
+    char* hello = "Hello from server";
+ 
+    // Creating socket file descriptor
+    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) &lt; 0) {
+        perror("socket failed");
+        exit(EXIT_FAILURE);
+    }
+ 
+    // Forcefully attaching socket to the port 8080
+    if (setsockopt(server_fd, SOL_SOCKET,
+                   SO_REUSEADDR | SO_REUSEPORT, &amp;opt,
+                   sizeof(opt))) {
+        perror("setsockopt");
+        exit(EXIT_FAILURE);
+    }
+address.sin_family = AF_INET;
+    address.sin_addr.s_addr = INADDR_ANY;
+    address.sin_port = htons(PORT);
+ 
+    // Forcefully attaching socket to the port 8080
+    if (bind(server_fd, (struct sockaddr*)&amp;address,
+             sizeof(address))
+        &lt; 0) {
+        perror("bind failed");
+        exit(EXIT_FAILURE);
+    }
+    if (listen(server_fd, 3) &lt; 0) {
+        perror("listen");
+        exit(EXIT_FAILURE);
+    }
+    if ((new_socket
+         = accept(server_fd, (struct sockaddr*)&amp;address,
+                  &amp;addrlen))
+        &lt; 0) {
+        perror("accept");
+        exit(EXIT_FAILURE);
+    }
+    valread = read(new_socket, buffer,
+                   1024 - 1); // subtract 1 for the null
+                              // terminator at the end
+    printf("%s\n", buffer);
+    send(new_socket, hello, strlen(hello), 0);
+    printf("Hello message sent\n");
+ 
+    // closing the connected socket
+    close(new_socket);
+    // closing the listening socket
+    close(server_fd);
+    return 0;
+}
+</code></pre>
+
+
+
+<p><strong>client.c</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// Client side C/C++ program to demonstrate Socket
+// programming
+#include &lt;arpa/inet.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;unistd.h&gt;
+#define PORT 8080
+ 
+int main(int argc, char const* argv&#91;])
+{
+    int status, valread, client_fd;
+    struct sockaddr_in serv_addr;
+    char* hello = "Hello from client";
+    char buffer&#91;1024] = { 0 };
+    if ((client_fd = socket(AF_INET, SOCK_STREAM, 0)) &lt; 0) {
+        printf("\n Socket creation error \n");
+        return -1;
+    }
+ 
+    serv_addr.sin_family = AF_INET;
+    serv_addr.sin_port = htons(PORT);
+ 
+    // Convert IPv4 and IPv6 addresses from text to binary
+    // form
+    if (inet_pton(AF_INET, "127.0.0.1", &amp;serv_addr.sin_addr)
+        &lt;= 0) {
+        printf(
+            "\nInvalid address/ Address not supported \n");
+        return -1;
+    }
+if ((status
+         = connect(client_fd, (struct sockaddr*)&amp;serv_addr,
+                   sizeof(serv_addr)))
+        &lt; 0) {
+        printf("\nConnection Failed \n");
+        return -1;
+    }
+    send(client_fd, hello, strlen(hello), 0);
+    printf("Hello message sent\n");
+    valread = read(client_fd, buffer, 1024 - 1); // subtract 1 for the null terminator at the end
+    printf("%s\n", buffer);
+ 
+    // closing the connected socket
+    close(client_fd);
+    return 0;
+}
+</code></pre>
+
+
+
+<p><strong>Compiling:</strong></p>
+
+
+
+<pre class="wp-block-code"><code>gcc client.c -o client
+gcc server.c -o server</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Client:Hello message sent
+Hello from server
+Server:Hello from client
+Hello message sent</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-socket-programming-in-c-c">FAQ- Socket Programming in C/C++</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1700741195363" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the socket method in C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Sockets facilitate network communication between applications by creating a connection between two endpoints. The <code>socket()</code> function, found in languages like C and Python, generates a socket and provides a file descriptor for subsequent referencing. This file descriptor is used to configure and manage communication between devices over the network, with functions like <code>bind()</code> and <code>connect()</code> being employed for further setup. Finally, the <code>close()</code> function is used to terminate the socket when communication is complete.</p>
+
+</div>
+</div>
+<div id="faq-question-1700741199101" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.What is the syntax of a socket?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>socket()</code> function is utilized with the signature <code>int socket(int domain, int type, int protocol)</code>. The <code>domain</code> parameter determines the communication method, commonly using <code>AF_INET</code> for TCP/IP sockets. The <code>type</code> parameter defines the nature of communication.</p>
+
+</div>
+</div>
+<div id="faq-question-1700741204383" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is socket and its types?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <strong>Datagram Socket:</strong> A type of socket that provides a connectionless, message-oriented communication. Datagram sockets are often associated with UDP (User Datagram Protocol).<br /><strong>Stream Socket:</strong> This type of socket offers a connection-oriented, reliable, and stream-oriented communication. Stream sockets are commonly used with TCP (Transmission Control Protocol).</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/socket-programming-in-cpp/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

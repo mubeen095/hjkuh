@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Goto Statement In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/goto-statement-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:20:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Goto Statement In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Goto Statement In C</title>
+		<link>https://www.skillvertex.com/blog/goto-statement-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/goto-statement-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:20:31 +0000</pubDate>
+				<category><![CDATA[Question Answer]]></category>
+		<category><![CDATA[Goto Statement In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2318</guid>
+
+					<description><![CDATA[Goto Statement In C The goto statement in the C programming language. The goto statement is indeed a jump statement that allows for unconditional transfers of control within a function. It allows you to transfer the program&#8217;s control to a specific labeled location within the same function or code block. Syntax Syntax1 &#124; Syntax2 &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;- ... <a title="Goto Statement In C" class="read-more" href="https://www.skillvertex.com/blog/goto-statement-in-c/" aria-label="More on Goto Statement In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#goto-statement-in-c">Goto Statement In C</a></li><li ><a href="#example-type-1">Example: Type 1 </a></li><li ><a href="#example-type-2">Example: Type 2 </a></li><li ><a href="#disadvantages-of-using-goto-statement">Disadvantages of Using Goto Statement</a></li><li ><a href="#faq-goto-statement-in-c">FAQ- Goto Statement In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="goto-statement-in-c">Goto Statement In C</h2>
+
+
+
+<p>The <code>goto</code> statement in the C programming language. The <code>goto</code> statement is indeed a jump statement that allows for unconditional transfers of control within a function. It allows you to transfer the program&#8217;s control to a specific labeled location within the same function or code block.</p>
+
+
+
+<p><strong>Syntax</strong></p>
+
+
+
+<p>Syntax1 | Syntax2</p>
+
+
+
+<p> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p>
+
+
+
+<p> goto label; | label:</p>
+
+
+
+<p> .              |          .</p>
+
+
+
+<p> .              |          .</p>
+
+
+
+<p> .              |          .</p>
+
+
+
+<p> label:      |           goto label;</p>
+
+
+
+<p>The <code>goto</code> statement is used to transfer control to a labeled statement within the same function or code block. The label is indeed a user-defined identifier, and the statement immediately following the label is the destination statement.</p>
+
+
+
+<p>You define a label using an identifier followed by a colon (<code>:</code>). For example:</p>
+
+
+
+<ol class="wp-block-list">
+<li>You place this label before the statement you want to mark as the destination.</li>
+
+
+
+<li>To jump to the labeled statement, you use the <code>goto</code> statement followed by the label&#8217;s identifier. For example:</li>
+
+
+
+<li>The control flow will transfer to the statement marked by the label when the <code>goto</code> statement is executed.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="example-type-1">Example: Type 1 </h2>
+
+
+
+<p>Type 1: Here&#8217;s an example of a C program that uses the <code>goto</code> statement to check if a number is even or not and then prints the result accordingly:</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to check if a number is 
+// even or not using goto statement 
+#include &lt;stdio.h&gt; 
+  
+// function to check even or not 
+void checkEvenOrNot(int num) 
+{ 
+    if (num % 2 == 0) 
+        // jump to even 
+        goto even; 
+    else
+        // jump to odd 
+        goto odd; 
+  
+even: 
+    printf("%d is even", num); 
+    // return if even 
+    return; 
+odd: 
+    printf("%d is odd", num); 
+} 
+  
+int main() 
+{ 
+    int num = 26; 
+    checkEvenOrNot(num); 
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>26 is even
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-type-2">Example: Type 2 </h2>
+
+
+
+<p>Type 2: Here&#8217;s an example of a C program that uses the <code>goto</code> statement to print numbers from 1 to 10</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to print numbers 
+// from 1 to 10 using goto statement 
+#include &lt;stdio.h&gt; 
+  
+// function to print numbers from 1 to 10 
+void printNumbers() 
+{ 
+    int n = 1; 
+label: 
+    printf("%d ", n); 
+    n++; 
+    if (n &lt;= 10) 
+        goto label; 
+} 
+  
+// Driver program to test above function 
+int main() 
+{ 
+    printNumbers(); 
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 2 3 4 5 6 7 8 9 10
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="disadvantages-of-using-goto-statement">Disadvantages of Using Goto Statement</h2>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Complexity</strong>: The <code>goto</code> statement can make program logic complex and hard to follow. It can create &#8220;spaghetti code&#8221; where the flow of control is not evident, making it difficult for programmers to understand and maintain the code.</li>
+
+
+
+<li><strong>Difficulty in Tracing</strong>: Using <code>goto</code> can make it challenging to trace the flow of the program, which is crucial for debugging and understanding how the code works.</li>
+
+
+
+<li><strong>Verification Difficulty</strong>: Programs that use, especially in loops, can be challenging to analyze and verify for correctness. It becomes harder to reason about the program&#8217;s behavior and ensure it behaves as intended.</li>
+
+
+
+<li><strong>Alternatives</strong>: In many cases, structured control flow constructs like loops (<code>for</code>, <code>while</code>, <code>do-while</code>) and conditional statements (<code>if</code>, <code>else</code>) provide more readable and maintainable alternatives to achieve the same tasks. Additionally, <code>break</code> and <code>continue</code> statements are often used to control loops without resorting to <code>goto</code></li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="faq-goto-statement-in-c">FAQ- Goto Statement In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696489221536" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is a goto statement in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. the <code>goto</code> statement in C. It is indeed a jump statement that allows you to transfer control from one part of the code to any other part of the code within the same function or code block. The <code>goto</code> statement provides the flexibility to alter the normal flow of a program according to specific needs or conditions</p>
+
+</div>
+</div>
+<div id="faq-question-1696489227183" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is a goto statement in C with an example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The use of a goto statement may lead to code that is buggy and hard to follow. For example, one: <strong>for (i = 0; i &lt; number; ++i) { test += i; goto two; } two: if (test > 5) { goto three; }</strong> &#8230; .. &#8230; Also, the goto statement allows you to do bad stuff such as jump out of the scope</p>
+
+</div>
+</div>
+<div id="faq-question-1696489235133" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Is goto a jump statement in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. C program consists of three types of Jump Statements in C, namely, break, continue, and goto.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/goto-statement-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>getc() and feof() in C</title>
+	<atom:link href="https://www.skillvertex.com/tag/getc-and-feof-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 06 Mar 2024 11:33:59 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>getc() and feof() in C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>EOF, Getc() And Feof() In C</title>
+		<link>https://www.skillvertex.com/blog/eof-getc-and-feof-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/eof-getc-and-feof-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 11:33:59 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[EOF]]></category>
+		<category><![CDATA[getc() and feof() in C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3572</guid>
+
+					<description><![CDATA[EOF, Getc() And Feof() In C In C/C++, the getc() function is used to read a character from a file, and it returns the End of File (EOF) value when the end of the file is reached or if it encounters an error. However, relying solely on comparing the return value of getc() with EOF ... <a title="EOF, Getc() And Feof() In C" class="read-more" href="https://www.skillvertex.com/blog/eof-getc-and-feof-in-c/" aria-label="More on EOF, Getc() And Feof() In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#eof-getc-and-feof-in-c">EOF, Getc() And Feof() In C</a></li><li ><a href="#getc-function-in-c">getc() Function in C</a></li><li ><a href="#syntax-of-getc">Syntax of getc()</a></li><li ><a href="#feof-function-in-c">feof() Function in C</a></li><li ><a href="#example-of-feof">Example of feof()</a></li><li ><a href="#faq-eof-getc-and-feof-in-c">FAQ- EOF, getc() and feof() in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="eof-getc-and-feof-in-c">EOF, Getc() And Feof() In C</h2>
+
+
+
+<p>In C/C++, the <code>getc()</code> function is used to read a character from a file, and it returns the End of File (EOF) value when the end of the file is reached or if it encounters an error. However, relying solely on comparing the return value of <code>getc()</code> with EOF may not be sufficient to accurately determine if the end of the file has been reached. To address this issue, C provides the <code>feof()</code> function. The <code>feof()</code> function returns a non-zero value only when the end of the file has been reached, indicating that there are no more characters to read. In contrast, it returns 0 if the end of the file has not been reached. By using <code>feof()</code> in conjunction with <code>getc()</code>, developers can more reliably determine whether they have reached the end of a file while handling potential error conditions.</p>
+
+
+
+<h2 class="wp-block-heading" id="getc-function-in-c">getc() Function in C</h2>
+
+
+
+<p>The <code>getc()</code> function in C is commonly used to read a single character from the specified file stream. It is implemented as a macro in the <code>&lt;stdio.h&gt;</code> header file. The <code>getc()</code> macro takes a file pointer as an argument, reads the next character from the associated stream, and returns it as an unsigned char cast to an int. If the end of the file is encountered or an error occurs, it returns the special value EOF (End of File). This function is often used in conjunction with other file input/output functions to process data from files in C programming. It&#8217;s important to note that <code>getc()</code> is essentially equivalent to the <code>fgetc()</code> function, and in most implementations, <code>getc()</code> is defined as a macro that expands to a call to <code>fgetc()</code>.</p>
+
+
+
+<h2 class="wp-block-heading" id="syntax-of-getc">Syntax of getc()</h2>
+
+
+
+<pre class="wp-block-code"><code>int getc(FILE* stream);
+</code></pre>
+
+
+
+<p><strong>Parameters</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>stream</strong>: It is  referrred as a pointer to a file stream to read the data from.</li>
+</ul>
+
+
+
+<p><strong>Return Value</strong></p>
+
+
+
+<p> The <code>getc()</code> function in C returns the character read from the file stream as an unsigned char cast to an int. If no error occurs and the End-Of-File (EOF) is not reached, it returns the character read. However, in case of an error or when the End-Of-File is encountered, it returns the special value <code>EOF</code>. This is a crucial aspect of handling file operations in C, allowing developers to check for the end of the file or errors during file reading. Thank you for highlighting this important point.</p>
+
+
+
+<h2 class="wp-block-heading" id="feof-function-in-c">feof() Function in C</h2>
+
+
+
+<p>The <code>feof()</code> function in C is employed to determine whether the file pointer associated with a stream has reached the end of the file. When called, <code>feof()</code> returns a non-zero value if the end of the file has been reached, indicating that there are no more characters to read from the file. Conversely, if the end of the file has not been reached, it returns 0. This function is commonly used in file-handling scenarios to conditionally check whether further attempts to read from the file should be made based on the status of the file pointer. It&#8217;s a useful tool in avoiding attempting to read beyond the end of a file.</p>
+
+
+
+<p>Syntax of feof()</p>
+
+
+
+<pre class="wp-block-code"><code>int feof(FILE* stream);
+</code></pre>
+
+
+
+<p><strong>Parameters</strong></p>
+
+
+
+<p>It  will returns the character read from the file stream.</p>
+
+
+
+<p><strong>Return Value</strong></p>
+
+
+
+<p>Whereas, If the end-of-file indicator is set for the stream, then it means that the function will return as  a non-zero value (usually 1). Otherwise, it returns 0.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-of-feof"><strong>Example of feof()</strong></h2>
+
+
+
+<p>In the program, the <code>getc()</code> function is used to read a character from a file, and its return value is first checked for equality with <code>EOF</code>. This check helps determine if the end of the file has been reached or if an error occurred during reading. Subsequently, the program employs the <code>feof()</code> function to further confirm the end-of-file condition. If <code>feof()</code> returns a non-zero value, it signifies the actual end of the file, and the program prints &#8220;End of file reached.&#8221; On the other hand, if <code>feof()</code> returns 0, indicating that the <code>EOF</code> from <code>getc()</code> was due to an error, the program prints &#8220;Something went wrong.&#8221; This two-step verification ensures accurate handling of end-of-file situations and proper error management during file reading in the C program.</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to demonstrate the use of getc(), feof() and
+// EOF
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    // Open the file "test.txt" in read mode
+    FILE* fp = fopen("test.txt", "r");
+    // Read the first character from the file
+    int ch = getc(fp);
+ 
+    // Loop until the end of the file is
+    // reached
+    while (ch != EOF) {
+        /* display contents of file on screen */
+        putchar(ch);
+ 
+        // Read the next character from the file
+        ch = getc(fp);
+    }
+ // Check if the end-of-file indicator is
+    // set for the file
+    if (feof(fp))
+        printf("\n End of file reached.");
+    else
+        printf("\n Something went wrong.");
+ 
+    // Close the file
+    fclose(fp);
+ 
+    // Wait for a keypress
+    getchar();
+    return 0;
+}</code></pre>
+
+
+
+<p><strong>Consider the  file “test.txt” has  the following data:</strong></p>
+
+
+
+<pre class="wp-block-code"><code>Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-eof-getc-and-feof-in-c">FAQ- EOF, getc() and feof() in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1700125669537" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the use of feof () function in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>feof()</code> function in C indicates whether the end-of-file flag is set for a specific stream. This flag is raised by certain functions when the end of the file is reached. To reset or clear this flag, functions like <code>rewind()</code>, <code>fsetpos()</code>, <code>fseek()</code>, or <code>clearerr()</code> can be used on the respective stream. These operations are essential for managing file-related operations and ensuring accurate file handling in C programs.</p>
+
+</div>
+</div>
+<div id="faq-question-1700125678099" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.What is the difference between EOF and feof functions in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In short, <code>EOF</code> is a constant used to compare against return values (e.g., from <code>getc()</code>) to check for the end of a stream. On the other hand, <code>feof()</code> is a function that directly checks if a file pointer has reached the end of the associated file.</p>
+
+</div>
+</div>
+<div id="faq-question-1700125682199" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.What is Getc () in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>getc()</code> function in C is utilized to read a single character from a specified file stream. Implemented as a macro in the <code>&lt;stdio.h></code> header file, it plays a crucial role in file input operations in C programming.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/eof-getc-and-feof-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

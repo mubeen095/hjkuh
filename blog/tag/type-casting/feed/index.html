@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>type casting</title>
+	<atom:link href="https://www.skillvertex.com/tag/type-casting/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Thu, 11 Apr 2024 11:59:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>type casting</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>What is Python Type Casting</title>
+		<link>https://www.skillvertex.com/blog/python-type-casting/</link>
+					<comments>https://www.skillvertex.com/blog/python-type-casting/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 11:59:35 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[type casting]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6943</guid>
+
+					<description><![CDATA[Data types in Python are referred to as the categorization of data items such as numbers, integers, and strings. These data types will provide values and inform about the operations that should be done on a particular data. Python has five built-in data types. Some of them are numeric, sequence type, boolean, set, and dictionary. ... <a title="What is Python Type Casting" class="read-more" href="https://www.skillvertex.com/blog/python-type-casting/" aria-label="More on What is Python Type Casting">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#why-do-we-use-type-casting-in-python">Why do we use Type-Casting In Python?</a></li><li ><a href="#examples-of-casting">Examples of Casting</a></li><li ><a href="#addition-of-string-and-integer-using-explicit-conversion">Addition of String and Integer Using Explicit  Conversion</a></li><li ><a href="#type-casting-int-to-float">Type Casting Int to Float</a></li><li ><a href="#type-casting-float-into-int">Type casting Float into Int</a></li><li ><a href="#type-casting-int-to-string">Type Casting Int to String</a></li><li ><a href="#type-casting-string-to-int">Type Casting String to Int  </a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-type-casting-fa-qs"> Python Type Casting-FAQs</a></li></ul></nav></div>
+
+
+
+<p>Data types in Python are referred to as the categorization of data items such as numbers, integers, and strings. These data types will provide values and inform about the operations that should be done on a particular data. Python has five built-in data types. Some of them are numeric, sequence type, boolean, set, and dictionary.</p>
+
+
+
+<p>Moreover, python will offer several functions or methods such as int(),&nbsp;float(),&nbsp;str(),&nbsp;ord(),&nbsp;hex(),&nbsp;oct(),&nbsp;tuple(),&nbsp;set(),&nbsp;list(),&nbsp; dict (). Read this article to learn more about typecasting in Python.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-do-we-use-type-casting-in-python">Why do we use Type-Casting In Python?</h2>
+
+
+
+<p>To understand type-casting correctly.  Look into this example,  a person is traveling to Australia from India and this person needs to buy products from Australia, but only has Indian currency.  Therefore, this person went to a local bank for the conversion of Indian rupees into Australian Dollars.  This scenario is similar to the type casting in Python.</p>
+
+
+
+<p>Similarly, in Type casting, a specific value or an object will be converted into a string. For this, the str() method is used in Python. The float method is also used to change the specified value into the floating point number and the int () method is used to convert an object into an <a href="https://www.skillvertex.com/blog/integer-promotions-in-c/" data-type="post" data-id="1968">integer value</a>.</p>
+
+
+
+<p>Hence, typecasting is used to convert one <a href="https://www.skillvertex.com/blog/data-types-in-c/" data-type="post" data-id="1842">datatype</a> to another data type.</p>
+
+
+
+<p>The two varieties of typecasting in Python are the following</p>
+
+
+
+<p>a. Explicit Conversion</p>
+
+
+
+<p>b. Implicit Conversion</p>
+
+
+
+<p>Explicit type Casting is the conversion of one data type into another data type which can be done with the support of developer or programmer intervention or according to the requirements. This conversion process can be done with the Python built-in type conversion functions like Int(), float(), hex(), oct()and str().</p>
+
+
+
+<p>In Python, we have different types of data, like numbers and words. When we mix these types in a <a href="https://www.skillvertex.com/blog/python-operators/" data-type="post" data-id="6937">math operation</a>, Python wants to make sure everything works smoothly. So, it might change one type to another to avoid losing information.</p>
+
+
+
+<p>Thus, in Python, some data types have higher orders has lower orders. Whereas, python will convert one of the variable data types into another with the support of the Python interpreter while doing operations on variables. This process is known as Implicit type casting In Python.</p>
+
+
+
+<p>Imagine you have a number (let&#8217;s say 5) and a decimal number (like 2.0). If you want to add them together, Python will automatically change the regular number to a decimal (like 5 to 5.0) before doing the math. This way, Python prevents any loss of information.</p>
+
+
+
+<h2 class="wp-block-heading" id="examples-of-casting">Examples of Casting</h2>
+
+
+
+<p>Look at the few examples for learning the several methods of typecasting in Python.</p>
+
+
+
+<h2 class="wp-block-heading" id="addition-of-string-and-integer-using-explicit-conversion">Addition of String and Integer Using Explicit  Conversion</h2>
+
+
+
+<p>Adding a <a href="https://www.skillvertex.com/blog/what-does-0-mean-in-this-python-string/" data-type="post" data-id="3237">string</a> and integer in <a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932">Python</a>. While converting a<a href="https://www.skillvertex.com/blog/how-to-reverse-a-string-in-java/" data-type="post" data-id="728"> string</a> into an integer, we can add them both as integers for getting the required output. Look at the example given below to add the string and integer in Python with the help of Explicit conversion.</p>
+
+
+
+<p>Syntax for conversion of string into integer</p>
+
+
+
+<pre class="wp-block-code"><code>number = int("value")
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>string = "56"
+number = 44
+
+# Converting the string into an integer number.
+string_number = int(string)
+
+sum_of_numbers = number + string_number
+print("The Sum of both the numbers is: ", sum_of_numbers)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The Sum of both the numbers is:  100
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="type-casting-int-to-float">Type Casting Int to Float</h2>
+
+
+
+<p>The float method is used to convert an integer or string into a floating-point number. The float method () will accept one value which will be changed into the floating -point.</p>
+
+
+
+<p>The syntax of float () method is </p>
+
+
+
+<pre class="wp-block-code"><code>float(value)
+
+</code></pre>
+
+
+
+<p>Look at the example below to know more about the functioning of the float () method. The salary is considered as the floating point number as it has several allowances along with it. Therefore, it is possible to convert the salary into a floating-point number and do the required operations.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>salary = 25000
+bonus = salary * (0.25)
+
+# Converting the salary into floating point number.
+new_salary = float(salary)
+print("Salary converted into floating-point: ", new_salary)
+print("Salary after adding bonus: ", new_salary + bonus)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Salary converted into floating-point:  25000.0
+Salary after adding bonus:  31250.0</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="type-casting-float-into-int">Type casting Float into Int</h2>
+
+
+
+<p>Int() method in Python is a method where the conversion of value into an integer value occurs. The int() method will accept two parameters which are the value that needs to be converted into an integer and on base value(number base). </p>
+
+
+
+<p>Normally, we use regular numbers like 1, 2, and 3, which are based on 10 (that&#8217;s why we call it base-10).</p>
+
+
+
+<p>But in computer programming, we can use different ways to show numbers. Imagine you have the number 10, and you want to express it in a special code. Here&#8217;s how it works:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If you use base-8 (called octal), it&#8217;s like saying 10 is 12 in this special code.</li>
+
+
+
+<li>If you use base-16 (called hexadecimal), it&#8217;s like saying 10 is A in this special code.</li>
+
+
+
+<li>If you use base-2 (called binary), it&#8217;s like saying 10 is 1010 in this special code.</li>
+</ul>
+
+
+
+<p>So, when we say &#8220;base-10,&#8221; we mean our usual numbers. But in computer programming, we sometimes use different codes, like 8, 16, or 2, for specific situations.</p>
+
+
+
+<p>Syntax of int() method:</p>
+
+
+
+<pre class="wp-block-code"><code>int(value, base)
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>string = "01101"
+floating_number = 45.20
+
+# Converting the string as well as integer number into floating point number.
+new_str = int(string)
+new_number = int(floating_number)
+print("String converted into integer: ", new_str)
+print("The floating-point number converted into integer: ", new_number)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>String converted into integer:  1101
+The floating-point number converted into integer:  45</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="type-casting-int-to-string">Type Casting Int to String</h2>
+
+
+
+<p>The Str() function in Python is used to convert a specified value into a string object.</p>
+
+
+
+<p>The syntax of the str() method in Python</p>
+
+
+
+<pre class="wp-block-code"><code>str(object, encoding = 'utf-8', errors = 'strict')
+
+</code></pre>
+
+
+
+<p>str() in Python has three parameters, one of them is required and the other is optional.  The Parameters of the str() function is provided below:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Object:</strong> This is the important one. Just put whatever you want to turn into words. If you leave it empty, you get nothing.</li>
+
+
+
+<li><strong>Encoding:</strong> You can think of this as telling the computer how to read the characters in your language. If you don&#8217;t say anything, it just uses a standard way. Then the default value i.e.&nbsp;<strong>UTF-8</strong>&nbsp;is provided.</li>
+
+
+
+<li><strong>Errors:</strong> This is like what happens if the computer gets confused. By default, it gets a bit grumpy if it can&#8217;t understand, but you can tell it to be more easygoing if you want.</li>
+</ol>
+
+
+
+<p> <code>str()</code> is like a tool that helps Python speak in words, and you can tell it exactly how to do that if you want!</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>number = 55
+string = str(number)
+print("Converted string is:",string)
+
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The converted string is: 55
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="type-casting-string-to-int">Type Casting String to Int<br> </h2>
+
+
+
+<p>Int () method is used to turn the string into an integer </p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>int(value, base)
+
+</code></pre>
+
+
+
+<p>Value parameter is required and the base Paramater is optional</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Taking a number in the form of string
+string_numbers = "11"
+# Converting the string into number.
+integer_number = int(string_numbers)
+
+print("Integer number is:", integer_number)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Integer number is: 11
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p> Beginners who wish to learn Python can get information on type Casting through the several examples illustrated in this article. The conversion of one data type into another data type is known as Type Casting.</p>
+
+
+
+<p> Beginners can understand the conversion of  Typecasting float into integers, Type Casting Int to String. and several others. </p>
+
+
+
+<h2 class="wp-block-heading" id="python-type-casting-fa-qs"> Python Type Casting-FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707219924112" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is cast () in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Casting involves the process of converting the value of one type into the value of another.</p>
+
+</div>
+</div>
+<div id="faq-question-1707219931448" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is Data type in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The 6 standard data types in Python are Numeric, String, List, Tuple, Set, and Dictionary.</p>
+
+</div>
+</div>
+<div id="faq-question-1707219941566" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is loop in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A for loop in Python is like a robot that does a task repeatedly for each item in a group. It keeps going until there are no more items left in the group. </p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-type-casting/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>And TRUNCATE</title>
+	<atom:link href="https://www.skillvertex.com/tag/and-truncate/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 06:08:04 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>And TRUNCATE</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Difference Between DELETE, DROP, And  TRUNCATE</title>
+		<link>https://www.skillvertex.com/blog/difference-between-delete-drop-and-truncate/</link>
+					<comments>https://www.skillvertex.com/blog/difference-between-delete-drop-and-truncate/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 06:08:04 +0000</pubDate>
+				<category><![CDATA[Computer Science]]></category>
+		<category><![CDATA[C++ Programming]]></category>
+		<category><![CDATA[And TRUNCATE]]></category>
+		<category><![CDATA[C++]]></category>
+		<category><![CDATA[Difference Between DELETE]]></category>
+		<category><![CDATA[DROP]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=344</guid>
+
+					<description><![CDATA[Difference Between DELETE, DROP, And TRUNCATE Understanding the Difference Between DELETE, DROP, and TRUNCATE Commands in SQL through this article. In SQL, &#8220;DELETE,&#8221; &#8220;DROP,&#8221; and &#8220;TRUNCATE&#8221; are three important commands, each serving distinct purposes when dealing with data and database management. Understanding the differences between these commands is essential for efficiently handling data manipulation and ... <a title="Difference Between DELETE, DROP, And  TRUNCATE" class="read-more" href="https://www.skillvertex.com/blog/difference-between-delete-drop-and-truncate/" aria-label="More on Difference Between DELETE, DROP, And  TRUNCATE">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><h3>Table of Contents</h3><nav><ul><li ><a href="#difference-between-delete-drop-and-truncate">Difference Between  DELETE, DROP, And  TRUNCATE</a></li><li ><a href="#delete">Delete </a><ul><li ><a href="#syntax">Syntax</a></li><li ><a href="#syntax-1">Syntax </a></li></ul></li><li ><a href="#drop">Drop </a></li><li ><a href="#truncate">Truncate </a></li><li ><a href="#faq-delete-drop-and-truncate">FAQ-Delete, Drop, and Truncate </a><ul><li ><a href="#faq-question-1690788259477">Q1. Why TRUNCATE is faster than DELETE?</a></li><li ><a href="#faq-question-1690887372056">Q2. Is TRUNCATE a DDL or DML?</a></li><li ><a href="#faq-question-1690887373434">Q3. What is a drop command in SQL?</a></li></ul></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="difference-between-delete-drop-and-truncate">Difference Between  DELETE, DROP, And  TRUNCATE</h2>
+
+
+
+<p>Understanding the Difference Between DELETE, DROP, and TRUNCATE Commands in SQL through this article. In SQL, &#8220;DELETE,&#8221; &#8220;DROP,&#8221; and &#8220;TRUNCATE&#8221; are three important commands, each serving distinct purposes when dealing with data and database management.</p>
+
+
+
+<p> Understanding the differences between these commands is essential for efficiently handling data manipulation and maintaining the database&#8217;s structure. In this explanation, we&#8217;ll explore the unique functions of &#8220;DELETE,&#8221; &#8220;DROP,&#8221; and &#8220;TRUNCATE&#8221; to grasp their specific roles and use cases. In short, the Delete command enables to remove all the rows or specific rows. Whereas, truncate will erase the data from the table. Further, the drop command will remove the entire table which can&#8217;t be undone. </p>
+
+
+
+<h2 class="wp-block-heading" id="delete">Delete </h2>
+
+
+
+<p>The &#8220;DELETE&#8221; command in databases removes data from a table. You can use it to delete all the rows at once or specific rows based on certain conditions you set. It may be slower than another command called &#8220;TRUNCATE,&#8221; which also removes data, but &#8220;DELETE&#8221; is more flexible as it allows you to choose which rows to delete. The table&#8217;s structure remains unchanged after using &#8220;DELETE,&#8221; whereas &#8220;TRUNCATE&#8221; resets the table completely.</p>
+
+
+
+<h3 class="wp-block-heading" id="syntax">Syntax</h3>
+
+
+
+<ul class="wp-block-list">
+<li>To delete all the rows of the table:</li>
+</ul>
+
+
+
+<pre class="wp-block-preformatted">DELETE from;</pre>
+
+
+
+<h3 class="wp-block-heading" id="syntax-1">Syntax </h3>
+
+
+
+<ul class="wp-block-list">
+<li> To delete the table row according to the WHERE clause&#8217;s use,</li>
+</ul>
+
+
+
+<pre class="wp-block-preformatted">DELETE FROM table_name WHERE condition; </pre>
+
+
+
+<p><strong>Note –</strong>&nbsp;We can use the “ROLLBACK” command to restore the tuple as it does not auto-commit.</p>
+
+
+
+<h2 class="wp-block-heading" id="drop">Drop </h2>
+
+
+
+<p>The &#8220;DROP&#8221; command will make the entire table disappear all at once. Not only does it erase all the names and data in the table, but it also gets rid of the table&#8217;s structure, like the columns and the way the data was organized.</p>
+
+
+
+<p>So, using the &#8220;DROP&#8221; command is like saying, &#8220;Poof! Table, be gone!&#8221; And once you use this command, there&#8217;s no way to bring the table back or undo the changes. It&#8217;s essential to be very careful when using the &#8220;DROP&#8221; command because you could lose all the data forever. It&#8217;s like deleting your entire class list and everything about your classmates in just one move. So, be extra cautious when working with the &#8220;DROP&#8221; command!</p>
+
+
+
+<h4 class="wp-block-heading" id="syntax-2">Syntax </h4>
+
+
+
+<p>To drop the table </p>
+
+
+
+<pre class="wp-block-preformatted">DROP table &lt;table_name&gt;;</pre>
+
+
+
+<p><strong>Note –</strong>&nbsp;Here we can’t restore the table by using the “ROLLBACK” command since it auto-commits.</p>
+
+
+
+<h2 class="wp-block-heading" id="truncate">Truncate </h2>
+
+
+
+<p>The &#8220;TRUNCATE&#8221; command in databases is like a super-fast eraser that can clear an entire table at once. It quickly removes all the data from the table, leaving it empty and ready for new information. But once you use &#8220;TRUNCATE,&#8221; you can&#8217;t get the old data back, so be sure you want to erase everything before using it!</p>
+
+
+
+<h4 class="wp-block-heading" id="syntax-2">Syntax </h4>
+
+
+
+<ul class="wp-block-list">
+<li>If we want to use truncate :</li>
+</ul>
+
+
+
+<pre class="wp-block-preformatted">TRUNCATE table &lt;table_name&gt;;</pre>
+
+
+
+<p><strong>Note –</strong>&nbsp;we can’t restore the tuples of the table with the “ROLLBACK” command.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-delete-drop-and-truncate">FAQ-Delete, Drop, and Truncate </h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1690788259477" class="rank-math-list-item">
+<h3 class="rank-math-question ">Q1. Why TRUNCATE is faster than DELETE?</h3>
+<div class="rank-math-answer ">
+
+<p>Ans. DELETE remembers each row removed, while TRUNCATE notes summaries of big data groups, making TRUNCATE  faster for cleaning up large amounts of information.</p>
+
+</div>
+</div>
+<div id="faq-question-1690887372056" class="rank-math-list-item">
+<h3 class="rank-math-question ">Q2. Is TRUNCATE a DDL or DML?</h3>
+<div class="rank-math-answer ">
+
+<p>Ans. &#8220;TRUNCATE TABLE&#8221; is a fast DDL command that drops and recreates the entire table, unlike &#8220;DELETE,&#8221; which removes rows one by one. It&#8217;s particularly efficient for large tables.</p>
+
+</div>
+</div>
+<div id="faq-question-1690887373434" class="rank-math-list-item">
+<h3 class="rank-math-question ">Q3. What is a drop command in SQL?</h3>
+<div class="rank-math-answer ">
+
+<p>Ans. The SQL &#8220;DROP&#8221; command is a DDL command that deletes the specified table along with all its related data and elements.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/difference-between-delete-drop-and-truncate/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

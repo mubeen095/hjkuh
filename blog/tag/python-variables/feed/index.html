@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python Variables</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-variables/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Thu, 11 Apr 2024 11:59:01 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Python Variables</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python Variables</title>
+		<link>https://www.skillvertex.com/blog/python-variables/</link>
+					<comments>https://www.skillvertex.com/blog/python-variables/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 11:59:01 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python Variables]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6932</guid>
+
+					<description><![CDATA[Python variable is a container that will store value. Python is not referred to as statically typed. There is no need to declare the variables before using them or declare their type. Therefore, a variable is formed after we provide a value to it. A Python variable is a name that has been given to ... <a title="Python Variables" class="read-more" href="https://www.skillvertex.com/blog/python-variables/" aria-label="More on Python Variables">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#example-of-variable-in-python">Example Of Variable In Python</a></li><li ><a href="#what-are-the-rules-for-python-variables">What are the Rules For Python Variables?</a></li><li ><a href="#what-is-the-variable-assignment-in-python">What is the Variable Assignment In Python?</a></li><li ><a href="#what-is-the-declaration-and-initialization-of-variable">What is the Declaration and Initialization Of Variable?</a></li><li ><a href="#what-is-redeclaring-variables-in-python">What is Redeclaring Variables In Python?</a></li><li ><a href="#python-assigns-values-to-multiple-variables">Python Assigns Values to Multiple Variables </a></li><li ><a href="#assigning-different-values-to-multiple-variables">Assigning different values to multiple variables</a></li><li ><a href="#using-the-same-name-for-different-types">Using the Same Name For Different Types</a></li><li ><a href="#how-does-operator-work-with-variables">How does +operator work with variables?</a></li><li ><a href="#using-operator-for-different-datatypes">Using + Operator for Different Datatypes</a></li><li ><a href="#output">Output</a></li><li ><a href="#what-is-global-and-local-python-variables">What is Global and Local Python Variables?</a></li><li ><a href="#what-is-global-keyword-in-python">What is Global Keyword in Python?</a></li><li ><a href="#what-is-variable-type-in-python">What is Variable Type in Python?</a></li><li ><a href="#creating-objects">Creating Objects</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-variables-fa-qs">Python Variables -FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python variable is a container that will store value. Python is not referred to as statically typed. There is no need to declare the variables before using them or declare their type.</p>
+
+
+
+<p>Therefore, a variable is formed after we provide a value to it. A Python variable is a name that has been given to a memory location. It is considered the fundamental unit of storage in the program. Let us check out this article to define a variable in Python.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-of-variable-in-python">Example Of Variable In Python</h2>
+
+
+
+<p>After an object is given a <a href="https://www.skillvertex.com/blog/static-variables-in-c/" data-type="post" data-id="3029">variable</a>. It will known by that name. According to Layman&#8217;s terms, variables in Python have store values.</p>
+
+
+
+<p>In the example given below, Skill Vertex is stored as the variable <strong>var</strong>. Thus, the stored information will be printed.</p>
+
+
+
+<pre class="wp-block-code"><code>Var = "Skillvertex"
+print(Var)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>Skillvertex</code></pre>
+
+
+
+<p>Keep in mind, that the stored value can be altered during the program execution.  The Variables in Python are just a name that is assigned to a memory location. Hence, every operation that is being done on a variable will affect its<a href="https://www.skillvertex.com/blog/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/" data-type="post" data-id="3096"> memory </a>location.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-rules-for-python-variables">What are the Rules For Python Variables?</h2>
+
+
+
+<ul class="wp-block-list">
+<li>A Python Variables name will start with a letter or an underscore character.</li>
+
+
+
+<li>A Python variable cannot begin with a number.</li>
+
+
+
+<li>It has alpha-numeric characters and underscores such as (A-z, 0-9, and _ ).</li>
+
+
+
+<li>It&#8217;s case-sensitive  (name, Name, and Name are the three different variables.</li>
+
+
+
+<li>The reserved words in Python cannot be included as the variable name in Python.</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code># valid variable name
+skill = 1
+Skill= 2
+Sk_k_il = 5
+_skill = 6
+skill_ = 7
+_SKILL_ = 8
+ 
+print(skill, skill, Sk_k_il )
+print(_skill, skill_, _SKILL_)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 2 5
+6 7 8</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-variable-assignment-in-python">What is the Variable Assignment In Python?</h2>
+
+
+
+<p>Defining variables in Python by providing a number, floating-point number, and a <a href="https://www.skillvertex.com/blog/how-to-reverse-a-string-in-java/" data-type="post" data-id="728">string</a> to the variable like age, salary, and a name.</p>
+
+
+
+<pre class="wp-block-code"><code># An integer assignment
+age = 45
+ 
+# A floating point
+salary = 1456.8
+ 
+# A string
+name = "John"
+ 
+print(age)
+print(salary)
+print(name)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>45
+1456.8
+John</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-declaration-and-initialization-of-variable">What is the Declaration and Initialization Of Variable?</h2>
+
+
+
+<p>Refer to the example below to declare the variable, define the variable, and print the variable.</p>
+
+
+
+<pre class="wp-block-code"><code># declaring the var
+Number = 100
+ 
+# display
+print( Number)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>100</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-redeclaring-variables-in-python">What is Redeclaring Variables In Python?</h2>
+
+
+
+<p> Re-declare the variable even after declaring the variable and then define it in Python already.</p>
+
+
+
+<pre class="wp-block-code"><code># declaring the var
+Number = 100
+ 
+# display
+print("Before declare: ", Number)
+ 
+# re-declare the var
+Number = 120.3
+   
+print("After re-declare:", Number)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Before declare:  100
+After re-declare: 120.3</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="python-assigns-values-to-multiple-variables"><strong>Python Assigns Values to Multiple Variables&nbsp;</strong></h2>
+
+
+
+<p>Python will provide a value to several variables simultaneously with the  &nbsp;“=” <a href="https://www.skillvertex.com/blog/and-operators-in-c/" data-type="post" data-id="3294">operators</a>.&nbsp;</p>
+
+
+
+<p>For example:</p>
+
+
+
+<pre class="wp-block-code"><code>a = b = c = 10
+ 
+print(a)
+print(b)
+print(c)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>10
+10
+10</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="assigning-different-values-to-multiple-variables">Assigning different values to multiple variables</h2>
+
+
+
+<p>Python will add different values in a single line with the help of the “,” operator.</p>
+
+
+
+<pre class="wp-block-code"><code>a, b, c = 1, 20.2, "SkillVertex"
+ 
+print(a)
+print(b)
+print(c)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code> 1,
+ 20.2
+"Skillvertex"
+ 
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="using-the-same-name-for-different-types">Using the Same Name For Different Types</h2>
+
+
+
+<p>Python program will allow to use of the same name and can refer to the new value and type.</p>
+
+
+
+<pre class="wp-block-code"><code>a = 10
+a = "Skillvertex"
+ 
+print(a)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="how-does-operator-work-with-variables">How does +operator work with variables?</h2>
+
+
+
+<p>Python Plus will give a way to add a value if it&#8217;s a number and concatenate if it&#8217;s a <a href="https://www.skillvertex.com/blog/how-to-find-length-of-string-in-java-python-cpp-javascript-sql-shell-script-mysql-oracle-and-perl/" data-type="post" data-id="452">string</a>. If the variable is already formed and has a new value in the same variable.</p>
+
+
+
+<pre class="wp-block-code"><code>a = 10
+b = 20
+print(a+b)
+ 
+a = "Skill"
+b = "Vertex"
+print(a+b)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>30
+Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="using-operator-for-different-datatypes">Using + Operator for Different Datatypes</h2>
+
+
+
+<pre class="wp-block-code"><code>a = 10
+b = "Geeks"
+print(a+b)</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="output">Output</h2>
+
+
+
+<pre class="wp-block-code"><code>TypeError: unsupported operand type(s) for +: 'int' and 'str'</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-global-and-local-python-variables">What is Global and Local Python Variables?</h2>
+
+
+
+<p>Local Variables in Python can be defined and declared inside the function. This variable cannot be defined outside the<a href="https://www.skillvertex.com/blog/variadic-functions-in-c/" data-type="post" data-id="2561"> function</a>.&#8217;</p>
+
+
+
+<pre class="wp-block-code"><code># This function uses global variable s
+def f():
+    s = "Welcome skillvertex"
+    print(s)
+ 
+ 
+f()</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Welcome skillvertex</code></pre>
+
+
+
+<p><strong>Global variables </strong>in Python are the ones that will defined and declared outside the function and will be used inside the function.</p>
+
+
+
+<pre class="wp-block-code"><code># This function has a variable with
+# name same as s
+def f():
+    print(s)
+ 
+# Global scope
+s = "I love Skillvertex"
+f()</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>I love Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-global-keyword-in-python">What is Global Keyword in Python?</h2>
+
+
+
+<p>Python global is a keyword that will allow the user to change the variable outside of the scope. Hence, it is used to make a global variable from the non-global scope.</p>
+
+
+
+<p>However, the global variable will be used inside the function only when it is required to do an assignment or to change the variable.</p>
+
+
+
+<p><strong>Rules of global keyword</strong></p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Local and Global Variables:</strong>
+<ul class="wp-block-list">
+<li>When you create a variable inside a function, it&#8217;s like a secret code that only that function understands. We call this a &#8220;local&#8221; variable.</li>
+
+
+
+<li>If you create a variable outside of any function, it&#8217;s like a universal code that everyone can understand. We call this a &#8220;global&#8221; variable.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Implicitly Global Variables:</strong>
+<ul class="wp-block-list">
+<li>If you only talk about (reference) a global variable inside a function, Python understands that you&#8217;re talking about the big universal code. You don&#8217;t need to declare it as global unless you want to change it.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Using <code>global</code> Keyword:</strong>
+<ul class="wp-block-list">
+<li>If you want to change the big universal code (global variable) inside a function, you need to tell Python explicitly by using the word &#8220;global.&#8221;</li>
+</ul>
+</li>
+</ol>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>x = 15
+ 
+def change():
+ 
+    # using a global keyword
+    global x
+ 
+    # increment value of a by 5
+    x = x + 5
+    print("Value of x inside a function :", x)
+ 
+ 
+change()
+print("Value of x outside a function :", x)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Value of x inside a function : 20
+Value of x outside a function : 20</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-variable-type-in-python">What is Variable Type in Python?</h2>
+
+
+
+<p>Data types have classification or categorization of data items. Data types will show the value that tells what operations can be done on a particular data.</p>
+
+
+
+<p> Since everything is an object in Python programming, data types are classes and variables are instances (objects) of these classes.</p>
+
+
+
+<p><strong>Build-in Python Data types:</strong></p>
+
+
+
+<p>a.Numeric</p>
+
+
+
+<p>b.Text Type</p>
+
+
+
+<p>c. Sequence Type</p>
+
+
+
+<p>d. Boolean</p>
+
+
+
+<p>d. Set </p>
+
+
+
+<p>e. Dictionary</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># numberic
+var = 123
+print("Numeric data : ", var)
+ 
+# Sequence Type
+String1 = 'Welcome to the Skillvertex'
+print("String with the use of Single Quotes: ")
+print(String1)
+ 
+# Boolean
+print(type(True))
+print(type(False))
+ 
+# Creating a Set with
+# the use of a String
+set1 = set("Skillvertex")
+print("\nSet with the use of String: ")
+print(set1)
+ 
+# Creating a Dictionary
+# with Integer Keys
+Dict = {1: 'Skill', 2: 'For', 3: 'Vertex'}
+print("\nDictionary with the use of Integer Keys: ")
+print(Dict)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>Numeric data :  123
+String with the use of Single Quotes: 
+Welcome to the Skill vertex
+&lt;class 'bool'&gt;
+&lt;class 'bool'&gt;
+Set with the use of String: 
+{'v', 'S', 'K', 'I', 'E', 'L', 'R'}
+Dictionary with the use of Integer Keys: 
+{1: skill', 2: 'For', 3: 'skill'}</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="creating-objects">Creating Objects</h2>
+
+
+
+<pre class="wp-block-code"><code>class CSStudent:
+    # Class Variable
+    stream = 'cse'
+    # The init method or constructor
+    def __init__(self, roll):
+        # Instance Variable
+        self.roll = roll
+ 
+# Objects of CSStudent class
+a = CSStudent(101)
+b = CSStudent(102)
+ 
+print(a.stream)  # prints "cse"
+print(b.stream)  # prints "cse"
+print(a.roll)    # prints 101
+ 
+# Class variables can be accessed using class
+# name also
+print(CSStudent.stream)  # prints "cse"</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>cse
+cse
+101
+cse</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, this article is about Python variables, assigning values to multiple and different variables. A global and local variable in Python is also added to this. Students can understand Python variables easily through this.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-variables-fa-qs">Python Variables -FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1706877454732" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are variables in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A Python variable is a reserved memory location to store values.</p>
+
+</div>
+</div>
+<div id="faq-question-1706877462939" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What are the 4 variables in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Integer, float, String, and Boolean</p>
+
+</div>
+</div>
+<div id="faq-question-1706877470554" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What are called variables?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A variable can be either a characteristic, number, or quantity that can be measured or counted. </p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-variables/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

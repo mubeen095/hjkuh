@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>C fopen() Function With Examples</title>
+	<atom:link href="https://www.skillvertex.com/tag/c-fopen-function-with-examples/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 06 Mar 2024 11:33:17 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>C fopen() Function With Examples</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>C fopen() Function With Examples</title>
+		<link>https://www.skillvertex.com/blog/c-fopen-function-with-examples/</link>
+					<comments>https://www.skillvertex.com/blog/c-fopen-function-with-examples/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 11:33:17 +0000</pubDate>
+				<category><![CDATA[Interview Prep]]></category>
+		<category><![CDATA[Question Answer]]></category>
+		<category><![CDATA[C fopen() Function With Examples]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3556</guid>
+
+					<description><![CDATA[C fopen() Function With Examples The&#160;fopen() method&#160;in C is a library function that functions to open a file to perform various operations which include reading, writing, etc. along with various modes. If the file exists, then the fopen() function will open the particular file a new file is created. Syntax Parameters The method takes two ... <a title="C fopen() Function With Examples" class="read-more" href="https://www.skillvertex.com/blog/c-fopen-function-with-examples/" aria-label="More on C fopen() Function With Examples">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#c-fopen-function-with-examples">C fopen() Function With Examples</a></li><li ><a href="#table-lists-valid-mode-of-operation-values-in-c-with-their-meaning"> Table lists valid mode_of_operation values in C with their meaning</a><ul><li ><a href="#return-value">Return Value</a></li><li ><a href="#example-of-fopen">Example of fopen()</a></li></ul></li><li ><a href="#faq-c-fopen-function-with-examples">FAQ- C fopen() Function With Examples</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="c-fopen-function-with-examples">C fopen() Function With Examples</h2>
+
+
+
+<p>The&nbsp;<strong>fopen() method</strong>&nbsp;in C is a library function that functions to open a file to perform various operations which include reading, writing, etc. along with various modes. If the file exists, then the fopen() function will open the particular file a new file is created.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>FILE *fopen(const char *file_name, const char *mode_of_operation);
+</code></pre>
+
+
+
+<p>Parameters</p>
+
+
+
+<p>The method takes two parameters, both of character pointer type:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>file_name:</strong> This parameter, of C string type, holds the name of the file to be opened.</li>
+
+
+
+<li><strong>mode_of_operation:</strong> Also a C string type, this parameter indicates the mode of file access, specifying whether the file will be opened for reading, writing, or both.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="table-lists-valid-mode-of-operation-values-in-c-with-their-meaning"><strong>&nbsp;Table lists valid mode_of_operation values in C with their meaning</strong></h2>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th><strong>Opening Modes</strong></th><th><strong>Description</strong></th></tr></thead><tbody><tr><td><strong>r</strong></td><td>This function will Search the file. It will Open the file for reading only.&nbsp;If the file is opened successfully fopen() loads it into memory and sets up a pointer that points to the first character in it. If the file cannot be opened fopen() returns NULL.</td></tr><tr><td><strong>w</strong></td><td>This function will Search the file. If the file exists already, its contents will be overwritten. If the file doesn’t exist, a new file is made. Returns NULL, if unable to open the file.&nbsp;It creates a new file for writing only(no reading).</td></tr><tr><td><strong>a</strong></td><td>This function will Searches the file.&nbsp;Opens the file for both reading and writing.&nbsp;If opened successfully, fopen() loads it into memory and sets up a pointer that points to the first character in it. Returns NULL, if unable to open the file.</td></tr><tr><td><strong>r+</strong></td><td>This function will search the file.&nbsp;Opens the file for both reading and writing.&nbsp;If it is opened successfully, open f () loads it into memory and sets up a pointer that points to the first character in it. Returns NULL, if unable to open the file.</td></tr><tr><td><strong>w+</strong></td><td>This function will Search the file. If the file exists, its contents will be overwritten. If the file doesn’t exist, a new file will be formed. Returns NULL, if unable to open the file.&nbsp;The difference between w and w+ is that we can also read the file made with the w+.</td></tr><tr><td><strong>a+</strong></td><td>it functions to Search files. If the file is opened successfully fopen( ) loads it into memory and sets up a pointer that points to the last character in it. If the file doesn’t exist, a new file will be formed. Returns NULL, if unable to open the file.&nbsp;The file is opened for reading and appending(writing at the end of the file).</td></tr><tr><td><strong>rb</strong></td><td>It functions to Open the&nbsp;binary file in read mode.&nbsp;If the file does not exist, the open() function returns NULL.</td></tr><tr><td><strong>wb</strong></td><td>It functions to Open the&nbsp;binary file in write mode.&nbsp;As the pointer is set to the start of the file, the&nbsp;contents are overwritten.&nbsp;If the file does not exist, a&nbsp;new file is formed.</td></tr><tr><td><strong>ab</strong></td><td>It functions to Open the&nbsp;binary file in append mode.&nbsp;The file pointer is set&nbsp;after the last character in the file. A&nbsp;new file will be made &nbsp;if no file exists with the name.</td></tr><tr><td><strong>rb+</strong></td><td>It functions to Open the&nbsp;binary file in append mode.&nbsp;The file pointer is set&nbsp;after the last character in the file. A&nbsp;new file will be made if no file exists with the name.</td></tr><tr><td><strong>wb+</strong></td><td>Open the&nbsp;binary file in read and write mode.&nbsp;Contents are overwritten if the file exists. It will be created if the file does not exist.</td></tr><tr><td><strong>ab+</strong></td><td>Open the&nbsp;binary file in read and append mode.&nbsp;A file will be created if the file does not exist.</td></tr></tbody></table></figure>
+
+
+
+<h3 class="wp-block-heading" id="return-value">Return Value</h3>
+
+
+
+<ul class="wp-block-list">
+<li>The function is used to return a pointer to FILE if the execution succeeds else NULL is returned.&nbsp;</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="example-of-fopen">Example of fopen()</h3>
+
+
+
+<p>On running the following command, a new file will be created by the name “<strong>demo_file.txt</strong>” with the following content:&nbsp;</p>
+
+
+
+<pre class="wp-block-code"><code>
+
+
+// C program to illustrate fopen()
+ 
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+ 
+int main()
+{
+ 
+    // pointer demo to FILE
+    FILE* demo;
+ 
+    // Creates a file "demo_file"
+    // with file access as write-plus mode
+    demo = fopen("demo_file.txt", "w+");
+ 
+    // adds content to the file
+    fprintf(demo, "%s %s %s", "Welcome", "to",
+            "Skillvertex");
+ 
+    // closes the file pointed by demo
+    fclose(demo);
+ 
+    return 0;
+}
+</code></pre>
+
+
+
+<p>According to the command , a new file will be produced by the name “<strong>demo_file.txt</strong>” with the following content:&nbsp;</p>
+
+
+
+<pre class="wp-block-code"><code>Welcome to Skillvertex
+</code></pre>
+
+
+
+<p><strong>To view the file, Run the following code, which will open the file and display its content.</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate fopen()
+ 
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // pointer demo to FILE
+    FILE* demo;
+    int display;
+ 
+    // Creates a file "demo_file"
+    // with file access as read mode
+    demo = fopen("demo_file.txt", "r");
+ 
+    // loop to extract every characters
+    while (1) {
+        // reading file
+        display = fgetc(demo);
+ 
+        // end of file indicator
+        if (feof(demo))
+            break;
+
+        // displaying every characters
+        printf("%c", display);
+    }
+ 
+    // closes the file pointed by demo
+    fclose(demo);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Welcome to Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-c-fopen-function-with-examples">FAQ- C fopen() Function With Examples</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1700043553540" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What does fopen () function do in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>fopen()</code> function is used to open a file identified by its filename and establish a connection to it through a stream. The mode variable, represented as a character string, defines the type of access that is requested for the file, such as reading, writing, or both.</p>
+
+</div>
+</div>
+<div id="faq-question-1700043561203" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the return type of the fopen () function in C *?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>fopen()</code> function returns a pointer to a FILE structure type, enabling access to the opened file. This pointer is crucial for performing operations on the file, such as reading or writing. It&#8217;s important to note that when working with stream files of type record, you may need to cast the FILE pointer to an RFILE pointer to use record I/O functions effectively.</p>
+
+</div>
+</div>
+<div id="faq-question-1700043572102" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the difference between fopen and open in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>fopen()</code> function in C returns a <code>FILE*</code> (file pointer), which is used with functions like <code>fprintf()</code>, <code>fscanf()</code>, etc. On the other hand, the <code>open()</code> system call returns a file descriptor (an integer), which is often used with low-level functions like <code>read()</code> and <code>write()</code></p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/c-fopen-function-with-examples/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

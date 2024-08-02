@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python Numbers</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-numbers/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 Mar 2024 06:42:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Python Numbers</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python Numbers</title>
+		<link>https://www.skillvertex.com/blog/python-numbers/</link>
+					<comments>https://www.skillvertex.com/blog/python-numbers/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:42:24 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[python data type]]></category>
+		<category><![CDATA[Python Numbers]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7023</guid>
+
+					<description><![CDATA[Python consists of built-in support for storing and processing numeric data which is the Python Numbers. It is required to work with the numbers in every Python application. This article has listed the various types of Python Numbers. What is a Numeric data type? The numeric data type can store numeric values. So, they are ... <a title="Python Numbers" class="read-more" href="https://www.skillvertex.com/blog/python-numbers/" aria-label="More on Python Numbers">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-a-numeric-data-type">What is a Numeric data type?</a></li><li ><a href="#what-is-python-int-type">What is Python Int Type?</a></li><li ><a href="#what-is-python-float-type">What is Python Float Type?</a></li><li ><a href="#what-is-python-complex-type">What is Python Complex Type?</a></li><li ><a href="#what-is-type-conversion-in-python">What is Type Conversion in Python?</a></li><li ><a href="#random-numbers-in-python">Random Numbers in Python</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-numbers-fa-qs">Python Numbers- FAQs</a></li></ul></nav></div>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-comments/" data-type="post" data-id="7009">Python</a> consists of built-in support for storing and processing numeric data which is the Python Numbers. It is required to work with the numbers in every Python application. This article has listed the various types of  Python Numbers.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-numeric-data-type">What is a Numeric data type?</h2>
+
+
+
+<p>The numeric data type can store numeric values. So, they are considered immutable data types, which refer to the value of several data types that can vary and hence, impact the newly allocated object.</p>
+
+
+
+<p>Types of Numeric <a href="https://www.skillvertex.com/blog/data-types-in-c/" data-type="post" data-id="1842">Data Types</a>:</p>
+
+
+
+<p>a.<a href="https://www.skillvertex.com/blog/integer-promotions-in-c/" data-type="post" data-id="1968"> int</a></p>
+
+
+
+<p>b. Float</p>
+
+
+
+<p>c.Complex</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-int-type">What is Python Int Type?</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-virtual-environment/" data-type="post" data-id="6920">Python</a> int denotes a whole number, which will include the negative numbers but it doesn&#8217;t mean the fractions. In Python, it doesn&#8217;t have any limit on the integer value.</p>
+
+
+
+<p><strong>Example 1</strong>&#8211; Creating int and checking type in Python </p>
+
+
+
+<pre class="wp-block-code"><code># Creating an integer
+my_integer = 42
+
+# Checking the type
+type_of_my_integer = type(my_integer)
+
+# Output
+print("My Integer:", my_integer)
+print("Type of My Integer:", type_of_my_integer)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>
+My Integer: 42
+Type of My Integer: &lt;class 'int'&gt;
+</code></pre>
+
+
+
+<p>Example 2: <a href="https://www.skillvertex.com/blog/python-arithmetic-operators/" data-type="post" data-id="6958">Arithmetic Operation</a>s on Int Type In Python</p>
+
+
+
+<pre class="wp-block-code"><code>
+ # Creating integer variables
+a = 10
+b = 5
+
+# Addition
+sum_result = a + b
+
+# Subtraction
+difference_result = a - b
+
+# Multiplication
+product_result = a * b
+
+# Division
+division_result = a / b  # Result will be a float in Python 3.x
+
+# Floor Division (result is the quotient without the remainder)
+floor_division_result = a // b
+
+# Modulus (result is the remainder after division)
+modulus_result = a % b
+
+# Exponentiation
+exponentiation_result = a ** b
+
+# Output
+print("a + b =", sum_result)
+print("a - b =", difference_result)
+print("a * b =", product_result)
+print("a / b =", division_result)
+print("a // b =", floor_division_result)
+print("a % b =", modulus_result)
+print("a ** b =", exponentiation_result)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>a + b = 15
+a - b = 5
+a * b = 50
+a / b = 2.0
+a // b = 2
+a % b = 0
+a ** b = 100000</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-float-type">What is Python Float Type?</h2>
+
+
+
+<p>Python Float number is referred to as the real number which consists of a floating-point representation.  So, it will be denoted by a decimal number. Hence, this character e or E will be followed by positive or negative integers and will indicate a scientific notation. Examples of numbers that will be identified as floats are 0.5 and  &nbsp;-7.823457.</p>
+
+
+
+<p>However,  it can be formed directly by typing the number with a decimal number. Extra zeros that are present on the number&#8217;s end will be neglected automatically.</p>
+
+
+
+<p>Example 1: Creating Float and Checking Type in Python</p>
+
+
+
+<pre class="wp-block-code"><code># Creating a float
+my_float = 3.14
+
+# Checking the type
+type_of_my_float = type(my_float)
+
+# Output
+print("My Float:", my_float)
+print("Type of My Float:", type_of_my_float)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>My Float: 3.14
+Type of My Float: &lt;class 'float'&gt;</code></pre>
+
+
+
+<p>Thus, it is understood that float is created by dividing these two integers. A float will be formed through the execution of the two floats.</p>
+
+
+
+<p>Example 2- Arithmetic operations on the Float type in Python</p>
+
+
+
+<pre class="wp-block-code"><code>a = 5.5
+b = 3.2
+ 
+# Addition
+c = a + b
+print("Addition:", c)
+ 
+# Subtraction
+c = a-b
+print("Subtraction:", c)
+ 
+# Division
+c = a/b
+print("Division:", c)
+ 
+# Multiplication
+c = a*b
+print("Multiplication:", c)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>My Float: 3.14
+Type of My Float: &lt;class 'float'&gt;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-complex-type">What is Python Complex Type?</h2>
+
+
+
+<p>A Complex number consists of a number that has real and imaginary parts. Such as 2+3j is considered a complex number, in which  2 is the real component and 3 will be multiplied by j and will be identified as an imaginary part.</p>
+
+
+
+<p>Example 1- Creating Complex and checking types in Python</p>
+
+
+
+<pre class="wp-block-code"><code># Creating a complex number
+my_complex = 2 + 3j
+
+# Checking the type
+type_of_my_complex = type(my_complex)
+
+# Output
+print("My Complex:", my_complex)
+print("Type of My Complex:", type_of_my_complex)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>My Complex: (2+3j)
+Type of My Complex: &lt;class 'complex'&gt;</code></pre>
+
+
+
+<p>Example 2 &#8211; Arithmetic operations on the complex type</p>
+
+
+
+<pre class="wp-block-code"><code># Creating complex numbers
+complex_num_1 = 2 + 3j
+complex_num_2 = 1 - 1j
+
+# Addition
+sum_result = complex_num_1 + complex_num_2
+
+# Subtraction
+difference_result = complex_num_1 - complex_num_2
+
+# Multiplication
+product_result = complex_num_1 * complex_num_2
+
+# Division
+division_result = complex_num_1 / complex_num_2
+
+# Output
+print("Complex Number 1:", complex_num_1)
+print("Complex Number 2:", complex_num_2)
+
+print("\nAddition:", sum_result)
+print("Subtraction:", difference_result)
+print("Multiplication:", product_result)
+print("Division:", division_result)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Complex Number 1: (2+3j)
+Complex Number 2: (1-1j)
+
+Addition: (3+2j)
+Subtraction: (1+4j)
+Multiplication: (5+1j)
+Division: (1+2j)
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-type-conversion-in-python">What is Type Conversion in Python?</h2>
+
+
+
+<p>In Python, it is possible to turn one number into another with the help of two methods.</p>
+
+
+
+<p><strong>Using Arithmetic Operations:</strong></p>
+
+
+
+<p>Operations such as addition and subtraction are used to convert the type of number automatically. One of the operands will be float. Then, this method won&#8217;t be performed on complex numbers.</p>
+
+
+
+<p>Example  1 &#8211; Type Conversion using the arithmetic operations.</p>
+
+
+
+<pre class="wp-block-code"><code>a = 1.6
+b = 5
+ 
+c = a + b
+ 
+print(c)</code></pre>
+
+
+
+<p> Output</p>
+
+
+
+<pre class="wp-block-code"><code>6.6
+</code></pre>
+
+
+
+<p><strong>Using the built-in functions</strong></p>
+
+
+
+<p>Example 1- Type conversion using the Built-in functions in Python</p>
+
+
+
+<pre class="wp-block-code"><code># Creating variables of different types
+integer_value = 42
+float_value = 3.14
+string_value = "123"
+
+# Using built-in functions for type conversion
+converted_integer = int(float_value)
+converted_float = float(string_value)
+converted_string = str(integer_value)
+
+# Output
+print("Original Integer Value:", integer_value)
+print("Converted Float Value:", converted_integer)
+print("Type of Converted Integer:", type(converted_integer))
+
+print("\nOriginal Float Value:", float_value)
+print("Converted String Value:", converted_float)
+print("Type of Converted Float:", type(converted_float))
+
+print("\nOriginal String Value:", string_value)
+print("Converted Integer Value:", converted_string)
+print("Type of Converted String:", type(converted_string))
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Original Integer Value: 42
+Converted Float Value: 3
+Type of Converted Integer: &lt;class 'int'&gt;
+
+Original Float Value: 3.14
+Converted String Value: 123.0
+Type of Converted Float: &lt;class 'float'&gt;
+
+Original String Value: 123
+Converted Integer Value: 42
+Type of Converted String: &lt;class 'str'&gt;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="random-numbers-in-python">Random Numbers in Python</h2>
+
+
+
+<p>Python will create a random module for producing a pseudo-random number. Hence, this module can make random numbers, and choose a random element from a sequence in Python.</p>
+
+
+
+<p>Example 1- To create random value in Python</p>
+
+
+
+<pre class="wp-block-code"><code>import random
+
+# Generating a random integer between a specified range
+random_integer = random.randint(1, 100)
+
+# Generating a random float between 0 and 1
+random_float = random.random()
+
+# Generating a random value from a list
+my_list = &#91;"apple", "banana", "cherry", "date"]
+random_value_from_list = random.choice(my_list)
+
+# Output
+print("Random Integer:", random_integer)
+print("Random Float:", random_float)
+print("Random Value from List:", random_value_from_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Random Integer: 73
+Random Float: 0.864826264695416
+Random Value from List: cherry
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, Python provides straightforward and versatile support for numbers, offering built-in data types like integers, floats, and complex numbers. You can easily perform arithmetic operations, type conversions, and generate random values using simple and intuitive syntax. </p>
+
+
+
+<h2 class="wp-block-heading" id="python-numbers-fa-qs">Python Numbers- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707808559836" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are Python numbers?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. It denotes the numeric data types in Python</p>
+
+</div>
+</div>
+<div id="faq-question-1707808573835" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.What is int () in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.  Python int () function will turn the specified value into the integer value.</p>
+
+</div>
+</div>
+<div id="faq-question-1707808580868" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. How do you declare numbers in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Python doesn&#8217;t have any command to declare a variable.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-numbers/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

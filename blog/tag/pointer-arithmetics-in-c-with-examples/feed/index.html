@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Pointer Arithmetics In C With Examples</title>
+	<atom:link href="https://www.skillvertex.com/tag/pointer-arithmetics-in-c-with-examples/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:21:19 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Pointer Arithmetics In C With Examples</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Pointer Arithmetics In C With Examples</title>
+		<link>https://www.skillvertex.com/blog/pointer-arithmetics-in-c-with-examples/</link>
+					<comments>https://www.skillvertex.com/blog/pointer-arithmetics-in-c-with-examples/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:21:19 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Pointer Arithmetics In C With Examples]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2706</guid>
+
+					<description><![CDATA[Pointer Arithmetics In C With Examples Pointer arithmetic is a set of operations that can be performed on pointers, which are variables that store memory addresses. These operations are different from traditional mathematical calculations because they are performed in the context of memory addresses and the data types they point to. Some of the operations ... <a title="Pointer Arithmetics In C With Examples" class="read-more" href="https://www.skillvertex.com/blog/pointer-arithmetics-in-c-with-examples/" aria-label="More on Pointer Arithmetics In C With Examples">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#pointer-arithmetics-in-c-with-examples">Pointer Arithmetics In C With Examples</a></li><li ><a href="#1-increment-decrement-of-a-pointer">1. Increment/Decrement of a Pointer</a></li><li ><a href="#2-addition-of-integer-to-pointer">2. Addition of Integer to Pointer</a></li><li ><a href="#3-subtraction-of-integer-to-pointer">3. Subtraction  of Integer to Pointer</a></li><li ><a href="#4-subtraction-of-two-pointers">4. Subtraction of Two Pointers</a></li><li ><a href="#5-comparison-of-pointers">5. Comparison of Pointers</a></li><li ><a href="#comparison-to-null">Comparison to NULL</a></li><li ><a href="#comparison-operators-on-pointers-using-an-array">Comparison operators on Pointers using an array</a></li><li ><a href="#pointer-arithmetic-on-arrays">Pointer Arithmetic on Arrays</a></li><li ><a href="#faq-pointer-arithmetics-in-c-with-examples">FAQ- Pointer Arithmetics In C With Examples</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="pointer-arithmetics-in-c-with-examples">Pointer Arithmetics In C With Examples</h2>
+
+
+
+<p>Pointer arithmetic is a set of operations that can be performed on pointers, which are variables that store memory addresses. These operations are different from traditional mathematical calculations because they are performed in the context of memory addresses and the data types they point to.</p>
+
+
+
+<p>Some of the operations are done by the pointer in C language. Some of the operations are :</p>
+
+
+
+<ol class="wp-block-list">
+<li>Increment/Decrement of a Pointer</li>
+
+
+
+<li>Addition of integer to a pointer</li>
+
+
+
+<li>Subtraction of integer to a pointer</li>
+
+
+
+<li>Subtracting two pointers of the same type</li>
+
+
+
+<li>Comparison of pointers</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="1-increment-decrement-of-a-pointer">1. Increment/Decrement of a Pointer</h2>
+
+
+
+<p><strong>Increment</strong>: When you increment a pointer in C, it moves to the next memory location based on the size of the data it points to. For example, if you have an integer pointer and you increment it, it will jump to the next integer-sized space in memory (usually 4 bytes). The same applies to float pointers; they move by the size of a float (typically 4 bytes) when incremented. This way, pointers stay aligned with the data they point to.</p>
+
+
+
+<p><strong>Decrement</strong>:  When a pointer is decremented in C, it moves backward by an amount equal to the size of the data type it is pointing to. Your examples illustrate this effectively:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If you have an integer pointer and you decrement it, it moves back by 4 bytes (assuming a standard 4-byte integer on most systems).</li>
+
+
+
+<li>If you have a float pointer and you decrement it, it also moves back by 4 bytes (assuming a standard 4-byte float).</li>
+</ul>
+
+
+
+<p>This ensures that when you decrement a pointer, it correctly points to the previous element of the data type it references, no matter the specific data type. Understanding this behavior is crucial when working with pointers and pointer arithmetic to manage memory effectively.</p>
+
+
+
+<h4 class="wp-block-heading" id="example-of-pointer-increment-and-decrement">Example of Pointer Increment and Decrement</h4>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt;
+// pointer increment and decrement
+//pointers are incremented and decremented by the size of the data type they point to 
+int main()
+{
+    int a = 22;
+    int *p = &amp;a;
+    printf("p = %u\n", p); // p = 6422288
+    p++;
+    printf("p++ = %u\n", p); //p++ = 6422292    +4   // 4 bytes
+    p--;
+    printf("p-- = %u\n", p); //p-- = 6422288     -4   // restored to original value
+ 
+    float b = 22.22;
+    float *q = &amp;b;
+    printf("q = %u\n", q);  //q = 6422284
+    q++;
+    printf("q++ = %u\n", q); //q++ = 6422288      +4   // 4 bytes
+    q--;
+    printf("q-- = %u\n", q); //q-- = 6422284       -4  // restored to original value
+ 
+    char c = 'a';
+    char *r = &amp;c;
+    printf("r = %u\n", r);   //r = 6422283
+    r++;
+printf("r++ = %u\n", r);   //r++ = 6422284     +1   // 1 byte
+    r--;
+    printf("r-- = %u\n", r);   //r-- = 6422283     -1  // restored to original value
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>p = 1441900792
+p++ = 1441900796
+p-- = 1441900792
+q = 1441900796
+q++ = 1441900800
+q-- = 1441900796
+r = 1441900791
+r++ = 1441900792
+r-- = 1441900791</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="2-addition-of-integer-to-pointer">2. Addition of Integer to Pointer</h2>
+
+
+
+<p>When you add an integer to a pointer, the integer value is first multiplied by the size of the data type to which the pointer points, and then the result is added to the pointer&#8217;s address.</p>
+
+
+
+<p>In your example:</p>
+
+
+
+<ul class="wp-block-list">
+<li>You have an integer pointer storing the address 1000.</li>
+
+
+
+<li>When you add the integer 5 to it with the expression <code>ptr = ptr + 5</code>, the final address stored in <code>ptr</code> will be calculated as follows: <code>1000 + sizeof(int) * 5</code>, which is equal to 1020.</li>
+</ul>
+
+
+
+<p>This behavior ensures that when you perform pointer arithmetic with an integer value, the pointer correctly advances by the appropriate number of bytes based on the data type&#8217;s size. It&#8217;s an essential concept for navigating and manipulating data structures in memory.</p>
+
+
+
+<h4 class="wp-block-heading" id="example-of-addition-of-integer-to-pointer">Example of Addition of Integer to Pointer</h4>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C program to illustrate pointer Addition
+#include &lt;stdio.h&gt;
+ 
+// Driver Code
+int main()
+{
+    // Integer variable
+    int N = 4;
+ 
+    // Pointer to an integer
+    int *ptr1, *ptr2;
+ 
+    // Pointer stores the address of N
+    ptr1 = &amp;N;
+    ptr2 = &amp;N;
+ 
+    printf("Pointer ptr2 before Addition: ");
+    printf("%p \n", ptr2);
+ 
+    // Addition of 3 to ptr2
+    ptr2 = ptr2 + 3;
+    printf("Pointer ptr2 after Addition: ");
+    printf("%p \n", ptr2);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Pointer ptr2 before Addition: 0x7ffca373da9c 
+Pointer ptr2 after Addition: 0x7ffca373daa</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="3-subtraction-of-integer-to-pointer">3. Subtraction &nbsp;of Integer to Pointer</h2>
+
+
+
+<p>When you subtract an integer from a pointer, the integer value is first multiplied by the size of the data type to which the pointer points, and then the result is subtracted from the pointer&#8217;s address.</p>
+
+
+
+<p>In your example:</p>
+
+
+
+<ul class="wp-block-list">
+<li>You have an integer pointer storing the address 1000.</li>
+
+
+
+<li>When you subtract the integer 5 from it with the expression <code>ptr = ptr - 5</code>, the final address stored in <code>ptr</code> will be calculated as follows: <code>1000 - sizeof(int) * 5</code>, which is equal to 980.</li>
+</ul>
+
+
+
+<p>This behavior ensures that when you perform pointer arithmetic with a subtracted integer value, the pointer correctly moves backward by the appropriate number of bytes based on the data type&#8217;s size. This is an important concept when navigating and manipulating data structures in memory.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to illustrate pointer Subtraction
+#include &lt;stdio.h&gt;
+ 
+// Driver Code
+int main()
+{
+    // Integer variable
+    int N = 4;
+ 
+    // Pointer to an integer
+    int *ptr1, *ptr2;
+ 
+    // Pointer stores the address of N
+    ptr1 = &amp;N;
+    ptr2 = &amp;N;
+ 
+    printf("Pointer ptr2 before Subtraction: ");
+    printf("%p \n", ptr2);
+ 
+    // Subtraction of 3 to ptr2
+    ptr2 = ptr2 - 3;
+    printf("Pointer ptr2 after Subtraction: ");
+    printf("%p \n", ptr2);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Pointer ptr2 before Subtraction: 0x7ffd718ffebc 
+Pointer ptr2 after Subtraction: 0x7ffd718ffeb0</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="4-subtraction-of-two-pointers">4. Subtraction of Two Pointers</h2>
+
+
+
+<p>When you subtract two pointers that point to the same data type, the result is calculated by finding the difference between their addresses and then dividing by the size of the data type to determine how many elements (not bytes) separate the two pointers.</p>
+
+
+
+<p>In your example:</p>
+
+
+
+<ul class="wp-block-list">
+<li>You have two integer pointers, <code>ptr1</code> with an address of 1000 and <code>ptr2</code> with an address of 1004.</li>
+
+
+
+<li>When you subtract these two pointers (<code>ptr2 - ptr1</code>), you get a result of 4 bytes, which is the difference in addresses.</li>
+
+
+
+<li>Since the size of an integer is 4 bytes, you divide the address difference by the size of the data type: <code>(4 / 4)</code>, which equals 1. This means there is an increment of 1 integer-sized element between <code>ptr1</code> and <code>ptr2</code>.</li>
+</ul>
+
+
+
+<p>This operation is useful for calculating the distance or offset between two pointers and is valuable for various pointer-related tasks, such as working with arrays and data structures.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate Subtraction
+// of two pointers
+#include &lt;stdio.h&gt;
+ 
+// Driver Code
+int main()
+{
+    int x = 6; // Integer variable declaration
+    int N = 4;
+ 
+    // Pointer declaration
+    int *ptr1, *ptr2;
+ 
+    ptr1 = &amp;N; // stores address of N
+    ptr2 = &amp;x; // stores address of x
+ 
+    printf(" ptr1 = %u, ptr2 = %u\n", ptr1, ptr2);
+    // %p gives an hexa-decimal value,
+    // We convert it into an unsigned int value by using %u
+// Subtraction of ptr2 and ptr1
+    x = ptr1 - ptr2;
+ 
+    // Print x to get the Increment
+    // between ptr1 and ptr2
+    printf("Subtraction of ptr1 "
+           "&amp; ptr2 is %d\n",
+           x);
+ 
+    return 0;
+}
+ </code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>ptr1 = 2715594428, ptr2 = 2715594424
+Subtraction of ptr1 &amp; ptr2 is 1</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="5-comparison-of-pointers">5. Comparison of Pointers</h2>
+
+
+
+<p>You can compare pointers using operators like <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>==</code>, and <code>!=</code>. These operators return <code>true</code> for valid conditions and <code>false</code> for unsatisfied conditions.</p>
+
+
+
+<p>Here are the steps for comparing pointers in C:</p>
+
+
+
+<p>Step 1: Initialize integer values and point these integer values to the pointers. Step 2: Use comparison or relational operators to check conditions on the pointer variables. Step 3: Display the output, which will indicate whether the specified conditions between the pointers are met.</p>
+
+
+
+<p>Pointer comparison is useful for tasks such as checking whether one pointer points to an element before or after another pointer in an array or to validate if two pointers point to the same memory location.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C Program to illustrare pointer comparision
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    // declaring array
+    int arr&#91;5];
+ 
+    // declaring pointer to array name
+    int* ptr1 = &amp;arr;
+    // declaring pointer to first element
+    int* ptr2 = &amp;arr&#91;0];
+ 
+    if (ptr1 == ptr2) {
+        printf("Pointer to Array Name and First Element "
+               "are Equal.");
+    }
+    else {
+        printf("Pointer to Array Name and First Element "
+               "are not Equal.");
+    }
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Pointer to Array Name and First Element are Equal.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="comparison-to-null">Comparison to NULL</h2>
+
+
+
+<p>In C and many other programming languages, a pointer can be compared to or assigned a <code>NULL</code> value regardless of its data type. A <code>NULL</code> pointer is a special value that indicates that the pointer doesn&#8217;t point to any valid memory location. It&#8217;s commonly used in error handling and to check whether a pointer is valid before attempting to access the memory it points to.</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C Program to demonstrate the pointer comparison with NULL
+// value
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    int* ptr = NULL;
+ 
+    if (ptr == NULL) {
+        printf("The pointer is NULL");
+    }
+    else {
+        printf("The pointer is not NULL");
+    }
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The pointer is NULL
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="comparison-operators-on-pointers-using-an-array">Comparison operators on Pointers using an array</h2>
+
+
+
+<p>Step 1: Declare the length of the array and initialize the array elements. </p>
+
+
+
+<p>Step 2: Declare a pointer variable and point it to the first element of the array. </p>
+
+
+
+<p>Step 3: Initialize counters for even and odd numbers. Use a loop to iterate through the array and check each element for even or odd. </p>
+
+
+
+<p>Step 4: Increment the pointer (move to the next element) for further iteration. </p>
+
+
+
+<p>Step 5: Print the results.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// Pointer Comparision in Array
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    int n = 10; // length of an array
+ 
+    int arr&#91;] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    int* ptr; // Declaration of pointer variable
+ 
+    ptr = arr; // Pointer points the first (0th index)
+               // element in an array
+    int count_even = 0;
+    int count_odd = 0;
+ 
+    for (int i = 0; i &lt; n; i++) {
+ 
+        if (*ptr % 2 == 0) {
+            count_even++;
+        }
+        if (*ptr % 2 != 0) {
+            count_odd++;
+        }
+        ptr++; // Pointing to the next element in an array
+    }
+ printf("No of even elements in an array is : %d",
+           count_even);
+    printf("\nNo of odd elements in an array is : %d",
+           count_odd);
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>No of even elements in an array is : 5
+No of odd elements in an array is : 5</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="pointer-arithmetic-on-arrays">Pointer Arithmetic on Arrays</h2>
+
+
+
+<p>Pointers in C and C++ contain memory addresses, and it doesn&#8217;t make sense to directly add two addresses together. However, subtracting two addresses, as you mentioned, allows you to compute the offset (in elements, not bytes) between those two addresses, which can be useful for various purposes, such as determining the difference between two array elements.</p>
+
+
+
+<p>Regarding arrays and pointers:</p>
+
+
+
+<ul class="wp-block-list">
+<li>An array name in C and C++ acts like a pointer to the first element of the array. You can use the array name itself (e.g., <code>arr</code>) or the address of the first element (e.g., <code>&amp;arr[0]</code>) to reference the array as a pointer.</li>
+</ul>
+
+
+
+<p><strong>Program 1 :</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate the array
+// traversal using pointers
+#include &lt;stdio.h&gt;
+ 
+// Driver Code
+int main()
+{
+ 
+    int N = 5;
+ 
+    // An array
+    int arr&#91;] = { 1, 2, 3, 4, 5 };
+ 
+    // Declare pointer variable
+    int* ptr;
+ 
+    // Point the pointer to first
+    // element in array arr&#91;]
+    ptr = arr;
+ 
+    // Traverse array using ptr
+    for (int i = 0; i &lt; N; i++) {
+ 
+        // Print element at which
+        // ptr points
+        printf("%d ", ptr&#91;0]);
+        ptr++;
+  }
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 2 3 4 5 
+</code></pre>
+
+
+
+<p>Program 2:</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate the array
+// traversal using pointers in 2D array
+#include &lt;stdio.h&gt;
+ 
+// Function to traverse 2D array
+// using pointers
+void traverseArr(int* arr, int N, int M)
+{
+ 
+    int i, j;
+ 
+    // Traverse rows of 2D matrix
+    for (i = 0; i &lt; N; i++) {
+ 
+        // Traverse columns of 2D matrix
+        for (j = 0; j &lt; M; j++) {
+ 
+            // Print the element
+            printf("%d ", *((arr + i * M) + j));
+        }
+        printf("\n");
+    }
+}
+// Driver Code
+int main()
+{
+ 
+    int N = 3, M = 2;
+ 
+    // A 2D array
+    int arr&#91;]&#91;2] = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
+ 
+    // Function Call
+    traverseArr((int*)arr, N, M);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 2 
+3 4 
+5 6</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-pointer-arithmetics-in-c-with-examples">FAQ- Pointer Arithmetics In C With Examples</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697441437744" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is an example of a pointer arithmetic?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. When you add an integer to a pointer in C, the pointer moves forward in memory based on the size of the data it points to. For example, if the pointer is pointing to an integer (typically 4 bytes in a 64-bit system) and you add +2, it will move 8 bytes ahead. This ensures that the pointer points to the next integer in the sequence. This concept helps you work with arrays and data structures effectively.</p>
+
+</div>
+</div>
+<div id="faq-question-1697441447933" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is pointer and pointer arithmetic in C language?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.In C, pointer arithmetic comprises a limited set of operations that work with memory addresses, not values. These operations include incrementing, decrementing, adding integers, subtracting integers, and comparing pointers. They are crucial for tasks like managing arrays and memory allocation.</p>
+
+</div>
+</div>
+<div id="faq-question-1697441454462" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Can we add two pointers in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Adding two-pointers is considered to be illegal. Whereas, we can add pointer and integer addition. </p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/pointer-arithmetics-in-c-with-examples/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

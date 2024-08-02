@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Far And Huge Pointers In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/far-and-huge-pointers-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:22:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Far And Huge Pointers In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Near, Far And Huge Pointers In C</title>
+		<link>https://www.skillvertex.com/blog/near-far-and-huge-pointers-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/near-far-and-huge-pointers-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:22:49 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Far And Huge Pointers In C]]></category>
+		<category><![CDATA[Near]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2750</guid>
+
+					<description><![CDATA[Near, Far And Huge Pointers In C In the past, older Intel processors had 16-bit registers, which couldn&#8217;t hold the full memory address because the address bus was wider. To work around this limitation, memory was divided into 64-kilobyte segments. Concepts like near pointers, far pointers, and huge pointers were used in the C programming ... <a title="Near, Far And Huge Pointers In C" class="read-more" href="https://www.skillvertex.com/blog/near-far-and-huge-pointers-in-c/" aria-label="More on Near, Far And Huge Pointers In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#near-far-and-huge-pointers-in-c">Near, Far And Huge Pointers In C</a></li><li ><a href="#1-near-pointer">1. Near Pointer</a></li><li ><a href="#2-far-pointer">2. Far Pointer</a></li><li ><a href="#3-huge-pointer">3. Huge Pointer</a></li><li ><a href="#difference-between-far-pointer-and-near-pointer">Difference between Far Pointer and Near Pointer</a></li><li ><a href="#the-difference-between-a-far-pointer-and-a-huge-pointer">The difference between a Far Pointer and a Huge Pointer</a></li><li ><a href="#faq-near-far-and-huge-pointers-in-c">FAQ- Near, Far, And Huge Pointers In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="near-far-and-huge-pointers-in-c">Near, Far And Huge Pointers In C</h2>
+
+
+
+<p>In the past, older Intel processors had 16-bit registers, which couldn&#8217;t hold the full memory address because the address bus was wider. To work around this limitation, memory was divided into 64-kilobyte segments. Concepts like near pointers, far pointers, and huge pointers were used in the C programming language to handle these segmented memory models. However, these concepts are mostly outdated and not relevant in modern computing environments.</p>
+
+
+
+<h2 class="wp-block-heading" id="1-near-pointer">1. Near Pointer</h2>
+
+
+
+<p>A &#8220;Near Pointer&#8221; on a 16-bit machine can only store 16-bit addresses, limiting it to accessing memory within the current 64-kilobyte segment. This means it can only reach the first 64 kilobytes of data in the memory.</p>
+
+
+
+<p>The size of the near pointer is 2 bites.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>pointer_type near * pointer_name;
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C Program to demonstrate the use of near pointer
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    // declaring a near pointer
+    int near* ptr;
+ 
+    // size of the near pointer
+    printf("Size of Near Pointer: %d bytes", sizeof(ptr));
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Size of Near Pointer: 2 bytes
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="2-far-pointer">2. Far Pointer</h2>
+
+
+
+<p>A &#8220;far pointer&#8221; uses two 16-bit registers to store memory addresses, allowing it to access memory outside the current segment. The compiler allocates one register to store the segment address and another for the offset within the current segment. To get the actual address, the offset is added to the shifted segment address.</p>
+
+
+
+<p>However, in a far pointer, you can&#8217;t change the segment part by incrementing or decrementing it; this only affects the offset. The size of a far pointer is 4 bytes.</p>
+
+
+
+<p>A challenge with far pointers is that different pointer values may actually point to the same address, making pointer comparisons less reliable.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>pointer_type far * pointer_name;
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C Program to find the size of far pointer
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    // declaring far pointer
+    int far* ptr;
+ 
+    // Size of far pointer
+    printf("Size of Far Pointer: %d bytes", sizeof(ptr));
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Size of far pointer: 4 bytes</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="3-huge-pointer">3. Huge Pointer</h2>
+
+
+
+<p>A &#8220;huge pointer&#8221; also uses two registers to store addresses, like a far pointer. However, there are key differences:</p>
+
+
+
+<ol class="wp-block-list">
+<li>In a huge pointer, both the offset and the segment address can be changed, allowing you to jump from one memory segment to another.</li>
+
+
+
+<li>Huge pointers always compare the absolute addresses, which means you can perform relational operations on them with confidence.</li>
+
+
+
+<li>The size of a huge pointer is 4 bytes, just like a far pointer.</li>
+</ol>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>pointer_type huge * pointer_name;
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C Program to find the size of the huge pointer
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    // declaring the huge pointer
+    int huge* ptr;
+ 
+    // size of huge pointer
+    printf("Size of the Huge Pointer: %d bytes",
+           sizeof(ptr));
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Size of the Huge Pointer: 4 bytes
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="difference-between-far-pointer-and-near-pointer">Difference between Far Pointer and Near Pointer</h2>
+
+
+
+<ul class="wp-block-list">
+<li>A &#8220;far pointer&#8221; can store addresses for any location in RAM, while a &#8220;near pointer&#8221; is limited to the first 64 kilobytes of memory.</li>
+
+
+
+<li>A far pointer uses two registers to hold segment and offset addresses separately, while a near pointer uses just one register.</li>
+
+
+
+<li>The size of a far pointer is 4 bytes, whereas a near pointer is 2 bytes in size.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="the-difference-between-a-far-pointer-and-a-huge-pointer">The difference between a Far Pointer and a Huge Pointer</h2>
+
+
+
+<ul class="wp-block-list">
+<li>A &#8220;far pointer&#8221; can&#8217;t move between different memory segments; it&#8217;s limited to a single segment.</li>
+
+
+
+<li>&#8220;Huge pointers&#8221; can move between multiple memory segments.</li>
+
+
+
+<li>Two different far pointer values can point to the same memory location, while this is not possible with huge pointers</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="faq-near-far-and-huge-pointers-in-c">FAQ- Near, Far, And Huge Pointers In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697543524742" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are near-far and huge pointers in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.<br />A &#8220;near pointer&#8221; doesn&#8217;t have a separate selector.<br />&#8220;Huge pointers&#8221; have a selector. When you do pointer arithmetic with a far pointer, the selector isn&#8217;t changed. However, with huge pointers, the selector can be modified.</p>
+
+</div>
+</div>
+<div id="faq-question-1697543535708" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. How many bytes are occupied by near far and huge pointers?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <strong>Near Pointers</strong>: 2 bytes.<br /><strong>Far Pointers</strong>: 4 bytes (16-bit segment + 16-bit offset).<br /><strong>Huge Pointers</strong>: 4 bytes (used for extended memory access).</p>
+
+</div>
+</div>
+<div id="faq-question-1697543545794" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Are pointers 4 or 8 bytes?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In modern computing environments, the size of pointers does indeed depend on the target architecture.<br />On 64-bit architectures, pointers are typically 8 bytes.<br />On 32-bit architectures, pointers are usually 4 bytes</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/near-far-and-huge-pointers-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

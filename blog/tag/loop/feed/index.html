@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>loop</title>
+	<atom:link href="https://www.skillvertex.com/tag/loop/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 Mar 2024 06:42:51 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>loop</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python Control Flow</title>
+		<link>https://www.skillvertex.com/blog/python-control-flow/</link>
+					<comments>https://www.skillvertex.com/blog/python-control-flow/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:42:51 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[if else statement]]></category>
+		<category><![CDATA[loop]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7128</guid>
+
+					<description><![CDATA[In programming, it is known to use various tools to make our computer programs more intelligent and adaptable. Hence, if there are more conditions to check, use &#8216;elif&#8216; (else if), and &#8216;else&#8216; provides a default action if none of the conditions are true. Then, there are loops (&#8216;for&#8217; and &#8216;while&#8217;) that help the robot repeat ... <a title="Python Control Flow" class="read-more" href="https://www.skillvertex.com/blog/python-control-flow/" aria-label="More on Python Control Flow">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-a-decision-making-statement">What is a Decision-Making Statement</a></li><li ><a href="#what-is-the-if-statement">What is the if statement?</a></li><li ><a href="#what-is-the-match-statement">What is the match statement?</a></li><li ><a href="#what-is-a-loop-or-iteration-statement">What is a Loop or iteration statement?</a></li><li ><a href="#what-is-the-for-loop">What is the for Loop?</a></li><li ><a href="#what-is-the-while-loop">What is the while Loop?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-control-flow-fa-qs">Python  Control Flow- FAQs</a></li></ul></nav></div>
+
+
+
+<p>In programming, it is known to use various tools to make our <a href="https://www.skillvertex.com/blog/computer-science-engineering-salary/" data-type="post" data-id="1598">computer program</a>s more intelligent and adaptable.  Hence, if there are more conditions to check, use &#8216;<strong>elif</strong>&#8216; (else if), and &#8216;<strong>else</strong>&#8216; provides a default action if none of the conditions are true. Then, there are loops (&#8216;for&#8217; and &#8216;while&#8217;) that help the robot repeat tasks. </p>
+
+
+
+<p>Read this article to learn more about <a href="https://www.skillvertex.com/blog/python-interview-questions/" data-type="post" data-id="3614">Python</a> Control Flow.  Therefore, there are two types of control flow statements in any <a href="https://www.skillvertex.com/blog/which-programming-language-is-best-for-getting-job/" data-type="post" data-id="34">programming language</a>.</p>
+
+
+
+<p> &#8216;<strong>For&#8217;</strong> loops are like telling the robot to do something a certain number of times, and &#8216;<strong>while&#8217;</strong> loops are for tasks that keep going until a certain condition is met. We also use functions to store sets of instructions that we can reuse whenever we want. </p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-decision-making-statement">What is a Decision-Making Statement</h2>
+
+
+
+<p>Decision-making statements are considered instructions that are used in Python Programs which will allow them to decide the execution of the Program. These statements will be executed due to the <a href="https://www.skillvertex.com/blog/bool-in-c/" data-type="post" data-id="1813">Boolean expression</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-if-statement">What is the if statement?</h2>
+
+
+
+<p>Python will give &#8216;<strong>&#8216;<a href="https://www.skillvertex.com/blog/c-ifelse-statement/" data-type="post" data-id="2270">if&#8230;elif&#8217;</a></strong><a href="https://www.skillvertex.com/blog/c-ifelse-statement/" data-type="post" data-id="2270">&#8216; </a>control statements according to the decision-making. Let us look into the example provided below.</p>
+
+
+
+<pre class="wp-block-code"><code># Get a number from the user
+number = int(input("Enter a number: "))
+
+# Check the number and print a message based on its value
+if number &gt; 0:
+    print("The number is positive.")
+elif number == 0:
+    print("The number is zero.")
+else:
+    print("The number is negative.")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter a number: -3
+The number isnegative.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-match-statement">What is the match statement?</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/mern-stack-vs-python/" data-type="post" data-id="4258">Python</a> will use a match-case statement and this is executed according to the decision-making process. The example provided below will help you to understand the match statement.</p>
+
+
+
+<pre class="wp-block-code"><code>
+def check_number(number):
+    match number:
+        case 0:
+            return "The number is zero."
+        case _ if number &gt; 0:
+            return "The number is positive."
+        case _:
+            return "The number is negative."
+
+# Get a number from the user
+user_input = int(input("Enter a number: "))
+result = check_number(user_input)
+print(result)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter a number: 0
+The number is zero.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-loop-or-iteration-statement">What is a Loop or iteration statement?</h2>
+
+
+
+<p>It is known that each process needs a group of instructions that will be run continuously.  This terminology in programming is called a <a href="https://www.skillvertex.com/blog/c-for-loop/" data-type="post" data-id="2045">loop</a>. Whereas, if the flow is changed the direction towards the earlier step, it will make up a loop.</p>
+
+
+
+<p>Hence, In computer programs, we use loops, like the &#8216;<strong>for</strong>&#8216; or &#8216;<strong>while</strong>&#8216; loop, to repeat actions until a specific condition is met. For example, if you know exactly how many times you want to repeat something, you&#8217;d use a <strong>&#8216;for&#8217; loop</strong>. If you&#8217;re unsure how many times, but you have a condition to stop, you&#8217;d use a &#8216;while&#8217; loop.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-for-loop">What is the for Loop?</h2>
+
+
+
+<p>The example that will make use of The<a href="https://www.skillvertex.com/blog/c-loops/" data-type="post" data-id="2286"> &#8221;</a><strong><a href="https://www.skillvertex.com/blog/c-loops/" data-type="post" data-id="2286">for loop</a>&#8221;</strong> is provided below:</p>
+
+
+
+<pre class="wp-block-code"><code># Example of a for loop
+for i in range(5):
+    print("Iteration", i+1)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-while-loop">What is the while Loop?</h2>
+
+
+
+<p>The example provided below will illustrate the &#8221;<strong>while Loop</strong>&#8221;.</p>
+
+
+
+<pre class="wp-block-code"><code># Example of a while loop
+count = 0
+while count &lt; 5:
+    print("Iteration", count+1)
+    count += 1
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+Iteration 5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>In conclusion, Python&#8217;s control flow mechanisms, like conditional statements and loops, provide the tools necessary to make programs more dynamic and responsive. Conditional statements, such as <strong>&#8216;if&#8217;,</strong> &#8216;<strong>elif&#8217;</strong>, and <strong>&#8216;else</strong>&#8216;, enable decision-making based on different conditions.</p>
+
+
+
+<p> Loops, like &#8216;for&#8217; and &#8216;while&#8217;, allow for the repetition of tasks until specific conditions are met, adding flexibility to program execution.  Several examples are illustrated for a better understanding of if-else, loop, and while statement.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-control-flow-fa-qs">Python  Control Flow- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707892244048" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the control flow in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In the control flow, the interpreter will run the operations and functions, and later it will encounter them.</p>
+
+</div>
+</div>
+<div id="faq-question-1707892254837" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.  What are the 3 types of control structures in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Sequential control structure, selection control structure, and iteration control structure.</p>
+
+</div>
+</div>
+<div id="faq-question-1707892265256" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is an example of a control flow?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. If the value  <code>x</code> is set to 1, it prints &#8220;The variable x is equal to 1.&#8221; If <code>x</code> is any other number, it prints &#8220;The variable x is not equal to 1.&#8221; The if and else parts help the program decide what to do based on the value of <code>x</code>.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-control-flow/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

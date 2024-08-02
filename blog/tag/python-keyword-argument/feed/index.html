@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python keyword argument</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-keyword-argument/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 Mar 2024 06:47:41 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Python keyword argument</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python &#8211; Keyword Arguments</title>
+		<link>https://www.skillvertex.com/blog/python-keyword-arguments/</link>
+					<comments>https://www.skillvertex.com/blog/python-keyword-arguments/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:47:41 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[python keyword]]></category>
+		<category><![CDATA[Python keyword argument]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7283</guid>
+
+					<description><![CDATA[In Python, when you use a function, you can especially give information using &#8220;keywords&#8221; or &#8220;named arguments.&#8221; It&#8217;s like giving labels to the information you provide. Think of it as putting names on boxes to organize things better. In the function, these labels are like the names of the boxes. Let&#8217;s look into this article ... <a title="Python &#8211; Keyword Arguments" class="read-more" href="https://www.skillvertex.com/blog/python-keyword-arguments/" aria-label="More on Python &#8211; Keyword Arguments">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-python-keyword-argument">What is Python Keyword Argument?</a></li><li ><a href="#what-is-the-example-of-the-python-keyword-argument">What is the Example of the Python Keyword Argument?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-keyword-arguments-fa-qs">Python &#8211; Keyword Arguments- FAQs</a></li></ul></nav></div>
+
+
+
+<p>In Python, when you use a function, you can especially give information using &#8220;keywords&#8221; or &#8220;named<a href="https://www.skillvertex.com/blog/variable-length-arguments-for-macros/" data-type="post" data-id="3327"> arguments</a>.&#8221; It&#8217;s like giving labels to the information you provide. Think of it as putting names on boxes to organize things better. In the function, these labels are like the names of the boxes. Let&#8217;s look into this article to learn more about <a href="https://www.skillvertex.com/blog/which-of-the-following-is-not-a-keyword-in-python-language/" data-type="post" data-id="1791">Python Keyword </a>Arguments</p>
+
+
+
+<p>Hence, when you call the function, you can use these labels to say which information goes where. It&#8217;s a way to make your <a href="https://www.skillvertex.com/blog/what-is-the-extension-of-java-code-files/" data-type="post" data-id="1399">code</a> clearer and to make sure each part of the function gets the right information.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-keyword-argument">What is Python Keyword Argument?</h2>
+
+
+
+<p>Keyword arguments in Python allow you to pass<a href="https://www.skillvertex.com/blog/how-can-i-return-multiple-values-from-a-function/" data-type="post" data-id="2071"> values</a> to a <a href="https://www.skillvertex.com/blog/python-functions/" data-type="post" data-id="7272">function </a>by explicitly specifying the parameter names. Each keyword argument consists of a parameter name, followed by the assignment operator <code>=</code> and the corresponding value. </p>
+
+
+
+<p>However, this approach provides clarity in function calls, as it makes it evident which value is assigned to each parameter. The analogy to dictionaries is pertinent, as both involve associating values with specific keys (or keywords). This feature contributes to code readability and flexibility in function usage. The keyword <a href="https://www.skillvertex.com/blog/default-arguments-in-python/" data-type="post" data-id="7267">Arguments</a> will send arguments with the key=value <a href="https://www.skillvertex.com/blog/python-syntax/" data-type="post" data-id="6924">syntax</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-example-of-the-python-keyword-argument">What is the Example of the Python Keyword Argument?</h2>
+
+
+
+<pre class="wp-block-code"><code>def print_person_info(name, age, city="Unknown", country="Unknown"):
+    """
+    A function that prints information about a person.
+    """
+    print(f"Name: {name}")
+    print(f"Age: {age}")
+    print(f"City: {city}")
+    print(f"Country: {country}")
+    print("\n")
+
+# Using keyword arguments
+print_person_info(name="John", age=25, city="New York", country="USA")
+print_person_info(name="Alice", age=30, country="Canada")
+print_person_info(name="Bob", age=22, city="London")
+
+# Using a mix of positional and keyword arguments
+print_person_info("Eva", 28, country="Germany")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Name: John
+Age: 25
+City: New York
+Country: USA
+
+Name: Alice
+Age: 30
+City: Unknown
+Country: Canada
+
+Name: Bob
+Age: 22
+City: London
+Country: Unknown
+
+Name: Eva
+Age: 28
+City: Unknown
+Country: Germany
+</code></pre>
+
+
+
+<p>Example 2: Using def division keyword</p>
+
+
+
+<pre class="wp-block-code"><code>def division(dividend, divisor=1):
+    """
+    A function that performs division.
+    """
+    result = dividend / divisor
+    return result
+
+# Example calls
+result1 = division(10, 2)
+result2 = division(20)
+result3 = division(30, 3)
+
+# Displaying results
+print("Result 1:", result1)  # Output: Result 1: 5.0
+print("Result 2:", result2)  # Output: Result 2: 20.0
+print("Result 3:", result3)  # Output: Result 3: 10.0
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Result 1: 5.0
+Result 2: 20.0
+Result 3: 10.0
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>In Python, keyword arguments provide a way to make functions more flexible and readable. When defining a function, we can assign default values to some parameters, turning them into keyword arguments. This means that when we call the function, we have the option to explicitly specify values for certain parameters by using their names.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-keyword-arguments-fa-qs">Python &#8211; Keyword Arguments- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1708510581559" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are keyword arguments in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.  The values that are passed into a function will be identifiable by specific parameter names.</p>
+
+</div>
+</div>
+<div id="faq-question-1708510588279" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What are keywords in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Python keywords are reserved words that consist of specific meanings and purposes. It can&#8217;t be used for anything but those specific purposes.</p>
+
+</div>
+</div>
+<div id="faq-question-1708510597904" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. How many keywords for Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.36</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-keyword-arguments/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

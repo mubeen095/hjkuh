@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>nested loop</title>
+	<atom:link href="https://www.skillvertex.com/tag/nested-loop/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 Mar 2024 06:44:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>nested loop</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python For Loops</title>
+		<link>https://www.skillvertex.com/blog/python-for-loops/</link>
+					<comments>https://www.skillvertex.com/blog/python-for-loops/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:44:18 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[continue statement]]></category>
+		<category><![CDATA[loops]]></category>
+		<category><![CDATA[nested loop]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[python programming]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7180</guid>
+
+					<description><![CDATA[A Python loop will repeat over the sequence. The sequence can either be a list, tuple, dictionary, set, or a string. In the Python Programming language, it has two types of loops. Such as For Loop and While Loop. This article has listed about the Loops In Python. Even though Loop and While Loop will ... <a title="Python For Loops" class="read-more" href="https://www.skillvertex.com/blog/python-for-loops/" aria-label="More on Python For Loops">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-while-loop-in-python">What is While Loop in Python?</a></li><li ><a href="#while-loop-syntax-in-python">While Loop Syntax in Python</a></li><li ><a href="#how-to-use-else-statement-with-while-loop-in-python">How to use  Else Statement with While Loop in Python?</a></li><li ><a href="#syntax-of-while-loop-with-an-else-statement">Syntax of  &#8216;while Loop&#8217; with an else statement</a></li><li ><a href="#what-is-infinite-while-loop-in-python">What is Infinite While Loop in Python?</a></li><li ><a href="#what-is-for-loop-in-python">What is For Loop in Python?</a></li><li ><a href="#syntax-of-for-loop">Syntax  of &#8216;For Loop&#8217;</a></li><li ><a href="#output">Output</a></li><li ><a href="#what-is-nested-loops-in-python">What is Nested Loops in Python?</a></li><li ><a href="#syntax-of-nested-loops">Syntax of Nested Loops</a></li><li ><a href="#what-is-continue-statement-in-python">What is Continue Statement in Python?</a></li><li ><a href="#what-is-a-break-statement-in-python">What is a Break Statement in Python?</a></li><li ><a href="#what-is-a-pass-statement-in-python">What is a Pass Statement in  Python?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-for-loops-fa-qs">Python For Loops- FAQs</a></li></ul></nav></div>
+
+
+
+<p>A Python loop will repeat over the sequence. The sequence can either be a list, tuple, dictionary, set, or a string.  In the Python Programming language, it has two types of loops. Such as For Loop and While Loop.  This article has listed about the Loops In Python.</p>
+
+
+
+<p>Even though <a href="https://www.skillvertex.com/blog/c-for-loop/" data-type="post" data-id="2045">Loop </a>and <a href="https://www.skillvertex.com/blog/do-while-loop-in-c/" data-type="post" data-id="2291">While Loop</a> will differ in basic functionality and their syntax.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-while-loop-in-python">What is While Loop in Python?</h2>
+
+
+
+<p>A <strong>&#8216;while loop</strong>&#8216; mainly functions to run the block of statements iterate till the condition is completed.  However, when the condition becomes false, the line after the<a href="https://www.skillvertex.com/blog/do-while-loop-in-c/" data-type="post" data-id="2291"> loop i</a>n the program will begin to run.</p>
+
+
+
+<h2 class="wp-block-heading" id="while-loop-syntax-in-python">While Loop Syntax in Python</h2>
+
+
+
+<p><strong>The Loop Syntax is provided below</strong></p>
+
+
+
+<pre class="wp-block-code"><code>while expression:
+    statement(s)</code></pre>
+
+
+
+<p>The syntax indicates that the statements will be indented by the same number of <a href="https://www.skillvertex.com/blog/character-arithmetic-in-c-and-c/" data-type="post" data-id="1876">character </a>spaces even after the programming construct and this will be included in the single block of code.  So, Python will use indentation and will be considered as a method of grouping <a href="https://www.skillvertex.com/blog/python-nested-if-statements/" data-type="post" data-id="7159">statements</a>.</p>
+
+
+
+<p><strong>Example </strong></p>
+
+
+
+<p>The code given below will use the &#8216;<strong>while loop&#8217; </strong>to print the Skillvertex.  This <a href="https://www.skillvertex.com/blog/python-comments/" data-type="post" data-id="7009">Python code</a> will print the output ie, Skill vertex three times by adding a variable known as &#8216;count&#8217; from 1 to 3.</p>
+
+
+
+<pre class="wp-block-code"><code>count = 0
+while (count &lt; 3):
+    count = count + 1
+    print("Skillvertex")</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Skill vertex
+Skill vertex
+Skill vertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="how-to-use-else-statement-with-while-loop-in-python">How to use  Else Statement with While Loop in Python?</h2>
+
+
+
+<p>The <a href="https://www.skillvertex.com/blog/python-if-else-statement/" data-type="post" data-id="7153">else </a>clause will run only when the while condition comes false. But, if the loop has a breakout, then the program won&#8217;t be executed.</p>
+
+
+
+<h2 class="wp-block-heading" id="syntax-of-while-loop-with-an-else-statement">Syntax of  &#8216;while Loop&#8217; with an else statement</h2>
+
+
+
+<p>Syntax of &#8216;<strong>while Loop</strong>&#8216; with the else statement is given below</p>
+
+
+
+<pre class="wp-block-code"><code>while condition:
+     # execute these statements
+else:
+     # execute these statements</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<p>In the example provided below, the Python code will print &#8216;Hello Skillvertex three times with the &#8216;<strong>while&#8217; l</strong>oop. Hence, after the loop is executed, then it will print  &#8221;<strong>In Else Block</strong>&#8221;.</p>
+
+
+
+<p>However, it will print the &#8221;<strong>In Else Block</strong>&#8221;as there happens to be an &#8221;<strong> else </strong>&#8221; block associated with the &#8216;<b>while</b>.</p>
+
+
+
+<pre class="wp-block-code"><code>count = 0
+while (count &lt; 3):
+    count = count + 1
+    print("Skillvertex")
+else:
+    print("In Else Block")</code></pre>
+
+
+
+<p> Output</p>
+
+
+
+<pre class="wp-block-code"><code>Hello Skillvertex
+Hello Skillvertex
+Hello Skillvertex
+In Else Block</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-infinite-while-loop-in-python">What is Infinite While Loop in Python?</h2>
+
+
+
+<p>The while loop in Python functions to run the block of code an infinite number of times.</p>
+
+
+
+<p>However, the Python code will use the &#8216;<strong>while</strong>&#8216; loop along with the condition  (count==0). The Loop will then execute according to the count that will be equal to 0. The count will be given as 0, Thus the loop will run the program since the <a href="https://www.skillvertex.com/blog/conditional-or-ternary-operator-in-c/" data-type="post" data-id="2262">condition</a> will be true.</p>
+
+
+
+<pre class="wp-block-code"><code>count = 0
+while (count == 0):
+    print("Hello Geek")</code></pre>
+
+
+
+<p>Note: It is recommended not to use this loop type as it denotes a never-ending loop.  Due to this, the condition will be true and then you need to stop the terminator.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-for-loop-in-python">What is For Loop in Python?</h2>
+
+
+
+<p>In Python, for Loop functions for the sequential traversal. Such as the traversing of a list, string, or array. The &#8221;<strong>for in</strong>&#8221; will work similarly to the for each loop in the other programming languages. </p>
+
+
+
+<p>Let us look at the example of how to use &#8216;<strong>For loop</strong>&#8216; the sequential traversal.</p>
+
+
+
+<h2 class="wp-block-heading" id="syntax-of-for-loop">Syntax  of &#8216;For Loop&#8217;</h2>
+
+
+
+<pre class="wp-block-code"><code>for iterator_var in sequence:
+    statements(s)</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<p>The Python code provided below will print the <strong>&#8216;i&#8217;</strong> in every iteration of the loop. It will also use the &#8216;<strong>for loop</strong>&#8216; as it will repeat the values from 0 to 3 and denoted by the <strong>range(0,n)</strong>.</p>
+
+
+
+<pre class="wp-block-code"><code>n = 4
+for i in range(0, n):
+    print(i)</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="output">Output</h2>
+
+
+
+<pre class="wp-block-code"><code>0
+1
+2
+3</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-nested-loops-in-python">What is Nested Loops in Python?</h2>
+
+
+
+<p> The <a href="https://www.skillvertex.com/blog/nested-functions-in-c/" data-type="post" data-id="2555">nested Loops </a>indicate the existence of one loop inside another loop.</p>
+
+
+
+<h2 class="wp-block-heading" id="syntax-of-nested-loops">Syntax of Nested Loops</h2>
+
+
+
+<pre class="wp-block-code"><code>for iterator_var in sequence:
+   for iterator_var in sequence:
+       statements(s)
+   statements(s)</code></pre>
+
+
+
+<p>Syntax of the nested while loop statement in the <a href="https://www.skillvertex.com/blog/python-tutorial/" data-type="post" data-id="6852">Python Programming language</a> is given below:</p>
+
+
+
+<pre class="wp-block-code"><code>while expression:
+   while expression: 
+       statement(s)
+   statement(s)</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<p>Here,  it is possible to create <a href="https://www.skillvertex.com/blog/python-nested-if-statements/" data-type="post" data-id="7159">nested loops</a> with the triangular pattern of numbers. It will repeat from 1 to 4 according to the iteration number. The final output will look like a Pyramid-like pattern of numbers.</p>
+
+
+
+<pre class="wp-block-code"><code># Example 1: Nested for loops
+for i in range(3):
+    for j in range(4):
+        print(f"({i}, {j})")</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>(0, 0)
+(0, 1)
+(0, 2)
+(0, 3)
+(1, 0)
+(1, 1)
+(1, 2)
+(1, 3)
+(2, 0)
+(2, 1)
+(2, 2)
+(2, 3)
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-continue-statement-in-python">What is Continue Statement in Python?</h2>
+
+
+
+<p>The <a href="https://www.skillvertex.com/blog/continue-statement-in-c/" data-type="post" data-id="2295">continue statement </a>will return with the control to the beginning of the loop. It will neglect the rest of the code inside the loop for the current iteration and then go to the next iteration.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>for i in range(5):
+if i == 2:
+print("Skipping iteration for i =", i)
+continue
+print("Processing iteration for i =", i)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Processing iteration for i = 0
+Processing iteration for i = 1
+Skipping iteration for i = 2
+Processing iteration for i = 3
+Processing iteration for i = 4
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-break-statement-in-python">What is a Break Statement in Python?</h2>
+
+
+
+<p>The <a href="https://www.skillvertex.com/blog/break-statement-in-c/" data-type="post" data-id="2014">break statement </a>in Python will bring the control out of the Loop. It functions to exit the loop prematurely.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using break statement
+for i in range(5):
+    if i == 3:
+        print("Breaking loop for i =", i)
+        break
+    print("Processing iteration for i =", i)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Processing iteration for i = 0
+Processing iteration for i = 1
+Processing iteration for i = 2
+Breaking loop for i = 3
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-pass-statement-in-python">What is a Pass Statement in  Python?</h2>
+
+
+
+<p> The <a href="https://www.skillvertex.com/blog/how-arrays-are-passed-to-functions-in-c-c/" data-type="post" data-id="2612">Pass Statement</a> in Python will write the empty loops. It functions for empty control statements, functions, and classes.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Example using pass statement
+for i in range(5):
+    if i == 2:
+        print("Doing nothing for i =", i)
+        pass
+    else:
+        print("Processing iteration for i =", i)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Processing iteration for i = 0
+Processing iteration for i = 1
+Doing nothing for i = 2
+Processing iteration for i = 3
+Processing iteration for i = 4
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, this article summarizes the use of  Loops in Python Programming Language. It has also included &#8216;<strong>For loop</strong>&#8216;, &#8216;<strong>while loop</strong>&#8216;, break statement, and Nested Loops along with the example for your reference.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-for-loops-fa-qs">Python For Loops- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1708067220181" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.  What are I and J in Python for loop?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans They are referred to as the variable name in Python.</p>
+
+</div>
+</div>
+<div id="faq-question-1708067228666" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.  What is the I in a loop called?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.  I is referred to the variable name that has a current array index in each of the loop iterations.</p>
+
+</div>
+</div>
+<div id="faq-question-1708067240813" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is meant by list in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The list is considered as the data structure in Python that is mutable, changeable, and ordered sequence of elements.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-for-loops/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

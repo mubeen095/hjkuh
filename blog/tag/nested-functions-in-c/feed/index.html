@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Nested functions in C</title>
+	<atom:link href="https://www.skillvertex.com/tag/nested-functions-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:23:20 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Nested functions in C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Nested Functions In C</title>
+		<link>https://www.skillvertex.com/blog/nested-functions-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/nested-functions-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:23:20 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Nested functions in C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2555</guid>
+
+					<description><![CDATA[Nested Functions In C In C programming, we can talk about something called &#8220;nested functions.&#8221; It&#8217;s like having a smaller function inside a bigger one. However, in C, these nested functions work a bit differently than in some other languages. They can&#8217;t do everything you might expect, and they have some rules to follow. This ... <a title="Nested Functions In C" class="read-more" href="https://www.skillvertex.com/blog/nested-functions-in-c/" aria-label="More on Nested Functions In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#nested-functions-in-c">Nested Functions In C</a></li><li ><a href="#nested-function-and-lexical-scoping">Nested Function And Lexical Scoping </a></li><li ><a href="#example-1-to-illustrate-the-nested-function-in-c"> Example 1:  To illustrate the Nested Function in C</a></li><li ><a href="#example-2-nested-function-with-the-help-of-gcc-extension">Example 2: Nested Function with the help of GCC extension</a></li><li ><a href="#faq-nested-functions-in-c">FAQ- Nested functions in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="nested-functions-in-c">Nested Functions In C</h2>
+
+
+
+<p>In C programming, we can talk about something called &#8220;nested functions.&#8221; It&#8217;s like having a smaller function inside a bigger one. However, in C, these nested functions work a bit differently than in some other languages. They can&#8217;t do everything you might expect, and they have some rules to follow. This article will explain what nested functions in C are all about and how they work.</p>
+
+
+
+<h2 class="wp-block-heading" id="nested-function-and-lexical-scoping">Nested Function And Lexical Scoping </h2>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Nested Function</strong>: In programming, a nested function refers to a function defined inside another function. In some programming languages, like Python or JavaScript, nested functions can access variables from their containing (parent) function. However, in C, true nested functions are not supported. You can declare a function inside another function, but it won&#8217;t have access to the local variables of the containing function.</li>
+
+
+
+<li><strong>Lexical Scoping</strong>: Lexical scoping, also known as static scoping, is a way to determine the scope (visibility) of variables in a program. In lexical scoping, the scope of a variable is determined by its location in the source code, and it can access variables from its containing function. While C does have lexical scoping for variables, it doesn&#8217;t extend this feature to nested functions.</li>
+</ol>
+
+
+
+<p> In C, you can declare a function inside another function, but this is not the same as true nested functions with lexical scoping. The inner function in C can only access global variables from the containing module, not the local variables of the containing function. This limitation is due to how C handles variable scope.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-1-to-illustrate-the-nested-function-in-c"> Example 1:  To illustrate the Nested Function in C</h2>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate the 
+// concept of Nested function. 
+#include &lt;stdio.h&gt; 
+int main(void) 
+{ 
+    printf("Main"); 
+    int fun() 
+    { 
+        printf("fun"); 
+  
+        // defining view() function inside fun() function. 
+        int view() 
+        { 
+            printf("view"); 
+        } 
+        return 1; 
+    } 
+    view(); 
+} </code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Compile time error: undefined reference to `view'
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-2-nested-function-with-the-help-of-gcc-extension">Example 2: Nested Function with the help of GCC extension</h2>
+
+
+
+<p>In GCC (GNU C Compiler), there is an extension that allows you to declare nested functions. However, to use this extension, you need to start the declarations of these nested functions with the &#8220;auto&#8221; keyword as a prefix. This extension enables you to define functions inside other functions, which is not a standard feature in C but can be useful in certain programming scenarios.</p>
+
+
+
+<pre class="wp-block-code"><code>
+// C program of nested function 
+// with the help of gcc extension 
+#include &lt;stdio.h&gt; 
+int main(void) 
+{ 
+    auto int view(); // declare function with auto keyword 
+    view(); // calling function 
+    printf("Main\n"); 
+  
+    int view() 
+    { 
+        printf("View\n"); 
+        return 1; 
+    } 
+  
+    printf("Skillvertex"); 
+    return 0; 
+} </code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>view
+Main
+Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-nested-functions-in-c">FAQ- Nested functions in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696834826902" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How to use Nested functions in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In standard C, you cannot define a function within another function. While you can declare a function within a function in C, it is not considered a true nested function as it doesn&#8217;t have access to the local variables of the containing function.</p>
+
+</div>
+</div>
+<div id="faq-question-1696834841728" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.What is a Nested Function with an example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A nested function is like a function within a function. You can have them in your program, and what makes them special is that they can work with and change the variables that belong to their parent functions. This makes them different from other types of functions.</p>
+
+</div>
+</div>
+<div id="faq-question-1696834848783" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is Nested structure in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C programming, a nested structure is a structure that is declared within another structure. It allows you to create complex data structures by combining multiple structures.  Syntax: struct name_1</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/nested-functions-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

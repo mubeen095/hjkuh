@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Literals In C/C++ With Examples</title>
+	<atom:link href="https://www.skillvertex.com/tag/literals-in-c-c-with-examples/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 06:55:53 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Literals In C/C++ With Examples</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Literals In C/C++ With Examples</title>
+		<link>https://www.skillvertex.com/blog/literals-in-c-c-with-examples/</link>
+					<comments>https://www.skillvertex.com/blog/literals-in-c-c-with-examples/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 06:55:53 +0000</pubDate>
+				<category><![CDATA[C++ Programming]]></category>
+		<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Literals In C/C++ With Examples]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=1972</guid>
+
+					<description><![CDATA[Literals In C/C++ With Examples Literals in the C and C++ programming languages are fundamental building blocks that represent constant values directly in code. These constants can include integers, floating-point numbers, characters, and more. Literals are essential for initializing variables, specifying values in expressions, and conveying data directly within the source code. They provide a ... <a title="Literals In C/C++ With Examples" class="read-more" href="https://www.skillvertex.com/blog/literals-in-c-c-with-examples/" aria-label="More on Literals In C/C++ With Examples">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#literals-in-c-c-with-examples">Literals In C/C++ With Examples</a></li><li ><a href="#literals-in-c-c">Literals In C/C++</a></li><li ><a href="#1-integer-literals">1.Integer Literals </a></li><li ><a href="#2-floating-point-literals">2) Floating-Point Literals</a></li><li ><a href="#3-character-literal">3) Character Literal</a></li><li ><a href="#4-string-literals">4) String Literals</a></li><li ><a href="#5-boolean-literals">5) Boolean Literals</a></li><li ><a href="#faq-literals-in-c-c-with-examples">FAQ- Literals In C/C++ With Examples</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="literals-in-c-c-with-examples">Literals In C/C++ With Examples</h2>
+
+
+
+<p>Literals in the C and C++ programming languages are fundamental building blocks that represent constant values directly in code. These constants can include integers, floating-point numbers, characters, and more. Literals are essential for initializing variables, specifying values in expressions, and conveying data directly within the source code. They provide a means to express concrete values without requiring variables or complex computations. In this exploration of literals in C/C++, we will delve into the various types of literals and provide illustrative examples to demonstrate their usage and significance in these programming languages.</p>
+
+
+
+<h2 class="wp-block-heading" id="literals-in-c-c">Literals In C/C++</h2>
+
+
+
+<p>Literals in programming, whether in C or C++, are indeed constant values assigned to variables that remain fixed and unmodifiable throughout the program&#8217;s execution. Unlike variables, literals are not associated with references and directly hold their values in memory. In common usage, the terms &#8220;constants&#8221; and &#8220;literals&#8221; are often used interchangeably.</p>
+
+
+
+<p>For instance, consider the expression &#8220;const int x = 5;,&#8221; where the value 5 is a constant integer literal. In the world of C, there are four primary types of literals, while in C++, there are five:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Integer Literal:</strong> Used to represent whole numbers, such as <code>42</code>.</li>
+
+
+
+<li><strong>Float Literal:</strong> Represents decimal numbers with a fractional part, like <code>3.14</code>.</li>
+
+
+
+<li><strong>Character Literal:</strong> Represents a single character enclosed in single quotes, such as <code>'A'</code>.</li>
+
+
+
+<li><strong>String Literal:</strong> Represents a sequence of characters enclosed in double quotes, like <code>"Hello, World!"</code>.</li>
+
+
+
+<li><strong>Boolean Literal (C++):</strong> Represents either <code>true</code> or <code>false</code>, indicating logical values in C++.</li>
+</ol>
+
+
+
+<p>These literals play a pivotal role in coding by providing a concise way to embed fixed values directly into the source code, enhancing readability and maintainability.</p>
+
+
+
+<h2 class="wp-block-heading" id="1-integer-literals">1.Integer Literals </h2>
+
+
+
+<p>Integer literals serve as a means to represent and store integer values in programming. They can be expressed in two primary types:</p>
+
+
+
+<p>A) <strong>Prefixes:</strong> The use of prefixes with integer literals indicates the base or radix in which the literal is to be interpreted or read. These prefixes provide information about the numeric base of the integer value, which can be essential when working with numbers in different bases.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>0x10 = 16
+
+Because 0x prefix represents a HexaDecimal base. So 10 in HexaDecimal is 16 in Decimal. Hence the value 16.</code></pre>
+
+
+
+<p><strong>Integer Literals are of 2 types:</strong></p>
+
+
+
+<p>a. <strong>Decimal-literal(base 10)</strong></p>
+
+
+
+<p>It consists of a non-zero decimal digit followed by zero or more decimal digits, where decimal digits include the numbers 0 through 9. This is the common representation for integers in these programming languages, allowing you to express a wide range of positive integer values.</p>
+
+
+
+<p>Example:</p>
+
+
+
+<pre class="wp-block-code"><code>56, 78</code></pre>
+
+
+
+<p><strong>&nbsp;b. Octal-literal(base 8):</strong></p>
+
+
+
+<p>It begins with a &#8216;0&#8217; (zero) followed by zero or more octal digits, where octal digits include the numbers 0 through 7. This representation allows you to specify integer values in octal base, which is base 8. Octal literals are less commonly used than decimal literals but can be useful in certain situations, especially when dealing with permissions and bit manipulation.</p>
+
+
+
+<p>Example:</p>
+
+
+
+<pre class="wp-block-code"><code>045, 076, 06210</code></pre>
+
+
+
+<p><strong>d. Binary-literal(base 2)</strong></p>
+
+
+
+<p>It starts with either &#8216;0b&#8217; or &#8216;0B&#8217; followed by one or more binary digits, which are 0 and 1. This notation is used to represent integer values in binary base, which is base 2. Binary literals are valuable for expressing binary-encoded data or when working with low-level bit manipulation operations.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>0b101, 0B111</code></pre>
+
+
+
+<p>B) Suffix</p>
+
+
+
+<p>Suffixes are added to the literal to specify its data type</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>12345678901234LL 
+
+indicates a long long integer value 12345678901234 because of the suffix LL</code></pre>
+
+
+
+<p>These are represented in many ways according to their data types.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>int:</strong> No suffix is required, as an integer constant is assigned as an <code>int</code> by default.</li>
+
+
+
+<li><strong>unsigned int:</strong> Append &#8216;u&#8217; or &#8216;U&#8217; at the end of an integer constant.</li>
+
+
+
+<li><strong>long int:</strong> Add &#8216;l&#8217; or &#8216;L&#8217; at the end of an integer constant.</li>
+
+
+
+<li><strong>unsigned long int:</strong> Include &#8216;ul&#8217; or &#8216;UL&#8217; at the end of an integer constant.</li>
+
+
+
+<li><strong>long long int:</strong> Use &#8216;ll&#8217; or &#8216;LL&#8217; as a suffix for an integer constant.</li>
+
+
+
+<li><strong>unsigned long long int:</strong> Employ &#8216;ull&#8217; or &#8216;ULL&#8217; as a suffix for an integer constant.</li>
+</ul>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt;
+  
+int main()
+{
+  
+    // constant integer literal
+    const int intVal = 10;
+  
+    printf("Integer Literal:%d \n", intVal);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output <br></p>
+
+
+
+<pre class="wp-block-code"><code>Integer Literal:10
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="2-floating-point-literals">2) Floating-Point Literals</h2>
+
+
+
+<p>Floating-point literals are used to represent and store real numbers, which consist of an integer part, real part, fractional part, and exponential part. These literals can be represented in either decimal form or exponential form.</p>
+
+
+
+<p>When creating floating-point literals, it&#8217;s essential to adhere to certain rules:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Decimal Form:</strong> If representing a floating-point number in decimal form, it should include the decimal point, exponent part, or both. Failing to include these components may result in an error.</li>
+
+
+
+<li><strong>Exponential Form:</strong> When using exponential form, ensure that it includes the integer part, fractional part, or both, as required. Omitting any of these parts can lead to an error.</li>
+</ol>
+
+
+
+<p>Adhering to these guidelines helps maintain the accuracy and validity of floating-point literals, preventing potential errors in the code.</p>
+
+
+
+<p> Floating-point literal representations are shown below:</p>
+
+
+
+<p><strong>Valid Floating Literals:</strong></p>
+
+
+
+<pre class="wp-block-code"><code>10.125
+1.215-10L
+10.5E-3</code></pre>
+
+
+
+<p><strong>Invalid Floating Literals:</strong></p>
+
+
+
+<pre class="wp-block-code"><code>123E
+1250f
+0.e879</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;iostream&gt;
+using namespace std;
+  
+int main()
+{
+    // Real literal
+    const float floatVal = 4.14;
+  
+    cout &lt;&lt; "Floating-point literal: "
+         &lt;&lt; floatVal &lt;&lt; "\n";
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Floating point literal: 4.14
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="3-character-literal">3) Character Literal</h2>
+
+
+
+<p>Character literals are used to store a single character enclosed within single quotes (&#8221;). To store multiple characters, you would typically use a character array. Attempting to store more than one character within single quotes results in a warning, and only the last character of the literal is considered.</p>
+
+
+
+<p>There are two primary representations of character literals:</p>
+
+
+
+<p>A. <strong>char Type:</strong> This representation is used to store normal character literals or narrow-character literals. It is supported by both C and C++. Character literals of this type can hold a single character within single quotes and are widely used in both languages.</p>
+
+
+
+<p>Example:</p>
+
+
+
+<pre class="wp-block-code"><code>// For C
+char chr = 'G';
+
+// For C++
+char chr = 'G';</code></pre>
+
+
+
+<p>B. <strong>wchar_t type:</strong> Unlike the &#8216;char&#8217; type, &#8216;wchar_t&#8217; is used to represent wide-character literals and is supported only in C++. When a character is followed by the &#8216;L&#8217; prefix, it indicates that the literal should be stored as a &#8216;wchar_t,&#8217; representing a wide-character literal. This is particularly useful for dealing with wide characters and character sets that require a larger storage space than regular narrow characters.</p>
+
+
+
+<pre class="wp-block-code"><code>// Not Supported For C
+
+// For C++
+wchar_t chr = L'G';</code></pre>
+
+
+
+<p>Example:</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt;
+  
+int main()
+{
+    // constant char literal
+    const char charVal = 'A';
+  
+    printf("Character Literal: %c\n",
+        charVal);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output :</p>
+
+
+
+<pre class="wp-block-code"><code>Character Literal: A</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="4-string-literals">4) String Literals</h2>
+
+
+
+<p>String literals indeed serve as containers for multiple characters and are enclosed within double quotes (&#8220;&#8221;). Unlike character literals, string literals can store sequences of characters, making them suitable for representing text and longer data.</p>
+
+
+
+<p>String literals can also handle special characters and escape sequences, which are denoted by backslashes, such as &#8216;\n&#8217; for a newline or &#8216;\t&#8217; for a tab. This flexibility allows you to include various characters and control codes within a string.</p>
+
+
+
+<pre class="wp-block-code"><code>char greeting&#91;] = "Hello, World!";</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    // String literal
+    char greeting&#91;] = "Hello, World!";
+
+    // Printing the string literal
+    printf("Message: %s\n", greeting);
+
+    return 0;
+}
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<p>Hello, World!</p>
+
+
+
+<h2 class="wp-block-heading" id="5-boolean-literals">5) Boolean Literals</h2>
+
+
+
+<p>.Boolean literals are specific to C++ and are used to represent boolean data types. These literals can have two values:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>true:</strong> This represents the &#8220;True&#8221; value and should not be considered equal to the integer 1, as it&#8217;s a distinct boolean value.</li>
+
+
+
+<li><strong>false:</strong> This represents the &#8220;False&#8221; value and should not be considered equal to the integer 0, as it&#8217;s a distinct boolean value.</li>
+</ol>
+
+
+
+<p>Boolean literals are essential for writing clear and unambiguous code in C++ when working with boolean data types, making the code more expressive and readable.</p>
+
+
+
+<pre class="wp-block-code"><code>// C++ program to show Boolean literals
+  
+#include &lt;iostream&gt;
+using namespace std;
+  
+int main()
+{
+    const bool isTrue = true;
+    const bool isFalse = false;
+  
+    cout &lt;&lt; "isTrue? "
+        &lt;&lt; isTrue &lt;&lt; "\n";
+    cout &lt;&lt; "isFalse? "
+        &lt;&lt; isFalse &lt;&lt; "\n";
+  
+    return 0;
+}</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>isTrue? 1
+isFalse? 0
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-literals-in-c-c-with-examples">FAQ- Literals In C/C++ With Examples</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1695117248604" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is literals with example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Literals are indeed constant values that are directly embedded in a program&#8217;s code and can be assigned to variables. Your example, &#8220;int count = 0;&#8221;, demonstrates this concept effectively.<br />In this statement, &#8220;int count&#8221; is the declaration of an integer variable named &#8216;count,&#8217; and the literal &#8216;0&#8217; directly represents the value assigned to this variable, which, in this case, is zero. Literals are a fundamental part of programming, helping to initialize variables and express fixed values within the code.</p>
+
+</div>
+</div>
+<div id="faq-question-1695117313584" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. How are literals stored in c?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.String literals are indeed stored in the program&#8217;s memory as a sequence of characters, and they are terminated by a null character (&#8216;\0&#8217;) with an ASCII value of 0. This null character marks the end of the string, allowing functions that operate on strings to determine where the string ends.</p>
+
+</div>
+</div>
+<div id="faq-question-1695117437193" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Which are examples of numeric literals?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.Examples for Numeric literals are  <strong>1 , .</strong> <strong>2 , 3.4 , -5 , -6.78 , +9.10</strong> . Approximate-value numeric literals are represented in scientific notation with a mantissa and exponent.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/literals-in-c-c-with-examples/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

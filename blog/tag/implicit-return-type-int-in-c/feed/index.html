@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Implicit Return Type Int In C&#8217;</title>
+	<atom:link href="https://www.skillvertex.com/tag/implicit-return-type-int-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:22:34 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Implicit Return Type Int In C&#8217;</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Implicit Return Type Int In C</title>
+		<link>https://www.skillvertex.com/blog/implicit-return-type-int-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/implicit-return-type-int-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:22:34 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Implicit Return Type Int In C']]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2354</guid>
+
+					<description><![CDATA[Implicit Return Type Int In C In the C programming language, a unique feature that sets it apart from many other programming languages is the concept of an implicit return type of int. Unlike languages where a function&#8217;s return type must be explicitly defined, C allows for a default return type of int when none ... <a title="Implicit Return Type Int In C" class="read-more" href="https://www.skillvertex.com/blog/implicit-return-type-int-in-c/" aria-label="More on Implicit Return Type Int In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#implicit-return-type-int-in-c">Implicit Return Type Int In C</a></li><li ><a href="#to-find-the-output-of-the-program">To Find the Output Of the Program </a></li><li ><a href="#faq-implicit-return-type-int-in-c">FAQ- Implicit Return Type Int In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="implicit-return-type-int-in-c">Implicit Return Type Int In C</h2>
+
+
+
+<p>In the C programming language, a unique feature that sets it apart from many other programming languages is the concept of an implicit return type of <code>int</code>. Unlike languages where a function&#8217;s return type must be explicitly defined, C allows for a default return type of <code>int</code> when none is specified. This means that if you don&#8217;t explicitly declare the return type of a function, the C compiler assumes it to be an integer (<code>int</code>). This implicit return type is a fundamental aspect of C&#8217;s syntax and can lead to concise code when used judiciously. In this discussion, we will explore the implications and applications of the implicit return type <code>int</code> in C programming.</p>
+
+
+
+<h2 class="wp-block-heading" id="to-find-the-output-of-the-program">To Find the Output Of the Program </h2>
+
+
+
+<p>Find Out the Output of the following C program</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt; 
+fun(int x) 
+{ 
+    return x*x; 
+} 
+int main(void) 
+{ 
+    printf("%d", fun(10)); 
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>100</code></pre>
+
+
+
+<p>Omitting the return type of a function is allowed in some older C standards like C89, and the compiler assumes an implicit return type of <code>int</code> in such cases.  This behavior is not allowed in the C99 standard, and specifying a return type is required.</p>
+
+
+
+<p>In C++, the omission of a return type is not allowed in modern C++ standards. All C++ functions must specify their return type. While some older C++ compilers, like Turbo C++, might have allowed it, adhering to modern C++ standards (e.g., C++11 and beyond) requires specifying the return type for all functions.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-implicit-return-type-int-in-c">FAQ- Implicit Return Type Int In C</h2>
+
+
+<div class="gb-container gb-container-beda9d3b">
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696572185657" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.What is the implicit return type in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, when a return type is not provided for a function, the compiler defaults to assuming an implicit return type of <code>int</code>. However, it&#8217;s important to note that while the C89 standard permitted the omission of the return type for functions returning int , the C99 standard no longer allows this omission. As a result, you must specify a return type for all functions, even when it is <code>int</code>.</p>
+
+</div>
+</div>
+<div id="faq-question-1696572194135" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the implicit return type?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In object-oriented languages like C++ and Java, class constructors implicitly return the current instance (object) of the class they are constructing. Thus, the implicit return type of a class constructor is the class type itself.</p>
+
+</div>
+</div>
+<div id="faq-question-1696572207470" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is implicit vs explicit in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Implicit type conversion, often referred to as &#8220;type coercion,&#8221; occurs automatically by the compiler when there are multiple data types in an expression. It&#8217;s done without the need for the user to specify it explicitly. The compiler tries to make sense of the mixed types and performs conversions as needed to produce a consistent result.<br />On the other hand, explicit type casting in C (also known as &#8220;type casting&#8221; or &#8220;type conversion&#8221;) must be explicitly defined by the user. It involves temporarily changing the data type of a variable to another data type using casting operators. This is typically done when the user wants to enforce a specific type conversion that the compiler wouldn&#8217;t perform implicitly.</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<p>In both cases, the return type (<code>int</code>) is explicitly stated. This is considered good practice for code readability and maintainability, and it adheres to modern C and C++ standards.</p>
+<div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/implicit-return-type-int-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

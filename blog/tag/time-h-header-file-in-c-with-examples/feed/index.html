@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Time.H Header File In C With Examples</title>
+	<atom:link href="https://www.skillvertex.com/tag/time-h-header-file-in-c-with-examples/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 06 Mar 2024 11:41:23 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Time.H Header File In C With Examples</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Time.H Header File In C With Examples</title>
+		<link>https://www.skillvertex.com/blog/time-h-header-file-in-c-with-examples/</link>
+					<comments>https://www.skillvertex.com/blog/time-h-header-file-in-c-with-examples/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 11:41:23 +0000</pubDate>
+				<category><![CDATA[Interview Prep]]></category>
+		<category><![CDATA[Time.H Header File In C With Examples]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3679</guid>
+
+					<description><![CDATA[Time.H Header File In C With Examples The time.h header file in C contains functions for obtaining and manipulating date and time information. It introduces three time-related data types: 2.time_t: 3.struct tm: In summary, the time.h header file facilitates time-related operations in C programming, offering data types like clock_t and time_t for specific time representations, ... <a title="Time.H Header File In C With Examples" class="read-more" href="https://www.skillvertex.com/blog/time-h-header-file-in-c-with-examples/" aria-label="More on Time.H Header File In C With Examples">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#time-h-header-file-in-c-with-examples">Time.H Header File In C With Examples</a></li><li ><a href="#pre-defined-functions-in-time-h">Pre-defined functions in time.h</a></li><li ><a href="#example">Example</a><ul><li ><a href="#1-program-to-print-the-date-and-time-of-the-system">1.Program to print the date and time of the system</a></li><li ><a href="#2-program-to-print-utc-coordinated-universal-time-of-the-system">  2. Program to print UTC (Coordinated Universal Time) of the system</a></li><li ><a href="#3-program-to-calculate-the-time-taken-to-add-two-numbers-program-note-if-user-gives-input-slowly-that-time-also-add-up-for-total-execution-time">    3. Program to calculate the time taken to add two numbers program.               Note: If user gives input slowly that time also add up for total execution time. </a></li><li ><a href="#4-program-to-find-the-clock-ticks">4. Program to find the clock ticks</a></li><li ><a href="#5-program-to-print-time-as-hour-minute-returned-by-asctime-file">5. Program to print time as hour: minute returned by asctime() file</a></li></ul></li><li ><a href="#faq-time-h-header-file-in-c-with-examples">FAQ- Time.H Header File In C With Examples</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="time-h-header-file-in-c-with-examples">Time.H Header File In C With Examples</h2>
+
+
+
+<p>The <code>time.h</code> header file in C contains functions for obtaining and manipulating date and time information. It introduces three time-related data types:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong><code>clock_t</code>:</strong></li>
+</ol>
+
+
+
+<ul class="wp-block-list">
+<li>Represents the processor time used by the program as an integer.</li>
+
+
+
+<li>It is a part of the calendar time, measuring the CPU time taken for the execution of a program.</li>
+</ul>
+
+
+
+<p>2.<strong><code>time_t</code>:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Represents the calendar time as an integer.</li>
+
+
+
+<li>It is a part of the calendar time and is commonly used to store time values, often representing the number of seconds elapsed since a specific epoch.</li>
+</ul>
+
+
+
+<p>3.<strong><code>struct tm</code>:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Holds the date and time information in a structured format.</li>
+
+
+
+<li>Contains members such as seconds, minutes, hours, day of the month, month, year, and more.</li>
+
+
+
+<li>Provides a convenient way to access and manipulate individual components of a date and time.</li>
+</ul>
+
+
+
+<p>In summary, the <code>time.h</code> header file facilitates time-related operations in C programming, offering data types like <code>clock_t</code> and <code>time_t</code> for specific time representations, and <code>struct tm</code> for a structured approach to handling date and time information.</p>
+
+
+
+<pre class="wp-block-code"><code>struct tm {
+    // seconds,  range 0 to 59
+    int tm_sec;
+ 
+    // minutes, range 0 to 59
+    int tm_min;
+ 
+    // hours, range 0 to 23
+    int tm_hour;
+ 
+    // day of the month, range 1 to 31
+    int tm_mday;
+ 
+    // month, range 0 to 11
+    int tm_mon;
+ 
+    // The number of years since 1900
+    int tm_year;
+ 
+    // day of the week, range 0 to 6
+    int tm_wday;
+  // day in the year, range 0 to 365
+    int tm_yday;
+ 
+    // daylight saving time
+    int tm_isdst;
+}</code></pre>
+
+
+
+<p>This will have a CLOCKS_PER_SEC macro that will contain the number of times the system clock ticks per second.</p>
+
+
+
+<h2 class="wp-block-heading" id="pre-defined-functions-in-time-h">Pre-defined functions in time.h</h2>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th>S.No</th><th>Function Name</th><th>Explanation</th></tr></thead><tbody><tr><td>1.</td><td>asctime()</td><td>This function will  returns the date and time in the format&nbsp;<br>day month date hours:minutes:seconds year.<br>Eg: Sat Jul 27 11:26:03 2019.<br>asctime() function returns a string by taking struct tm variable as a parameter.</td></tr><tr><td>2.</td><td>clock()</td><td>This function will returns the processor time consumed by a program</td></tr><tr><td>3.</td><td>ctime()</td><td>ctime() will return the date and time in the format<br>day month hours:minutes:seconds year<br>Eg: Sat Jul 27 11:26:03 2019<br>time is printed based on the pointer returned by Calendar Time</td></tr><tr><td>4.</td><td><a href="https://www.geeksforgeeks.org/difftime-c-library-function/" rel="nofollow noopener" target="_blank">difftime()</a></td><td>This function returns the difference between the time.</td></tr><tr><td>5.</td><td><a href="https://www.geeksforgeeks.org/gmtime-function-in-c-c/" rel="nofollow noopener" target="_blank">gmtime()</a></td><td>This function will print the UTC (Coordinated Universal Time) Time and date.<br>The format for both gmtime() and asctime() is the same.</td></tr><tr><td>6.</td><td>mktime()<br></td><td>This function will print the UTC (Coordinated Universal Time) Time and date.<br>Format for both gmtime() and asctime() is the same.</td></tr><tr><td>7.</td><td>time()<br></td><td>This mktime() will returns the calendar-time equivalent using struct tm.</td></tr><tr><td>8.</td><td>strftime()<br></td><td>This  strftime() will   format the string returned by other time functions using different format specifiers<br></td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="example">Example</h2>
+
+
+
+<h3 class="wp-block-heading" id="1-program-to-print-the-date-and-time-of-the-system">1.Program to print the date and time of the system</h3>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+int main(void)
+{
+    struct tm* ptr;
+    time_t t;
+    t = time(NULL);
+    ptr = localtime(&amp;t);
+    printf("%s", asctime(ptr));
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Tue Aug  6 09:00:29 2019
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="2-program-to-print-utc-coordinated-universal-time-of-the-system">&nbsp; 2. Program to print UTC (Coordinated Universal Time) of the system</h3>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+int main(void)
+{
+    struct tm* ptr;
+    time_t t;
+    t = time(NULL);
+    ptr = gmtime(&amp;t);
+    printf("%s", asctime(ptr));
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Tue Aug  6 09:00:31 2019</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="3-program-to-calculate-the-time-taken-to-add-two-numbers-program-note-if-user-gives-input-slowly-that-time-also-add-up-for-total-execution-time">&nbsp;&nbsp; &nbsp;3. Program to calculate the time taken to add two numbers program.&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>Note:</strong>&nbsp;If user gives input slowly that time also add up for total execution time.&nbsp;</h3>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+int main(void)
+{
+    time_t start, end;
+    start = time(NULL);
+    int a, b;
+    scanf("%d %d", &amp;a, &amp;b);
+    printf("Sum of %d and %d is %d\n",
+           a, b, a + b);
+    end = time(NULL);
+    printf("Time taken to print sum is %.2f seconds",
+           difftime(end, start));
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Sum of 4196144 and 0 is 4196144
+Time taken to print sum is 0.00 seconds</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="4-program-to-find-the-clock-ticks">4. Program to find the clock ticks</h3>
+
+
+
+<pre class="wp-block-code"><code>
+
+#include &lt;math.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+ 
+int frequency_of_primes(int n)
+{
+    // This function checks the number of
+    // primes less than the given parameter
+    int i, j;
+    int freq = n - 1;
+    for (i = 2; i &lt;= n; ++i)
+        for (j = sqrt(i); j &gt; 1; --j)
+            if (i % j == 0) {
+                --freq;
+                break;
+            }
+    return freq;
+}
+ 
+int main()
+{
+    clock_t t;
+    int f;
+    t = clock();
+    f = frequency_of_primes(9999);
+    printf("The number of primes lower"
+           " than 10, 000 is: %d\n",
+           f);
+    t = clock() - t;
+    printf("No. of clicks %ld clicks (%f seconds).\n",
+           t, ((float)t) / CLOCKS_PER_SEC);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The number of primes lower than 10, 000 is: 1229
+No. of clicks 2837 clicks (0.002837 seconds).</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="5-program-to-print-time-as-hour-minute-returned-by-asctime-file">5. Program to print time as hour: minute returned by asctime() file</h3>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+int main()
+{
+    time_t rawtime;
+    struct tm* timeinfo;
+ 
+    // Used to store the time
+    // returned by localetime() function
+    char buffer&#91;80];
+ 
+    time(&amp;rawtime);
+    timeinfo = localtime(&amp;rawtime);
+    strftime(buffer, 80,
+             "Time is %I:%M%p.",
+             timeinfo);
+ 
+    // strftime() function stores the
+    // current time as Hours : Minutes
+    //%I %M and %p-&gt; format specifier
+    // of Hours minutes and am/pm respectively*/
+ 
+    // prints the formatted time
+    puts(buffer);
+  return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Time is 09:00AM.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-time-h-header-file-in-c-with-examples">FAQ- Time.H Header File In C With Examples</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1700645761062" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the header for time in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>time.h</code> header file in C and C++ helps with handling time and date operations. It provides functions and structures to work with time-related tasks.</p>
+
+</div>
+</div>
+<div id="faq-question-1700645770556" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is time_t structure in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>time.h</code> header file in C and C++ helps with handling time and date operations. It provides functions and structures to work with time-related tasks.</p>
+
+</div>
+</div>
+<div id="faq-question-1700645781226" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is header file in C with example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A C header file is indeed a text file containing C code, typically with a .h file extension. Inclusion in a program is done using the <code>#include</code> preprocessor directive. This allows you to include the contents of the header file in your C program, making functions, declarations, and other code available for use</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/time-h-header-file-in-c-with-examples/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

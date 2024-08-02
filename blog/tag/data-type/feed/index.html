@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>data type</title>
+	<atom:link href="https://www.skillvertex.com/tag/data-type/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 Mar 2024 12:46:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>data type</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python &#8211; Tuples</title>
+		<link>https://www.skillvertex.com/blog/python-tuples/</link>
+					<comments>https://www.skillvertex.com/blog/python-tuples/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:54:50 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[data type]]></category>
+		<category><![CDATA[python programming]]></category>
+		<category><![CDATA[Python tuple]]></category>
+		<category><![CDATA[tuple]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=8162</guid>
+
+					<description><![CDATA[Python tuple is a collection of objects and is separated by commas. It will work similarly to the Python list regarding indexing, nested objects, and repetition. Read this article to learn more about Python-Tuples. What is Python Tuples? Python tuple will allow you to store multiple items into a single variable. Whereas, the tuple is ... <a title="Python &#8211; Tuples" class="read-more" href="https://www.skillvertex.com/blog/python-tuples/" aria-label="More on Python &#8211; Tuples">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-python-tuples">What is Python Tuples?</a></li><li ><a href="#what-are-tuple-items">What are Tuple Items?</a></li><li ><a href="#what-is-an-ordered-tuple">What is an Ordered Tuple?</a></li><li ><a href="#example-to-show-that-duple-allows-duplicates">Example &#8211; To show that duple allows duplicates</a></li><li ><a href="#example-to-determine-the-tuple-length">Example-To determine the Tuple Length</a></li><li ><a href="#example-to-create-the-tuple-with-one-item">Example- To create the Tuple With One Item</a></li><li ><a href="#example-to-create-the-data-types-for-tuple-items">Example &#8211; to create the Data Types for  Tuple items</a></li><li ><a href="#what-is-type">What is type()</a></li><li ><a href="#what-is-a-tuple-constructor">What is a Tuple() Constructor?</a></li><li ><a href="#what-are-the-python-collection-data-types">What are the Python Collection Data Types?</a></li><li ><a href="#python-tuples-fa-qs">Python &#8211; Tuples-  FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python tuple is a collection of objects and is separated by commas. It will work similarly to the Python list regarding indexing, nested objects, and repetition. Read this article to learn more about Python-Tuples.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-tuples">What is Python Tuples?</h2>
+
+
+
+<p>Python tuple will allow you to store multiple items into a single <a href="https://www.skillvertex.com/blog/how-to-print-a-variable-name-in-c/" data-type="post" data-id="3299">variable</a>. Whereas, the tuple is considered one of the 4 built-in <a href="https://www.skillvertex.com/blog/data-types-in-c/" data-type="post" data-id="1842">data types</a> in Python. It is a collection that is mainly ordered and unchangeable. So, it will be written with the round brackets.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-tuple-items">What are Tuple Items?</h2>
+
+
+
+<p>Tuple items will be ordered, unchangeable, and can have duplicate value. These items are indexed the first item has an index of [0] and the second item will have an index of [1] etc.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-an-ordered-tuple">What is an Ordered Tuple?</h2>
+
+
+
+<p>An ordered Tuple is referred to as an item that should be in a defined order and that order won&#8217;t be changed. Tuples are also unchangeable, where they can&#8217;t be changed, added, or removed items after the tuple is created.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-to-show-that-duple-allows-duplicates">Example &#8211; To show that duple allows duplicates</h2>
+
+
+
+<pre class="wp-block-code"><code>from collections import Counter
+
+def check_duplicates(lst):
+    count = Counter(lst)
+    for item, freq in count.items():
+        if freq &gt; 1:
+            print(f"Element '{item}' appears {freq} times.")
+
+# Example list with duplicates
+my_list = &#91;1, 2, 3, 1, 4, 2, 5, 6, 3, 2]
+
+# Check for duplicates
+check_duplicates(my_list)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Element '1' appears 2 times.
+Element '2' appears 3 times.
+Element '3' appears 2 times.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-to-determine-the-tuple-length">Example-To determine the Tuple Length</h2>
+
+
+
+<pre class="wp-block-code"><code>def tuple_length(tup):
+    return len(tup)
+
+# Example tuple
+my_tuple = (1, 2, 3, 4, 5)
+
+# Find the length of the tuple
+length = tuple_length(my_tuple)
+
+# Print the length of the tuple
+print("Length of the tuple:", length)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Length of the tuple: 5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-to-create-the-tuple-with-one-item">Example- To create the Tuple With One Item</h2>
+
+
+
+<p>It is required to add the comma after the item to create the Tuple or else, it won&#8217;t be considered as the Tuple.</p>
+
+
+
+<pre class="wp-block-code"><code># Tuple with a single item
+my_tuple = (42,)  # Note the trailing comma after the single item
+
+# Output
+print("Tuple with a single item:", my_tuple)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Tuple with a single item: (42,)
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-to-create-the-data-types-for-tuple-items">Example &#8211; to create the Data Types for  Tuple items</h2>
+
+
+
+<p>Tuple items will be of any data type:</p>
+
+
+
+<pre class="wp-block-code"><code># Define a tuple with items of different data types
+my_tuple = ("apple", 42, 3.14, True, &#91;1, 2, 3])
+
+# Output the data types of tuple items
+for item in my_tuple:
+    print(f"Item: {item}, Data Type: {type(item)}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Item: apple, Data Type: &lt;class 'str'&gt;
+Item: 42, Data Type: &lt;class 'int'&gt;
+Item: 3.14, Data Type: &lt;class 'float'&gt;
+Item: True, Data Type: &lt;class 'bool'&gt;
+Item: &#91;1, 2, 3], Data Type: &lt;class 'list'&gt;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-type">What is type()</h2>
+
+
+
+<p>Tuple will be referred to as the objects with the data type in Python.</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;class 'tuple'&gt;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-tuple-constructor">What is a Tuple() Constructor?</h2>
+
+
+
+<p>The Tuple constructor will help you to make the tuple.</p>
+
+
+
+<pre class="wp-block-code"><code># Using tuple() method to create a tuple
+my_list = &#91;1, 2, 3, 4, 5]
+my_tuple = tuple(my_list)
+
+# Output
+print("Tuple created from list:", my_tuple)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Tuple created from list: (1, 2, 3, 4, 5)
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-python-collection-data-types">What are the Python Collection Data Types?</h2>
+
+
+
+<p>Python consists of  four  collection data types in Python Programming language:</p>
+
+
+
+<p><strong>List</strong>: It is referred to as the collection that is ordered and changeable. Hence, it will allow duplicate members.</p>
+
+
+
+<p><strong>Tuple</strong>: It is one among the data types that are ordered and unchangeable and will offer duplicate members.</p>
+
+
+
+<p><strong>Set</strong>: It is a collection that is unordered, unchangeable, and unindexed and has no duplicate members.</p>
+
+
+
+<p><strong>Dictionary</strong>: It refers to the collection that is ordered is changeable and has no duplicate members.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-tuples-fa-qs">Python &#8211; Tuples-  FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1710496437881" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the purpose of tuples in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Tuple will store the multiple items in the single variable.</p>
+
+</div>
+</div>
+<div id="faq-question-1710496448766" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. How are tuples stored in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Tuples will be stored in a single block of memory.</p>
+
+</div>
+</div>
+<div id="faq-question-1710496457850" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What are the two functions of a tuple?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Tuple Functions  includes len(), max(), min(), tuple().</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-tuples/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

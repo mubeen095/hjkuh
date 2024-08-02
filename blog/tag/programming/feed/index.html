@@ -1,0 +1,3678 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>programming</title>
+	<atom:link href="https://www.skillvertex.com/tag/programming/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Thu, 11 Apr 2024 12:01:22 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>programming</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python Identity Operator</title>
+		<link>https://www.skillvertex.com/blog/python-identity-operator/</link>
+					<comments>https://www.skillvertex.com/blog/python-identity-operator/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 12:01:22 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python Identity Operator]]></category>
+		<category><![CDATA[Python Operators]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6997</guid>
+
+					<description><![CDATA[The Python Identity operator will compare the objects by checking if the object belongs to the same memory location. Read this article to learn more about Python Identity Operator. What is Python Identity Operator Python operator consists of two operators such as &#8216;is&#8216;and &#8216;is not&#8216;. Both the values will be returned with the Boolean values. ... <a title="Python Identity Operator" class="read-more" href="https://www.skillvertex.com/blog/python-identity-operator/" aria-label="More on Python Identity Operator">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-python-identity-operator">What is Python Identity Operator</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-identity-operator-fa-qs"> Python Identity Operator- FAQs</a></li></ul></nav></div>
+
+
+
+<p> The <strong>Python Identity</strong> <a href="https://www.skillvertex.com/blog/python-logical-operators/" data-type="post" data-id="6978">operator</a> will compare the objects by checking if the object belongs to the same memory location. Read this article to learn more about Python  Identity Operator.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-identity-operator">What is Python Identity Operator</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-literals/" data-type="post" data-id="6953">Python </a>operator consists of two <a href="https://www.skillvertex.com/blog/python-operators/" data-type="post" data-id="6937">operators </a>such as &#8216;<strong>is</strong>&#8216;and &#8216;<strong>is not</strong>&#8216;. Both the values will be returned with the<a href="https://www.skillvertex.com/blog/python-booleans/" data-type="post" data-id="7030"> Boolean values</a>. The in-operators will check if the value comes true only if the operand object shares the same memory location.</p>
+
+
+
+<p>Furthermore, the memory location of the object will be achieved with the help of the &#8221;<strong>id()</strong>&#8221; function. Whereas, if both the<a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932"> variables</a> id() are the same, then the in operator will return with the True.</p>
+
+
+
+<pre class="wp-block-code"><code># Identity Operator - 'is'
+x = &#91;1, 2, 3]
+y = &#91;1, 2, 3]
+z = x
+
+# 'is' operator checks if both variables refer to the same object in memory
+print(x is y)  # False, because x and y refer to different objects
+print(x is z)  # True, because x and z refer to the same object
+
+# Identity Operator - 'is not'
+print(x is not y)  # True, because x and y do not refer to the same object
+print(x is not z)  # False, because x and z refer to the same object</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>False
+True
+True
+False</code></pre>
+
+
+
+<p>However, list and tuple will do<a href="https://www.skillvertex.com/blog/python-operators/" data-type="post" data-id="6937"> operations</a> very differently. The example given below contains two lists such as  &#8221;a&#8221; and &#8221;b&#8221;  with the same items and the id() varies.</p>
+
+
+
+<pre class="wp-block-code"><code>a=&#91;1,2,3]
+b=&#91;1,2,3]
+print ("id(a), id(b):", id(a), id(b))
+print ("a is b:", a is b)
+print ("b is not a:", b is not a)</code></pre>
+
+
+
+<p> Output</p>
+
+
+
+<pre class="wp-block-code"><code>id(a), id(b): 1552612704640 1552567805568
+a is b: False
+b is not a: True</code></pre>
+
+
+
+<p>The list or tuple has memory locations of individual items only and not the items themselves. Thus,  &#8221;a &#8221; consists of an address of  10,20, or 30 integer objects that are located in a particular location and will be different from the of  &#8221;b&#8221;.</p>
+
+
+
+<p> Output</p>
+
+
+
+<pre class="wp-block-code"><code>140734682034984 140734682035016 140734682035048
+140734682034984 140734682035016 140734682035048</code></pre>
+
+
+
+<p>Here, the &#8216;is&#8217; operator will return with a false value even if it contains the same numbers. This happens due to the two different locations of a  and b.</p>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, this article will improve our knowledge of the Python Identity Operator. It has also provided examples of the &#8221;is&#8221; and  &#8221;is not&#8221; operators.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-identity-operator-fa-qs"> Python Identity Operator- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707481450804" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is an identity operator in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Python  Identity operator is considered as the special comparison operator to find  if the two variables have the same object in the memory.</p>
+
+</div>
+</div>
+<div id="faq-question-1707481460278" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the symbol for the identity operator?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <sub>d</sub> will stand for  the identity function and I   for the identity matrix</p>
+
+</div>
+</div>
+<div id="faq-question-1707481468824" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is ID in Python for example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The id method will return a unique integer number for every unique value it will be worked with.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-identity-operator/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Assignment  Operators in Python</title>
+		<link>https://www.skillvertex.com/blog/assignment-operators-in-python/</link>
+					<comments>https://www.skillvertex.com/blog/assignment-operators-in-python/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 12:00:53 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[Assignment Operators in Python]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[Python operator]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6970</guid>
+
+					<description><![CDATA[Assignment Operators will work on values and variables. They are the special symbols that hold arithmetic, logical, and bitwise computations. The value which the operator operates is referred to as the Operand. Read this article about Assignment Operators in Python What are Assignment Operators? The assignment operator will function to provide value to variables. The ... <a title="Assignment  Operators in Python" class="read-more" href="https://www.skillvertex.com/blog/assignment-operators-in-python/" aria-label="More on Assignment  Operators in Python">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-are-assignment-operators">What are Assignment Operators?</a></li><li ><a href="#1-what-is-assign-operator">1. What is Assign Operator?</a></li><li ><a href="#2-what-is-add-and-assign">2. What is Add and Assign</a></li><li ><a href="#3-what-is-subtract-and-assign">3. What is Subtract and assign?</a></li><li ><a href="#4-what-is-multiply-and-assign">4. What is Multiply and assign?</a><ul><li ><a href="#5-what-is-divide-and-assign-operator">5. What is  Divide and assign Operator?</a></li></ul></li><li ><a href="#6-what-is-modulus-and-assign-operator">6. What is Modulus and Assign Operator?</a><ul><li ><a href="#7-what-is-divide-floor-and-assign-operator">7. What is Divide ( floor)and Assign Operator?</a></li></ul></li><li ><a href="#8-what-is-exponent-and-assign-operator">8. What is  Exponent and Assign Operator?</a><ul><li ><a href="#9-what-is-bitwise-and-assign-operator">9.What is  Bitwise and Assign Operator?</a></li></ul></li><li ><a href="#10-what-is-bitwise-or-and-assign-operator">10. What is Bitwise OR and Assign Operator?</a></li><li ><a href="#11-what-is-bitwise-xor-and-assign-operator">11. What is Bitwise XOR and Assign Operator?</a></li><li ><a href="#12-what-is-bitwise-right-shift-and-assign-operator">12. What is Bitwise Right Shift and Assign Operator?</a><ul><li ><a href="#13-what-is-bitwise-left-shift-and-assign-operator">13. What is Bitwise Left shift and Assign Operator?</a></li></ul></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#assignment-operators-in-python-fa-qs">Assignment  Operators in Python- FAQs</a></li></ul></nav></div>
+
+
+
+<p>Assignment Operators will work on values and variables.  They are the special symbols that hold arithmetic, logical, and bitwise computations. The value which the operator operates is referred to as the Operand.</p>
+
+
+
+<p>Read this article about Assignment Operators in Python</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-assignment-operators">What are Assignment Operators?</h2>
+
+
+
+<p>The <a href="https://www.skillvertex.com/blog/python-operators/" data-type="post" data-id="6937">assignment operator</a> will function to provide value to variables. The table below is about the different types of Assignment operator</p>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th><strong><em>Operator</em></strong></th><th><strong><em>Description</em></strong></th><th><strong><em>Syntax</em></strong></th></tr></thead><tbody><tr><td>+=</td><td><strong>Add and Assign operator</strong> will add right side operand with left side operand,  assign to left operand </td><td>a+=b</td></tr><tr><td>=</td><td> It will assign the value of the right side of the expression to the left side operand</td><td>x=y+z</td></tr><tr><td>-=</td><td><strong>Subtract AND operator</strong> can  subtract the right operand from the left operand and then assign it to the left operand: True if both operands are equal</td><td>a -= b &nbsp;</td></tr><tr><td>*=</td><td><strong>Subtract AND operator</strong> can  subtract the right operand from the left operand and then assign it to the left operand: True if both operands are equal</td><td>a *= b &nbsp; &nbsp;&nbsp;</td></tr><tr><td>/=</td><td><strong>Divide AND</strong> will divide the left operand with right operand and then assign to the left operand</td><td>a /= b</td></tr><tr><td>%=</td><td><strong>Divide AND</strong> will divide the left operand with the right operand and then assign to the left operand</td><td>a %= b &nbsp;</td></tr><tr><td>&lt;&lt;=<br></td><td> It functions bitwise left on operands and will assign value to the left operand </td><td>a &lt;&lt;= b&nbsp;<br></td></tr><tr><td>&gt;&gt;=<br></td><td>This operator will perform right shift on operands  and can assign value to the left operand</td><td>a &gt;&gt;= b &nbsp; &nbsp;&nbsp;<br><br></td></tr><tr><td>^=<br></td><td>This will function the bitwise xOR operands and can assign value to the left operand </td><td>a ^= b &nbsp; &nbsp;<br><br></td></tr><tr><td>|=<br></td><td>This will function Bitwise OR operands and will provide value to the left operand.</td><td>a |= b &nbsp; &nbsp;<br><br></td></tr><tr><td>&amp;=<br></td><td>This operator will perform Bitwise  AND on operand and can provide value to the left operand</td><td>a&amp;=b</td></tr><tr><td>**=<br></td><td><strong>Exponent AND</strong> operator will evaluate the exponent value with the help of operands an assign value to   the left operand</td><td>a**=b</td></tr></tbody></table></figure>
+
+
+
+<p>Here  we have listed each of the  Assignment operators </p>
+
+
+
+<h2 class="wp-block-heading" id="1-what-is-assign-operator">1. What is <strong>Assign</strong> Operator?</h2>
+
+
+
+<p> This assign operator will provide the value of the right side of the expression to the left operand.</p>
+
+
+
+<p><strong><em>Syntax</em></strong></p>
+
+
+
+<pre class="wp-block-code"><code>x = y + z
+</code></pre>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/mern-stack-website-example/" data-type="post" data-id="4269">Example</a></p>
+
+
+
+<pre class="wp-block-code"><code># Assigning values using  
+# Assignment Operator 
+  
+a = 3
+b = 5
+  
+c = a + b 
+  
+# Output 
+print(c)</code></pre>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/what-will-be-the-output-of-the-following-program/" data-type="post" data-id="3081">Output</a></p>
+
+
+
+<pre class="wp-block-code"><code>8</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="2-what-is-add-and-assign">2.<strong> What is Add and Assign</strong></h2>
+
+
+
+<p>This  Add and Assign operator will function to add the right side operand with the left side operator, and provide the result to the left operand.</p>
+
+
+
+<p><strong><em>Syntax</em></strong></p>
+
+
+
+<p>x += y</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>a = 3
+b = 5
+  
+# a = a + b 
+a += b 
+  
+# Output 
+print(a)</code></pre>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/what-will-be-the-output-of-the-following-program/" data-type="post" data-id="3081">Output</a></p>
+
+
+
+<pre class="wp-block-code"><code>8</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="3-what-is-subtract-and-assign">3. What is <strong>Subtract and assign</strong>?</h2>
+
+
+
+<p>This subtract and assign operator works to subtract the right operand from the left operand and give the result to the left operand.</p>
+
+
+
+<p><strong><em>Syntax</em></strong></p>
+
+
+
+<pre class="wp-block-code"><code>x -= y
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>a = 3
+b = 5
+  
+# a = a - b 
+a -= b 
+  
+# Output 
+print(a)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>-2</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="4-what-is-multiply-and-assign">4. What is <strong>Multiply and assign</strong>?</h2>
+
+
+
+<p>This Multiply and assign will function to multiply the right operand with the left operand and will provide the result in the left operand.</p>
+
+
+
+<p><em><strong>Syntax</strong></em></p>
+
+
+
+<pre class="wp-block-code"><code>x *= y
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>a = 3
+b = 5
+  
+# a = a * b 
+a *= b 
+  
+# Output 
+print(a)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>15</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="5-what-is-divide-and-assign-operator">5. What is  <strong>Divide and assign</strong> Operator?</h3>
+
+
+
+<p>This <a href="https://www.skillvertex.com/blog/c-library-math-h-functions/" data-type="post" data-id="2596">functions</a> to divide the left operand and provides results at the left operand.</p>
+
+
+
+<p><strong><em>Syntax</em></strong></p>
+
+
+
+<pre class="wp-block-code"><code>x /= y
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>a = 3
+b = 5
+  
+# a = a / b
+a /= b 
+  
+# Output 
+print(a)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>0.6</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="6-what-is-modulus-and-assign-operator">6. What is <strong>Modulus and Assign</strong> Operator?</h2>
+
+
+
+<p>This operator <a href="https://www.skillvertex.com/blog/variadic-functions-in-c/" data-type="post" data-id="2561">functions</a> using the modulus with the left and the right operand and provides results at the left operand.</p>
+
+
+
+<p><em><strong>Syntax</strong></em></p>
+
+
+
+<pre class="wp-block-code"><code>x %= y
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>a = 3
+b = 5
+  
+# a = a % b 
+a %= b 
+  
+# Output 
+print(a)</code></pre>
+
+
+
+<p> Output</p>
+
+
+
+<pre class="wp-block-code"><code>3</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="7-what-is-divide-floor-and-assign-operator"><strong>7. What is Divide ( floor)and Assign</strong> Operator?</h3>
+
+
+
+<p>This operator will divide the left operand with the right operand, and provide the result at the left operand.</p>
+
+
+
+<p><strong><em>Syntax</em></strong></p>
+
+
+
+<pre class="wp-block-code"><code>x //= y
+</code></pre>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/mern-stack-examples/" data-type="post" data-id="4337">Example</a></p>
+
+
+
+<pre class="wp-block-code"><code>a = 3
+b = 5
+  
+# a = a // b 
+a //= b 
+  
+# Output 
+print(a)</code></pre>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/input-output-system-calls-in-c-create-open-close-read-write/" data-type="post" data-id="3685">Output</a></p>
+
+
+
+<pre class="wp-block-code"><code>0</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="8-what-is-exponent-and-assign-operator">8. What is  <strong>Exponent and Assign</strong> Operator?</h2>
+
+
+
+<p>This operator will function to evaluate the exponent and value with the operands and, provide output in the left operand.</p>
+
+
+
+<p><strong><em>Syntax</em></strong></p>
+
+
+
+<pre class="wp-block-code"><code>x **= y
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>a = 3
+b = 5
+  
+# a = a ** b 
+a **= b 
+  
+# Output 
+print(a)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>243'
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="9-what-is-bitwise-and-assign-operator">9.What is  <strong>Bitwise and Assign</strong> Operator?</h3>
+
+
+
+<p>This operator will function Bitwise AND on both the operand and provide the result on the left operand.</p>
+
+
+
+<p><strong><em>Syntax</em></strong></p>
+
+
+
+<pre class="wp-block-code"><code>x &amp;= y
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>a = 3
+b = 5
+  
+# a = a &amp; b 
+a &amp;= b 
+  
+# Output 
+print(a)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="10-what-is-bitwise-or-and-assign-operator">10.<strong> What is Bitwise OR and Assign</strong> Operator?</h2>
+
+
+
+<p>This operand will function Bitwise OR on the operand, and can provide result at the left operand.</p>
+
+
+
+<p><strong><em>Syntax</em></strong></p>
+
+
+
+<pre class="wp-block-code"><code>x |= y
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>a = 3
+b = 5
+  
+# a = a | b 
+a |= b 
+  
+# Output 
+print(a)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>7</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="11-what-is-bitwise-xor-and-assign-operator">11. What is <strong>Bitwise XOR and Assign</strong> Operator?</h2>
+
+
+
+<p>This operator will function for Bitwise XOR on the operands, and provide result at the left operand.</p>
+
+
+
+<p><strong><em>Syntax</em></strong></p>
+
+
+
+<pre class="wp-block-code"><code>x ^= y
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>a = 3
+b = 5
+  
+# a = a ^ b 
+a ^= b 
+  
+# Output 
+print(a)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>6</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="12-what-is-bitwise-right-shift-and-assign-operator">12. What is <strong>Bitwise Right Shift and Assign</strong> Operator?</h2>
+
+
+
+<p>This operator will function by providing the Bitwise shift on the operands and giving the result at the left operand.</p>
+
+
+
+<p><em><strong>Syntax</strong></em></p>
+
+
+
+<pre class="wp-block-code"><code>x &gt;&gt;= y
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>a = 3
+b = 5
+  
+# a = a &gt;&gt; b 
+a &gt;&gt;= b 
+  
+# Output 
+print(a)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>0</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="13-what-is-bitwise-left-shift-and-assign-operator">13. What is <strong>Bitwise Left shift and Assign</strong> Operator?</h3>
+
+
+
+<p> This operator will function Bitwise left shift by providing the Bitwise left shift on the operands and giving the result on the left operand.</p>
+
+
+
+<p><strong><em>Syntax</em></strong></p>
+
+
+
+<pre class="wp-block-code"><code>x &lt;&lt;= y
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>a = 3
+b = 5
+  
+# a = a &lt;&lt; b 
+a &lt;&lt;= b 
+  
+# Output 
+print(a)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>96</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, different types of assignment operators are discussed in this.  Beginners can improve their knowledge and understand how to apply the assignment operators through reading this.</p>
+
+
+
+<h2 class="wp-block-heading" id="assignment-operators-in-python-fa-qs">Assignment  Operators in Python- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707388495029" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is an assignment statement in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. It will calculate the expression list and can provide a single resulting object  to each target list from left to right </p>
+
+</div>
+</div>
+<div id="faq-question-1707388504596" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the compound operator in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The compound operator will do the operation of a binary operator and will save the result of the operation at the left operand.</p>
+
+</div>
+</div>
+<div id="faq-question-1707388513443" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. <strong>What are the two types of assignment statements</strong></h4>
+<div class="rank-math-answer ">
+
+<p>Ans.  Simple Assignment Statements and Reference Assignment Statements are the two types of assignment statements.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/assignment-operators-in-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python Logical Operators</title>
+		<link>https://www.skillvertex.com/blog/python-logical-operators/</link>
+					<comments>https://www.skillvertex.com/blog/python-logical-operators/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 12:00:39 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[logical operator]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6978</guid>
+
+					<description><![CDATA[The logical operators are used to combine the conditional statements. Let us check out this to learn more about the Python logical operators in Python. What is the Logical Operators in Python? In Python, Logical operators will function on the conditional statements. They will work on Logical AND, Logical OR, and Logical NOT operations. What ... <a title="Python Logical Operators" class="read-more" href="https://www.skillvertex.com/blog/python-logical-operators/" aria-label="More on Python Logical Operators">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-the-logical-operators-in-python">What is the Logical Operators in Python?</a></li><li ><a href="#what-is-truth-table-for-logical-operators-in-python">What is Truth Table for Logical Operators in Python?</a></li><li ><a href="#what-is-the-logical-and-operator-in-python">What is the Logical AND operator in Python?</a></li><li ><a href="#what-is-the-logical-or-operator-in-python">What is the Logical OR operator in Python?</a></li><li ><a href="#what-is-the-logical-not-operator-in-python">What is the Logical NOT operator in Python?</a></li><li ><a href="#what-is-order-of-precedence-of-logical-operators">What is Order of Precedence of Logical Operators?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-logical-operators-fa-qs">Python Logical Operators- FAQs</a></li></ul></nav></div>
+
+
+
+<p>The logical operators are used to combine the conditional statements. Let us check out this to learn more about the Python logical operators in Python.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-logical-operators-in-python">What is the Logical Operators in Python?</h2>
+
+
+
+<p>In <a href="https://www.skillvertex.com/blog/python-literals/" data-type="post" data-id="6953">Python,</a> Logical <a href="https://www.skillvertex.com/blog/python-operators/" data-type="post" data-id="6937">operators</a> will function on the conditional statements. They will work on Logical AND, Logical OR, and Logical NOT operations.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-truth-table-for-logical-operators-in-python">What is Truth Table for Logical Operators in Python?</h2>
+
+
+
+<figure><table><tbody><tr><td>X</td><td>Y</td><td>X and Z</td><td>X or Y</td><td>not (X)</td><td>not (Y)</td></tr><tr><td>T</td><td>T</td><td>T</td><td>T</td><td>F</td><td>F</td></tr><tr><td>T</td><td>F</td><td>F</td><td>F</td><td>F</td><td>T</td></tr><tr><td>F</td><td>T</td><td>T</td><td>F</td><td>T</td><td>F</td></tr><tr><td>F</td><td>F</td><td>F</td><td>F</td><td>T</td><td>T</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-logical-and-operator-in-python">What is the Logical AND operator in Python?</h2>
+
+
+
+<p>The Logical and AND operator will return True if both the operands are True otherwise, it will give the result as False.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Python program to demonstrate 
+# logical and operator 
+a = 10
+b = 10
+c = -10
+if a &gt; 0 and b &gt; 0: 
+    print("The numbers are greater than 0") 
+if a &gt; 0 and b &gt; 0 and c &gt; 0: 
+    print("The numbers are greater than 0") 
+else: 
+    print("Atleast one number is not greater than 0")</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The numbers are greater than 0
+Atleast one number is not greater than 0</code></pre>
+
+
+
+<p>Example 2</p>
+
+
+
+<pre class="wp-block-code"><code># Python program to demonstrate 
+# logical and operator 
+a = 10
+b = 12
+c = 0
+if a and b and c: 
+    print("All the numbers have boolean value as True") 
+else: 
+    print("Atleast one number has boolean value as False")</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Atleast one number has boolean value as False
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-logical-or-operator-in-python">What is the Logical OR operator in Python?</h2>
+
+
+
+<p>The logical <a href="https://www.skillvertex.com/blog/operators-in-c-set-2-relational-and-logical-operators/" data-type="post" data-id="2202">OR operator</a> will return a True value if the operands come true.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Python program to demonstrate 
+# logical or operator 
+a = 10
+b = -10
+c = 0
+if a &gt; 0 or b &gt; 0: 
+    print("Either of the number is greater than 0") 
+else: 
+    print("No number is greater than 0") 
+if b &gt; 0 or c &gt; 0: 
+    print("Either of the number is greater than 0") 
+else: 
+    print("No number is greater than 0")</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Either of the number is greater than 0
+No number is greater than 0</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-logical-not-operator-in-python">What is the Logical NOT operator in Python?</h2>
+
+
+
+<p>The logical not operator will <a href="https://www.skillvertex.com/blog/variadic-functions-in-c/" data-type="post" data-id="2561">function</a> with a single<a href="https://www.skillvertex.com/blog/bool-in-c/" data-type="post" data-id="1813"> boolean value</a>.  Hence, if the boolean value will come True then it will return as False and Vice versa.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Python program to demonstrate 
+# logical not operator 
+a = 10
+ 
+if not a: 
+    print("Boolean value of a is True") 
+if not (a%3 == 0 or a%5 == 0): 
+    print("10 is not divisible by either 3 or 5") 
+else: 
+    print("10 is divisible by either 3 or 5")</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>10 is divisible by either 3 or 5
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-order-of-precedence-of-logical-operators">What is Order of Precedence of Logical Operators?</h2>
+
+
+
+<p>Python will calculate the <a href="https://www.skillvertex.com/blog/which-of-the-following-is-a-legal-expression-in-sql/" data-type="post" data-id="1856">expression</a> from left to right in multiple operators.</p>
+
+
+
+<p> Example</p>
+
+
+
+<pre class="wp-block-code"><code># Python program to demonstrate 
+# order of evaluation of logical 
+# operators 
+def order(x): 
+    print("Method called for value:", x) 
+    return True if x &gt; 0 else False  
+a = order 
+b = order 
+c = order 
+if a(-1) or b(5) or c(10): 
+    print("Atleast one of the number is positive")</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Method called for value: -1
+Method called for value: 5
+Atleast one of the number is positive</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, these Python logical operators provide a straightforward way to make decisions in your code. &#8220;AND&#8221; ensures both conditions must be true for the overall expression to be true, while &#8220;or&#8221; requires at least one condition to be true. </p>
+
+
+
+<p>On the other hand, &#8220;not&#8221; negates the truth value of a condition.  Several examples are illustrated in this for more clarity on  Logical And, Logical, Logical Not operators.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-logical-operators-fa-qs">Python Logical Operators- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707394469022" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are logic operators?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Logical operators work to compare the logical expressions that show results either as true or false.</p>
+
+</div>
+</div>
+<div id="faq-question-1707394475398" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.  What is called a logical AND operator?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. This AND logical operator will check if both the operands are true.</p>
+
+</div>
+</div>
+<div id="faq-question-1707394492320" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the syntax of logical operators?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.Logical OR operator: ||</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-logical-operators/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python Arithmetic Operators</title>
+		<link>https://www.skillvertex.com/blog/python-arithmetic-operators/</link>
+					<comments>https://www.skillvertex.com/blog/python-arithmetic-operators/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 12:00:12 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python Arithmetic Operators]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6958</guid>
+
+					<description><![CDATA[Python Arithmetic operators will work on mathematical operations such as addition, subtraction, multiplication, and division. Read this article to learn more about Python Arithmetic Operators. What are Arithmetic Operators in Python? Arithmetic operators are referred to as binary operators as they will perform on the two operands. Python will offer mixed arithmetic. Hence, these two ... <a title="Python Arithmetic Operators" class="read-more" href="https://www.skillvertex.com/blog/python-arithmetic-operators/" aria-label="More on Python Arithmetic Operators">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-are-arithmetic-operators-in-python">What are Arithmetic Operators in Python?</a></li><li ><a href="#what-are-the-7-arithmetic-operators-in-python">What are the 7 Arithmetic Operators in Python?</a></li><li ><a href="#precedence-of-arithmetic-operators-in-python">Precedence of  Arithmetic Operators in Python</a></li><li ><a href="#what-are-the-examples-of-python-arithmetic-operators">What are the Examples of Python Arithmetic Operators?</a><ul><li ><a href="#a-addition-operator">a.Addition Operator</a></li><li ><a href="#b-subtraction-operator">b. Subtraction Operator</a></li><li ><a href="#c-multiplication-operator">c. Multiplication Operator</a></li><li ><a href="#d-division-operator">d. Division Operator</a></li><li ><a href="#e-modulus-operator">e. Modulus Operator</a></li><li ><a href="#f-exponentiation-operator">f. Exponentiation Operator</a></li><li ><a href="#g-floor-division-operator">g. Floor Division Operator</a></li></ul></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-arithmetic-operators-fa-qs">Python Arithmetic Operators- FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python Arithmetic operators will work on mathematical operations such as addition, subtraction, multiplication, and division. Read this article to learn more about Python Arithmetic Operators.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-arithmetic-operators-in-python">What are Arithmetic Operators in Python?</h2>
+
+
+
+<p>Arithmetic operators are referred to as <a href="https://www.skillvertex.com/blog/operators-in-c/" data-type="post" data-id="1918">binary operators</a> as they will perform on the two operands. <a href="https://www.skillvertex.com/blog/python-syntax/" data-type="post" data-id="6924">Python</a> will offer mixed arithmetic. Hence, these two operands will be of different types. In this kind of scenario, python can widen the narrower of the operands. Thus, the integer object is referred to as narrower than the float object and the float will be narrower than the complex object.</p>
+
+
+
+<p>Therefore, the result of the arithmetic operation of int and float is a float. Similarly, the operation of an integer and complex object will give a complex object as the result.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-7-arithmetic-operators-in-python">What are the 7 Arithmetic Operators in Python?</h2>
+
+
+
+<p>The 7<a href="https://www.skillvertex.com/blog/character-arithmetic-in-c-and-c/" data-type="post" data-id="1876"> arithmetic operators </a>in Python are provided below</p>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th><em>Operator</em></th><th><em>Description</em></th><th><em>Syntax</em></th></tr></thead><tbody><tr><th>+</th><th>The addition adds two operands</th><th>x + y</th></tr><tr><th>–</th><th>The subtraction will subtract  two operands</th><th>x – y</th></tr><tr><th>*</th><th>Multiplication can multiply two operands</th><th>x * y</th></tr><tr><th>/</th><th>Division (float) can divide  the first operand by the second</th><th>x / y</th></tr><tr><th>//</th><th>Division (floor) will divide the first operand by the second</th><th>x // y</th></tr><tr><th>%</th><th>The power Exponent will return the first raised to the power second.</th><th>x % y</th></tr><tr><td>     **</td><td><strong>The power Exponent will return the first raised to the power second.</strong></td><td>x ** y<br></td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="precedence-of-arithmetic-operators-in-python">Precedence of  Arithmetic Operators in Python</h2>
+
+
+
+<p>Let us look into the Precedence and associativity of Python Arithmetic operators.</p>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th>Operator</th><th>Description</th><th>Associativity</th></tr></thead><tbody><tr><td><strong>**</strong></td><td>Exponentiation Operator</td><td>right-to-left</td></tr><tr><td><strong>+, –</strong><br></td><td>Addition and Subtraction operators<br><br></td><td>left-to-right</td></tr><tr><td><strong>%, *, /, //</strong><br></td><td>Modulos, Multiplication, Division, and Floor Division<br><br></td><td>left-to-righ</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-examples-of-python-arithmetic-operators">What are the Examples of Python Arithmetic Operators?</h2>
+
+
+
+<h3 class="wp-block-heading" id="a-addition-operator">a.Addition Operator</h3>
+
+
+
+<p>+ is referred to as the addition operator and is used to add 2 values in Python Programming.</p>
+
+
+
+<pre class="wp-block-code"><code>val1 = 2
+val2 = 3
+ 
+# using the addition operator
+res = val1 + val2
+print(res)</code></pre>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/what-will-be-the-output-of-the-following-program/" data-type="post" data-id="3081">Output</a></p>
+
+
+
+<pre class="wp-block-code"><code>5</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="b-subtraction-operator">b. <a href="https://www.skillvertex.com/blog/python-operators/" data-type="post" data-id="6937">Subtraction Operator</a></h3>
+
+
+
+<p>_ is denoted as the subtraction operator. It can subtract the second value from the first value.</p>
+
+
+
+<pre class="wp-block-code"><code>val1 = 2
+val2 = 3
+ 
+# using the subtraction operator
+res = val1 - val2
+print(res)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>-1</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="c-multiplication-operator">c. <a href="https://www.skillvertex.com/blog/and-operators-in-c/" data-type="post" data-id="3294">Multiplication Operator</a></h3>
+
+
+
+<p>In Python Programming language, * is considered as the multiplication operator. It will find the product of 2 values.</p>
+
+
+
+<pre class="wp-block-code"><code>val1 = 2
+val2 = 3
+ 
+# using the multiplication operator
+res = val1 * val2
+print(res)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>6</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="d-division-operator">d. <a href="https://www.skillvertex.com/blog/bitwise-operators-in-c-c/" data-type="post" data-id="2037">Division Operator</a></h3>
+
+
+
+<p>/ is referred to as the division operator in <a href="https://www.skillvertex.com/blog/how-does-a-python-interpreter-works/" data-type="post" data-id="6895">Python Programming language</a>. It will find the quotient where the first operand will be divided by the second.</p>
+
+
+
+<pre class="wp-block-code"><code>val1 = 3
+val2 = 2
+ 
+# using the division operator
+res = val1 / val2
+print(res)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1.5</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="e-modulus-operator">e. Modulus Operator</h3>
+
+
+
+<p>% is referred to as the modulus operator in Python Programming language. It will find the remainder where the first operand will be divided by the second.</p>
+
+
+
+<pre class="wp-block-code"><code>val1 = 3
+val2 = 2
+ 
+# using the modulus operator
+res = val1 % val2
+print(res)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="f-exponentiation-operator">f. <a href="https://www.skillvertex.com/blog/python-operators/" data-type="post" data-id="6937">Exponentiation Operator</a></h3>
+
+
+
+<p>In Python Programming language, ** is known as the exponentiation operator. It will raise the first operand to the power of the second.</p>
+
+
+
+<pre class="wp-block-code"><code>val1 = 2
+val2 = 3
+ 
+# using the exponentiation operator
+res = val1 ** val2
+print(res)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>8</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="g-floor-division-operator"><strong>g. Floor Division Operator</strong></h3>
+
+
+
+<p>// will do the floor division. It will help to find the floor of the quotient where the first operand can be divided by the second.</p>
+
+
+
+<pre class="wp-block-code"><code>val1 = 3
+val2 = 2
+ 
+# using the floor division
+res = val1 // val2
+print(res)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, beginners can improve their skill and knowledge by learning about the Arithmetic operators. The 7 arithmetic operators and their functions are also listed in this article. </p>
+
+
+
+<h2 class="wp-block-heading" id="python-arithmetic-operators-fa-qs">Python Arithmetic Operators- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707306140566" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is 3 dots in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The Python ellipsis is considered a versatile object and has a placeholder, which helps in array slicing. It can improve type hiding, and simplify indexing, and multidimensional arrays.</p>
+
+</div>
+</div>
+<div id="faq-question-1707306148138" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What does == mean in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. = will represent the equality operator. Hence, the operator will return true only if the operands are equal.</p>
+
+</div>
+</div>
+<div id="faq-question-1707306155219" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the M flag in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. M Flag will allow us to run the</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<p></p>
+<div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-arithmetic-operators/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python Literals</title>
+		<link>https://www.skillvertex.com/blog/python-literals/</link>
+					<comments>https://www.skillvertex.com/blog/python-literals/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 11:59:59 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python Literals]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6953</guid>
+
+					<description><![CDATA[A Python Literal is a syntax that will denote a value of a particular data type. Literals are constants that will be self-explanatory and don&#8217;t require to be evaluated or computed. Further, they will give values or directly use them in the expressions. However, literals are a system of symbols that have a fixed value ... <a title="Python Literals" class="read-more" href="https://www.skillvertex.com/blog/python-literals/" aria-label="More on Python Literals">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#types-of-literals-in-python">Types of Literals in Python</a></li><li ><a href="#python-string-literal">Python String literal</a></li><li ><a href="#python-character-literal">Python Character Literal</a></li><li ><a href="#python-numeric-literal">Python Numeric literal </a></li><li ><a href="#integer">Integer</a></li><li ><a href="#float">Float</a></li><li ><a href="#complex">Complex</a></li><li ><a href="#python-boolean-literal">Python Boolean literal</a></li><li ><a href="#python-literal-collection">Python literal collection</a></li><li ><a href="#list-literal">List Literal</a></li><li ><a href="#tuple-literal">Tuple Literal</a></li><li ><a href="#dictionary-literal">Dictionary Literal</a></li><li ><a href="#set-literal">Set Literal</a></li><li ><a href="#python-special-l-iteral">Python Special LIteral</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-literals-fa-qs">Python Literals -FAQs</a></li></ul></nav></div>
+
+
+
+<p>A Python Literal is a syntax that will denote a value of a particular data type. Literals are constants that will be self-explanatory and don&#8217;t require to be evaluated or computed. Further, they will give values or directly use them in the expressions.</p>
+
+
+
+<p>However, literals are a system of symbols that have a fixed value in the<a href="https://www.skillvertex.com/blog/data-science-projects-with-source-code/" data-type="post" data-id="5609"> source code</a>. It is also known as the raw values or the data given in variables or constants. Read this article to learn about the different types of literals in Python.</p>
+
+
+
+<h2 class="wp-block-heading" id="types-of-literals-in-python">Types of Literals in Python</h2>
+
+
+
+<p>Python has several types of <a href="https://www.skillvertex.com/blog/literals-in-c-c-with-examples/" data-type="post" data-id="1972">literals </a>like numeric literals, string literals, and boolean literals. The different types of literals in<a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932"> Python </a>with examples are provided below:</p>
+
+
+
+<p>a. <a href="https://www.skillvertex.com/blog/what-does-0-mean-in-this-python-string/" data-type="post" data-id="3237">String</a> literals</p>
+
+
+
+<p>b. <a href="https://www.skillvertex.com/blog/character-arithmetic-in-c-and-c/" data-type="post" data-id="1876">Character </a>literals</p>
+
+
+
+<p>c. Numeric Literals&#8217;</p>
+
+
+
+<p>d. Boolean literals</p>
+
+
+
+<p>e. <a href="https://www.skillvertex.com/blog/literals-in-c-c-with-examples/" data-type="post" data-id="1972">literal </a>collection</p>
+
+
+
+<p>f. Special literal</p>
+
+
+
+<h2 class="wp-block-heading" id="python-string-literal">Python String literal</h2>
+
+
+
+<p>A <a href="https://www.skillvertex.com/blog/how-to-find-length-of-string-in-java-python-cpp-javascript-sql-shell-script-mysql-oracle-and-perl/" data-type="post" data-id="452">string</a> is considered a literal and will be made by writing a text that is surrounded by single (&#8220;), double (&#8220;), and triple quotes. Multi-line strings will be displayed with the triple quotes. The example given below illustrates the Python String literal</p>
+
+
+
+<pre class="wp-block-code"><code># in single quote
+s = 'skillvertex'
+ 
+# in double quotes
+t = "skillvertex"
+ 
+# multi-line String
+m = '''skill
+           vertex
+               blog'''
+ 
+print(s)
+print(t)
+print(m)
+
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>skillvertex
+skillvertex
+skill       
+                 vertex
+                             blog</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="python-character-literal">Python Character Literal</h2>
+
+
+
+<p>Python character literal is referred to as a type of string literal which has a single <a href="https://www.skillvertex.com/blog/character-arithmetic-in-c-and-c/" data-type="post" data-id="1876">character</a> and is surrounded by single or double quotes.</p>
+
+
+
+<pre class="wp-block-code"><code># character literal in single quote
+v = 'n'
+ 
+# character literal in double quotes
+w = "a"
+ 
+print(v)
+print(w)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>n
+a</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="python-numeric-literal">Python Numeric literal </h2>
+
+
+
+<p>The three types of Python numeric literal are provided below</p>
+
+
+
+<p>a. Integer</p>
+
+
+
+<p>b. Float</p>
+
+
+
+<p>c. complex</p>
+
+
+
+<h2 class="wp-block-heading" id="integer">Integer</h2>
+
+
+
+<p>Integers are those numbers that consist of both positive and negative numbers which include 0. In the example below, we have provided integer literals (0b10100, 50, 0o320, 0x12b)into different variables.</p>
+
+
+
+<p>&#8216;a&#8217; is considered as the binary literal &#8216;b&#8217; is the decimal literal, &#8216;c&#8217;  is referred to as the octal literal, and &#8216;d&#8217; is the hexadecimal literal. </p>
+
+
+
+<pre class="wp-block-code"><code># integer literal
+ 
+# Binary Literals
+a = 0b10100
+ 
+# Decimal Literal
+b = 50
+ 
+# Octal Literal
+c = 0o320
+ 
+# Hexadecimal Literal
+d = 0x12b
+ 
+print(a, b, c, d)</code></pre>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/input-output-system-calls-in-c-create-open-close-read-write/" data-type="post" data-id="3685">Output</a></p>
+
+
+
+<pre class="wp-block-code"><code>20 50 208 299
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="float">Float</h2>
+
+
+
+<p>Float are those real numbers that have both integer and fractional parts. For example, 24.8 and 45.0 are the floating-point literals as 24.8 and 45.0 are the floating-point numbers.</p>
+
+
+
+<pre class="wp-block-code"><code># Float Literal
+e = 24.8
+f = 45.0
+ 
+print(e, f)</code></pre>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/what-will-be-the-output-of-the-following-program/" data-type="post" data-id="3081">Output</a></p>
+
+
+
+<pre class="wp-block-code"><code>24.8 45.0
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="complex">Complex</h2>
+
+
+
+<p>These numerals are in the form of a+bj. Whereas, a is considered as the real part and b is the complex part.</p>
+
+
+
+<pre class="wp-block-code"><code>z = 7 + 5j
+ 
+# real part is 0 here.
+k = 7j
+ 
+print(z, k)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>(7+5j) 7j
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="python-boolean-literal">Python Boolean literal</h2>
+
+
+
+<p>There are two boolean literals in Python. Those are true and false. True will denote the value as 1 and false will give the value as 0. In the example provided below, a is true and b is false as 1 is equal to true.</p>
+
+
+
+<pre class="wp-block-code"><code>a = (1 == True)
+b = (1 == False)
+c = True + 3
+d = False + 7
+ 
+print("a is", a)
+print("b is", b)
+print("c:", c)
+print("d:", d)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>a is True
+b is False
+c: 4
+d: 7</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="python-literal-collection">Python literal collection</h2>
+
+
+
+<p>Python has four different types of literal collection</p>
+
+
+
+<p>a, list literal</p>
+
+
+
+<p>b. tuple literal</p>
+
+
+
+<p>c.Dict Literal</p>
+
+
+
+<p>d. Set Literal</p>
+
+
+
+<h2 class="wp-block-heading" id="list-literal">List Literal</h2>
+
+
+
+<p>List literal has items of different<a href="https://www.skillvertex.com/blog/what-are-the-data-types-for-which-it-is-not-possible-to-create-an-array/" data-type="post" data-id="2632"> data types</a>. The values that are stored in the lists will be separated by a comma and will be enclosed within the square brackets. Different types of data can be stored in the list. These lists are mutable.</p>
+
+
+
+<pre class="wp-block-code"><code>number = &#91;1, 2, 3, 4, 5]
+name = &#91;'Amit', 'kabir', 'bhaskar', 2]
+print(number)
+print(name)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;1, 2, 3, 4, 5]
+&#91;'Amit', 'kabir', 'bhaskar', 2]</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="tuple-literal">Tuple Literal</h2>
+
+
+
+<p>Tuple is referred to as the collection of different data types. It will be enclosed by the parentheses  &#8220;()&#8221; and every element will be separated with a comma and is immutable.</p>
+
+
+
+<pre class="wp-block-code"><code>even_number = (2, 4, 6, 8)
+odd_number = (1, 3, 5, 7)
+ 
+print(even_number)
+print(odd_number)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>(2, 4, 6, 8)
+(1, 3, 5, 7)</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="dictionary-literal">Dictionary Literal</h2>
+
+
+
+<p>This dictionary will store the data in the key-value pair. It will be enclosed by the curly braces &#8216;{}&#8217;  and every pair will be separated by the comma. Different types of data can be stored in the <a href="https://www.skillvertex.com/blog/dictionary-is-mutable-or-immutable/" data-type="post" data-id="1615">dictionary.</a> These dictionaries are mutable.</p>
+
+
+
+<pre class="wp-block-code"><code>alphabets = {'a': 'apple', 'b': 'ball', 'c': 'cat'}
+information = {'name': 'amit', 'age': 20, 'ID': 20}
+ 
+print(alphabets)
+print(information)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>{'a': 'apple', 'b': 'ball', 'c': 'cat'}
+{'name': 'amit', 'age': 20, 'ID': 20}</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="set-literal">Set Literal</h2>
+
+
+
+<p>Set literal is referred to as the collection of the unordered data set. It will be enclosed by the {} and every element will be separated by the comma.</p>
+
+
+
+<pre class="wp-block-code"><code>vowels = {'a', 'e', 'i', 'o', 'u'}
+fruits = {"apple", "banana", "cherry"}
+ 
+print(vowels)
+print(fruits)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>{'o', 'e', 'a', 'u', 'i'}
+{'apple', 'banana', 'cherry'}</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="python-special-l-iteral">Python Special LIteral</h2>
+
+
+
+<p>Python has one special literal which is None. <strong>None</strong> will define a null variable<strong>. </strong>However, if the<strong> None </strong>will be compared with anything else other than <strong>None</strong>. There is a possibility to get the result as false.</p>
+
+
+
+<pre class="wp-block-code"><code>water_remain = None
+print(water_remain)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>None</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, beginners can learn about Python string literals, Python character literal, and Python numeric literal. The three types of numeric literal are also included in this.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-literals-fa-qs">Python Literals -FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707300515181" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How many literals are there in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. There are five types</p>
+
+</div>
+</div>
+<div id="faq-question-1707300528381" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the difference between a variable and a literal in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Literals are the raw values that will be stored in a  variable or constant. Whereas, constants are immutable.</p>
+
+</div>
+</div>
+<div id="faq-question-1707300536152" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What&#8217;s literal programming?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Literals are referred to as the constant values that are given to constant variables.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-literals/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python-Unicode System</title>
+		<link>https://www.skillvertex.com/blog/python-unicode-system/</link>
+					<comments>https://www.skillvertex.com/blog/python-unicode-system/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 11:59:46 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python-Unicode System]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6949</guid>
+
+					<description><![CDATA[Python-Unicode System Unicode is considered as the standard encoding for the majority of the world&#8217;s computer. It will make sure that the text will consists of letters, symbols, emoji and other control characters and will appear same in the different devices , platforms and digital documents . Unicode plays an vital role in the internet ... <a title="Python-Unicode System" class="read-more" href="https://www.skillvertex.com/blog/python-unicode-system/" aria-label="More on Python-Unicode System">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#python-unicode-system">Python-Unicode System</a></li><li ><a href="#what-is-unicode-system">What is Unicode System?</a></li><li ><a href="#what-is-character-encoding">What is Character Encoding?</a></li><li ><a href="#python-unicode-support">Python Unicode Support</a></li><li ><a href="#example-1">Example 1 </a></li><li ><a href="#example-2">Example 2 </a></li><li ><a href="#example-3">Example 3</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-unicode-system-fa-qs">Python-Unicode System-FAQs</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="python-unicode-system">Python-Unicode System</h2>
+
+
+
+<p>Unicode is considered as the standard encoding for the majority of the world&#8217;s computer. It will make sure that the text will consists of letters, symbols, emoji and other control characters and  will appear same in the different devices , platforms and  digital documents . Unicode plays an  vital role in the internet and computing industry.</p>
+
+
+
+<p>However, working with Unicode in Python will be difficult and can lead to several errors. Read this tutorial to learn the fundamentals of using Unicode in Python. </p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-unicode-system">What is Unicode System?</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/data-science-vs-software-engineering/" data-type="post" data-id="4498">Software</a> applications must need to show the display message output in several languages like English, French, Japanese, Hebrew, or Hindi. Python&#8217;s string type will use the  Unicode Standard to denote the characters. This Python Program will allow work with different possible characters. </p>
+
+
+
+<p>Moreover, a character is referred to as the smallest component of text. Some of the different characters are &#8216;A&#8217;, &#8216;B&#8217;, and &#8216;C&#8217;. Similarly, E and I are also included. A Unicode string is referred to as a sequence of code points and those are numbers from 0 through  0x10FFFF (1,114,111 decimal). Therefore, These sequences of code should be represented in memory as a set of code units and further, these code units will be mapped into 8-bit bytes.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-character-encoding">What is Character Encoding?</h2>
+
+
+
+<p>It is a sequence of code points,  which will be denoted in the form of memory as a set of code units, and then they are mapped into the 8-bit bytes. Character Encoding refers as the rules that are used to translate a Unicode String into a sequence of bytes.</p>
+
+
+
+<p>Three types of Encoding are present and those are  UTF-8, UTF-16, and UTF-32. UTF is referred to as the Unicode Transformation Format.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-unicode-support">Python Unicode Support</h2>
+
+
+
+<p>Built-in support for Unicode is available from Python 3.0 onwards. The str type will consist of Unicode Characters and thus any string will be made using the single, double, or triple-quoted string syntax and further it is stored as Unicode. The default encoding for Python source code is UTF-8.</p>
+
+
+
+<p>Henceforth, the string has a representation of the Unicode character (3/4) or its Unicode value.</p>
+
+
+
+<pre class="wp-block-code"><code>var = "3/4"
+print (var)
+var = "\u00BE"
+print (var)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>3/4
+¾</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-1">Example 1 </h2>
+
+
+
+<p>The example given below, a string 10 will be stored with the Unicode values of 1 and 0 and has values such as  \u0031 and u0030 .</p>
+
+
+
+<pre class="wp-block-code"><code>var = "\u0031\u0030"
+print (var)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>10</code></pre>
+
+
+
+<p>Moreover, the string will show the text in the human-readable format.  Bytes will store the binary characters as the binary data. Encoding will turn data into a series of bytes from the character string. Decoding is referred to as a process that will translate the bytes back to human-readable characters and symbols. In other words, encode is the string method and the decode is the Python byte object.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-2">Example 2 </h2>
+
+
+
+<p>In the provided example, the string <a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932">variable</a> has ASCII characters. ASCII is the sub-division of the Unicode character set. The encode method () will convert into the bytes object.</p>
+
+
+
+<pre class="wp-block-code"><code>string = "Hello"
+tobytes = string.encode('utf-8')
+print (tobytes)
+string = tobytes.decode('utf-8')
+print (string)</code></pre>
+
+
+
+<p>The decode () method will turn the byte object back into the str object. The encoding method is mostly used in the utf-8.</p>
+
+
+
+<pre class="wp-block-code"><code>b'Hello'
+Hello</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-3">Example 3</h2>
+
+
+
+<p>This example has the Rupee symbol &nbsp;(₹)&nbsp; that is stored in the variable with the help of Unicode value. Hence, we can turn the string to bytes and back to str.</p>
+
+
+
+<pre class="wp-block-code"><code>string = "\u20B9"
+print (string)
+tobytes = string.encode('utf-8')
+print (tobytes)
+string = tobytes.decode('utf-8')
+print (string)</code></pre>
+
+
+
+<p>The output that will be displayed after running the code is given below:</p>
+
+
+
+<pre class="wp-block-code"><code>₹
+b'\xe2\x82\xb9'
+₹</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, this article will allow the beginner to improve their skills and knowledge regarding the Unicode system of Python.  Character Encoding and several examples are provided in this article.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-unicode-system-fa-qs">Python-Unicode System-FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707288471883" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How to use UTF-8 encoding in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.  It is possible to Use the built-in open() function with the &#8216;w&#8217; mode and specifying the encoding as &#8220;utf-8&#8221; for writing the Unicode .</p>
+
+</div>
+</div>
+<div id="faq-question-1707288481743" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is ASCII and Unicode in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. ASCII is a character encoding system  and has  256 characters, primarily composed of English letters, numbers, and symbols. Whereas, Unicode has a larger encoding standard that includes over 149,000 characters.</p>
+
+</div>
+</div>
+<div id="faq-question-1707288489589" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Is Python type Unicode?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Python string type will use the Unicode Standard to represent characters.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-unicode-system/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>What is Python Type Casting</title>
+		<link>https://www.skillvertex.com/blog/python-type-casting/</link>
+					<comments>https://www.skillvertex.com/blog/python-type-casting/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 11:59:35 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[type casting]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6943</guid>
+
+					<description><![CDATA[Data types in Python are referred to as the categorization of data items such as numbers, integers, and strings. These data types will provide values and inform about the operations that should be done on a particular data. Python has five built-in data types. Some of them are numeric, sequence type, boolean, set, and dictionary. ... <a title="What is Python Type Casting" class="read-more" href="https://www.skillvertex.com/blog/python-type-casting/" aria-label="More on What is Python Type Casting">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#why-do-we-use-type-casting-in-python">Why do we use Type-Casting In Python?</a></li><li ><a href="#examples-of-casting">Examples of Casting</a></li><li ><a href="#addition-of-string-and-integer-using-explicit-conversion">Addition of String and Integer Using Explicit  Conversion</a></li><li ><a href="#type-casting-int-to-float">Type Casting Int to Float</a></li><li ><a href="#type-casting-float-into-int">Type casting Float into Int</a></li><li ><a href="#type-casting-int-to-string">Type Casting Int to String</a></li><li ><a href="#type-casting-string-to-int">Type Casting String to Int  </a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-type-casting-fa-qs"> Python Type Casting-FAQs</a></li></ul></nav></div>
+
+
+
+<p>Data types in Python are referred to as the categorization of data items such as numbers, integers, and strings. These data types will provide values and inform about the operations that should be done on a particular data. Python has five built-in data types. Some of them are numeric, sequence type, boolean, set, and dictionary.</p>
+
+
+
+<p>Moreover, python will offer several functions or methods such as int(),&nbsp;float(),&nbsp;str(),&nbsp;ord(),&nbsp;hex(),&nbsp;oct(),&nbsp;tuple(),&nbsp;set(),&nbsp;list(),&nbsp; dict (). Read this article to learn more about typecasting in Python.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-do-we-use-type-casting-in-python">Why do we use Type-Casting In Python?</h2>
+
+
+
+<p>To understand type-casting correctly.  Look into this example,  a person is traveling to Australia from India and this person needs to buy products from Australia, but only has Indian currency.  Therefore, this person went to a local bank for the conversion of Indian rupees into Australian Dollars.  This scenario is similar to the type casting in Python.</p>
+
+
+
+<p>Similarly, in Type casting, a specific value or an object will be converted into a string. For this, the str() method is used in Python. The float method is also used to change the specified value into the floating point number and the int () method is used to convert an object into an <a href="https://www.skillvertex.com/blog/integer-promotions-in-c/" data-type="post" data-id="1968">integer value</a>.</p>
+
+
+
+<p>Hence, typecasting is used to convert one <a href="https://www.skillvertex.com/blog/data-types-in-c/" data-type="post" data-id="1842">datatype</a> to another data type.</p>
+
+
+
+<p>The two varieties of typecasting in Python are the following</p>
+
+
+
+<p>a. Explicit Conversion</p>
+
+
+
+<p>b. Implicit Conversion</p>
+
+
+
+<p>Explicit type Casting is the conversion of one data type into another data type which can be done with the support of developer or programmer intervention or according to the requirements. This conversion process can be done with the Python built-in type conversion functions like Int(), float(), hex(), oct()and str().</p>
+
+
+
+<p>In Python, we have different types of data, like numbers and words. When we mix these types in a <a href="https://www.skillvertex.com/blog/python-operators/" data-type="post" data-id="6937">math operation</a>, Python wants to make sure everything works smoothly. So, it might change one type to another to avoid losing information.</p>
+
+
+
+<p>Thus, in Python, some data types have higher orders has lower orders. Whereas, python will convert one of the variable data types into another with the support of the Python interpreter while doing operations on variables. This process is known as Implicit type casting In Python.</p>
+
+
+
+<p>Imagine you have a number (let&#8217;s say 5) and a decimal number (like 2.0). If you want to add them together, Python will automatically change the regular number to a decimal (like 5 to 5.0) before doing the math. This way, Python prevents any loss of information.</p>
+
+
+
+<h2 class="wp-block-heading" id="examples-of-casting">Examples of Casting</h2>
+
+
+
+<p>Look at the few examples for learning the several methods of typecasting in Python.</p>
+
+
+
+<h2 class="wp-block-heading" id="addition-of-string-and-integer-using-explicit-conversion">Addition of String and Integer Using Explicit  Conversion</h2>
+
+
+
+<p>Adding a <a href="https://www.skillvertex.com/blog/what-does-0-mean-in-this-python-string/" data-type="post" data-id="3237">string</a> and integer in <a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932">Python</a>. While converting a<a href="https://www.skillvertex.com/blog/how-to-reverse-a-string-in-java/" data-type="post" data-id="728"> string</a> into an integer, we can add them both as integers for getting the required output. Look at the example given below to add the string and integer in Python with the help of Explicit conversion.</p>
+
+
+
+<p>Syntax for conversion of string into integer</p>
+
+
+
+<pre class="wp-block-code"><code>number = int("value")
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>string = "56"
+number = 44
+
+# Converting the string into an integer number.
+string_number = int(string)
+
+sum_of_numbers = number + string_number
+print("The Sum of both the numbers is: ", sum_of_numbers)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The Sum of both the numbers is:  100
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="type-casting-int-to-float">Type Casting Int to Float</h2>
+
+
+
+<p>The float method is used to convert an integer or string into a floating-point number. The float method () will accept one value which will be changed into the floating -point.</p>
+
+
+
+<p>The syntax of float () method is </p>
+
+
+
+<pre class="wp-block-code"><code>float(value)
+
+</code></pre>
+
+
+
+<p>Look at the example below to know more about the functioning of the float () method. The salary is considered as the floating point number as it has several allowances along with it. Therefore, it is possible to convert the salary into a floating-point number and do the required operations.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>salary = 25000
+bonus = salary * (0.25)
+
+# Converting the salary into floating point number.
+new_salary = float(salary)
+print("Salary converted into floating-point: ", new_salary)
+print("Salary after adding bonus: ", new_salary + bonus)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Salary converted into floating-point:  25000.0
+Salary after adding bonus:  31250.0</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="type-casting-float-into-int">Type casting Float into Int</h2>
+
+
+
+<p>Int() method in Python is a method where the conversion of value into an integer value occurs. The int() method will accept two parameters which are the value that needs to be converted into an integer and on base value(number base). </p>
+
+
+
+<p>Normally, we use regular numbers like 1, 2, and 3, which are based on 10 (that&#8217;s why we call it base-10).</p>
+
+
+
+<p>But in computer programming, we can use different ways to show numbers. Imagine you have the number 10, and you want to express it in a special code. Here&#8217;s how it works:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If you use base-8 (called octal), it&#8217;s like saying 10 is 12 in this special code.</li>
+
+
+
+<li>If you use base-16 (called hexadecimal), it&#8217;s like saying 10 is A in this special code.</li>
+
+
+
+<li>If you use base-2 (called binary), it&#8217;s like saying 10 is 1010 in this special code.</li>
+</ul>
+
+
+
+<p>So, when we say &#8220;base-10,&#8221; we mean our usual numbers. But in computer programming, we sometimes use different codes, like 8, 16, or 2, for specific situations.</p>
+
+
+
+<p>Syntax of int() method:</p>
+
+
+
+<pre class="wp-block-code"><code>int(value, base)
+
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>string = "01101"
+floating_number = 45.20
+
+# Converting the string as well as integer number into floating point number.
+new_str = int(string)
+new_number = int(floating_number)
+print("String converted into integer: ", new_str)
+print("The floating-point number converted into integer: ", new_number)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>String converted into integer:  1101
+The floating-point number converted into integer:  45</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="type-casting-int-to-string">Type Casting Int to String</h2>
+
+
+
+<p>The Str() function in Python is used to convert a specified value into a string object.</p>
+
+
+
+<p>The syntax of the str() method in Python</p>
+
+
+
+<pre class="wp-block-code"><code>str(object, encoding = 'utf-8', errors = 'strict')
+
+</code></pre>
+
+
+
+<p>str() in Python has three parameters, one of them is required and the other is optional.  The Parameters of the str() function is provided below:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Object:</strong> This is the important one. Just put whatever you want to turn into words. If you leave it empty, you get nothing.</li>
+
+
+
+<li><strong>Encoding:</strong> You can think of this as telling the computer how to read the characters in your language. If you don&#8217;t say anything, it just uses a standard way. Then the default value i.e.&nbsp;<strong>UTF-8</strong>&nbsp;is provided.</li>
+
+
+
+<li><strong>Errors:</strong> This is like what happens if the computer gets confused. By default, it gets a bit grumpy if it can&#8217;t understand, but you can tell it to be more easygoing if you want.</li>
+</ol>
+
+
+
+<p> <code>str()</code> is like a tool that helps Python speak in words, and you can tell it exactly how to do that if you want!</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>number = 55
+string = str(number)
+print("Converted string is:",string)
+
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The converted string is: 55
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="type-casting-string-to-int">Type Casting String to Int<br> </h2>
+
+
+
+<p>Int () method is used to turn the string into an integer </p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>int(value, base)
+
+</code></pre>
+
+
+
+<p>Value parameter is required and the base Paramater is optional</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># Taking a number in the form of string
+string_numbers = "11"
+# Converting the string into number.
+integer_number = int(string_numbers)
+
+print("Integer number is:", integer_number)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Integer number is: 11
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p> Beginners who wish to learn Python can get information on type Casting through the several examples illustrated in this article. The conversion of one data type into another data type is known as Type Casting.</p>
+
+
+
+<p> Beginners can understand the conversion of  Typecasting float into integers, Type Casting Int to String. and several others. </p>
+
+
+
+<h2 class="wp-block-heading" id="python-type-casting-fa-qs"> Python Type Casting-FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707219924112" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is cast () in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Casting involves the process of converting the value of one type into the value of another.</p>
+
+</div>
+</div>
+<div id="faq-question-1707219931448" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is Data type in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The 6 standard data types in Python are Numeric, String, List, Tuple, Set, and Dictionary.</p>
+
+</div>
+</div>
+<div id="faq-question-1707219941566" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is loop in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A for loop in Python is like a robot that does a task repeatedly for each item in a group. It keeps going until there are no more items left in the group. </p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-type-casting/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python Variables</title>
+		<link>https://www.skillvertex.com/blog/python-variables/</link>
+					<comments>https://www.skillvertex.com/blog/python-variables/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 11:59:01 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python Variables]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6932</guid>
+
+					<description><![CDATA[Python variable is a container that will store value. Python is not referred to as statically typed. There is no need to declare the variables before using them or declare their type. Therefore, a variable is formed after we provide a value to it. A Python variable is a name that has been given to ... <a title="Python Variables" class="read-more" href="https://www.skillvertex.com/blog/python-variables/" aria-label="More on Python Variables">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#example-of-variable-in-python">Example Of Variable In Python</a></li><li ><a href="#what-are-the-rules-for-python-variables">What are the Rules For Python Variables?</a></li><li ><a href="#what-is-the-variable-assignment-in-python">What is the Variable Assignment In Python?</a></li><li ><a href="#what-is-the-declaration-and-initialization-of-variable">What is the Declaration and Initialization Of Variable?</a></li><li ><a href="#what-is-redeclaring-variables-in-python">What is Redeclaring Variables In Python?</a></li><li ><a href="#python-assigns-values-to-multiple-variables">Python Assigns Values to Multiple Variables </a></li><li ><a href="#assigning-different-values-to-multiple-variables">Assigning different values to multiple variables</a></li><li ><a href="#using-the-same-name-for-different-types">Using the Same Name For Different Types</a></li><li ><a href="#how-does-operator-work-with-variables">How does +operator work with variables?</a></li><li ><a href="#using-operator-for-different-datatypes">Using + Operator for Different Datatypes</a></li><li ><a href="#output">Output</a></li><li ><a href="#what-is-global-and-local-python-variables">What is Global and Local Python Variables?</a></li><li ><a href="#what-is-global-keyword-in-python">What is Global Keyword in Python?</a></li><li ><a href="#what-is-variable-type-in-python">What is Variable Type in Python?</a></li><li ><a href="#creating-objects">Creating Objects</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-variables-fa-qs">Python Variables -FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python variable is a container that will store value. Python is not referred to as statically typed. There is no need to declare the variables before using them or declare their type.</p>
+
+
+
+<p>Therefore, a variable is formed after we provide a value to it. A Python variable is a name that has been given to a memory location. It is considered the fundamental unit of storage in the program. Let us check out this article to define a variable in Python.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-of-variable-in-python">Example Of Variable In Python</h2>
+
+
+
+<p>After an object is given a <a href="https://www.skillvertex.com/blog/static-variables-in-c/" data-type="post" data-id="3029">variable</a>. It will known by that name. According to Layman&#8217;s terms, variables in Python have store values.</p>
+
+
+
+<p>In the example given below, Skill Vertex is stored as the variable <strong>var</strong>. Thus, the stored information will be printed.</p>
+
+
+
+<pre class="wp-block-code"><code>Var = "Skillvertex"
+print(Var)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>Skillvertex</code></pre>
+
+
+
+<p>Keep in mind, that the stored value can be altered during the program execution.  The Variables in Python are just a name that is assigned to a memory location. Hence, every operation that is being done on a variable will affect its<a href="https://www.skillvertex.com/blog/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/" data-type="post" data-id="3096"> memory </a>location.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-rules-for-python-variables">What are the Rules For Python Variables?</h2>
+
+
+
+<ul class="wp-block-list">
+<li>A Python Variables name will start with a letter or an underscore character.</li>
+
+
+
+<li>A Python variable cannot begin with a number.</li>
+
+
+
+<li>It has alpha-numeric characters and underscores such as (A-z, 0-9, and _ ).</li>
+
+
+
+<li>It&#8217;s case-sensitive  (name, Name, and Name are the three different variables.</li>
+
+
+
+<li>The reserved words in Python cannot be included as the variable name in Python.</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code># valid variable name
+skill = 1
+Skill= 2
+Sk_k_il = 5
+_skill = 6
+skill_ = 7
+_SKILL_ = 8
+ 
+print(skill, skill, Sk_k_il )
+print(_skill, skill_, _SKILL_)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 2 5
+6 7 8</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-variable-assignment-in-python">What is the Variable Assignment In Python?</h2>
+
+
+
+<p>Defining variables in Python by providing a number, floating-point number, and a <a href="https://www.skillvertex.com/blog/how-to-reverse-a-string-in-java/" data-type="post" data-id="728">string</a> to the variable like age, salary, and a name.</p>
+
+
+
+<pre class="wp-block-code"><code># An integer assignment
+age = 45
+ 
+# A floating point
+salary = 1456.8
+ 
+# A string
+name = "John"
+ 
+print(age)
+print(salary)
+print(name)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>45
+1456.8
+John</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-declaration-and-initialization-of-variable">What is the Declaration and Initialization Of Variable?</h2>
+
+
+
+<p>Refer to the example below to declare the variable, define the variable, and print the variable.</p>
+
+
+
+<pre class="wp-block-code"><code># declaring the var
+Number = 100
+ 
+# display
+print( Number)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>100</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-redeclaring-variables-in-python">What is Redeclaring Variables In Python?</h2>
+
+
+
+<p> Re-declare the variable even after declaring the variable and then define it in Python already.</p>
+
+
+
+<pre class="wp-block-code"><code># declaring the var
+Number = 100
+ 
+# display
+print("Before declare: ", Number)
+ 
+# re-declare the var
+Number = 120.3
+   
+print("After re-declare:", Number)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Before declare:  100
+After re-declare: 120.3</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="python-assigns-values-to-multiple-variables"><strong>Python Assigns Values to Multiple Variables&nbsp;</strong></h2>
+
+
+
+<p>Python will provide a value to several variables simultaneously with the  &nbsp;“=” <a href="https://www.skillvertex.com/blog/and-operators-in-c/" data-type="post" data-id="3294">operators</a>.&nbsp;</p>
+
+
+
+<p>For example:</p>
+
+
+
+<pre class="wp-block-code"><code>a = b = c = 10
+ 
+print(a)
+print(b)
+print(c)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>10
+10
+10</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="assigning-different-values-to-multiple-variables">Assigning different values to multiple variables</h2>
+
+
+
+<p>Python will add different values in a single line with the help of the “,” operator.</p>
+
+
+
+<pre class="wp-block-code"><code>a, b, c = 1, 20.2, "SkillVertex"
+ 
+print(a)
+print(b)
+print(c)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code> 1,
+ 20.2
+"Skillvertex"
+ 
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="using-the-same-name-for-different-types">Using the Same Name For Different Types</h2>
+
+
+
+<p>Python program will allow to use of the same name and can refer to the new value and type.</p>
+
+
+
+<pre class="wp-block-code"><code>a = 10
+a = "Skillvertex"
+ 
+print(a)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="how-does-operator-work-with-variables">How does +operator work with variables?</h2>
+
+
+
+<p>Python Plus will give a way to add a value if it&#8217;s a number and concatenate if it&#8217;s a <a href="https://www.skillvertex.com/blog/how-to-find-length-of-string-in-java-python-cpp-javascript-sql-shell-script-mysql-oracle-and-perl/" data-type="post" data-id="452">string</a>. If the variable is already formed and has a new value in the same variable.</p>
+
+
+
+<pre class="wp-block-code"><code>a = 10
+b = 20
+print(a+b)
+ 
+a = "Skill"
+b = "Vertex"
+print(a+b)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>30
+Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="using-operator-for-different-datatypes">Using + Operator for Different Datatypes</h2>
+
+
+
+<pre class="wp-block-code"><code>a = 10
+b = "Geeks"
+print(a+b)</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="output">Output</h2>
+
+
+
+<pre class="wp-block-code"><code>TypeError: unsupported operand type(s) for +: 'int' and 'str'</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-global-and-local-python-variables">What is Global and Local Python Variables?</h2>
+
+
+
+<p>Local Variables in Python can be defined and declared inside the function. This variable cannot be defined outside the<a href="https://www.skillvertex.com/blog/variadic-functions-in-c/" data-type="post" data-id="2561"> function</a>.&#8217;</p>
+
+
+
+<pre class="wp-block-code"><code># This function uses global variable s
+def f():
+    s = "Welcome skillvertex"
+    print(s)
+ 
+ 
+f()</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Welcome skillvertex</code></pre>
+
+
+
+<p><strong>Global variables </strong>in Python are the ones that will defined and declared outside the function and will be used inside the function.</p>
+
+
+
+<pre class="wp-block-code"><code># This function has a variable with
+# name same as s
+def f():
+    print(s)
+ 
+# Global scope
+s = "I love Skillvertex"
+f()</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>I love Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-global-keyword-in-python">What is Global Keyword in Python?</h2>
+
+
+
+<p>Python global is a keyword that will allow the user to change the variable outside of the scope. Hence, it is used to make a global variable from the non-global scope.</p>
+
+
+
+<p>However, the global variable will be used inside the function only when it is required to do an assignment or to change the variable.</p>
+
+
+
+<p><strong>Rules of global keyword</strong></p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Local and Global Variables:</strong>
+<ul class="wp-block-list">
+<li>When you create a variable inside a function, it&#8217;s like a secret code that only that function understands. We call this a &#8220;local&#8221; variable.</li>
+
+
+
+<li>If you create a variable outside of any function, it&#8217;s like a universal code that everyone can understand. We call this a &#8220;global&#8221; variable.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Implicitly Global Variables:</strong>
+<ul class="wp-block-list">
+<li>If you only talk about (reference) a global variable inside a function, Python understands that you&#8217;re talking about the big universal code. You don&#8217;t need to declare it as global unless you want to change it.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Using <code>global</code> Keyword:</strong>
+<ul class="wp-block-list">
+<li>If you want to change the big universal code (global variable) inside a function, you need to tell Python explicitly by using the word &#8220;global.&#8221;</li>
+</ul>
+</li>
+</ol>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>x = 15
+ 
+def change():
+ 
+    # using a global keyword
+    global x
+ 
+    # increment value of a by 5
+    x = x + 5
+    print("Value of x inside a function :", x)
+ 
+ 
+change()
+print("Value of x outside a function :", x)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Value of x inside a function : 20
+Value of x outside a function : 20</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-variable-type-in-python">What is Variable Type in Python?</h2>
+
+
+
+<p>Data types have classification or categorization of data items. Data types will show the value that tells what operations can be done on a particular data.</p>
+
+
+
+<p> Since everything is an object in Python programming, data types are classes and variables are instances (objects) of these classes.</p>
+
+
+
+<p><strong>Build-in Python Data types:</strong></p>
+
+
+
+<p>a.Numeric</p>
+
+
+
+<p>b.Text Type</p>
+
+
+
+<p>c. Sequence Type</p>
+
+
+
+<p>d. Boolean</p>
+
+
+
+<p>d. Set </p>
+
+
+
+<p>e. Dictionary</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code># numberic
+var = 123
+print("Numeric data : ", var)
+ 
+# Sequence Type
+String1 = 'Welcome to the Skillvertex'
+print("String with the use of Single Quotes: ")
+print(String1)
+ 
+# Boolean
+print(type(True))
+print(type(False))
+ 
+# Creating a Set with
+# the use of a String
+set1 = set("Skillvertex")
+print("\nSet with the use of String: ")
+print(set1)
+ 
+# Creating a Dictionary
+# with Integer Keys
+Dict = {1: 'Skill', 2: 'For', 3: 'Vertex'}
+print("\nDictionary with the use of Integer Keys: ")
+print(Dict)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre class="wp-block-code"><code>Numeric data :  123
+String with the use of Single Quotes: 
+Welcome to the Skill vertex
+&lt;class 'bool'&gt;
+&lt;class 'bool'&gt;
+Set with the use of String: 
+{'v', 'S', 'K', 'I', 'E', 'L', 'R'}
+Dictionary with the use of Integer Keys: 
+{1: skill', 2: 'For', 3: 'skill'}</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="creating-objects">Creating Objects</h2>
+
+
+
+<pre class="wp-block-code"><code>class CSStudent:
+    # Class Variable
+    stream = 'cse'
+    # The init method or constructor
+    def __init__(self, roll):
+        # Instance Variable
+        self.roll = roll
+ 
+# Objects of CSStudent class
+a = CSStudent(101)
+b = CSStudent(102)
+ 
+print(a.stream)  # prints "cse"
+print(b.stream)  # prints "cse"
+print(a.roll)    # prints 101
+ 
+# Class variables can be accessed using class
+# name also
+print(CSStudent.stream)  # prints "cse"</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>cse
+cse
+101
+cse</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, this article is about Python variables, assigning values to multiple and different variables. A global and local variable in Python is also added to this. Students can understand Python variables easily through this.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-variables-fa-qs">Python Variables -FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1706877454732" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are variables in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A Python variable is a reserved memory location to store values.</p>
+
+</div>
+</div>
+<div id="faq-question-1706877462939" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What are the 4 variables in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Integer, float, String, and Boolean</p>
+
+</div>
+</div>
+<div id="faq-question-1706877470554" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What are called variables?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A variable can be either a characteristic, number, or quantity that can be measured or counted. </p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-variables/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Python Syntax</title>
+		<link>https://www.skillvertex.com/blog/python-syntax/</link>
+					<comments>https://www.skillvertex.com/blog/python-syntax/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 11:58:51 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python Syntax]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6924</guid>
+
+					<description><![CDATA[Python syntax consists of a set of rules which are used to make Python Programs. This Python Programming language syntax has several similarities with the Perl, Java, and C Programming languages. Moreover,this tutorial will guide you on the execution of the Python program to Print &#8220;Hello World&#8221; in the 2 different modes of Python programming. ... <a title="Python Syntax" class="read-more" href="https://www.skillvertex.com/blog/python-syntax/" aria-label="More on Python Syntax">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-python-syntax">What is Python Syntax?</a></li><li ><a href="#how-to-execute-the-first-python-program">How to execute the first Python Program?</a><ul><li ><a href="#python-interactive-mode-programming">Python- Interactive Mode Programming</a></li></ul></li><li ><a href="#what-is-python-script-mode-programming">What is Python-Script Mode Programming?</a></li><li ><a href="#what-is-a-python-identifier">What is a Python Identifier?</a></li><li ><a href="#what-are-the-python-keywords">What are the Python Keywords?</a></li><li ><a href="#what-are-python-lines-and-indentation">What are Python Lines and Indentation?</a></li><li ><a href="#what-is-python-multi-line-statements">What is Python Multi-Line Statements?</a></li><li ><a href="#what-is-quotations-in-python"> What is Quotations in Python ?</a></li><li ><a href="#what-is-comments-in-python">What is Comments in Python?</a></li><li ><a href="#using-black-lines-in-python-programs">Using Black Lines in Python Programs</a></li><li ><a href="#waiting-for-a-user">Waiting for a User</a></li><li ><a href="#multi-statements-groups-as-suites">Multi Statements Groups as Suites</a></li><li ><a href="#what-is-command-line-arguments-in-python">What is Command Line Arguments in Python?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-syntax-fa-qs">Python Syntax- FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python syntax consists of a set of rules which are used to make <a href="https://www.skillvertex.com/blog/python-program-to-print-hello-world/" data-type="post" data-id="6880">Python Programs</a>. This Python Programming language syntax has several similarities with the Perl, Java, and C Programming languages. </p>
+
+
+
+<p>Moreover,this tutorial will guide you on the execution of the Python program to Print  &#8220;Hello World&#8221; in the 2 different modes of Python programming.  It will also discuss the Python reserved codes.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-syntax">What is Python Syntax?</h2>
+
+
+
+<p>Python syntax is considered as the set of rules that will further define a combination of symbols, which is required to write the structured programs of Python correctly.</p>
+
+
+
+<p>Furthermore, these rules are defined to ensure that programs are written in Python and must be structured and formatted. Thus, the Python Interpreter can analyze and run the program accurately.  </p>
+
+
+
+<h2 class="wp-block-heading" id="how-to-execute-the-first-python-program">How to execute the first Python Program?</h2>
+
+
+
+<p>Python Programs can be executed for printing &#8220;Hello World&#8221; in two different modes of Python Programming. These are a) Interactive Mode Programming and b) Script Mode Programming.</p>
+
+
+
+<h3 class="wp-block-heading" id="python-interactive-mode-programming">Python- Interactive Mode Programming</h3>
+
+
+
+<p>Python interpreter can be brought up from the command line by entering Python in the command prompt as provided below:</p>
+
+
+
+<pre class="wp-block-code"><code>$ python3
+Python 3.10.6 (main, Mar 10 2023, 10:55:28) &#91;GCC 11.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt;</code></pre>
+
+
+
+<p>In this command prompt,<strong> &gt;&gt;&gt;</strong> represents a Python <a href="https://www.skillvertex.com/blog/how-to-mysql-clear-screen-command-in-windows/" data-type="post" data-id="1794">Command</a> Prompt and the command can be entered. The following text can be entered at the Python Prompt and then, select enter.</p>
+
+
+
+<pre class="wp-block-code"><code>&gt;&gt;&gt; print ("Hello, World!")
+</code></pre>
+
+
+
+<p>However, it is required to print a statement without parenthesis as in the print <strong>&#8220;Hello, World!&#8221;</strong>. If you are using the old version of Python like Python 2.4x.  The <a href="https://www.skillvertex.com/blog/what-will-be-the-output-of-the-following-program/" data-type="post" data-id="3081">output</a> in Python version 3. x will be the following:</p>
+
+
+
+<pre class="wp-block-code"><code>Hello, World!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-script-mode-programming">What is Python-Script Mode Programming?</h2>
+
+
+
+<p>Python Interpreter can be brought up with the script parameter which has an execution of the script and will be continued until the script is completed. Thus, the interpreter won&#8217;t be available when the script is completed. </p>
+
+
+
+<p>To write a simple Python Program, where the Python Program has an extension of .py. Enter the following code in the test.py file.</p>
+
+
+
+<pre class="wp-block-code"><code>print ("Hello, World!")</code></pre>
+
+
+
+<p>Suppose you have an <a href="https://www.skillvertex.com/blog/how-does-a-python-interpreter-works/" data-type="post" data-id="6895">interpreter </a>path that is set in a Path Variable. Run the program that is given below:</p>
+
+
+
+<pre class="wp-block-code"><code>$ python3 test.py
+</code></pre>
+
+
+
+<p>The desired output is the following:</p>
+
+
+
+<pre class="wp-block-code"><code>Hello, World!
+</code></pre>
+
+
+
+<p>Another way to execute the Python script is provided here. The modified test.py  file is the following</p>
+
+
+
+<pre class="wp-block-code"><code>#!/usr/bin/python3
+
+print ("Hello, World!")</code></pre>
+
+
+
+<p>Suppose the<a href="https://www.skillvertex.com/blog/which-part-interprets-program-instructions-and-initiate-control-operations/" data-type="post" data-id="1998"> interpreter</a> will be accessible in the /usr/bin <a href="https://www.skillvertex.com/blog/directory-submission-sites/" data-type="post" data-id="763">directory</a>. Run the program given below:</p>
+
+
+
+<pre class="wp-block-code"><code>$ chmod +x test.py     # This is to make file executable
+$./test.py</code></pre>
+
+
+
+<p>The desired result is the following:</p>
+
+
+
+<pre class="wp-block-code"><code>Hello, World!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-identifier">What is a Python Identifier?</h2>
+
+
+
+<p>Python identifier refers to identifying a variable, function, class, module, and other object. An identifier will begin with the letter A to Z which is followed by zero, underscores, and digits.</p>
+
+
+
+<p>Python won&#8217;t allow any punctuation characters like &nbsp;@, $, and %&nbsp; within the identifiers.</p>
+
+
+
+<p>The criteria for naming the <a href="https://www.skillvertex.com/blog/predefined-identifier-func-in-c/" data-type="post" data-id="2572">Python identifiers </a>are the follows:</p>
+
+
+
+<p>a. Python Class name will start with the uppercase letter. All the other identifiers will start with a lowercase letter.</p>
+
+
+
+<p>b. An identifier will start with the single leading underscore that will refer to the identifier as private.</p>
+
+
+
+<p>c.  Identifier which begins with the two leading underscores will show that it has a strongly private identifier.</p>
+
+
+
+<p>d. The identifier will end up with the two trailing underscores and also, the identifier has a language-defined special name. </p>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-python-keywords">What are the Python Keywords?</h2>
+
+
+
+<p>Python Keywords are reserved words and can&#8217;t be used as constants or <a href="https://www.skillvertex.com/blog/variable-length-arguments-for-macros/" data-type="post" data-id="3327">variables</a>. The Python Keyword must have lowercase letters.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>and</td><td>as</td><td>assert</td></tr><tr><td>break</td><td>class</td><td>continue</td></tr><tr><td>def</td><td>del</td><td>elif</td></tr><tr><td>else</td><td>except</td><td>False</td></tr><tr><td>finally</td><td>for</td><td>from</td></tr><tr><td>global</td><td>if</td><td>import</td></tr><tr><td>in</td><td>is</td><td>lambda</td></tr><tr><td>None</td><td>nonlocal</td><td>not</td></tr><tr><td>or</td><td>pass</td><td>raise</td></tr><tr><td>return</td><td>True</td><td>try</td></tr><tr><td>while</td><td>with</td><td>yield</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="what-are-python-lines-and-indentation">What are Python Lines and Indentation?</h2>
+
+
+
+<p>Python Programming has no braces for representing the block of code for class and function definitions. The block of code is represented by line indentation. </p>
+
+
+
+<p>However, the number of spaces in indentation is considered as a variable. Whereas, all the <a href="https://www.skillvertex.com/blog/break-statement-in-c/" data-type="post" data-id="2014">statements</a> within the block will be indented in the same way. Let&#8217;s check the example provided below:</p>
+
+
+
+<pre class="wp-block-code"><code>if True:
+   print ("True")
+else:
+   print ("False")</code></pre>
+
+
+
+<p>The block given below has an error</p>
+
+
+
+<pre class="wp-block-code"><code>if True:
+   print ("Answer")
+   print ("True")
+else:
+   print ("Answer")
+   print ("False")</code></pre>
+
+
+
+<p>It&#8217;s important to remember that the continuous lines that are intended with the same number of spaces can create a block. The example given below will illustrate the several statement blocks:</p>
+
+
+
+<pre class="wp-block-code"><code>import sys
+
+try:
+   # open file stream
+   file = open(file_name, "w")
+except IOError:
+   print "There was an error writing to", file_name
+   sys.exit()
+print "Enter '", file_finish,
+print "' When finished"
+while file_text != file_finish:
+   file_text = raw_input("Enter text: ")
+   if file_text == file_finish:
+      # close the file
+      file.close
+      break
+   file.write(file_text)
+   file.write("\n")
+file.close()
+file_name = raw_input("Enter filename: ")
+if len(file_name) == 0:
+   print "Next time please enter something"
+   sys.exit()
+try:
+   file = open(file_name, "r")
+except IOError:
+   print "There was an error reading file"
+   sys.exit()</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-multi-line-statements">What is Python Multi-Line Statements?</h2>
+
+
+
+<p>Python Statements will mostly end with a new line. So, python will use the line continuation<a href="https://www.skillvertex.com/blog/character-arithmetic-in-c-and-c/" data-type="post" data-id="1876"> character</a> / to show that the line will continue. Refer to the example given below:</p>
+
+
+
+<pre class="wp-block-code"><code>total = item_one + \
+        item_two + \
+        item_three</code></pre>
+
+
+
+<p>The statements that are enclosed with the  &nbsp;[], {}, or ()&nbsp; brackets will use the line continuation character.  The following example will work in Python:</p>
+
+
+
+<pre class="wp-block-code"><code>days = &#91;'Monday', 'Tuesday', 'Wednesday',
+        'Thursday', 'Friday']</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-quotations-in-python"> What is Quotations in Python ?</h2>
+
+
+
+<p>Python will accept single (&#8216;), double (&#8220;), and triple (&#8221;&#8217; or &#8221; &#8220;)&nbsp; for representing the string literals. We know that the same type of quote will start and end with the same string type.</p>
+
+
+
+<p>The triple quotes are mostly used for the multiple lines.  Let us check the example given below.</p>
+
+
+
+<pre class="wp-block-code"><code>word = 'word'
+print (word)
+
+sentence = "This is a sentence."
+print (sentence)
+
+paragraph = """This is a paragraph. It is
+ made up of multiple lines and sentences."""
+print (paragraph)</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-comments-in-python">What is Comments in Python?</h2>
+
+
+
+<p>A <a href="https://www.skillvertex.com/blog/c-comments/" data-type="post" data-id="2138">comment </a>is referred to as a programmer-readable explanation in the Python source code. So, comments are mostly added to the source code for easier readability. It will be neglected by the Python interpreter.</p>
+
+
+
+<p> Python will have single-line and multi-line comments. Python comments are mostly similar to the comments that are available in the PHP, BASH, and Perl Programming languages.</p>
+
+
+
+<p>A hash sign (#) that is not kept inside a string will denote the beginning of a comment. Every character will have # from the start to the end of the physical line and so the Python interpreter will neglect this comment.</p>
+
+
+
+<pre class="wp-block-code"><code># First comment
+print ("Hello, World!") # Second comment</code></pre>
+
+
+
+<p> The result is provided below:</p>
+
+
+
+<pre class="wp-block-code"><code>Hello, World!
+</code></pre>
+
+
+
+<p>Enter the comment on the same line after the statement </p>
+
+
+
+<pre class="wp-block-code"><code>name = "Madisetti" # This is again comment</code></pre>
+
+
+
+<p>Type the multiple lines comment as the following:</p>
+
+
+
+<pre class="wp-block-code"><code># This is a comment.
+# This is a comment, too.
+# This is a comment, too.
+# I said that already.</code></pre>
+
+
+
+<p>However, the triple quoted string will be neglected by the Python interpreter and thus will denote the multi-line comments.</p>
+
+
+
+<pre class="wp-block-code"><code>'''
+This is a multiline
+comment.
+'''</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="using-black-lines-in-python-programs">Using Black Lines in Python Programs</h2>
+
+
+
+<p>A line consists of a whitespace which can include a comment and is known as a black line and the Python interpreter will ignore it. </p>
+
+
+
+<p>Whereas, you are required to enter the empty physical line to end the multiline statement in an interactive interpreter session.</p>
+
+
+
+<h2 class="wp-block-heading" id="waiting-for-a-user">Waiting for a User</h2>
+
+
+
+<p>The program that is provided below will denote the prompt and the statement will tell to “Press the enter key to exit”  and then wait to take the required action by the user.</p>
+
+
+
+<pre class="wp-block-code"><code>#!/usr/bin/python
+
+raw_input("\n\nPress the enter key to exit.")</code></pre>
+
+
+
+<p>In the program given above,  &#8220;\n\n&#8221; will make two new lines before showing the actual line. After the user clicks the key, the program will automatically stop. </p>
+
+
+
+<h2 class="wp-block-heading" id="multi-statements-groups-as-suites">Multi Statements Groups as Suites</h2>
+
+
+
+<p>The group of individual statements will make a single code block which is referred to as a suite in Python. Compound or complex sentences like the if, while, def, and class. It will need a header line and a suite.</p>
+
+
+
+<p>Header lines will start with the statement with the keyword and then will end with the colon (: ). This will have one or more lines that can create a suite. </p>
+
+
+
+<pre class="wp-block-code"><code>if expression :
+   suite
+elif expression :
+   suite
+else :
+   suite</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-command-line-arguments-in-python">What is Command Line Arguments in Python?</h2>
+
+
+
+<p>Several Programs can be executed with a few basic information about the program being executed. This can be done using the -h-</p>
+
+
+
+<pre class="wp-block-code"><code>$ python3 -h
+usage: python3 &#91;option] ... &#91;-c cmd | -m mod | file | -] &#91;arg] ...
+Options and arguments (and corresponding environment variables):
+-c cmd : program passed in as string (terminates option list)
+-d     : debug output from parser (also PYTHONDEBUG=x)
+-E     : ignore environment variables (such as PYTHONPATH)
+-h     : print this help message and exit
+
+&#91; etc. ]</code></pre>
+
+
+
+<p>It is also possible to script the program in a manner that has several options. </p>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, this article will allow the students to understand how to execute the Python program along with the examples. This illustrated example will allow them to know more about this. Adding the comments in the Python program is also included.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-syntax-fa-qs">Python Syntax- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1706865105796" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. Is Python syntax easy?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Python has the simplest syntax.</p>
+
+</div>
+</div>
+<div id="faq-question-1706865113420" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.  What is mean in Python syntax?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <strong>mean(data-set/input-values)</strong></p>
+
+</div>
+</div>
+<div id="faq-question-1706865123555" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Why Python is used?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Python is used to help the software development tasks such as build control, bug tracking, and testing with Python.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-syntax/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How To Work With Unicode In Python?</title>
+		<link>https://www.skillvertex.com/blog/how-to-work-with-unicode-in-python/</link>
+					<comments>https://www.skillvertex.com/blog/how-to-work-with-unicode-in-python/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 11:58:08 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6901</guid>
+
+					<description><![CDATA[How To Work With Unicode In Python? Python is an object-oriented programming language. This article will discuss the Unicode system and working with Unicode in Python. What is the Unicode system? The Unicode system is a software application that will show output in different languages that are English, French, Japanese, and Hebrew. Python&#8217;s string type ... <a title="How To Work With Unicode In Python?" class="read-more" href="https://www.skillvertex.com/blog/how-to-work-with-unicode-in-python/" aria-label="More on How To Work With Unicode In Python?">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#how-to-work-with-unicode-in-python">How To Work With Unicode In Python?</a></li><li ><a href="#what-is-the-unicode-system">What is the Unicode system?</a></li><li ><a href="#what-is-character-encoding">What is Character Encoding?</a></li><li ><a href="#what-is-pythons-unicode-support">What is Python&#8217;s Unicode Support?</a></li><li ><a href="#example-1">Example 1</a></li><li ><a href="#example-2">Example 2</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#how-to-work-with-unicode-in-python-fa-qs">How To Work With Unicode In Python- FAQs</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="how-to-work-with-unicode-in-python">How To Work With Unicode In Python?</h2>
+
+
+
+<p>Python is an object-oriented programming language. This article will discuss the Unicode system and working with Unicode in Python. </p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-unicode-system">What is the Unicode system?</h2>
+
+
+
+<p>The Unicode system is a software application that will show output in different languages that are English, French, Japanese, and Hebrew. <a href="https://www.skillvertex.com/blog/python-applications/" data-type="post" data-id="6890">Python&#8217;</a>s string type will use the Unicorn Standard for showing the characters. This way it will allow the program to work with different characters.  </p>
+
+
+
+<p>However, a character is considered the smallest possible component of the text. A, B, and C are the different characters. A unicorn string is referred to as a sequence of code points that has a number from 0 through 0x10FFFFFF. The sequence of code will be represented in<a href="https://www.skillvertex.com/blog/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/" data-type="post" data-id="3096"> memory </a>as code unit sets and code units are then converted into 8-bit bytes</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-character-encoding">What is Character Encoding?</h2>
+
+
+
+<p>A sequence of code will be represented in<a href="https://www.skillvertex.com/blog/what-is-a-memory-leak-how-can-we-avoid-it/" data-type="post" data-id="3174"> memory</a> in the form of code units. Therefore, the rule for converting a Unicode string to a sequence of bytes is called character encoding.</p>
+
+
+
+<p>There are three types of encoding such as UTF-8, UTF-16 and UTF-32. The full form of UTF is the Unicode Transformation Format.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-pythons-unicode-support">What is Python&#8217;s Unicode Support?</h2>
+
+
+
+<p>Python 3.0 has built-in support for Unicode. The str type has Unicode characters and has strings such as single, double, or triple-quoted string syntax which is stored as Unicode. The default encoding for the Python source code is UTF-8.</p>
+
+
+
+<p>The string has a literal representation of the Unicode character.</p>
+
+
+
+<pre class="wp-block-code"><code>var = "3/4"
+print (var)
+var = "\u00BE"
+print (var)</code></pre>
+
+
+
+<p>The code has an output</p>
+
+
+
+<pre class="wp-block-code"><code>3/4
+¾</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-1">Example 1</h2>
+
+
+
+<p>In the example provided below has a string 10  which will be stored with the Unicode values of 1 and 0 and has the values \u0031 and u0030 respectively</p>
+
+
+
+<pre class="wp-block-code"><code>var = "\u0031\u0030"
+print (var)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>10</code></pre>
+
+
+
+<p>The string will show the text in a format that is human-readable. The bytes will store characters as binary data. Whereas, encoding will translate data from a character string into a series of bytes. Decoding refers to a process where the bytes back will translate into a human-readable character.</p>
+
+
+
+<p>In the example given below, it has a string variable that consists of ASCII characters. ASCII is a sub-division of a Unicode character set. The encoding method will use utf-8. The decode method will translate back to str object.</p>
+
+
+
+<pre class="wp-block-code"><code>string = "Hello"
+tobytes = string.encode('utf-8')
+print (tobytes)
+string = tobytes.decode('utf-8')
+print (string)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>b'Hello'
+Hello</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-2">Example 2</h2>
+
+
+
+<p>The rupee symbol will be stored in the variable with the Unicorn value. Then, translate the string into bytes.</p>
+
+
+
+<pre class="wp-block-code"><code>string = "\u20B9"
+print (string)
+tobytes = string.encode('utf-8')
+print (tobytes)
+string = tobytes.decode('utf-8')
+print (string)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>₹
+b'\xe2\x82\xb9'
+₹</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, this article is about the working of  Unicode in Python. Several examples are illustrated in this article to understand it more clearly.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-to-work-with-unicode-in-python-fa-qs">How To Work With Unicode In Python- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1706703545039" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. How do I print a Unicode character in a string in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Print Unicode Character with the ord() Function.  We can print Unicode character through <strong>combining ord() with the chr() function</strong> .</p>
+
+</div>
+</div>
+<div id="faq-question-1706703552327" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.  How do you write Unicode in a string?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. You can add a special character to a string using its unique code. There are three ways to do this. Special characters such as <strong>\xXX</strong>,<strong>\uXXXX</strong> and<br /><strong>\u{X…}</strong></p>
+
+</div>
+</div>
+<div id="faq-question-1706703559832" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the Unicode format for Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.  Unicode is referred to as the mapping, and UTF-8 enables a computer to understand that mapping. In Python 3, the default string encoding is UTF-8, which means that the Unicode code point in the Python string is automatically converted into the corresponding character.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/how-to-work-with-unicode-in-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

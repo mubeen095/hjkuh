@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>fgets() and gets() In C language</title>
+	<atom:link href="https://www.skillvertex.com/tag/fgets-and-gets-in-c-language/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 06 Mar 2024 11:35:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>fgets() and gets() In C language</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>fgets() and gets() In C language</title>
+		<link>https://www.skillvertex.com/blog/fgets-and-gets-in-c-language/</link>
+					<comments>https://www.skillvertex.com/blog/fgets-and-gets-in-c-language/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 11:35:32 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[fgets() and gets() In C language]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3577</guid>
+
+					<description><![CDATA[fgets() and gets() In C language Both gets() and fgets() are functions in C used for reading strings with spaces, but they have some key differences: fgets() the fgets() function reads a line from the specified stream and stores it into the string pointed to by the provided buffer (str). It stops reading under the ... <a title="fgets() and gets() In C language" class="read-more" href="https://www.skillvertex.com/blog/fgets-and-gets-in-c-language/" aria-label="More on fgets() and gets() In C language">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#fgets-and-gets-in-c-language">fgets() and gets() In C language</a></li><li ><a href="#fgets">fgets()</a><ul><li ><a href="#features-of-fgets">Features of fgets()</a></li></ul></li><li ><a href="#example-of-fgets">Example of fgets()</a></li><li ><a href="#gets">gets()</a><ul><li ><a href="#parameters">Parameters</a></li><li ><a href="#return-value">Return Value</a></li></ul></li><li ><a href="#example-of-gets">Example of gets()</a></li><li ><a href="#faq-fgets-and-gets-in-c-language">FAQ -fgets() and gets() In C language</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="fgets-and-gets-in-c-language">fgets() and gets() In C language</h2>
+
+
+
+<p>Both <code>gets()</code> and <code>fgets()</code> are functions in C used for reading strings with spaces, but they have some key differences:</p>
+
+
+
+<h2 class="wp-block-heading" id="fgets">fgets()</h2>
+
+
+
+<p>the <code>fgets()</code> function reads a line from the specified stream and stores it into the string pointed to by the provided buffer (<code>str</code>). It stops reading under the following conditions:</p>
+
+
+
+<ol class="wp-block-list">
+<li>It reads <code>(n-1)</code> characters, where <code>n</code> is the size of the buffer. This ensures that the last character in the buffer is reserved for the null terminator (<code>'\0'</code>), making the string properly terminated.</li>
+
+
+
+<li>It encounters a newline character (<code>'\n'</code>) in the input, indicating the end of the line.</li>
+
+
+
+<li>It reaches the end-of-file (EOF).</li>
+</ol>
+
+
+
+<p>This behavior of <code>fgets()</code> is valuable for reading lines of text while providing control over the number of characters read and preventing buffer overflow. Developers commonly use <code>fgets()</code> for safe and controlled string input in C programming.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>char *fgets (char *str, int n, FILE *stream);
+</code></pre>
+
+
+
+<p>Parameter</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>str:</strong> It&#8217;s where the read string is stored. This is a pointer to an array of characters.</li>
+
+
+
+<li><strong>n:</strong> This is the maximum number of characters that can be copied into <code>str</code>, including the final null character.</li>
+
+
+
+<li><strong>stream:</strong> It&#8217;s a pointer to a <code>FILE</code> object, which points to the source of input, like a file or standard input.</li>
+</ul>
+
+
+
+<p>Return Value</p>
+
+
+
+<p>The fgets() function will returns a pointer to the string where the input is stored.</p>
+
+
+
+<h3 class="wp-block-heading" id="features-of-fgets">Features of fgets()</h3>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Parameters:</strong> <code>fgets()</code> uses parameters like the maximum length (how many characters to read), a buffer (where the string is kept), and a reference to where the input comes from.</li>
+
+
+
+<li><strong>Safety:</strong> It&#8217;s safe to use because it checks how much space is available in the buffer, preventing it from grabbing too many characters and causing problems.</li>
+
+
+
+<li><strong>Reading Behavior:</strong> <code>fgets()</code> keeps reading characters until it finds a new line or reaches the maximum limit set by the buffer size. This helps control and manage string input in a safe way.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="example-of-fgets">Example of fgets()</h2>
+
+
+
+<p>&nbsp;Consider the maximum number of characters is 15 and the input length is greater than 15 but still fgets() will read only 15 characters and print it.&nbsp;</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate fgets()
+#include &lt;stdio.h&gt;
+#define MAX 15
+ 
+int main()
+{
+    // defining buffer
+    char buf&#91;MAX];
+ 
+    // using fgets to take input from stdin
+    fgets(buf, MAX, stdin);
+    printf("string is: %s\n", buf);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>Input:
+Hello and welcome to Skillvertex
+
+Output:
+string is: Hello and welc</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="gets">gets()</h2>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Functionality:</strong> It reads characters from the keyboard and puts them into a C string until it sees a new line or reaches the end of the input.</li>
+
+
+
+<li><strong>Safety Concerns:</strong> Be cautious using it because it doesn&#8217;t check how much space is available, which can cause problems by using too much space.</li>
+
+
+
+<li><strong>Usage:</strong> It&#8217;s used to get strings from the user until they press &#8220;Enter.&#8221;</li>
+</ul>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>char *gets( char *str );
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="parameters">Parameters</h3>
+
+
+
+<p><strong>str</strong> is a pointer to a block of memory, typically an array of characters, where the read string is stored as a C string.</p>
+
+
+
+<h3 class="wp-block-heading" id="return-value">Return Value</h3>
+
+
+
+<p>The function  will return a pointer to the string where input is being stored.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-of-gets">Example of gets()</h2>
+
+
+
+<p> Consider a character array of 15 characters and the input will be  greater than 15 characters, gets()  reads all these characters and store them into a variable. Since, gets() does not check the maximum limit of input characters, at any time compiler may return buffer overflow error.&nbsp;</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate
+// gets()
+#include &lt;stdio.h&gt;
+#define MAX 15
+ 
+int main()
+{
+    // defining buffer
+    char buf&#91;MAX];
+ 
+    printf("Enter a string: ");
+ 
+    // using gets to take string from stdin
+    gets(buf);
+    printf("string is: %s\n", buf);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>Input:
+Hello and welcome to Skillvertex 
+
+Output:
+Hello and welcome to Skillvertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-fgets-and-gets-in-c-language">FAQ -fgets() and gets() In C language</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1700127992995" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the use of gets () function example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <code>gets()</code> reads a line from the standard input, storing it in a buffer. The line consists of characters until the first newline or EOF. If a newline is encountered, <code>gets()</code> replaces it with a null character before returning the line. Note that <code>gets()</code> lacks input boundary checking, making it unsafe; it is deprecated in modern C, and safer alternatives like <code>fgets()</code> are recommended.</p>
+
+</div>
+</div>
+<div id="faq-question-1700127997893" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.What are the 4 functions in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.<strong>Printf(), scanf(), ceil(), and floor()</strong> are examples of library functions.</p>
+
+</div>
+</div>
+<div id="faq-question-1700128010808" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.What is the syntax of gets in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.<strong>char *gets(char *str)</strong> </p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/fgets-and-gets-in-c-language/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

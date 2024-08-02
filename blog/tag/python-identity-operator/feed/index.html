@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python Identity Operator</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-identity-operator/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Thu, 11 Apr 2024 12:01:22 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Python Identity Operator</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python Identity Operator</title>
+		<link>https://www.skillvertex.com/blog/python-identity-operator/</link>
+					<comments>https://www.skillvertex.com/blog/python-identity-operator/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 12:01:22 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python Identity Operator]]></category>
+		<category><![CDATA[Python Operators]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6997</guid>
+
+					<description><![CDATA[The Python Identity operator will compare the objects by checking if the object belongs to the same memory location. Read this article to learn more about Python Identity Operator. What is Python Identity Operator Python operator consists of two operators such as &#8216;is&#8216;and &#8216;is not&#8216;. Both the values will be returned with the Boolean values. ... <a title="Python Identity Operator" class="read-more" href="https://www.skillvertex.com/blog/python-identity-operator/" aria-label="More on Python Identity Operator">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-python-identity-operator">What is Python Identity Operator</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-identity-operator-fa-qs"> Python Identity Operator- FAQs</a></li></ul></nav></div>
+
+
+
+<p> The <strong>Python Identity</strong> <a href="https://www.skillvertex.com/blog/python-logical-operators/" data-type="post" data-id="6978">operator</a> will compare the objects by checking if the object belongs to the same memory location. Read this article to learn more about Python  Identity Operator.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-identity-operator">What is Python Identity Operator</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/python-literals/" data-type="post" data-id="6953">Python </a>operator consists of two <a href="https://www.skillvertex.com/blog/python-operators/" data-type="post" data-id="6937">operators </a>such as &#8216;<strong>is</strong>&#8216;and &#8216;<strong>is not</strong>&#8216;. Both the values will be returned with the<a href="https://www.skillvertex.com/blog/python-booleans/" data-type="post" data-id="7030"> Boolean values</a>. The in-operators will check if the value comes true only if the operand object shares the same memory location.</p>
+
+
+
+<p>Furthermore, the memory location of the object will be achieved with the help of the &#8221;<strong>id()</strong>&#8221; function. Whereas, if both the<a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932"> variables</a> id() are the same, then the in operator will return with the True.</p>
+
+
+
+<pre class="wp-block-code"><code># Identity Operator - 'is'
+x = &#91;1, 2, 3]
+y = &#91;1, 2, 3]
+z = x
+
+# 'is' operator checks if both variables refer to the same object in memory
+print(x is y)  # False, because x and y refer to different objects
+print(x is z)  # True, because x and z refer to the same object
+
+# Identity Operator - 'is not'
+print(x is not y)  # True, because x and y do not refer to the same object
+print(x is not z)  # False, because x and z refer to the same object</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>False
+True
+True
+False</code></pre>
+
+
+
+<p>However, list and tuple will do<a href="https://www.skillvertex.com/blog/python-operators/" data-type="post" data-id="6937"> operations</a> very differently. The example given below contains two lists such as  &#8221;a&#8221; and &#8221;b&#8221;  with the same items and the id() varies.</p>
+
+
+
+<pre class="wp-block-code"><code>a=&#91;1,2,3]
+b=&#91;1,2,3]
+print ("id(a), id(b):", id(a), id(b))
+print ("a is b:", a is b)
+print ("b is not a:", b is not a)</code></pre>
+
+
+
+<p> Output</p>
+
+
+
+<pre class="wp-block-code"><code>id(a), id(b): 1552612704640 1552567805568
+a is b: False
+b is not a: True</code></pre>
+
+
+
+<p>The list or tuple has memory locations of individual items only and not the items themselves. Thus,  &#8221;a &#8221; consists of an address of  10,20, or 30 integer objects that are located in a particular location and will be different from the of  &#8221;b&#8221;.</p>
+
+
+
+<p> Output</p>
+
+
+
+<pre class="wp-block-code"><code>140734682034984 140734682035016 140734682035048
+140734682034984 140734682035016 140734682035048</code></pre>
+
+
+
+<p>Here, the &#8216;is&#8217; operator will return with a false value even if it contains the same numbers. This happens due to the two different locations of a  and b.</p>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, this article will improve our knowledge of the Python Identity Operator. It has also provided examples of the &#8221;is&#8221; and  &#8221;is not&#8221; operators.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-identity-operator-fa-qs"> Python Identity Operator- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707481450804" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is an identity operator in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Python  Identity operator is considered as the special comparison operator to find  if the two variables have the same object in the memory.</p>
+
+</div>
+</div>
+<div id="faq-question-1707481460278" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the symbol for the identity operator?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <sub>d</sub> will stand for  the identity function and I   for the identity matrix</p>
+
+</div>
+</div>
+<div id="faq-question-1707481468824" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is ID in Python for example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The id method will return a unique integer number for every unique value it will be worked with.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-identity-operator/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

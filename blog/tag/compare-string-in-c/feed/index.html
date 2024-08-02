@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Compare String In C++</title>
+	<atom:link href="https://www.skillvertex.com/tag/compare-string-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 06:21:39 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Compare String In C++</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Different Way To Compare String In C++</title>
+		<link>https://www.skillvertex.com/blog/compare-string-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/compare-string-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 06:21:39 +0000</pubDate>
+				<category><![CDATA[Computer Science]]></category>
+		<category><![CDATA[Compare String In C++]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=961</guid>
+
+					<description><![CDATA[Compare String In C++ In the realm of C++, string comparison forms a fundamental aspect of programming. However, the journey to compare strings isn&#8217;t a one-size-fits-all endeavor. There exist diverse methods, each with its own purpose and intricacies. Whether you&#8217;re a novice or a seasoned programmer, understanding these various techniques empowers you to tackle different ... <a title="Different Way To Compare String In C++" class="read-more" href="https://www.skillvertex.com/blog/compare-string-in-c/" aria-label="More on Different Way To Compare String In C++">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#compare-string-in-c">Compare String In C++</a></li><li ><a href="#ways-to-compare-string-in-c">Ways to Compare String in C++</a></li><li ><a href="#1-strcmp-function">1.Strcmp() Function</a></li><li ><a href="#2-compare-function">2. Compare() Function</a><ul><li ><a href="#syntax">Syntax</a></li></ul></li><li ><a href="#3-relational-operator">3. Relational Operator</a></li><li ><a href="#4-using-for-loop-and-if-statement">4. Using For loop and If statement</a></li><li ><a href="#5-using-user-defined-function">5. Using user-defined function</a></li><li ><a href="#faq-different-way-to-compare-string-in-c">FAQ &#8211; Different Way To Compare String In C++</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="compare-string-in-c">Compare String In C++</h2>
+
+
+
+<p>In the realm of C++, string comparison forms a fundamental aspect of programming. However, the journey to compare strings isn&#8217;t a one-size-fits-all endeavor. There exist diverse methods, each with its own purpose and intricacies. </p>
+
+
+
+<p>Whether you&#8217;re a novice or a seasoned programmer, understanding these various techniques empowers you to tackle different scenarios effectively. This guide delves into the multiple ways of comparing strings in C++, offering insights into their nuances and helping you choose the optimal approach for your coding needs.</p>
+
+
+
+<h2 class="wp-block-heading" id="ways-to-compare-string-in-c">Ways to Compare String in C++</h2>
+
+
+
+<p>There are different ways to compare the strings in the C++ programming language, as follows:</p>
+
+
+
+<ol class="wp-block-list">
+<li>Using strcmp() function</li>
+
+
+
+<li>Using compare() function</li>
+
+
+
+<li>Using Relational Operator</li>
+
+
+
+<li>Using For loop and If statement</li>
+
+
+
+<li>Using user-defined function</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="1-strcmp-function">1.Strcmp() Function</h2>
+
+
+
+<p>The strcmp() function is a ready-to-use function found in the string.h header file. It serves to compare two strings in a lexicographical manner. This involves systematically comparing characters between the two strings, starting from the first character and progressing until all characters match or a NULL character is encountered in either string.</p>
+
+
+
+<p><strong>Syntax</strong><a href="https://www.javatpoint.com/different-ways-to-compare-strings-in-cpp#" rel="nofollow noopener" target="_blank"></a><a href="https://www.javatpoint.com/different-ways-to-compare-strings-in-cpp#" rel="nofollow noopener" target="_blank"></a><a href="https://www.javatpoint.com/different-ways-to-compare-strings-in-cpp#" rel="nofollow noopener" target="_blank"></a></p>
+
+
+
+<ol class="wp-block-list" start="1">
+<li><strong>int</strong>&nbsp;strcmp&nbsp;(&nbsp;<strong>const</strong>&nbsp;<strong>char</strong>&nbsp;*leftstr,&nbsp;<strong>const</strong>&nbsp;<strong>char</strong>&nbsp;*rightstr&nbsp;);&nbsp;&nbsp;&nbsp;</li>
+</ol>
+
+
+
+<p><strong>Parameters:</strong></p>
+
+
+
+<p><strong>leftstr:</strong>&nbsp;It defines the characters of the left string.</p>
+
+
+
+<p><strong>rightstr:</strong>&nbsp;It defines the characters of the right string.</p>
+
+
+
+<p><strong>Returns:</strong></p>
+
+
+
+<p>The leftstr string compares each character with the second string from the left side till the end of both strings. And, if both the strings are equal, the strcmp() function returns strings are equal. Else, the strings are not equal.</p>
+
+
+
+<h2 class="wp-block-heading" id="2-compare-function">2. Compare() Function</h2>
+
+
+
+<p>The compare() function is a built-in function in C++. It&#8217;s used to compare two strings and gives specific results depending on the comparison:</p>
+
+
+
+<ul class="wp-block-list">
+<li>If the strings are exactly the same, the function returns 0.</li>
+
+
+
+<li>If the character value of the first string is lower than the second, the function returns a value less than 0.</li>
+
+
+
+<li>If the second string is greater than the first, the function returns a value greater than 0.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="syntax">Syntax</h3>
+
+
+
+<p><strong>int</strong>&nbsp;compare&nbsp;(<strong>const</strong>&nbsp;string&nbsp;&amp;str)&nbsp;<strong>const</strong>;&nbsp;&nbsp;&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading" id="3-relational-operator">3. Relational Operator</h2>
+
+
+
+<p>In C++, the relational operator is employed to compare both strings and numerical values. C++ features various relational operators, including &#8216;==&#8217;, &#8216;!=&#8217;, &gt;, and &lt;. In this context, we focus on two operators: &#8216;==&#8217; for equality and &#8216;!=&#8217; for inequality. These operators make string comparisons straightforward and efficient.</p>
+
+
+
+<p><strong>Syntax</strong></p>
+
+
+
+<ol class="wp-block-list" start="1">
+<li>String1&nbsp;==&nbsp;string2&nbsp;&nbsp;//&nbsp;here,&nbsp;we&nbsp;use&nbsp;double&nbsp;equal&nbsp;to&nbsp;the operator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+
+
+<li>Or&nbsp;&nbsp;&nbsp;</li>
+
+
+
+<li>String1&nbsp;!=&nbsp;string2&nbsp;//&nbsp;here,&nbsp;we&nbsp;use&nbsp;not&nbsp;equal&nbsp;to&nbsp;operator&nbsp;</li>
+</ol>
+
+
+
+<p><a href="https://www.javatpoint.com/different-ways-to-compare-strings-in-cpp#" rel="nofollow noopener" target="_blank"></a><a href="https://www.javatpoint.com/different-ways-to-compare-strings-in-cpp#" rel="nofollow noopener" target="_blank"></a><a href="https://www.javatpoint.com/different-ways-to-compare-strings-in-cpp#" rel="nofollow noopener" target="_blank"></a></p>
+
+
+
+<h2 class="wp-block-heading" id="4-using-for-loop-and-if-statement">4. Using For loop and If statement</h2>
+
+
+
+<p>In C++, you can compare strings using a <code>for</code> loop and a <code>if</code> statement. Here&#8217;s a simple example demonstrating this approach:</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::string str1 = "Hello";
+    std::string str2 = "World";
+
+    bool equal = true;
+
+    if (str1.length() != str2.length()) {
+        equal = false;
+    } else {
+        for (size_t i = 0; i &lt; str1.length(); ++i) {
+            if (str1&#91;i] != str2&#91;i]) {
+                equal = false;
+                break;
+            }
+        }
+    }
+
+    if (equal) {
+        std::cout &lt;&lt; "Strings are equal." &lt;&lt; std::endl;
+    } else {
+        std::cout &lt;&lt; "Strings are not equal." &lt;&lt; std::endl;
+    }
+
+    return 0;
+}</code></pre>
+
+
+
+<p>In this example, the <code>for</code> loop iterates through each character of both strings and checks if they are equal at each position. If a character mismatch is found, the <code>equal</code> flag is set to false , and the loop is exited early. Finally, based on the value of the <code>equal</code> flag, the program prints whether the strings are equal or not.</p>
+
+
+
+<h2 class="wp-block-heading" id="5-using-user-defined-function">5. Using user-defined function</h2>
+
+
+
+<p>You can create a user-defined function to compare strings in C++. Here&#8217;s an example:</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+bool areStringsEqual(const std::string&amp; str1, const std::string&amp; str2) {
+    if (str1.length() != str2.length()) {
+        return false;
+    }
+
+    for (size_t i = 0; i &lt; str1.length(); ++i) {
+        if (str1&#91;i] != str2&#91;i]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+int main() {
+    std::string str1 = "Apple";
+    std::string str2 = "Apple";
+
+    if (areStringsEqual(str1, str2)) {
+        std::cout &lt;&lt; "Strings are equal." &lt;&lt; std::endl;
+    } else {
+        std::cout &lt;&lt; "Strings are not equal." &lt;&lt; std::endl;
+    }
+
+    return 0;
+}</code></pre>
+
+
+
+<p>In this example, the <code>areStringsEqual</code> function takes two string arguments and performs the same comparison as before. The <code>main</code> function calls this user-defined function, making the code more organized and reusable.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-different-way-to-compare-string-in-c">FAQ &#8211; Different Way To Compare String In C++</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1692276638052" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.How to compare two C strings in C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. strcmp() is a C library function that compares two strings lexicographically. It can also inbuilt function in C++ String. Syntax: strcmp() function will take only two strings (character arrays) as arguments and returns: 0, if both the strings are equal i.e. firstString is lexicographically equal to secondString.</p>
+
+</div>
+</div>
+<div id="faq-question-1692276654281" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the string comparison function in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <strong>strcmp()</strong> function, functions to compare the strings (str1,str2). The strings str1 and str2 will be compared using this function. If the function returns a value of 0, it signifies that the strings are equal otherwise, the strings are not equal.</p>
+
+</div>
+</div>
+<div id="faq-question-1692276666565" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What does == do in strings C++?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C++ the == operator is overloaded for the string to <strong>check whether both strings are the same or not</strong>. If they are the same it will show 1, otherwise 0. So it is like a Boolean-type function</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/compare-string-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

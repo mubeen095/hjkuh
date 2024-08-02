@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Compiling A C Program: Behind The Scenes</title>
+	<atom:link href="https://www.skillvertex.com/tag/compiling-a-c-program-behind-the-scenes/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:13:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Compiling A C Program: Behind The Scenes</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Compiling A C Program: Behind The Scenes</title>
+		<link>https://www.skillvertex.com/blog/compiling-a-c-program-behind-the-scenes/</link>
+					<comments>https://www.skillvertex.com/blog/compiling-a-c-program-behind-the-scenes/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:13:31 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Compiling A C Program: Behind The Scenes]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2172</guid>
+
+					<description><![CDATA[Compiling A C Program: Behind The Scenes Compiling a C program is a fundamental process in software development that transforms human-readable C code into machine-executable instructions. While many programmers rely on this process daily, few will explore the complexity of what happens behind the scenes. Understanding the inner workings of C program compilation can provide ... <a title="Compiling A C Program: Behind The Scenes" class="read-more" href="https://www.skillvertex.com/blog/compiling-a-c-program-behind-the-scenes/" aria-label="More on Compiling A C Program: Behind The Scenes">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#compiling-a-c-program-behind-the-scenes">Compiling A C Program: Behind The Scenes</a></li><li ><a href="#how-do-we-compile-and-run-a-c-program">How do we compile and run a C program?</a></li><li ><a href="#what-goes-inside-the-compilation-process">What goes inside the compilation process?</a></li><li ><a href="#1-pre-processing">1. Pre-processing</a></li><li ><a href="#2-compiling">2. Compiling</a></li><li ><a href="#3-assembling">3. Assembling</a></li><li ><a href="#4-linking">4. Linking</a></li><li ><a href="#faq-compiling-a-c-program-behind-the-scenes">FAQ- Compiling A C Program: Behind The Scenes</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="compiling-a-c-program-behind-the-scenes">Compiling A C Program: Behind The Scenes</h2>
+
+
+
+<p>Compiling a C program is a fundamental process in software development that transforms human-readable C code into machine-executable instructions. While many programmers rely on this process daily, few will explore the complexity of what happens behind the scenes. Understanding the inner workings of C program compilation can provide valuable insights into how your code is translated into a format that a computer can understand and execute efficiently. In this exploration, we will focus on a journey to uncover the mysteries behind C program compilation, shedding light on the steps and transformations that occur from your code editor to the running program on your computer.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-do-we-compile-and-run-a-c-program">How do we compile and run a C program?</h2>
+
+
+
+<p>To compile and run a C program, you&#8217;ll require two essential tools: a compiler and a code editor. In this example, we&#8217;ll focus on using the GCC compiler on an Ubuntu machine.</p>
+
+
+
+<p><strong>Step 1: Creating a C Source File</strong></p>
+
+
+
+<p>The initial step is to craft a C program using a code editor of your choice and then save the file with a &#8220;.c&#8221; extension, like &#8220;filename.c&#8221;.</p>
+
+
+
+<pre class="wp-block-code"><code> $ vi filename.c
+</code></pre>
+
+
+
+<p>Hence, we can just type Hello World and save it </p>
+
+
+
+<p><strong>Step 2: Compiling using GCC compiler</strong></p>
+
+
+
+<p>In C program, We will use the command given below in the terminal for compiling our filename.c source file</p>
+
+
+
+<pre class="wp-block-code"><code>We use the following command in the terminal for compiling our filename.c source file
+
+</code></pre>
+
+
+
+<p>We can communicate various instructions to the GCC compiler to perform different tasks, including:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Using the option <code>-Wall</code> to enable all compiler warning messages, which is a good practice for producing higher-quality code.</li>
+
+
+
+<li>Employing the option <code>-o</code> to specify the name of the output file. If this option isn&#8217;t used, the compiler generates an output file named &#8220;a.out.&#8221;</li>
+</ul>
+
+
+
+<p>When there are no errors in our C program, the compiler generates an executable file for the program.</p>
+
+
+
+<p><strong>Step 3: Executing the program</strong></p>
+
+
+
+<p>Once the compilation is complete, an executable file is generated. To run this executable, you can use the following command</p>
+
+
+
+<pre class="wp-block-code"><code> $ ./filename
+</code></pre>
+
+
+
+<p>Hence, the program will be executed, and then the output will be displayed in the terminal</p>
+
+
+
+<h2 class="wp-block-heading" id="what-goes-inside-the-compilation-process">What goes inside the compilation process?</h2>
+
+
+
+<p><br>Once the compilation is complete, an executable file is generated. To run this executable, you can use the following command.</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Pre-processing</strong></li>
+
+
+
+<li><strong>Compilation</strong></li>
+
+
+
+<li><strong>Assembly</strong></li>
+
+
+
+<li><strong>Linking</strong></li>
+</ol>
+
+
+
+<p>By executing the following command, you can generate all intermediate files in the current directory, in addition to the executable:</p>
+
+
+
+<pre class="wp-block-code"><code> $gcc -Wall -save-temps filename.c –o filename 
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="1-pre-processing">1. Pre-processing</h2>
+
+
+
+<p>This is the first phase through which source code is passed. This phase includes:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Removal of Comments</li>
+
+
+
+<li>Expansion of Macros</li>
+
+
+
+<li>Expansion of the included files.</li>
+
+
+
+<li>Conditional compilation</li>
+</ul>
+
+
+
+<p>The preprocessed output is stored in the&nbsp;<strong>filename.i</strong>. Let’s see what’s inside filename.i: using&nbsp;<strong>$vi filename.i</strong>&nbsp;</p>
+
+
+
+<p>In the above output, the source file is filled with lots and lots of info, but in the end, our code is preserved.&nbsp;</p>
+
+
+
+<ul class="wp-block-list">
+<li>printf contains now a + b rather than add(a, b) that’s because macros have expanded.</li>
+
+
+
+<li>Comments are stripped off.</li>
+
+
+
+<li><strong>#include&lt;stdio.h&gt;</strong>&nbsp;is missing instead we see lots of code. So header files have been expanded and included in our source file.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="2-compiling">2. Compiling</h2>
+
+
+
+<p>The next step in the compilation process involves taking the preprocessed file, <code>filename.i</code>, and generating an intermediate compiled output file named <code>filename.s</code>. This file contains the program&#8217;s instructions in assembly-level code, which is a lower-level representation of the program.</p>
+
+
+
+<p>You can view the contents of the <code>filename.s</code> file using a text editor or terminal command, such as <code>$nano filename.s</code>. This assembly-level code is an intermediate step in the compilation process before the final executable is generated. It serves as a bridge between the high-level C code and the machine-level instructions that the computer can execute directly.</p>
+
+
+
+<h2 class="wp-block-heading" id="3-assembling">3. Assembling</h2>
+
+
+
+<p>In this phase, the <code>filename.s</code> file is taken as input and processed by the assembler to produce an <code>filename.o</code> file. This file contains machine-level instructions, which are instructions that the computer&#8217;s CPU can directly understand and execute.</p>
+
+
+
+<p>It&#8217;s important to note that in this phase, only the existing code in your program is converted into machine language. Function calls, such as <code>printf()</code>, are not fully resolved at this stage. Instead, they are left as placeholders that will be resolved in a later phase of the compilation process. This allows the compiler to generate code that references external functions without needing to know their exact details at this point. The full resolution of function calls typically occurs during the linking phase when external libraries and functions are connected to your program.</p>
+
+
+
+<h2 class="wp-block-heading" id="4-linking">4. Linking</h2>
+
+
+
+<p>In the final phase of C program compilation, the linker plays a crucial role. It takes all the function calls in your code and connects them to their actual implementations. The linker is aware of where these functions are defined in your program.</p>
+
+
+
+<p>Additionally, the linker performs some additional tasks, such as adding extra code to your program. This extra code is essential for setting up the program&#8217;s environment, including tasks like handling command-line arguments. When you run commands like <code>$size filename.o</code> and <code>$size filename</code>, you can observe how the size of the output file increases from an object file to an executable file. This increase in size is due to the extra code that the linker adds to your program to ensure it runs correctly from start to finish.</p>
+
+
+
+<p>So, in essence, the linker not only connects function calls but also ensures that your program has everything it needs to execute correctly, from the beginning to the end of its execution.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-compiling-a-c-program-behind-the-scenes">FAQ- Compiling A C Program: Behind The Scenes</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1695807436947" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the compiling process of the C program?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The compilation process in C serves the purpose of translating human-readable code into machine-readable code while simultaneously checking the syntax and semantics of the code. This process aims to identify any syntax problems or warnings present in our C program, ensuring that it can be executed correctly and efficiently by a computer.</p>
+
+</div>
+</div>
+<div id="faq-question-1695807444886" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. How to compile a C program in a compiler?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. To write and run a C program in Turbo C IDE:<br />Open Turbo C IDE.<br />Create a new file.<br />Write your C program.<br />Compile using &#8220;Alt + F9.&#8221;<br />Run the program with &#8220;Ctrl + F9.&#8221;</p>
+
+</div>
+</div>
+<div id="faq-question-1695807452001" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Why is compiling important in C programming?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The compiler&#8217;s role is to offer a user-friendly means for humans to give instructions that can be readily transformed into machine code, which microprocessors can understand. It accomplishes this by translating human-readable source code into machine code.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<h2 class="wp-block-heading"><br></h2>
+<div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/compiling-a-c-program-behind-the-scenes/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

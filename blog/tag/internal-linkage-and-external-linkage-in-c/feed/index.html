@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Internal Linkage And External Linkage In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/internal-linkage-and-external-linkage-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 06:51:14 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Internal Linkage And External Linkage In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Internal Linkage And External Linkage In C</title>
+		<link>https://www.skillvertex.com/blog/internal-linkage-and-external-linkage-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/internal-linkage-and-external-linkage-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 06:51:14 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Internal Linkage And External Linkage In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=1849</guid>
+
+					<description><![CDATA[Internal Linkage And External Linkage In C In the world of C programming, we need to understand how variables and functions are connected within our code. Two important ideas in this context are &#8220;Internal Linkage&#8221; and &#8220;External Linkage.&#8221; These concepts determine where variables and functions can be used and shared in a C program. In ... <a title="Internal Linkage And External Linkage In C" class="read-more" href="https://www.skillvertex.com/blog/internal-linkage-and-external-linkage-in-c/" aria-label="More on Internal Linkage And External Linkage In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#internal-linkage-and-external-linkage-in-c">Internal Linkage And External Linkage In C</a></li><li ><a href="#definitions">Definitions </a></li><li ><a href="#what-is-linkage">What is Linkage </a></li><li ><a href="#types-of-linkage">Types Of Linkage </a></li><li ><a href="#faq-internal-linkage-and-external-linkage-in-c">FAQ- Internal Linkage And External Linkage In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="internal-linkage-and-external-linkage-in-c">Internal Linkage And External Linkage In C</h2>
+
+
+
+<p>In the world of C programming, we need to understand how variables and functions are connected within our code. Two important ideas in this context are &#8220;Internal Linkage&#8221; and &#8220;External Linkage.&#8221; These concepts determine where variables and functions can be used and shared in a C program. In simple terms, we&#8217;ll explore what Internal Linkage and External Linkage mean in C and how they affect your code, offering guidance on managing variables and functions effectively. Let&#8217;s dive into these concepts in C programming!</p>
+
+
+
+<h2 class="wp-block-heading" id="definitions">Definitions </h2>
+
+
+
+<p><strong>Scope</strong>: Scope refers to where in a program an identifier can be directly accessed. In C, all identifiers follow lexical (or static) scoping.</p>
+
+
+
+<p><strong>Linkage: </strong>Linkage, on the other hand, is about whether names can refer to the same thing across the entire program or within a single translation unit.</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Translation Unit</strong>: A translation unit is like a package containing source code, header files, and other dependencies. These elements are bundled together to form a single translation unit, which the compiler uses to create a single executable object. It&#8217;s crucial to link these sources together effectively. For example, the compiler needs to know that the definition of &#8220;printf&#8221; can be found in the &#8220;stdio&#8221; header file.</p>
+
+
+
+<p>So, while scope deals with where identifiers can be used, linkage is about how names can refer to the same thing across the program or a translation unit.</p>
+
+
+
+<p><strong>Note :</strong></p>
+
+
+
+<p>In C and C++, when you have a program made up of multiple source code files, each file is compiled one by one. During the compilation process, variables are described by their scope, which is handled by the compiler. However, it&#8217;s only when the linking process begins that the concept of linkage becomes important. So, scope is a property managed by the compiler, while linkage is a property managed by the linker.</p>
+
+
+
+<p>The Linker, in the linking stage of the compilation process, brings all the program&#8217;s resources together. It&#8217;s like a program that takes multiple machine code files as input and generates an executable object code. The Linker&#8217;s job includes resolving symbols (like finding the definitions of symbols such as &#8220;+&#8221;) and organizing objects in the program&#8217;s memory address space.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-linkage">What is Linkage </h2>
+
+
+
+<p>Linkage in programming refers to how variables and symbols are connected or linked together by the linker during the compilation process. It determines whether a variable or function can be used across different parts of a program or within a single translation unit. Linkage is an important concept in ensuring the correct organization and functioning of a program.</p>
+
+
+
+<h2 class="wp-block-heading" id="types-of-linkage">Types Of Linkage </h2>
+
+
+
+<p><strong>Internal Linkage</strong>: Internal linkage in programming means that an identifier is not accessible from outside the translation unit in which it is declared. However, any identifier within the same unit can access an identifier with internal linkage. Internal linkage is achieved by using the &#8220;static&#8221; keyword. Identifiers with internal linkage are stored in a segment of RAM, whether it&#8217;s initialized or uninitialized. It&#8217;s important to note that the term &#8220;static&#8221; can have different meanings in reference to both linkage and scope in programming, but here we&#8217;re focusing on linkage.</p>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// C code to illustrate Internal Linkage
+#include &lt;stdio.h&gt;
+  
+static int animals = 8;
+const int i = 5;
+  
+int call_me(void)
+{
+    printf("%d %d", i, animals);
+}</code></pre>
+
+
+
+<p>The above code implements static linkage on an identifier&nbsp;<code>animals</code>. We have to Consider&nbsp;<code>Feed.cpp</code>&nbsp;is located in the same translation unit.</p>
+
+
+
+<p><strong>Feed. cpp</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C code to illustrate Internal Linkage
+#include &lt;stdio.h&gt;
+  
+int main()
+{
+    call_me();
+    animals = 2;
+    printf("%d", animals);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>5 8 2</code></pre>
+
+
+
+<p>Then, we have to consider that Feed.cpp is located in a different translation unit. It will compile and run as above only if we use&nbsp;<code>#include "Animals.cpp"</code>.<br>Suppose  Wash. cpp is located in a 3rd translation unit.</p>
+
+
+
+<p><strong>Wash.cpp</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C code to illustrate Internal Linkage
+#include &lt;stdio.h&gt;
+#include "animal.cpp" // note that animal is included.
+  
+int main()
+{
+    call_me();
+    printf("\n having fun washing!");
+    animals = 10;
+    printf("%d\n", animals);
+    return 0;
+}</code></pre>
+
+
+
+<p>On compiling, we will get output as </p>
+
+
+
+<pre class="wp-block-code"><code>output : 5 8
+having fun washing!
+10</code></pre>
+
+
+
+<p>In a situation where you have three translation units (Animals, Feed, and Wash) using the &#8220;animals&#8221; code, each translation unit has its own copy of the &#8220;animals&#8221; identifier. This is why you observe different values for &#8220;animals&#8221; in each translation unit: 8 for Animals.cpp, 2 for Feed.cpp, and 10 for Wash.cpp. Each translation unit maintains its own separate instance of the &#8220;animals&#8221; variable.</p>
+
+
+
+<p>This behavior can consume memory and potentially decrease performance, especially if multiple copies of the same data are being stored in different parts of the program.</p>
+
+
+
+<p>It&#8217;s important to note that internal linkage is applied when a variable has global scope, and all constants are by default internally linked. This means that variables with internal linkage are not visible outside their translation unit and are not shared across different parts of the program.</p>
+
+
+
+<p>Internal linkage serves a useful purpose in managing the organization of functions and variables within a program. When a variable has internal linkage, it is passed by copy. This means that if a header file contains a function, let&#8217;s say &#8220;fun1(),&#8221; and the source code in which it&#8217;s included also defines &#8220;fun1()&#8221; with a different implementation, there won&#8217;t be a conflict. This is because these two functions with internal linkage are independent of each other within their respective translation units.</p>
+
+
+
+<p>This feature allows us to use internal linkage to hide translation-unit-local helper functions from the global scope. For example, you might include a header file containing a method to read input from the user in a file that also describes another method to read input. These two functions, with internal linkage, remain separate and don&#8217;t interfere with each other when linked together in the final program. This helps keep the code organized and reduces the likelihood of naming conflicts.</p>
+
+
+
+<p><strong>External Linkage :</strong> </p>
+
+
+
+<p>External linkage in programming means that an identifier is visible to every translation unit, or in other words, it&#8217;s visible throughout the entire program. Externally linked identifiers are shared between different parts of the program and are considered to exist at the outermost level of the program. For an externally linked identifier, there must be only one visible definition in the entire program. This means that you need to define it in a place that&#8217;s visible to all parts of the program so that there&#8217;s only a single definition.</p>
+
+
+
+<p>External linkage is the default linkage for globally scoped variables and functions. When you use the &#8220;extern&#8221; keyword, you&#8217;re telling the linker to look for the definition of the identifier elsewhere. Therefore, the declaration of an externally linked identifier doesn&#8217;t occupy any space.</p>
+
+
+
+<p>Externally linked identifiers are typically stored in the initialized/uninitialized or text segment of the computer&#8217;s memory (RAM). This allows them to be accessible and shared across different parts of the program, ensuring that all instances of a particular identifier with external linkage refer to the same identifier in the program.</p>
+
+
+
+<p>Example </p>
+
+
+
+<pre class="wp-block-code"><code>// C code to illustrate External Linkage
+#include &lt;stdio.h&gt;
+  
+void foo()
+{
+    int a;
+    extern int b; // line 1
+}
+  
+void bar()
+{
+    int c;
+    c = b; // error
+}
+  
+int main()
+{
+    foo();
+    bar();
+}
+Error: 'b' was not declared in this scope</code></pre>
+
+
+
+<p><strong>Explanation:</strong></p>
+
+
+
+<p>The variable &#8220;b&#8221; has local scope within the function &#8220;foo,&#8221; even though it is declared as an extern variable. It&#8217;s important to understand that the concept of scope is primarily used during the compilation phase of a program. After the program is compiled, there is no concept of &#8220;scope of variable.&#8221;</p>
+
+
+
+<p>During compilation, the compiler takes into account the scope of &#8220;b.&#8221; In this case, &#8220;b&#8221; has local scope within the &#8220;foo()&#8221; function. When the compiler encounters the extern declaration, it assumes that there is a definition of &#8220;b&#8221; somewhere else and defers the task of finding it to the linker.</p>
+
+
+
+<p>However, when the compiler processes the &#8220;bar()&#8221; function, it attempts to locate the variable &#8220;b.&#8221; Since &#8220;b&#8221; has been declared as extern, it hasn&#8217;t been assigned memory by the compiler; it essentially doesn&#8217;t exist yet at this stage. The compiler relies on the linker to locate the definition of &#8220;b&#8221; within the translation unit and then assign it the value specified in that definition. Only after this process does &#8220;b&#8221; come into existence with memory allocated.</p>
+
+
+
+<p>But, because there&#8217;s no declaration for &#8220;b&#8221; within the scope of &#8220;bar()&#8221;—neither within the function nor in the global scope—the compiler encounters an error. It&#8217;s the compiler&#8217;s responsibility to ensure that all variables are used within their respective scopes, and when it encounters &#8220;b&#8221; in &#8220;bar()&#8221; without a matching declaration, it raises an error and halts the compilation process.</p>
+
+
+
+<p>To resolve this issue, you can make &#8220;b&#8221; a global variable by moving line 1 (the extern declaration) to a location before the definition of the &#8220;foo()&#8221; function. This makes &#8220;b&#8221; accessible in both &#8220;foo()&#8221; and &#8220;bar()&#8221; functions.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-internal-linkage-and-external-linkage-in-c">FAQ- Internal Linkage And External Linkage In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1694608543780" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is an internal linkage in C language?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. An identifier with internal linkage is only accessible within the translation unit where it&#8217;s declared. Any identifier within the same unit can access an identifier with internal linkage. This linkage is established using the &#8220;static&#8221; keyword in C or C++.</p>
+
+</div>
+</div>
+<div id="faq-question-1694608554072" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is external linkage in C programming?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, all global identifiers inherently have external linkage by default. This means that every declaration of a particular identifier with external linkage refers to the same object or function throughout the entire program. The &#8220;extern&#8221; keyword is used to explicitly establish external linkage for variables and functions in C.</p>
+
+</div>
+</div>
+<div id="faq-question-1694608567069" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What are the different types of linking in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Linking in software development comes in two flavors: Static Linking and Dynamic Linking.<br />Static Linking: The linker incorporates library code directly into the executable, making the program self-contained. It ensures the program runs independently but can result in larger files.<br />Dynamic Linking: Programs use external libraries at runtime instead of including them in the executable. It reduces disk space but requires libraries on the target system. The choice depends on factors like portability and resource usage.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/internal-linkage-and-external-linkage-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

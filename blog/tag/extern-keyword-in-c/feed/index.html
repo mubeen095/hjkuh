@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Extern keyword In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/extern-keyword-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 24 Jan 2024 10:28:36 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Extern keyword In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Extern keyword In C</title>
+		<link>https://www.skillvertex.com/blog/extern-keyword-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/extern-keyword-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 24 Jan 2024 10:28:36 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Extern keyword In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2846</guid>
+
+					<description><![CDATA[Extern keyword In C The &#8220;extern&#8221; keyword in the C programming language is a fundamental and versatile element that extends the reach and accessibility of variables and functions. Named for its role in &#8220;external&#8221; visibility, &#8220;extern&#8221; plays a pivotal role in enabling inter-file communication and code modularity. By employing &#8220;extern,&#8221; programmers can declare variables and ... <a title="Extern keyword In C" class="read-more" href="https://www.skillvertex.com/blog/extern-keyword-in-c/" aria-label="More on Extern keyword In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#extern-keyword-in-c">Extern keyword In C</a></li><li ><a href="#syntax-of-extern-in-c">Syntax of extern in C</a></li><li ><a href="#example-for-extern-variable-in-c">Example for Extern Variable in C</a></li><li ><a href="#properties-of-extern-variable-in-c">Properties of extern Variable in C</a></li><li ><a href="#use-of-extern-in-functions"> Use of Extern in functions</a></li><li ><a href="#use-of-extern-with-variables">Use of Extern with variables</a></li><li ><a href="#to-define-var">To Define Var</a></li><li ><a href="#example-1">Example 1</a></li><li ><a href="#example-2">Example 2</a></li><li ><a href="#example-3">Example 3</a></li><li ><a href="#example-4">Example 4</a></li><li ><a href="#example-5">Example 5</a></li><li ><a href="#faq-extern-keyword-in-c">FAQ- Extern keyword In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="extern-keyword-in-c">Extern keyword In C</h2>
+
+
+
+<p>The &#8220;extern&#8221; keyword in the C programming language is a fundamental and versatile element that extends the reach and accessibility of variables and functions. Named for its role in &#8220;external&#8221; visibility, &#8220;extern&#8221; plays a pivotal role in enabling inter-file communication and code modularity. By employing &#8220;extern,&#8221; programmers can declare variables and functions that are defined in other source files, fostering the creation of efficient and organized software systems. In this exploration of the &#8220;extern&#8221; keyword in C, we will look into its significance, usage, and its role in enhancing the flexibility and scalability of C programs.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Declaration</strong>: A declaration simply informs the program that a variable or function exists somewhere within the program, providing information about its type and, in the case of functions, its arguments and return type. Declarations do not allocate memory.</li>
+
+
+
+<li><strong>Definition</strong>: A definition encompasses everything that a declaration does but goes a step further by allocating memory for variables or providing the implementation for functions. A definition is a superset of a declaration.</li>
+</ul>
+
+
+
+<p>The term &#8220;extern&#8221; is short for &#8220;external&#8221; and is used when one file needs to access a variable defined in another file. &#8220;Extern&#8221; enables the sharing of variables between different parts of a program, promoting modularity and code organization. This keyword is crucial for enabling inter-file communication in C programs.</p>
+
+
+
+<h2 class="wp-block-heading" id="syntax-of-extern-in-c">Syntax of extern in C</h2>
+
+
+
+<p>The syntax to define the extern variable  in C is as follows:</p>
+
+
+
+<pre class="wp-block-code"><code>extern data_type variable_name;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-for-extern-variable-in-c">Example for Extern Variable in C</h2>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt; 
+  
+extern int a;     // int var;  -&gt;  declaration and definition 
+                  // extern int var;  -&gt; declaration 
+  
+int main()  
+{   
+    printf("%d", a); 
+   
+   return 0; 
+}</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="properties-of-extern-variable-in-c">Properties of extern Variable in C</h2>
+
+
+
+<ul class="wp-block-list">
+<li>When you declare an extern variable using a statement like <code>extern some_data_type some_variable_name;</code>, you are not allocating memory for the variable; instead, you are announcing the variable&#8217;s properties and type. This tells the compiler that the variable is defined somewhere else in the program.</li>
+
+
+
+<li>Multiple declarations of an extern variable within the same file are allowed. This is different from automatic (local) variables, which can only be declared once within the same scope.</li>
+
+
+
+<li>The role of the extern variable is to inform the compiler that the variable&#8217;s definition exists outside of the current scope. The compiler relies on this information and produces no error at compile time.</li>
+
+
+
+<li>However, it&#8217;s the linker&#8217;s responsibility to ensure that the variable is defined elsewhere in the program. If the linker does not find a matching definition for the extern variable, it will generate an error.</li>
+
+
+
+<li>When an extern variable is initialized, memory is allocated for it, and it is considered defined. Initialization typically occurs when a variable is given an initial value in the source code.</li>
+</ul>
+
+
+
+<p>This understanding of extern variables is essential for enabling communication and sharing of variables across different source files in a C program.</p>
+
+
+
+<p>Note: A variable can be declared many times, but defined only once.&#8217;</p>
+
+
+
+<h2 class="wp-block-heading" id="use-of-extern-in-functions">&nbsp;Use of Extern in functions</h2>
+
+
+
+<p>We know that when a function is declared or defined. The extern keyword is assumed.</p>
+
+
+
+<pre class="wp-block-code"><code>int foo(int arg1, char arg2);
+</code></pre>
+
+
+
+<p>The compiler treat it as the follows:</p>
+
+
+
+<pre class="wp-block-code"><code>extern int foo(int arg1, char arg2);
+</code></pre>
+
+
+
+<p>The &#8220;extern&#8221; keyword, when used with functions in C, makes the function accessible throughout the entire program. Other program files need only contain a declaration of the function to use it. The compiler understands that the function&#8217;s definition exists elsewhere. This promotes modularity and organized code across multiple files.</p>
+
+
+
+<h2 class="wp-block-heading" id="use-of-extern-with-variables">Use of Extern with variables</h2>
+
+
+
+<pre class="wp-block-code"><code>extern int var;
+</code></pre>
+
+
+
+<p>We can understand that an integer-type variable called var is declared here.</p>
+
+
+
+<h2 class="wp-block-heading" id="to-define-var">To Define Var</h2>
+
+
+
+<pre class="wp-block-code"><code>int var = 10;
+</code></pre>
+
+
+
+<ol class="wp-block-list">
+<li>When you declare and define an integer variable, such as <code>int var;</code>, it&#8217;s considered a definition. In this case, memory is allocated for the variable.</li>
+
+
+
+<li>Unlike functions, where the &#8220;extern&#8221; keyword is implicitly assumed, variables do not have this implicit behavior. If you want to declare a variable without defining it (i.e., without allocating memory), you need to include the &#8220;extern&#8221; keyword explicitly, like <code>extern int var;</code>.</li>
+
+
+
+<li>Using the &#8220;extern&#8221; keyword with a variable extends its visibility to the entire program, allowing you to use the variable anywhere in the program, provided you include its declaration. The declaration informs the compiler that the variable&#8217;s definition is located elsewhere in the program.</li>
+</ol>
+
+
+
+<p>This distinction helps control memory allocation for variables and ensures that you can share variables across different parts of the program when necessary while maintaining clarity and organization in the code.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-1">Example 1</h2>
+
+
+
+<pre class="wp-block-code"><code>int var; 
+int main(void) 
+{ 
+   var = 10; 
+   return 0; 
+} </code></pre>
+
+
+
+<p>In the above program, we can conclude that the program compiles successfully and var is defined.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-2">Example 2</h2>
+
+
+
+<pre class="wp-block-code"><code>
+extern int var; 
+int main(void) 
+{ 
+  return 0; 
+} </code></pre>
+
+
+
+<p>This program is successfully compiled and the var is defined. We can analyze further that var is never used and therefore, no problems have come.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-3">Example 3</h2>
+
+
+
+<pre class="wp-block-code"><code>
+
+extern int var; 
+int main(void) 
+{ 
+  var = 10; 
+  return 0; 
+} </code></pre>
+
+
+
+<p>The explanation regarding the error in the program is accurate. If you declare a variable using the &#8220;extern&#8221; keyword but do not provide a corresponding definition for that variable, the variable is considered declared but not defined. This means that memory is not allocated for the variable, and the program is essentially trying to change the value of a variable that does not exist in memory.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-4">Example 4</h2>
+
+
+
+<pre class="wp-block-code"><code>
+// As we are importing the file and henceforth the 
+// defination 
+#include "somefile.h" 
+  
+// Declaring the same variable 
+extern int var; 
+    // int var; 
+    // It will throw compiler error as compiler will get 
+    // confused where the variable is defined 
+  
+int main(void) 
+{ 
+    var = 10; 
+    return 0; 
+} 
+  
+// Now it will compile and run successfully</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>10
+</code></pre>
+
+
+
+<ol class="wp-block-list">
+<li>When a variable is declared in one file and defined (given memory allocation) in another file, you typically use the &#8220;extern&#8221; keyword in the file where the variable is declared. This informs the compiler that the variable&#8217;s definition exists elsewhere.</li>
+
+
+
+<li>However, it&#8217;s important to note that if you also include the same file in which the variable is defined (i.e., the file that contains the definition), using the &#8220;extern&#8221; keyword in that file can lead to a compiler error.</li>
+
+
+
+<li>This is because, in the file where the variable is defined, there is no need for the &#8220;extern&#8221; keyword. If you include it there, it may create a new memory block for the variable, rendering the use of &#8220;extern&#8221; unnecessary.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="example-5">Example 5</h2>
+
+
+
+<pre class="wp-block-code"><code>extern int var = 0; 
+int main(void) 
+{ 
+ var = 10; 
+ return 0; 
+} </code></pre>
+
+
+
+<p>When a variable is declared with an initializer, memory is allocated for that variable, and it is considered defined. In this case, the program will compile successfully, and the variable will work as expected.</p>
+
+
+
+<p>Initialization provides an initial value to the variable, and the memory for the variable is allocated at that point. As a result, there is no need to use the &#8220;extern&#8221; keyword because the variable is both declared and defined in the same file. This allows the variable to be used in the program without issues.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-extern-keyword-in-c">FAQ- Extern keyword In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1698054703757" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the use of extern C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C++, &#8220;extern &#8216;C'&#8221; specifies that a function is defined elsewhere and follows the C-language calling convention, often used for interfacing with C libraries. It can be applied to multiple function declarations within a block. For templates, &#8220;extern&#8221; indicates that the template has been instantiated elsewhere, ensuring proper linkage in the program.</p>
+
+</div>
+</div>
+<div id="faq-question-1698054718025" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the difference between global and extern in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Global variables are accessible throughout the entire program and have allocated memory. Extern variables are also program-wide but only declare the variable without memory allocation, relying on an external definition.</p>
+
+</div>
+</div>
+<div id="faq-question-1698054724983" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the difference between include and extern?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. When you use &#8220;#include&#8221; in your code, it&#8217;s like copying and pasting all the functions and variables from another file into your current file. And when you see &#8220;extern&#8221; in front of a variable or function, it means that it&#8217;s defined in some other file, but you can still use it in your current file.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/extern-keyword-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

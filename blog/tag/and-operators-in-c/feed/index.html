@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title># and ## Operators in C</title>
+	<atom:link href="https://www.skillvertex.com/tag/and-operators-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 05 Mar 2024 12:49:07 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title># and ## Operators in C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title># And ## Operators In C</title>
+		<link>https://www.skillvertex.com/blog/and-operators-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/and-operators-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 05 Mar 2024 12:49:07 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[# and ## Operators in C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3294</guid>
+
+					<description><![CDATA[# And ## Operators In C Stringizing operator (#) This stringizing operator is a preprocessor operator which will cause a corresponding actual argument and will be enclosed in double quotation marks. This # operator is known as the stringize operator. This operator will change the argument that will precede into a quoted string. This is ... <a title="# And ## Operators In C" class="read-more" href="https://www.skillvertex.com/blog/and-operators-in-c/" aria-label="More on # And ## Operators In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#and-operators-in-c"># And ## Operators In C</a></li><li ><a href="#example-to-show-the-usage-of-the-stringizing-operator">Example- to show the usage of the stringizing operator(#).</a></li><li ><a href="#token-pasting-operator">Token-pasting operator (##)</a></li><li ><a href="#example-to-show-the-usage-of-token-pasting-operator">Example- to show the usage of  Token-pasting operator (##)</a></li><li ><a href="#application-of-token-pasting-operator">Application of Token-pasting operator (##)</a></li><li ><a href="#faq-and-operators-in-c">FAQ-  # and ## Operators in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="and-operators-in-c"># And ## Operators In C</h2>
+
+
+
+<p><strong>Stringizing operator (#)</strong></p>
+
+
+
+<p>This stringizing operator is a preprocessor operator which will cause a corresponding actual argument and will be enclosed in double quotation marks. This # operator is known as the stringize operator. This operator will change the argument that will precede into a quoted string.  This is known as the stringification operator. This is mostly used with macros in C.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-to-show-the-usage-of-the-stringizing-operator"><strong>Example</strong>&#8211; to show the usage of the stringizing operator(#).</h2>
+
+
+
+<p>The C code provided below will show the usage of the stringizing operator(#).</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate (#) operator 
+#include &lt;stdio.h&gt; 
+  
+// Macro definition using the stringizing operator 
+#define mkstr(s) #s 
+int main(void) 
+{ 
+    // Printing the stringized value of "Skillvertex" 
+    printf(mkstr(Skillvertex)); 
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code>Skillvertex</code></pre>
+
+
+
+<p>Explanation</p>
+
+
+
+<p>The preprocessor will change the line printf (mkstr(Skillvertex)); into printf(“Skillvertex”);</p>
+
+
+
+<h2 class="wp-block-heading" id="token-pasting-operator">Token-pasting operator (##)</h2>
+
+
+
+<p>The <strong>Token-pasting operator </strong>will enable tokens which will be used as actual arguments and further, it will be linked to form other tokens. Therefore, it can merge two tokens into one during the expansion of macros. This process is known as token pasting or token concatenation. </p>
+
+
+
+<p>The &#8216;##&#8217; pre-processing operator in C/C++ is used for something called &#8220;token pasting.&#8221; When you expand a macro, this operator combines the two tokens on either side of &#8216;##&#8217; into a single token. This combined token replaces the &#8216;##&#8217; and the original two tokens in the macro expansion. This can be useful for creating new tokens or identifiers during the preprocessing stage.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-to-show-the-usage-of-token-pasting-operator">Example- to show the usage of  Token-pasting operator (##)</h2>
+
+
+
+<pre class="wp-block-code"><code>// C program to illustrate (##) operator 
+#include &lt;stdio.h&gt; 
+  
+// Macro definition using the Token-pasting operator 
+#define concat(a, b) a##b 
+int main(void) 
+{ 
+    int xy = 30; 
+  
+    // Printing the concatenated value of x and y 
+    printf("%d", concat(x, y)); 
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>30</code></pre>
+
+
+
+<p>Explanation:</p>
+
+
+
+<p>The preprocessor will change &nbsp;printf(“%d”, concat(x, y)); into printf(“%d”, xy);</p>
+
+
+
+<h2 class="wp-block-heading" id="application-of-token-pasting-operator">Application of Token-pasting operator (##)</h2>
+
+
+
+<p>The &#8216;##&#8217; operator in C/C++ macros is used to concatenate or join actual arguments during macro expansion. If a parameter in the replacement text is next to a &#8216;##&#8217;, the parameter is replaced by the actual argument. The &#8216;##&#8217; and any surrounding white space are removed, and the combined result is then re-scanned by the preprocessor. This can be helpful for generating new tokens or combining values in a flexible way during preprocessing.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-and-operators-in-c">FAQ-  # and ## Operators in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1699352885837" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the ## operator in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In the C language, the &#8216;##&#8217; operator serves as a token-pasting operator in the preprocessor. It is employed to combine two tokens during the preprocessing stage of compilation. So, essentially, the &#8216;##&#8217; operator concatenates the string &#8220;foo_&#8221; with the token &#8220;a&#8221; to create the string &#8220;foo_a,&#8221; and similarly, it combines &#8220;bar_b&#8221; by joining &#8220;bar_&#8221; and &#8220;b&#8221; together.</p>
+
+</div>
+</div>
+<div id="faq-question-1699352896465" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What does &amp; and * mean in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.In C and C++, when you see the symbol &#8220;&amp;,&#8221; it means &#8220;get the memory address of.&#8221; This is often used in function parameters to allow functions to change the original variable. By default, C and C++ pass copies of variables to functions, but using the &#8220;&amp;&#8221; lets you pass the original variable&#8217;s address instead, so changes made in the function affect the original.<br />On the other hand, when you see the &#8220;&#8221; symbol with a pointer, it means &#8220;get the value stored at that memory address.&#8221; So, if you have a pointer named <code>ptr</code>, &#8220;ptr&#8221; gets the value located at the memory address pointed to by `ptr.&#8221;</p>
+
+</div>
+</div>
+<div id="faq-question-1699352907398" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the logical &amp;&amp; operator in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The logical AND operator (&amp;&amp;) in programming is a binary operator that works with two values and produces a result. It returns true or 1 only if both of its operands are true. If either one is false, it returns false or 0. In simpler terms, both conditions must be true for the AND operator to yield a true result; otherwise, it gives a false result.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/and-operators-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

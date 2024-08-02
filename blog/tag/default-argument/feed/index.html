@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Default argument</title>
+	<atom:link href="https://www.skillvertex.com/tag/default-argument/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 Mar 2024 06:47:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Default argument</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Default arguments in Python</title>
+		<link>https://www.skillvertex.com/blog/default-arguments-in-python/</link>
+					<comments>https://www.skillvertex.com/blog/default-arguments-in-python/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:47:12 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[Default argument]]></category>
+		<category><![CDATA[default value]]></category>
+		<category><![CDATA[keyword arguments]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7267</guid>
+
+					<description><![CDATA[Python will enable the Python arguments to have the default values. Whereas, if the function is defined without an argument. Then the argument will have a default value. Read this article to learn more about Default arguments in Python. What is a default value? Python has several ways of showing syntax and the default value ... <a title="Default arguments in Python" class="read-more" href="https://www.skillvertex.com/blog/default-arguments-in-python/" aria-label="More on Default arguments in Python">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-a-default-value">What is a default value?</a></li><li ><a href="#what-are-the-examples-of-python-functions">What are the examples of Python Functions?</a><ul><li ><a href="#example-1-calling-function-without-the-keyword-arguments">Example 1: Calling Function without the Keyword arguments</a></li><li ><a href="#example-2-calling-function-with-keyword-arguments">Example 2: Calling Function with Keyword arguments</a></li><li ><a href="#example-3-some-invalid-function-calls">Example 3:  Some Invalid Function calls</a></li></ul></li><li ><a href="#default-argument-values-in-python"> Default argument values in Python</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#default-arguments-in-python-fa-qs">Default arguments in Python- FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python will enable the <a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932">Python arguments </a>to have the <a href="https://www.skillvertex.com/blog/how-can-i-return-multiple-values-from-a-function/" data-type="post" data-id="2071">default values</a>. Whereas, if the function is defined without an argument. Then the argument will have a default value. Read this article to learn more about Default arguments in<a href="https://www.skillvertex.com/blog/python-interview-questions/" data-type="post" data-id="3614"> Python</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-default-value">What is a default value?</h2>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/mern-stack-introduction/" data-type="post" data-id="4304">Python </a>has several ways of showing<a href="https://www.skillvertex.com/blog/python-syntax/" data-type="post" data-id="6924"> syntax</a> and the default value for function arguments. The default value will represent the function argument that has the value.</p>
+
+
+
+<p>However, if no argument value can be passed during the function call. Then the default value will be provided   with the help of the <a href="https://www.skillvertex.com/blog/assignment-operators-in-python/" data-type="post" data-id="6970">assignment</a> (=) operator of the form <a href="https://www.skillvertex.com/blog/generics-keyword-in-c/" data-type="post" data-id="3708">keywordname</a>=value</p>
+
+
+
+<p>Check out the example provided below</p>
+
+
+
+<pre class="wp-block-code"><code>student(firstname, lastname ='Mark', standard ='Fifth'):
+ 
+     print(firstname, lastname, 'studies in', standard, 'Standard')</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>John Mark studies in Fifth Standard
+Jane Smith studies in Fifth Standard
+Bob Johnson studies in Sixth Standard
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-examples-of-python-functions">What are the examples of Python Functions?</h2>
+
+
+
+<h3 class="wp-block-heading" id="example-1-calling-function-without-the-keyword-arguments">Example 1: Calling Function without the Keyword arguments</h3>
+
+
+
+<pre class="wp-block-code"><code>def student(firstname, lastname='Mark', standard='Fifth'):
+    print(firstname, lastname, 'studies in', standard, 'Standard')
+
+# Call the function with different combinations of arguments
+student("John")
+student("Jane", "Smith")
+student("Bob", "Johnson", "Sixth")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>John Mark studies in Fifth Standard
+Jane Smith studies in Fifth Standard
+Bob Johnson studies in Sixth Standard
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="example-2-calling-function-with-keyword-arguments">Example 2: Calling Function with Keyword arguments</h3>
+
+
+
+<pre class="wp-block-code"><code>def student(firstname, lastname='Mark', standard='Fifth'):
+    print(firstname, lastname, 'studies in', standard, 'Standard')
+
+# Call the function with keyword arguments
+student(firstname="Alice", standard="Sixth")
+student(firstname="Charlie", lastname="Brown", standard="Fourth")
+student(firstname="Eva", lastname="Miller")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Alice Mark studies in Sixth Standard
+Charlie Brown studies in Fourth Standard
+Eva Miller studies in Fifth Standard
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="example-3-some-invalid-function-calls">Example 3:  Some Invalid Function calls</h3>
+
+
+
+<pre class="wp-block-code"><code>def student(firstname, lastname='Mark', standard='Fifth'):
+    print(firstname, lastname, 'studies in', standard, 'Standard')
+
+# Invalid call: Missing required argument 'firstname'
+# student()
+
+# Invalid call: Providing a non-string value for 'lastname'
+# student("John", 123)
+
+# Invalid call: Unknown keyword argument 'grade'
+# student(firstname="Alice", grade="A")
+
+# Invalid call: Providing too many positional arguments
+# student("Bob", "Johnson", "Sixth", "ExtraArgument")
+
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="default-argument-values-in-python">&nbsp;Default argument values in Python</h2>
+
+
+
+<p>In Python, when you create a function with default values, those values are set when the function is defined. However, if the default value is a list or another mutable object, it can cause unexpected behavior</p>
+
+
+
+<p>Let us look into the example given below:</p>
+
+
+
+<pre class="wp-block-code"><code>def add_fruit(fruit, basket=&#91;]):
+    basket.append(fruit)
+    return basket
+
+# Example calls
+print(add_fruit("apple"))   # Output: &#91;'apple']
+print(add_fruit("orange"))  # Output: &#91;'apple', 'orange']
+print(add_fruit("banana"))  # Output: &#91;'apple', 'orange', 'banana']
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>def add_fruit(fruit, basket=None):
+    if basket is None:
+        basket = &#91;]
+    basket.append(fruit)
+    return basket
+
+# Example calls
+print(add_fruit("apple"))   # Output: &#91;'apple']
+print(add_fruit("orange"))  # Output: &#91;'orange']
+print(add_fruit("banana"))  # Output: &#91;'banana']
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>In conclusion, a Python function is like a mini-program within your code that performs a specific task when called. It takes input values, processes them, and can return a result. Functions are handy for organizing code, making it more readable, and allowing you to reuse the same functionality in different parts of your program. </p>
+
+
+
+<p>They can have default values for some or all of their parameters, making them flexible and easy to use. Understanding how to define and call functions is a fundamental skill in Python programming that helps make your code efficient and modular.</p>
+
+
+
+<h2 class="wp-block-heading" id="default-arguments-in-python-fa-qs">Default arguments in Python- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1708429372532" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are the default arguments in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Default arguments are the values that are given while defining functions.</p>
+
+</div>
+</div>
+<div id="faq-question-1708429383032" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the default input in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The input will return the string.</p>
+
+</div>
+</div>
+<div id="faq-question-1708429392480" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What are the 4 types of arguments in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Default arguments, Keyword arguments (named arguments), Positional arguments and <br />Arbitrary arguments are the 4 types of argument in Python.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/default-arguments-in-python/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

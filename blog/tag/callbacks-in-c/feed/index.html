@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Callbacks In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/callbacks-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:21:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Callbacks In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Callbacks In C</title>
+		<link>https://www.skillvertex.com/blog/callbacks-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/callbacks-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:21:31 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Callbacks In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2358</guid>
+
+					<description><![CDATA[Callbacks In C In C programming, callbacks are a powerful technique. They let you pass functions as arguments to other functions, which can then use those functions at specific times or when certain events occur. This flexibility allows you to create adaptable software that can respond to different situations, user actions, and asynchronous tasks. Learning ... <a title="Callbacks In C" class="read-more" href="https://www.skillvertex.com/blog/callbacks-in-c/" aria-label="More on Callbacks In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#callbacks-in-c">Callbacks In C</a></li><li ><a href="#what-is-callbacks-in-c">What is Callbacks In C</a></li><li ><a href="#example-to-illustrate-callbacks">Example to illustrate Callbacks </a></li><li ><a href="#faq-callbacks-in-c">FAQ- Callbacks In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="callbacks-in-c">Callbacks In C</h2>
+
+
+
+<p>In C programming, callbacks are a powerful technique. They let you pass functions as arguments to other functions, which can then use those functions at specific times or when certain events occur. This flexibility allows you to create adaptable software that can respond to different situations, user actions, and asynchronous tasks. Learning how to use callbacks in C is essential for building modular, flexible, and event-driven software. In this discussion, we&#8217;ll explore the world of callbacks in C and how they can be useful in various programming situations.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-callbacks-in-c">What is Callbacks In C</h2>
+
+
+
+<p>A callback is a programming concept where a piece of executable code, often in the form of a function or method, is passed as an argument to another piece of code. The receiving code is designed to call back or execute this argument at a specific point or under certain conditions. In simpler terms, when you pass a reference to a function as an argument to another function with the intention of having it invoked later, that function becomes known as a callback function. </p>
+
+
+
+<p>Callbacks are a powerful tool in programming and are commonly used for various purposes, such as event handling, asynchronous programming, and customizing behavior in libraries or frameworks. In C, a callback function is a function that gets called through a function pointer.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-to-illustrate-callbacks">Example to illustrate Callbacks </h2>
+
+
+
+<pre class="wp-block-code"><code>// A simple C program to demonstrate callback
+#include &lt;stdio.h&gt;
+ 
+void A(){ 
+  printf("I am function A\n");
+}
+ 
+// callback function
+void B(void (*ptr)())
+{
+    (*ptr)(); // callback to A
+}
+ 
+int main()
+{
+    void (*ptr)() = &amp;A;
+ 
+    // calling function B and passing
+    // address of the function A as argument
+    B(ptr);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>I am function A</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-callbacks-in-c">FAQ- Callbacks In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696573917047" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. Why use a callback function in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Callback functions are a versatile concept in programming that allows developers to create libraries or frameworks designed to be called from higher-level programs. These libraries can, in turn, invoke user-defined code when specific events occur. </p>
+
+</div>
+</div>
+<div id="faq-question-1696573924407" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What are the different types of callback functions in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Synchronous Callback: In this type, a callback function is given to another function, which executes it as part of its process. The calling function waits for the callback to complete before proceeding. This is useful when you need immediate results or want to ensure a task is finished before moving on.<br />Asynchronous Callback: The calling function triggers the callback but doesn&#8217;t wait for it to finish. Instead, it continues its execution. This is handy for non-blocking operations, event handling, or offloading time-consuming tasks to background processes. It&#8217;s commonly used in event-driven programming.</p>
+
+</div>
+</div>
+<div id="faq-question-1696573931695" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the advantage of callback?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Callbacks play a crucial role in ensuring that a function doesn&#8217;t run until a specific task is completed. They enable the development of asynchronous JavaScript code, allowing operations to continue while ensuring that certain tasks are executed when they are finished. Callbacks are instrumental in preventing potential issues and errors in asynchronous programming, enhancing the reliability and control of JavaScript applications.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/callbacks-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

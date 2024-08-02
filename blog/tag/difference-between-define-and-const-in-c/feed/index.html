@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Difference Between #define And Const In C?</title>
+	<atom:link href="https://www.skillvertex.com/tag/difference-between-define-and-const-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 06 Mar 2024 11:31:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Difference Between #define And Const In C?</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Difference Between #define And Const In C?</title>
+		<link>https://www.skillvertex.com/blog/difference-between-define-and-const-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/difference-between-define-and-const-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 11:31:47 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Difference Between #define And Const In C?]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3355</guid>
+
+					<description><![CDATA[Difference Between #define And Const In C? #define is basically a preprocessor directive in C that allows you to define macros, and these macros get processed before the actual compilation of your code. This preprocessing step replaces the macros with their values throughout the code, providing advantages such as saving space and speeding up compilation ... <a title="Difference Between #define And Const In C?" class="read-more" href="https://www.skillvertex.com/blog/difference-between-define-and-const-in-c/" aria-label="More on Difference Between #define And Const In C?">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#difference-between-define-and-const-in-c">Difference Between #define And Const In C?</a></li><li ><a href="#a-tabular-column-to-show-the-difference-between-define-and-const">A tabular column to show the difference between #define and const</a></li><li ><a href="#difference-between-define-and-const-in-c-1">Difference between #define and const in C?</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="difference-between-define-and-const-in-c">Difference Between #define And Const In C?</h2>
+
+
+
+<p> <code>#define</code> is basically a preprocessor directive in C that allows you to define macros, and these macros get processed before the actual compilation of your code. This preprocessing step replaces the macros with their values throughout the code, providing advantages such as saving space and speeding up compilation times. </p>
+
+
+
+<p>Moreover, Const variables are considered variables and not macro definitions. <code>const</code> is checked by the compiler and allows for type-checking, making it safer and more readable than <code>#define</code>, which lacks type checking and can lead to potential issues.</p>
+
+
+
+<p>Although const are supposed to be variables, it&#8217;s possible to use pointers on them.  Hence, we could typecast, move addresses, and whatever you can do with a  regular variable. The only thing that can&#8217;t done by const is changing the data since the data assigned to the variable is constant.</p>
+
+
+
+<p> Hence, const is a much preferable option and we can easily apply the code to it. While there are some scenarios where #define won&#8217;t be replaced by const. Such as #define won&#8217;t be replaced by const. #define could be used to displace some text in the program with another text.</p>
+
+
+
+<h2 class="wp-block-heading" id="a-tabular-column-to-show-the-difference-between-define-and-const">A tabular column to show the difference between #define and const</h2>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>#define </strong></td><td><strong>const</strong></td></tr><tr><td>#define is basically a preprocessor directive.</td><td>Whereas, constants are used in the process of making variables constant. So,  they would never change during the execution.</td></tr><tr><td>This is capable of defining micro substitution. </td><td>Constants are also known as literals.</td></tr><tr><td>Syntax &#8211; <strong>#define token value&nbsp;</strong></td><td>Syntax- <strong>const type constant_name;</strong></td></tr><tr><td>#define won&#8217;t be enclosed with a ( ; )semicolon</td><td>In contrast, const will be enclosed with a (;) semicolon</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="difference-between-define-and-const-in-c-1">Difference between #define and const in C?</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1699525891638" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the difference between #define and Constexpr?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <code>#define</code> creates macro substitutions, whereas <code>constexpr</code> variables are a special type of variable. Despite having nothing in common, before the availability of <code>constexpr</code> (or even <code>const</code>) variables, macros were sometimes used, a practice now replaced by the use of <code>constexpr</code> variables.</p>
+
+</div>
+</div>
+<div id="faq-question-1699525910072" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the difference between const and constexpr functions?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.<br />Const variables can wait until the program is running to get their values, but constexpr variables need to be set during the time your code is being put together.</p>
+
+</div>
+</div>
+<div id="faq-question-1699525914356" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What are the two types of const?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Constants are divided into two main groups: primary and secondary. Primary constants include things like character, real, and integer constants. On the other hand, secondary constants include structures, arrays, pointers, unions, and similar things.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/difference-between-define-and-const-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

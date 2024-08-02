@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Getchar()</title>
+	<atom:link href="https://www.skillvertex.com/tag/getchar/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Wed, 06 Mar 2024 11:39:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Getchar()</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Difference Between Getc(), Getchar(), Getch() and Getche()</title>
+		<link>https://www.skillvertex.com/blog/difference-between-getc-getchar-getch-and-getche/</link>
+					<comments>https://www.skillvertex.com/blog/difference-between-getc-getchar-getch-and-getche/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 11:39:49 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Difference Between Getc()]]></category>
+		<category><![CDATA[Getchar()]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3658</guid>
+
+					<description><![CDATA[Difference between getc(), getchar(), getch() and getche() When you use functions like getc(), fgetc(), and getchar() to read characters, they return a special value called EOF if something goes wrong or if there are no more characters to read. getc() It will read a single character from a given input stream and thus, return the ... <a title="Difference Between Getc(), Getchar(), Getch() and Getche()" class="read-more" href="https://www.skillvertex.com/blog/difference-between-getc-getchar-getch-and-getche/" aria-label="More on Difference Between Getc(), Getchar(), Getch() and Getche()">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#difference-between-getc-getchar-getch-and-getche">Difference between getc(), getchar(), getch() and getche()</a></li><li ><a href="#getc">getc()</a></li><li ><a href="#getchar">getchar()</a></li><li ><a href="#getch">getch()</a></li><li ><a href="#getche">getche()</a></li><li ><a href="#faq-difference-between-getc-getchar-getch-and-getche">FAQ-  Difference between getc(), getchar(), getch() and getche()</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="difference-between-getc-getchar-getch-and-getche">Difference between getc(), getchar(), getch() and getche()</h2>
+
+
+
+<p>When you use functions like <code>getc()</code>, <code>fgetc()</code>, and <code>getchar()</code> to read characters, they return a special value called EOF if something goes wrong or if there are no more characters to read.</p>
+
+
+
+<h2 class="wp-block-heading" id="getc">getc()</h2>
+
+
+
+<p>It will read a single character from a given input stream and thus, return the corresponding integer value (typically ASCII value of read character) on success. It returns EOF on failure.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>int getc(FILE *stream);
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// Example for getc() in C
+#include &lt;stdio.h&gt;
+int main()
+{
+    printf("%c", getc(stdin));
+    return (0);
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>Input: g (press enter key)
+Output: g</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="getchar">getchar()</h2>
+
+
+
+<ul class="wp-block-list">
+<li><strong>getc():</strong>
+<ul class="wp-block-list">
+<li>Reads a character from any specified input stream.</li>
+
+
+
+<li>Example: <code>char ch = getc(filePointer);</code></li>
+</ul>
+</li>
+
+
+
+<li><strong>getchar():</strong>
+<ul class="wp-block-list">
+<li>Reads a single character from the standard input (stdin).</li>
+
+
+
+<li>Equivalent to <code>getc(stdin)</code>.</li>
+
+
+
+<li>Example: <code>char ch = getchar();</code></li>
+</ul>
+</li>
+</ul>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>int getchar(void);
+</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>// Example for getchar() in C
+#include &lt;stdio.h&gt;
+int main()
+{
+    printf("%c", getchar());
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Input: g(press enter key)
+Output: g</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="getch">getch()</h2>
+
+
+
+<p>Like the above functions, getch() also reads a single character from the keyboard. But it does not use any buffer, so the entered character does not display on the screen and is immediately returned without waiting for the enter key.</p>
+
+
+
+<p>getch() is a nonstandard function and is present in &lt;conio.h&gt; header file which is mostly used by MS-DOS compilers like Turbo C. It is not part of the C standard library or ISO C, nor is it defined by POSIX.</p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>int getch();</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+
+// Example for getch() in C
+#include &lt;conio.h&gt;
+#include &lt;stdio.h&gt;
+int main()
+{
+    printf("%c", getch());
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Input:  g (Without enter key)
+Output: Program terminates immediately.
+        But when you use DOS shell in Turbo C,
+        it shows a single g, i.e., 'g'</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="getche">getche()</h2>
+
+
+
+<p><strong>getche() Function:</strong></p>
+
+
+
+<p><code>getche()</code> reads a character from the keyboard and immediately displays it on the screen without waiting for the enter key. It&#8217;s a non-standard function in <code>&lt;conio.h&gt;</code>, commonly used in MS-DOS compilers like Turbo C. Example: <code>char ch = getche();</code></p>
+
+
+
+<p>Syntax</p>
+
+
+
+<pre class="wp-block-code"><code>int getche(void);</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<pre class="wp-block-code"><code>
+
+// Example for getche() in C
+#include &lt;conio.h&gt;
+#include &lt;stdio.h&gt;
+int main()
+{
+    printf("%c", getche());
+    return 0;
+}</code></pre>
+
+
+
+<pre class="wp-block-code"><code>Input:  g(without enter key as it is not buffered)
+Output: Program terminates immediately.
+        But when you use DOS shell in Turbo C, 
+        double g, i.e., 'gg'</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-difference-between-getc-getchar-getch-and-getche">FAQ-  Difference between getc(), getchar(), getch() and getche()</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1700564167463" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the difference between Getchar () and gets () function?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Reads from stdin until an end-of-line or end-of-file.<br />Unsafe due to lack of buffer size checking.<br />Prone to buffer overflow vulnerabilities.<br /><strong>getchar():</strong><br />Reads a single character from stdin.<br />Safer alternative compared to gets().</p>
+
+</div>
+</div>
+<div id="faq-question-1700564210239" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the difference between getc and gets?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.<strong>getc() and gets() Functions:</strong><br /><strong>getc():</strong><br />Reads a single character from a file stream.<br />Used for character-wise reading.<br />Example: <code>char ch = getc(filePointer);</code><br /><strong>gets():</strong><br />Reads a string from the standard input (stdin).<br />Deprecated and considered unsafe due to lack of buffer size checking.<br /><strong>Differences:</strong><br /><code>getc()</code> reads characters individually.<br /><code>gets()</code> reads a sequence of characters until an end-of-line or end-of-file.</p>
+
+</div>
+</div>
+<div id="faq-question-1700564214993" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the use of Getchar () in C with example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.<strong>Usage:</strong><br />Used when single-character input is needed from the user.<br /><strong>Operation:</strong><br />Reads the input as an unsigned char.<br />Casts and returns it as an int or EOF.<br /><strong>Return Values:</strong><br />Returns the character as an int or EOF.<br />EOF is returned if the end of the file is reached or an error occurs.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/difference-between-getc-getchar-getch-and-getche/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

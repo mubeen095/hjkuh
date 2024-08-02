@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Restrict Keyword In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/restrict-keyword-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:24:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Restrict Keyword In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Restrict Keyword In C</title>
+		<link>https://www.skillvertex.com/blog/restrict-keyword-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/restrict-keyword-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:24:28 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Restrict Keyword In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2768</guid>
+
+					<description><![CDATA[Restrict Keyword In C In the C programming language, there&#8217;s a keyword called &#8220;restrict&#8221; introduced after the C99 standard. It&#8217;s used to help the compiler optimize code. When you use &#8220;restrict&#8221; with a pointer, it tells the compiler that this pointer is the only way to access the data it&#8217;s pointing to, with no other ... <a title="Restrict Keyword In C" class="read-more" href="https://www.skillvertex.com/blog/restrict-keyword-in-c/" aria-label="More on Restrict Keyword In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#restrict-keyword-in-c">Restrict Keyword In C</a></li><li ><a href="#example-of-restrict">Example of restrict </a></li><li ><a href="#output">Output</a></li><li ><a href="#faq-restrict-keyword-in-c">FAQ-Restrict Keyword In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="restrict-keyword-in-c">Restrict Keyword In C</h2>
+
+
+
+<p>In the C programming language, there&#8217;s a keyword called &#8220;restrict&#8221; introduced after the C99 standard. It&#8217;s used to help the compiler optimize code. When you use &#8220;restrict&#8221; with a pointer, it tells the compiler that this pointer is the only way to access the data it&#8217;s pointing to, with no other pointers pointing to the same data. This information allows the compiler to make code faster. If you use &#8220;restrict&#8221; and don&#8217;t follow this rule, the results could be unpredictable.</p>
+
+
+
+<p>One important thing to know is that &#8220;restrict&#8221; is only for C, and you can&#8217;t use it in C++.</p>
+
+
+
+<p>In essence, &#8220;restrict&#8221; helps the compiler make code faster by letting it know that a specific pointer is the only one accessing certain data.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-of-restrict">Example of restrict </h2>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C program to use restrict keyword.
+#include &lt;stdio.h&gt;
+ 
+// Note that the purpose of restrict is to
+// show only syntax. It doesn't change anything
+// in output (or logic). It is just a way for
+// programmer to tell compiler about an
+// optimization
+void use(int* a, int* b, int* restrict c)
+{
+    *a += *c;
+ 
+    // Since c is restrict, compiler will
+    // not reload value at address c in
+    // its assembly code. Therefore generated
+    // assembly code is optimized
+    *b += *c;
+}
+ 
+int main(void)
+{
+    int a = 50, b = 60, c = 70;
+    use(&amp;a, &amp;b, &amp;c);
+    printf("%d %d %d", a, b, c);
+    return 0;
+}</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="output">Output</h2>
+
+
+
+<pre class="wp-block-code"><code>120 130 70</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-restrict-keyword-in-c">FAQ-Restrict Keyword In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697611315181" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is a restrict qualifier?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The &#8220;restrict&#8221; qualifier in C is used with pointers to indicate that a specific pointer is the primary or sole means of accessing a particular object, and there should be no other pointers pointing to that same object. This informs the compiler to potentially optimize code accordingly by avoiding aliasing. It can improve code performance but must be used carefully to prevent undefined behavior. &#8220;Restrict&#8221; is a feature in C, not in C++.</p>
+
+</div>
+</div>
+<div id="faq-question-1697611327831" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is char * restrict in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, &#8220;restrict&#8221; is considered a &#8220;type qualifier,&#8221; and it falls into the same category as &#8220;const&#8221; and &#8220;volatile.&#8221; Type qualifiers modify the behavior of data types. When using &#8220;restrict,&#8221; it&#8217;s applied to pointer types, which means you can write something like &#8220;T * restrict&#8221; to create a new type. For instance, &#8220;char const * restrict&#8221; is a valid type. &#8220;Restrict&#8221; is a way to indicate that certain pointers are the primary or sole means of accessing data, which can help the compiler optimize code. It&#8217;s an important tool in C for improving performance while working with pointers.</p>
+
+</div>
+</div>
+<div id="faq-question-1697611338671" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is restrict keyword in C inline?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The &#8220;restrict&#8221; keyword in C is indeed a type qualifier that can be used with pointer variables. You can apply it to any declaration of a pointer variable or a function parameter. To use &#8220;restrict,&#8221; you insert it after the asterisk (*) and before the variable name in the pointer declaration. This keyword indicates to the compiler that the pointer is the primary or sole means of accessing a specific object, which can lead to potential performance optimizations by the compiler.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/restrict-keyword-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

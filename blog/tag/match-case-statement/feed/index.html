@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>match case statement</title>
+	<atom:link href="https://www.skillvertex.com/tag/match-case-statement/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 Mar 2024 06:44:06 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>match case statement</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python Match-Case Statement</title>
+		<link>https://www.skillvertex.com/blog/python-match-case-statement/</link>
+					<comments>https://www.skillvertex.com/blog/python-match-case-statement/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:44:06 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[match case statement]]></category>
+		<category><![CDATA[programming]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7169</guid>
+
+					<description><![CDATA[Python match statement began in Python 3.10 and offers user experience, good readability, and cleanliness in the code. The pattern matching technique in Python 3.10 is known as match-case. This works similarly to the case construct. Read this article to learn more about Python Match-Case Statements. What is a Python match-case Statement? The conditional statement ... <a title="Python Match-Case Statement" class="read-more" href="https://www.skillvertex.com/blog/python-match-case-statement/" aria-label="More on Python Match-Case Statement">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-a-python-match-case-statement">What is a Python match-case Statement?</a></li><li ><a href="#combined-cases-in-python">Combined Cases in Python</a></li><li ><a href="#list-as-the-argument-in-python">List as the Argument in Python</a></li><li ><a href="#use-of-if-in-case-clause-in-python">Use of &#8220;if&#8221; in the &#8220;Case&#8221; Clause in Python</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-match-case-statement-fa-qs">Python Match-Case Statement-FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python match statement began in Python 3.10 and offers user experience, good readability, and cleanliness in the <a href="https://www.skillvertex.com/blog/how-to-work-with-unicode-in-python/" data-type="post" data-id="6901">code.</a> The pattern matching technique in <a href="https://www.skillvertex.com/blog/python-decision-making/" data-type="post" data-id="7139">Python </a>3.10 is known as match-case.</p>
+
+
+
+<p> This works similarly to the case construct.   Read this article to learn more about Python Match-Case Statements.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-match-case-statement">What is a Python match-case Statement?</h2>
+
+
+
+<p>The <a href="https://www.skillvertex.com/blog/conditional-or-ternary-operator-in-c/" data-type="post" data-id="2262">conditional statemen</a>t is referred to as the Switch Case. Further, the match case is the switch case of Python and was brought in  <a href="https://www.skillvertex.com/blog/python-history/" data-type="post" data-id="6864">Python 3.10.</a></p>
+
+
+
+<p>Therefore, the first pattern that is matched will be run. This also allows to extraction of components.</p>
+
+
+
+<p><strong><a href="https://www.skillvertex.com/blog/python-syntax/" data-type="post" data-id="6924">Syntax</a></strong></p>
+
+
+
+<pre class="wp-block-code"><code>match variable_name:
+   case 'pattern 1' : statement 1
+   case 'pattern 2' : statement 2
+   ...
+   case 'pattern n' : statement n</code></pre>
+
+
+
+<p>Example</p>
+
+
+
+<p>The code that is provided below, consists of a<a href="https://www.skillvertex.com/blog/c-library-math-h-functions/" data-type="post" data-id="2596"> function </a>known as a weekday.  Further, it will receive an<a href="https://www.skillvertex.com/blog/generics-keyword-in-c/" data-type="post" data-id="3708"> integer </a>argument, then it needs to be matched with all the possible weekday number<a href="https://www.skillvertex.com/blog/how-can-i-return-multiple-values-from-a-function/" data-type="post" data-id="2071"> values</a> and then return with the corresponding name of the day.</p>
+
+
+<div class="gb-container gb-container-9b2cefc0">
+
+<pre class="wp-block-code"><code>
+def weekday_action(day):
+    match day:
+        case "Monday":
+            print("It's the beginning of the week.")
+        case "Tuesday":
+            print("It's still early in the week.")
+        case "Wednesday":
+            print("It's the middle of the week.")
+        case "Thursday":
+            print("It's almost Friday.")
+        case "Friday":
+            print("It's the end of the workweek. TGIF!")
+        case "Saturday":
+            print("It's the weekend!")
+        case "Sunday":
+            print("It's the weekend, but it's almost over.")
+        case _:
+            print("Invalid day entered.")
+
+# Example usage:
+weekday_action("Wednesday")
+weekday_action("Sunday")
+weekday_action("InvalidDay")
+</code></pre>
+
+</div>
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code># Example usage:
+weekday_action("Wednesday")
+weekday_action("Sunday")
+weekday_action("InvalidDay")
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="combined-cases-in-python">Combined Cases in Python</h2>
+
+
+
+<p>It is possible to combine cases with the <a href="https://www.skillvertex.com/blog/python-arithmetic-operators/" data-type="post" data-id="6958">OR Operator</a> and will be represented by the &#8220;|&#8221; symbol. </p>
+
+
+
+<pre class="wp-block-code"><code># Example cases
+case_1 = True
+case_2 = False
+case_3 = True
+
+# Combine cases using the OR operator (|)
+result = case_1 | case_2 | case_3
+
+# Display the result
+print("Combined result:", result)
+</code></pre>
+
+
+
+<p><a href="https://www.skillvertex.com/blog/what-will-be-the-output-of-the-following-program/" data-type="post" data-id="3081">Output</a></p>
+
+
+
+<pre class="wp-block-code"><code>Combined result: True
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="list-as-the-argument-in-python">List as the Argument in Python</h2>
+
+
+
+<p>Python will match the <a href="https://www.skillvertex.com/blog/which-of-the-following-is-a-legal-expression-in-sql/" data-type="post" data-id="1856">expression</a> against any<a href="https://www.skillvertex.com/blog/python-literals/" data-type="post" data-id="6953"> literal</a> and use the list as a case value. Hence, it can divide the variable number of items in the list into the sequence with the &#8216;*&#8217; operator.</p>
+
+
+
+<pre class="wp-block-code"><code>def greeting(details):
+   match details:
+      case &#91;time, name]:
+         return f'Good {time} {name}!'
+      case &#91;time, *names]:
+         msg=''
+         for name in names:
+            msg+=f'Good {time} {name}!\n'
+         return msg
+
+print (greeting(&#91;"Evening", "John"]))
+print (greeting(&#91;"Morning","Guest"]))
+print (greeting(&#91;"Afternoon", "Albert", "Nick", "Rohan"]))</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Good Evening John!
+Good Morning Guest!
+Good Afternoon Albert!
+Good Afternoon Nick!
+Good Afternoon Rohan!
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="use-of-if-in-case-clause-in-python">Use of &#8220;if&#8221; in &#8220;Case&#8221; Clause in Python</h2>
+
+
+
+<p>In Python, there&#8217;s a<a href="https://www.skillvertex.com/blog/features-of-python/" data-type="post" data-id="6868"> feature</a> called match that helps us check different cases based on a value. Suppose, let&#8217;s assume it is a set of instructions for the <a href="https://www.skillvertex.com/blog/computer-science-engineering-salary/" data-type="post" data-id="1598">computer</a> to follow depending on what value we give it.</p>
+
+
+
+<p>Example</p>
+
+
+
+<p>Let us look at the <a href="https://www.skillvertex.com/blog/mern-stack-examples/" data-type="post" data-id="4337">example </a>of the Use of  &#8220;if&#8221; in a case clause in Python given below:</p>
+
+
+
+<pre class="wp-block-code"><code>def process_data(value):
+    match value:
+        case 1:
+            print("Processing data for case 1")
+        case 2 if value &gt; 0:
+            print("Processing data for case 2 with a positive value")
+        case 2:
+            print("Processing data for case 2 with a non-positive value")
+        case _:
+            print("Processing data for other cases")
+
+# Example usage
+process_data(1)
+process_data(2)
+process_data(-1)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Processing data for case 1
+Processing data for case 2 with a positive value
+Processing data for case 2 with a non-positive value
+Processing data for other cases</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>Python match case will provide the instruction to a computer according to the different situations. Therefore, the student can improve their knowledge and will be able to understand the topics clearly through the examples provided in the article.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-match-case-statement-fa-qs">Python Match-Case Statement-FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707999875748" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is a match case statement in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. It is referred to as Pattern Matching and this feature was put in Python 3.10.</p>
+
+</div>
+</div>
+<div id="faq-question-1707999883735" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is match () in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The match function will analyze the string that needs to be matched for the required pattern in the RegEx Regular Expression, then will give the output as the first occurrence of such pattern match.</p>
+
+</div>
+</div>
+<div id="faq-question-1707999888777" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. How does match case compare values in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The match statement will enable you to run the pattern matching on values.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-match-case-statement/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

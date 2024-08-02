@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Scansets In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/scansets-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:15:46 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Scansets In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Scansets In C</title>
+		<link>https://www.skillvertex.com/blog/scansets-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/scansets-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:15:46 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Scansets In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2228</guid>
+
+					<description><![CDATA[Scansets In C Scanset specifiers are used to specify a set of characters that Scanf should match and store in a variable. In C&#8217;s scanf family of functions, scanset specifiers are denoted by %[]. Inside a scanset, you can specify either single characters or a range of characters that you want to match and store. ... <a title="Scansets In C" class="read-more" href="https://www.skillvertex.com/blog/scansets-in-c/" aria-label="More on Scansets In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#scansets-in-c">Scansets In C</a></li><li ><a href="#simple-scanset-example">Simple Scanset Example </a></li><li ><a href="#another-scanset-example-with"> Another scanset example with ^</a></li><li ><a href="#implementation-of-gets-function-using-scanset"> Implementation of gets() function using scanset</a></li><li ><a href="#faq-scansets-in-c">FAQ- Scansets In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="scansets-in-c">Scansets In C</h2>
+
+
+
+<p>Scanset specifiers are used to specify a set of characters that Scanf should match and store in a variable. In C&#8217;s scanf family of functions, scanset specifiers are denoted by %[]. Inside a scanset, you can specify either single characters or a range of characters that you want to match and store. It&#8217;s important to note that scansets are case-sensitive, meaning uppercase and lowercase characters are treated as distinct. You can define a scanset by placing characters inside square brackets. You can also use a comma to separate individual characters or character ranges within the scanset.</p>
+
+
+
+<h2 class="wp-block-heading" id="simple-scanset-example">Simple Scanset Example </h2>
+
+
+
+<p>The below example will store only capital letters to the character array ‘str’, any other character will not be stored inside the character array.</p>
+
+
+
+<pre class="wp-block-code"><code>/* A simple scanset example */
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+    char str&#91;128];
+ 
+    printf("Enter a string: ");
+    scanf("%&#91;A-Z]s", str);
+ 
+    printf("You entered: %s\n", str);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;root@centos-6 C]# ./scan-set 
+  Enter a string: Skill Vertex
+  You entered: Skill Vertex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="another-scanset-example-with"> Another scanset example with ^</h2>
+
+
+
+<p>In C programming, when you use scanset specifiers in functions like scanf, you can put characters inside square brackets to specify a set of characters you want to read. If you start with a &#8216;^&#8217; inside the brackets, it means you want to read characters that are NOT in the specified set. The scanning will stop as soon as it finds a character that is part of the specified set. For example, if you specify &#8220;%[^o]s&#8221; and input &#8220;Skill Vertex,&#8221; it will read and store characters until it finds the letter &#8216;o,&#8217; and then it stops. So, in this case, it will store &#8220;Skill&#8221; in your variable.</p>
+
+
+
+<pre class="wp-block-code"><code>scanf("%&#91;^o]s", str);
+</code></pre>
+
+
+
+<p>Look at the example given below:</p>
+
+
+
+<pre class="wp-block-code"><code>/* Another scanset example with ^ */
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+    char str&#91;128];
+ 
+    printf("Enter a string: ");
+    scanf("%&#91;^o]s", str);
+ 
+    printf("You entered: %s\n", str);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output </p>
+
+
+
+<pre class="wp-block-code"><code> &#91;root@centos-6 C]# ./scan-set 
+  Enter a string: http://Skill Vertex
+  You entered: http://Skill f
+  &#91;root@centos-6 C]# </code></pre>
+
+
+
+<h2 class="wp-block-heading" id="implementation-of-gets-function-using-scanset"> Implementation of gets() function using scanset</h2>
+
+
+
+<p>You can create a simple <code>gets()</code> function using scanf with a scanset to read a line from stdin. Here&#8217;s a basic implementation in C:</p>
+
+
+
+<pre class="wp-block-code"><code>/* implementation of gets() function using scanset */
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+    char str&#91;128];
+ 
+    printf("Enter a string with spaces: ");
+    scanf("%&#91;^\n]s", str);
+ 
+    printf("You entered: %s\n", str);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;root@centos-6 C]# ./gets 
+  Enter a string with spaces: Skill Vertex
+  You entered: Skill Vertex
+  &#91;root@centos-6 C]# </code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-scansets-in-c">FAQ- Scansets In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1695979810375" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the Scanset function in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. You can make a scanset by putting characters inside square brackets in C. It&#8217;s important to remember that scansets are case-sensitive, so uppercase and lowercase letters are treated differently. You can also use a comma to separate the characters you want to include in the scanset. Here&#8217;s an example:<br />For instance, <code>scanf("%s[A-Z,_,a,b,c]s", str);</code> will scan and store characters that match the set [A-Z,_,a,b,c] in the variable <code>str</code></p>
+
+</div>
+</div>
+<div id="faq-question-1695979818944" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the syntax of scanf char in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The general syntax of scanf &#8211; int scanf(const char *format, Object *arg(s))</p>
+
+</div>
+</div>
+<div id="faq-question-1695979827829" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. How to scan a string in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, the <code>scanf</code> function with the &#8220;%s&#8221; format specifier stops reading a string at the first space. To accept a string with spaces in user input, you can use one of the following four common methods</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/scansets-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

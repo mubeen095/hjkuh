@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Variable Length Arguments For Macros</title>
+	<atom:link href="https://www.skillvertex.com/tag/variable-length-arguments-for-macros/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 05 Mar 2024 12:55:39 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Variable Length Arguments For Macros</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Variable Length Arguments For Macros</title>
+		<link>https://www.skillvertex.com/blog/variable-length-arguments-for-macros/</link>
+					<comments>https://www.skillvertex.com/blog/variable-length-arguments-for-macros/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 05 Mar 2024 12:55:39 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Variable Length Arguments For Macros]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3327</guid>
+
+					<description><![CDATA[Variable Length Arguments For Macros In C and C++, macros offer a powerful tool for code simplification and automation. While most commonly associated with simple text substitution, macros can also be equipped to handle variable-length arguments. This capability allows developers to create more flexible and dynamic code constructs, much like functions that accept varying numbers ... <a title="Variable Length Arguments For Macros" class="read-more" href="https://www.skillvertex.com/blog/variable-length-arguments-for-macros/" aria-label="More on Variable Length Arguments For Macros">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#variable-length-arguments-for-macros">Variable Length Arguments For Macros</a></li><li ><a href="#example-to-illustrate-variable-length-arguments-in-macros">Example- to illustrate variable-length arguments in macros </a></li><li ><a href="#faq-variable-length-arguments-for-macros">FAQ- Variable Length Arguments For Macros</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="variable-length-arguments-for-macros">Variable Length Arguments For Macros</h2>
+
+
+
+<p>In C and C++, macros offer a powerful tool for code simplification and automation. While most commonly associated with simple text substitution, macros can also be equipped to handle variable-length arguments. This capability allows developers to create more flexible and dynamic code constructs, much like functions that accept varying numbers of parameters. </p>
+
+
+
+<p>By using features like the &#8220;…&#8221; and &#8220;<strong>VA_ARGS</strong>&#8221; preprocessor identifiers, along with the concatenation operator &#8220;##,&#8221; programmers can build macros that adapt to different argument lists, making their code more versatile and efficient. In this context, we explore the concept of variable-length arguments for macros and demonstrate their practical applications in enhancing the functionality of code macros.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-to-illustrate-variable-length-arguments-in-macros">Example- to illustrate variable-length arguments in macros </h2>
+
+
+
+<p>In C, you can use macros to handle variable-length arguments, just like you do with functions. To do this, you use &#8220;&#8230;&#8221; and &#8220;<strong>VA_ARGS</strong>&#8221; in your macro definition. The &#8220;##&#8221; operator helps combine these variable arguments.</p>
+
+
+
+<p>In C, you can create macros that work like the &#8220;printf()&#8221; function for logging messages. For example, we have a macro called <code>LOG_MESSAGE</code>. It takes three arguments: the message priority (&#8220;INFO&#8221; or &#8220;ERROR&#8221;), the output stream (&#8220;stdout&#8221; or &#8220;stderr&#8221;), and a variable number of message contents.</p>
+
+
+
+<p>When &#8220;INFO&#8221; is used, it prints informational messages, including the source file and line number. When &#8220;ERROR&#8221; is used, it prints error messages in a similar format. This allows you to easily log different types of messages with context information using a simple macro.</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt;
+ 
+#define INFO     1
+#define ERR    2
+#define STD_OUT    stdout
+#define STD_ERR    stderr
+ 
+#define LOG_MESSAGE(prio, stream, msg, ...) do {\
+                        char *str;\
+                        if (prio == INFO)\
+                            str = "INFO";\
+                        else if (prio == ERR)\
+                            str = "ERR";\
+                        fprintf(stream, "&#91;%s] : %s : %d : "msg" \n", \
+                                str, __FILE__, __LINE__, ##__VA_ARGS__);\
+                    } while (0)
+ 
+int main(void)
+{
+    char *s = "Hello";
+ 
+        /* display normal message */
+    LOG_MESSAGE(ERR, STD_ERR, "Failed to open file");
+ 
+    /* provide string as argument */
+    LOG_MESSAGE(INFO, STD_OUT, "%sSkill Vertex", s);
+ /* provide integer as arguments */
+    LOG_MESSAGE(INFO, STD_OUT, "%d + %d = %d", 10, 20, (10 + 20));
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;narendra@/media/partition/GFG]$ ./variable_length 
+  &#91;ERR] : variable_length.c : 26 : Failed to open file 
+  &#91;INFO] : variable_length.c : 27 : Hello Geeks for Geeks 
+  &#91;INFO] : variable_length.c : 28 : 10 + 20 = 30 
+  &#91;narendra@/media/partition/GFG]$</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-variable-length-arguments-for-macros">FAQ- Variable Length Arguments For Macros</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1699437709705" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are variable length arguments with example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A variable-length argument is a feature that enables a function to accept any number of arguments. In certain scenarios, functions need to handle a variable quantity of arguments based on specific requirements. For instance, this can be useful for tasks like finding the sum of a set of numbers, determining the minimum value among a collection of numbers, and various other tasks where the number of input arguments can vary. This feature provides flexibility in function design and allows it to adapt to different needs.</p>
+
+</div>
+</div>
+<div id="faq-question-1699437721129" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.What are the types of arguments used with macros?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <br /><strong>Positional Arguments:</strong> These are arguments given in a specific order, and their values match the parameters in the same order.<br /><strong>Keyword Arguments:</strong> Keyword arguments are associated with parameter names, allowing you to specify arguments by name rather than position, offering clarity and flexibility.</p>
+
+</div>
+</div>
+<div id="faq-question-1699437735175" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. How do you declare a variable length argument?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. To accept variable-length parameters in a method, you use an asterisk (*) before the parameter name. These parameters are treated as a tuple within the method, and the tuple takes on the same name as the parameter, minus the asterisk.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/variable-length-arguments-for-macros/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

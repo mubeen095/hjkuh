@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>What Are The Data Types For Which It Is Not Possible To Create An Array?</title>
+	<atom:link href="https://www.skillvertex.com/tag/what-are-the-data-types-for-which-it-is-not-possible-to-create-an-array/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:06:02 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>What Are The Data Types For Which It Is Not Possible To Create An Array?</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>What Are The Data Types For Which It Is Not Possible To Create An Array?</title>
+		<link>https://www.skillvertex.com/blog/what-are-the-data-types-for-which-it-is-not-possible-to-create-an-array/</link>
+					<comments>https://www.skillvertex.com/blog/what-are-the-data-types-for-which-it-is-not-possible-to-create-an-array/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:06:02 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[What Are The Data Types For Which It Is Not Possible To Create An Array?]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2632</guid>
+
+					<description><![CDATA[What Are The Data Types For Which It Is Not Possible To Create An Array? In programming, arrays are like containers for storing data. However, not all types of data can be put into these containers. Some data types are too complex or change in size, and for them, we can&#8217;t use arrays. This article ... <a title="What Are The Data Types For Which It Is Not Possible To Create An Array?" class="read-more" href="https://www.skillvertex.com/blog/what-are-the-data-types-for-which-it-is-not-possible-to-create-an-array/" aria-label="More on What Are The Data Types For Which It Is Not Possible To Create An Array?">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-are-the-data-types-for-which-it-is-not-possible-to-create-an-array">What Are The Data Types For Which It Is Not Possible To Create An Array?</a></li><li ><a href="#example-1-to-show-compiler-error">Example 1 &#8211; To show compiler error</a></li><li ><a href="#example-2-to-illustrate-the-void-pointers-and-function-pointers">Example 2- To illustrate the void pointers and function pointers </a></li><li ><a href="#faq-what-are-the-data-types-for-which-it-is-not-possible-to-create-an-array">FAQ- What Are The Data Types For Which It Is Not Possible To Create An Array?</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-data-types-for-which-it-is-not-possible-to-create-an-array">What Are The Data Types For Which It Is Not Possible To Create An Array?</h2>
+
+
+
+<p>In programming, arrays are like containers for storing data. However, not all types of data can be put into these containers. Some data types are too complex or change in size, and for them, we can&#8217;t use arrays. This article will explain which types these are and why. Understanding this helps us use the right tools in our programming work.</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Arrays of void:</strong> The C standard doesn&#8217;t allow you to create arrays of type <code>void</code> because the size of elements in an array needs to be known at compile time. Since <code>void</code> represents an incomplete or unknown data type, you can&#8217;t create an array with <code>void</code> elements.</li>
+
+
+
+<li><strong>Arrays of functions:</strong> While you can have arrays of function pointers, you cannot have arrays of function types themselves. In C, function types are not first-class types that you can create arrays of directly. However, you can create an array of function pointers, each pointing to a function of the same type.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="example-1-to-show-compiler-error">Example 1 &#8211; To show compiler error</h2>
+
+
+
+<pre class="wp-block-code"><code>int main()
+{
+    void arr&#91;100];
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>error: declaration of 'arr' as array of voids 
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-2-to-illustrate-the-void-pointers-and-function-pointers">Example 2- To illustrate the void pointers and function pointers </h2>
+
+
+
+<pre class="wp-block-code"><code>int main()
+{
+    void *arr&#91;100];
+}</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-what-are-the-data-types-for-which-it-is-not-possible-to-create-an-array">FAQ- What Are The Data Types For Which It Is Not Possible To Create An Array?</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697016733454" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What kind of data can an array not store?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In Java, <code>ArrayList</code> can&#8217;t directly hold primitive data types like <code>int</code>, <code>double</code>, <code>char</code>, and <code>long</code>. However, you can use wrapper classes (e.g., <code>Integer</code>, <code>Double</code>) to store and retrieve these primitive types in an <code>ArrayList</code> through autoboxing and auto-unboxing.</p>
+
+</div>
+</div>
+<div id="faq-question-1697016742805" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What data type data types can an array hold?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Arrays in Stan are flexible and can hold various types, making them essential for storing sequences of integers, required for functions like discrete distributions.</p>
+
+</div>
+</div>
+<div id="faq-question-1697016754333" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What type of data type is an array?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. An array type in programming is a user-defined data type that comprises a sequence of elements, all of the same data type. Ordinary arrays have a fixed size and use ordinal positions as indices.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/what-are-the-data-types-for-which-it-is-not-possible-to-create-an-array/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

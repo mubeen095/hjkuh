@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Continue Statement in C</title>
+	<atom:link href="https://www.skillvertex.com/tag/continue-statement-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:19:39 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Continue Statement in C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Continue Statement In C</title>
+		<link>https://www.skillvertex.com/blog/continue-statement-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/continue-statement-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:19:39 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Continue Statement in C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2295</guid>
+
+					<description><![CDATA[Continue Statement In C The continue statement is indeed a control flow statement used to alter the flow of program execution within loops (such as while, for, or do...while) by skipping the rest of the current iteration and moving to the next iteration of the loop. It is useful when you want to bypass certain ... <a title="Continue Statement In C" class="read-more" href="https://www.skillvertex.com/blog/continue-statement-in-c/" aria-label="More on Continue Statement In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#continue-statement-in-c">Continue Statement In C</a></li><li ><a href="#what-is-continue-in-c">What is continue in C?</a></li><li ><a href="#syntax-of-continue-in-c">Syntax of continue in C</a></li><li ><a href="#use-of-continue-in-c">Use of continue in C</a></li><li ><a href="#example-of-continue-in-c">Example of continue in C</a></li><li ><a href="#faq-continue-statement-in-c">FAQ- Continue Statement in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="continue-statement-in-c">Continue Statement In C</h2>
+
+
+
+<p>The <code>continue</code> statement is indeed a control flow statement used to alter the flow of program execution within loops (such as <code>while</code>, <code>for</code>, or <code>do...while</code>) by skipping the rest of the current iteration and moving to the next iteration of the loop. It is useful when you want to bypass certain code in a loop iteration but continue with the next iteration.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-continue-in-c">What is continue in C?</h2>
+
+
+
+<p>The <code>continue</code> statement, when encountered within a loop, indeed resets program control to the beginning of the loop, effectively skipping the remaining statements within the current iteration. It allows the loop to continue with the next iteration, which can be useful for selectively bypassing certain code within the loop while continuing to execute others. Your explanation clearly conveys the behavior and purpose of the <code>continue</code> statement in C.</p>
+
+
+
+<h2 class="wp-block-heading" id="syntax-of-continue-in-c">Syntax of continue in C</h2>
+
+
+
+<p>The syntax of continue is just the continue keyword placed wherever we want in the loop body.</p>
+
+
+
+<pre class="wp-block-code"><code>continue;
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="use-of-continue-in-c">Use of continue in C</h2>
+
+
+
+<p>The continue statement in C can be used in any kind of loop to skip the current iteration. In C, we can use it in the following types of loops:</p>
+
+
+
+<pre class="wp-block-code"><code>Single Loops
+Nested Loops</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-of-continue-in-c">Example of continue in C</h2>
+
+
+
+<p><strong>Example 1: C Program to use continue statement in a single loop</strong></p>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to explain the use
+// of continue statement with for loop
+ 
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    // for loop to print 1 to 8
+    for (int i = 1; i &lt;= 8; i++) {
+        // when i = 4, the iteration will be skipped and for
+        // will not be printed
+        if (i == 4) {
+            continue;
+        }
+        printf("%d ", i);
+    }
+    printf("\n");
+ 
+    int i = 0;
+    // while loop to print 1 to 8
+    while (i &lt; 8) {
+        // when i = 4, the iteration will be skipped and for
+        // will not be printed
+        i++;
+        if (i == 4) {
+            continue;
+        }
+        printf("%d ", i);
+    }
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 2 3 5 6 7 8 
+1 2 3 5 6 7 8 </code></pre>
+
+
+
+<p><strong>Example 2: C Program to use continue in a nested loop</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C program to explain the use
+// of continue statement with nested loops
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // outer loop with 3 iterations
+    for (int i = 1; i &lt;= 3; i++) {
+        // inner loop to print integer 1 to 4
+        for (int j = 0; j &lt;= 4; j++) {
+ 
+            // continue to skip printing number 3
+            if (j == 3) {
+                continue;
+            }
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>1 2 3 5 6 7 8 
+1 2 3 5 6 7 8 </code></pre>
+
+
+
+<p><strong>Example 2: C Program to use continue in a nested loop</strong></p>
+
+
+
+<pre class="wp-block-code"><code>// C program to explain the use
+// of continue statement with nested loops
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    // outer loop with 3 iterations
+    for (int i = 1; i &lt;= 3; i++) {
+        // inner loop to print integer 1 to 4
+        for (int j = 0; j &lt;= 4; j++) {
+ 
+            // continue to skip printing number 3
+            if (j == 3) {
+                continue;
+            }
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>0 1 2 4 
+0 1 2 4 
+0 1 2 4 </code></pre>
+
+
+
+<h5 class="wp-block-heading"><strong>Example 3: C Program to demonstrate the difference between the working of break and continue statements in C</strong></h5>
+
+
+
+<pre class="wp-block-code"><code>// C program to demonstrate difference between
+// continue and break
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+ 
+    printf("The loop with break produces output as: \n");
+ 
+    for (int i = 1; i &lt;= 7; i++) {
+ 
+        // Program comes out of loop when
+        // i becomes multiple of 3.
+        if (i == 3)
+            break;
+        else
+            printf("%d ", i);
+    }
+ 
+    printf("\nThe loop with continue produces output as: \n");
+    for (int i = 1; i &lt;= 7; i++) {
+ 
+        // The loop prints all values except
+        // those that are multiple of 3.
+        if (i == 3)
+            continue;
+        printf("%d ", i);
+    }
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The loop with break produces output as: 
+1 2 
+The loop with continue produces output as: 
+1 2 4 5 6 7 </code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-continue-statement-in-c">FAQ- Continue Statement in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696419914775" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is a continue statement?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A <code>continue</code> statement ends the current iteration of a loop.<br />Control is passed from the <code>continue</code> statement to the end of the loop body.<br />The syntax of a <code>continue</code> statement is typically <code>continue;</code>.<br />A <code>continue</code> statement can only appear within the body of an iterative statement, such as <code>do</code>, <code>for</code>, or <code>while</code> loops.</p>
+
+</div>
+</div>
+<div id="faq-question-1696419919990" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is continue in C with example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. While the <code>break</code> statement terminates the loop entirely, the <code>continue</code> statement forces the next iteration of the loop to occur, skipping any code that follows it within the current iteration.<br />In the case of a <code>for</code> loop, the <code>continue</code> statement causes the conditional test and increment portions of the loop to execute, effectively moving to the next iteration.</p>
+
+</div>
+</div>
+<div id="faq-question-1696419929188" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the break and continue statement in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>break</code> statement is used to exit from loop constructs entirely, terminating the loop prematurely.<br />In contrast, the <code>continue</code> statement is not used to exit from loop constructs but rather to skip the rest of the current iteration and move to the next iteration.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/continue-statement-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

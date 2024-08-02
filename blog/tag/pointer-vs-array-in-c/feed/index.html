@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Pointer vs Array in C</title>
+	<atom:link href="https://www.skillvertex.com/tag/pointer-vs-array-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:22:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Pointer vs Array in C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Pointer Vs Array In C</title>
+		<link>https://www.skillvertex.com/blog/pointer-vs-array-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/pointer-vs-array-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:22:12 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Pointer vs Array in C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2733</guid>
+
+					<description><![CDATA[Pointer Vs Array In C 1. The sizeof Operator When you use sizeof(array), it tells you the size (in bytes) that the entire array occupies in memory. For example, if you have an array int arr[5], sizeof(arr) will return the total memory consumed by all five integers in the array. On the other hand, sizeof(pointer) ... <a title="Pointer Vs Array In C" class="read-more" href="https://www.skillvertex.com/blog/pointer-vs-array-in-c/" aria-label="More on Pointer Vs Array In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#pointer-vs-array-in-c">Pointer Vs Array In C</a></li><li ><a href="#1-the-sizeof-operator">1. The sizeof Operator</a></li><li ><a href="#2-the-operator">2. The &amp; Operator</a></li><li ><a href="#3-string-literal-initialization-of-a-character-array">3. String Literal Initialization of a Character Array</a></li><li ><a href="#4-pointer-variable-can-be-assigned-a-value-whereas-an-array-variable-cannot-be"> 4. Pointer variable can be assigned a value whereas an array variable cannot be</a></li><li ><a href="#5-arithmetic-on-pointer-variable-is-allowed">5. Arithmetic on pointer variable is allowed</a></li><li ><a href="#6-arithmetic-on-array-variable-is-not-allowed">6. Arithmetic on array variable is not allowed</a></li><li ><a href="#7-array-is-a-collection-of-similar-data-types-while-the-pointer-variable-stores-the-address-of-another-variable">7. Array is a collection of similar data types while the pointer variable stores the address of another variable</a></li><li ><a href="#faq-pointer-vs-array-in-c">FAQ-Pointer vs Array in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="pointer-vs-array-in-c">Pointer Vs Array In C</h2>
+
+
+
+<h2 class="wp-block-heading" id="1-the-sizeof-operator">1. The sizeof Operator</h2>
+
+
+
+<p>When you use <code>sizeof(array)</code>, it tells you the size (in bytes) that the entire array occupies in memory. For example, if you have an array <code>int arr[5]</code>, <code>sizeof(arr)</code> will return the total memory consumed by all five integers in the array.</p>
+
+
+
+<p>On the other hand, <code>sizeof(pointer)</code> only gives you the size of the pointer variable itself, which is typically a fixed amount of memory (e.g., 4 or 8 bytes, depending on your system). It doesn&#8217;t account for the memory occupied by what the pointer is pointing to; it just tells you the size of the &#8220;address holder.&#8221;</p>
+
+
+
+<h2 class="wp-block-heading" id="2-the-operator">2. The &amp; Operator</h2>
+
+
+
+<p>When you use <code>array</code>, it&#8217;s like saying &#8220;give me the address of the first element in the array.&#8221; So, if you have an array <code>int arr[5]</code>, <code>array</code> is equivalent to <code>&amp;arr[0]</code> and provides the memory address of the first integer in the array.</p>
+
+
+
+<p>When you use <code>&amp;pointer</code>, it gives you the memory address where the pointer variable is stored, not what it&#8217;s pointing to. It&#8217;s like asking for the address of the &#8220;address holder&#8221; itself.</p>
+
+
+
+<h2 class="wp-block-heading" id="3-string-literal-initialization-of-a-character-array">3. String Literal Initialization of a Character Array</h2>
+
+
+
+<p>When you initialize a character array-like <code>char str[] = "Hello";</code>, it creates an array named <code>str</code>. This array is large enough to hold the string &#8220;Hello&#8221; along with a null-terminator character (<code>'\0'</code>) at the end, which signifies the end of the string. So, <code>str</code> contains space for 6 characters (5 for &#8220;Hello&#8221; plus 1 for <code>'\0'</code>).</p>
+
+
+
+<p>This is different from a pointer to a string literal. If you had <code>char* ptr = "Hello";</code>, <code>ptr</code> would point to a constant string literal in memory, and its size is just the size of a pointer (e.g., 4 or 8 bytes), not the size of the string itself.</p>
+
+
+
+<h2 class="wp-block-heading" id="4-pointer-variable-can-be-assigned-a-value-whereas-an-array-variable-cannot-be"> 4. Pointer variable can be assigned a value whereas an array variable cannot be</h2>
+
+
+
+<p>In C and C++, you can assign a value to a pointer variable, as shown in your example with <code>p=a;</code>. However, you cannot directly assign one array to another, as arrays are not modifiable l-values.</p>
+
+
+
+<h2 class="wp-block-heading" id="5-arithmetic-on-pointer-variable-is-allowed">5. Arithmetic on pointer variable is allowed</h2>
+
+
+
+<p>You can perform arithmetic operations on pointer variables, such as incrementing or decrementing them, which is often used to navigate through arrays or data structures. In your example, <code>p++;</code> is legal because it increments the pointer <code>p</code> to point to the next element.</p>
+
+
+
+<h2 class="wp-block-heading" id="6-arithmetic-on-array-variable-is-not-allowed">6. Arithmetic on array variable is not allowed</h2>
+
+
+
+<p>You cannot perform arithmetic operations directly on array variables. Arrays are not modifiable l-values, so <code>a++;</code> is illegal because you&#8217;re trying to modify the base address of the array.</p>
+
+
+
+<h2 class="wp-block-heading" id="7-array-is-a-collection-of-similar-data-types-while-the-pointer-variable-stores-the-address-of-another-variable">7. Array is a collection of similar data types while the pointer variable stores the address of another variable</h2>
+
+
+
+<p>Arrays are collections of elements of the same data type. Pointers, on the other hand, store memory addresses that can point to variables or data of various types. Pointers provide flexibility in referencing different data types.</p>
+
+
+
+<p>Understanding these distinctions is important for writing code that correctly handles memory and data in C and C++.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-pointer-vs-array-in-c">FAQ-Pointer vs Array in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697525516638" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is the difference between a pointer and an array in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.<br /><strong>Array</strong>: A data collection with elements of the same data type.<br /><strong>Pointer</strong>: A variable that stores the memory address of another variable.</p>
+
+</div>
+</div>
+<div id="faq-question-1697525528937" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. Why is pointer better than array?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.<br /><strong>Arrays</strong>: Static; their size can&#8217;t change based on user needs.<br /><strong>Pointers</strong>: Dynamic; memory allocation can be resized later if required.</p>
+
+</div>
+</div>
+<div id="faq-question-1697525539929" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the size of array vs pointer?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.<br /><strong>Arrays</strong>: Always have a set, unchanging amount of memory.<br /><strong>Pointers</strong>: Can adjust the amount of memory they use as needed.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/pointer-vs-array-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Conditional or Ternary Operator (?:) in C</title>
+	<atom:link href="https://www.skillvertex.com/tag/conditional-or-ternary-operator-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:17:04 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Conditional or Ternary Operator (?:) in C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Conditional or Ternary Operator (?:) In C</title>
+		<link>https://www.skillvertex.com/blog/conditional-or-ternary-operator-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/conditional-or-ternary-operator-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:17:04 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Conditional or Ternary Operator (?:) in C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2262</guid>
+
+					<description><![CDATA[Conditional or Ternary Operator (?:) In C The conditional operator, often referred to as the ternary operator due to its use of three operands, is a fundamental feature in the C programming language. This operator provides a concise and efficient way to make decisions based on conditional expressions, allowing programmers to write compact and readable ... <a title="Conditional or Ternary Operator (?:) In C" class="read-more" href="https://www.skillvertex.com/blog/conditional-or-ternary-operator-in-c/" aria-label="More on Conditional or Ternary Operator (?:) In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#conditional-or-ternary-operator-in-c">Conditional or Ternary Operator (?:) In C</a></li><li ><a href="#syntax-of-conditional-ternary-operator-in-c">Syntax of Conditional/Ternary Operator in C</a></li><li ><a href="#working-as-conditional-ternary-operator-in-c">Working as Conditional/Ternary Operator in C</a></li><li ><a href="#examples-of-c-ternary-operator">Examples of C  Ternary Operator</a></li><li ><a href="#faq-conditional-or-ternary-operator-in-c">FAQ- Conditional or Ternary Operator (?:) in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="conditional-or-ternary-operator-in-c">Conditional or Ternary Operator (?:) In C</h2>
+
+
+
+<p>The conditional operator, often referred to as the ternary operator due to its use of three operands, is a fundamental feature in the C programming language. This operator provides a concise and efficient way to make decisions based on conditional expressions, allowing programmers to write compact and readable code. By utilizing the <code>? :</code> syntax, it enables the selection of one of two values or expressions based on a specified condition. This versatility makes the conditional operator a valuable tool for streamlining conditional statements and enhancing code readability in C programs. In this article, we&#8217;ll explore the syntax, usage, and benefits of the conditional operator, demonstrating how it simplifies decision-making processes within C code.</p>
+
+
+
+<h2 class="wp-block-heading" id="syntax-of-conditional-ternary-operator-in-c">Syntax of Conditional/Ternary Operator in C</h2>
+
+
+
+<pre class="wp-block-code"><code>variable = Expression1 ? Expression2 : Expression3;
+</code></pre>
+
+
+
+<p>Or Syntax can also written as</p>
+
+
+
+<pre class="wp-block-code"><code>variable = (condition) ? Expression2 : Expression3;
+</code></pre>
+
+
+
+<p>Another way to write syntax</p>
+
+
+
+<pre class="wp-block-code"><code>(condition) ? (variable = Expression2) : (variable = Expression3);
+</code></pre>
+
+
+
+<p>It can be visualized into an if-else statement as:&nbsp;</p>
+
+
+
+<pre class="wp-block-code"><code>if(Expression1)
+{
+    variable = Expression2;
+}
+else
+{
+    variable = Expression3;
+}</code></pre>
+
+
+
+<p>Ternary operators can even take three operands to work. Hence, it is called Ternary operator.</p>
+
+
+
+<h2 class="wp-block-heading" id="working-as-conditional-ternary-operator-in-c">Working as Conditional/Ternary Operator in C</h2>
+
+
+
+<ol class="wp-block-list">
+<li>It checks a condition (Expression1).</li>
+
+
+
+<li>If the condition is true, it executes Expression2.</li>
+
+
+
+<li>If the condition is false, it executes Expression3.</li>
+
+
+
+<li>Finally, it returns the result of either Expression2 or Expression3, depending on whether the condition was true or false.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="examples-of-c-ternary-operator">Examples of C  Ternary Operator</h2>
+
+
+
+<h4 class="wp-block-heading">Example 1:&nbsp;C Program to Store the greatest of the two Numbers using the ternary operator</h4>
+
+
+
+<pre class="wp-block-code"><code>// C program to find largest among two
+// numbers using ternary operator
+  
+#include &lt;stdio.h&gt;
+  
+int main()
+{
+    int m = 5, n = 4;
+  
+    (m &gt; n) ? printf("m is greater than n that is %d &gt; %d",
+                     m, n)
+            : printf("n is greater than m that is %d &gt; %d",
+                     n, m);
+  
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>m is greater than n that is 5 &gt; 4
+</code></pre>
+
+
+
+<h4 class="wp-block-heading"><strong>Example 2:</strong>&nbsp;C Program to check whether a year is a leap year using ternary operator</h4>
+
+
+
+<pre class="wp-block-code"><code>// C program to check whether a year is leap year or not
+// using ternary operator
+  
+#include &lt;stdio.h&gt;
+  
+int main()
+{
+    int yr = 1900;
+  
+    (yr%4==0) ? (yr%100!=0? printf("The year %d is a leap year",yr)
+     : (yr%400==0 ? printf("The year %d is a leap year",yr)
+         : printf("The year %d is not a leap year",yr)))
+             : printf("The year %d is not a leap year",yr);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The year 1900 is not a leap year
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-conditional-or-ternary-operator-in-c">FAQ- Conditional or Ternary Operator (?:) in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696323858122" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is ternary operators or conditional operators in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The ternary operator in C, also called the Conditional Operator, works with three values. It&#8217;s used to make conditional code shorter, compared to using if-else statements.</p>
+
+</div>
+</div>
+<div id="faq-question-1696323863726" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the difference between a conditional statement and a ternary operator?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Ternary operators are faster and more concise than if-else blocks. They&#8217;re single statements and can be used where if-else isn&#8217;t suitable, offering improved readability for simple conditionals.</p>
+
+</div>
+</div>
+<div id="faq-question-1696323875609" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. Why is it called a ternary operator?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. &#8220;Ternary&#8221; refers to things composed of three items. The ternary operator aligns with this definition, comprising a conditional, a value for true, and a value for false.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/conditional-or-ternary-operator-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

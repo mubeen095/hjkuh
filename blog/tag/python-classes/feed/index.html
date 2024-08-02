@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>python classes</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-classes/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 19 Mar 2024 06:48:53 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>python classes</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python Modules</title>
+		<link>https://www.skillvertex.com/blog/python-modules/</link>
+					<comments>https://www.skillvertex.com/blog/python-modules/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 06:48:53 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[python classes]]></category>
+		<category><![CDATA[Python function]]></category>
+		<category><![CDATA[Python module]]></category>
+		<category><![CDATA[python tutorial]]></category>
+		<category><![CDATA[Python variable]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=7453</guid>
+
+					<description><![CDATA[Python Module has built-in functions, classes, and variables. There are several Python modules and each has their specific work. This article has listed the Python modules. What is a Python Module? The Python module consists of a file that has Python definitions and statements. A module will then define functions, classes, and variables. Additionally, the ... <a title="Python Modules" class="read-more" href="https://www.skillvertex.com/blog/python-modules/" aria-label="More on Python Modules">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-a-python-module">What is a Python Module?</a><ul><li ><a href="#create-a-module">Create a Module</a></li><li ><a href="#use-a-module">Use a Module</a></li></ul></li><li ><a href="#what-are-the-examples-of-importing-modules-in-python">What are the examples of Importing Modules in Python?</a></li><li ><a href="#how-to-import-specific-attributes-from-a-python-module">How to Import Specific Attributes From a Python Module?</a></li><li ><a href="#what-is-import-symbol">What is * Import symbol?</a></li><li ><a href="#locate-python-module"> Locate Python Module</a></li><li ><a href="#what-is-the-directories-list-for-modules">What is the Directories List For Modules?</a></li><li ><a href="#how-to-rename-the-python-module">How to Rename the Python Module?</a></li><li ><a href="#what-is-python-built-in-modules">What is Python Built-in Modules?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-modules-fa-qs">Python Modules-FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python Module has built-in functions, classes, and variables. There are several Python modules and each has their specific work. This article has listed the Python modules.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-module">What is a Python Module?</h2>
+
+
+
+<p>The <a href="https://www.skillvertex.com/blog/which-of-the-following-is-a-bad-python-variable-name/" data-type="post" data-id="2650">Python</a> module consists of a file that has Python definitions and statements. A module will then define <a href="https://www.skillvertex.com/blog/nested-functions-in-c/" data-type="post" data-id="2555">functions</a>, <a href="https://www.skillvertex.com/blog/which-class-provides-many-methods-for-graphics-programming/" data-type="post" data-id="2583">classes</a>, and <a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932">variables.</a>  Additionally, the module has a runnable code.</p>
+
+
+
+<p>Hence, categorizing the module will make the code easier to analyze. Therefore, the code will be more organized.</p>
+
+
+
+<h3 class="wp-block-heading" id="create-a-module">Create a Module</h3>
+
+
+
+<p>a.Create a new file, e.g., <code>my_module.py</code>.</p>
+
+
+
+<p>b.Define your<a href="https://www.skillvertex.com/blog/which-of-these-modules-is-not-included-in-azure-powershell/" data-type="post" data-id="2764"> module</a> content inside this file.</p>
+
+
+
+<pre class="wp-block-code"><code># File: my_module.py
+
+def greet(name):
+    """A simple function to greet the user."""
+    return f"Hello, {name}! Welcome to my_module."
+</code></pre>
+
+
+
+<p>The syntax is given below:</p>
+
+
+
+<pre class="wp-block-code"><code>import module
+</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="use-a-module">Use a Module</h3>
+
+
+
+<p>You will use the <a href="https://www.skillvertex.com/blog/mongodb-node-js-module-mongo-is-not-recognised-as-an-internal-or-external-command/" data-type="post" data-id="3538">module </a>that was created through the import statement.</p>
+
+
+
+<pre class="wp-block-code"><code># File: main_script.py
+import my_module
+
+# Using the greet function from my_module
+name = "User"
+message = my_module.greet(name)
+print(message)
+</code></pre>
+
+
+
+<p>When you run main_script.py, it will import the my_module and take the greet function to print a welcome message.</p>
+
+
+
+<p>These two files (my_module.py and main_script.py) are placed in the same directory where Python can find them.</p>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Hello, User! Welcome to my_module.
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-are-the-examples-of-importing-modules-in-python">What are the examples of Importing Modules in Python?</h2>
+
+
+
+<p>The example illustrated below will import the calc for executing the <a href="https://www.skillvertex.com/blog/python-arithmetic-operators/" data-type="post" data-id="6958">add </a>operation.</p>
+
+
+
+<pre class="wp-block-code"><code># File: main_script.py
+import my_module
+
+# Using the greet function from my_module
+name = "User"
+greeting_message = my_module.greet(name)
+print(greeting_message)
+
+# Using the add_numbers function from my_module
+result = my_module.add_numbers(5, 7)
+print(f"The result of addition is: {result}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Hello, User! Welcome to my_module.
+The result of addition is: 12
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="how-to-import-specific-attributes-from-a-python-module">How to Import Specific Attributes From a Python Module?</h2>
+
+
+
+<p>Let us look into the example given below :</p>
+
+
+
+<pre class="wp-block-code"><code># File: main_script.py
+from math import sqrt, factorial
+
+# Using the sqrt function from math
+number = 25
+square_root = sqrt(number)
+print(f"The square root of {number} is: {square_root}")
+
+# Using the factorial function from math
+fact_number = 5
+factorial_result = factorial(fact_number)
+print(f"The factorial of {fact_number} is: {factorial_result}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The square root of 25 is: 5.0
+The factorial of 5 is: 120
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-import-symbol">What is * Import symbol?</h2>
+
+
+
+<p>The  * symbol is used to import the <a href="https://www.skillvertex.com/blog/which-of-the-following-statements-about-the-views-in-sql-server-is-true/" data-type="post" data-id="2728">statement</a> function to import all the names from the module to the current namespace.</p>
+
+
+
+<p>The syntax is given below</p>
+
+
+
+<pre class="wp-block-code"><code>from module_name import *
+</code></pre>
+
+
+
+<p>Note: </p>
+
+
+
+<p>The *  symbol has its benefits and drawbacks. Suppose the purpose is known to you. However, it is not advised to use *.</p>
+
+
+
+<pre class="wp-block-code"><code># File: main_script.py
+from math import sqrt, factorial
+
+# Using the sqrt function from math
+number = 25
+square_root = sqrt(number)
+print(f"The square root of {number} is: {square_root}")
+
+# Using the factorial function from math
+fact_number = 5
+factorial_result = factorial(fact_number)
+print(f"The factorial of {fact_number} is: {factorial_result}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The square root of 25 is: 5.0
+The factorial of 5 is: 120
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="locate-python-module"> Locate Python Module</h2>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Current Directory:</strong>
+<ul class="wp-block-list">
+<li>First, Python checks if the module is in the same folder where your Python script is located.</li>
+</ul>
+</li>
+
+
+
+<li><strong>PYTHON PATH:</strong>
+<ul class="wp-block-list">
+<li>If it&#8217;s not in the current folder, Python checks other places listed in the PYTHON PATH variable.</li>
+
+
+
+<li>PYTHON PATH is like a list of folders where Python looks for modules. You can add more folders to this list if needed.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Installation-Dependent Directories:</strong>
+<ul class="wp-block-list">
+<li>If the module is still not found, Python checks places to set up when Python was installed.</li>
+
+
+
+<li>These are special folders that come with Python and contain important modules that are needed for many programs.</li>
+</ul>
+</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-directories-list-for-modules">What is the Directories List For Modules?</h2>
+
+
+
+<p>The sys. path has a built-in variable within the sys module.  It has a list of directories, in which the interpreter will search in the particular module.</p>
+
+
+
+<pre class="wp-block-code"><code># File: main_script.py
+import sys
+
+# Now you can use functions and variables from the sys module
+print("Python version:")
+print(sys.version)
+print("")
+
+print("System platform:")
+print(sys.platform)
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Python version:
+3.8.5 (default, Jan 27 2021, 15:41:15)
+&#91;GCC 9.3.0]
+
+System platform:
+linux
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="how-to-rename-the-python-module">How to Rename the Python Module?</h2>
+
+
+
+<p>The Python module will rename the module by importing it with the keyword.</p>
+
+
+
+<p>The syntax is provided below</p>
+
+
+
+<pre class="wp-block-code"><code>Syntax:  Import Module_name as Alias_name
+
+</code></pre>
+
+
+
+<pre class="wp-block-code"><code># File: main_script.py
+import math
+
+# Using the sqrt function from math
+number = 18  # Change the number to 18
+square_root = math.sqrt(number)
+print(f"The square root of {number} is: {square_root}")
+
+# Using the factorial function from math
+fact_number = 5
+factorial_result = math.factorial(fact_number)
+print(f"The factorial of {fact_number} is: {factorial_result}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The square root of 18 is: 4.242640687119285
+The factorial of 5 is: 120
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-python-built-in-modules">What is Python Built-in Modules?</h2>
+
+
+
+<p>Python consists of built-in modules that allow them to import whenever required.</p>
+
+
+
+<pre class="wp-block-code"><code># File: main_script.py
+import math
+
+# Using the sqrt function from math
+number = 25
+square_root = math.sqrt(number)
+print(f"The square root of {number} is: {square_root}")
+
+# Using the factorial function from math
+fact_number = 5
+factorial_result = math.factorial(fact_number)
+print(f"The factorial of {fact_number} is: {factorial_result}")
+
+# Using the pi function from math
+pi_value = math.pi
+print(f"The value of pi is: {pi_value}")
+
+# Converting 2 radians to degrees
+radians_to_degrees = math.degrees(2)
+print(f"2 radians in degrees is: {radians_to_degrees}")
+
+# Converting 60 degrees to radians
+degrees_to_radians = math.radians(60)
+print(f"60 degrees in radians is: {degrees_to_radians}")
+
+# Calculating sine of 2 radians
+sine_value = math.sin(2)
+print(f"The sine of 2 radians is: {sine_value}")
+
+# Calculating cosine of 0.5 radians
+cosine_value = math.cos(0.5)
+print(f"The cosine of 0.5 radians is: {cosine_value}")
+
+# Calculating tangent of 0.23 radians
+tangent_value = math.tan(0.23)
+print(f"The tangent of 0.23 radians is: {tangent_value}")
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>The square root of 25 is: 5.0
+The factorial of 5 is: 120
+The value of pi is: 3.141592653589793
+2 radians in degrees is: 114.59155902616465
+60 degrees in radians is: 1.0471975511965979
+The sine of 2 radians is: 0.9092974268256817
+The cosine of 0.5 radians is: 0.8775825618903728
+The tangent of 0.23 radians is: 0.23414336235146526
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>To conclude, this article has offered the information about the Python Modules. It has also included how to create the module, Python import from the module, Renaming the Python Module, and several others.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-modules-fa-qs">Python Modules-FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1709102542804" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.What are the modules in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Modules are referred to as the files with the “. py” extension and have Python code that can be imported inside another Python Program. </p>
+
+</div>
+</div>
+<div id="faq-question-1709102553083" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2.How many modules of Python are there?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans.200</p>
+
+</div>
+</div>
+<div id="faq-question-1709102560798" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.What are the five modules in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Those five modules are &#8211; collections, datetime, logging, math, numpy, os, pip, sys, and time</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-modules/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

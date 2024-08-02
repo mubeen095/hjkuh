@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Predefined Identifier __func__ In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/predefined-identifier-__func__-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:23:58 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Predefined Identifier __func__ In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Predefined Identifier __Func__ In C</title>
+		<link>https://www.skillvertex.com/blog/predefined-identifier-func-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/predefined-identifier-func-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:23:58 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Predefined Identifier __func__ In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2572</guid>
+
+					<description><![CDATA[Predefined Identifier __func__ In C In C programming, there&#8217;s a handy tool called __func__. It automatically tells you the name of the function you&#8217;re in. This makes it easier to find and fix problems in your code. This article explores how __func__ works and why it&#8217;s helpful for programmers. To illustrate the working of predefined ... <a title="Predefined Identifier __Func__ In C" class="read-more" href="https://www.skillvertex.com/blog/predefined-identifier-func-in-c/" aria-label="More on Predefined Identifier __Func__ In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#predefined-identifier-func-in-c">Predefined Identifier __func__ In C</a></li><li ><a href="#to-illustrate-the-working-of-predefined-identifier-func">To illustrate the working of predefined identifier __func__</a></li><li ><a href="#example-1-to-illustrate-func">Example 1: To illustrate _func_</a></li><li ><a href="#example-2-to-demonstrate-the-double">Example 2: To demonstrate the double </a></li><li ><a href="#faq-predefined-identifier-func-in-c">FAQ-Predefined Identifier __func__ In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="predefined-identifier-func-in-c">Predefined Identifier __func__ In C</h2>
+
+
+
+<p>In C programming, there&#8217;s a handy tool called <code>__func__</code>. It automatically tells you the name of the function you&#8217;re in. This makes it easier to find and fix problems in your code. This article explores how <code>__func__</code> works and why it&#8217;s helpful for programmers.</p>
+
+
+
+<h2 class="wp-block-heading" id="to-illustrate-the-working-of-predefined-identifier-func">To illustrate the working of predefined identifier __func__</h2>
+
+
+
+<p>Before we begin discussing&nbsp;<em>__func__</em>, We can write some code snippets and anticipate the output:</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to demonstrate working of a
+// Predefined Identifier __func__
+ 
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    // %s indicates that the program will read strings
+    printf("%s", __func__);
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>main
+</code></pre>
+
+
+
+<p>The C language standard, including versions like C99 and C11, defines a predefined identifier as explained in clause 6.4.2.2.</p>
+
+
+
+<pre class="wp-block-code"><code>“The identifier __func__ shall be implicitly declared by the translator as if, immediately following the opening brace of each function definition, the declaration
+
+static const char __func__&#91;] = "function-name";
+appeared, where function-name is the name of the lexically-enclosing function.”</code></pre>
+
+
+
+<p> In C99 and later versions (including C11), the <code>__func__</code> identifier is predefined by the C compiler and automatically added to every function. It provides a way for the programmer to access the name of the current function within that function. This can be useful for debugging and error reporting purposes, allowing you to log or print the function name without explicitly specifying it in your code.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-1-to-illustrate-func">Example 1: To illustrate _func_</h2>
+
+
+
+<pre class="wp-block-code"><code>
+
+// C program to demonstrate __func__
+#include &lt;stdio.h&gt;
+ 
+// %s is used to read strings
+void foo(void) { printf("%s", __func__); }
+void bar(void) { printf("%s", __func__); }
+ 
+int main()
+{
+    foo();
+    bar();
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>foobar
+</code></pre>
+
+
+
+<p>Predefined identifiers like <code>__func__</code> are very useful for logging and debugging purposes, especially in larger programs. They provide a convenient way to access the name of the current function without having to manually specify it, which can be error-prone and tedious, particularly in extensive codebases.</p>
+
+
+
+<h2 class="wp-block-heading" id="example-2-to-demonstrate-the-double">Example 2: To demonstrate the double </h2>
+
+
+
+<pre class="wp-block-code"><code>
+// C program to demonstrate double
+// predefined identifier or __func__
+#include &lt;stdio.h&gt;
+ 
+int __func__ = 10;
+int main()
+{
+    printf("%s", __func__);
+    return 0;
+}</code></pre>
+
+
+
+<p>In C, it&#8217;s essential to adhere to the C standard&#8217;s specifications, which explicitly state that predefined identifiers like <code>__func__</code> are automatically defined by the compiler for each function with their respective function names. Attempting to explicitly define or redefine these predefined identifiers results in undefined behavior, and it&#8217;s best to avoid such practices.</p>
+
+
+
+<p>Additionally, you rightly pointed out the significance of other predefined macros like <code>__FILE__</code> and <code>__LINE__</code>. These macros, as mentioned in the C standard clause 6.10.8, provide valuable context information about the source file and line number, which is incredibly useful for debugging, error reporting, and tracking code execution. Following the C standard and using these predefined macros as intended is crucial for writing robust and reliable C programs.</p>
+
+
+
+<p><strong>Output of the following code snippet</strong>:</p>
+
+
+
+<pre class="wp-block-code"><code>// C program to demonstrate __FILE__, func, line
+#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    printf("In file:%s, function:%s() and line:%d",
+           __FILE__, __func__, __LINE__);
+ 
+    return 0;
+}</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-predefined-identifier-func-in-c">FAQ-Predefined Identifier __func__ In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696853020342" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.What is the __ func __ identifier in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In a C program, <code>__func__</code> is a special identifier created by the compiler. It&#8217;s automatically set to the name of the function where it&#8217;s used, helping you identify which function is currently being executed.</p>
+
+</div>
+</div>
+<div id="faq-question-1696853041237" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is a predefined function in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Library functions in C, also known as predefined functions, are functions that are already defined in the C libraries. This means you don&#8217;t have to write the function&#8217;s code yourself; you can simply call these functions to perform specific tasks. They are ready-made tools you can use to make your C programming tasks easier and more efficient.</p>
+
+</div>
+</div>
+<div id="faq-question-1696853048076" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What are predefined macros in C language?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>__OBJC__</code> macro is like a switch that helps you determine if the Objective-C compiler is being used. It has a value of 1 when Objective-C is in use, allowing you to conditionally include or exclude code based on whether you&#8217;re compiling with Objective-C or not.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/predefined-identifier-func-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

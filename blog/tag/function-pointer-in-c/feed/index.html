@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Function Pointer In C?</title>
+	<atom:link href="https://www.skillvertex.com/tag/function-pointer-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 11:20:36 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Function Pointer In C?</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Function Pointer In C</title>
+		<link>https://www.skillvertex.com/blog/function-pointer-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/function-pointer-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 11:20:36 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Function Pointer In C?]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2686</guid>
+
+					<description><![CDATA[Function Pointer In C Function pointers are a powerful feature of the C language that allows you to store and call functions through pointers. Output Interesting facts about function pointers Output 4. Function pointers can indeed be used to create an array of pointers to functions, which allows for dynamic function dispatch, similar to a ... <a title="Function Pointer In C" class="read-more" href="https://www.skillvertex.com/blog/function-pointer-in-c/" aria-label="More on Function Pointer In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#function-pointer-in-c">Function Pointer In C</a></li><li ><a href="#interesting-facts-about-function-pointers">Interesting facts about function pointers</a></li><li ><a href="#faq-function-pointer-in-c">FAQ- Function Pointer In C?</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="function-pointer-in-c">Function Pointer In C</h2>
+
+
+
+<p>Function pointers are a powerful feature of the C language that allows you to store and call functions through pointers.</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt; 
+// A normal function with an int parameter 
+// and void return type 
+void fun(int a) 
+{ 
+    printf("Value of a is %d\n", a); 
+} 
+  
+int main() 
+{ 
+    // fun_ptr is a pointer to function fun()  
+    void (*fun_ptr)(int) = &amp;fun; 
+  
+    /* The above line is equivalent of following two 
+       void (*fun_ptr)(int); 
+       fun_ptr = &amp;fun;  
+    */
+  
+    // Invoking fun() using fun_ptr 
+    (*fun_ptr)(10); 
+  
+    return 0; 
+} </code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Value of a is 10
+</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="interesting-facts-about-function-pointers">Interesting facts about function pointers</h2>
+
+
+
+<ol class="wp-block-list">
+<li>Function pointers in C do indeed point to code, not data. They store the memory address of the executable code of a function, allowing you to call that function dynamically at runtime. This is a fundamental distinction between function pointers and regular data pointers, which point to data in memory. Function pointers are a powerful feature in C that enables dynamic and flexible function invocation</li>
+</ol>
+
+
+
+<ol class="wp-block-list" start="2">
+<li>Function pointers are used to reference and call functions, not to allocate or deallocate memory. Memory allocation and deallocation are typically performed using data pointers, such as those returned by functions like <code>malloc</code> and <code>free</code>.</li>
+
+
+
+<li>In C, you can obtain a function&#8217;s address by simply using the function&#8217;s name without the address operator <code>&amp;</code>. This is because the name of a function, when used in an expression (without parentheses), automatically converts to a function pointer. So, you can call a function using the function&#8217;s name without needing to use the dereference operator <code>*</code>.</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>
+#include &lt;stdio.h&gt; 
+// A normal function with an int parameter 
+// and void return type 
+void fun(int a) 
+{ 
+    printf("Value of a is %d\n", a); 
+} 
+  
+int main() 
+{  
+    void (*fun_ptr)(int) = fun;  // &amp; removed 
+  
+    fun_ptr(10);  // * removed 
+  
+    return 0; 
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Value of a is 10</code></pre>
+
+
+
+<p>4. Function pointers can indeed be used to create an array of pointers to functions, which allows for dynamic function dispatch, similar to a switch-case statement. This can lead to more flexible and maintainable code, as you can choose which function to execute at runtime based on user choices or other conditions.</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt; 
+void add(int a, int b) 
+{ 
+    printf("Addition is %d\n", a+b); 
+} 
+void subtract(int a, int b) 
+{ 
+    printf("Subtraction is %d\n", a-b); 
+} 
+void multiply(int a, int b) 
+{ 
+    printf("Multiplication is %d\n", a*b); 
+} 
+  
+int main() 
+{ 
+    // fun_ptr_arr is an array of function pointers 
+    void (*fun_ptr_arr&#91;])(int, int) = {add, subtract, multiply}; 
+    unsigned int ch, a = 15, b = 10; 
+  printf("Enter Choice: 0 for add, 1 for subtract and 2 "
+            "for multiply\n"); 
+    scanf("%d", &amp;ch); 
+  
+    if (ch &gt; 2) return 0; 
+  
+    (*fun_ptr_arr&#91;ch])(a, b); 
+  
+    return 0; 
+} </code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Enter Choice: 0 for add, 1 for subtract and 2 for multiply
+2
+Multiplication is 150 </code></pre>
+
+
+
+<p>5. Function pointers can be passed as arguments to functions and can also be returned from functions in C. This feature enables dynamic behavior and allows you to create functions that can work with different functions based on the context.</p>
+
+
+
+<p>For example, consider the following C program where wrapper() receives a void fun() as parameter and calls the passed function.</p>
+
+
+
+<pre class="wp-block-code"><code>
+
+// A simple C program to show function pointers as parameter 
+#include &lt;stdio.h&gt; 
+  
+// Two simple functions 
+void fun1() { printf("Fun1\n"); } 
+void fun2() { printf("Fun2\n"); } 
+  
+// A function that receives a simple function 
+// as parameter and calls the function 
+void wrapper(void (*fun)()) 
+{ 
+    fun(); 
+} 
+  
+int main() 
+{ 
+    wrapper(fun1); 
+    wrapper(fun2); 
+    return 0; 
+}</code></pre>
+
+
+
+<p>6. Using function pointers is a powerful technique in C to reduce code redundancy and create more flexible, reusable code. Your example with <code>qsort()</code> is a perfect illustration of this.</p>
+
+
+
+<p>In the <code>qsort()</code> function from the C Standard Library, you can specify a comparison function through a function pointer. This allows you to sort arrays in different orders or based on different criteria without modifying the sorting algorithm itself.</p>
+
+
+
+<p>The flexibility of function pointers and void pointers enables <code>qsort()</code> to be used with arrays of any data type, making it a generic sorting solution. This kind of abstraction and reusability is one of the strengths of the C language, particularly when working with data structures and algorithms.</p>
+
+
+
+<pre class="wp-block-code"><code>// An example for qsort and comparator 
+#include &lt;stdio.h&gt; 
+#include &lt;stdlib.h&gt; 
+  
+// A sample comparator function that is used 
+// for sorting an integer array in ascending order. 
+// To sort any array for any other data type and/or 
+// criteria, all we need to do is write more compare 
+// functions.  And we can use the same qsort() 
+int compare (const void * a, const void * b) 
+{ 
+  return ( *(int*)a - *(int*)b ); 
+} 
+  
+int main () 
+{ 
+  int arr&#91;] = {10, 5, 15, 12, 90, 80}; 
+  int n = sizeof(arr)/sizeof(arr&#91;0]), i; 
+  
+  qsort (arr, n, sizeof(int), compare); 
+  
+  for (i=0; i&lt;n; i++) 
+     printf ("%d ", arr&#91;i]); 
+  return 0; 
+} </code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>5 10 12 15 80 90
+</code></pre>
+
+
+
+<p>Writing generic functions with function pointers is a powerful way to create reusable and versatile code. Your example of a search function that can be used for any data type and customized for specific tasks by providing a comparison function is a great illustration of this concept.</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdio.h&gt; 
+#include &lt;stdbool.h&gt; 
+  
+// A compare function that is used for searching an integer 
+// array 
+bool compare (const void * a, const void * b) 
+{ 
+  return ( *(int*)a == *(int*)b ); 
+} 
+  
+// General purpose search() function that can be used 
+// for searching an element *x in an array arr&#91;] of 
+// arr_size. Note that void pointers are used so that 
+// the function can be called by passing a pointer of 
+// any type.  ele_size is size of an array element 
+int search(void *arr, int arr_size, int ele_size, void *x, 
+           bool compare (const void * , const void *)) 
+{ 
+    // Since char takes one byte, we can use char pointer 
+    // for any type/ To get pointer arithmetic correct, 
+    // we need to multiply index with size of an array 
+char *ptr = (char *)arr; 
+  
+    int i; 
+    for (i=0; i&lt;arr_size; i++) 
+        if (compare(ptr + i*ele_size, x)) 
+           return i; 
+  
+    // If element not found 
+    return -1; 
+} 
+  
+int main() 
+{ 
+    int arr&#91;] = {2, 5, 7, 90, 70}; 
+    int n = sizeof(arr)/sizeof(arr&#91;0]); 
+    int x = 7; 
+    printf ("Returned index is %d ", search(arr, n, 
+                               sizeof(int), &amp;x, compare)); 
+    return 0; 
+} </code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Returned index is 2
+</code></pre>
+
+
+
+<p>7.<strong>Virtual Functions:</strong> In C++, virtual functions enable polymorphism, allowing derived classes to provide their implementations. This behavior is achieved using function pointers in the background, as the correct function to call at runtime is determined based on the object&#8217;s actual type.</p>
+
+
+
+<p>8. <strong>Class Methods (Member Function Pointers):</strong> Class methods in C++ are implemented using member function pointers. These pointers point to member functions within a class. Member function pointers are essential for features like callback functions and dynamic function dispatch within classes.</p>
+
+
+
+<h2 class="wp-block-heading" id="faq-function-pointer-in-c">FAQ- Function Pointer In C?</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1697198902293" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is a function pointer with an example?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In this example, <code>FP</code> is a pointer that points to a function accepting a float argument and returning a float value. The syntax for declaring a function pointer is similar to that of a function declaration, with the addition of <code>*</code> to indicate it&#8217;s a pointer.</p>
+
+</div>
+</div>
+<div id="faq-question-1697198909326" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is the size of function pointer?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, pointers store the addresses of variables. The size of a pointer depends on the computer&#8217;s word size, typically 4 bytes on 32-bit systems and 8 bytes on 64-bit systems.</p>
+
+</div>
+</div>
+<div id="faq-question-1697198919059" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the syntax of function pointer?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. <strong>void (*foo)( int );</strong> is the syntax of function pointer</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/function-pointer-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python Comparison Operators</title>
+	<atom:link href="https://www.skillvertex.com/tag/python-comparison-operators/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Thu, 11 Apr 2024 12:00:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Python Comparison Operators</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Python Comparison Operators</title>
+		<link>https://www.skillvertex.com/blog/python-comparison-operators/</link>
+					<comments>https://www.skillvertex.com/blog/python-comparison-operators/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Thu, 11 Apr 2024 12:00:25 +0000</pubDate>
+				<category><![CDATA[Python Tutorial]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[Python Comparison Operators]]></category>
+		<category><![CDATA[Python Operators]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=6966</guid>
+
+					<description><![CDATA[Python comparison operators will compare two values. == or equal to, !=&#160;or not equal to, &#62; or greater than, &#62;= or greater than or equal to, &#60; or less than, and &#60;= or less than or equal to are the six Python comparison operators. Read this article to learn more about Python Comparison Operators. What ... <a title="Python Comparison Operators" class="read-more" href="https://www.skillvertex.com/blog/python-comparison-operators/" aria-label="More on Python Comparison Operators">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#what-is-a-python-comparison-operator">What is a Python  Comparison Operator</a></li><li ><a href="#comparison-of-float-number">Comparison of Float number</a></li><li ><a href="#what-is-the-comparison-of-complex-numbers">What is the Comparison of Complex numbers?</a></li><li ><a href="#comparison-of-booleans">Comparison of Booleans</a></li><li ><a href="#what-is-the-comparison-of-sequence-types">What is the Comparison of Sequence Types?</a></li><li ><a href="#what-is-the-comparison-of-dictionary-objects">What is the Comparison of Dictionary objects?</a></li><li ><a href="#conclusion">Conclusion</a></li><li ><a href="#python-comparison-operators-fa-qs">Python Comparison Operators- FAQs</a></li></ul></nav></div>
+
+
+
+<p>Python comparison operators will compare two values.  == or equal to,  !=&nbsp;or not equal to,  &gt; or greater than, &gt;= or greater than or equal to, &lt; or less than, and  &lt;= or less than or equal to are the six Python comparison operators. Read this article to learn more about Python Comparison Operators.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-is-a-python-comparison-operator">What is a Python  Comparison Operator</h2>
+
+
+
+<p>Comparison Operators in Python play an essential role in Python&#8217;s conditional statements (if, else, and elif) and <a href="https://www.skillvertex.com/blog/do-while-loop-in-c/" data-type="post" data-id="2291">looping statements</a> (while loops). These comparison operators are also known as relational operators. Hence, the known operators will stands for &lt; and &gt; will be for greater operators.</p>
+
+
+
+<p>Furthermore,<a href="https://www.skillvertex.com/blog/python-literals/" data-type="post" data-id="6953"> python</a> will use two operators by adding the  =  symbol with these two. The &lt;= symbol will be less than or equal to the operator and these &gt;= symbols will stand for greater than or equal to the operator.</p>
+
+
+
+<p>It is known that Python has two operators that are &#8221;==&#8221; and &#8221; !=&#8221;. The &lt;= symbol will stand for less than or equal to the operator, whereas the &#8221;&gt;=&#8221; is referred to as the greater than or equal to the operator.</p>
+
+
+
+<p>Look at the table below to learn more about six comparison operators in Python.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>&lt;</td><td>Less than</td><td>a&lt;b</td></tr><tr><td>&gt;</td><td>Greater than</td><td>a&gt;b</td></tr><tr><td>&lt;=</td><td>Less than or equal to</td><td>a&lt;=b</td></tr><tr><td>&gt;=</td><td>Greater than or equal to</td><td>a&gt;=b</td></tr><tr><td>==</td><td>Is equal to</td><td>a==b</td></tr><tr><td>!=</td><td>Is not equal to</td><td>a!=b</td></tr></tbody></table></figure>
+
+
+
+<p>Comparison <a href="https://www.skillvertex.com/blog/python-operators/" data-type="post" data-id="6937">operators</a> are mostly <a href="https://www.skillvertex.com/blog/difference-between-binary-search-and-linear-search/" data-type="post" data-id="520">binar</a>y and need two operands. An expression that has a comparison operator is known as a Boolean expression. This will either come as true or false.</p>
+
+
+
+<pre class="wp-block-code"><code>a=5
+b=7
+print (a&gt;b)
+print (a&lt;b)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>False
+True</code></pre>
+
+
+
+<p>Both the operands can either be <a href="https://www.skillvertex.com/blog/python-literals/" data-type="post" data-id="6953">Python literals</a>,<a href="https://www.skillvertex.com/blog/python-variables/" data-type="post" data-id="6932"> variables</a> or expressions. As Python has mixed <a href="https://www.skillvertex.com/blog/python-arithmetic-operators/" data-type="post" data-id="6958">arithmetic</a> it is possible to have any number-type operands.</p>
+
+
+
+<p>The code provided below  will show the use of Python comparison operators with<a href="https://www.skillvertex.com/blog/integer-promotions-in-c/" data-type="post" data-id="1968"> integer</a> numbers</p>
+
+
+
+<pre class="wp-block-code"><code>print ("Both operands are integer")
+a=5
+b=7
+print ("a=",a, "b=",b, "a&gt;b is", a&gt;b)
+print ("a=",a, "b=",b,"a&lt;b is",a&lt;b)
+print ("a=",a, "b=",b,"a==b is",a==b)
+print ("a=",a, "b=",b,"a!=b is",a!=b)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Both operands are integer
+a= 5 b= 7 a&gt;b is False
+a= 5 b= 7 a&lt;b is True
+a= 5 b= 7 a==b is False
+a= 5 b= 7 a!=b is True</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="comparison-of-float-number">Comparison of Float number</h2>
+
+
+
+<p>This example will show the comparison of an integer and float operand.</p>
+
+
+
+<pre class="wp-block-code"><code>print ("comparison of int and float")
+a=10
+b=10.0
+print ("a=",a, "b=",b, "a&gt;b is", a&gt;b)
+print ("a=",a, "b=",b,"a&lt;b is",a&lt;b)
+print ("a=",a, "b=",b,"a==b is",a==b)
+print ("a=",a, "b=",b,"a!=b is",a!=b)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>comparison of int and float
+a= 10 b= 10.0 a&gt;b is False
+a= 10 b= 10.0 a&lt;b is False
+a= 10 b= 10.0 a==b is True
+a= 10 b= 10.0 a!=b is False</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-comparison-of-complex-numbers">What is the Comparison of Complex numbers?</h2>
+
+
+
+<p>A comple<a href="https://www.skillvertex.com/blog/which-is-not-an-ado-net-dataadapter-object/" data-type="post" data-id="2225">x object</a> is considered as the number data type in Python. It will work differently from others in behavior.  Python won&#8217;t support &lt; and&gt; operators as it cannot support the equality  ( ==) and inequality (!=)  operators.</p>
+
+
+
+<pre class="wp-block-code"><code>print ("comparison of complex numbers")
+a=10+1j
+b=10.-1j
+print ("a=",a, "b=",b,"a==b is",a==b)
+print ("a=",a, "b=",b,"a!=b is",a!=b)
+
+</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>comparison of complex numbers
+a= (10+1j) b= (10-1j) a==b is False
+a= (10+1j) b= (10-1j) a!=b is True</code></pre>
+
+
+
+<p>Here, it is possible to get a type error that is less than or greater than the operators.</p>
+
+
+
+<pre class="wp-block-code"><code>print ("comparison of complex numbers")
+a=10+1j
+b=10.-1j
+print ("a=",a, "b=",b,"a&lt;b is",a&lt;b)
+print ("a=",a, "b=",b,"a&gt;b is",a&gt;b)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>comparison of complex numbers
+Traceback (most recent call last):
+  File "C:\Users\mlath\examples\example.py", line 5, in &lt;module&gt;
+    print ("a=",a, "b=",b,"a&lt;b is",a&lt;b)
+                                      ^^^
+TypeError: '&lt;' not supported between instances of 'complex' and
+'complex</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="comparison-of-booleans">Comparison of Booleans</h2>
+
+
+
+<p>Boolean objects are referred to as real integers such as true is  1 and false is 0.  However, python will consider any non-zero numbers as true=.  Hence, it is allowed to compare the boolean objects. False&lt; True is True.</p>
+
+
+
+<pre class="wp-block-code"><code>print ("comparison of Booleans")
+a=True
+b=False
+print ("a=",a, "b=",b,"a&lt;b is",a&lt;b)
+print ("a=",a, "b=",b,"a&gt;b is",a&gt;b)
+print ("a=",a, "b=",b,"a==b is",a==b)
+print ("a=",a, "b=",b,"a!=b is",a!=b)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>comparison of Booleans
+a= True b= False a&lt;b is False
+a= True b= False a&gt;b is True
+a= True b= False a==b is False
+a= True b= False a!=b is True</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-comparison-of-sequence-types">What is the Comparison of Sequence Types?</h2>
+
+
+
+<p>The comparison of one similar sequence object will be operated in Python. A string object can be compared with another string only.  A list can&#8217;t be compared with a tuple even if it holds the same items.</p>
+
+
+
+<pre class="wp-block-code"><code>print ("comparison of different sequence types")
+a=(1,2,3)
+b=&#91;1,2,3]
+print ("a=",a, "b=",b,"a&lt;b is",a&lt;b)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>comparison of different sequence types
+Traceback (most recent call last):
+  File "C:\Users\mlath\examples\example.py", line 5, in &lt;module&gt;
+    print ("a=",a, "b=",b,"a&lt;b is",a&lt;b)
+                                       ^^^
+TypeError: '&lt;' not supported between instances of 'tuple' and 'list'</code></pre>
+
+
+
+<p>From the example provided above, it is understood that the sequence objects will be compared with the help of a lexicographical ordering mechanism. This comparison will begin with the item at the 0th index. Hence, if they come as equal, this comparison will move to the next index until they get the items at the certain index unequal or the sequence is exhausted.</p>
+
+
+
+<p>However, if one sequence is considered as the initial sub-sequence of the other, then the shorter sequence will be the lesser one.</p>
+
+
+
+<p>The operators will be considered greater and that will depend on the difference in the values of items when they are not equal. An example of this is BAT&#8217;&gt;&#8217;BAR&#8217; is True, if the T comes after R in Unicode order.</p>
+
+
+
+<p>All the items in the two sequences will be compared for equity. Thus, the sequence will be equal while comparison.</p>
+
+
+
+<pre class="wp-block-code"><code>print ("comparison of strings")
+a='BAT'
+b='BALL'
+print ("a=",a, "b=",b,"a&lt;b is",a&lt;b)
+print ("a=",a, "b=",b,"a&gt;b is",a&gt;b)
+print ("a=",a, "b=",b,"a==b is",a==b)
+print ("a=",a, "b=",b,"a!=b is",a!=b)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>comparison of strings
+a= BAT b= BALL a&lt;b is False
+a= BAT b= BALL a&gt;b is True
+a= BAT b= BALL a==b is False
+a= BAT b= BALL a!=b is True</code></pre>
+
+
+
+<p>Another example given below illustrates the two tuple objects.</p>
+
+
+
+<pre class="wp-block-code"><code>print ("comparison of tuples")
+a=(1,2,4)
+b=(1,2,3)
+print ("a=",a, "b=",b,"a&lt;b is",a&lt;b)
+print ("a=",a, "b=",b,"a&gt;b is",a&gt;b)
+print ("a=",a, "b=",b,"a==b is",a==b)
+print ("a=",a, "b=",b,"a!=b is",a!=b)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>a= (1, 2, 4) b= (1, 2, 3) a&lt;b is False
+a= (1, 2, 4) b= (1, 2, 3) a&gt;b is True
+a= (1, 2, 4) b= (1, 2, 3) a==b is False
+a= (1, 2, 4) b= (1, 2, 3) a!=b is True</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="what-is-the-comparison-of-dictionary-objects">What is the Comparison of Dictionary objects?</h2>
+
+
+
+<p>While comparing the dictionary objects, &#8220;&lt; &#8221; and &#8220;&gt;&#8221; operators are used in the Python dictionary and they are not defined. Whereas, in operands, this type error &#8220;&lt;&#8221; cannot be supported in between the instances of &#8216;dict&#8217; and  &#8216;dict&#8217; will be reported.</p>
+
+
+
+<p>Whereas. the equality comparison will monitor if the length of both the dict items is the same. The length of the dictionary will be considered as the number of key-value pairs in it. </p>
+
+
+
+<p> However,<a href="https://www.skillvertex.com/blog/python-syntax/" data-type="post" data-id="6924"> python dictionaries</a> will be compared with the length. The dictionaries that have fewer elements won&#8217;t be referred to as dictionaries. Since dictionaries require more <a href="https://www.skillvertex.com/blog/which-one-is-not-an-element-of-iot/" data-type="post" data-id="3089">elements.</a></p>
+
+
+
+<pre class="wp-block-code"><code>print ("comparison of dictionary objects")
+a={1:1,2:2}
+b={2:2, 1:1, 3:3}
+print ("a=",a, "b=",b,"a==b is",a==b)
+print ("a=",a, "b=",b,"a!=b is",a!=b)</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>comparison of dictionary objects
+a= {1: 1, 2: 2} b= {2: 2, 1: 1, 3: 3} a==b is False
+a= {1: 1, 2: 2} b= {2: 2, 1: 1, 3: 3} a!=b is True</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
+
+
+
+<p>Comparison  Operators in Python is a relevant topic for beginners to learn. Learning these operators will be useful during coding and writing  Python. </p>
+
+
+
+<h2 class="wp-block-heading" id="python-comparison-operators-fa-qs">Python Comparison Operators- FAQs</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1707376325247" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What are the 6 comparison operators in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans == or equal to,  != or not equal to,  > or greater than, >= or greater than or equal to, &lt; or less than, and  &lt;= or less than or equal to </p>
+
+</div>
+</div>
+<div id="faq-question-1707376333652" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. What is Elif in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Elif will stand for if else and it functions to test the multiple conditions in Python.</p>
+
+</div>
+</div>
+<div id="faq-question-1707376348652" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3.  What is float in Python?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. Float is referred to as the reusable code in Python that can turn values into floating point numbers.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/python-comparison-operators/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

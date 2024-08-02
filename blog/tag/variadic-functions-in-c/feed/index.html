@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Variadic Functions In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/variadic-functions-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 May 2024 07:23:30 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Variadic Functions In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Variadic Functions In C</title>
+		<link>https://www.skillvertex.com/blog/variadic-functions-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/variadic-functions-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Fri, 10 May 2024 07:23:30 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Variadic Functions In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=2561</guid>
+
+					<description><![CDATA[Variadic Functions In C Variadic functions in C are like flexible functions because they can accept different numbers of arguments. They always have at least one fixed argument, and then you can pass any number of additional arguments. To indicate this flexibility, variadic functions have an ellipsis (&#8230;) as their last parameter. Syntax Values of ... <a title="Variadic Functions In C" class="read-more" href="https://www.skillvertex.com/blog/variadic-functions-in-c/" aria-label="More on Variadic Functions In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#variadic-functions-in-c">Variadic Functions In C</a></li><li ><a href="#program-1-c-program-to-illustrate-the-working-of-variadic-function">Program 1: C program to illustrate the working of variadic function </a></li><li ><a href="#program-2-c-program-consisting-of-the-variadic-function-largest-number">Program 2: C program consisting of the variadic function LargestNumber()</a></li><li ><a href="#faq-variadic-functions-in-c">FAQ- Variadic Functions In C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="variadic-functions-in-c">Variadic Functions In C</h2>
+
+
+
+<p>Variadic functions in C are like flexible functions because they can accept different numbers of arguments. They always have at least one fixed argument, and then you can pass any number of additional arguments. To indicate this flexibility, variadic functions have an ellipsis (&#8230;) as their last parameter.</p>
+
+
+
+<p><strong>Syntax</strong></p>
+
+
+
+<pre class="wp-block-code"><code>int function_name(data_type variable_name, ...);
+</code></pre>
+
+
+
+<p>Values of the passed arguments can be accessed through the&nbsp;header file&nbsp;named as:</p>
+
+
+
+<pre class="wp-block-code"><code>#include &lt;stdarg.h&gt;
+</code></pre>
+
+
+
+<p>&lt;stdarg.h&gt;&nbsp;includes the following methods:</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Methods</strong></td><td><strong>Description</strong></td></tr><tr><td>va_start(va_list ap, argN)</td><td>This method will grant access to variadic function arguments. Whereas,  *va_list* will be the pointer to the last fixed argument in the variadic function* and, it is the last fixed argument in the variadic function.&nbsp;Hence, From the above variadic function (function_name (data_type variable_name, …);) provided, We can conclude that variable_name is the last fixed argument making it the argN.  *va_list ap* will be a pointer to argN (variable_name)</td></tr><tr><td>va_arg(va_list ap, type)</td><td>In this method, it will give access to the next variadic function argument. Also, *va_list ap* is the same as above i.e. a pointer to argN*type*, and it  refers to  the data type &nbsp;the *va_list ap* should expect (double, float, int, etc.)</td></tr><tr><td>va_copy(va_list dest, va_list src)</td><td>This method can create a copy of the variadic function arguments.</td></tr><tr><td>va_end(va_list ap)</td><td>This indicates the passing of the variadic function arguments.</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Note </strong></p>
+
+
+
+<p><strong>va_list</strong>&nbsp;holds the information needed by&nbsp;<strong>va_start</strong>,&nbsp;<strong>va_arg</strong>,&nbsp;<strong>va_end</strong>, and&nbsp;<strong>va_copy</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="program-1-c-program-to-illustrate-the-working-of-variadic-function">Program 1: C program to illustrate the working of variadic function </h2>
+
+
+
+<pre class="wp-block-code"><code>// C program for the above approach
+ 
+#include &lt;stdarg.h&gt;
+#include &lt;stdio.h&gt;
+ 
+// Variadic function to add numbers
+int AddNumbers(int n, ...)
+{
+    int Sum = 0;
+ 
+    // Declaring pointer to the
+    // argument list
+    va_list ptr;
+ 
+    // Initializing argument to the
+    // list pointer
+    va_start(ptr, n);
+ 
+    for (int i = 0; i &lt; n; i++)
+   // Accessing current variable
+        // and pointing to next one
+        Sum += va_arg(ptr, int);
+ 
+    // Ending argument list traversal
+    va_end(ptr);
+ 
+    return Sum;
+}
+ 
+// Driver Code
+int main()
+{
+    printf("\n\n Variadic functions: \n");
+ 
+    // Variable number of arguments
+    printf("\n 1 + 2 = %d ",
+           AddNumbers(2, 1, 2));
+ 
+    printf("\n 3 + 4 + 5 = %d ",
+           AddNumbers(3, 3, 4, 5));
+ 
+    printf("\n 6 + 7 + 8 + 9 = %d ",
+           AddNumbers(4, 6, 7, 8, 9));
+ 
+    printf("\n");
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Variadic functions: 
+
+ 1 + 2 = 3 
+ 3 + 4 + 5 = 12 
+ 6 + 7 + 8 + 9 = 30</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="program-2-c-program-consisting-of-the-variadic-function-largest-number">Program 2: C program consisting of the variadic function&nbsp;LargestNumber()</h2>
+
+
+
+<pre class="wp-block-code"><code>
+// C program for the above approach
+#include &lt;stdarg.h&gt;
+#include &lt;stdio.h&gt;
+ 
+// Variadic function to find the largest number
+int LargestNumber(int n, ...)
+{
+      // Declaring pointer to the
+    // argument list
+    va_list ptr;
+ 
+    // Initializing argument to the
+    // list pointer
+    va_start(ptr, n);
+   
+    int max = va_arg(ptr, int);
+ 
+    for (int i = 0; i &lt; n-1; i++) {
+ 
+        // Accessing current variable
+        // and pointing to next
+        int temp = va_arg(ptr, int);
+        max = temp &gt; max ? temp : max;
+    }
+ 
+    // End of argument list traversal
+    va_end(ptr);
+ 
+    return max;
+}
+ 
+// Driver Code
+int main()
+{
+    printf("\n\n Variadic functions: \n");
+ 
+    // Variable number of arguments
+    printf("\n %d ",
+           LargestNumber(2, 1, 2));
+ 
+    printf("\n %d ",
+           LargestNumber(3, 3, 4, 5));
+ 
+    printf("\n %d ",
+           LargestNumber(4, 6, 7, 8, 9));
+ 
+    printf("\n");
+ 
+    return 0;
+}</code></pre>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>Variadic functions: 
+
+ 2 
+ 5 
+ 9</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-variadic-functions-in-c">FAQ- Variadic Functions In C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1696844842537" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1. What is an example of a variadic function?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. A variadic function is a function that can accept a variable number of arguments. A well-known example is the <code>printf()</code> function from the <code>&lt;stdio.h></code> header in C. When you declare a variadic function, you use ellipses (&#8230;) as the last parameter to indicate that it can accept different numbers of arguments.</p>
+
+</div>
+</div>
+<div id="faq-question-1696844851179" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. How to access variadic arguments in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. To work with variadic functions in C, you use a set of special macros provided by the <code>&lt;stdarg.h></code> header file. These macros include <code>va_list</code>, <code>va_start</code>, <code>va_arg</code>, and <code>va_end</code>. They help programmers access and work with the variable arguments that are passed to the function.</p>
+
+</div>
+</div>
+<div id="faq-question-1696844859764" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What is the structure of a Va_list?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. The <code>va_list</code> type in C is used to handle variable arguments in a function, but its internal structure is compiler-dependent and not necessarily an array. It&#8217;s best to use the provided macros  <code>va_arg</code> for safe and portable access to variable arguments.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/variadic-functions-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

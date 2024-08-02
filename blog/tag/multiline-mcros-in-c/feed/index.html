@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Multiline Mcros In C</title>
+	<atom:link href="https://www.skillvertex.com/tag/multiline-mcros-in-c/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.skillvertex.com/blog</link>
+	<description></description>
+	<lastBuildDate>Tue, 05 Mar 2024 12:55:30 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+
+<image>
+	<url>https://www.skillvertex.com/blog/wp-content/uploads/2024/01/favicon.png</url>
+	<title>Multiline Mcros In C</title>
+	<link>https://www.skillvertex.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Multiline Macros In C</title>
+		<link>https://www.skillvertex.com/blog/multiline-macros-in-c/</link>
+					<comments>https://www.skillvertex.com/blog/multiline-macros-in-c/#respond</comments>
+		
+		<dc:creator><![CDATA[Hridhya Manoj]]></dc:creator>
+		<pubDate>Tue, 05 Mar 2024 12:55:30 +0000</pubDate>
+				<category><![CDATA[C Programming]]></category>
+		<category><![CDATA[Multiline Mcros In C]]></category>
+		<guid isPermaLink="false">https://www.skillvertex.com/blog/?p=3318</guid>
+
+					<description><![CDATA[Multiline Macros In C A multi-line macro allows you to create a more complex and reusable code block. In C/C++, you can define a multi-line macro by using the backslash (\) at the end of each line to continue the macro definition on the next line. Here&#8217;s an example of a multi-line macro that checks ... <a title="Multiline Macros In C" class="read-more" href="https://www.skillvertex.com/blog/multiline-macros-in-c/" aria-label="More on Multiline Macros In C">Read more</a>]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc" id="rank-math-toc"><p>Table of Contents</p><nav><ul><li ><a href="#multiline-macros-in-c">Multiline Macros In C</a></li><li ><a href="#example-to-illustrate-macro-ends-with-the-semicolon">An example-to-defined macro is with the semicolon</a></li><li ><a href="#example-to-illustrate-modified-macro">Example- to illustrate Modified macro</a></li><li ><a href="#faq-multiline-macros-in-c">FAQ- Multiline macros in C</a></li></ul></nav></div>
+
+
+
+<h2 class="wp-block-heading" id="multiline-macros-in-c">Multiline Macros In C</h2>
+
+
+
+<p>A multi-line macro allows you to create a more complex and reusable code block. In C/C++, you can define a multi-line macro by using the backslash (<code>\</code>) at the end of each line to continue the macro definition on the next line. Here&#8217;s an example of a multi-line macro that checks whether a number is even or odd.</p>
+
+
+
+<pre class="wp-block-code"><code>
+#include &lt;stdio.h&gt; 
+  
+#define MACRO(num, str) {\ 
+            printf("%d", num);\ 
+            printf(" is");\ 
+            printf(" %s number", str);\ 
+            printf("\n");\ 
+           } 
+  
+int main(void) 
+{ 
+    int num; 
+  
+    printf("Enter a number: "); 
+    scanf("%d", &amp;num); 
+  
+    if (num &amp; 1) 
+        MACRO(num, "Odd"); 
+    else
+        MACRO(num, "Even"); 
+  
+    return 0; 
+} </code></pre>
+
+
+
+<p>The code will give a compilation error while compiling the code.</p>
+
+
+
+<p>Output</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;narendra@/media/partition/GFG]$ make macro
+cc     macro.c   -o macro
+macro.c: In function ‘main’:
+macro.c:19:2: error: ‘else’ without a previous ‘if’
+make: *** &#91;macro] Error 1
+&#91;narendra@/media/partition/GFG]$ </code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-to-illustrate-macro-ends-with-the-semicolon">Example-to illustrate macro ends  with the semicolon</h2>
+
+
+
+<p>In C and C++, statements should end with a semicolon. However, when defining a macro, the semicolon at the end of the macro is required. In the provided example, the mistake is not in including the curly braces in the macro, but rather in including the semicolon at the end of the macro. The correct way to define the macro is with the semicolon:</p>
+
+
+
+<pre class="wp-block-code"><code>if (num &amp; 1)
+{
+    -------------------------
+    ---- Macro expansion ----
+    -------------------------
+};    /* Semicolon at the end of MACRO, and here is ERROR */
+
+else 
+{
+   -------------------------
+   ---- Macro expansion ----
+   -------------------------
+
+};</code></pre>
+
+
+
+<h2 class="wp-block-heading" id="example-to-illustrate-modified-macro">Example- to illustrate Modified macro</h2>
+
+
+
+<p>The placement of a semicolon after the &#8220;if&#8221; statement when the macro is used in the code. To address this issue and ensure that the macro behaves correctly in all situations, it&#8217;s a common practice to enclose the macro in a <code>do-while(0)</code> loop. This is often referred to as the &#8220;do-while(0) trick.&#8221; The modified macro will look like this:</p>
+
+
+
+<pre class="wp-block-code"><code>
+
+#include &lt;stdio.h&gt; 
+  
+#define MACRO(num, str) do {\ 
+            printf("%d", num);\ 
+            printf(" is");\ 
+            printf(" %s number", str);\ 
+            printf("\n");\ 
+           } while(0) 
+  
+int main(void) 
+{ 
+    int num; 
+  
+    printf("Enter a number: "); 
+    scanf("%d", &amp;num); 
+  
+    if (num &amp; 1) 
+        MACRO(num, "Odd"); 
+    else
+        MACRO(num, "Even"); 
+  
+    return 0; 
+} </code></pre>
+
+
+
+<p>Now, we can compile and run the code above. The output  we get is given below :</p>
+
+
+
+<pre class="wp-block-code"><code>&#91;narendra@/media/partition/GFG]$ make macro
+cc     macro.c   -o macro
+&#91;narendra@/media/partition/GFG]$ ./macro 
+Enter a number: 9
+9 is Odd number
+&#91;narendra@/media/partition/GFG]$ ./macro 
+Enter a number: 10
+10 is Even number
+&#91;narendra@/media/partition/GFG]$ </code></pre>
+
+
+
+<p>In C or C++ programming, when you create a multi-line macro, you might encounter issues with semicolon placement. To avoid this problem, there are two common techniques:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>The &#8220;do-while(0)&#8221; Trick:</strong> You can enclose your multi-line macro within a <code>do-while(0)</code> loop. This loop executes only once, and it helps ensure that your macro can be used safely in complex code structures.</li>
+</ol>
+
+
+
+<pre class="wp-block-code"><code>
+
+#include &lt;stdio.h&gt; 
+  
+#define MACRO(num, str) ({\ 
+            printf("%d", num);\ 
+            printf(" is");\ 
+            printf(" %s number", str);\ 
+            printf("\n");\ 
+           }) 
+  
+int main(void) 
+{ 
+    int num; 
+  
+    printf("Enter a number: "); 
+    scanf("%d", &amp;num); 
+  
+    if (num &amp; 1) 
+        MACRO(num, "Odd"); 
+    else
+        MACRO(num, "Even"); 
+  
+    return 0; 
+} </code></pre>
+
+
+
+<pre class="wp-block-code"><code>&#91;narendra@/media/partition/GFG]$ make macro
+cc     macro.c   -o macro
+&#91;narendra@/media/partition/GFG]$ ./macro 
+Enter a number: 10
+10 is Even number
+&#91;narendra@/media/partition/GFG]$ ./macro 
+Enter a number: 15
+15 is Odd number
+&#91;narendra@/media/partition/GFG]$ </code></pre>
+
+
+
+<h2 class="wp-block-heading" id="faq-multiline-macros-in-c">FAQ- Multiline macros in C</h2>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1699427580945" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q1.How to create a multiline macro in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C or C++ macros, each line should end with a backslash (\) for multiline macros. If you use curly braces without proper enclosure, it may lead to errors. To ensure correct behavior, enclose the entire multiline macro within parentheses. This keeps it functioning as a single statement in your code.</p>
+
+</div>
+</div>
+<div id="faq-question-1699427587944" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q2. How do you separate a multi-line macro in C language?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, macros allow you to replace one part of code with another. You can create multiline functionality with macros, but instead of using new lines, you use the backslash (&#8216;\&#8217;) to separate different parts of the macro.</p>
+
+</div>
+</div>
+<div id="faq-question-1699427594910" class="rank-math-list-item">
+<h4 class="rank-math-question ">Q3. What are the two types of macros in C?</h4>
+<div class="rank-math-answer ">
+
+<p>Ans. In C, you have two types of macros: function-like macros and object-like macros. Function-like macros are created with a code snippet that can take parameters, while object-like macros are defined with a simple value.</p>
+
+</div>
+</div>
+</div>
+</div><div class="saboxplugin-wrap"   ><div class="saboxplugin-tab"><div class="saboxplugin-gravatar"><img alt='Hridhya Manoj' src='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/04ae736fcf3d5b340b054cf103f576c9?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></div><div class="saboxplugin-authorname"><a href="https://www.skillvertex.com/blog/author/hridhya-manoj/" class="vcard author" rel="author"><span class="fn">Hridhya Manoj</span></a></div><div class="saboxplugin-desc"><div ><p>Hello, I&#8217;m Hridhya Manoj. I&#8217;m passionate about technology and its ever-evolving landscape. With a deep love for writing and a curious mind, I enjoy translating complex concepts into understandable, engaging content. Let&#8217;s explore the world of tech together</p>
+</div></div><div class="clearfix"></div></div></div>]]></content:encoded>
+					
+					<wfw:commentRss>https://www.skillvertex.com/blog/multiline-macros-in-c/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
